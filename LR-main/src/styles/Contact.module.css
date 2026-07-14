@@ -1,22 +1,7 @@
 .contactSection {
-  padding: 80px 56px;
-  background: #ffffff;
-  position: relative;
-  overflow: hidden;
-}
-
-.bgOverlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 100%;
-  background-size: contain;
-  background-position: right top;
-  opacity: 0.05;
-  /* Faint blueprint look */
-  pointer-events: none;
-  z-index: 1;
+  width: 100%;
+  padding: 80px 60px;
+  background: url('../assets/Home/back3.png');
 }
 
 /* ── Header Area ── */
@@ -37,18 +22,18 @@
 .tag {
   display: inline-block;
   background: #fff;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 13px;
+  padding: 6px 25px;
+  border-radius: 35px;
+  font-weight: 400;
+  font-size: 15px;
   color: #555;
   border: 1px solid #e5e7eb;
   margin-bottom: 14px;
 }
 
 .headerLeft h2 {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 55px;
+  font-weight: 400;
   color: #111;
   line-height: 1.15;
   margin: 0 0 14px 0;
@@ -59,20 +44,18 @@
 }
 
 .underline {
-  width: 90px;
-  height: 2px;
+  width: 120px;
+  height: 3px;
   background: #263f69;
-  border-radius: 1px;
+  border-radius: 20px;
 }
 
 .headerDesc {
-  flex: 0 1 420px;
   font-size: 15px;
-  color: #555;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0;
-  padding-top: 56px;
+  padding-top: 70px;
   /* align with heading baseline */
 }
 
@@ -96,15 +79,16 @@
 }
 
 .formColumn h3 {
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 500;
   color: #111;
   margin: 0 0 12px 0;
 }
 
 .formUnderline {
-  width: 40px;
-  height: 2px;
+  width: 90px;
+  height: 3px;
+  border-radius: 20px;
   background: #263f69;
   margin-bottom: 32px;
 }
@@ -131,10 +115,11 @@
 .contactForm select,
 .contactForm textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 14px 16px;
   border: none;
-  border-bottom: 2px solid #dcdcdc;
-  background: #f8f9fa;
+  border: 0.5px solid lightgrey;
+  border-bottom: 4px solid #263f69;
+  background:  white;
   outline: none;
   font-size: 14.5px;
   color: #111;
@@ -165,26 +150,76 @@
   font-family: inherit;
 }
 
+/* button */
 .submitBtn {
   grid-column: span 2;
-  width: 220px;
-  padding: 14px 20px;
+  width: 240px;
+  padding: 14px 25px;
   background: #263f69;
-  color: #ffffff;
+  color: #fff;
   border: none;
-  font-size: 14.5px;
-  font-weight: 500;
-  cursor: pointer;
   border-radius: 4px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: background 0.25s ease;
-  margin-top: 8px;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all .35s ease;
 }
 
-.submitBtn:hover {
-  background: #1a3052;
+/* Shine Effect */
+
+.submitBtn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:40%;
+  height:100%;
+  background:linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.55),
+      transparent
+  );
+  transform:skewX(-25deg);
+  transition:.7s;
+}
+
+.submitBtn:hover{
+  background:#1a3052;
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(38,63,105,.35);
+}
+
+.submitBtn:hover::before{
+  left:140%;
+}
+
+.submitBtn:active{
+  transform:translateY(-1px) scale(.98);
+}
+
+.submitBtn span{
+  position:relative;
+  z-index:2;
+}
+
+.arrow{
+  position:relative;
+  z-index:2;
+  transition:transform .35s ease;
+}
+
+.submitBtn:hover .arrow{
+  transform:translateX(8px);
 }
 
 /* Right Info Column */

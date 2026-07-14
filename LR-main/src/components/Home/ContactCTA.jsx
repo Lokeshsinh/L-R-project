@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from '../../styles/Contact.module.css';
+import { ArrowRight, School } from "lucide-react";
 
 const ContactCTA = () => {
   return (
     <section className={styles.contactSection}>
       {/* Background blueprint overlay */}
-      <div 
-        className={styles.bgOverlay} 
-        style={{ backgroundImage: "url('/Images/built3.png')" }}
+      <div
+        className={styles.bgOverlay}
+
       />
 
       {/* Header Area */}
@@ -66,7 +67,8 @@ const ContactCTA = () => {
             </div>
 
             <button type="submit" className={styles.submitBtn}>
-              Submit Proposal &nbsp;→
+              <span>Submit Proposal</span>
+              <ArrowRight size={18} strokeWidth={2.5} className={styles.arrow} />
             </button>
           </form>
         </div>
@@ -76,10 +78,8 @@ const ContactCTA = () => {
           {/* Top Blue Info Box */}
           <div className={styles.infoBox}>
             <div className={styles.homeIcon}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
+              <School size={50} />
+
             </div>
 
             <div className={styles.infoGroup}>
