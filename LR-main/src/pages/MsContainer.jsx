@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { useNavigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import styles from "../styles/MsContainer.module.css";
 
 const containerTypes = [
@@ -109,9 +110,15 @@ const MsContainer = () => {
           <br /> Railways, Refineries, Highways, Food and Cement industries —
           delivered Pan-India under a <br /> Design &amp; Build model.
         </p>
-        <button className={styles.btnWhite}>Contact us &nbsp;→</button>
+        <button className={styles.btnWhite}>
+          <span>Contact Us</span>
+          <ArrowRight className={styles.arrow} size={18} />
+        </button>
       </section>
+
+
       {/* INTRO */}
+
       <section className={styles.intro}>
         <div className={styles.introTop}>
           <h2>

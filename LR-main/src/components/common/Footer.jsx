@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Col 1: Brand & Social */}
         <div className="footer-brand">
           <div className="footer-logo-row">
-            <img src={logo1} />
+            <img src={logo1} alt="logo" />
           </div>
           <p className="footer-desc">
             L &amp; R Enterprises - Manufacturer of prefabricated structure, mild steel container &amp; prefabricated cabin since 2015 in New Delhi, Delhi.

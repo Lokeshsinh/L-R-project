@@ -27,7 +27,6 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const [current, setCurrent] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <section className={styles.testimonialSection}>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../../styles/Slider.module.css";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from '../../assets/Home/img1.png';
 import img2 from '../../assets/Home/img2.png';
 import img3 from '../../assets/Home/img3.png';
