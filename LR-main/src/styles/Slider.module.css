@@ -55,131 +55,166 @@
   line-height: 1.7;
   margin: 0;
   padding-top: 56px;
-  max-width: 550px; /* align with heading baseline */
+  max-width: 590px;
+  /* align with heading baseline */
 }
 
 /* ── 3-Card Layout ── */
-.slider-wrap {
+.sliderWrap {
+  margin-top: 45px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 28px;
-  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-/* Image cards */
-.img-card {
+.sliderViewport{
+    overflow:hidden;
+    width:100%;
+}
+
+.sliderTrack{
+    display:flex;
+    transition:transform .8s ease;
+}
+
+.card{
+    flex:0 0 calc((95% - 30px)/3);
+    margin-right:32px;
+    height:440px;
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+}
+
+.card {
   position: relative;
+  border-radius: 8px;
   overflow: hidden;
-  height: 100%;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
 }
 
-.img-card img {
+.card img {
   width: 100%;
-  flex: 1;
-  min-height: 0;
+  height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.45s ease;
+  transition: .6s;
 }
 
-.img-card:hover img {
-  transform: scale(1.05);
+.card:hover img {
+  transform: scale(1.08);
 }
 
-.img-label {
-  background: #1e3a6e;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 16px 20px;
-  box-sizing: border-box;
-  flex-shrink: 0;
+/* bottom title */
+
+.bottomTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(33, 55, 99, .92);
+  padding: 18px 22px;
+  transition: .5s;
+  z-index: 2;
 }
 
-.label-bar {
-  width: 36px;
+.smallLine {
+  width: 40px;
   height: 2px;
   background: #fff;
-  border-radius: 1px;
+  margin-bottom: 12px;
 }
 
-.img-label span {
-  font-size: 18px;
-  font-weight: 500;
+.bottomTitle span {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
 }
 
-/* Featured navy center card */
-.featured-card {
-  background: #1e3a6e;
-  padding: 28px 24px;
+/* Hover overlay */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 55, 99, .94);
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  box-sizing: border-box;
-  border-radius: 16px;
+  justify-content: flex-end;
+
+  padding: 28px;
+
+  transform: translateY(100%);
+  transition: .55s ease;
+
+  z-index: 3;
 }
 
-.feat-bar {
-  width: 36px;
+.card:hover .overlay {
+  transform: translateY(0);
+}
+
+.card:hover .bottomTitle {
+  transform: translateY(100%);
+}
+
+.line {
+  width: 40px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 1px;
-  margin-bottom: 12px;
-  flex-shrink: 0;
+  background: #fff;
+  margin-bottom: 18px;
 }
 
-.featured-card h3 {
-  font-size: 22px;
+.overlay h3 {
   color: #fff;
+  font-size: 30px;
   font-weight: 500;
-  margin: 0 0 12px 0;
+  margin-bottom: 18px;
 }
 
-.featured-card p {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
-  flex: 1;
-  margin: 0 0 24px 0;
-  overflow: hidden;
+.overlay p {
+  color: #d7dce7;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 28px;
 }
 
-.read-more {
-  background: transparent;
+.overlay button {
+  width: max-content;
+  background: none;
   border: none;
   color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
   cursor: pointer;
-  padding: 0;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto;
-  flex-shrink: 0;
-  transition: gap 0.2s ease;
+  padding: 0;
+  transition: .3s;
 }
 
-.read-more:hover {
-  gap: 14px;
+.overlay button span {
+  transition: .3s;
 }
 
-/* ── Navigation Arrows ── */
-.slider-controls {
+.overlay button:hover span {
+  transform: translateX(8px);
+}
+
+.slider-controls{
+  margin-top: 30px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-top: 28px;
+  justify-content: end;
+  align-items: end;
+  gap:25px ;
 }
 
 .slider-controls button {
-  width: 44px;
-  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   border: 1px solid #ccc;
   background: #fff;
@@ -209,13 +244,16 @@
     flex-direction: column;
     gap: 20px;
   }
+
   .head-desc {
     padding-top: 0;
   }
+
   .slider-wrap {
     grid-template-columns: 1fr;
     min-height: unset;
   }
+
   .img-card {
     height: 240px;
   }
@@ -226,6 +264,7 @@
     padding-left: 22px;
     padding-right: 22px;
   }
+
   .section-head h2 {
     font-size: 30px;
   }

@@ -1,37 +1,75 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../../styles/Slider.module.css";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import img1 from '../../assets/Home/img1.png';
+import img2 from '../../assets/Home/img2.png';
+import img3 from '../../assets/Home/img3.png';
+import img4 from '../../assets/Home/img4.png';
+import img5 from '../../assets/Home/img5.jpg';
+import img6 from '../../assets/Home/img6.jpg'
 
 const slides = [
   {
-    label: "Multi Storey Building",
     title: "Multi Storey Building",
-    desc: "Multi-storey pre-engineered buildings are designed for maximum vertical utilization. Our steel-frame systems provide robust, scalable solutions for commercial complexes, residential towers, and industrial facilities requiring multiple levels with open floor plans.",
-    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
+    desc: "Our multi-storey pre-engineered buildings are designed to maximize vertical space while ensuring exceptional strength and stability. Built with high-quality steel structures, they are ideal for commercial complexes, office buildings, industrial facilities, educational institutions, and residential projects, offering faster construction, cost efficiency, and long-lasting performance.",
+    img: img1,
   },
   {
-    label: "Pre-Engineered Building",
     title: "Pre-Engineered Building",
     desc: "Optimized steel structures are engineered to deliver superior strength, speed, and efficiency in modern construction. Designed for rapid assembly, these systems reduce build time while maintaining high precision and quality. Their clear-span capability maximizes usable space by eliminating unnecessary supports, allowing for flexible and open layouts.",
-    img: "/Images/catlux.jpg",
+    img: img2,
   },
   {
-    label: "Metro Station",
-    title: "Metro Station",
-    desc: "Our pre-engineered structures are ideal for large-scale transit infrastructure. Engineered for high foot traffic, long spans, and seismic resilience, our metro station structures deliver both functional efficiency and architectural elegance for modern urban transport hubs.",
-    img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80",
+    label: "Multi-Storey Building",
+    title: "Multi-Storey Building",
+    desc: "Our multi-storey pre-engineered buildings are designed to maximize vertical space while ensuring exceptional strength and stability. Built with high-quality steel structures, they are ideal for commercial complexes, office buildings, industrial facilities, educational institutions, and residential projects, offering faster construction, cost efficiency, and long-lasting performance.",
+    img: img3,
+  },
+
+
+  {
+    label: "Prefab Building",
+    title: "Prefab Building",
+    desc: "Our prefab buildings are engineered for fast installation, durability, and cost-effective construction. Designed using high-quality steel structures and insulated panels, they provide reliable solutions for offices, accommodations, commercial spaces, schools, healthcare facilities, and industrial projects while ensuring superior strength and long-term performance.",
+    img: img4,
+  },
+  {
+    label: "MS Container",
+    title: "MS Container",
+    desc: "Our MS containers are manufactured using premium mild steel to deliver exceptional strength, security, and weather resistance. Ideal for storage, portable offices, site accommodation, equipment housing, and customized industrial applications, they offer a durable, low-maintenance solution with flexible design options to meet diverse project requirements.",
+    img: img5,
+  },
+  {
+    label: "Sandwich Panel",
+    title: "Sandwich Panel",
+    desc: "Our sandwich panels are manufactured with high-quality insulated cores and durable steel sheets to provide outstanding thermal insulation, fire resistance, and structural strength. Ideal for warehouses, cold storage facilities, clean rooms, industrial buildings, and prefab structures, they ensure energy efficiency, quick installation, and long-lasting performance in all weather conditions.",
+    img: img6,
   },
 ];
 
 const InnovationSlider = () => {
-  const [active, setActive] = useState(1); // start at index 1 so index 0 is left and 2 is right
 
-  const prevSlide = () => setActive((p) => (p - 1 + slides.length) % slides.length);
-  const nextSlide = () => setActive((p) => (p + 1) % slides.length);
+  const [current, setCurrent] = useState(0);
 
-  const leftSlide  = slides[(active - 1 + slides.length) % slides.length];
-  const centerSlide = slides[active];
-  const rightSlide = slides[(active + 1) % slides.length];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
 
+    return () => clearInterval(interval);
+  }, []);
+  const visibleSlides = [
+    slides[current],
+    slides[(current + 1) % slides.length],
+    slides[(current + 2) % slides.length],
+  ];
+
+  const handlerLeft = () => {
+    setCurrent(prev => (prev + 1) % slides.length)
+  }
+  const hanlderRight = () => {
+    setCurrent(prev => (prev - 1 ) % slides.length)
+  }
   return (
     <section className={styles["innovation-section"]}>
       {/* Header */}
@@ -52,38 +90,35 @@ const InnovationSlider = () => {
       </div>
 
       {/* 3-Card Layout */}
-      <div className={styles["slider-wrap"]}>
-        {/* Left image card */}
-        <div className={styles["img-card"]}>
-          <img src={leftSlide.img} alt={leftSlide.label} />
-          <div className={styles["img-label"]}>
-            <div className={styles["label-bar"]} />
-            <span>{leftSlide.label}</span>
-          </div>
-        </div>
-
-        {/* Center featured navy card */}
-        <div className={styles["featured-card"]}>
-          <div className={styles["feat-bar"]} />
-          <h3>{centerSlide.title}</h3>
-          <p>{centerSlide.desc}</p>
-          <button className={styles["read-more"]}>Read More &nbsp;→</button>
-        </div>
-
-        {/* Right image card */}
-        <div className={styles["img-card"]}>
-          <img src={rightSlide.img} alt={rightSlide.label} />
-          <div className={styles["img-label"]}>
-            <div className={styles["label-bar"]} />
-            <span>{rightSlide.label}</span>
-          </div>
+      <div className={styles.sliderViewport}>
+        <div
+          className={styles.sliderTrack}
+          style={{
+            transform: `translateX(-${current * 33.333}%)`,
+          }}
+        >
+          {slides.concat(slides.slice(0, 2)).map((item, index) => (
+            <div className={styles.card} key={index}>
+              <img src={item.img} alt="" />
+              <div className={styles.overlay}>
+                <div className={styles.line}></div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+                <button>Read More →</button>
+              </div>
+              <div className={styles.bottomTitle}>
+                <div className={styles.smallLine}></div>
+                <span>{item.title}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Navigation arrows bottom right */}
       <div className={styles["slider-controls"]}>
-        <button type="button" onClick={prevSlide} aria-label="Previous">&#8592;</button>
-        <button type="button" onClick={nextSlide} aria-label="Next">&#8594;</button>
+        <button aria-label="Previous" onClick={hanlderRight} ><ChevronLeft /></button>
+        <button aria-label="Next" onClick={handlerLeft}>  <ChevronRight /></button>
       </div>
     </section>
   );
