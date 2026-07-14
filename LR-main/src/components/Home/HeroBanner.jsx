@@ -1,5 +1,5 @@
 import React from "react";
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./HeroBanner.module.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import homeBanner1 from '../../assets/Home/homeBanner1.png'
