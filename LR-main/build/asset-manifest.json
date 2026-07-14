@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ac1ff80.css",
+    "main.js": "/static/js/main.747fa6d8.js",
+    "static/js/453.baaeac62.chunk.js": "/static/js/453.baaeac62.chunk.js",
+    "static/media/pre.png": "/static/media/pre.d772b6efb070171bdc96.png",
+    "static/media/robot.png": "/static/media/robot.32f24228d1331102a7ad.png",
+    "static/media/welding.png": "/static/media/welding.92bc4669a29aa1cd01ee.png",
+    "static/media/back1.png": "/static/media/back1.dde721ca5bc68de28bf8.png",
+    "static/media/back2.png": "/static/media/back2.c21252af88b6188c1764.png",
+    "static/media/homeBanner1.png": "/static/media/homeBanner1.12e9057d9837435f54de.png",
+    "static/media/building.png": "/static/media/building.878c4a60510b339e7bc2.png",
+    "static/media/solar.png": "/static/media/solar.ab7edd269261b3da4c2b.png",
+    "static/media/animation2.png": "/static/media/animation2.895dcd2cbd6f3975ee6a.png",
+    "static/media/steel.png": "/static/media/steel.726482d17416fe21d674.png",
+    "static/media/animation1.png": "/static/media/animation1.df797ae15da48310f3f6.png",
+    "static/media/animation3.png": "/static/media/animation3.b9fb68a5d4f11c761315.png",
+    "static/media/animation7.png": "/static/media/animation7.e8c865f41defe44b9424.png",
+    "static/media/animation5.png": "/static/media/animation5.a1157717f7ecd433ccdb.png",
+    "static/media/process-bg.jpeg": "/static/media/process-bg.17ff931162c7d400d91e.jpeg",
+    "static/media/animation6.png": "/static/media/animation6.26b9ee4e729909d8456d.png",
+    "static/media/aboutus-work.jpeg": "/static/media/aboutus-work.a42ef7682cb0827812e1.jpeg",
+    "static/media/logo.jpg": "/static/media/logo.a9f25e365000ddc0faa1.jpg",
+    "static/media/animation4.png": "/static/media/animation4.3321d5f380381bea4a26.png",
+    "static/media/buildingSide.png": "/static/media/buildingSide.63cdcd88a7937be3915a.png",
+    "index.html": "/index.html",
+    "main.4ac1ff80.css.map": "/static/css/main.4ac1ff80.css.map",
+    "main.747fa6d8.js.map": "/static/js/main.747fa6d8.js.map",
+    "453.baaeac62.chunk.js.map": "/static/js/453.baaeac62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ac1ff80.css",
+    "static/js/main.747fa6d8.js"
+  ]
+}
