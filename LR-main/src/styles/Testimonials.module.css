@@ -1,6 +1,9 @@
 .testimonialSection {
   padding: 80px 56px;
-  background: #ffffff;
+  background: url(../assets/Home/back4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -30,17 +33,16 @@
 .tag {
   display: inline-block;
   background: #fff;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
+  padding: 6px 25px;
+  border-radius: 35px;
+  font-size: 15px;
   margin-bottom: 15px;
-  color: #555;
   border: 1px solid #e5e7eb;
 }
 
 .headerContainer h2 {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 55px;
+  font-weight: 400;
   color: #111;
   line-height: 1.25;
   margin: 0 0 16px 0;
@@ -51,19 +53,22 @@
 }
 
 .underline {
-  width: 90px;
-  height: 2px;
+  width: 120px;
+  height: 3px;
   background: #263f69;
   border-radius: 1px;
 }
 
 .cardContainer {
+  width: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   position: relative;
-  z-index: 2;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .card {
@@ -79,6 +84,7 @@
   min-height: 320px;
   transition: all 0.3s ease;
 }
+
 
 .activeCard {
   background: #263f69;
@@ -97,6 +103,35 @@
   margin-top: -20px;
 }
 
+
+.quote {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 28px;
+}
+
+.lightCard .quote {
+  color: #7b8ba9;
+}
+
+.darkCard .quote {
+  color: #d5dced;
+}
+.quote {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 15px;
+  color: #7b8ba9;
+}
+
+.lightCard .quote {
+  color: #7b8ba9;
+}
+
+.darkCard .quote {
+  color: #d5dced;
+}
+
 .activeCard .quoteIcon {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -109,6 +144,22 @@
   font-style: normal;
 }
 
+
+.iconBox {
+  width: 65px;
+  height: 65px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.iconWhite {
+  background: #fff;
+  color: #314a78;
+}
 .activeCard .quoteText {
   color: rgba(255, 255, 255, 0.9);
 }
