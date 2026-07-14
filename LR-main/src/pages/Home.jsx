@@ -28,13 +28,7 @@ const Home = () => {
       <GlobalAuthority />
       <WhyPartner />
       <InnovationSlider />
-      <SolarBanner
-        heading="High-Performance Solar<br />Fasteners and Component supplier"
-        description="L&R Green India Pvt Ltd manufactures high-quality solar fasteners and components for residential, commercial, and utility-scale projects, including roof-mounted and ground-mounted systems, using durable stainless steel and coated alloy steel for long-lasting performance and reliability."
-        imgSrc="/Images/solar fastner.png"
-        imgAlt="Solar Fastener"
-        watermark="IN INDIA"
-      />
+      <SolarBanner/>
       <Testimonials />
       <FAQ />
       <ContactCTA />
