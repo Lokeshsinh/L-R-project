@@ -38,7 +38,11 @@ function HeroBanner() {
   return (
     <section className={styles.hero}>
       {/* ================= Slide 1 ================= */}
-
+      
+      <div
+        className={`${styles.slide} ${current === 1 ? styles.active : ""
+          }`}
+      >
       <img src={homeBanner1} alt="Hero" className={styles.bgImage} />
 
       {/* Dark Overlay */}
@@ -102,10 +106,11 @@ function HeroBanner() {
         </div>
 
       </div>
+      </div>
 
       {/* ================= Slide 2 ================= */}
 
-      <div
+      {/* <div
         className={`${styles.slide} ${current === 1 ? styles.active : ""
           }`}
       >
@@ -138,11 +143,11 @@ function HeroBanner() {
             View Projects
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* ================= Slide 3 ================= */}
 
-      <div
+      {/* <div
         className={`${styles.slide} ${current === 2 ? styles.active : ""
           }`}
       >
@@ -175,7 +180,7 @@ function HeroBanner() {
             Contact Us
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* ================= Arrows ================= */}
 
