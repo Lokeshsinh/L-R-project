@@ -1,0 +1,544 @@
+/* ===========================
+   BASE & WRAPPER
+=========================== */
+.wrapper {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8fafc;
+}
+
+/* ===========================
+   TYPOGRAPHY & UTILITIES
+=========================== */
+.secTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.secTitle span {
+  color: #3164a6;
+  /* Brand Blue */
+}
+
+.divider {
+  width: 50px;
+  height: 4px;
+  background: #3164a6;
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btnPrimary {
+  background: #3164a6;
+  color: #fff;
+  margin-top: 24px;
+}
+
+.btnPrimary:hover {
+  background: #204b82;
+}
+
+.btnSecondary {
+  background: #1e293b;
+  color: #fff;
+}
+
+.btnSecondary:hover {
+  background: #3164a6;
+}
+
+.placeholderImg {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  min-height: 350px;
+}
+
+.placeholderImgTransparent {
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  border-radius: 8px;
+  min-height: 350px;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.heroSec {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8%;
+  background-size: cover;
+  background-position: center;
+  background-color: #1e293b;
+  /* Fallback */
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #fff;
+}
+
+.topLabel {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 32px;
+}
+
+/* ===========================
+   SPLIT SECTIONS (Reusable)
+=========================== */
+.splitSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+.splitSecAlt {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+
+.splitContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.textCol p {
+  color: #64748b;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.imgCol {
+  position: relative;
+  width: 100%;
+}
+
+.imgWrap {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.imgShapeRight {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(49, 100, 166, 0.1); */
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.imgShapeLeft {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(49, 100, 166, 0.1); */
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.imgWrap>div:not(.imgShapeRight):not(.imgShapeLeft) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   LISTS & FEATURES
+=========================== */
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #334155;
+  font-size: 1.05rem;
+}
+
+.featureListBordered {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 20px;
+  border-left: 2px solid #e2e8f0;
+}
+
+.featureItemBordered {
+  position: relative;
+  padding: 12px 0 12px 24px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.bulletDot {
+  position: absolute;
+  left: -5px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3164a6;
+}
+
+.numList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.numItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.numBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #3164a6;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   SPEC GRID (Table-like)
+=========================== */
+.specGrid {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.specRow {
+  display: flex;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.specRow:last-child {
+  border-bottom: none;
+}
+
+.specRow:nth-child(even) {
+  background: #f8fafc;
+}
+
+.specLabel {
+  flex: 1;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.specValue {
+  flex: 1;
+  color: #475569;
+}
+
+/* ===========================
+   APPLICATIONS TAGS
+=========================== */
+.tagsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tagItem {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+/* ===========================
+   BLUE BANNER SECTION
+=========================== */
+.blueBannerSec {
+  background: #3164a6;
+  padding: 60px 8%;
+  color: #fff;
+}
+
+.blueBannerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.blueBannerText h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.blueBannerText p {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+}
+
+.blueBannerImg {
+  width: 100%;
+}
+
+/* ===========================
+   FAQ SECTION
+=========================== */
+.faqSec {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faqHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.faqHeaderLeft {
+  max-width: 500px;
+}
+
+.faqDesc {
+  max-width: 400px;
+  color: #64748b;
+  font-size: 1.05rem;
+  text-align: right;
+}
+
+.faqContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faqItemActive {
+  border-color: #3164a6;
+}
+
+.faqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1e293b;
+  background: #fff;
+  transition: background 0.2s;
+}
+
+.faqHeader:hover {
+  background: #f1f5f9;
+}
+
+.faqItemActive .faqHeader {
+  background: #f8fafc;
+  color: #3164a6;
+}
+
+.faqArrow {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+}
+
+.faqItemActive .faqArrow {
+  color: #3164a6;
+}
+
+.faqBody {
+  padding: 0 20px 20px 20px;
+  color: #64748b;
+  background: #f8fafc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faqImgOuter {
+  width: 100%;
+}
+
+/* ===========================
+   CTA BANNER SECTION
+=========================== */
+.ctaBanner {
+  background-size: cover;
+  background-position: center;
+  background-color: #0f172a;
+  color: #fff;
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaInner h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ctaInner p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 32px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 992px) {
+  .mainTitle {
+    font-size: 2.8rem;
+  }
+
+  .splitContainer,
+  .blueBannerContainer,
+  .faqContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imgCol {
+    order: -1 !important;
+    /* Always show image before text on mobile */
+  }
+
+  .faqDesc {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSec {
+    min-height: 70vh;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .secTitle {
+    font-size: 1.8rem;
+  }
+
+  .splitSec,
+  .splitSecAlt,
+  .blueBannerSec,
+  .faqSec,
+  .ctaBanner {
+    padding: 60px 5%;
+  }
+}

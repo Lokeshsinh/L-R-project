@@ -1,0 +1,87 @@
+.wrapper { font-family: 'Outfit', sans-serif; color: #1e293b; background: #ffffff; overflow-x: hidden; }
+.divider { width: 60px; height: 4px; background: #3164a6; margin-top: 15px; border-radius: 2px; }
+.secTitle { font-size: 2.4rem; line-height: 1.2; font-weight: 700; color: #0f172a; }
+.secTitle span { color: #3164a6; font-weight: 800; }
+
+/* HERO */
+.heroSec { position: relative; min-height: 72vh; display: flex; align-items: center; justify-content: flex-start; padding: 100px 8%; color: #fff; }
+.heroOverlay { position: absolute; inset: 0; background: rgba(10,18,35,0.7); z-index: 1; }
+.heroContent { position: relative; z-index: 2; max-width: 680px; }
+.topLabel { font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; color: #f1f5f9; background: rgba(49,100,166,0.4); padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); display: inline-block; margin-bottom: 24px; }
+.mainTitle { font-size: 3.4rem; line-height: 1.1; font-weight: 800; margin-bottom: 22px; letter-spacing: -0.02em; text-transform: uppercase; }
+.mainTitle span { color: #60a5fa; }
+.subtitle { font-size: 1.1rem; line-height: 1.7; color: #e2e8f0; margin-bottom: 36px; font-weight: 300; }
+.btnPrimary { display: inline-flex; align-items: center; gap: 10px; background: #3164a6; color: #fff; border: none; padding: 14px 34px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+.btnPrimary:hover { background: #254d82; transform: translateY(-2px); }
+
+/* GET IN TOUCH */
+.touchSec { padding: 90px 8% 80px 8%; background: #ffffff; }
+.touchContainer { max-width: 1320px; margin: 0 auto; }
+.touchHeader { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; margin-bottom: 50px; }
+.touchDesc { max-width: 420px; color: #64748b; font-size: 0.95rem; line-height: 1.7; }
+.touchGrid { display: grid; grid-template-columns: 420px 1fr; gap: 60px; align-items: start; }
+
+/* INFO CARD */
+.contactInfoCol { display: flex; flex-direction: column; gap: 28px; }
+.infoCard { background: #f8fafc; border-radius: 14px; padding: 32px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 24px; }
+.infoItem { display: flex; align-items: flex-start; gap: 16px; }
+.infoIcon { width: 40px; height: 40px; border-radius: 10px; background: #1e3a63; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.infoLabel { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; font-weight: 600; margin-bottom: 3px; }
+.infoItem strong { font-size: 0.95rem; color: #0f172a; font-weight: 600; line-height: 1.4; }
+
+/* STATS */
+.statsRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.statBox { background: #1e3a63; border-radius: 12px; padding: 24px; text-align: center; }
+.statNum { display: block; font-size: 2rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 6px; }
+.statLabel { font-size: 0.85rem; color: #94a3b8; font-weight: 500; }
+
+/* FORM */
+.formCol { background: #f8fafc; border-radius: 14px; padding: 36px; border: 1px solid #e2e8f0; }
+.formTitle { font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 28px; }
+.successBanner { background: #d1fae5; border: 1px solid #6ee7b7; border-radius: 8px; padding: 14px 20px; color: #065f46; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; }
+.inquiryForm { display: flex; flex-direction: column; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.formGroup { display: flex; flex-direction: column; }
+.formGroup label { font-size: 0.82rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.formGroup input, .formGroup textarea { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; font-size: 0.95rem; color: #1e293b; font-family: 'Outfit', sans-serif; transition: border-color 0.2s ease; resize: vertical; }
+.formGroup input:focus, .formGroup textarea:focus { outline: none; border-color: #3164a6; box-shadow: 0 0 0 3px rgba(49,100,166,0.1); }
+.fileRow { display: flex; gap: 18px; margin-bottom: 24px; }
+.fileLabel { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.fileBtn { background: #1e3a63; color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; white-space: nowrap; }
+.fileHint { font-size: 0.85rem; color: #94a3b8; }
+.submitBtn { display: inline-flex; align-items: center; gap: 10px; background: #1e3a63; color: #fff; border: none; padding: 15px 36px; font-size: 1rem; font-weight: 700; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-family: 'Outfit', sans-serif; align-self: flex-start; }
+.submitBtn:hover { background: #254d82; transform: translateY(-2px); }
+
+/* WHY CHOOSE */
+.whySec { padding: 90px 8%; background: #f8fafc; }
+.whyContainer { max-width: 1320px; margin: 0 auto; }
+.whyHeader { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; margin-bottom: 50px; }
+.whyDesc { max-width: 420px; color: #64748b; font-size: 0.95rem; line-height: 1.7; }
+.whyGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.whyCard { background: #fff; border-radius: 14px; padding: 32px 28px; border: 1px solid #e2e8f0; transition: all 0.3s ease; text-align: center; }
+.whyCard:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); border-color: #3164a6; }
+.whyIcon { width: 64px; height: 64px; border-radius: 14px; background: #1e3a63; color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; }
+.whyCard h4 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
+.whyCard p { font-size: 0.9rem; color: #64748b; line-height: 1.6; margin: 0; }
+
+/* MAP */
+.mapSec { line-height: 0; }
+
+/* CONNECT BANNER */
+.connectBanner { background: #1e3a63; padding: 80px 8%; text-align: center; }
+.connectInner h2 { font-size: 2.4rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; margin: 0; }
+
+@media (max-width: 1024px) {
+  .touchGrid { grid-template-columns: 1fr; gap: 40px; }
+  .whyGrid { grid-template-columns: repeat(2, 1fr); }
+  .mainTitle { font-size: 2.8rem; }
+}
+@media (max-width: 768px) {
+  .formRow { grid-template-columns: 1fr; }
+  .whyGrid, .statsRow { grid-template-columns: 1fr; }
+  .heroSec { min-height: auto; padding: 120px 5%; }
+  .mainTitle { font-size: 2.2rem; }
+  .touchSec, .whySec { padding: 70px 5%; }
+  .connectInner h2 { font-size: 1.6rem; }
+  .touchHeader, .whyHeader { flex-direction: column; }
+}

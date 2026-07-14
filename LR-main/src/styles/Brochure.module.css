@@ -1,0 +1,46 @@
+.wrapper { font-family: 'Outfit', sans-serif; color: #1e293b; background: #ffffff; overflow-x: hidden; }
+.divider { width: 60px; height: 4px; background: #3164a6; margin-top: 15px; border-radius: 2px; margin-bottom: 0; }
+
+/* HERO */
+.heroSec { position: relative; min-height: 72vh; display: flex; align-items: center; justify-content: flex-start; padding: 100px 8%; color: #fff; }
+.heroOverlay { position: absolute; inset: 0; background: rgba(5,10,22,0.72); z-index: 1; }
+.heroContent { position: relative; z-index: 2; max-width: 680px; }
+.topLabel { font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; color: #f1f5f9; background: rgba(49,100,166,0.4); padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); display: inline-block; margin-bottom: 24px; }
+.mainTitle { font-size: 3.6rem; line-height: 1.1; font-weight: 800; margin-bottom: 22px; letter-spacing: -0.02em; text-transform: uppercase; }
+.mainTitle span { color: #60a5fa; }
+.subtitle { font-size: 1.1rem; line-height: 1.7; color: #e2e8f0; margin-bottom: 36px; font-weight: 300; }
+.btnPrimary { display: inline-flex; align-items: center; gap: 10px; background: #3164a6; color: #fff; border: none; padding: 14px 34px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+.btnPrimary:hover { background: #254d82; transform: translateY(-2px); }
+
+/* ABOUT SECTION */
+.aboutSec { padding: 100px 8%; background: #ffffff; }
+.aboutContainer { max-width: 860px; margin: 0 auto; text-align: center; }
+.aboutTitle { font-size: 2.8rem; font-weight: 300; color: #0f172a; margin-bottom: 16px; }
+.aboutTitle span { color: #3164a6; font-weight: 800; }
+.divider { width: 60px; height: 4px; background: #3164a6; border-radius: 2px; margin: 0 auto 40px auto; }
+.aboutTextBlock p { font-size: 1rem; line-height: 1.85; color: #475569; margin-bottom: 22px; text-align: left; }
+.aboutTextBlock p:last-child { margin-bottom: 0; }
+.downloadBtn { display: inline-flex; align-items: center; gap: 10px; background: #1e3a63; color: #fff; text-decoration: none; padding: 16px 42px; font-size: 1rem; font-weight: 700; border-radius: 8px; margin-top: 40px; transition: all 0.3s ease; font-family: 'Outfit', sans-serif; }
+.downloadBtn:hover { background: #254d82; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30,58,99,0.35); }
+
+/* DOWNLOAD BANNER */
+.downloadBanner { background: #233a5e; padding: 90px 8%; text-align: center; }
+.downloadBannerInner { max-width: 800px; margin: 0 auto; }
+.downloadBannerInner h2 { font-size: 2.4rem; font-weight: 700; color: #fff; margin-bottom: 20px; }
+.downloadBannerInner p { color: #94a3b8; font-size: 1rem; line-height: 1.7; margin-bottom: 36px; }
+.contactBtn { display: inline-flex; align-items: center; gap: 10px; background: #3164a6; color: #fff; text-decoration: none; padding: 14px 36px; font-size: 1rem; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; font-family: 'Outfit', sans-serif; }
+.contactBtn:hover { background: #254d82; transform: translateY(-2px); }
+
+/* CONNECT BANNER */
+.connectBanner { background: #1e3a63; padding: 80px 8%; text-align: center; }
+.connectInner h2 { font-size: 2.4rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; margin: 0; }
+
+@media (max-width: 768px) {
+  .heroSec { min-height: auto; padding: 120px 5%; }
+  .mainTitle { font-size: 2.2rem; }
+  .aboutTitle { font-size: 2rem; }
+  .aboutSec { padding: 70px 5%; }
+  .downloadBanner { padding: 70px 5%; }
+  .downloadBannerInner h2 { font-size: 1.8rem; }
+  .connectInner h2 { font-size: 1.6rem; }
+}

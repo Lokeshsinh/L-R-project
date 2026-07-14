@@ -1,0 +1,529 @@
+/* ===== BASE ===== */
+.wrapper {
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== SECTION TITLE ===== */
+.secTitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #2b3a55;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+.secTitle span {
+  color: #46679e;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  width: 120px;
+  height: 2px;
+  background-color: #46679e;
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  background-color: #0b1426;
+  color: #fff;
+  padding: 80px 8%;
+  text-align: left;
+}
+.heroContent {
+  max-width: 800px;
+}
+.topLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #a0aec0;
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.mainTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+.heroSub {
+  font-size: 1rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.btnHero {
+  background: #3164a6;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.btnHero:hover {
+  background: #4680d2;
+}
+
+/* ===========================
+   WHAT ARE SANDWICH PANELS
+=========================== */
+.introSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.introContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+.introText p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.btnSecondary {
+  background: #2b3a55;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.introVisuals {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.introImgMain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.introImgSub {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+/* ===========================
+   EXPLORE OUR RANGE
+=========================== */
+.rangeSec {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+.rangeContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.rangeHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.rangeDesc {
+  max-width: 400px;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+.rangeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.rangeCard {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+.rangeImg {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.rangeCardTitle {
+  background: #2b3a55;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.rangeCardText {
+  padding: 15px;
+  font-size: 0.85rem;
+  color: #555;
+  background: #3164a6;
+  color: white;
+}
+
+/* ===========================
+   TECHNICAL ADVANTAGES
+=========================== */
+.techSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.techContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.techCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.techCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.techIconWrap {
+  width: 50px;
+  height: 50px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  color: #2b3a55;
+}
+.techCardActive {
+  background: #2b3a55;
+  color: #fff;
+  border-color: #2b3a55;
+}
+.techCardActive .techIconWrap {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+.techCard h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.techCard p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+.techCardActive p {
+  color: #cbd5e1;
+}
+
+/* ===========================
+   HIGH-PERFORMANCE BANNER
+=========================== */
+.bannerSec {
+  background: #1e293b;
+  color: #fff;
+  padding: 60px 8%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.bannerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.bannerContainer h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.bannerContainer p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  max-width: 800px;
+  line-height: 1.6;
+}
+.bannerWatermark {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===========================
+   APPLICATIONS
+=========================== */
+.appSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.appGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.appCard {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+.appImg {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.appCardTitle {
+  background: #2b3a55;
+  color: #fff;
+  padding: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+}
+.appCardText {
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #fff;
+  background: #3164a6;
+  line-height: 1.5;
+}
+
+/* ===========================
+   WHY CHOOSE
+=========================== */
+.whySec {
+  padding: 80px 8%;
+  background: #f8fafc;
+}
+.whyContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.whyVisuals {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.whyImgMain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.whyImgSub {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+.whyText p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faqBreadcrumb {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid #e2e8f0;
+}
+.faqSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.faqContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faqItem {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.faqHeader {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+.faqItemActive .faqHeader {
+  background: #2b3a55;
+  color: #fff;
+}
+.faqBody {
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  background: #1e293b;
+  line-height: 1.6;
+}
+.faqImgOuter {
+  width: 100%;
+}
+.faqImg {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===========================
+   CTA BANNER
+=========================== */
+.ctaBanner {
+  background: #0f172a;
+  color: #fff;
+  padding: 60px 8%;
+  text-align: center;
+}
+.ctaInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ctaInner h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.ctaInner p {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+.btnCTA {
+  background: #3164a6;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btnCTA:hover {
+  background: #4680d2;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+  .introContainer, .faqContent, .whyGrid, .rangeHeaderRow {
+    grid-template-columns: 1fr;
+  }
+  .rangeGrid, .appGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .techGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .hero { padding: 60px 6%; }
+  .mainTitle { font-size: 2.2rem; }
+  .secTitle { font-size: 2rem; }
+  .rangeGrid, .appGrid, .techGrid {
+    grid-template-columns: 1fr;
+  }
+}

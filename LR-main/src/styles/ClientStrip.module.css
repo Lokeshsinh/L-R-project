@@ -1,0 +1,113 @@
+.clientStrip {
+  width: 100%;
+  overflow: hidden;
+  background: #2f456f;
+  padding: 10px 0;
+  position: relative;
+}
+
+
+.logoTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scroll 22s linear infinite;
+}
+
+.clientStrip:hover .logoTrack {
+  animation-play-state: paused;
+}
+
+.clientLogo {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.clientLogo img {
+  width: auto;
+  max-width: 200px;
+  max-height: 50px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+  transition: all 0.35s ease;
+}
+
+.clientLogo:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.clientStrip::before,
+.clientStrip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clientStrip::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #ffffffd7 0%,
+    rgba(47, 69, 111, 0.9) 40%,
+    transparent 100%
+  );
+}
+
+.clientStrip::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    #edededd2 0%,
+    rgba(47, 69, 111, 0.9) 40%,
+    transparent 100%
+  );
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 992px) {
+  .clientLogo {
+    width: 170px;
+  }
+
+  .clientLogo img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clientStrip {
+    padding: 18px 0;
+  }
+
+  .clientLogo {
+    width: 140px;
+  }
+
+  .clientLogo img {
+    max-width: 95px;
+    max-height: 34px;
+  }
+
+  .clientStrip::before,
+  .clientStrip::after {
+    width: 60px;
+  }
+}

@@ -1,0 +1,660 @@
+/* ===========================
+   HERO SECTION
+=========================== */
+.heroSec {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  color: #fff;
+  width: 100%;
+}
+
+.topLabel {
+  font-size: 0.88rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: block;
+  opacity: 0.85;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 750px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 32px;
+  opacity: 0.92;
+}
+
+.btnPrimary {
+  background: #253b5c;
+  color: #fff;
+  border: none;
+  padding: 13px 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, transform 0.2s;
+  font-family: inherit;
+}
+.btnPrimary:hover {
+  background: #1e2c45;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   SHARED UTILITIES
+=========================== */
+.secTitle {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.secTitle span { color: #253b5c; }
+
+.divider {
+  width: 120px;
+  height: 3px;
+  background: #253b5c;
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   RELIABLE PREFAB SECTION
+=========================== */
+.reliableSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+.reliableContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reliableHeader {
+  margin-bottom: 40px;
+}
+
+.reliableContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.reliableImgOuter {
+  position: relative;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.reliableImgCard {
+  position: absolute;
+  bottom: -5%;
+  right: -2%;
+  width:70%;
+  height: 70%;
+  background: #253b5c;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.reliableImgWrap {
+  position: relative;
+  width: calc(100% - 15px);
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.reliableText p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   PURPOSE & APPLICATION
+=========================== */
+.purposeSec {
+  padding: 80px 8%;
+  background: #f8f9fb;
+}
+
+.purposeContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.purposeText p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.purposeList {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 8px;
+}
+
+.purposeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 0.97rem;
+  color: #333;
+}
+
+.purposeItem svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #253b5c;
+}
+
+.purposeImgOuter {
+  position: relative;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.purposeImgCard {
+  position: absolute;
+  bottom: -5%;
+  right: -2%;
+  width:70%;
+  height: 70%;
+  background: #253b5c;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.purposeImgWrap {
+  position: relative;
+  width: calc(100% - 15px);
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+/* ===========================
+   HOW WE CREATE (BLUE BANNER)
+=========================== */
+.mfgSec {
+  padding: 60px 8%;
+  background: #253b5c;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.mfgWatermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mfgContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mfgContent h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.mfgContent p {
+  font-size: 1rem;
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+.mfgVisuals {
+  width: 100%;
+  height: 160%;
+margin-left: 20%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mfgLeftBg {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 30%;
+  height: auto;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+/* ===========================
+   STRUCTURAL FEATURES
+=========================== */
+.structSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+.structContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.structHeader {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.structHeaderLeft h2 { margin-bottom: 16px; }
+
+.structDesc {
+  max-width: 540px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+.structGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.structCard {
+  background: #fff;
+  border: 1px solid #e8ecf0;
+  border-radius: 10px;
+  padding: 28px 22px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-align: center;
+}
+
+.structCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+}
+
+.structIconWrap {
+  width: 56px;
+  height: 56px;
+  background: #253b5c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  color: #fff;
+}
+
+.structCard h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a2a42;
+  margin-bottom: 10px;
+}
+
+.structCard p {
+  font-size: 0.87rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+.structCardActive {
+  background: #253b5c !important;
+  border-color: #253b5c !important;
+}
+
+.structCardActive h4 {
+  color: #ffffff !important;
+}
+
+.structCardActive p {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.structCardActive .structIconWrap {
+  background: #ffffff !important;
+  color: #253b5c !important;
+}
+
+/* ===========================
+   ADVANTAGES SECTION
+=========================== */
+.advantageSec {
+  padding: 80px 8%;
+  background: #f8f9fb;
+}
+
+.advantageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.advantageImgOuter {
+  position: relative;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.advantageImgCard {
+  position: absolute;
+   bottom: -5%;
+  right: -2%;
+  width:70%;
+  height: 70%;
+  background: #253b5c;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.advantageImgWrap {
+  position: relative;
+  width: calc(100% - 15px);
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.advantageText p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+.advantageList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.advantageItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.97rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.advantageNum {
+  width: 30px;
+  height: 30px;
+  background: #253b5c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ===========================
+   FAQ SECTION
+=========================== */
+.faqSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faqHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.faqBreadcrumb {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.faqHeaderLeft h2 { margin-bottom: 14px; }
+
+.faqDesc {
+  max-width: 500px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.65;
+  text-align: right;
+}
+
+.faqContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.faqImgOuter {
+  position: relative;
+  width: 100%;
+}
+
+.faqImg {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faqHeader {
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  font-weight: 500;
+  font-size: 0.97rem;
+  color: #333;
+  transition: background 0.2s;
+  gap: 12px;
+}
+
+.faqItemActive .faqHeader {
+  background: #253b5c;
+  color: #fff;
+}
+
+.faqArrow { flex-shrink: 0; }
+
+.faqBody {
+  padding: 16px 22px;
+  background: #253b5c;
+  color: #dde4ee;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+/* ===========================
+   CTA BANNER
+=========================== */
+.ctaBanner {
+  background: black;
+  padding: 50px 8%;
+  text-align: center;
+  color: #fff;
+}
+
+.ctaInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctaInner h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.ctaInner p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  line-height: 1.65;
+}
+
+.btnSecondary {
+  background: #253b5c;
+  color: #fff;
+  border: none;
+  padding: 13px 32px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+  font-family: inherit;
+}
+.btnSecondary:hover {
+  background: #1e2c45;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1100px) {
+  .structGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .reliableContentGrid,
+  .purposeContainer,
+  .mfgContainer,
+  .advantageContainer,
+  .faqContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .structHeader { flex-direction: column; gap: 16px; }
+  .faqHeaderRow { flex-direction: column; gap: 16px; }
+  .faqDesc { text-align: left; }
+  .reliableImgWrap,
+  .purposeImgWrap,
+  .mfgVisuals,
+  .advantageImgWrap,
+  .faqImg { height: 300px; }
+  .purposeContainer .purposeImgWrap { order: -1; }
+}
+
+@media (max-width: 768px) {
+  .structGrid { grid-template-columns: 1fr; }
+  .secTitle, .heroContent h1, .mfgContent h2, .ctaInner h2 { font-size: 1.8rem; }
+  .heroContent h1 { font-size: 2rem; }
+}

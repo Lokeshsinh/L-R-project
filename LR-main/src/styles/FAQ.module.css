@@ -1,0 +1,143 @@
+.faq-section {
+  padding: 80px 56px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 50px;
+  align-items: center;
+  animation: softReveal 0.9s ease both;
+}
+
+.tag {
+  display: inline-block;
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.faq-left h2 {
+  font-size: 38px;
+  margin-bottom: 28px;
+}
+
+.faq-left h2 span {
+  color: #263f69;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-box {
+  background: #f6f7fa;
+  border-radius: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.35s ease;
+}
+
+.faq-box:hover,
+.open {
+  border-color: #263f69;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-question h4 {
+  font-size: 16px;
+  color: #111;
+}
+
+.faq-question span {
+  width: 28px;
+  height: 28px;
+  background: #263f69;
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.open .faq-answer {
+  max-height: 120px;
+}
+
+.faq-answer p {
+  color: #555;
+  line-height: 1.6;
+  padding-top: 14px;
+  font-size: 14px;
+}
+
+.faq-right img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  transition: 0.45s ease;
+}
+
+.faq-right:hover img {
+  transform: scale(1.04);
+}
+
+@keyframes softReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-section {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-right img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 760px) {
+  .faq-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .faq-section {
+    padding: 55px 22px;
+  }
+
+  .faq-left h2 {
+    font-size: 30px;
+  }
+}

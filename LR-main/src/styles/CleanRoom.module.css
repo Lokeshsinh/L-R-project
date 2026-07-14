@@ -1,0 +1,648 @@
+/* ===========================
+   BASE
+=========================== */
+.wrapper {
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+.secTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  line-height: 1.3;
+  margin: 0 0 16px;
+}
+.secTitle span {
+  color: #2b9e6e;
+}
+
+.divider {
+  width: 50px;
+  height: 3px;
+  background: #2b9e6e;
+  margin: 12px 0 22px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  background: linear-gradient(rgba(6, 20, 38, 0.76), rgba(6, 20, 38, 0.76)),
+    url('https://images.unsplash.com/photo-1563213126-a4273aed2016?w=1400&q=80')
+      center/cover no-repeat;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  padding: 100px 8%;
+  color: #fff;
+}
+.heroContent {
+  max-width: 720px;
+}
+.topLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  color: rgba(255, 255, 255, 0.58);
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.mainTitle {
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+.mainTitle span {
+  color: #4ecb8d;
+}
+.heroSub {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+.btnHero {
+  background: #1e6e4a;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 0.93rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+.btnHero:hover {
+  background: #2b9e6e;
+}
+
+/* ===========================
+   INTRO — Our Clean Room Solutions
+=========================== */
+.intro {
+  padding: 80px 8%;
+  background: #fff;
+}
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.introLeft {
+  display: flex;
+  flex-direction: column;
+}
+.introImgCol {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 280px;
+  margin-top: 4px;
+}
+.introImgCol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.introContent p {
+  font-size: 0.93rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.btnSecondary {
+  background: #1a2a4a;
+  color: #fff;
+  border: none;
+  padding: 11px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+.btnSecondary:hover {
+  background: #2b9e6e;
+}
+
+/* ===========================
+   APPLICATIONS
+=========================== */
+.applicationsSec {
+  padding: 80px 8%;
+  background: #f7faf9;
+}
+.applicationsInner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.applicationsLeft p {
+  font-size: 0.93rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.appList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.appList li {
+  font-size: 0.88rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid #e4ede9;
+}
+.appBullet {
+  color: #2b9e6e;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.applicationsImgCol {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 380px;
+}
+.applicationsImgCol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   PRECISION CLEAN ENVIRONMENTS
+=========================== */
+.precisionSec {
+  background: #1a2a4a;
+  color: #fff;
+  padding: 80px 8%;
+  position: relative;
+  overflow: hidden;
+}
+.precisionInner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.precisionText {
+  flex: 1;
+}
+.precisionText h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.precisionText p {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+}
+.precisionImgCol {
+  flex: 1;
+  position: relative;
+}
+.precisionImgCol img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 300px;
+}
+.precisionWatermark {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ===========================
+   CORE FEATURES
+=========================== */
+.featuresSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.featuresInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featuresTopRow {
+  margin-bottom: 36px;
+}
+.featuresDivider {
+  width: 50px;
+  height: 3px;
+  background: #2b9e6e;
+  margin-top: 10px;
+}
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+.featuresImgCol {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 380px;
+}
+.featuresImgCol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featuresContent {
+  display: flex;
+  flex-direction: column;
+}
+.featuresIntro {
+  font-size: 0.93rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.87rem;
+  color: #444;
+  line-height: 1.65;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eef2f0;
+}
+.featureList li:last-child {
+  border-bottom: none;
+}
+.featureBullet {
+  color: #2b9e6e;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.featureList strong {
+  color: #1a2a4a;
+  font-weight: 700;
+}
+
+/* ===========================
+   CONTROLLED ENVIRONMENT BENEFITS
+=========================== */
+.benefitsSec {
+  padding: 80px 8%;
+  background: #f7faf9;
+}
+.benefitsInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.benefitsTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+.benefitsDesc {
+  max-width: 320px;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  padding-top: 6px;
+}
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.benefitCard {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4ede9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.benefitCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.benefitCardActive {
+  background: #1a2a4a;
+  border-color: #1a2a4a;
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(26, 42, 74, 0.28);
+}
+.benefitImgWrap {
+  height: 130px;
+  overflow: hidden;
+}
+.benefitImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.benefitCard:hover .benefitImgWrap img {
+  transform: scale(1.06);
+}
+.benefitCardBody {
+  padding: 18px 16px;
+}
+.benefitCard h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  margin: 0 0 8px;
+}
+.benefitCardActive h4 {
+  color: #fff;
+}
+.benefitCard p {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+.benefitCardActive p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faqSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.faqInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.faqTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+.faqLeft {
+  flex-shrink: 0;
+}
+.faqBreadcrumb {
+  font-size: 0.8rem;
+  color: #999;
+  display: block;
+  margin-bottom: 10px;
+}
+.faqSubtext {
+  max-width: 300px;
+  font-size: 0.87rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  padding-top: 4px;
+}
+.faqContentRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.faqItem {
+  background: #f7faf9;
+  border-radius: 6px;
+  padding: 14px 18px;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e4ede9;
+  transition: all 0.2s;
+}
+.faqOpen {
+  background: #1a2a4a;
+  color: #fff;
+  border-color: #1a2a4a;
+}
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a2a4a;
+  gap: 12px;
+}
+.faqOpen .faqQuestion {
+  color: #fff;
+}
+.faqArrow {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.faqAnswer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+.faqAnswer p {
+  font-size: 0.87rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+.faqImgCol {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 360px;
+}
+.faqImgCol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   CTA BANNER
+=========================== */
+.ctaBanner {
+  background: url('https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1400&q=80')
+    center/cover no-repeat;
+  position: relative;
+  padding: 90px 8%;
+  text-align: center;
+  color: #fff;
+}
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 20, 38, 0.82);
+}
+.ctaInner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.ctaInner h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.ctaInner p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  margin-bottom: 30px;
+}
+.btnCTA {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 13px 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btnCTA:hover {
+  background: #fff;
+  color: #1a2a4a;
+}
+
+/* ===========================
+   LET'S CONNECT
+=========================== */
+.letsConnect {
+  background: #0f1e38;
+  padding: 22px 0;
+  text-align: center;
+}
+.letsConnectInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+.letsConnectInner h2 {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1100px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .introGrid,
+  .applicationsInner,
+  .featuresGrid,
+  .faqContentRow {
+    grid-template-columns: 1fr;
+  }
+  .introImgCol,
+  .applicationsImgCol,
+  .featuresImgCol,
+  .faqImgCol {
+    height: 260px;
+  }
+  .precisionInner {
+    flex-direction: column;
+  }
+  .precisionImgCol img {
+    max-height: 260px;
+  }
+  .faqTopRow {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 6%;
+    min-height: 400px;
+  }
+  .mainTitle {
+    font-size: 1.9rem;
+  }
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefitsTopRow {
+    flex-direction: column;
+  }
+  .secTitle {
+    font-size: 1.65rem;
+  }
+  .benefitCardActive {
+    transform: none;
+  }
+  .precisionWatermark {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}

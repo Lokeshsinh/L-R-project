@@ -1,0 +1,296 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ==========================
+   SLIDES
+========================== */
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, transform 1.2s ease;
+  transform: scale(1.08);
+  z-index: 1;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.78),
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 700px;
+  z-index: 5;
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #d8d8d8;
+}
+
+.title {
+  font-size: 70px;
+  line-height: 1.08;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ededed;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.35s ease;
+}
+
+.button:hover {
+  background: #293f67;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   ARROWS
+========================== */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 62px;
+  height: 62px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: 0.35s ease;
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero:hover .arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.left {
+  left: 35px;
+}
+
+.right {
+  right: 35px;
+}
+
+.arrow:hover {
+  background: #293f67;
+  color: #fff;
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+.active .subtitle {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.active .title {
+  animation: fadeUp 1s ease forwards;
+}
+
+.active .description {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.active .button {
+  animation: fadeUp 1.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .content {
+    left: 7%;
+    max-width: 620px;
+  }
+
+  .title {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    height: 90vh;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .arrow {
+    width: 56px;
+    height: 56px;
+  }
+
+  .left {
+    left: 20px;
+  }
+
+  .right {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    left: 6%;
+    right: 6%;
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .button {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+
+  .arrow {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 85vh;
+  }
+
+  .content {
+    text-align: center;
+    left: 5%;
+    right: 5%;
+    top: 52%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    padding: 13px 28px;
+  }
+
+  .arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .left {
+    left: 10px;
+  }
+
+  .right {
+    right: 10px;
+  }
+}

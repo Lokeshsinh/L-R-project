@@ -1,0 +1,189 @@
+.footer {
+  background: #1e355a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 8% 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background blueprint effect */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top Heading Section */
+.footer-top-head {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+.footer-top-head h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 0 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  width: 100%;
+}
+
+/* Main Content / Columns */
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+/* Col 1: Brand */
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-logo-wrapper {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+}
+
+.footer-brand h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.footer-desc {
+  max-width: 380px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-social a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.footer-social a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Col 2, 3, 5: Info, Legal, Help */
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 26px;
+  color: #fff;
+}
+
+.footer-col p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  margin-top: 0;
+}
+
+.footer-col p:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Col 4: Contact Info */
+.contact-col p.contact-text {
+  cursor: default;
+  transform: none;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-col p.contact-text:hover {
+  color: rgba(255, 255, 255, 0.85);
+  transform: none;
+}
+
+/* Bottom Copyright Section */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .footer-content {
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  }
+  .footer-content > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-top-head h1 {
+    font-size: 2.5rem;
+  }
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 5% 0;
+  }
+  .footer-top-head h1 {
+    font-size: 2rem;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

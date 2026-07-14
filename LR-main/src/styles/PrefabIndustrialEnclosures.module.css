@@ -1,0 +1,610 @@
+/* ===========================
+   GLOBAL STYLES & HERO
+=========================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 550px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: #fff;
+}
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+.heroSubTitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+.heroDesc {
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-weight: 400;
+}
+.btnHero {
+  background: #314b73;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+.btnHero:hover {
+  background: #2a4161;
+}
+
+/* ===== SECTION TITLES ===== */
+.secTitle {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #1a1a2e;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+.secTitle span {
+  color: #314b73;
+}
+.divider {
+  width: 120px;
+  height: 2px;
+  background: #314b73;
+  margin: 10px 0 30px;
+}
+
+/* ===========================
+   INTRO (Smart Enclosure)
+=========================== */
+.introSec {
+  padding: 80px 8%;
+  background: #fdfdfd;
+}
+.introContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.introTop {
+  margin-bottom: 40px;
+}
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.introText p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.introVisuals {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+.imgMain {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 1;
+}
+.imgSub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   TYPES & APPLICATIONS
+=========================== */
+.typesSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.typesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.typesTop {
+  margin-bottom: 40px;
+}
+.typesGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.typesDesc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.typesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+.typesList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+.typesList li strong {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+.bullet {
+  color: #314b73;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+.typesVisuals {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+.typesImgMain {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 1;
+}
+.typesImgSub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   MANUFACTURING STRENGTH (Banner)
+=========================== */
+.mfgBanner {
+  position: relative;
+  background: #253b5c;
+  color: #fff;
+  padding: 80px 8%;
+  overflow: hidden;
+}
+.mfgWatermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+.mfgBgImg {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+  transform: rotate(-5deg);
+}
+.mfgContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+}
+.mfgContent h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.mfgContent p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #e5e7eb;
+  opacity: 0.95;
+}
+.mfgVisuals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mfgImg {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* ===========================
+   KEY FEATURES & ADVANTAGES
+=========================== */
+.featuresSec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.featuresContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featuresTop {
+  margin-bottom: 40px;
+}
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+.featuresVisuals {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.featuresImgMain {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 1;
+}
+.featuresImgSub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+.featuresDesc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.numList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.numItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.checkCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2b3b5a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.numText {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ===========================
+   WHY CHOOSE L&R (4 CARDS)
+=========================== */
+.whySec {
+  padding: 80px 8%;
+  background: #fff;
+}
+.whyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.whyDesc {
+  max-width: 400px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right;
+  line-height: 1.6;
+}
+.whyCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.whyCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 30px 20px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.whyCardHighlight {
+  background: #2b3b5a;
+  color: #fff;
+  border-color: #2b3b5a;
+}
+.whyIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.whyCard:not(.whyCardHighlight) .whyIcon {
+  color: #314b73;
+}
+.whyCardHighlight .whyIcon {
+  color: #fff;
+}
+.whyCard h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.whyCard p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.whyCard:not(.whyCardHighlight) p {
+  color: #666;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faqSec {
+  padding: 80px 8%;
+  background: #fdfdfd;
+}
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.faqTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+.faqDesc {
+  max-width: 300px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  line-height: 1.5;
+}
+.faqContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.faqImg {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faqItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.faqHeader {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+  transition: all 0.2s;
+}
+.faqItemActive .faqHeader {
+  background: #253b5c;
+  color: #fff;
+  border-color: #253b5c;
+}
+.faqArrow {
+  font-size: 1.2rem;
+}
+.faqBody {
+  padding: 16px 24px;
+  background: #253b5c;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ===========================
+   CTA BANNER
+=========================== */
+.ctaBanner {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 8%;
+  text-align: center;
+  color: #fff;
+}
+.ctaInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.ctaInner h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.ctaInner p {
+  font-size: 1.05rem;
+  margin-bottom: 36px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+.btnSecondary {
+  background: #2b446b;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+.btnSecondary:hover {
+  background: #1e3250;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1200px) {
+  .featuresGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .featuresLeft {
+    grid-column: 1 / -1;
+  }
+  .whyCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .introGrid, .typesGrid, .mfgContainer, .faqContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mfgWatermark {
+    font-size: 4rem;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  .featuresMiddle {
+    height: 300px;
+  }
+  .whyHeader, .faqTopRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .whyDesc, .faqDesc {
+    text-align: left;
+    max-width: 100%;
+  }
+  .introVisuals, .typesVisuals {
+    height: 300px;
+  }
+  .imgMain {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .whyCards {
+    grid-template-columns: 1fr;
+  }
+  .secTitle, .heroContent h1 {
+    font-size: 2rem;
+  }
+  .mfgContent h2 {
+    font-size: 1.8rem;
+  }
+}

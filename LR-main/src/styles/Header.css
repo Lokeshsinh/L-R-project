@@ -1,0 +1,794 @@
+/* ══════════════════════════════════
+   TABLER ICONS IMPORT
+══════════════════════════════════ */
+@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
+
+/* ══════════════════════════════════
+   GLOBAL
+══════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.site-header {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 9999;
+  box-shadow: 0 1px 0 rgba(16, 40, 79, 0.08);
+}
+
+/* ══════════════════════════════════
+   TOP BAR
+══════════════════════════════════ */
+.top-bar {
+  height: 36px;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #10284f;
+  font-size: 14px;
+  overflow: hidden;
+}
+.top-header{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.top-label {
+  height: 100%;
+  background: #263f69;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  border-top-right-radius: 45px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.top-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 15px;
+  flex: 1;
+  min-width: 0;
+}
+
+.info-item span{
+  font-size: 14px;
+  color: #263f69;
+  font-weight: 600;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.info-item .ti {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.top-social {
+  background: #263f69;
+  color: #fff;
+  height: 100%;
+  padding: 15px 25px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-top-left-radius:  45px;
+  flex-shrink: 0;
+}
+
+.top-social a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transition: opacity 0.2s;
+  text-decoration: none;
+}
+
+.top-social a .ti {
+  font-size: 16px;
+}
+
+.top-social a:hover {
+  opacity: 0.75;
+}
+
+/* ══════════════════════════════════
+   NAVBAR
+══════════════════════════════════ */
+.navbar {
+  height: 78px;
+  padding: 0 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.brand-icon-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+}
+
+.brand-icon-circle img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ══════════════════════════════════
+   NAV LINKS
+══════════════════════════════════ */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+  font-size: 15px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links > li > a,
+.dropdown-toggle {
+  padding: 28px 0;
+  font-weight: 500;
+  position: relative;
+  color: #1f2937;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  font-family: inherit;
+  transition: color 0.22s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2937;
+  display: block;
+  transition: color 0.22s ease;
+}
+
+.nav-links a.active {
+  color: #263f69;
+  font-weight: 700;
+}
+
+/* Arrow icon on dropdown toggle */
+.dropdown-toggle .arrow {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.dropdown:hover > .dropdown-toggle .arrow,
+.dropdown:focus-within > .dropdown-toggle .arrow,
+.dropdown.mobile-open > .dropdown-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+/* Desktop underline */
+@media (min-width: 901px) {
+  .nav-links > li > a::after,
+  .dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 18px;
+    width: 0;
+    height: 2px;
+    background: #263f69;
+    border-radius: 999px;
+    transition: width 0.25s ease;
+  }
+
+  .nav-links > li:hover > a,
+  .nav-links > li:hover > .dropdown-toggle,
+  .nav-links a.active,
+  .dropdown:focus-within > .dropdown-toggle {
+    color: #263f69;
+  }
+
+  .nav-links > li:hover > a::after,
+  .nav-links a.active::after,
+  .nav-links > li:hover > .dropdown-toggle::after,
+  .dropdown:focus-within > .dropdown-toggle::after {
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════════
+   DROPDOWNS — BASE STYLES
+══════════════════════════════════ */
+.dropdown-menu,
+.submenu-list,
+.nested-list,
+.deep-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu,
+.submenu-list,
+.nested-list,
+.deep-list {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(38, 63, 105, 0.12);
+  border-radius: 16px;
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.14),
+    0 8px 18px rgba(15, 23, 42, 0.08);
+  min-width: 230px;
+  max-width: 280px;
+  padding: 8px;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s ease;
+}
+
+/* Level 1 dropdown: opens below */
+.dropdown-menu {
+  top: 100%;
+  left: 0;
+  transform: translateY(10px);
+}
+
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 28px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid rgba(38, 63, 105, 0.12);
+  border-top: 1px solid rgba(38, 63, 105, 0.12);
+  transform: rotate(45deg);
+}
+
+/* Level 2 & 3: opens to the right by default */
+.submenu-list,
+.nested-list,
+.deep-list {
+  top: -10px;
+  left: calc(100% + 8px);
+  right: auto;
+  transform: translateX(10px);
+}
+
+/* ── Smart flip: keep nested menus on-screen ── */
+/* When a submenu-item is near the right edge it gets .flip-left class via JS
+   OR we rely on CSS :has / manual class. Here we use a CSS-only approach:
+   place the nested lists to the LEFT when the parent li is inside a list
+   that is itself opening to the right and might overflow. */
+
+/* Override for menus that could overflow right side of viewport */
+.dropdown-submenu.flip-left > .submenu-list,
+.nested-submenu.flip-left > .nested-list,
+.deep-submenu.flip-left > .deep-list {
+  left: auto;
+  right: calc(100% + 8px);
+  transform: translateX(-10px);
+}
+
+/* ══════════════════════════════════
+   DESKTOP HOVER REVEAL
+══════════════════════════════════ */
+@media (min-width: 901px) {
+  .dropdown:hover > .dropdown-menu,
+  .dropdown:focus-within > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .dropdown-submenu:hover > .submenu-list,
+  .dropdown-submenu:focus-within > .submenu-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .dropdown-submenu.flip-left:hover > .submenu-list,
+  .dropdown-submenu.flip-left:focus-within > .submenu-list {
+    transform: translateX(0);
+  }
+
+  .nested-submenu:hover > .nested-list,
+  .nested-submenu:focus-within > .nested-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .nested-submenu.flip-left:hover > .nested-list,
+  .nested-submenu.flip-left:focus-within > .nested-list {
+    transform: translateX(0);
+  }
+
+  .deep-submenu:hover > .deep-list,
+  .deep-submenu:focus-within > .deep-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .deep-submenu.flip-left:hover > .deep-list,
+  .deep-submenu.flip-left:focus-within > .deep-list {
+    transform: translateX(0);
+  }
+}
+
+/* Invisible bridge to prevent hover gap on submenu items */
+.dropdown-submenu > .submenu-list::before,
+.nested-submenu > .nested-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 12px;
+  height: 100%;
+}
+
+.dropdown-submenu.flip-left > .submenu-list::before,
+.nested-submenu.flip-left > .nested-list::before {
+  left: auto;
+  right: -10px;
+}
+
+/* ══════════════════════════════════
+   DROPDOWN ITEMS
+══════════════════════════════════ */
+.dropdown-menu li,
+.submenu-list li,
+.nested-list li,
+.deep-list li {
+  position: relative;
+}
+
+.dropdown-menu li > a,
+.submenu-list li > a,
+.nested-list li > a,
+.deep-list li > a,
+.dropdown-submenu > button,
+.nested-submenu > button,
+.deep-submenu > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 14px;
+  min-height: 42px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.dropdown-menu li:hover > a,
+.submenu-list li:hover > a,
+.nested-list li:hover > a,
+.deep-list li:hover > a,
+.dropdown-submenu:hover > button,
+.nested-submenu:hover > button,
+.deep-submenu:hover > button,
+.dropdown-submenu:focus-within > button,
+.nested-submenu:focus-within > button,
+.deep-submenu:focus-within > button {
+  background: linear-gradient(135deg, #3f557f 0%, #2d4672 100%);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* Side arrows */
+.side-arrow {
+  font-size: 15px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-submenu:hover > button .side-arrow,
+.nested-submenu:hover > button .side-arrow,
+.deep-submenu:hover > button .side-arrow,
+.dropdown-submenu:focus-within > button .side-arrow,
+.nested-submenu:focus-within > button .side-arrow,
+.deep-submenu:focus-within > button .side-arrow {
+  transform: translateX(3px);
+}
+
+/* Flip side arrow when menu opens left */
+.dropdown-submenu.flip-left > button .side-arrow,
+.nested-submenu.flip-left > button .side-arrow,
+.deep-submenu.flip-left > button .side-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-submenu.flip-left:hover > button .side-arrow,
+.nested-submenu.flip-left:hover > button .side-arrow,
+.deep-submenu.flip-left:hover > button .side-arrow,
+.dropdown-submenu.flip-left:focus-within > button .side-arrow,
+.nested-submenu.flip-left:focus-within > button .side-arrow,
+.deep-submenu.flip-left:focus-within > button .side-arrow {
+  transform: rotate(180deg) translateX(3px);
+}
+
+/* Section heading inside nested list (e.g. "Premium Containers") */
+.nested-section-heading {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #3f557f 0%, #2d4672 100%);
+  border-radius: 10px;
+  margin-bottom: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+/* ══════════════════════════════════
+   RIGHT-EDGE FLIP (CSS approach)
+   Products is 3rd from right — push dropdown left
+══════════════════════════════════ */
+/* The "Our Products" li is position:relative.
+   Its dropdown-menu opens to the right, but submenu/nested
+   lists could overflow. We detect this with a utility class
+   added via JS (see useEffect in component), but also provide
+   a CSS fallback for the outermost level. */
+
+/* If the dropdown itself would overflow, move it right-aligned */
+.nav-links > li.align-right > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.nav-links > li.align-right > .dropdown-menu::after {
+  left: auto;
+  right: 28px;
+}
+
+/* ══════════════════════════════════
+   BUTTONS
+══════════════════════════════════ */
+.dark-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 42px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .4s;
+}
+
+.dark-btn span {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transition: color .4s ease;
+}
+
+.dark-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: #263f69;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .5s ease;
+    z-index: 1;
+}
+
+.dark-btn:hover::after {
+    transform: translate(-50%, -50%) scale(18);
+}
+
+.dark-btn:hover span {
+    color: #fff;
+}
+
+.menu-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #263f69;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn .ti {
+  font-size: 22px;
+}
+
+/* ══════════════════════════════════
+   MOBILE
+══════════════════════════════════ */
+@media (max-width: 900px) {
+  .desktop-btn {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .top-bar {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .top-info {
+    gap: 12px;
+    font-size: 12px;
+    justify-content: flex-start;
+  }
+
+  .top-social {
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .navbar {
+    height: 68px;
+    padding: 0 18px;
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    align-items: flex-start;
+    z-index: 9998;
+  }
+
+  .nav-links.show-menu {
+    max-height: 90vh;
+    padding: 8px 0 20px;
+    overflow-y: auto;
+  }
+
+  .nav-links > li {
+    width: 100%;
+  }
+
+  .nav-links > li > a,
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 22px;
+    line-height: 1.3;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  /* Reset all absolute positioning on mobile */
+  .dropdown-menu,
+  .submenu-list,
+  .nested-list,
+  .deep-list {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+    padding: 0;
+    background: #f4f6fa;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .mobile-open > .dropdown-menu {
+    max-height: 1200px;
+    padding: 4px 0 8px 14px;
+    pointer-events: auto;
+  }
+
+  .mobile-sub-open > .submenu-list {
+    max-height: 800px;
+    padding: 4px 0 8px 14px;
+    pointer-events: auto;
+    background: #eaecf3;
+  }
+
+  .mobile-nested-open > .nested-list {
+    max-height: 800px;
+    padding: 4px 0 8px 14px;
+    pointer-events: auto;
+    background: #e1e4ef;
+  }
+
+  .mobile-deep-open > .deep-list {
+    max-height: 400px;
+    padding: 4px 0 8px 14px;
+    pointer-events: auto;
+    background: #d8dce8;
+  }
+
+  .dropdown-menu::after,
+  .dropdown-submenu > .submenu-list::before,
+  .nested-submenu > .nested-list::before {
+    display: none;
+  }
+
+  .dropdown-menu li > a,
+  .submenu-list li > a,
+  .nested-list li > a,
+  .deep-list li > a,
+  .dropdown-submenu > button,
+  .nested-submenu > button,
+  .deep-submenu > button {
+    padding: 11px 14px;
+    white-space: normal;
+    border-radius: 8px;
+    transform: none !important;
+  }
+
+  .dropdown-menu li:hover > a,
+  .submenu-list li:hover > a,
+  .nested-list li:hover > a,
+  .deep-list li:hover > a,
+  .dropdown-submenu:hover > button,
+  .nested-submenu:hover > button,
+  .deep-submenu:hover > button,
+  .dropdown-submenu:focus-within > button,
+  .nested-submenu:focus-within > button,
+  .deep-submenu:focus-within > button {
+    background: rgba(38, 63, 105, 0.1);
+    color: #263f69;
+    transform: none !important;
+  }
+
+  /* Mobile: side arrows point down when open */
+  .dropdown-submenu.mobile-sub-open > button .side-arrow,
+  .nested-submenu.mobile-nested-open > button .side-arrow,
+  .deep-submenu.mobile-deep-open > button .side-arrow {
+    transform: rotate(90deg);
+  }
+
+  .nav-links > li > a::after {
+    display: none;
+  }
+
+  /* Disable flip-left logic on mobile */
+  .dropdown-submenu.flip-left > .submenu-list,
+  .nested-submenu.flip-left > .nested-list,
+  .deep-submenu.flip-left > .deep-list {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+/* ══════════════════════════════════
+   SMALLER DEVICES
+══════════════════════════════════ */
+@media (max-width: 700px) {
+  .top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 6px 0;
+  }
+
+  .top-label,
+  .top-social {
+    width: 100%;
+    justify-content: center;
+    border-radius: 0;
+    padding: 8px 12px;
+  }
+
+  .top-info {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 12px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand h2 {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 0 14px;
+  }
+}
