@@ -7,6 +7,7 @@ import {
   Eye,
   Factory,
   ArrowUpRight,
+  ArrowRight,
 } from "lucide-react";
 
 
@@ -14,74 +15,6 @@ import welding from "../../assets/Home/robot.png";
 import robot from "../../assets/Home/welding.png";
 import steel from "../../assets/Home/steel.png";
 import solar from "../../assets/Home/solar.png";
-const GoalIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    style={{ width: "100%", height: "100%" }}
-  >
-    <circle cx="12" cy="12" r="10" />
-    <circle cx="12" cy="12" r="6" />
-    <circle cx="12" cy="12" r="1.5" fill="currentColor" />
-    <line x1="12" y1="12" x2="12" y2="4" />
-    <polygon points="12,4 17,6.5 12,9" fill="currentColor" strokeWidth="1" />
-  </svg>
-);
-
-const MissionIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    style={{ width: "100%", height: "100%" }}
-  >
-    <line x1="4" y1="16" x2="20" y2="16" />
-    <line x1="12" y1="16" x2="12" y2="21" />
-    <line x1="8" y1="5" x2="11" y2="16" />
-    <line x1="12" y1="5" x2="15" y2="16" />
-    <line x1="16" y1="5" x2="19" y2="16" />
-  </svg>
-);
-
-const ClientIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    style={{ width: "100%", height: "100%" }}
-  >
-    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-    <circle cx="9" cy="7" r="4" />
-    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-  </svg>
-);
-
-const VisionIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    style={{ width: "100%", height: "100%" }}
-  >
-    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-    <circle cx="12" cy="12" r="3.5" />
-  </svg>
-);
-
 const WhyPartner = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const items = [

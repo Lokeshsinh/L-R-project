@@ -1,7 +1,7 @@
 .innovation-section {
-  width: 100%;
   padding: 80px 60px;
-   background-color: #f7f7f753;
+  background-color: #f7f7f753;
+  background: #fff;
   overflow: hidden;
 }
 
@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 48px;
+  gap: 40px;
 }
 
 .head-left {
@@ -23,15 +24,13 @@
   padding: 6px 25px;
   border-radius: 40px;
   font-size: 15px;
-  font-weight: 400;
   margin-bottom: 14px;
-  color: #555;
   border: 1px solid #e5e7eb;
 }
 
 .section-head h2 {
-  font-size:55px;
-  font-weight: 500;
+  font-size: 55px;
+  font-weight: 400;
   color: #111;
   line-height: 1.15;
   margin: 0 0 14px 0;
@@ -49,12 +48,14 @@
 }
 
 .head-desc {
+  margin-top: 20px;
   flex: 0 1 400px;
-  font-size: 15px;
+  font-size: 16px;
   color: #555;
   line-height: 1.7;
   margin: 0;
-  padding-top: 56px; /* align with heading baseline */
+  padding-top: 56px;
+  max-width: 550px; /* align with heading baseline */
 }
 
 /* ── 3-Card Layout ── */

@@ -37,7 +37,7 @@ const InnovationSlider = () => {
       {/* Header */}
       <div className={styles["section-head"]}>
         <div className={styles["head-left"]}>
-          <span className={styles.tag}>• Why <lable styles={{color:"#263f69"}}>Choose us</lable></span>
+          <span className={styles.tag}>• Why Choose us</span>
           <h2>
             Powering Sustainable<br />
             <span>Innovation</span>

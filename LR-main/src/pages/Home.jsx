@@ -1,7 +1,7 @@
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 
-import Hero from "../components/Home/Hero";
+// import Hero from "../components/Home/Hero";
 import ClientLogoStrip from "../components/Home/ClientLogoStrip";
 import ProductCategory from "../components/Home/ProductCategory";
 import AboutPreview from "../components/Home/AboutPreview";
@@ -13,7 +13,6 @@ import Testimonials from "../components/Home/Testimonials";
 import FAQ from "../components/Home/FAQ";
 import ContactCTA from "../components/Home/ContactCTA";
 import HeroBanner from "../components/Home/HeroBanner";
-
 import "../styles/Global.css";
 
 const Home = () => {
