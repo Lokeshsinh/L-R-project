@@ -6,8 +6,6 @@ import {
   Users,
   Eye,
   Factory,
-  ArrowUpRight,
-  ArrowRight,
 } from "lucide-react";
 
 
