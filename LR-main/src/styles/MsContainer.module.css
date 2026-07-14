@@ -13,12 +13,11 @@
 
 /* ─── HERO ───────────────────────────────────────────────── */
 .hero {
-  background: linear-gradient(rgba(8, 20, 45, 0.75), rgba(8, 20, 45, 0.75)),
-    url("https://images.unsplash.com/photo-1494587416117-f102a4f6f7b5?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+  background:  url("../assets/msConatiner/ms1.png") center/cover no-repeat;
   color: #fff;
-  padding: 90px 60px ;
+  padding: 90px 60px;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   justify-content: start;
   flex-direction: column;
@@ -53,20 +52,25 @@
 .btnWhite {
   width: 267px;
   height: 54px;
-  display: flex;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
   background: #1a3c6e;
   color: #fff;
+
   border: none;
   border-radius: 4px;
-  padding: 14px 28px;
+  padding: 25px 28px;
+  /* Only left & right padding */
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   overflow: hidden;
   transition: all .35s ease;
+  box-sizing: border-box;
 }
 
 .arrow {
@@ -85,8 +89,10 @@
 
 /* ─── INTRO ──────────────────────────────────────────────── */
 .intro {
-  padding: 64px 60px;
-  background: #fff;
+  width: 100%;
+  padding: 65px 60px;
+  background-color: #f7f7f753;
+
 }
 
 .introTop {
@@ -96,33 +102,41 @@
   margin-bottom: 36px;
 }
 
-.introTop h2 {
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+.introFlex{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.introFlex h2 {
+  font-size: 55px;
   font-weight: 400;
   color: #111;
   line-height: 1.2;
 }
 
-.introTop h2 span {
+.introFlex h2 span {
   color: #1a3c6e;
+}
+
+.introLine{
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #0d2244;
 }
 
 /* Right image */
 
-.introThumb {
-  width: 160px;
-  height: 110px;
-  border-radius: 6px;
-  background: url("https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=300&q=80") center/cover no-repeat;
-  flex-shrink: 0;
-}
+
 
 .introBody {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 60px;
 }
 
 .introImg {
@@ -132,7 +146,12 @@
 }
 
 .introText {
-  max-width: 650px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
 }
 
 /* Left image */

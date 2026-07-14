@@ -58,11 +58,6 @@ const InnovationSlider = () => {
 
     return () => clearInterval(interval);
   }, []);
-  const visibleSlides = [
-    slides[current],
-    slides[(current + 1) % slides.length],
-    slides[(current + 2) % slides.length],
-  ];
 
   const handlerLeft = () => {
     setCurrent(prev => (prev + 1) % slides.length)

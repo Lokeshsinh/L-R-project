@@ -121,10 +121,13 @@ const MsContainer = () => {
 
       <section className={styles.intro}>
         <div className={styles.introTop}>
-          <h2>
-            MS <span>Container</span>
-          </h2>
-          <div className={styles.introThumb} />
+          <div className={styles.introFlex}>
+            <h2>
+              MS <span>Container</span>
+            </h2>
+            <div className={styles.introLine}></div>
+          </div>
+          <div className={styles.introThumb}></div>
         </div>
 
         <div className={styles.introBody}>
@@ -137,29 +140,27 @@ const MsContainer = () => {
           {/* Right Content */}
           <div className={styles.introText}>
             <p>
-              MS Containers (Mild Steel Containers) are portable and modular{" "}
-              <br />
-              structures designed for durable and flexible space solutions.{" "}
-              Built with <br />
-              strong steel, they are widely used in industrial, oil &amp; gas,{" "}
-              <br /> construction, renewable energy, and infrastructure projects
-              where quick <br />
+              MS Containers (Mild Steel Containers) are portable and modular
+              structures designed for durable and flexible space solutions.
+              Built with 
+              strong steel, they are widely used in industrial, oil &amp; gas,
+               construction, renewable energy, and infrastructure projects
+              where quick 
               setup and versatility are important.
             </p>
 
             <p>
-              These containers feature a skid-mounted design, allowing easy{" "}
-              <br />
+              These containers feature a skid-mounted design, allowing easy
+          
               installation without foundations and simple relocation using
-              cranes or <br /> forklifts. Suitable for offices, accommodation,
-              and storage, MS <br /> Containers provide a cost-effective,
-              low-maintenance, and practical <br /> solution for modern project
+              cranes or  forklifts. Suitable for offices, accommodation,
+              and storage, MS Containers provide a cost-effective,
+              low-maintenance, and practical  solution for modern project
               needs.
             </p>
 
             <p>
-              With strong build quality and smart design, MS Containers ensure{" "}
-              <br />
+              With strong build quality and smart design, MS Containers ensure
               stability, efficiency, and long-lasting use.
             </p>
 
