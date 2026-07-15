@@ -15,27 +15,36 @@ import {
 import container2 from '../assets/msConatiner/conatiner2.png'
 import container3 from '../assets/msConatiner/conatiner3.png'
 import card1 from '../assets/msConatiner/card1.png';
-import card2 from '../assets/msConatiner/card2.png'
+import card2 from '../assets/msConatiner/card2.png';
+import card3 from '../assets/msConatiner/card3.png';
+import card4 from '../assets/msConatiner/card4.png';
+import container4 from '../assets/msConatiner/container4.png';
+import read1 from '../assets/msConatiner/read1.png';
+import read2 from '../assets/msConatiner/read2.png';
+import read3 from '../assets/msConatiner/read3.png';
+
+
 const containerTypes = [
   {
     title: "Premium Series Containers",
-    desc: "High-end modular MS containers built for durability, portability, and multi-application use for luxury offices, accommodation, control rooms, site service centres, with strong steel frames, insulation, and premium finishes.",
-    img: "/Images/work1.jpg",
+    desc: "High-end modular MS containers built for durability, portability, and customization ideal for luxury offices, accommodation, control rooms, and secure storage, with strong steel frames, insulation, and premium finishes.",
+    img: read1,
     path: "/puf-containers",
   },
   {
     title: "Executive Series Containers",
-    desc: "Efficient prefabricated containers designed for offices, cabins, and site operations. Built with durable MS structures, they offer strength, weather resistance, and a practical cost-effective workspace solution.",
-    img: "/Images/work2.jpg",
+    desc: "Efficient prefabricated containers designed for offices, cabins, and site operations. Built with durable MS structures, they offer strength, weather resistance, and a practical, cost-effective workspace solution.",
+    img: read2,
     path: "/executive-containers",
   },
   {
     title: "L&R Value Series Containers",
-    desc: "Economical container solutions at sites, built for strength and flexibility—ideal for budget-friendly, durable, and quick-deployment projects across various industries and site conditions.",
-    img: "/Images/work3.jpg",
+    desc: "Economical container solutions in all sizes, built for strength and flexibility—ideal for budget-friendly, durable, and quick-deployment projects across various industries and site conditions.",
+    img:  read3,
     path: "/lr-value-containers",
   },
 ];
+
 
 const industryProjects = [
   {
@@ -51,7 +60,7 @@ const industryProjects = [
   {
     title: "Industrial Site Buildings",
     desc: "Custom-engineered prefab buildings for industrial facilities, manufacturing units, warehouses, and project offices with quick installation and long-term performance.",
-    img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80",
+    img: card4,
   },
   {
     title: "Portable Modular Systems",
@@ -202,43 +211,49 @@ const MsContainer = () => {
       {/* TYPES */}
       <section className={styles.typesSec}>
         <div className={styles.typesHeader}>
-          <div>
+          <div className={styles.typesText}>
             <h2>
               Types of Modular
               <br />
               <span>MS Containers</span>
             </h2>
+            <div className={styles.typeLine}></div>
           </div>
 
           <p>
-            Discover a versatile range of modular MS containers built <br />
+            Discover a versatile range of modular MS containers built
             for industrial and commercial use offering durable, mobile,
-            <br />
             and flexible solutions for offices, accommodation, storage,
-            <br />
             and site operations.
           </p>
         </div>
 
         <div className={styles.typesGrid}>
-          {containerTypes.map((c) => (
-            <div key={c.title} className={styles.typeCard}>
-              <div
-                className={styles.typeImg}
-                style={{
-                  backgroundImage: `url('${c.img}')`,
-                }}
-              />
+          {containerTypes.map((item, index) => (
+            <div className={styles.typeCard} key={index}>
+              <div className={styles.imageBox}>
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className={styles.typeImg}
+                />
+              </div>
 
               <div className={styles.typeBody}>
-                <h4>{c.title}</h4>
-                <p>{c.desc}</p>
+                <h3>{item.title}</h3>
+
+                <p>{item.desc}</p>
 
                 <button
                   className={styles.btnKnow}
-                  onClick={() => navigate(c.path)}
+                  onClick={() => navigate(item.path)}
                 >
-                  Know More
+                  <span>Know More</span>
+
+                  <span className={styles.iconWrap}>
+                    <ArrowRight className={styles.iconOne} size={18} />
+                    <ArrowRight className={styles.iconTwo} size={18} />
+                  </span>
                 </button>
               </div>
             </div>
@@ -293,7 +308,7 @@ const MsContainer = () => {
             <div className={styles.blueShape}></div>
 
             <img
-              src={container3}
+              src={container4}
               alt="Container"
               className={styles.containerImg}
             />

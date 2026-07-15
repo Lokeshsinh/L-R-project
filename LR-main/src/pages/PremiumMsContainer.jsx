@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
+import { ArrowRight } from "lucide-react";
 import styles from "../styles/PremiumMsContainer.module.css";
 
 const PremiumMsContainer = () => {
@@ -123,8 +124,9 @@ const PremiumMsContainer = () => {
             modular solutions for industrial, commercial, and site-based
             applications.
           </p>
-          <button className={styles.btnHero}>
-            Contact us &nbsp;<span>→</span>
+          <button className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
@@ -166,6 +168,7 @@ const PremiumMsContainer = () => {
           </div>
         </div>
       </section>
+
 
       {/* ── Why Choose ── */}
       <section className={styles.whySec}>
@@ -210,6 +213,7 @@ const PremiumMsContainer = () => {
         </div>
       </section>
 
+
       {/* ── Sizes Grid ── */}
       <section className={styles.sizesSec}>
         <div className={styles.sizesInner}>
@@ -227,9 +231,8 @@ const PremiumMsContainer = () => {
             {containerSizes.map((item, index) => (
               <div
                 key={index}
-                className={`${styles.sizeCard} ${
-                  item.highlight ? styles.activeCard : ""
-                }`}
+                className={`${styles.sizeCard} ${item.highlight ? styles.activeCard : ""
+                  }`}
               >
                 <div className={styles.cardIcon}>📦</div>
                 <h3>{item.size}</h3>
@@ -243,6 +246,7 @@ const PremiumMsContainer = () => {
           </div>
         </div>
       </section>
+
 
       {/* ── Engineering Banner ── */}
       <section className={styles.engineeringBand}>
@@ -267,6 +271,7 @@ const PremiumMsContainer = () => {
           </div>
         </div>
       </section>
+
 
       {/* ── Applications ── */}
       <section className={styles.appsSec}>
@@ -295,6 +300,7 @@ const PremiumMsContainer = () => {
           </div>
         </div>
       </section>
+
 
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
@@ -325,9 +331,8 @@ const PremiumMsContainer = () => {
               {faqs.map((faq) => (
                 <div
                   key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqOpen : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""
+                    }`}
                   onClick={() =>
                     setOpenFaq(openFaq === faq.id ? null : faq.id)
                   }
@@ -350,6 +355,7 @@ const PremiumMsContainer = () => {
         </div>
       </section>
 
+
       {/* ── CTA Banner ── */}
       <section className={styles.ctaBanner}>
         <div className={styles.ctaInner}>
@@ -361,6 +367,7 @@ const PremiumMsContainer = () => {
           <button className={styles.btnCTA}>Contact US &nbsp;→</button>
         </div>
       </section>
+
 
       <Footer />
     </div>
