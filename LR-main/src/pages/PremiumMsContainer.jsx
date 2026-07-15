@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {
+  Plus, X
+} from "lucide-react";
+import {useNavigate} from 'react-router-dom'
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -6,10 +10,24 @@ import styles from "../styles/PremiumMsContainer.module.css";
 import room1 from '../assets/conatiners/premiumContainer/room1.png';
 import room2 from '../assets/conatiners/premiumContainer/room2.png'
 import room3 from '../assets/conatiners/premiumContainer/room3.png'
+import card1 from '../assets/conatiners/premiumContainer/can.png';
+import card2 from '../assets/conatiners/premiumContainer/can3.png';
+import card3 from '../assets/conatiners/premiumContainer/can2.png';
+import card4 from '../assets/conatiners/premiumContainer/can4.png';
+import container2 from '../assets/msConatiner/conatiner2.png'
 
 
 const PremiumMsContainer = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const containerSizes = [
     {
@@ -56,30 +74,26 @@ const PremiumMsContainer = () => {
     },
   ];
 
-  const applications = [
+  const industryProjects = [
     {
       title: "Staff Office Containers",
-      description:
-        "Ergonomic and air-conditioned office units built for site management and administrative teams.",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+      desc: "Modern, fully furnished office containers built for comfortable workspaces. Ideal for construction sites, industrial projects, and temporary offices.",
+      img: card1,
     },
     {
       title: "Dining Hall Containers",
-      description:
-        "Hygienic and spacious container units designed for organized dining facilities at project and industrial sites.",
-      img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
+      desc: "Spacious and hygienic dining containers designed for workers and staff. Built for comfort, durability, and easy maintenance.",
+      img: card2,
     },
     {
       title: "Gym Hall Containers",
-      description:
-        "Fully equipped fitness units tailored for workforce wellness at remote project locations.",
-      img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80",
+      desc: "Modular gym containers that promote employee fitness and wellness. Durable, secure, and suitable for industrial and commercial sites.",
+      img: card3,
     },
     {
       title: "Toilet Block Containers",
-      description:
-        "Sanitation-grade container blocks with proper plumbing and ventilation for site hygiene standards.",
-      img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      desc: "Portable toilet containers with modern sanitary facilities. Designed for hygiene, convenience, and long-lasting performance.",
+      img: card4,
     },
   ];
 
@@ -210,7 +224,7 @@ const PremiumMsContainer = () => {
               <img src={room3} alt="room" />
             </div>
             <div className={styles.whyImgBottom}>
-              <img  src={room2} alt="room" />
+              <img src={room2} alt="room" />
             </div>
           </div>
         </div>
@@ -280,23 +294,30 @@ const PremiumMsContainer = () => {
       <section className={styles.appsSec}>
         <div className={styles.appsInner}>
           <div className={styles.appsHeader}>
-            <h2 className={styles.secTitle}>
-              Premium Ms Container <br />
-              <span>Applications Projects</span>
-            </h2>
+            <div className={styles.appsText}>
+              <h2 className={styles.secTitle}>
+                Premium Ms Container <br />
+                <span>Applications Projects</span>
+              </h2>
+              <div className={styles.appsLine}></div>
+            </div>
             <p>
               High-quality MS container solutions designed for efficient, durable,
               and flexible use across industrial and commercial project
               environments.
             </p>
           </div>
-          <div className={styles.appsGrid}>
-            {applications.map((app, i) => (
-              <div key={i} className={styles.appCard}>
-                <img src={app.img} alt={app.title} />
-                <div className={styles.appOverlay}>
-                  <h4>{app.title}</h4>
-                  <p>{app.description}</p>
+          <div className={styles.expertiseGrid}>
+            {industryProjects.map((item, index) => (
+              <div className={styles.expCard} key={index}>
+                <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                <div className={styles.expLabel}>
+                  <h4>{item.title}</h4>
+
+                  <div className={styles.desc}>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -307,53 +328,61 @@ const PremiumMsContainer = () => {
 
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div
-            className={styles.faqSideImg}
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80')",
-            }}
-          />
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FQS</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked <br />
-                  <span>Questions</span>
-                </h2>
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers covering design, usage, durability, customization,
-                and advantages of Premium MS Containers for industrial and
-                commercial applications.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+        <span className={styles.introLabel}>• FAQ</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>
+              Frequently Asked
+              <br />
+              <span>Questions</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p>
+            Find answers to common questions about our container solutions,
+            design process, and performance benefits.
+          </p>
+        </div>
+
+        {/*  */}
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={container2} alt="container" />
+          </div>
+          {/*  */}
+
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""
-                    }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↑" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

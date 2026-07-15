@@ -65,7 +65,7 @@ const industryProjects = [
   {
     title: "Portable Modular Systems",
     desc: "Modern portable cabins and modular structures providing flexible workspace, accommodation, healthcare, education, and commercial infrastructure solutions.",
-    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80",
+    img: card3,
   },
 ];
 

@@ -523,180 +523,313 @@
    APPLICATIONS
 =========================== */
 .appsSec {
-  padding: 80px 8%;
-  background: #fff;
+  width: 100%;
+  padding: 71px 60px;
+  background-color: #f7f7f753;
 }
 
-.appsInner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .appsHeader {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+
+.appsText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appsText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.2;
+}
+
+.appsText h2 span {
+  color: #293F67;
+}
+
+.appsLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
 }
 
 .appsHeader p {
-  max-width: 320px;
-  font-size: 0.9rem;
+  max-width: 420px;
+  font-size: 15px;
   color: #666;
   line-height: 1.7;
   margin-top: 8px;
 }
 
-.appsGrid {
+.expertiseGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
-.appCard {
+.expCard {
   position: relative;
-  border-radius: 8px;
   overflow: hidden;
-  height: 280px;
+  height: 400px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.appCard img {
+.expImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: .6s;
 }
 
-.appCard:hover img {
-  transform: scale(1.06);
+.expCard:hover .expImg {
+  transform: scale(1.08);
 }
 
-.appOverlay {
+/* Bottom Blue Box */
+
+.expLabel {
   position: absolute;
-  bottom: 0;
   left: 0;
-  right: 0;
-  padding: 18px 16px 16px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
+  bottom: 0;
+  width: 100%;
+  background: rgba(41, 63, 103, .92);
+  padding: 20px;
+  height: 78px;
+  transition: height .45s ease;
+  box-sizing: border-box;
+}
+
+.expCard:hover .expLabel {
+  height: 180px;
+}
+
+/* Title */
+
+.expLabel h4 {
   color: #fff;
-}
-
-.appOverlay h4 {
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin: 0 0 6px;
-}
-
-.appOverlay p {
-  font-size: 0.76rem;
-  line-height: 1.5;
-  color: #d1d5db;
+  font-size: 20px;
+  font-weight: 500;
   margin: 0;
 }
+
+/* Hidden Description */
+
+.desc {
+  margin-top: 18px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .35s ease;
+}
+
+.expCard:hover .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.desc p {
+  color: rgba(255, 255, 255, .95);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
 
 /* ===========================
    FAQ
 =========================== */
 .faqSec {
-  padding: 80px 8%;
-  background: #f7f9fc;
+  padding: 80px 60px;
+  background-color: #f7f7f753;
 }
 
-.faqInner {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 50px;
-  max-width: 1100px;
-  margin: 0 auto;
+
+.introLabel {
+  background: #fff;
+  padding: 6px 20px;
+  border-radius: 40px;
+  font-size: 15px;
+  margin-bottom: 17px;
+  border: 1px solid #e5e7eb;
+}
+
+.faqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
   align-items: start;
 }
 
-.faqSideImg {
-  height: 420px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.faqRight {
+.faqText {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.faqTopRow {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.faqBreadcrumb {
-  font-size: 0.8rem;
-  color: #888;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.faqSubtext {
-  max-width: 240px;
-  font-size: 0.85rem;
-  color: #666;
-  line-height: 1.7;
-  margin: 0;
-  padding-top: 4px;
-}
-
-.faqList {
-  display: flex;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
   gap: 10px;
 }
 
-.faqItem {
-  background: #fff;
-  border-radius: 6px;
-  padding: 16px 20px;
-  cursor: pointer;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e8edf3;
-  transition: all 0.2s;
+.faqText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
 }
 
-.faqOpen {
-  background: #1e3a5f;
-  color: #fff;
-  border-color: #1e3a5f;
+.faqText h2 span {
+  color: #1a3c6e;
 }
 
-.faqQuestion {
+.FaqsLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
+}
+
+.faqHeader p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  padding-top: 8px;
+  max-width: 470px;
+}
+
+
+.faqBody {
   display: flex;
   justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+}
+
+.faqImg {
+  width: 640px;
+  height: 495px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.faqImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .6s ease;
+}
+
+.faqImg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background .6s ease;
+}
+
+.faqImg:hover img {
+  transform: scale(1.08);
+}
+
+.faqImg:hover::after {
+  background: rgba(0, 0, 0, .45);
+}
+
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.faqItem:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.question {
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
   align-items: center;
-  font-size: 0.92rem;
-  font-weight: 600;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.35s;
 }
 
-.faqArrow {
-  font-size: 0.85rem;
-  flex-shrink: 0;
-  margin-left: 12px;
-}
-
-.faqAnswer {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.faqAnswer p {
-  font-size: 0.88rem;
-  line-height: 1.7;
-  color: #a0b4cc;
+.question h3 {
   margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2F4673;
+  transition: transform 0.35s ease;
+}
+
+.active .icon {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+/* Active Card */
+
+.active {
+  background: #2F4673;
+}
+
+.active .question {
+  color: #fff;
+}
+
+.active .question h3 {
+  color: #fff;
+}
+
+.answerWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .45s ease;
+}
+
+.open {
+  max-height: 200px;
+}
+
+.answer {
+  padding: 0 30px 26px;
+}
+
+.answer p {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 740px;
 }
 
 /* ===========================
