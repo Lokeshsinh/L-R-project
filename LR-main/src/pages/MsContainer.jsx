@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "../styles/MsContainer.module.css";
+import home from '../assets/msConatiner/home.png'
+import container from '../assets/msConatiner/container.png'
 
 const containerTypes = [
   {
@@ -127,31 +129,32 @@ const MsContainer = () => {
             </h2>
             <div className={styles.introLine}></div>
           </div>
-          <div className={styles.introThumb}></div>
+          <div className={styles.introThumb}>
+            <img src={home} alt="home" />
+          </div>
         </div>
 
         <div className={styles.introBody}>
           {/* Left Image */}
-          <div
-            className={styles.introImg}
-            style={{ backgroundImage: "url('/Images/wallapanel.jpg')" }}
-          ></div>
+          <div className={styles.introImg}>
+            <img src={container} alt="container" />
+          </div>
 
           {/* Right Content */}
           <div className={styles.introText}>
             <p>
               MS Containers (Mild Steel Containers) are portable and modular
               structures designed for durable and flexible space solutions.
-              Built with 
+              Built with
               strong steel, they are widely used in industrial, oil &amp; gas,
-               construction, renewable energy, and infrastructure projects
-              where quick 
+              construction, renewable energy, and infrastructure projects
+              where quick
               setup and versatility are important.
             </p>
 
             <p>
               These containers feature a skid-mounted design, allowing easy
-          
+
               installation without foundations and simple relocation using
               cranes or  forklifts. Suitable for offices, accommodation,
               and storage, MS Containers provide a cost-effective,
@@ -164,10 +167,20 @@ const MsContainer = () => {
               stability, efficiency, and long-lasting use.
             </p>
 
-            <button className={styles.btnOutline}>Get Contact &nbsp;↗</button>
+            <button className={styles.btnOutline}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
         </div>
       </section>
+
+
+
       {/* TYPES */}
       <section className={styles.typesSec}>
         <div className={styles.typesHeader}>
