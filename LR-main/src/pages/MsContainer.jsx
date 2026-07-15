@@ -6,7 +6,12 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "../styles/MsContainer.module.css";
 import home from '../assets/msConatiner/home.png'
 import container from '../assets/msConatiner/container.png'
-import { Plus, X } from "lucide-react";
+import {
+  Plus, X, CalendarClock,
+  Box,
+  HousePlug,
+  ShieldCheck,
+} from "lucide-react";
 import container2 from '../assets/msConatiner/conatiner2.png'
 const containerTypes = [
   {
@@ -32,46 +37,48 @@ const containerTypes = [
 const industryProjects = [
   {
     title: "Oil & Gas Projects",
+    desc: "High-quality modular buildings and container solutions designed for oil & gas exploration sites, ensuring durability, safety, and rapid deployment in demanding environments.",
     img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Energy Sector Solutions",
-    desc: "Reliable container units for renewable and power projects, supporting temporary settlements and operational facilities.",
+    desc: "Reliable container units for renewable energy projects, substations, and power facilities, supporting operational efficiency and temporary workforce accommodation.",
     img: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Industrial Site Buildings",
+    desc: "Custom-engineered prefab buildings for industrial facilities, manufacturing units, warehouses, and project offices with quick installation and long-term performance.",
     img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Portable Modular Systems",
+    desc: "Modern portable cabins and modular structures providing flexible workspace, accommodation, healthcare, education, and commercial infrastructure solutions.",
     img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
 const deliveryFeatures = [
   {
-    img: "https://unpkg.com/lucide-static/icons/calendar-clock.svg",
+    icon: <CalendarClock size={48} strokeWidth={1.6} />,
     title: "End-to-End Execution",
     desc: "Complete project handling from design and engineering to manufacturing and final installation, ensuring a smooth and coordinated workflow.",
   },
   {
-    img: "https://unpkg.com/lucide-static/icons/box.svg",
+    icon: <Box size={48} strokeWidth={1.6} />,
     title: "In-House Manufacturing",
     desc: "All container units are produced within dedicated facilities, maintaining strict quality control and faster production timelines.",
   },
   {
-    img: "https://unpkg.com/lucide-static/icons/house-plug.svg",
+    icon: <HousePlug size={48} strokeWidth={1.6} />,
     title: "Plug-and-Play Units",
-    desc: "Pre-fabricated and mounted containers delivered ready-for-use, reducing on-site work and enabling quick setup.",
+    desc: "Pre-fabricated skid-mounted containers delivered ready-to-use, reducing on-site work and enabling quick setup.",
   },
   {
-    img: "https://unpkg.com/lucide-static/icons/square-check.svg",
+    icon: <ShieldCheck size={48} strokeWidth={1.6} />,
     title: "Rapid Project Completion",
     desc: "Efficient processes and minimal on-site labour ensure faster commissioning and timely project delivery.",
   },
 ];
-
 
 const faqs = [
   {
@@ -322,11 +329,15 @@ const MsContainer = () => {
       {/* EXPERTISE / INDUSTRY */}
       <section className={styles.expertise}>
         <div className={styles.expertiseHeader}>
-          <h2>
-            Expertise Across Energy
-            <br />
-            <span>&amp; Industrial Projects</span>
-          </h2>
+          <div className={styles.expertiseText}>
+            <h2>
+              Expertise Across Energy
+              <br />
+              <span>&amp; Industrial Projects</span>
+            </h2>
+
+            <div className={styles.expertiseLine}></div>
+          </div>
           <p>
             L&amp;R delivers advanced modular container solutions for oil &amp;
             gas, energy, and construction sectors, combining strong engineering,
@@ -335,15 +346,16 @@ const MsContainer = () => {
           </p>
         </div>
         <div className={styles.expertiseGrid}>
-          {industryProjects.map((item) => (
-            <div key={item.title} className={styles.expCard}>
-              <div
-                className={styles.expImg}
-                style={{ backgroundImage: `url('${item.img}')` }}
-              />
+          {industryProjects.map((item, index) => (
+            <div className={styles.expCard} key={index}>
+              <img src={item.img} alt={item.title} className={styles.expImg} />
+
               <div className={styles.expLabel}>
                 <h4>{item.title}</h4>
-                {item.desc && <p>{item.desc}</p>}
+
+                <div className={styles.desc}>
+                  <p>{item.desc}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -353,25 +365,29 @@ const MsContainer = () => {
       {/* FAST DELIVERY */}
       <section className={styles.delivery}>
         <div className={styles.deliveryHeader}>
-          <h2>
-            Fast &amp; Integrated
-            <br />
-            <span>Project Delivery</span>
-          </h2>
+          <div className={styles.deliverytext}>
+            <h2>
+              Fast &amp; Integrated
+              <br />
+              <span>Project Delivery</span>
+            </h2>
+            <div className={styles.deliveryLine}></div>
+          </div>
           <p>
             Seamless execution from design to installation, ensuring quick
             deployment and timely completion.
           </p>
         </div>
         <div className={styles.deliveryGrid}>
-          {deliveryFeatures.map((f) => (
-            <div key={f.title} className={styles.delivCard}>
+          {deliveryFeatures.map((item, index) => (
+            <div className={styles.delivCard} key={index}>
               <div className={styles.delivIcon}>
-                <img className="iconimg" src={f.img} alt={f.title} />
+                {item.icon}
               </div>
 
-              <h4>{f.title}</h4>
-              <p>{f.desc}</p>
+              <h4>{item.title}</h4>
+
+              <p>{item.desc}</p>
             </div>
           ))}
         </div>
@@ -445,7 +461,7 @@ const MsContainer = () => {
           Connect with our team to design and deliver durable, efficient, and
           fully customised ms containers tailored to your storage needs.
         </p>
-    
+
 
         <button className={styles.contactBtn}>
           <span className={styles.contactText}>Contact Us</span>
