@@ -431,6 +431,7 @@ const MsContainer = () => {
             design process, and performance benefits.
           </p>
         </div>
+        
         <div className={styles.faqBody}>
           <div className={styles.container}>
             {faqs.map((item, index) => (

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import {
   Plus, X
 } from "lucide-react";
-import {useNavigate} from 'react-router-dom'
+import { ChevronLeft, ChevronRight, Box } from "lucide-react";
+import { useNavigate } from 'react-router-dom'
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -15,6 +16,108 @@ import card2 from '../assets/conatiners/premiumContainer/can3.png';
 import card3 from '../assets/conatiners/premiumContainer/can2.png';
 import card4 from '../assets/conatiners/premiumContainer/can4.png';
 import container2 from '../assets/msConatiner/conatiner2.png'
+import cta from '../assets/msConatiner/cta.png'
+
+
+const cards = [
+  {
+    title: "40×10×8.5 / 40×8×8.5",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "20×10×8.5 / 20×8×8.5",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "10×10×8",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "6x6x8",
+    dark: false,
+    list: [
+      "Toilet Cabin Containers",
+      "Guard Cabin Block Containers",
+      "Tube Well Residence  Containers",
+      "cement store Containers",
+      "Tube well  Pump Farm Store Containers",
+      "coffee Shop Containers",
+      "Wash Room Block Containers",
+      "Cafe Containers  Hall Containers",
+
+    ],
+  },
+  {
+    title: "4x4x8 ",
+    dark: false,
+    list: [
+      "Toilet Cabin Containers",
+      "Guard Cabin Block Containers",
+      "Farming Store  Containers",
+      "Material store Containers",
+      "coffee Shop Containers",
+      "Wash Room Block Containers",
+      "Cafe Containers  Hall Containers",
+
+    ],
+  },
+];
+
+
 
 
 const PremiumMsContainer = () => {
@@ -29,50 +132,23 @@ const PremiumMsContainer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const containerSizes = [
-    {
-      size: "40×10×8.5 / 40×8×8.5",
-      features: [
-        "Staff offices Containers",
-        "Engineer's Accommodation",
-        "Worker Accommodation",
-        "Dining Hall Containers",
-        "Battery Storage",
-        "Gym Hall Containers",
-        "Cafe & Hall Units",
-        "Store Hall Containers",
-      ],
-      highlight: false,
-    },
-    {
-      size: "20×10×8.5 / 20×8×8.5",
-      features: [
-        "Staff offices Containers",
-        "Engineer's Accommodation",
-        "Worker Accommodation",
-        "Dining Hall Containers",
-        "Battery Storage",
-        "Gym Hall Containers",
-        "Cafe & Hall Units",
-        "Store Hall Containers",
-      ],
-      highlight: true,
-    },
-    {
-      size: "10×10×8",
-      features: [
-        "Staff offices Containers",
-        "Engineer's Accommodation",
-        "Worker Accommodation",
-        "Dining Hall Containers",
-        "Battery Storage",
-        "Gym Hall Containers",
-        "Cafe & Hall Units",
-        "Store Hall Containers",
-      ],
-      highlight: false,
-    },
-  ];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [current]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % cards.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
+  };
 
   const industryProjects = [
     {
@@ -235,31 +311,59 @@ const PremiumMsContainer = () => {
       <section className={styles.sizesSec}>
         <div className={styles.sizesInner}>
           <div className={styles.secHeaderCenter}>
-            <h2 className={styles.secTitle}>
-              The Types of Premium <br />
-              <span>MS Container Sizes</span>
-            </h2>
+            <div className={styles.secHeadText}>
+              <h2 >
+                The Types of Premium <br />
+                <span styles={{ color: "#293F67" }}>MS Container Sizes</span>
+              </h2>
+              <div className={styles.secHeadLine}></div>
+            </div>
             <p>
-              Five core footprints, available in dozens of interior layouts from
-              executive offices to dining halls.
+              Every Premium MS container is offered in five core footprints, each available in dozens of interior
+              layouts  from executive offices to dining halls, sanitary blocks, storage and accommodation.
             </p>
           </div>
-          <div className={styles.sizesGrid}>
-            {containerSizes.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.sizeCard} ${item.highlight ? styles.activeCard : ""
-                  }`}
-              >
-                <div className={styles.cardIcon}>📦</div>
-                <h3>{item.size}</h3>
-                <ul className={styles.featureList}>
-                  {item.features.map((f, i) => (
-                    <li key={i}>✔ {f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+
+          <div className={styles.controls}>
+            <button onClick={prevSlide}>
+              <ChevronLeft size={22} />
+            </button>
+
+            <button onClick={nextSlide}>
+              <ChevronRight size={22} />
+            </button>
+          </div>
+          <div className={styles.sliderWrapper}>
+            <div
+              className={styles.sliderTrack}
+              style={{
+                transform: `translateX(-${current * 33.333}%)`,
+              }}
+            >
+              {[...cards, ...cards.slice(0, 3)].map((card, index) => (
+                <div
+                  key={index}
+                  className={`${styles.card} ${card.dark ? styles.darkCard : ""
+                    }`}
+                >
+                  <Box
+                    size={48}
+                    strokeWidth={1.5}
+                    className={styles.icon}
+                  />
+
+                  <h2>{card.title}</h2>
+
+                  <div className={styles.line}></div>
+
+                  <ul>
+                    {card.list.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -389,15 +493,22 @@ const PremiumMsContainer = () => {
 
 
       {/* ── CTA Banner ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Ready to Build Your Premium Containers?</h2>
-          <p>
-            Connect with our team to design and deliver durable, efficient, and
-            fully customized Premium containers tailored to your storage needs.
-          </p>
-          <button className={styles.btnCTA}>Contact US &nbsp;→</button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Ready to Build Your Premium Containers?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully customized
+          Premium containers tailored to your storage needs.
+        </p>
+
+
+        <button className={styles.contactBtn}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
 
