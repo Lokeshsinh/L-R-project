@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,8 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "../styles/MsContainer.module.css";
 import home from '../assets/msConatiner/home.png'
 import container from '../assets/msConatiner/container.png'
-
+import { Plus, X } from "lucide-react";
+import container2 from '../assets/msConatiner/conatiner2.png'
 const containerTypes = [
   {
     title: "Premium Series Containers",
@@ -71,30 +72,37 @@ const deliveryFeatures = [
   },
 ];
 
+
 const faqs = [
   {
-    q: "What industries can MS modular containers be used in?",
-    a: "MS modular containers are widely used across Oil & Gas, Construction, Renewable Energy, Railways, Highways, Food Processing, Cement, and Infrastructure industries for offices, accommodation, storage, and site operations.",
+    q: "What are Pre-Engineered Buildings (PEB)?",
+    a: "Pre-Engineered Buildings (PEB) are steel structures designed and fabricated at the factory, then shipped and assembled on-site. They offer superior speed, durability, and cost-effectiveness compared to traditional construction.",
   },
   {
-    q: "What is a skid-mounted container system?",
-    a: "A skid-mounted container system allows units to be installed without a permanent foundation, making them easy to transport, relocate, and set up quickly along oilfields or remote sites.",
+    q: "What are Pre-Engineered Buildings (PEB)?",
+    a: "Light Gauge Steel Framing is a sustainable, earthquake-resistant construction method for modern infra, utilizing cold-formed steel profiles to build lightweight yet incredibly strong structures.",
   },
   {
-    q: "How fast can MS container projects be delivered?",
-    a: "Depending on specifications and quantity, most standard MS container units are delivered within 2–4 weeks from order confirmation, with express timelines available for urgent requirements.",
+    q: "What container sizes are available?",
+    a: "We provide containers in standard 20ft and 40ft sizes, as well as customized dimensions designed and manufactured to meet specific site office, storage, or accommodation requirements.",
   },
   {
-    q: "Are MS containers suitable for harsh environments?",
-    a: "Yes. Our MS containers are engineered with high-tensile steel, corrosion-resistant coatings, and heavy-duty insulation to withstand extreme weather, humidity, dust, and industrial site conditions.",
+    q: "Do you provide installation in New Delhi?",
+    a: "Yes, we provide end-to-end installation, shipping, and fabrication support throughout New Delhi, the NCR region, and across major industrial zones in India.",
   },
   {
-    q: "Can MS containers be customized for different uses?",
-    a: "Absolutely. Size, layout, doors, windows, insulation, electrical fittings, plumbing, HVAC, and finishes can all be fully customized to match your project's operational and functional requirements.",
+    q: "Does L&R Green India provide solutions for solar projects?",
+    a: "Yes, we design and manufacture high-performance solar mounting structures, fasteners, and specialized components for residential, commercial, and utility-scale solar installations.",
   },
 ];
 
 const MsContainer = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -227,6 +235,10 @@ const MsContainer = () => {
           ))}
         </div>
       </section>
+
+
+
+
       {/* HIGH MOBILITY */}
       <section className={styles.mobilitySec}>
         <div className={styles.mobilityGrid}>
@@ -278,6 +290,9 @@ const MsContainer = () => {
           </div>
         </div>
       </section>
+
+
+
       {/* STRUCTURAL STRENGTH BAND */}
       <section className={styles.structural}>
         <div className={styles.structuralWatermark}> L&R MS CONTAINER</div>
@@ -300,6 +315,10 @@ const MsContainer = () => {
           <div className={styles.structuralImg} />
         </div>
       </section>
+
+
+
+
       {/* EXPERTISE / INDUSTRY */}
       <section className={styles.expertise}>
         <div className={styles.expertiseHeader}>
@@ -359,35 +378,66 @@ const MsContainer = () => {
       </section>
 
       {/* FAQ */}
+
+
       <section className={styles.faqSec}>
-        <span className={styles.introLabel}>FAQ</span>
+        <span className={styles.introLabel}>• FAQ</span>
         <div className={styles.faqHeader}>
-          <h2>
-            Frequently Asked
-            <br />
-            <span>Questions</span>
-          </h2>
+          <div className={styles.faqText}>
+            <h2>
+              Frequently Asked
+              <br />
+              <span>Questions</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
           <p>
             Find answers to common questions about our container solutions,
             design process, and performance benefits.
           </p>
         </div>
         <div className={styles.faqBody}>
-          <div className={styles.faqList}>
-            {faqs.map((item) => (
-              <details key={item.q} className={styles.faqItem}>
-                <summary>{item.q}</summary>
-                <p>{item.a}</p>
-              </details>
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
+                </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
-          <div
-            className={styles.faqImg}
-            style={{ backgroundImage: "url('/Images/mscontianer.jpg')" }}
-          />
+          <div className={styles.faqImg}>
+            <img src={container2} alt="container" />
+          </div>
         </div>
       </section>
+
+
       {/* CTA */}
       <section className={styles.cta}>
         <h2>Ready to Build Your Ms Containers?</h2>
@@ -395,7 +445,16 @@ const MsContainer = () => {
           Connect with our team to design and deliver durable, efficient, and
           fully customised ms containers tailored to your storage needs.
         </p>
-        <button className={styles.btnBlue}>Contact US &nbsp;→</button>
+    
+
+        <button className={styles.contactBtn}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
       <Footer />
     </>

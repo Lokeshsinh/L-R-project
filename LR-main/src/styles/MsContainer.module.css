@@ -91,6 +91,10 @@
 .intro {
   width: 100%;
   padding: 65px 60px;
+  background: url('../assets/msConatiner/msBack.png');
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: cover;
   background-color: #f7f7f753;
 
 }
@@ -111,6 +115,7 @@
 }
 
 .introFlex h2 {
+  margin-top: 10px;
   font-size: 55px;
   font-weight: 400;
   color: #111;
@@ -205,15 +210,12 @@
 }
 
 .introLabel {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #1a3c6e;
-  border-bottom: 2px solid #1a3c6e;
-  padding-bottom: 4px;
-  display: inline-block;
-  margin-bottom: 16px;
+  background: #fff;
+  padding: 6px 20px;
+  border-radius: 40px;
+  font-size: 15px;
+  margin-bottom: 17px;
+  border: 1px solid #e5e7eb;
 }
 
 .btnOutline {
@@ -689,141 +691,610 @@
 /* ─── FAQ ────────────────────────────────────────────────── */
 .faqSec {
   padding: 72px 60px;
-  background: #fff;
+  background-color: #f7f7f753;
 }
 
 .faqHeader {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 20px;
   margin-bottom: 40px;
   align-items: start;
 }
 
-.faqHeader h2 {
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
+.faqText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faqText h2 {
+  font-size: 55px;
   font-weight: 400;
   line-height: 1.2;
   color: #111;
 }
 
-.faqHeader h2 span {
+.faqText h2 span {
   color: #1a3c6e;
+}
+
+.FaqsLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
 }
 
 .faqHeader p {
-  font-size: 0.93rem;
+  font-size: 15px;
   color: #555;
   line-height: 1.7;
   padding-top: 8px;
+  max-width: 470px;
 }
 
 .faqBody {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  display: flex;
+  justify-content: space-between;
   align-items: start;
+  gap: 40px;
 }
 
-.faqList {
-  display: flex;
-  flex-direction: column;
+.container {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .faqItem {
-  border-bottom: 1px solid #dde3ed;
-  padding: 18px 0;
-  cursor: pointer;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
 }
 
-.faqItem summary {
-  font-size: 0.96rem;
-  font-weight: 600;
-  color: #111;
-  list-style: none;
+.faqItem:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.question {
+  height: 70px;
+  padding: 0 30px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
-  user-select: none;
+  transition: 0.35s;
 }
 
-.faqItem summary::-webkit-details-marker {
-  display: none;
-}
-
-.faqItem summary::after {
-  content: "+";
-  font-size: 1.3rem;
-  color: #1a3c6e;
+.question h3 {
+  margin: 0;
+  font-size: 18px;
   font-weight: 400;
+  line-height: 1.4;
 }
 
-.faqItem[open]>summary {
-  color: #1a3c6e;
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2F4673;
+  transition: transform 0.35s ease;
 }
 
-.faqItem[open] summary::after {
-  content: "−";
+.active .icon {
+  transform: rotate(180deg);
+  color: #fff;
 }
 
-.faqItem[open] {
-  background: #eef2fa;
-  padding: 14px 16px 18px;
-  border-radius: 4px;
-  border-bottom: none;
-  margin-bottom: 4px;
+/* Active Card */
+
+.active {
+  background: #2F4673;
 }
 
-.faqItem p {
-  font-size: 0.88rem;
-  color: #444;
-  line-height: 1.7;
-  margin-top: 12px;
+.active .question {
+  color: #fff;
+}
+
+.active .question h3 {
+  color: #fff;
+}
+
+.answerWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .45s ease;
+}
+
+.open {
+  max-height: 200px;
+}
+
+.answer {
+  padding: 0 30px 26px;
+}
+
+.answer p {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 740px;
 }
 
 .faqImg {
-  width: 80%;
-  height: 50vh;
-  border-radius: 0;
-  margin-left: 5vw;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 640px;
+  height: 502px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  cursor: pointer;
 }
+
+.faqImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .6s ease;
+}
+
+.faqImg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background .6s ease;
+}
+
+.faqImg:hover img {
+  transform: scale(1.08);
+}
+
+.faqImg:hover::after {
+  background: rgba(0, 0, 0, .45);
+}
+
+
+
+
+/* 1440px */
+
+@media screen and (max-width:1440px) {
+
+  .faqText h2 {
+    font-size: 50px;
+  }
+
+  .faqImg {
+    width: 40%;
+    height: 470px;
+  }
+
+}
+
+/* 1366px */
+
+@media screen and (max-width:1366px) {
+
+  .faqSec {
+    padding: 70px 4%;
+  }
+
+  .faqText h2 {
+    font-size: 46px;
+  }
+
+  .faqImg {
+    height: 440px;
+  }
+
+}
+
+/* 1280px */
+
+@media screen and (max-width:1280px) {
+
+  .faqBody {
+    gap: 30px;
+  }
+
+  .container {
+    width: 58%;
+  }
+
+  .faqImg {
+    width: 40%;
+    height: 410px;
+  }
+
+}
+
+/* 1200px */
+
+@media screen and (max-width:1200px) {
+
+  .faqText h2 {
+    font-size: 42px;
+  }
+
+  .faqHeader p {
+    max-width: 420px;
+  }
+
+  .faqImg {
+    height: 390px;
+  }
+
+}
+
+/* 1024px */
+
+@media screen and (max-width:1024px) {
+
+  .faqSec {
+    padding: 60px 4%;
+  }
+
+  .faqHeader {
+    gap: 25px;
+  }
+
+  .faqText h2 {
+    font-size: 38px;
+  }
+
+  .faqHeader p {
+    font-size: 14px;
+    max-width: 360px;
+  }
+
+  .faqBody {
+    gap: 25px;
+  }
+
+  .container {
+    width: 58%;
+  }
+
+  .faqImg {
+    width: 42%;
+    height: 340px;
+  }
+
+}
+
+/* 992px */
+
+@media screen and (max-width:992px) {
+
+  .faqHeader {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .faqHeader p {
+    max-width: 100%;
+  }
+
+  .faqBody {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .faqImg {
+    width: 100%;
+    max-width: 720px;
+    height: 430px;
+  }
+
+}
+
+/* 768px */
+
+@media screen and (max-width:768px) {
+
+  .faqSec {
+    padding: 55px 5%;
+  }
+
+  .faqHeader {
+    margin-bottom: 30px;
+  }
+
+  .faqText {
+    align-items: center;
+    width: 100%;
+  }
+
+  .faqText h2 {
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .FaqsLine {
+    width: 90px;
+  }
+
+  .faqHeader p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .question {
+    min-height: 70px;
+    height: auto;
+    padding: 18px 20px;
+  }
+
+  .question h3 {
+    font-size: 16px;
+    padding-right: 15px;
+  }
+
+  .answer {
+    padding: 0 20px 20px;
+  }
+
+  .faqImg {
+    height: 340px;
+  }
+
+}
+
+/* 576px */
+
+@media screen and (max-width:576px) {
+
+  .faqSec {
+    padding: 50px 5%;
+  }
+
+  .faqText h2 {
+    font-size: 28px;
+  }
+
+  .question {
+    padding: 16px;
+  }
+
+  .question h3 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .answer p {
+    font-size: 14px;
+  }
+
+  .icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .faqImg {
+    height: 280px;
+  }
+
+}
+
+/* 480px */
+
+@media screen and (max-width:480px) {
+
+  .faqSec {
+    padding: 45px 4%;
+  }
+
+  .faqText h2 {
+    font-size: 24px;
+  }
+
+  .FaqsLine {
+    width: 75px;
+  }
+
+  .question {
+    padding: 15px;
+  }
+
+  .question h3 {
+    font-size: 14px;
+  }
+
+  .answer {
+    padding: 0 15px 18px;
+  }
+
+  .answer p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .faqImg {
+    height: 230px;
+  }
+
+}
+
+/* 375px */
+
+@media screen and (max-width:375px) {
+
+  .faqText h2 {
+    font-size: 22px;
+  }
+
+  .faqHeader p {
+    font-size: 13px;
+  }
+
+  .question h3 {
+    font-size: 13px;
+  }
+
+  .faqImg {
+    height: 200px;
+  }
+
+}
+
+/* 320px */
+
+@media screen and (max-width:320px) {
+
+  .faqSec {
+    padding: 40px 4%;
+  }
+
+  .faqText h2 {
+    font-size: 20px;
+  }
+
+  .FaqsLine {
+    width: 60px;
+  }
+
+  .question {
+    padding: 14px;
+  }
+
+  .question h3 {
+    font-size: 12px;
+  }
+
+  .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .answer {
+    padding: 0 14px 16px;
+  }
+
+  .answer p {
+    font-size: 12px;
+  }
+
+  .faqImg {
+    height: 170px;
+  }
+
+}
+
+
 
 /* ─── CTA ────────────────────────────────────────────────── */
 .cta {
-  background: #0d2244;
+  width: 100%;
+  background: url('../assets/msConatiner/cta.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
-  text-align: center;
-  padding: 30px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 60px;
 }
 
 .cta h2 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 800;
-  margin-bottom: 16px;
+  font-size: 60px;
+  font-weight: 600;
 }
 
 .cta p {
   font-size: 0.97rem;
   opacity: 0.85;
   max-width: 560px;
-  margin: 0 auto 32px;
   line-height: 1.7;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.btnBlue {
+.contactBtn {
+  width: 267px;
+  height: 54px;
+  padding: 0 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   background: #1a3c6e;
   color: #fff;
   border: none;
-  padding: 13px 32px;
-  font-size: 0.97rem;
-  font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.2s;
+  overflow: hidden;
+  transition: all .35s ease;
+}
+
+.contactText {
+  font-size: 15px;
+  font-weight: 600;
+  transition: .35s;
+}
+
+.contactBtn:hover {
+  background: #fff;
+  color: #1a3c6e;
+  box-shadow: 0 12px 30px rgba(26, 60, 110, .18);
+}
+
+/* Arrow */
+
+.iconBox {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.iconOne,
+.iconTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform .35s ease;
+}
+
+/* Visible arrow */
+
+.iconOne {
+  transform: translateX(0);
+}
+
+/* Hidden arrow */
+
+.iconTwo {
+  transform: translateX(-24px);
+}
+
+/* Hover */
+
+.contactBtn:hover .iconOne {
+  transform: translateX(24px);
+}
+
+.contactBtn:hover .iconTwo {
+  transform: translateX(0);
+}
+
+.contactBtn:hover .contactText {
+  transform: translateX(-3px);
 }
 
 .btnBlue:hover {
