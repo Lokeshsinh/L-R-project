@@ -13,6 +13,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import container2 from '../assets/msConatiner/conatiner2.png'
+import container3 from '../assets/msConatiner/conatiner3.png'
+import card1 from '../assets/msConatiner/card1.png';
+import card2 from '../assets/msConatiner/card2.png'
 const containerTypes = [
   {
     title: "Premium Series Containers",
@@ -38,12 +41,12 @@ const industryProjects = [
   {
     title: "Oil & Gas Projects",
     desc: "High-quality modular buildings and container solutions designed for oil & gas exploration sites, ensuring durability, safety, and rapid deployment in demanding environments.",
-    img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+    img: card1,
   },
   {
     title: "Energy Sector Solutions",
     desc: "Reliable container units for renewable energy projects, substations, and power facilities, supporting operational efficiency and temporary workforce accommodation.",
-    img: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=600&q=80",
+    img: card2,
   },
   {
     title: "Industrial Site Buildings",
@@ -248,52 +251,53 @@ const MsContainer = () => {
 
       {/* HIGH MOBILITY */}
       <section className={styles.mobilitySec}>
-        <div className={styles.mobilityGrid}>
-          <div className={styles.mobilityContent}>
+        <div className={styles.mobilityFlexs}>
+          <div className={styles.monilityText}>
             <h2 className={styles.secTitle}>
               High Mobility &amp; Flexible <br />
               <span>Modular Container Solutions</span>
             </h2>
-            <div className={styles.mobilityDivider} />
+            <div className={styles.mobilityLine}></div>
+          </div>
+          <div className={styles.mobilitySmall}>
+            <img src={container3} alt="container3" />
+          </div>
+        </div>
+        <div className={styles.mobilityGrid}>
+          <div className={styles.mobilityContent}>
+            {/* <div className={styles.mobilityDivider} /> */}
             <p>
               Skid-mounted MS containers are designed for quick and safe
-              placement <br />
+              placement
               without the need for foundations. Their strong steel structure
               allows easy transportation and relocation using cranes or
               forklifts.
             </p>
             <p>
               These containers are ideal for remote and challenging environments
-              such <br /> as oil & gas sites, energy projects, and temporary
-              settlements where <br />
+              such as oil & gas sites, energy projects, and temporary
+              settlements where
               mobility and fast setup are essential.
             </p>
             <p>
               Built for both accommodation and office use, the units offer
-              efficient <br />
+              efficient
               layouts, user comfort, and durable, low-maintenance construction
-              for <br />
+              for
               long-term performance.
             </p>
           </div>
-          <div className={styles.mobilityImagesCol}>
-            <div
-              className={styles.mobilityImgTop}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80')",
-              }}
+          {/* image  */}
+          <div className={styles.imageWrapper}>
+
+            <div className={styles.blueShape}></div>
+
+            <img
+              src={container3}
+              alt="Container"
+              className={styles.containerImg}
             />
 
-            <div className={styles.mobilityImgWrapper}>
-              <div
-                className={styles.mobilityImgBottom}
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80')",
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>
