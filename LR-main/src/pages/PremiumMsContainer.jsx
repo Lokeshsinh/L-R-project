@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "../styles/PremiumMsContainer.module.css";
+import room1 from '../assets/conatiners/premiumContainer/room1.png';
+import room2 from '../assets/conatiners/premiumContainer/room2.png'
+import room3 from '../assets/conatiners/premiumContainer/room3.png'
+
 
 const PremiumMsContainer = () => {
   const [openFaq, setOpenFaq] = useState(1);
@@ -133,38 +137,43 @@ const PremiumMsContainer = () => {
 
       {/* ── Intro ── */}
       <section className={styles.intro}>
+        <div className={styles.introText}>
+          <h2>
+            Premium Ms <span>Container</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
         <div className={styles.introGrid}>
           <div className={styles.introVisuals}>
+            <div className={styles.imgMain}>
+              <img src={room1} alt="room" />
+            </div>
             <div
-              className={styles.imgMain}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1512412086192-36c1706696fa?auto=format&fit=crop&w=800&q=80')",
-              }}
-            />
-            <div
-              className={styles.imgSub}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80')",
-              }}
-            />
+              className={styles.imgSub}>
+              <img src={room2} alt="room" />
+            </div>
           </div>
           <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              Premium Ms <span>Container</span>
-            </h2>
             <p>
-              L&R Premium Series containers are high-quality, durable modular
-              structures built with strong mild steel frameworks, designed to
-              perform efficiently in demanding industrial environments.
+              L&R Premium Series containers are high-quality, durable modular structures built with strong
+              mild steel frameworks, designed to perform efficiently in demanding industrial and commercial
+              environments. These containers are ideal for heavy-duty storage, secure site offices, and comfortable accommodation,
+              offering a reliable and professional solution for both temporary and long-term applications.
             </p>
             <p>
-              Equipped with advanced insulation, corrosion-resistant coatings,
-              and well-finished interiors that include electrical fittings and
-              customizable layouts.
+              VThey are equipped with advanced insulation, corrosion-resistant coatings, and well-finished interiors
+              that include electrical fittings and customizable layouts. Built for strength, comfort, and flexibility,
+              these containers provide a
+              modern, portable solution that ensures safety, efficiency, and quick deployment across various project sites.
             </p>
-            <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+            <button className={styles.btnOutline}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -172,13 +181,15 @@ const PremiumMsContainer = () => {
 
       {/* ── Why Choose ── */}
       <section className={styles.whySec}>
+        <div className={styles.whyText}>
+          <h2>
+            Why Choose <br />
+            <span>Premium Ms Containers</span>
+          </h2>
+          <div className={styles.WhyLine}></div>
+        </div>
         <div className={styles.whyGrid}>
           <div className={styles.whyContent}>
-            <h2 className={styles.secTitle}>
-              Why Choose <br />
-              <span>Premium Ms Containers</span>
-            </h2>
-            <div className={styles.whyDivider} />
             <p>
               Premium Ms Containers are designed for superior quality, strength,
               and modern functionality, making them ideal for high-end industrial
@@ -195,20 +206,12 @@ const PremiumMsContainer = () => {
             </p>
           </div>
           <div className={styles.whyImagesCol}>
-            <div
-              className={styles.whyImgTop}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80')",
-              }}
-            />
-            <div
-              className={styles.whyImgBottom}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=700&q=80')",
-              }}
-            />
+            <div className={styles.whyImgTop}>
+              <img src={room3} alt="room" />
+            </div>
+            <div className={styles.whyImgBottom}>
+              <img  src={room2} alt="room" />
+            </div>
           </div>
         </div>
       </section>
