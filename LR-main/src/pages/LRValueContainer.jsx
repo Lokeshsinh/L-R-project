@@ -5,9 +5,10 @@ import styles from "../styles/LRValueContainer.module.css";
 import { ArrowRight, ArrowUpRight, Plus, X, } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
-
-
-
+import card1 from '../assets/conatiners/L&RContainer/card1.jpg';
+import card2 from '../assets/conatiners/L&RContainer/card2.jpg';
+import card3 from '../assets/conatiners/L&RContainer/card3.jpg';
+import card4 from '../assets/conatiners/premiumContainer/can4.png';
 const LRValueContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -90,29 +91,30 @@ const LRValueContainer = () => {
     },
   ];
 
-  const products = [
+
+  const industryProjects = [
     {
       title: "Coffee Shop Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80",
+      desc: "Stylish modular coffee shop containers with a modern and inviting design. Perfect for cafés, kiosks, and commercial food outlets.",
+      img: card1,
     },
     {
       title: "Baby Play Area Container",
-      description:
-        "Safe and engaging modular space designed for children's recreational activities.",
-      img: "https://images.unsplash.com/photo-1555009393-f20bdb245c4d?auto=format&fit=crop&w=600&q=80",
+      desc: "Safe and engaging play area containers designed for children's recreation. Built with secure, spacious interiors for fun and learning.",
+      img: card2,
     },
     {
       title: "Pump Farm Store Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
+      desc: "Durable storage containers for pumps, equipment, and farm essentials. Designed for organized storage and reliable protection.",
+      img: card3,
     },
     {
       title: "Material Store Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=600&q=80",
+      desc: "Secure material storage containers for tools, equipment, and supplies. Built for durability, easy access, and efficient space utilization.",
+      img: card4,
     },
   ];
+
 
   const faqs = [
     {
@@ -319,16 +321,18 @@ const LRValueContainer = () => {
         </div>
       </section>
 
+
+
       {/* ── Products ── */}
       <section className={styles.productsSec}>
         <div className={styles.productsInner}>
           <div className={styles.productsHeader}>
-            <div>
+            <div className={styles.ProductFlex}>
               <h2 className={styles.secTitle}>
                 L&R Value Granted MS <br />
                 <span>Containers Products</span>
               </h2>
-              <div className={styles.productsDivider} />
+              <div className={styles.productsDivider}></div>
             </div>
             <p className={styles.productsSubtext}>
               Purpose-built modular container solutions designed for commercial,
@@ -336,13 +340,17 @@ const LRValueContainer = () => {
               flexible deployment options.
             </p>
           </div>
-          <div className={styles.productsGrid}>
-            {products.map((prod, i) => (
-              <div key={i} className={styles.productCard}>
-                <img src={prod.img} alt={prod.title} />
-                <div className={styles.productOverlay}>
-                  <h4>{prod.title}</h4>
-                  {prod.description && <p>{prod.description}</p>}
+          <div className={styles.expertiseGrid}>
+            {industryProjects.map((item, index) => (
+              <div className={styles.expCard} key={index}>
+                <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                <div className={styles.expLabel}>
+                  <h4>{item.title}</h4>
+
+                  <div className={styles.desc}>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
