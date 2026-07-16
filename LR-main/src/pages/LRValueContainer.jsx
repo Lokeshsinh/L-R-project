@@ -8,7 +8,7 @@ import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
 import card1 from '../assets/conatiners/L&RContainer/card1.jpg';
 import card2 from '../assets/conatiners/L&RContainer/card2.jpg';
 import card3 from '../assets/conatiners/L&RContainer/card3.jpg';
-import card4 from '../assets/conatiners/premiumContainer/can4.png';
+import card4 from '../assets/conatiners/L&RContainer/card4.jpg';
 const LRValueContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -263,15 +263,19 @@ const LRValueContainer = () => {
         </div>
       </section>
 
+
+
       {/* ── Why Choose ── */}
       <section className={styles.whySec}>
         <div className={styles.whyGrid}>
           <div className={styles.whyContent}>
-            <h2 className={styles.secTitle}>
-              Why Choose L&R Value <br />
-              <span>Granted MS Containers</span>
-            </h2>
-            <div className={styles.whyDivider} />
+            <div className={styles.WhyText}>
+              <h2 >
+                Why Choose L&R Value <br />
+                <span>Granted MS Containers</span>
+              </h2>
+              <div className={styles.whyDivider}></div>
+            </div>
             <p>
               L&R Value Granted MS Containers offer reliable, cost-effective
               modular solutions for diverse applications. Built with strong steel
@@ -286,14 +290,18 @@ const LRValueContainer = () => {
               speed, mobility, and operational efficiency.
             </p>
           </div>
-          <div className={styles.whyImgWrapper}>
-            <img
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
-              alt="L&R Value Container"
-            />
+          <div className={styles.wrapperss}>
+            <span className={styles.topCorners}></span>
+            <span className={styles.bottomCorners}></span>
+            <div className={styles.imageBoxs}>
+              <img src={container1} alt="Container" />
+            </div>
+
           </div>
         </div>
       </section>
+
+
 
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>

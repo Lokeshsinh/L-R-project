@@ -765,6 +765,7 @@
    FAQ
 =========================== */
 .faqSec {
+  width:100%;
   padding: 80px 60px;
   background-color: #f7f7f753;
 }
