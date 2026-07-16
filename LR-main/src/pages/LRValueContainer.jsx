@@ -11,7 +11,7 @@ import card2 from '../assets/conatiners/L&RContainer/card2.jpg';
 import card3 from '../assets/conatiners/L&RContainer/card3.jpg';
 import card4 from '../assets/conatiners/L&RContainer/card4.jpg';
 import png from '../assets/conatiners/L&RContainer/png.png';
-import png1 from '../assets/conatiners/L&RContainer/png1.png';
+// import png1 from '../assets/conatiners/L&RContainer/png1.png';
 
 
 
@@ -398,9 +398,9 @@ const LRValueContainer = () => {
               durability, safety, and reliable usage across all site applications.
             </p>
 
-            <div className={styles.LastImage}>
+            {/* <div className={styles.LastImage}>
               <img src={png1} alt="png" />
-              </div>
+              </div> */}
           </div>
 
           <div className={styles.mfgImgWrapper}>
