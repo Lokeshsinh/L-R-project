@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ExecutiveMsContainer.module.css";
@@ -119,10 +118,6 @@ const ExecutiveMsContainer = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const navigate = useNavigate();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const [current, setCurrent] = useState(0);
 
@@ -142,74 +137,6 @@ const ExecutiveMsContainer = () => {
     setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
   };
 
-  const containerSizes = [
-    {
-      size: "40×10×8.5 / 40×8×8.5",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room  Containers",
-        "General Residential Containers",
-      ],
-      highlight: false,
-    },
-    {
-      size: "20×10×8.5 / 20×8×8.5",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room  Containers",
-        "General Residential Containers",
-      ],
-      highlight: true,
-    },
-    {
-      size: "10×10×8",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room  Containers",
-        "General Residential Containers",
-      ],
-      highlight: false,
-    },
-  ];
 
   const industryProjects = [
     {

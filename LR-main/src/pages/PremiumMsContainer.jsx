@@ -3,7 +3,6 @@ import {
   Plus, X
 } from "lucide-react";
 import { ChevronLeft, ChevronRight, Box } from "lucide-react";
-import { useNavigate } from 'react-router-dom'
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -16,7 +15,7 @@ import card2 from '../assets/conatiners/premiumContainer/can3.png';
 import card3 from '../assets/conatiners/premiumContainer/can2.png';
 import card4 from '../assets/conatiners/premiumContainer/can4.png';
 import container2 from '../assets/msConatiner/conatiner2.png'
-import cta from '../assets/msConatiner/cta.png'
+
 
 
 const cards = [
@@ -126,11 +125,6 @@ const PremiumMsContainer = () => {
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-  const navigate = useNavigate();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const [current, setCurrent] = useState(0);
 
