@@ -214,9 +214,8 @@ const PremiumMsContainer = () => {
             <span>CONTAINERS</span>
           </h1>
           <p className={styles.heroDesc}>
-            Premium MS Containers delivering durable, flexible, and fast-deploy
-            modular solutions for industrial, commercial, and site-based
-            applications.
+            L&R Value Granted MS Container delivers durable mild steel container solutions
+             for secure storage, transport, and industrial use.
           </p>
           <button className={styles.btnWhite}>
             <span>Contact Us</span>

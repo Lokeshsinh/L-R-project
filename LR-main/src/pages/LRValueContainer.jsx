@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LRValueContainer.module.css";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+
 
 const LRValueContainer = () => {
   const [openFaq, setOpenFaq] = useState(1);
@@ -140,8 +142,14 @@ const LRValueContainer = () => {
             L&R VALUE GRANTED <br />
             <span>MS CONTAINER</span>
           </h1>
-          <button className={styles.btnHero}>
-            Contact us &nbsp;<span>→</span>
+          <p className={styles.heroDesc}>
+            Premium MS Containers delivering durable, flexible, and fast-deploy
+            modular solutions for industrial, commercial, and site-based
+            applications.
+          </p>
+          <button className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
@@ -216,18 +224,17 @@ const LRValueContainer = () => {
             {containerSizes.map((item, index) => (
               <div
                 key={index}
-                className={`${styles.sizeCard} ${
-                  item.highlight ? styles.activeCard : ""
-                }`}
+                className={`${styles.sizeCard} ${item.highlight ? styles.activeCard : ""
+                  }`}
               >
                 <div className={styles.cardIcon}>
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <rect x="2" y="10" width="32" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <rect x="6" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <rect x="16" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <line x1="2" y1="28" x2="34" y2="28" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="8" y1="28" x2="8" y2="32" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="28" y1="28" x2="28" y2="32" stroke="currentColor" strokeWidth="2"/>
+                    <rect x="2" y="10" width="32" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+                    <rect x="6" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                    <rect x="16" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                    <line x1="2" y1="28" x2="34" y2="28" stroke="currentColor" strokeWidth="2" />
+                    <line x1="8" y1="28" x2="8" y2="32" stroke="currentColor" strokeWidth="2" />
+                    <line x1="28" y1="28" x2="28" y2="32" stroke="currentColor" strokeWidth="2" />
                   </svg>
                 </div>
                 <h3>{item.size}</h3>
@@ -361,9 +368,8 @@ const LRValueContainer = () => {
               {faqs.map((faq) => (
                 <div
                   key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqOpen : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""
+                    }`}
                   onClick={() =>
                     setOpenFaq(openFaq === faq.id ? null : faq.id)
                   }
@@ -386,6 +392,8 @@ const LRValueContainer = () => {
         </div>
       </section>
 
+
+
       {/* ── CTA ── */}
       <section className={styles.ctaBanner}>
         <div className={styles.ctaInner}>
@@ -394,7 +402,14 @@ const LRValueContainer = () => {
             Connect with our team to design and deliver compact, durable, and
             fully L&R Value Granted MS Containers tailored to your site needs.
           </p>
-          <button className={styles.btnCTA}>Contact US &nbsp;→</button>
+          <button className={styles.contactBtn}>
+            <span className={styles.contactText}>Contact Us</span>
+
+            <span className={styles.iconBox}>
+              <ArrowRight className={styles.iconOne} size={18} />
+              <ArrowRight className={styles.iconTwo} size={18} />
+            </span>
+          </button>
         </div>
       </section>
 
