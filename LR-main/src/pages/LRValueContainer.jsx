@@ -2,13 +2,119 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LRValueContainer.module.css";
-import { ArrowRight, ArrowUpRight, Plus, X, } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Plus, X, ChevronLeft, ChevronRight, Box } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
+import container2 from '../assets/conatiners/L&RContainer/container2.jpg'
 import card1 from '../assets/conatiners/L&RContainer/card1.jpg';
 import card2 from '../assets/conatiners/L&RContainer/card2.jpg';
 import card3 from '../assets/conatiners/L&RContainer/card3.jpg';
 import card4 from '../assets/conatiners/L&RContainer/card4.jpg';
+import png from '../assets/conatiners/L&RContainer/png.png';
+import png1 from '../assets/conatiners/L&RContainer/png1.png';
+
+
+
+
+const cards = [
+  {
+    title: "40×10×8.5 / 40×8×8.5",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "20×10×8.5 / 20×8×8.5",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "10×10×8",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "6x6x8",
+    dark: false,
+    list: [
+      "Toilet Cabin Containers",
+      "Guard Cabin Block Containers",
+      "Tube Well Residence  Containers",
+      "cement store Containers",
+      "Tube well  Pump Farm Store Containers",
+      "coffee Shop Containers",
+      "Wash Room Block Containers",
+      "Cafe Containers  Hall Containers",
+
+    ],
+  },
+  {
+    title: "4x4x8 ",
+    dark: false,
+    list: [
+      "Toilet Cabin Containers",
+      "Guard Cabin Block Containers",
+      "Farming Store  Containers",
+      "Material store Containers",
+      "coffee Shop Containers",
+      "Wash Room Block Containers",
+      "Cafe Containers  Hall Containers",
+
+    ],
+  },
+];
+
+
 const LRValueContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -21,75 +127,24 @@ const LRValueContainer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const containerSizes = [
-    {
-      size: "40×10×8.5 / 40×8×8.5",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room Containers",
-        "General Residential Containers",
-      ],
-      highlight: false,
-    },
-    {
-      size: "20×10×8.5 / 20×8×8.5",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "OPS Containers- Net Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room Containers",
-        "General Residential Containers",
-      ],
-      highlight: true,
-    },
-    {
-      size: "10×10×8",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room Containers",
-        "General Residential Containers",
-      ],
-      highlight: false,
-    },
-  ];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [current]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % cards.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
+  };
+
 
 
   const industryProjects = [
@@ -171,27 +226,22 @@ const LRValueContainer = () => {
       {/* ── Intro ── */}
       <section className={styles.intro}>
         <div className={styles.introGrid}>
-          <div className={styles.introVisuals}>
-            <div
-              className={styles.imgMain}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80')",
-              }}
-            />
-            <div
-              className={styles.imgSub}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=400&q=80')",
-              }}
-            />
+          <div className={styles.frameWrap}>
+            <span className={styles.cornerTop}></span>
+            <span className={styles.cornerBottoms}></span>
+
+            <div className={styles.photoFrame}>
+              <img src={container2} alt="Container" />
+            </div>
           </div>
           <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              L&R Value Granted <br />
-              <span>MS Containers</span>
-            </h2>
+            <div className={styles.introText}>
+              <h2 >
+                L&R Value Granted <br />
+                <span>MS Containers</span>
+              </h2>
+              <div className={styles.introLine}></div>
+            </div>
             <p>
               L&R Value Granted Containers represent a versatile range of portable MS
               modular units designed to meet diverse industrial, commercial, and site
@@ -208,7 +258,15 @@ const LRValueContainer = () => {
               solutions that ensure operational efficiency, user comfort, and long-term
               performance.
             </p>
-            <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+
+            <button className={styles.btnOutline}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -216,49 +274,61 @@ const LRValueContainer = () => {
       {/* ── Sizes ── */}
       <section className={styles.sizesSec}>
         <div className={styles.sizesInner}>
-          <div className={styles.sizesTopRow}>
-            <div className={styles.sizesLeft}>
-              <h2 className={styles.secTitle}>
-                The Types of L&R <br />
-                <span>Value Granted Sizes</span>
+          <div className={styles.secHeaderCenter}>
+            <div className={styles.secHeadText}>
+              <h2 >
+                The Types of L&R  <br />
+                <span styles={{ color: "#293F67" }}>Value Granted Sizes</span>
               </h2>
-              <div className={styles.sizesDivider} />
+              <div className={styles.secHeadLine}></div>
             </div>
-            <p className={styles.sizesDesc}>
-              Every L&R Value Container is offered in multiple core sizes, with
-              flexible interior layouts ranging from offices and accommodation to
-              dining, sanitary, and storage spaces.
+            <p>
+              Every L&R Value Granted Container is offered in multiple core sizes,
+              with flexible interior layouts ranging from offices and
+              accommodation to dining, sanitary, and storage spaces.
             </p>
           </div>
-          <div className={styles.sizesNavRow}>
-            <button className={styles.navBtn}>‹</button>
-            <button className={styles.navBtn + " " + styles.navBtnActive}>›</button>
+
+          <div className={styles.controls}>
+            <button onClick={prevSlide}>
+              <ChevronLeft size={22} />
+            </button>
+
+            <button onClick={nextSlide}>
+              <ChevronRight size={22} />
+            </button>
           </div>
-          <div className={styles.sizesGrid}>
-            {containerSizes.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.sizeCard} ${item.highlight ? styles.activeCard : ""
-                  }`}
-              >
-                <div className={styles.cardIcon}>
-                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <rect x="2" y="10" width="32" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-                    <rect x="6" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                    <rect x="16" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                    <line x1="2" y1="28" x2="34" y2="28" stroke="currentColor" strokeWidth="2" />
-                    <line x1="8" y1="28" x2="8" y2="32" stroke="currentColor" strokeWidth="2" />
-                    <line x1="28" y1="28" x2="28" y2="32" stroke="currentColor" strokeWidth="2" />
-                  </svg>
+          <div className={styles.sliderWrapper}>
+            <div
+              className={styles.sliderTrack}
+              style={{
+                transform: `translateX(-${current * 33.333}%)`,
+              }}
+            >
+              {[...cards, ...cards.slice(0, 3)].map((card, index) => (
+                <div
+                  key={index}
+                  className={`${styles.card} ${card.dark ? styles.darkCard : ""
+                    }`}
+                >
+                  <Box
+                    size={48}
+                    strokeWidth={1.5}
+                    className={styles.icon}
+                  />
+
+                  <h2>{card.title}</h2>
+
+                  <div className={styles.line}></div>
+
+                  <ul>
+                    {card.list.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
-                <h3>{item.size}</h3>
-                <ul className={styles.featureList}>
-                  {item.features.map((f, i) => (
-                    <li key={i}>• {f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -305,28 +375,42 @@ const LRValueContainer = () => {
 
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R VALUES CONTAINERS</h1>
+            <h1>L&R VALUES CONTAINERS</h1>
+            <h1>L&R VALUES CONTAINERS</h1>
+            <h1>L&R VALUES CONTAINERS</h1>
+          </div>
+        </div>
+
         <div className={styles.mfgContainer}>
           <div className={styles.mfgText}>
             <h2>
               Our Strength &amp; <br />
               Manufacturing Excellence
             </h2>
+
             <p>
-              L&R MS Containers are built with high-grade steel and precision engineering to
-              ensure strong structural stability and long-lasting performance. Designed for
-              tough industrial conditions, they offer durability, safety, and reliable usage
-              across all site applications.
+              L&R MS Containers are built with high-grade steel and precision
+              engineering to ensure strong structural stability and long-lasting
+              performance. Designed for tough industrial conditions, they offer
+              durability, safety, and reliable usage across all site applications.
             </p>
-            <div className={styles.mfgTag}>ENERGY STORAGE</div>
+
+            <div className={styles.LastImage}>
+              <img src={png1} alt="png" />
+              </div>
           </div>
+
           <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
-              alt="Manufacturing Strength"
+              src={png}
+              alt="Manufacturing"
             />
-            <div className={styles.mfgWatermark}>CONTA</div>
           </div>
         </div>
+
       </section>
 
 
