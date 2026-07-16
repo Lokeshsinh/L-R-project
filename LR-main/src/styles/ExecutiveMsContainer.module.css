@@ -593,7 +593,7 @@
   align-items: start;
 }
 
-.qualityConten{
+.qualityConten {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -602,7 +602,7 @@
   max-width: 700px;
 }
 
-.qualityContent p{
+.qualityContent p {
   font-size: 16px;
   color: #555;
   line-height: 1.8;
@@ -610,135 +610,217 @@
   max-width: 680px;
 }
 
-.galleryWrap{
-    position:relative;
+.galleryWrap {
+  position: relative;
 }
 
 
 
-.primaryFrame{
-    width:600px;
-    height:280px;
-    overflow:hidden;
-    border-radius:24px;
-    position:relative;
-    z-index:1;
+.primaryFrame {
+  width: 600px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
 }
 
-.primaryFrame img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    display:block;
-    transition:transform .8s ease, filter .5s ease;
-}
-
-
-
-.secondaryFrame{
-    position:absolute;
-    right: 65%;
-    bottom:-20px;
-
-    width:244px;
-    height:127px;
-
-    overflow:hidden;
-    border-radius:24px;
-
-    background:#fff;
-
-    z-index:5;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.22);
-    transition:transform .45s ease, box-shadow .45s ease;
-}
-
-.secondaryFrame img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    display:block;
-    transition:transform .7s ease, filter .5s ease;
+.primaryFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .8s ease, filter .5s ease;
 }
 
 
 
-.galleryWrap:hover .primaryFrame img{
-    transform:scale(1.08);
-    filter:brightness(.82);
+.secondaryFrame {
+  position: absolute;
+  right: 65%;
+  bottom: -20px;
+
+  width: 244px;
+  height: 127px;
+
+  overflow: hidden;
+  border-radius: 24px;
+
+  background: #fff;
+
+  z-index: 5;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .22);
+  transition: transform .45s ease, box-shadow .45s ease;
 }
 
-.galleryWrap:hover .secondaryFrame{
-    transform:translate(-12px,-12px);
-    box-shadow:0 35px 80px rgba(0,0,0,.32);
+.secondaryFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .7s ease, filter .5s ease;
 }
 
-.galleryWrap:hover .secondaryFrame img{
-    transform:scale(1.08);
-    filter:brightness(.9);
+
+
+.galleryWrap:hover .primaryFrame img {
+  transform: scale(1.08);
+  filter: brightness(.82);
+}
+
+.galleryWrap:hover .secondaryFrame {
+  transform: translate(-12px, -12px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, .32);
+}
+
+.galleryWrap:hover .secondaryFrame img {
+  transform: scale(1.08);
+  filter: brightness(.9);
 }
 
 /* ===========================
    MANUFACTURING BAND
 =========================== */
 .mfgBand {
-  background: #1e3a5f;
+  width: 100%;
+  height: 420px;
+  background: #293F67;
   color: #fff;
-  padding: 70px 8%;
+  padding: 75px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollWrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.scrollTrack {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.scrollTrack h1 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 120px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.211);
+  letter-spacing: 4px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.LastImage {
+  position: absolute;
+  bottom: 40%;
+  left: -5%;
+}
+
+.LastImage img {
+  width: 400px;
+  height: 200px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-35%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .mfgContainer {
+  position: relative;
+  z-index: 2;
   display: flex;
-  align-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .mfgText {
-  flex: 1;
+  max-width: 680px;
 }
 
 .mfgText h2 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  line-height: 1.35;
-  margin-bottom: 20px;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 15px;
 }
 
 .mfgText p {
-  font-size: 0.93rem;
-  line-height: 1.8;
-  color: #a0b4cc;
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, .85);
+}
+
+.LastImage {
+  width: 100px;
+  height: 100px;
 }
 
 .mfgImgWrapper {
-  flex: 1;
+  width: 530px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
   position: relative;
+  bottom: 60px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .mfgImgWrapper img {
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
   object-fit: cover;
-  max-height: 340px;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.mfgWatermark {
+/* Dark Overlay */
+.mfgImgWrapper::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  right: -10px;
-  transform: translateY(-50%);
-  font-size: 4rem;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.06);
-  letter-spacing: 0.15em;
-  pointer-events: none;
-  white-space: nowrap;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
 }
+
+/* Hover Effect */
+.mfgImgWrapper:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mfgImgWrapper:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+.mfgImgWrapper:hover::after {
+  background: rgba(0, 0, 0, 0.15);
+}
+
 
 /* ===========================
    PRODUCTS

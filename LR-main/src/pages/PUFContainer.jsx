@@ -2,8 +2,17 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PUFContainer.module.css";
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X } from "lucide-react";
 import can1 from '../assets/conatiners/pufContainer/can1.png'
+import can2 from '../assets/conatiners/pufContainer/can2.png'
+import card1 from '../assets/conatiners/pufContainer/card1.png';
+import card2 from '../assets/conatiners/pufContainer/card2.png';
+import card3 from '../assets/conatiners/pufContainer/card3.png';
+import card4 from '../assets/conatiners/pufContainer/card4.png';
+import container2 from '../assets/conatiners/ExecutiveContainer/contact.png';
+import faq from '../assets/conatiners/pufContainer/faq.png';
+import design from '../assets/conatiners/pufContainer/design1.png';
+import design1 from '../assets/conatiners/pufContainer/design2.png';
 
 
 const cards = [
@@ -104,6 +113,11 @@ const cards = [
   },
 ];
 const PUFContainer = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -121,33 +135,33 @@ const PUFContainer = () => {
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
   };
-  const [openFaq, setOpenFaq] = useState(1);
 
 
 
-  const products = [
+
+  const industryProjects = [
     {
-      title: "Coffee Shop Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80",
+      title: "Engineers’ Accommodation Containers",
+      desc: "Comfortable accommodation containers designed for engineers and technical staff. Built for long-term stays with functional and modern interiors.",
+      img: card1,
     },
     {
-      title: "Baby Play Area Container",
-      description:
-        "Safe and engaging modular space designed for children's recreational activities.",
-      img: "https://images.unsplash.com/photo-1555009393-f20bdb245c4d?auto=format&fit=crop&w=600&q=80",
+      title: "Project Management Office Containers",
+      desc: "Fully equipped office containers for efficient project coordination and planning. Designed to support smooth operations at construction and industrial sites.",
+      img: card2,
     },
     {
-      title: "Pump Farm Store Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
+      title: "Dining Hall & Café Containers",
+      desc: "Modern dining and café containers offering a comfortable space for meals. Ideal for project sites, campuses, and commercial facilities.",
+      img: card3,
     },
     {
-      title: "Material Store Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=600&q=80",
+      title: "Gym & Recreation Containers",
+      desc: "Modular fitness and recreation containers promoting health and relaxation. Designed for durability, comfort, and everyday employee wellness.",
+      img: card4,
     },
   ];
+
 
   const faqs = [
     {
@@ -305,88 +319,117 @@ const PUFContainer = () => {
         </div>
       </section>
 
+
+
+
       {/* ── Why Choose ── */}
       <section className={styles.whySec}>
+        <div className={styles.WhyText}>
+          <h2 >
+            Why Choose L&R Value <br />
+            <span>Granted MS Containers</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
         <div className={styles.whyGrid}>
-          <div className={styles.whyContent}>
-            <h2 className={styles.secTitle}>
-              Why Choose L&R Value <br />
-              <span>Granted MS Containers</span>
-            </h2>
-            <div className={styles.whyDivider} />
-            <p>
-              L&R Value Granted MS Containers offer reliable, cost-effective
-              modular solutions for diverse applications. Built with strong steel
-              structures, they ensure durability, safety, and long-term performance
-              in demanding conditions.
-            </p>
-            <p>
-              With multiple size options and highly flexible layouts, L&R containers
-              can be easily adapted for offices, accommodation, storage, and utility
-              spaces. Their quick installation, low-maintenance requirements, and
-              easy relocation make them an ideal choice for projects that demand
-              speed, mobility, and operational efficiency.
-            </p>
-          </div>
           <div className={styles.whyImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+              src={can2}
               alt="L&R Value Container"
             />
+          </div>
+
+          <div className={styles.whyContent}>
+            <p>
+              L&R PUF MS Containers are engineered with advanced insulated panel technology combined with
+              strong MS steel structure, ensuring excellent thermal efficiency, durability, and long service life.
+              These containers are specially designed to maintain comfortable internal conditions in extreme hot and
+              cold environments, making them highly reliable for industrial,
+              commercial, and remote site applications where performance and safety are critical.
+            </p>
+            <p>
+              They offer complete flexibility in design and usage, allowing conversion into site offices, worker
+              accommodation, dining halls, classrooms, storage units, washrooms, and other functional spaces. With
+              quick installation, easy transportation, and minimal maintenance requirements, L&R PUF MS Containers
+              deliver a cost-effective,
+              sustainable, and high-performance modular solution for modern infrastructure and project needs.
+            </p>
           </div>
         </div>
       </section>
 
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>PUF MS CONTAINER</h1>
+            <h1>PUF MS CONTAINER</h1>
+            <h1>PUF MS CONTAINER</h1>
+            <h1>PUF MS CONTAINER</h1>
+
+          </div>
+        </div>
+
         <div className={styles.mfgContainer}>
           <div className={styles.mfgText}>
             <h2>
               Our Strength &amp; <br />
               Manufacturing Excellence
             </h2>
+
             <p>
-              L&R MS Containers are built with high-grade steel and precision engineering to
-              ensure strong structural stability and long-lasting performance. Designed for
-              tough industrial conditions, they offer durability, safety, and reliable usage
-              across all site applications.
+            At L&R, we combine advanced engineering, high-quality materials,
+             and precision manufacturing processes 
+            to deliver durable and reliable MS and PUF container solutions 
+            that meet the highest industry standards.
             </p>
-            <div className={styles.mfgTag}>ENERGY STORAGE</div>
+
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+              </div>
           </div>
+
           <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
-              alt="Manufacturing Strength"
+              src={design}
+              alt="Manufacturing"
             />
-            <div className={styles.mfgWatermark}>CONTA</div>
           </div>
         </div>
+
       </section>
+
+
 
       {/* ── Products ── */}
       <section className={styles.productsSec}>
         <div className={styles.productsInner}>
           <div className={styles.productsHeader}>
-            <div>
-              <h2 className={styles.secTitle}>
+            <div className={styles.productText}>
+              <h2>
                 L&R Value Granted MS <br />
                 <span>Containers Products</span>
               </h2>
-              <div className={styles.productsDivider} />
+              <div className={styles.productsDivider}></div>
             </div>
             <p className={styles.productsSubtext}>
-              Purpose-built modular container solutions designed for commercial,
-              utility, and recreational applications with durable construction and
-              flexible deployment options.
+              A range of insulated PUF containers for offices,
+              accommodation, dining, storage, and recreational
+              spaces, designed for energy efficiency, comfort,
+              and quick on-site deployment with flexible usage options.
             </p>
           </div>
-          <div className={styles.productsGrid}>
-            {products.map((prod, i) => (
-              <div key={i} className={styles.productCard}>
-                <img src={prod.img} alt={prod.title} />
-                <div className={styles.productOverlay}>
-                  <h4>{prod.title}</h4>
-                  {prod.description && <p>{prod.description}</p>}
+          <div className={styles.expertiseGrid}>
+            {industryProjects.map((item, index) => (
+              <div className={styles.expCard} key={index}>
+                <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                <div className={styles.expLabel}>
+                  <h4>{item.title}</h4>
+
+                  <div className={styles.desc}>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -394,70 +437,84 @@ const PUFContainer = () => {
         </div>
       </section>
 
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqLeft}>
-            <div className={styles.faqSideImg}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80')",
-              }}
-            />
+        <span className={styles.introLabel}>• FAQ</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>
+              Frequently Asked
+              <br />
+              <span>Questions</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FQS</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked <br />
-                  <span>Questions</span>
-                </h2>
-                <div className={styles.faqDivider} />
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers to common queries about our 20×10 MS containers,
-                covering features, customization, durability, and deployment.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+          <p>
+            Find quick answers about PUF containers, their insulation, applications,
+            durability, and customization options for industrial and commercial use.
+          </p>
+        </div>
+
+        <div className={styles.faqBody}>
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""
-                    }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.faqImg}>
+            <img src={faq} alt="container" />
           </div>
         </div>
       </section>
 
       {/* ── CTA ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your L&R Value Granted MS Containers ?</h2>
-          <p>
-            Connect with our team to design and deliver compact, durable, and
-            fully L&R Value Granted MS Containers tailored to your site needs.
-          </p>
-          <button className={styles.btnCTA}>Contact US &nbsp;→</button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Ready for Your Puf Container Solution?</h2>
+        <p>
+          Connect with our team to design and deliver compact, durable, and
+          fully 20x10  MS Container solutions tailored to your site needs.
+        </p>
+
+
+        <button className={styles.contactBtn}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />

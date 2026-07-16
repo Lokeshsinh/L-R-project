@@ -882,6 +882,7 @@
 /* ===========================
    MANUFACTURING BAND
 =========================== */
+
 .mfgBand {
   width: 100%;
   height: 410px;
@@ -922,7 +923,15 @@
   flex-shrink: 0;
   z-index: 2;
 }
-
+.LastImage{
+  position: absolute;
+  bottom: 55%;
+  left: -5%;
+}
+.LastImage img{
+  width: 200px;
+  height: 300px;
+}
 @keyframes marquee {
   0% {
     transform: translateX(-35%);
@@ -932,8 +941,6 @@
     transform: translateX(0%);
   }
 }
-
-/* Main Content */
 
 .mfgContainer {
   position: relative;
@@ -957,22 +964,23 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.3;
   color: rgba(255, 255, 255, .85);
 }
 
-.LastImage{
+.LastImage {
   width: 100px;
   height: 100px;
 }
+
 .mfgImgWrapper {
-  width: 430px;
+  width: 530px;
   height: 400px;
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
   position: relative;
-  bottom: 50px;
+  bottom: 60px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -1008,6 +1016,7 @@
 .mfgImgWrapper:hover::after {
   background: rgba(0, 0, 0, 0.15);
 }
+
 
 /* ===========================
    PRODUCTS

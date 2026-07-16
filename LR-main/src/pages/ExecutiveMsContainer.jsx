@@ -12,6 +12,8 @@ import card3 from '../assets/conatiners/ExecutiveContainer/card3.png';
 import card4 from '../assets/conatiners/ExecutiveContainer/card4.png';
 import container1 from '../assets/conatiners/ExecutiveContainer/container1.png'
 import container3 from '../assets/conatiners/ExecutiveContainer/container2.png'
+import design from '../assets/conatiners/ExecutiveContainer/design1.png';
+import design1 from '../assets/conatiners/ExecutiveContainer/design2.png';
 
 const cards = [
   {
@@ -376,30 +378,46 @@ const ExecutiveMsContainer = () => {
 
 
       {/* ── Manufacturing Strength ── */}
-      < section className={styles.mfgBand} >
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R Executive ConTAINER </h1>
+            <h1>L&R Executive ConTAINER </h1>
+            <h1>L&R Executive ConTAINER </h1>
+            <h1>L&R Executive ConTAINER </h1>
+
+          </div>
+        </div>
+
         <div className={styles.mfgContainer}>
           <div className={styles.mfgText}>
             <h2>
               Manufacturing Strength of <br />
               Executive MS Containers
             </h2>
+
             <p>
-              Executive MS Containers are manufactured using high-grade mild steel
-              with precision welding and strong structural design to ensure maximum
-              strength and stability. Each unit is built under strict quality
-              standards, making it durable, safe, and suitable for heavy-duty
-              construction and industrial-site applications.
+             Executive MS Containers are manufactured using high-grade mild steel 
+             with precision welding and strong structural design to ensure maximum
+              strength and stability. Each unit is built under
+              strict quality standards, making it durable, safe, and suitable for
+               heavy-duty construction and industrial site applications.
             </p>
+
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
           </div>
+
           <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
-              alt="Manufacturing Executive MS Container"
+              src={design}
+              alt="Manufacturing"
             />
-            <div className={styles.mfgWatermark}>CONTAINER</div>
           </div>
         </div>
-      </section >
+
+      </section>
 
 
 

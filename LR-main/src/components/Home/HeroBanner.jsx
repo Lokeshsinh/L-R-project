@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./HeroBanner.module.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import homeBanner1 from '../../assets/Home/homeBanner1.png'
@@ -9,13 +9,13 @@ function HeroBanner() {
   const [current, setCurrent] = useState(0);
 
   // Auto Slider
-  //   useEffect(() => {
-  //     const timer = setInterval(() => {
-  //       setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
-  //     }, 5000);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
+      }, 5000);
 
-  //     return () => clearInterval(timer);
-  //   }, []);
+      return () => clearInterval(timer);
+    }, []);
 
   // Next Slide
   const nextSlide = () => {
@@ -147,7 +147,7 @@ function HeroBanner() {
 
       {/* ================= Slide 3 ================= */}
 
-      {/* <div
+      <div
         className={`${styles.slide} ${current === 2 ? styles.active : ""
           }`}
       >
@@ -180,7 +180,7 @@ function HeroBanner() {
             Contact Us
           </button>
         </div>
-      </div> */}
+      </div>
 
       {/* ================= Arrows ================= */}
 

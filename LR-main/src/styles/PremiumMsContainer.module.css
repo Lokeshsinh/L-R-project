@@ -593,46 +593,141 @@
 /* ===========================
    ENGINEERING BAND
 =========================== */
-.engineeringBand {
-  background: #1e3a5f;
+.mfgBand {
+  width: 100%;
+  height: 410px;
+  background: #293F67;
   color: #fff;
-  padding: 70px 8%;
+  padding: 75px 60px;
+  position: relative;
+  overflow: hidden;
 }
 
-.bandContainer {
+.scrollWrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.scrollTrack {
   display: flex;
   align-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 120px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
 }
 
-.bandText {
-  flex: 1;
+.scrollTrack h1 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 120px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.211);
+  letter-spacing: 4px;
+  flex-shrink: 0;
+  z-index: 2;
 }
 
-.bandText h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.35;
-  margin-bottom: 20px;
+.LastImage {
+  position: absolute;
+  bottom: 20%;
+  left: -5%;
 }
 
-.bandText p {
-  font-size: 0.93rem;
-  line-height: 1.8;
-  color: #a0b4cc;
+.LastImage img {
+  width: 350px;
+  height: 200px;
 }
 
-.bandImgWrapper {
-  flex: 1;
+@keyframes marquee {
+  0% {
+    transform: translateX(-35%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
-.bandImgWrapper img {
+.mfgContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.mfgText {
+  max-width: 680px;
+}
+
+.mfgText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.mfgText p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, .85);
+}
+
+.LastImage {
+  width: 100px;
+  height: 100px;
+}
+
+.mfgImgWrapper {
+  width: 580px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.mfgImgWrapper img {
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
   object-fit: cover;
-  max-height: 360px;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Dark Overlay */
+.mfgImgWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+/* Hover Effect */
+.mfgImgWrapper:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mfgImgWrapper:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+.mfgImgWrapper:hover::after {
+  background: rgba(0, 0, 0, 0.15);
 }
 
 /* ===========================
@@ -765,7 +860,7 @@
    FAQ
 =========================== */
 .faqSec {
-  width:100%;
+  width: 100%;
   padding: 80px 60px;
   background-color: #f7f7f753;
 }

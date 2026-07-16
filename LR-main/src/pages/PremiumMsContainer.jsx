@@ -15,7 +15,8 @@ import card2 from '../assets/conatiners/premiumContainer/can3.png';
 import card3 from '../assets/conatiners/premiumContainer/can2.png';
 import card4 from '../assets/conatiners/premiumContainer/can4.png';
 import container2 from '../assets/msConatiner/conatiner2.png'
-
+import design from '../assets/conatiners/premiumContainer/design.png';
+import design1 from '../assets/conatiners/premiumContainer/design1.png';
 
 
 const cards = [
@@ -209,7 +210,7 @@ const PremiumMsContainer = () => {
           </h1>
           <p className={styles.heroDesc}>
             L&R Value Granted MS Container delivers durable mild steel container solutions
-             for secure storage, transport, and industrial use.
+            for secure storage, transport, and industrial use.
           </p>
           <button className={styles.btnWhite}>
             <span>Contact Us</span>
@@ -363,29 +364,45 @@ const PremiumMsContainer = () => {
 
 
       {/* ── Engineering Banner ── */}
-      <section className={styles.engineeringBand}>
-        <div className={styles.bandContainer}>
-          <div className={styles.bandText}>
-            <h2>
-              High Strength Engineering <br />& Premium Ms Container
-            </h2>
-            <p>
-              Built with heavy-duty MS steel and precision fabrication, these
-              containers deliver superior strength, stability, and long-lasting
-              performance in tough working conditions. They are manufactured
-              under strict quality control to ensure durability, safety, and
-              reliable use across industrial and commercial applications.
-            </p>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>PUF MS CONTAINER</h1>
+            <h1>PUF MS CONTAINER</h1>
+            <h1>PUF MS CONTAINER</h1>
+            <h1>PUF MS CONTAINER</h1>
+
           </div>
-          <div className={styles.bandImgWrapper}>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              High Strength Engineering  <br />
+              & Premium Ms Container
+            </h2>
+
+            <p>
+              Built with heavy-duty MS steel and precision fabrication, these containers 
+              deliver superior strength, stability, and long-lasting performance in tough working conditions.They are 
+              manufactured under strict quality control to ensure durability, safety, and 
+              reliable use across industrial and commercial applications
+            </p>
+
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+
+          <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
-              alt="Premium MS Container"
+              src={design}
+              alt="Manufacturing"
             />
           </div>
         </div>
-      </section>
 
+      </section>
 
       {/* ── Applications ── */}
       <section className={styles.appsSec}>
