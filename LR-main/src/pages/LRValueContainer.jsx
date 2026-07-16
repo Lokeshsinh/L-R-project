@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LRValueContainer.module.css";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Plus, X, } from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
+
 
 
 const LRValueContainer = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const containerSizes = [
     {
@@ -338,60 +350,73 @@ const LRValueContainer = () => {
         </div>
       </section>
 
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqLeft}>
-            <div className={styles.faqSideImg}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80')",
-              }}
-            />
+        <span className={styles.introLabel}>• FAQ</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>
+              Frequently Asked
+              <br />
+              <span>Questions</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FQS</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked <br />
-                  <span>Questions</span>
-                </h2>
-                <div className={styles.faqDivider} />
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers to common queries about our 20×10 MS containers,
-                covering features, customization, durability, and deployment.
-              </p>
+          <p>
+            Find answers to common questions about our container solutions,
+            design process, and performance benefits.
+          </p>
+        </div>
+
+        {/*  */}
+        <div className={styles.faqBody}>
+          <div className={styles.wrappers}>
+            <span className={styles.topCorner}></span>
+            <span className={styles.bottomCorner}></span>
+            <div className={styles.imageBox}>
+              <img src={container1} alt="Container" />
             </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+
+          </div>
+          {/*  */}
+
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""
-                    }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
 
 
       {/* ── CTA ── */}
