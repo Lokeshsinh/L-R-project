@@ -1,10 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./HeroBanner.module.css";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import homeBanner1 from '../../assets/Home/homeBanner1.png'
 import buildingImg from '../../assets/Home/buildImg.png'
-
+import banner from '../../assets/Home/banner1.png'
+import product from '../../assets/Home/product.png'
 function HeroBanner() {
   const [current, setCurrent] = useState(0);
 
@@ -111,38 +112,71 @@ function HeroBanner() {
       {/* ================= Slide 2 ================= */}
 
       <div
-        className={`${styles.heroPanel} ${current === 3 ? styles.showPanel : ""
+        className={`${styles.heroPanel} ${current === 0 ? styles.active : ""
           }`}
       >
+        {/* Background */}
         <img
-          src="/Images/hero2.jpg"
-          alt="Hero Banner"
-          className={styles.heroBanner}
+          src={banner}
+          alt="Solar Fastener"
+          className={styles.heroBg}
         />
+        <div className={styles.overlay}></div>
 
-        <div className={styles.heroShade}></div>
+        <div className={styles.heroHeading}>
+          <h3>L&amp;R GREEN INDIA PVT LTD</h3>
 
-        <div className={styles.heroContentWrap}>
-          <span className={styles.heroTag}>
-            QUALITY • INNOVATION • TRUST
-          </span>
-
-          <h1 className={styles.heroHeading}>
-            PRE-ENGINEERED
-            <br />
-            BUILDINGS
+          <h1>
+            SOLAR FASTENER AND COMPONENT
+            MANUFACTURE AND SUPPLIER
           </h1>
+        </div>
 
-          <p className={styles.heroInfo}>
-            Durable steel structures designed for industries,
-            commercial projects, warehouses and customized
-            infrastructure requirements.
+        {/* down */}
+        <div className={styles.heroContent}>
+          <p>
+            We manufacture high-quality solar fasteners and related
+            components for durable, efficient solar installations.
+            Established in 2015 in New Delhi, delivering reliable
+            solutions.
           </p>
 
           <button className={styles.heroBtn}>
-            View Projects
+            <span>All Category</span>
+            <ArrowRight className={styles.heroArrow} size={20} />
           </button>
         </div>
+        {/* downImage */}
+        <div className={styles.productImage}>
+          <img
+            src={product}
+            alt="Solar Components"
+          />
+        </div>
+        {/* downRight */}
+        <div className={styles.heroStatsCard}>
+          <div className={styles.heroStatItem}>
+            <h2>500+</h2>
+            <p>Completed Projects</p>
+          </div>
+
+          <div className={styles.heroStatItem}>
+            <h2>25+</h2>
+            <p>Years Of Experience</p>
+          </div>
+
+          <div className={styles.heroStatItem}>
+            <h2>900+</h2>
+            <p>Happy Clients</p>
+          </div>
+
+          <div className={styles.heroStatItem}>
+            <h2>150+</h2>
+            <p>Team Workers</p>
+          </div>
+        </div>
+
+
       </div>
 
       {/* ================= Slide 3 ================= */}
