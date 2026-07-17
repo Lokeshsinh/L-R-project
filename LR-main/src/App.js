@@ -45,6 +45,7 @@ import Projects from "./pages/Projects";
 import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
 import Brochure from "./pages/Brochure";
+import HomeContainer from "./pages/HomeContainer";
 
 function App() {
   return (
@@ -60,7 +61,7 @@ function App() {
         <Route path="/lr-value-containers" element={<LRValueContainer />} />
         <Route path="/warehouse" element={<Warehouse />} />
         <Route path="/puf-containers" element={<PUFContainer />} />
-        <Route path="/home-containers" element={<LRValueContainer />} />
+        <Route path="/home-containers" element={<HomeContainer />} />
         <Route path="/hinge-containers" element={<HingeMsContainer />} />
         <Route path="/premium-ms-containers" element={<PremiumMsContainer />} />
         <Route path="/labour-accommodation" element={<PrefabLabour />} />

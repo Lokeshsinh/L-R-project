@@ -6,17 +6,19 @@ import homeBanner1 from '../../assets/Home/homeBanner1.png'
 import buildingImg from '../../assets/Home/buildImg.png'
 import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
+import heroBg from '../../assets/conatiners/HomeConatiner/banner2.png'
+import houseImg from '../../assets/Home/banner3.png'
 function HeroBanner() {
   const [current, setCurrent] = useState(0);
 
   // Auto Slider
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
+  //   }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // Next Slide
   const nextSlide = () => {
@@ -182,38 +184,80 @@ function HeroBanner() {
       {/* ================= Slide 3 ================= */}
 
       <div
-        className={`${styles.slide} ${current === 2 ? styles.active : ""
+        className={`${styles.HomeSlider} ${current === 2 ? styles.active : ""
           }`}
       >
         <img
-          src="/Images/hero3.jpg"
-          alt="Hero 3"
-          className={styles.bgImage}
+          src={heroBg}
+          alt="Solar Background"
+          className={styles.heroBackground}
         />
+        {/* Overlay */}
+        <div className={styles.heroOverlay}></div>
 
-        <div className={styles.overlay}></div>
+        <h2 className={styles.heroWatermark}>
+          SOLAR FASTENER AND COMPONENT SUPPLIERS
+        </h2>
+        {/* top heading */}
 
-        <div className={styles.content}>
-          <span className={styles.subtitle}>
-            BUILDING TOMORROW
-          </span>
+        <div className={styles.heroHeading}>
+          <h3>L&amp;R GREEN INDIA PVT LTD</h3>
 
-          <h1 className={styles.title}>
-            SMART MODULAR
-            <br />
+          <h1>
+            SOLAR FASTENER
             SOLUTIONS
           </h1>
+        </div>
 
-          <p className={styles.description}>
-            We deliver innovative prefabricated solutions that
-            combine modern design, strength and long-lasting
-            performance for every project.
+        {/* Left Content */}
+        <div className={styles.heroContent}>
+          <p>
+            Manufacturer of prefabricated structures, mild steel
+            containers &amp; prefabricated cabins and solar.
+            Established in 2015, New Delhi.
           </p>
 
-          <button className={styles.button}>
-            Contact Us
+          <button className={styles.heroButton}>
+            <span>All Category</span>
+            <ArrowRight
+              size={20}
+              className={styles.heroArrow}
+            />
           </button>
         </div>
+
+        {/* House Image */}
+        <div className={styles.houseImage}>
+          <img src={houseImg} alt="Solar House" />
+        </div>
+
+        {/* left */}
+
+        <div className={styles.heroStatsCard}>
+
+          <div className={styles.heroStatItem}>
+            <h2>500+</h2>
+            <p>Completed Projects</p>
+          </div>
+
+          <div className={styles.heroStatItem}>
+            <h2>25+</h2>
+            <p>Years Of Experience</p>
+          </div>
+
+          <div className={styles.heroStatItem}>
+            <h2>900+</h2>
+            <p>Happy Clients</p>
+          </div>
+
+          <div className={styles.heroStatItem}>
+            <h2>150+</h2>
+            <p>Team Workers</p>
+          </div>
+
+        </div>
+
+
       </div>
 
       {/* ================= Arrows ================= */}

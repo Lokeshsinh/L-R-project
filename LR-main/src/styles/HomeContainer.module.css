@@ -1,0 +1,349 @@
+.wrapper {
+    width: 100%;
+    background-color: #f7f7f753;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+    background: url('../assets/conatiners/HomeConatiner/banner.png') center/cover no-repeat;
+    color: #fff;
+    padding: 50px 60px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heroContent {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.topLabel {
+    color: white;
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+.mainTitle {
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.mainTitle span {
+    color: #fff;
+}
+
+
+.heroDesc {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+    max-width: 670px;
+}
+
+.btnHero {
+    background: #1e3a5f;
+    color: #fff;
+    border: none;
+    padding: 13px 32px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.btnHero:hover {
+    background: #2b6cb0;
+}
+
+.btnWhite {
+    width: 267px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #1a3c6e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 25px 28px;
+    /* Only left & right padding */
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s ease;
+    box-sizing: border-box;
+}
+
+.arrow {
+    transition: transform .35s ease;
+}
+
+.btnWhite:hover {
+    background: #ffffff;
+    color: #1a3c6e;
+    box-shadow: 0 10px 25px rgba(26, 60, 110, .18);
+}
+
+.btnWhite:hover .arrow {
+    transform: translateX(8px);
+}
+
+
+
+/* ===========================
+   INTRO
+=========================== */
+.intro {
+    width: 100%;
+    padding: 80px 60px;
+    background: url('../assets/conatiners/pufContainer/back.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #f7f7f753;
+}
+
+.introText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.introText h2 {
+    margin-top: 10px;
+    font-size: 55px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.2;
+}
+
+.introText span {
+    color: #1a3c6e;
+}
+
+.introLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #0d2244;
+}
+
+
+.introGrid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+
+
+
+
+.frameImage{
+
+  width:602px;
+  height:380px;
+
+  overflow:hidden;
+  border-radius:3px;
+  cursor:pointer;
+
+  background:#fff;
+}
+
+.frameImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+
+  transition:
+  transform .8s ease,
+  filter .6s ease;
+  border-radius: 12px;
+}
+
+/* Dark Overlay */
+
+
+/* Hover */
+
+.frameImage:hover img{
+  transform:scale(1.08);
+  filter:brightness(.78);
+}
+
+.frameImage:hover::after{
+  background:rgba(0,0,0,.18);
+}
+
+.frameImage:hover::before{
+  left:135%;
+}
+
+
+
+.frameTop{
+  position:absolute;
+  top:0;
+  left:12px;
+
+  width:190px;
+  height:1px;
+  background:#bdbdbd;
+  z-index:10;
+}
+
+.frameTop::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0;
+
+  width:1px;
+  height:12px;
+  background:#bdbdbd;
+}
+
+.frameRight{
+  position:absolute;
+  top:95px;
+  right:-18px;
+
+  width:22px;
+  height:180px;
+}
+
+.frameRight::before,
+.frameRight::after{
+  content:"";
+  position:absolute;
+  width:16px;
+  height:2px;
+  background:#2b82ff;
+  right:0;
+}
+
+.frameRight::before{
+  top:0;
+  transform:rotate(45deg);
+}
+
+.frameRight::after{
+  top:10px;
+  transform:rotate(-45deg);
+}
+
+/* Hover Animation for Blue Mark */
+
+.imageFrame:hover .frameRight{
+  transform:translateX(8px);
+  transition:.4s ease;
+}
+
+.imageFrame:hover .frameTop{
+  width:220px;
+  transition:.4s ease;
+}
+
+
+/* para */
+.introContent {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+}
+
+.introContent p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.btnOutline {
+    width: 190px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #1a3c6e;
+    color: #fff;
+    border: 2px solid #1a3c6e;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s ease;
+}
+
+.btnOutline:hover {
+    background: #fff;
+    color: #1a3c6e;
+}
+
+.iconWrap {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.icon1,
+.icon2 {
+    position: absolute;
+    top: 0;
+    transition: transform .35s ease;
+}
+
+
+.icon1 {
+    left: 0;
+}
+
+.icon2 {
+    left: -22px;
+}
+
+.btnOutline:hover .icon1 {
+    transform: translateX(24px);
+}
+
+.btnOutline:hover .icon2 {
+    transform: translateX(24px);
+}
