@@ -3,7 +3,6 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LRValueContainer.module.css";
 import { ArrowRight, ArrowUpRight, Plus, X, ChevronLeft, ChevronRight, Box } from "lucide-react";
-import { useNavigate } from 'react-router-dom'
 import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
 import container2 from '../assets/conatiners/L&RContainer/container2.jpg'
 import card1 from '../assets/conatiners/L&RContainer/card1.jpg';
@@ -121,11 +120,6 @@ const LRValueContainer = () => {
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-  const navigate = useNavigate();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const [current, setCurrent] = useState(0);
 

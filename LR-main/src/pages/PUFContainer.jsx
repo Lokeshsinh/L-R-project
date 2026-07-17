@@ -9,7 +9,6 @@ import card1 from '../assets/conatiners/pufContainer/card1.png';
 import card2 from '../assets/conatiners/pufContainer/card2.png';
 import card3 from '../assets/conatiners/pufContainer/card3.png';
 import card4 from '../assets/conatiners/pufContainer/card4.png';
-import container2 from '../assets/conatiners/ExecutiveContainer/contact.png';
 import faq from '../assets/conatiners/pufContainer/faq.png';
 import design from '../assets/conatiners/pufContainer/design1.png';
 import design1 from '../assets/conatiners/pufContainer/design2.png';
