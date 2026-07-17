@@ -168,29 +168,29 @@
 
 
 
-.frameImage{
+.frameImage {
 
-  width:602px;
-  height:380px;
+    width: 620px;
+    height: 380px;
 
-  overflow:hidden;
-  border-radius:3px;
-  cursor:pointer;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: pointer;
 
-  background:#fff;
+    background: #fff;
 }
 
-.frameImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
+.frameImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 
-  transition:
-  transform .8s ease,
-  filter .6s ease;
-  border-radius: 12px;
+    transition:
+        transform .8s ease,
+        filter .6s ease;
+    border-radius: 12px;
 }
 
 /* Dark Overlay */
@@ -198,82 +198,82 @@
 
 /* Hover */
 
-.frameImage:hover img{
-  transform:scale(1.08);
-  filter:brightness(.78);
+.frameImage:hover img {
+    transform: scale(1.08);
+    filter: brightness(.78);
 }
 
-.frameImage:hover::after{
-  background:rgba(0,0,0,.18);
+.frameImage:hover::after {
+    background: rgba(0, 0, 0, .18);
 }
 
-.frameImage:hover::before{
-  left:135%;
+.frameImage:hover::before {
+    left: 135%;
 }
 
 
 
-.frameTop{
-  position:absolute;
-  top:0;
-  left:12px;
+.frameTop {
+    position: absolute;
+    top: 0;
+    left: 12px;
 
-  width:190px;
-  height:1px;
-  background:#bdbdbd;
-  z-index:10;
+    width: 190px;
+    height: 1px;
+    background: #bdbdbd;
+    z-index: 10;
 }
 
-.frameTop::after{
-  content:"";
-  position:absolute;
-  right:0;
-  top:0;
+.frameTop::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
 
-  width:1px;
-  height:12px;
-  background:#bdbdbd;
+    width: 1px;
+    height: 12px;
+    background: #bdbdbd;
 }
 
-.frameRight{
-  position:absolute;
-  top:95px;
-  right:-18px;
+.frameRight {
+    position: absolute;
+    top: 95px;
+    right: -18px;
 
-  width:22px;
-  height:180px;
+    width: 22px;
+    height: 180px;
 }
 
 .frameRight::before,
-.frameRight::after{
-  content:"";
-  position:absolute;
-  width:16px;
-  height:2px;
-  background:#2b82ff;
-  right:0;
+.frameRight::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: #2b82ff;
+    right: 0;
 }
 
-.frameRight::before{
-  top:0;
-  transform:rotate(45deg);
+.frameRight::before {
+    top: 0;
+    transform: rotate(45deg);
 }
 
-.frameRight::after{
-  top:10px;
-  transform:rotate(-45deg);
+.frameRight::after {
+    top: 10px;
+    transform: rotate(-45deg);
 }
 
 /* Hover Animation for Blue Mark */
 
-.imageFrame:hover .frameRight{
-  transform:translateX(8px);
-  transition:.4s ease;
+.imageFrame:hover .frameRight {
+    transform: translateX(8px);
+    transition: .4s ease;
 }
 
-.imageFrame:hover .frameTop{
-  width:220px;
-  transition:.4s ease;
+.imageFrame:hover .frameTop {
+    width: 220px;
+    transition: .4s ease;
 }
 
 
@@ -346,4 +346,133 @@
 
 .btnOutline:hover .icon2 {
     transform: translateX(24px);
+}
+
+
+
+/* ===========================
+   PRODUCTS
+=========================== */
+.productsSec {
+    width: 100%;
+    padding: 71px 60px;
+    background-color: #f7f7f753;
+}
+
+
+
+.productsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.productText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.productText h2 {
+    font-size: 55px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.2;
+}
+
+.productText h2 span {
+    color: #293F67;
+}
+
+.productsDivider {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background: #0d2244;
+}
+
+.productsSubtext {
+    max-width: 470px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.expertiseGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.expCard {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.expImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.expCard:hover .expImg {
+    transform: scale(1.08);
+}
+
+/* Bottom Blue Box */
+
+.expLabel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(41, 63, 103, .92);
+    padding: 20px;
+    height: 87px;
+    transition: height .45s ease;
+    box-sizing: border-box;
+}
+
+.expCard:hover .expLabel {
+    height: 200px;
+}
+
+/* Title */
+
+.expLabel h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Hidden Description */
+
+.desc {
+    margin-top: 18px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .35s ease;
+}
+
+.expCard:hover .desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.desc p {
+    color: rgba(255, 255, 255, .95);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
 }

@@ -8,17 +8,19 @@ import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
 import heroBg from '../../assets/conatiners/HomeConatiner/banner2.png'
 import houseImg from '../../assets/Home/banner3.png'
+import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
+import user from '../../assets/conatiners/HomeConatiner/user.png'
 function HeroBanner() {
   const [current, setCurrent] = useState(0);
 
   // Auto Slider
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
-  //   }, 5000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
+    }, 5000);
 
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   // Next Slide
   const nextSlide = () => {
@@ -114,7 +116,7 @@ function HeroBanner() {
       {/* ================= Slide 2 ================= */}
 
       <div
-        className={`${styles.heroPanel} ${current === 0 ? styles.active : ""
+        className={`${styles.heroPanel} ${current === 2 ? styles.active : ""
           }`}
       >
         {/* Background */}
@@ -184,79 +186,56 @@ function HeroBanner() {
       {/* ================= Slide 3 ================= */}
 
       <div
-        className={`${styles.HomeSlider} ${current === 2 ? styles.active : ""
+        className={`${styles.HomeSlider} ${current === 0 ? styles.active : ""
           }`}
       >
-        <img
-          src={heroBg}
-          alt="Solar Background"
-          className={styles.heroBackground}
-        />
-        {/* Overlay */}
-        <div className={styles.heroOverlay}></div>
+        <div className={styles.heroShape}></div>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContents}>
+            <h1 className={styles.heroTitle}>
+              PRECISION FABRICATION
+            </h1>
 
-        <h2 className={styles.heroWatermark}>
-          SOLAR FASTENER AND COMPONENT SUPPLIERS
-        </h2>
-        {/* top heading */}
+            <h2 className={styles.heroSubTitle}>
+              Pre-Engineered Buildings Segment
+            </h2>
 
-        <div className={styles.heroHeading}>
-          <h3>L&amp;R GREEN INDIA PVT LTD</h3>
+            <p className={styles.heroDescription}>
+              Manufacturer of prefabricated structures, mild steel containers &
+              prefabricated cabins and solar. Established in 2015, New Delhi.
+            </p>
 
-          <h1>
-            SOLAR FASTENER
-            SOLUTIONS
-          </h1>
-        </div>
+            <button className={styles.heroButton}>
+              <span>All Category</span>
+              <ArrowRight size={20} />
+            </button>
 
-        {/* Left Content */}
-        <div className={styles.heroContent}>
-          <p>
-            Manufacturer of prefabricated structures, mild steel
-            containers &amp; prefabricated cabins and solar.
-            Established in 2015, New Delhi.
-          </p>
+            <div className={styles.heroStats}>
+              <div className={styles.heroThumb}>
+                <img src={previewImg} alt="" />
+              </div>
 
-          <button className={styles.heroButton}>
-            <span>All Category</span>
-            <ArrowRight
-              size={20}
-              className={styles.heroArrow}
-            />
-          </button>
-        </div>
+              <div className={styles.heroStat}>
+                <h3>500+</h3>
+                <p>Completed Projects</p>
+              </div>
 
-        {/* House Image */}
-        <div className={styles.houseImage}>
-          <img src={houseImg} alt="Solar House" />
-        </div>
+              <div className={styles.heroStat}>
+                <h3>25+</h3>
+                <p>Years Of Experience</p>
+              </div>
 
-        {/* left */}
-
-        <div className={styles.heroStatsCard}>
-
-          <div className={styles.heroStatItem}>
-            <h2>500+</h2>
-            <p>Completed Projects</p>
+              <div className={styles.heroStat}>
+                <h3>900+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.heroStatItem}>
-            <h2>25+</h2>
-            <p>Years Of Experience</p>
+          <div className={styles.heroImage}>
+            <img src={user} alt="Building" />
           </div>
-
-          <div className={styles.heroStatItem}>
-            <h2>900+</h2>
-            <p>Happy Clients</p>
-          </div>
-
-          <div className={styles.heroStatItem}>
-            <h2>150+</h2>
-            <p>Team Workers</p>
-          </div>
-
         </div>
-
 
       </div>
 

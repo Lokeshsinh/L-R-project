@@ -3,7 +3,36 @@ import Header from '../components/common/Header';
 import styles from '../styles/HomeContainer.module.css'
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X } from "lucide-react";
 import containerImg from '../assets/conatiners/HomeConatiner/container1.png'
+import card1 from '../assets/conatiners/HomeConatiner/card1.png';
+import card2 from '../assets/conatiners/HomeConatiner/card2.png';
+import card3 from '../assets/conatiners/HomeConatiner/card3.png';
+import card4 from '../assets/conatiners/HomeConatiner/card4.png';
+
 function HomeContainer() {
+
+    const industryProjects = [
+        {
+            title: "Modular Living Solutions",
+            desc: "Modern modular living containers designed for comfortable residential spaces. Built for durability, convenience, and quick installation.",
+            img: card1,
+        },
+        {
+            title: "Office & Workspace Solutions",
+            desc: "Portable office containers for productive and efficient work environments. Ideal for construction, industrial, and commercial projects.",
+            img: card2,
+        },
+        {
+            title: "Storage & Security Solutions",
+            desc: "Secure storage containers for tools, equipment, and valuable materials. Designed for maximum protection and organized space utilization.",
+            img: card3,
+        },
+        {
+            title: "Modular Infrastructure Solutions",
+            desc: "Custom modular containers for offices, accommodations, and utility spaces. Engineered for flexibility, durability, and rapid deployment.",
+            img: card4,
+        },
+    ];
+
     return (
         <>
             <div className={styles.wrapper}>
@@ -73,8 +102,41 @@ function HomeContainer() {
                 </section>
 
 
+                {/* ── Products ── */}
+                <section className={styles.productsSec}>
+                    <div className={styles.productsInner}>
+                        <div className={styles.productsHeader}>
+                            <div className={styles.productText}>
+                                <h2>
+                                    Our Modular Home MS  <br />
+                                    <span>Container Solutions</span>
+                                </h2>
+                                <div className={styles.productsDivider}></div>
+                            </div>
+                            <p className={styles.productsSubtext}>
+                                High-quality modular container solutions designed for residential, commercial, 
+                                industrial, and site-based applications with durable mild steel construction.
+                            </p>
+                        </div>
+                        <div className={styles.expertiseGrid}>
+                            {industryProjects.map((item, index) => (
+                                <div className={styles.expCard} key={index}>
+                                    <img src={item.img} alt={item.title} className={styles.expImg} />
+                                    <div className={styles.expLabel}>
+                                        <h4>{item.title}</h4>
+                                        <div className={styles.desc}>
+                                            <p>{item.desc}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
-                
+
+
+
             </div>
 
         </>
