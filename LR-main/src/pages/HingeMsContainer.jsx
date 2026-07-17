@@ -1,130 +1,188 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/HingeMsContainer.module.css";
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X } from "lucide-react";
+import container1 from '../assets/conatiners/HigneContainer/container1.png'
+import container2 from '../assets/conatiners/HigneContainer/container2.png'
+import card1 from '../assets/conatiners/HigneContainer/card2.png';
+import card2 from '../assets/conatiners/HigneContainer/card1.png';
+import card3 from '../assets/conatiners/pufContainer/card3.png';
+import card4 from '../assets/conatiners/HigneContainer/card4.png';
+import design from '../assets/conatiners/HigneContainer/design.png';
+import design1 from '../assets/conatiners/HigneContainer/design1.png';
+const cards = [
+  {
+    title: "40×10×8.5 / 40×8×8.5",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "20×10×8.5 / 20×8×8.5",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "10×10×8",
+    dark: false,
+    list: [
+      "Staff Offices Containers",
+      "Engineer's Accommodation Containers",
+      "Worker Accommodation Containers",
+      "Dining Hall Containers",
+      "Battery Storage Containers",
+      "Gym Hall Containers",
+      "Cafe Containers",
+      "Store Hall Containers",
+      "Cement Store Containers",
+      "Tube Well Pump Farm Accommodation Containers",
+      "Coffee Shop Containers",
+      "Baby Play Area Containers",
+      "Toilet Block Containers",
+      "Wash Room Block Containers",
+      "Class Room Containers",
+      "General Residential Containers",
+    ],
+  },
+  {
+    title: "6x6x8",
+    dark: false,
+    list: [
+      "Toilet Cabin Containers",
+      "Guard Cabin Block Containers",
+      "Tube Well Residence  Containers",
+      "cement store Containers",
+      "Tube well  Pump Farm Store Containers",
+      "coffee Shop Containers",
+      "Wash Room Block Containers",
+      "Cafe Containers  Hall Containers",
 
+    ],
+  },
+  {
+    title: "4x4x8 ",
+    dark: false,
+    list: [
+      "Toilet Cabin Containers",
+      "Guard Cabin Block Containers",
+      "Farming Store  Containers",
+      "Material store Containers",
+      "coffee Shop Containers",
+      "Wash Room Block Containers",
+      "Cafe Containers  Hall Containers",
+
+    ],
+  },
+];
 const HingeMsContainer = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
 
-  const containerSizes = [
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [current]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % cards.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
+  };
+
+
+  const industryProjects = [
     {
-      size: "40×10×8.5 / 40×8×8.5",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room Containers",
-        "General Residential Containers",
-      ],
-      highlight: false,
+      title: "Portable Office Containers",
+      desc: "Modern portable office containers designed for productive workspaces. Ideal for construction sites, industrial projects, and temporary offices.",
+      img: card1,
     },
     {
-      size: "20×10×8.5 / 20×8×8.5",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "OPS Containers- Net Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room Containers",
-        "General Residential Containers",
-      ],
-      highlight: true,
+      title: "Project Management Office Containers",
+      desc: "Fully equipped office containers for efficient project planning and coordination. Built for smooth operations and maximum productivity.",
+      img: card2,
     },
     {
-      size: "10×10×8",
-      features: [
-        "Tent Staff offices Containers",
-        "Engineer's Accommodation Containers",
-        "Worker Accommodation Containers",
-        "Dining Hall Containers",
-        "Battery Storage Containers",
-        "Gym Hall Containers",
-        "Cafe Containers Hall Compbex",
-        "Store Hall Containers",
-        "cement store Containers",
-        "Tube well- Pump Farm accommodation Containers",
-        "coffee Shop Containers",
-        "Relay Flat Area Containers",
-        "Toilet block Containers",
-        "Multi Store Block Containers",
-        "Copy Room Containers",
-        "General Residential Containers",
-      ],
-      highlight: false,
+      title: "Dining Hall & Café Containers",
+      desc: "Comfortable dining and café containers with spacious modern interiors. Perfect for project sites, campuses, and commercial facilities.",
+      img: card3,
+    },
+    {
+      title: "Portable Cabin Containers",
+      desc: "Compact modular cabins designed for offices, security, or accommodation. Durable, easy to install, and suitable for temporary or permanent use.",
+      img: card4,
     },
   ];
 
-  const products = [
-    {
-      title: "Coffee Shop Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      title: "Baby Play Area Container",
-      description:
-        "Safe and engaging modular space designed for children's recreational activities.",
-      img: "https://images.unsplash.com/photo-1555009393-f20bdb245c4d?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      title: "Pump Farm Store Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      title: "Material Store Container",
-      description: "",
-      img: "https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=600&q=80",
-    },
-  ];
 
   const faqs = [
     {
       id: 0,
-      q: "What are L&R Value Granted MS Containers used for?",
-      a: "They are used for staff offices, worker accommodation, guard cabins, dining spaces, storage units, pump farms, coffee shops, play areas, and various site utility applications.",
+      q: "What are Hinge MS Containers?",
+      a: "Hinge MS Containers are modular mild steel containers with foldable or hinged designs, offering durable, portable, and space-efficient solutions for offices, storage, accommodation, and industrial applications.",
     },
     {
       id: 1,
-      q: "What sizes are available in L&R MS Containers?",
-      a: "They are available in multiple sizes such as 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft.",
+      q: "What sizes are available?",
+      a: "We offer standard sizes including 40×10×8.5 ft, 20×10×8.5 ft, and 10×10×8 ft. Custom dimensions are also available to suit your project requirements.",
     },
     {
       id: 2,
-      q: "Are these containers suitable for harsh environments?",
-      a: "Yes. L&R MS Containers are built with high-grade steel and protective coatings, making them durable and reliable even in extreme weather and demanding site conditions.",
+      q: "Are these containers movable?",
+      a: "Yes. Hinge MS Containers are designed for easy transportation and relocation, making them ideal for temporary and changing project sites.",
     },
     {
       id: 3,
-      q: "Can L&R MS Containers be relocated?",
-      a: "Absolutely. These containers are designed for easy relocation using standard lifting equipment or flatbed trucks, making them ideal for phased or temporary deployments.",
+      q: "Can the interiors be customized?",
+      a: "Yes. We provide customized interiors with options such as insulation, electrical fittings, flooring, partitions, furniture, air conditioning, and plumbing based on your needs.",
     },
     {
       id: 4,
-      q: "Do these containers support custom layouts?",
-      a: "Yes. Interior partitions, electrical fittings, HVAC, flooring, and finishes can all be customized to meet your specific project or operational requirements.",
+      q: "Where can these containers be used?",
+      a: "These containers are widely used at construction sites, industrial facilities, commercial projects, mining locations, infrastructure developments, educational campuses, and remote work locations.",
     },
   ];
 
@@ -135,58 +193,59 @@ const HingeMsContainer = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Portable Modular Solutions</span>
+          <span className={styles.topLabel}> Skid-Mounted Series</span>
           <h1 className={styles.mainTitle}>
             HINGE MS <br />
             <span>CONTAINER</span>
           </h1>
-          <button className={styles.btnHero}>
-            Contact us &nbsp;<span>→</span>
+          <p className={styles.heroDesc}>Hinge MS Containers specializes in durable and high-quality mild steel
+            container solutions designed for industrial, storage, transport, and customized business needs.</p>
+          <button className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
 
+
+
+
       {/* ── Intro ── */}
       <section className={styles.intro}>
+        <div className={styles.introText}>
+          <h2 >
+            Heavy-Duty Hinge<br />
+            <span>MS Containers</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
         <div className={styles.introGrid}>
-          <div className={styles.introVisuals}>
-            <div
-              className={styles.imgMain}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80')",
-              }}
-            />
-            <div
-              className={styles.imgSub}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=400&q=80')",
-              }}
-            />
-          </div>
           <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              Hinge <br />
-              <span>MS Containers</span>
-            </h2>
             <p>
-              L&R Value Granted Containers represent a versatile range of portable MS
-              modular units designed to meet diverse industrial, commercial, and site
-              infrastructure needs. Available in multiple sizes from compact 4×4 units
-              to large 40-foot containers, these solutions are engineered for durability,
-              mobility, and functional adaptability across applications such as offices,
-              accommodation, storage, sanitation, and specialized utility spaces.
+              Hinge MS Containers are high-strength modular steel units designed for durability,
+              flexibility, and long-term performance across industrial, commercial, and infrastructure
+              applications. Built using premium mild steel and heavy-duty hinge systems,
+              these containers ensure smooth operation, strong structural integrity, and resistance
+              to harsh environmental conditions.
             </p>
             <p>
-              Built with robust steel structures and customizable layouts, L&R
-              containers are ideal for rapid deployment in demanding environments.
-              Whether for construction sites, remote project locations, or facilities,
-              these modular units offer cost-effective, low-maintenance, and scalable
-              solutions that ensure operational efficiency, user comfort, and long-term
-              performance.
+              Manufactured by L&R Green Pvt Ltd, these containers are engineered for easy transportation,
+              quick installation, and multiple usage options such as site offices, accommodation units,
+              storage spaces, and utility cabins.
+              Their robust construction and customizable design make them a reliable solution for modern
+              project site requirements.
             </p>
-            <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+            <button className={styles.btnOutline}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
+          </div>
+          <div className={styles.introVisuals}>
+            <img src={container1} alt="container" />
           </div>
         </div>
       </section>
@@ -196,189 +255,54 @@ const HingeMsContainer = () => {
         <div className={styles.sizesInner}>
           <div className={styles.sizesTopRow}>
             <div className={styles.sizesLeft}>
-              <h2 className={styles.secTitle}>
+              <h2 >
                 The Types of L&R <br />
                 <span>Value Granted Sizes</span>
               </h2>
-              <div className={styles.sizesDivider} />
+              <div className={styles.secHeadLine}></div>
             </div>
             <p className={styles.sizesDesc}>
-              Every L&R Value Container is offered in multiple core sizes, with
-              flexible interior layouts ranging from offices and accommodation to
-              dining, sanitary, and storage spaces.
+              Every Hinge MS Container from L&R Green Pvt Ltd is available in multiple core sizes, with flexible
+              interior layouts designed for offices, accommodation, dining, sanitary, and storage applications.
             </p>
           </div>
-          <div className={styles.sizesNavRow}>
-            <button className={styles.navBtn}>‹</button>
-            <button className={styles.navBtn + " " + styles.navBtnActive}>›</button>
-          </div>
-          <div className={styles.sizesGrid}>
-            {containerSizes.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.sizeCard} ${
-                  item.highlight ? styles.activeCard : ""
-                }`}
-              >
-                <div className={styles.cardIcon}>
-                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <rect x="2" y="10" width="32" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <rect x="6" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <rect x="16" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <line x1="2" y1="28" x2="34" y2="28" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="8" y1="28" x2="8" y2="32" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="28" y1="28" x2="28" y2="32" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3>{item.size}</h3>
-                <ul className={styles.featureList}>
-                  {item.features.map((f, i) => (
-                    <li key={i}>• {f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className={styles.controls}>
+            <button onClick={prevSlide}>
+              <ChevronLeft size={22} />
+            </button>
 
-      {/* ── Why Choose ── */}
-      <section className={styles.whySec}>
-        <div className={styles.whyGrid}>
-          <div className={styles.whyContent}>
-            <h2 className={styles.secTitle}>
-              Why Choose L&R Value <br />
-              <span>Granted MS Containers</span>
-            </h2>
-            <div className={styles.whyDivider} />
-            <p>
-              L&R Value Granted MS Containers offer reliable, cost-effective
-              modular solutions for diverse applications. Built with strong steel
-              structures, they ensure durability, safety, and long-term performance
-              in demanding conditions.
-            </p>
-            <p>
-              With multiple size options and highly flexible layouts, L&R containers
-              can be easily adapted for offices, accommodation, storage, and utility
-              spaces. Their quick installation, low-maintenance requirements, and
-              easy relocation make them an ideal choice for projects that demand
-              speed, mobility, and operational efficiency.
-            </p>
+            <button onClick={nextSlide}>
+              <ChevronRight size={22} />
+            </button>
           </div>
-          <div className={styles.whyImgWrapper}>
-            <img
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
-              alt="L&R Value Container"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Manufacturing Strength ── */}
-      <section className={styles.mfgBand}>
-        <div className={styles.mfgContainer}>
-          <div className={styles.mfgText}>
-            <h2>
-              Our Strength &amp; <br />
-              Manufacturing Excellence
-            </h2>
-            <p>
-              L&R MS Containers are built with high-grade steel and precision engineering to
-              ensure strong structural stability and long-lasting performance. Designed for
-              tough industrial conditions, they offer durability, safety, and reliable usage
-              across all site applications.
-            </p>
-            <div className={styles.mfgTag}>ENERGY STORAGE</div>
-          </div>
-          <div className={styles.mfgImgWrapper}>
-            <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
-              alt="Manufacturing Strength"
-            />
-            <div className={styles.mfgWatermark}>CONTA</div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Products ── */}
-      <section className={styles.productsSec}>
-        <div className={styles.productsInner}>
-          <div className={styles.productsHeader}>
-            <div>
-              <h2 className={styles.secTitle}>
-                L&R Value Granted MS <br />
-                <span>Containers Products</span>
-              </h2>
-              <div className={styles.productsDivider} />
-            </div>
-            <p className={styles.productsSubtext}>
-              Purpose-built modular container solutions designed for commercial,
-              utility, and recreational applications with durable construction and
-              flexible deployment options.
-            </p>
-          </div>
-          <div className={styles.productsGrid}>
-            {products.map((prod, i) => (
-              <div key={i} className={styles.productCard}>
-                <img src={prod.img} alt={prod.title} />
-                <div className={styles.productOverlay}>
-                  <h4>{prod.title}</h4>
-                  {prod.description && <p>{prod.description}</p>}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ ── */}
-      <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqLeft}>
-            <div className={styles.faqSideImg}
+          <div className={styles.sliderWrapper}>
+            <div
+              className={styles.sliderTrack}
               style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80')",
+                transform: `translateX(-${current * 33.333}%)`,
               }}
-            />
-          </div>
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FQS</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked <br />
-                  <span>Questions</span>
-                </h2>
-                <div className={styles.faqDivider} />
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers to common queries about our 20×10 MS containers,
-                covering features, customization, durability, and deployment.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+            >
+              {[...cards, ...cards.slice(0, 3)].map((card, index) => (
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqOpen : ""
-                  }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
+                  key={index}
+                  className={`${styles.card} ${card.dark ? styles.darkCard : ""
+                    }`}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <Box
+                    size={48}
+                    strokeWidth={1.5}
+                    className={styles.icon}
+                  />
+
+                  <h2>{card.title}</h2>
+
+                  <div className={styles.line}></div>
+
+                  <ul>
+                    {card.list.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -386,16 +310,196 @@ const HingeMsContainer = () => {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your L&R Value Granted MS Containers ?</h2>
-          <p>
-            Connect with our team to design and deliver compact, durable, and
-            fully L&R Value Granted MS Containers tailored to your site needs.
-          </p>
-          <button className={styles.btnCTA}>Contact US &nbsp;→</button>
+
+      {/* ── Why Choose ── */}
+      <section className={styles.whySec}>
+        <div className={styles.WhyText}>
+          <h2>
+            Why Choose L&R Value <br />
+            <span>Granted MS Containers</span>
+          </h2>
+          <div className={styles.introLine}></div>
         </div>
+        <div className={styles.whyGrid}>
+          <div className={styles.whyImgWrapper}>
+            <img
+              src={container2}
+              alt="L&R Value Container"
+            />
+          </div>
+          <div className={styles.whyContent}>
+            <p>
+              L&R Hinge MS Containers are engineered for strength, durability, and long-term
+              performance, making them a reliable choice for industrial, commercial, and site-based
+              applications. Built with high-quality mild steel and precision hinge
+              systems, these containers ensure smooth operation, excellent load-bearing capacity,
+              and resistance to harsh environmental conditions.
+            </p>
+            <p>
+              At L&R Green Pvt Ltd, we focus on delivering fully customizable and ready-to-use
+              container solutions that are easy to transport, install, and relocate. With flexible designs for offices, accommodation,
+              storage, and utility spaces, our Hinge MS Containers provide a cost-effective and
+              efficient solution for modern infrastructure needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Manufacturing Strength ── */}
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>Hinge  MS Container</h1>
+            <h1>Hinge  MS Container</h1>
+            <h1>Hinge  MS Container</h1>
+            <h1>Hinge  MS Container</h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Our Strength &amp; <br />
+              Manufacturing Excellence
+            </h2>
+
+            <p>
+              At L&R Green Pvt Ltd, we deliver high-quality Hinge MS Containers built with
+              strong engineering standards, precision
+              fabrication, and durable mild steel construction, ensuring reliable performance
+              and long service life for every project.
+            </p>
+
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
+          </div>
+        </div>
+
+      </section>
+
+
+      {/* ── Products ── */}
+      <section className={styles.productsSec}>
+        <div className={styles.productsInner}>
+          <div className={styles.productsHeader}>
+            <div className={styles.productText}>
+              <h2 className={styles.secTitle}>
+                L&R Value Granted MS <br />
+                <span>Containers Products</span>
+              </h2>
+              <div className={styles.productsDivider}></div>
+            </div>
+            <p className={styles.productsSubtext}>
+              Purpose-built modular container solutions designed for commercial,
+              utility, and recreational applications with durable construction and
+              flexible deployment options.
+            </p>
+          </div>
+          <div className={styles.expertiseGrid}>
+            {industryProjects.map((item, index) => (
+              <div className={styles.expCard} key={index}>
+                <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                <div className={styles.expLabel}>
+                  <h4>{item.title}</h4>
+
+                  <div className={styles.desc}>
+                    <p>{item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* ── FAQ ── */}
+      <section className={styles.faqSec}>
+        <span className={styles.introLabel}>• FAQ</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>
+              Frequently Asked
+              <br />
+              <span>Questions</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p>
+            Get quick answers to the most common queries about our portable, durable,
+            and fully customizable Hinge MS Container solutions.
+          </p>
+        </div>
+
+        <div className={styles.faqBody}>
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
+                </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.faqImg}>
+            <img src={container1} alt="container" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+
+      <section className={styles.cta}>
+        <h2>Ready for Your Hinge MS Container Solution?</h2>
+        <p>
+          Connect with our team to design and deliver compact, durable, and
+          fully Hinge MS Container solutions tailored to your site needs.
+        </p>
+
+
+        <button className={styles.contactBtn}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />
