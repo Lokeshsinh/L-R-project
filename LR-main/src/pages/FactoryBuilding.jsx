@@ -11,35 +11,19 @@ import card1 from '../assets/Pre-Build/Factory/card1.png';
 import card2 from '../assets/Pre-Build/Factory/card2.png';
 import card3 from '../assets/Pre-Build/Factory/card3.png';
 import card4 from '../assets/Pre-Build/Factory/card4.png';
+import design from '../assets/Pre-Build/Factory/design.png'
+import design1 from '../assets/Pre-Build/Factory/design1.png'
 
-
-const processSteps = [
-  {
-    title: "Design & Planning",
-    desc: "Detailed factory layout planning based on production workflow, machinery requirements, and future scalability.",
-  },
-  {
-    title: "Manufacturing",
-    desc: "Fabrication of steel panels and building components using high-quality materials and advanced technology.",
-  },
-  {
-    title: "Quality & Integration",
-    desc: "Comprehensive quality checks, structural validation, and integration of roofing, insulation, and utility systems.",
-  },
-  {
-    title: "Installation & Commissioning",
-    desc: "On-site erection, structural alignment, and final commissioning for every factory building.",
-  },
-];
 
 
 const FactoryBuilding = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-
+  const [active, setActive] = useState(0);
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
 
   const faqs = [
     {
@@ -85,6 +69,34 @@ const FactoryBuilding = () => {
       title: "Processing & Production Units",
       desc: "Industrial buildings designed for processing and large-scale production activities. Built for safety, efficiency, and reliable operational performance.",
       img: card4,
+    },
+  ];
+
+
+  const processData = [
+    {
+      title: "Design & Planning",
+      description:
+        "Detailed factory layout planning based on production workflow, machinery requirements, and load calculations.",
+      image: "/Images/process1.jpg",
+    },
+    {
+      title: "Manufacturing",
+      description:
+        "Fabrication of steel structures and building components using high-quality materials and advanced technology.",
+      image: "/Images/process2.jpg",
+    },
+    {
+      title: "Quality & Integration",
+      description:
+        "Comprehensive quality checks, structural validation, and integration of roofing, insulation, and utility systems.",
+      image: "/Images/process3.jpg",
+    },
+    {
+      title: "Installation & Commissioning",
+      description:
+        "On-site erection, structural alignment, and final commissioning for ready-to-use factory buildings.",
+      image: "/Images/process4.jpg",
     },
   ];
   return (
@@ -144,6 +156,8 @@ const FactoryBuilding = () => {
         </div>
       </section>
 
+
+
       {/* PROJECTS */}
       <section className={styles.projectsSec}>
         <div className={styles.secHeader}>
@@ -200,40 +214,80 @@ const FactoryBuilding = () => {
         </div>
       </section>
 
-      {/* STRENGTH BAND */}
-      <section className={styles.strength}>
-        <div className={styles.strengthWatermark}>FACTORY</div>
-        <div>
-          <h2>Factory Building<br />Strength &amp; Excellence</h2>
+      {/* ── Manufacturing Strength ── */}
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R FACTORY BUILDING </h1>
+
+          </div>
         </div>
-        <div>
-          <p>
-            L&amp;R Enterprises Utilizes Advanced Fabrication Facilities Equipped With
-            CNC Machinery, Automated Welding Systems, And Precision Engineering
-            Processes To Construct Industrial Sheds That Meet High Standards Of
-            Strength, Accuracy, And Performance.
-          </p>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Factory Building  <br />
+              Strength & Excellence
+            </h2>
+
+            <p>
+              L&R Enterprises utilizes advanced fabrication facilities
+              equipped with CNC machinery, automated welding systems,
+              and precision engineering processes to manufacture industrial
+              sheds that meet high standards of strength, accuracy, and performance.
+            </p>
+
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
+          </div>
         </div>
+
       </section>
+
 
       {/* PROCESS */}
       <section className={styles.processSec}>
         <div className={styles.processHeader}>
-          <h2>Factory Construction<br /><span>Process by L&amp;R</span></h2>
+          <div className={styles.processtext}>
+            <h2>Factory Construction<br /><span>Process by L&amp;R</span></h2>
+            <div className={styles.introLine}></div>
+          </div>
           <p>
             The Warehouse Process ensures efficient execution from design and
             fabrication to quality assurance and final project handover.
           </p>
         </div>
         <div className={styles.processBody}>
-          <div className={styles.processImg} />
-          <div className={styles.processSteps}>
-            {processSteps.map((step) => (
-              <div key={step.title} className={styles.pStep}>
-                <div className={styles.pStepDot} />
-                <div>
-                  <h4>{step.title}</h4>
-                  <p>{step.desc}</p>
+          <div className={styles.processImg}>
+            <img
+              src={processData[active].image}
+              alt={processData[active].title}
+              className={styles.processImage}
+            />
+          </div>
+          {/* process */}
+
+          <div className={styles.contentWrapper}>
+            {processData.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.processItem} ${active === index ? styles.active : ""
+                  }`}
+                onMouseEnter={() => setActive(index)}
+              >
+                <div className={styles.line}></div>
+
+                <div className={styles.textContent}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
               </div>
             ))}
