@@ -174,7 +174,7 @@
 }
 
 .introContent p {
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -891,6 +891,7 @@
    FAQ
 =========================== */
 .faqSec {
+  width:100%;
   padding: 72px 60px;
   background-color: #f7f7f753;
 }
