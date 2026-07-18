@@ -1,6 +1,8 @@
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/FactoryBuilding.module.css";
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -68,24 +70,26 @@ const faqs = [
 ];
 
 const FactoryBuilding = () => {
+  const navigate = useNavigate()
   return (
     <>
       <Header />
 
-      {/* BREADCRUMB */}
-      <div className={styles.breadcrumb}>
-        About L&amp;R &rsaquo; <span>Factory Building Solutions</span>
-      </div>
-
       {/* HERO */}
       <section className={styles.hero}>
-        <h1>ADVANCED FACTORY<br />BUILDING SOLUTIONS</h1>
-        <p>
-          Engineered for efficiency, strength, and scalability — L&amp;R Enterprises
-          delivers high-performance factory buildings for modern manufacturing and
-          industrial operations.
-        </p>
-        <button className={styles.btnWhite}>Contact us &nbsp;→</button>
+        <div className={styles.heroContent}>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            Advanced Factory  <br />
+            <span>Building Solutions</span>
+          </h1>
+          <p className={styles.heroDesc}>Engineered for efficiency, strength, and scalability — L&R Enterprises
+            delivers high-performance factory buildings for modern manufacturing and industrial operations.</p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
+        </div>
       </section>
 
       {/* INTRO SPLIT */}

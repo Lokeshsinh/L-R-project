@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer'
 import styles from '../styles/HomeContainer.module.css'
 import {
-    ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X, Home,
+    ArrowRight, ArrowUpRight,  Box, Plus, X, Home,
     Building2,
     BriefcaseBusiness,
     BedDouble,

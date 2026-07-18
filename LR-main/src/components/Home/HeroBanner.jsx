@@ -6,8 +6,6 @@ import homeBanner1 from '../../assets/Home/homeBanner1.png'
 import buildingImg from '../../assets/Home/buildImg.png'
 import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
-import heroBg from '../../assets/conatiners/HomeConatiner/banner2.png'
-import houseImg from '../../assets/Home/banner3.png'
 import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
 import user from '../../assets/conatiners/HomeConatiner/user.png'
 function HeroBanner() {
