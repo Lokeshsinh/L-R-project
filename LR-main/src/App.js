@@ -46,6 +46,7 @@ import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
 import Brochure from "./pages/Brochure";
 import HomeContainer from "./pages/HomeContainer";
+import PreBuild from "./pages/PreBuild";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
         <Route path="/premium-ms-containers" element={<PremiumMsContainer />} />
         <Route path="/labour-accommodation" element={<PrefabLabour />} />
         <Route path="/site-office" element={<PrefabSiteOffice />} />
+        <Route path='/pre-building' element={<PreBuild />} />
         <Route path="/prefab-staff-canteens" element={<PrefabStaffCanteens />} />
         <Route path="/prefab-dry-wall" element={<PrefabDryWall />} />
         <Route path="/prefab-mushroom" element={<PrefabMushroom />} />

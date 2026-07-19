@@ -43,6 +43,7 @@ const faqs = [
 
 
 
+
 const ColdRoom = () => {
   const [activeStep, setActiveStep] = useState(0);
   const navigate = useNavigate();

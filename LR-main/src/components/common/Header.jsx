@@ -109,17 +109,17 @@ const Header = () => {
       <div className="top-bar">
         {/* names */}
         <div className="top-header">
-        <div className="top-label">L&amp;R GREEN INDIA PVT LTD</div>
-        <div className="top-info">
-          <span className="info-item">
-            <i className="ti ti-mail" aria-hidden="true"></i>
-            <span>Info.Lr1995@gmail.com</span>
-          </span>
-          <span className="info-item">
-            <i className="ti ti-phone" aria-hidden="true"></i>
-            <span>+91-8595351363 &nbsp;|&nbsp; 9758813668</span>
-          </span>
-        </div>
+          <div className="top-label">L&amp;R GREEN INDIA PVT LTD</div>
+          <div className="top-info">
+            <span className="info-item">
+              <i className="ti ti-mail" aria-hidden="true"></i>
+              <span>Info.Lr1995@gmail.com</span>
+            </span>
+            <span className="info-item">
+              <i className="ti ti-phone" aria-hidden="true"></i>
+              <span>+91-8595351363 &nbsp;|&nbsp; 9758813668</span>
+            </span>
+          </div>
         </div>
         {/* icons */}
         <div className="top-social">
@@ -130,7 +130,7 @@ const Header = () => {
             <FaLinkedinIn className="ti" size={16} />
           </a>
           <a href="#twitter" aria-label="Twitter / X">
-           <FaXTwitter  className="ti" size={16}/>
+            <FaXTwitter className="ti" size={16} />
           </a>
           <a href="#instagram" aria-label="Instagram">
             <FaInstagram className="ti" size={16} />
@@ -142,7 +142,7 @@ const Header = () => {
       <nav className="navbar">
         <Link to="/" className="brand" onClick={closeMenu}>
           <div className="brand-icon-circle">
-            <img  src={logo} alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
         </Link>
 
@@ -263,7 +263,7 @@ const Header = () => {
                   <li
                     className={`nested-submenu${openNested === "pre" ? " mobile-nested-open" : ""}`}
                   >
-                    <button type="button" onClick={handleNestedClick("pre")}>
+                    <button type="button" onClick={handleNestedClick("pre", "/pre-building")}>
                       <span>Pre-engineered Building</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
