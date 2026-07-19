@@ -285,9 +285,6 @@ const IndustrialSheds = () => {
           <p>Our industrial sheds are designed to deliver strength, durability, and efficient workspace solutions.</p>
         </div>
         <div className={styles.processContent}>
-          <div className={styles.processImage}>
-            <img src={shed2} alt="processImg" />
-          </div>
           <div className={styles.processSections}>
             {processData.map((item) => (
               <div key={item.id} className={styles.processCard}>
@@ -301,6 +298,9 @@ const IndustrialSheds = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className={styles.processImage}>
+            <img src={shed2} alt="processImg" />
           </div>
         </div>
       </section>
@@ -318,6 +318,9 @@ const IndustrialSheds = () => {
           <p>Find answers to common questions about our warehouse solutions, design process, and performance benefits.</p>
         </div>
         <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={shed3} alt="warehouse" />
+          </div>
           {/*  */}
           <div className={styles.container}>
             {faqs.map((item, index) => (
@@ -351,10 +354,6 @@ const IndustrialSheds = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className={styles.faqImg}>
-            <img src={shed3} alt="warehouse" />
           </div>
         </div>
       </section>

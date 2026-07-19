@@ -830,6 +830,16 @@
   padding: 72px 60px;
   background-color: #f7f7f753;
   background: url('../assets/Pre-Build/industrylSheld/back1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.introLabel {
+  padding: 6px 25px;
+  border: 1px solid lightgray;
+  border-radius: 34px;
+  font-size: 14px;
 }
 
 .faqHeader {

@@ -854,7 +854,12 @@
   margin-bottom: 60px;
   align-items: start;
 }
-
+.introLabel {
+  padding: 6px 25px;
+  border: 1px solid lightgray;
+  border-radius: 34px;
+  font-size: 14px;
+}
 .faqText {
   display: flex;
   justify-content: start;
