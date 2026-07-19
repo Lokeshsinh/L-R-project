@@ -14,6 +14,7 @@ import container1 from '../assets/conatiners/ExecutiveContainer/container1.png'
 import container3 from '../assets/conatiners/ExecutiveContainer/container2.png'
 import design from '../assets/conatiners/ExecutiveContainer/design1.png';
 import design1 from '../assets/conatiners/ExecutiveContainer/design2.png';
+import { useNavigate } from "react-router-dom";
 
 const cards = [
   {
@@ -115,6 +116,7 @@ const cards = [
 
 const ExecutiveMsContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const navigate = useNavigate()
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -251,14 +253,14 @@ const ExecutiveMsContainer = () => {
               they ensure comfort, safety, and efficiency, making them ideal for
               construction sites, industries, and remote project locations.
             </p>
-            <button className={styles.btnOutline}>
-              <span>Get Contact</span>
+              <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                <span>Get Contact</span>
 
-              <span className={styles.iconWrap}>
-                <ArrowUpRight className={styles.icon1} size={18} />
-                <ArrowUpRight className={styles.icon2} size={18} />
-              </span>
-            </button>
+                <span className={styles.iconWrap}>
+                  <ArrowUpRight className={styles.icon1} size={18} />
+                  <ArrowUpRight className={styles.icon2} size={18} />
+                </span>
+              </button>
           </div>
         </div>
       </section>

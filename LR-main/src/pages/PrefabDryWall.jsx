@@ -404,6 +404,9 @@ const PrefabDryWall = () => {
         </div>
       </section>
 
+
+      
+
       {/* ── CTA Banner ── */}
       <section className={styles.cta}>
         <h2>Ready to Build Your Prefabricated Dry Wall ?</h2>
