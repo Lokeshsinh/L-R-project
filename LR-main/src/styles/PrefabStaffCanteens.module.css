@@ -106,15 +106,17 @@
 /* ===========================
    INTRO / SMART MODULAR
 =========================== */
+
+
 .introSec {
   width: 100%;
-  padding: 71px 0;
+  padding: 71px 60px;
   background-color: #f7f7f753;
 }
 
 
 .secTitle {
-   display: flex;
+  display: flex;
   justify-content: start;
   align-items: start;
   flex-direction: column;
