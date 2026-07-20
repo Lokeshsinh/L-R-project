@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import railway1 from '../assets/PREFAB/railway/railway1.png'
 import railway2 from '../assets/PREFAB/railway/railway2.jpg'
 import railway3 from '../assets/PREFAB/railway/railway3.jpg'
+import railway4 from '../assets/PREFAB/railway/railway4.png'
 import design from '../assets/PREFAB/railway/design.png'
 import design1 from '../assets/PREFAB/railway/design1.png'
 
@@ -160,8 +161,8 @@ const PrefabRailwayShelters = () => {
       <section className={styles.canteenSection}>
         <div className={styles.canteenSectionHeader}>
           <h2>
-            Reliable Prefabricated  <br />
-            <span>Canteen Infrastructure</span>
+            Prefab Railway Shelters<br />
+            <span>Purpose & Application</span>
           </h2>
           <div className={styles.canteenSectionDivider} />
         </div>
@@ -190,7 +191,7 @@ const PrefabRailwayShelters = () => {
             <div className={styles.canteenSectionCardBg}></div>
             <div className={styles.canteenSectionCardFrame}>
               <img
-                src={railway2}
+                src={railway4}
                 alt={"Railway Station Platform"}
                 className={styles.canteenSectionCardImg}
               />

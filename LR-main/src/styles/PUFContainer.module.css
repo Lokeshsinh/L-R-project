@@ -12,7 +12,7 @@
    HERO
 =========================== */
 .hero {
-  background: url('../assets/conatiners/pufContainer/background.png') center/cover no-repeat;
+  background: url('../assets/Pre-Build/canteen/banner.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;
@@ -52,13 +52,12 @@
   color: #fff;
 }
 
-
 .heroDesc {
   font-size: 17px;
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 30px;
-  max-width: 670px;
+  max-width: 700px;
 }
 
 .btnHero {
