@@ -1198,7 +1198,7 @@
   border-radius: 12px;
   cursor: pointer;
   position: relative;
-  bottom: 40px;
+  bottom: 60px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
