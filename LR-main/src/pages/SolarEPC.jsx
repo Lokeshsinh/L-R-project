@@ -8,8 +8,8 @@ import {
 import { useNavigate } from 'react-router-dom'
 import solarepic1 from '../assets/solar/solarepic/solarepic1.png'
 import solarepic2 from '../assets/solar/solarepic/solarepic2.png'
-import solarepic3 from '../assets/solar/solarepic/solarepic3.png'
 import solarepic4 from '../assets/solar/solarepic/solarepic4.png'
+import solarepic3 from '../assets/solar/solarepic/solarepic3.png'
 import user1 from '../assets/solar/solarepic/user1.png'
 import user2 from '../assets/solar/solarepic/user2.png'
 import user3 from '../assets/solar/solarepic/user3.png'
@@ -114,6 +114,8 @@ const SolarEPC = () => {
           </button>
         </div>
       </section>
+
+
 
       {/* ── SECTION 2: WHAT IS SOLAR EPC WORK? ── */}
       <section className={styles.introSec}>
@@ -265,8 +267,8 @@ const SolarEPC = () => {
       <section className={styles.advSec}>
         <div className={styles.secTitle}>
           <h2>
-            Advantages of Prefabricated <br />
-            <span>Railway &amp; Telecom Shelters</span>
+            Procurement & <br />
+            <span>Quality Assurance</span>
           </h2>
           <div className={styles.introLine}></div>
         </div>
@@ -285,46 +287,42 @@ const SolarEPC = () => {
           <div className={styles.advContainer}>
             <div className={styles.advText}>
               <p>
-                At L&R Green Pvt Ltd, we are committed to delivering high-quality PUF
-                Sandwich Panel solutions that combine advanced technology, superior materials,
-                and reliable service to meet the evolving needs of modern construction projects.
+                Our rooftop servant rooms are compact and comfortable units for staff
+                accommodation, ensuring privacy and proper living while efficiently using rooftop space.
               </p>
               <div className={styles.featureListWrap}>
                 <div className={styles.featureRow}>
                   <div className={styles.featureIconBox}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.featureText}>Premium MS Steel Structure</p>
+                  <p className={styles.featureText}>Procurement of modules, inverters, transformers, cables</p>
                 </div>
                 <div className={styles.featureRow}>
                   <div className={styles.featureIconBox}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.featureText}>Fast Installation & Delivery</p>
+                  <p className={styles.featureText}>Vendor selection and technical evaluation</p>
                 </div>
                 <div className={styles.featureRow}>
                   <div className={styles.featureIconBox}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.featureText}>Weather Resistant Design</p>
+                  <p className={styles.featureText}>Factory inspections and quality checks</p>
                 </div>
                 <div className={styles.featureRow}>
                   <div className={styles.featureIconBox}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.featureText}>Custom Layout Solutions</p>
-                </div>
-                <div className={styles.featureRow}>
-                  <div className={styles.featureIconBox}>
-                    <CheckCircle2 size={17} strokeWidth={2.2} />
-                  </div>
-                  <p className={styles.featureText}>Complete After Sales Support</p>
+                  <p className={styles.featureText}>Compliance verification with project specifications</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
+
 
       {/* _______section: 6 EPC Services_______ */}
       <section className={styles.SolarEpic}>
@@ -350,7 +348,7 @@ const SolarEPC = () => {
             <div className={styles.solarBackgroundShape}></div>
             <div className={styles.solarImageHolder}>
               <img
-                src={solarepic4}
+                src={solarepic3}
                 alt="Solar Mounting Structure"
                 className={styles.solarDisplayImage}
               />
@@ -358,6 +356,9 @@ const SolarEPC = () => {
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── FAQ SECTION ── */}
       <section className={styles.faqSec}>
@@ -372,7 +373,7 @@ const SolarEPC = () => {
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
-            <img src={solarepic3} alt="warehouse" />
+            <img src={solarepic4} alt="warehouse" />
           </div>
           {/*  */}
           <div className={styles.container}>
@@ -410,6 +411,8 @@ const SolarEPC = () => {
           </div>
         </div>
       </section>
+
+
 
 
 
