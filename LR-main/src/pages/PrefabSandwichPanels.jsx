@@ -2,169 +2,82 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabSandwichPanels.module.css";
+import {
+  ArrowRight, ArrowUpRight, Plus, X, ThermometerSnowflake,
+  VolumeX,
+  Shield,
+  Cloud,
+  Hammer,
+  Zap,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import sand1 from '../assets/panel/sandwichpanel/sand1.png'
+import sand2 from '../assets/panel/sandwichpanel/sand2.png'
+import sand3 from '../assets/panel/sandwichpanel/sand3.png'
+import sand4 from '../assets/panel/sandwichpanel/sand4.png'
+import sand5 from '../assets/panel/sandwichpanel/sand5.png'
+import card1 from '../assets/panel/sandwichpanel/card1.png';
+import card2 from '../assets/panel/sandwichpanel/card2.png';
+import card3 from '../assets/panel/sandwichpanel/card3.png';
+import card4 from '../assets/panel/sandwichpanel/card4.png';
+import design from '../assets/panel/sandwichpanel/design.png'
+import design1 from '../assets/panel/sandwichpanel/design1.png'
+import user1 from '../assets/panel/sandwichpanel/user1.png'
+import user2 from '../assets/panel/sandwichpanel/user2.png'
+import user3 from '../assets/panel/sandwichpanel/user3.png'
+import user4 from '../assets/panel/sandwichpanel/user4.png'
+
 
 const PrefabSandwichPanels = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const rangePanels = [
+  const features = [
     {
-      title: "PUF / PIR Panels",
-      img: "/Images/range1.jpg",
-    },
-    {
-      title: "EPS Panels",
-      // desc: "Cost-effective insulated panels offering thermal insulation, installation, and durable performance for industrial and commercial applications.",
-      img: "/Images/range2.jpg",
-    },
-    {
-      title: "Rockwool Panels",
-      img: "/Images/range3.jpg",
-    },
-    {
-      title: "Glasswool Panels",
-      img: "/Images/range4.jpg",
-    },
-  ];
-
-  const techAdvantages = [
-    {
+      icon: <ThermometerSnowflake size={42} strokeWidth={1.7} />,
       title: "Thermal Insulation",
-      desc: "Outstanding thermal efficiency, minimizing heat transfer and significantly reducing energy costs.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
-        </svg>
-      ),
+      description:
+        "Designed to minimize heat transfer and maintain stable indoor temperatures for maximum energy efficiency.",
     },
     {
+      icon: <VolumeX size={42} strokeWidth={1.7} />,
       title: "Acoustic Insulation",
-      desc: "Sound-absorbing properties ensure quiet indoors, ideal for commercial and industrial zones.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-        </svg>
-      ),
+      description:
+        "Provides excellent sound absorption and noise reduction for industrial and commercial environments.",
+      active: true,
     },
     {
+      icon: <Shield size={42} strokeWidth={1.7} />,
       title: "Fire Resistance",
-      desc: "Available with fire-retardant cores that prevent rapid fire spread and enhance safety.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-        </svg>
-      ),
+      description:
+        "Available with fire-resistant core materials for enhanced building safety and compliance.",
     },
     {
+      icon: <Cloud size={42} strokeWidth={1.7} />,
       title: "Lightweight Construction",
-      desc: "Robust yet lightweight, allowing for faster installation and reduced structural load.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-        </svg>
-      ),
+      description:
+        "Easy to transport, handle, and install, reducing structural load and construction time.",
     },
     {
+      icon: <Hammer size={42} strokeWidth={1.7} />,
       title: "Durability",
-      desc: "Resistant to moisture, corrosion, and weather variations, ensuring a long lifespan.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-      ),
+      description:
+        "Resistant to corrosion, moisture, weather conditions, and environmental damage.",
     },
     {
+      icon: <Zap size={42} strokeWidth={1.7} />,
       title: "Energy Efficiency",
-      desc: "Long-term cost savings through reduced reliance on heating and cooling systems.",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <line x1="12" y1="2" x2="12" y2="22"></line>
-          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-        </svg>
-      ),
+      description:
+        "Low thermal conductivity helps reduce cooling and heating costs significantly.",
     },
   ];
 
-  const applications = [
-    {
-      title: "Industrial & Commercial",
-      desc: "Suitable for warehouses, manufacturing units, industrial sheds, office buildings, retail spaces, and commercial infrastructure projects.",
-      img: "/Images/app1.jpg",
-    },
-    {
-      title: "Cold Storage & Clean Room",
-      desc: "Ideal for cold storage units, food processing plants, pharmaceutical facilities, and temperature-controlled clean room environments.",
-      img: "/Images/app2.jpg",
-    },
-    {
-      title: "Prefabricated & Modular",
-      desc: "Used in prefab buildings, portable cabins, modular housing units, worker accommodations, and site office solutions.",
-      img: "/Images/app.jpg",
-    },
-    {
-      title: "Institutional & Infrastructure",
-      desc: "Perfect for hospitals, educational institutions, temporary structures, and modern infrastructure development projects.",
-      img: "/Images/app4.jpg",
-    },
-  ];
 
   const faqs = [
     {
@@ -193,6 +106,60 @@ const PrefabSandwichPanels = () => {
       a: "Yes, sandwich panels can be customized in terms of thickness, length, profile design, and core material to meet specific project guidelines.",
     },
   ];
+  const galleryCards = [
+    {
+      id: 1,
+      image: user1,
+      title: "Industrial & Commercial ",
+      description:
+        "Suitable for warehouses, manufacturing units, industrial sheds, office buildings, retail spaces, and commercial infrastructure projects.",
+    },
+    {
+      id: 2,
+      image: user2,
+      title: "Cold Storage & Clean Room ",
+      description:
+        "Ideal for cold storage units, food processing plants, pharmaceutical facilities, and temperature-controlled clean room environments.",
+    },
+    {
+      id: 3,
+      image: user3,
+      title: "Prefabricated & Modular ",
+      description:
+        "Used in prefab buildings, portable cabins, modular housing units, worker accommodations, and site office solutions.",
+    },
+    {
+      id: 4,
+      image: user4,
+      title: "Institutional & Infrastructure",
+      description:
+        "Perfect for hospitals, educational institutions, temporary structures, and modern infrastructure development projects.",
+    },
+  ];
+
+
+  const industryProjects = [
+    {
+      title: "PUF / PIR Panels",
+      desc: "High-performance insulated panels with excellent thermal efficiency. Ideal for cold storage, clean rooms, and industrial buildings.",
+      img: card1,
+    },
+    {
+      title: "EPS Panels",
+      desc: "Lightweight insulated panels offering reliable thermal insulation and durability. Suitable for commercial, industrial, and prefabricated structures.",
+      img: card2,
+    },
+    {
+      title: "Rockwool Panels",
+      desc: "Fire-resistant insulated panels with superior sound and thermal insulation. Perfect for factories, warehouses, and high-temperature applications.",
+      img: card3,
+    },
+    {
+      title: "Glasswool Panels",
+      desc: "Energy-efficient insulation panels designed for excellent thermal and acoustic performance. Ideal for industrial, commercial, and HVAC applications.",
+      img: card4,
+    },
+  ];
 
   return (
     <div className={styles.wrapper}>
@@ -201,290 +168,356 @@ const PrefabSandwichPanels = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            ADVANCED SANDWICH <br />
-            PANEL SOLUTIONS
+            Advanced Sandwich<br />
+            <span>Panel Solutions
+            </span>
           </h1>
-          <p className={styles.heroSub}>
-            Energy-efficient, insulated panels engineered for superior thermal
-            control, durability, and fire safety. Ideal for cold storage,
-            commercial buildings, and industrial applications.
+          <p className={styles.heroDesc}>
+            Energy-efficient insulated panels engineered for thermal performance, durability, fire resistance,
+            and rapid installation across industrial, commercial, and prefabricated construction projects.
+
+
           </p>
-          <button className={styles.btnHero}>
-            Contact Us &nbsp;<span>→</span>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
 
+
+
+
+
+
       {/* ── WHAT ARE SANDWICH PANELS ── */}
       <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            What Are<br />
+            <span>Sandwich Panels?</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
         <div className={styles.introContainer}>
           <div className={styles.introText}>
-            <h2 className={styles.secTitle}>
-              What Are <br />
-              <span>Sandwich Panels?</span>
-            </h2>
-            <div className={styles.divider} />
             <p>
-              Sandwich panels are modern construction materials made of two
-              robust outer layers and an insulating core material in between.
-              They provide exceptional thermal insulation, soundproofing, and
-              structural strength while remaining incredibly lightweight. They
-              are the go-to solution for energy-efficient walls, roofs, and cold
-              room enclosures.
+              Sandwich panels are advanced composite building materials made with durable outer metal sheets
+              and insulated cores like PUF/PIR, EPS, Rockwool, or Glasswool. They provide excellent thermal
+              insulation, soundproofing, structural strength, moisture resistance, and lightweight performance,
+              making them ideal for industrial, commercial, and prefabricated construction projects.
             </p>
             <p>
-              With a range of core materials such as PUF, EPS, Glass Wool, and
-              Rockwool, these panels cater to diverse requirements. L&amp;R
-              Green India Pvt Ltd delivers precision-engineered panels that
-              reduce construction time, lower operational costs, and offer
-              long-lasting performance across diverse commercial and industrial
-              environments.
+              Widely used in roofing, wall cladding, cold storage facilities, modular buildings, clean rooms,
+              industrial sheds, and warehouses, sandwich panels help reduce energy consumption and improve building
+              efficiency. Their low maintenance, long service life, and versatile applications make them a preferred
+              alternative for fast-track infrastructure development.
             </p>
-            <button className={styles.btnSecondary}>Contact Us &nbsp;→</button>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
-          <div className={styles.introVisuals}>
-            <div
-              className={styles.introImgMain}
-              style={{ backgroundImage: "url('/Images/sandwich1.jpg')" }}
-            />
-            <div
-              className={styles.introImgSub}
-              style={{ backgroundImage: "url('/Images/sandwich2.jpg')" }}
-            />
+          <div className={styles.imageWrapper}>
+
+            {/* Main Image */}
+            <div className={styles.mainImage}>
+              <img src={sand2} alt="Main Building" />
+            </div>
+
+            {/* Small Image */}
+            <div className={styles.smallImage}>
+              <img src={sand1} alt="Interior" />
+            </div>
+
           </div>
         </div>
       </section>
 
+
+
+
       {/* ── EXPLORE OUR RANGE ── */}
-      <section className={styles.rangeSec}>
-        <div className={styles.rangeContainer}>
-          <div className={styles.rangeHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Explore Our Range <br />
+      < section className={styles.productsSec} >
+        <div className={styles.productsInner}>
+          <div className={styles.productsHeader}>
+            <div className={styles.productText}>
+              <h2>
+                Explore Our Range<br />
                 <span>of Sandwich Panels</span>
               </h2>
-              <div className={styles.divider} />
+              <div className={styles.productsDivider}></div>
             </div>
-            <p className={styles.rangeDesc}>
-              High-performance insulated panels for complete energy and thermal
-              control across multiple applications.
+            <p className={styles.productsSubtext}>
+              High-performance insulated panels for durable, energy-efficient, and modern construction applications.
             </p>
           </div>
-          <div className={styles.rangeGrid}>
-            {rangePanels.map((panel, i) => (
-              <div key={i} className={styles.rangeCard}>
-                <div
-                  className={styles.rangeImg}
-                  style={{ backgroundImage: `url('${panel.img}')` }}
-                />
-                <div className={styles.rangeCardTitle}>{panel.title}</div>
-                {panel.desc && (
-                  <div className={styles.rangeCardText}>{panel.desc}</div>
-                )}
+          <div className={styles.expertiseGrid}>
+            {industryProjects.map((item, index) => (
+              <div className={styles.expCard} key={index}>
+                <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                <div className={styles.expLabel}>
+                  <h4>{item.title}</h4>
+
+                  <div className={styles.desc}>
+                    <p>{item.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section >
+
+
+
+
 
       {/* ── TECHNICAL ADVANTAGES ── */}
       <section className={styles.techSec}>
         <div className={styles.techContainer}>
-          <div className={styles.rangeHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Technical Advantages <br />
-                <span>of Sandwich Panels</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.rangeDesc}>
-              L&amp;R Green India Pvt Ltd engineered panels are built to
-              maximize durability, thermal efficiency, and long-term structural
-              value.
-            </p>
+          <div className={styles.techText}>
+            <h2>
+              Technical Advantages <br />
+              <span>of Sandwich Panels</span>
+            </h2>
+            <div className={styles.divider} ></div>
           </div>
-          <div className={styles.techGrid}>
-            {techAdvantages.map((tech, i) => (
-              <div
-                key={i}
-                className={`${styles.techCard} ${
-                  tech.active ? styles.techCardActive : ""
-                }`}
-              >
-                <div className={styles.techIconWrap}>{tech.icon}</div>
-                <h4>{tech.title}</h4>
-                <p>{tech.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── HIGH PERFORMANCE BANNER ── */}
-      <section className={styles.bannerSec}>
-        <div className={styles.bannerWatermark}>SANDWICH PANEL</div>
-        <div className={styles.bannerContainer}>
-          <h2>
-            High-Performance Sandwich <br />
-            Panels For Modern Construction
-          </h2>
-          <p>
-            L&amp;R Green India Pvt Ltd provides state-of-the-art sandwich
-            panels designed to meet the rigorous demands of modern
-            infrastructure. Our panels offer unparalleled thermal performance,
-            energy efficiency, and cost savings. Built with precision and
-            utilizing top-tier materials, our sandwich panels ensure superior
-            structural stability and exceptional insulation for commercial,
-            industrial, and residential projects.
+          <p className={styles.rangeDesc}>
+            L&amp;R Green India Pvt Ltd engineered panels are built to
+            maximize durability, thermal efficiency, and long-term structural
+            value.
           </p>
         </div>
+        <div className={styles.panelFeaturesGrid}>
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className={`${styles.panelFeatureCard} ${item.active ? styles.panelFeatureActive : ""
+                }`}
+            >
+              <span className={styles.panelCardOverlay}></span>
+
+              <div className={styles.panelFeatureIcon}>
+                {item.icon}
+              </div>
+
+              <div className={styles.panelFeatureContent}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* ── APPLICATIONS ── */}
-      <section className={styles.appSec}>
-        <div className={styles.appContainer}>
-          <div className={styles.rangeHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Applications of <br />
-                <span>Sandwich Panels</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.rangeDesc}>
-              Our sandwich panels are suitable for a wide range of modern
-              construction and infrastructure projects.
-            </p>
+
+
+      {/* ── HIGH PERFORMANCE BANNER ── */}
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R  Sandwich Panel</h1>
           </div>
-          <div className={styles.appGrid}>
-            {applications.map((app, i) => (
-              <div key={i} className={styles.appCard}>
-                <div
-                  className={styles.appImg}
-                  style={{ backgroundImage: `url('${app.img}')` }}
-                />
-                <div className={styles.appCardTitle}>{app.title}</div>
-                <div className={styles.appCardText}>{app.desc}</div>
-              </div>
-            ))}
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              High-Performance Sandwich<br />
+              Panels For Modern Construction
+            </h2>
+            <p>
+              L&R Green Private Limited provides advanced sandwich panel solutions engineered
+              for superior thermal insulation, structural durability, acoustic performance, energy efficiency,
+              and fast installation. Our insulated panels are ideal for warehouses, cold storage units, clean rooms,
+              prefab buildings, modular structures, industrial facilities, and commercial infrastructure projects.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
           </div>
         </div>
       </section>
+
+
+
+
+
+      {/* ── APPLICATIONS ── */}
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              What’s Inside a <br />
+              <span>Rooftop Servant Room</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p >
+            A rooftop servant room is thoughtfully designed to provide all essential living comforts
+            within a compact and efficient layout. It ensures a balance of privacy, functionality,
+            and modern comfort for domestic staff.
+          </p>
+        </div>
+
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
+                />
+              </div>
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
       {/* ── WHY CHOOSE ── */}
       <section className={styles.whySec}>
         <div className={styles.whyContainer}>
-          <h2 className={styles.secTitle}>
+          <h2>
             Why Choose Sandwich <br />
             <span>Panels Section</span>
           </h2>
-          <div className={styles.divider} />
-          <div className={styles.whyGrid}>
-            <div className={styles.whyVisuals}>
-              <div
-                className={styles.whyImgMain}
-                style={{ backgroundImage: "url('/Images/sandwichpanel1.jpg')" }}
-              />
-              <div
-                className={styles.whyImgSub}
-                style={{
-                  backgroundImage: "url('/Images/sandwichpannel2.jpg')",
-                }}
-              />
+          <div className={styles.divider} ></div>
+        </div>
+        <div className={styles.whyGrid}>
+          <div className={styles.galleryWrap}>
+
+            {/* Main Image */}
+            <div className={styles.primaryFrame}>
+              <img src={sand4} alt="Main Building" />
             </div>
-            <div className={styles.whyText}>
-              <p>
-                Sandwich panels are engineered with a high-quality insulated
-                core bonded between durable metal facings, delivering
-                exceptional structural strength, thermal insulation, acoustic
-                performance, and long-term durability. Their advanced
-                construction helps maintain stable indoor temperatures while
-                reducing heat transfer, making them highly energy- efficient for
-                modern industrial, commercial, and prefabricated buildings.
-              </p>
-              <p>
-                Designed for fast and efficient installation, sandwich panels
-                offer lightweight handling, moisture and corrosion resistance,
-                low maintenance requirements, and extended service life. Their
-                durable yet lightweight structure makes them a cost-effective
-                and reliable alternative to traditional construction materials
-                for infrastructure and modular construction projects.
-              </p>
+
+            {/* Floating Image */}
+            <div className={styles.secondaryFrame}>
+              <img src={sand5} alt="Interior View" />
             </div>
+
+          </div>
+          <div className={styles.whyText}>
+            <p>
+              Sandwich panels are engineered with a high-quality insulated
+              core bonded between durable metal facings, delivering
+              exceptional structural strength, thermal insulation, acoustic
+              performance, and long-term durability. Their advanced
+              construction helps maintain stable indoor temperatures while
+              reducing heat transfer, making them highly energy- efficient for
+              modern industrial, commercial, and prefabricated buildings.
+            </p>
+            <p>
+              Designed for fast and efficient installation, sandwich panels
+              offer lightweight handling, moisture and corrosion resistance,
+              low maintenance requirements, and extended service life. Their
+              durable yet lightweight structure makes them a cost-effective
+              and reliable alternative to traditional construction materials
+              for infrastructure and modular construction projects.
+            </p>
           </div>
         </div>
       </section>
 
       {/* ── FAQ ── */}
+
+
+
       <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <div className={styles.rangeHeaderRow}>
-            <div>
-              <div className={styles.faqBreadcrumb}>• FQS</div>
-              <h2 className={styles.secTitle}>
-                Frequently Asked <br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.rangeDesc}>
-              Find answers to common questions about sandwich panels, insulation
-              performance, applications, installation, and building solutions.
-            </p>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqContent}>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqItemActive : ""
-                  }`}
-                >
-                  <div
-                    className={styles.faqHeader}
-                    onClick={() =>
-                      setOpenFaq(openFaq === faq.id ? null : faq.id)
-                    }
-                  >
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqBody}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className={styles.faqImgOuter}>
+          <p>Prefabricated rooftop servant rooms are compact, safe living units built on existing
+            buildings for domestic staff. Below are common FAQs about their features and benefits.</p>
+        </div>
+        <div className={styles.faqBody}>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
               <div
-                className={styles.faqImg}
-                style={{ backgroundImage: "url('/Images/feq4.jpg')" }}
-              />
-            </div>
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
+                </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.faqImg}>
+            <img src={sand3} alt="warehouse" />
           </div>
         </div>
       </section>
 
+
+
       {/* ── CTA BANNER ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Build Smarter With High-Performance Sandwich Panels</h2>
-          <p>
-            Partner with L&amp;R Green India Pvt Ltd for premium quality
-            insulated sandwich panels customized for your commercial, and
-            industrial infrastructure projects.
-          </p>
-          <button className={styles.btnCTA}>Contact Us &nbsp;→</button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Build Smarter With High-Performance Sandwich Panels</h2>
+        <p>
+          L&R Green Private Limited provides durable, energy-efficient, and cost-effective sandwich panel
+          solutions for industrial, commercial, and prefabricated construction projects across India.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />

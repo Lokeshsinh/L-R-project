@@ -781,6 +781,7 @@
   }
 
 }
+
 @media (max-width:576px) {
 
   .SolarEpic {
@@ -815,6 +816,7 @@
   }
 
 }
+
 @media (max-width:480px) {
 
   .SolarEpic {
@@ -1659,6 +1661,12 @@
 /* ===========================
    WHY CHOOSE SECTION (SECTION 6)
 =========================== */
+/* .advSec {
+  width: 100%;
+  padding: 71px 60px;
+  background-color: #f7f7f753;
+} */
+
 .advSec {
   width: 100%;
   padding: 71px 60px;
@@ -2305,6 +2313,7 @@
   line-height: 1.6;
   max-width: 739px;
 }
+
 /* ===========================
    CTA BANNER
 =========================== */

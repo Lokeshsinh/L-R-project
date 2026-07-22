@@ -2,62 +2,63 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/FarmhouseCottage.module.css";
-
+import {
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X,
+} from "lucide-react";
+import farm1 from '../assets/LGFS/FramHouse/farm1.png'
+import farm2 from '../assets/LGFS/FramHouse/farm2.png'
+import farm3 from '../assets/LGFS/FramHouse/farm3.png'
+import farm4 from '../assets/LGFS/FramHouse/farm4.png'
+import farm5 from '../assets/LGFS/FramHouse/farm5.png'
+import { useNavigate } from 'react-router-dom'
+import user1 from '../assets/LGFS/FramHouse/user1.png'
+import user2 from '../assets/LGFS/FramHouse/user2.png'
+import user3 from '../assets/LGFS/FramHouse/user3.png'
+import user4 from '../assets/LGFS/FramHouse/user4.png'
+import design from '../assets/LGFS/FramHouse/design.png'
+import design1 from '../assets/LGFS/FramHouse/design1.png'
 const FarmhouseCottage = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const structuralFeatures = [
+
+  const galleryCards = [
     {
-      title: "LGSF Steel Framing",
-      desc: "Lightweight yet high-strength steel framework for durable long-lasting structures.",
-      img: "/Images/farm1.jpg",
+      id: 1,
+      image: user1,
+      title: "Engineered Steel Framework",
+      description:
+        "Built with high-strength galvanized steel, the framework ensures strong load capacity, corrosion resistance, and long-lasting stability in all conditions.",
     },
     {
-      title: "Insulated Wall Panels",
-      desc: "PUF/EPS core sandwich panels providing superior thermal and acoustic comfort.",
-      img: "/Images/farm2.jpg",
+      id: 2,
+      image: user2,
+      title: "Insulated Wall & Roof Panels",
+      description:
+        "PUF insulated panels for walls and roofing ensure thermal balance, reduce heat transfer, and maintain comfortable indoor temperatures all year.",
     },
     {
-      title: "Sloped Roofing Systems",
-      desc: "Elegant sloped roofs with weatherproof coatings ideal for farmhouse aesthetics.",
-      img: "/Images/farm3.jpg",
+      id: 3,
+      image: user3,
+      title: "Roofing Systems",
+      description:
+        "We offer roofing solutions like insulated metal sheets, shingles, and custom designs, ensuring durability, weather resistance, and aesthetic appeal.",
     },
     {
-      title: "Wooden Finish Cladding",
-      desc: "External cladding options that replicate natural wood or stone for rustic charm.",
-      img: "/Images/farm4.jpg",
+      id: 4,
+      image: user4,
+      title: "Flooring Solutions",
+      description:
+        "Flexible flooring options are available based on usage and design preference, ensuring durability, easy maintenance, and elegant interior finish.",
     },
   ];
 
-  const applications = [
-    {
-      title: "Weekend Farmhouses",
-      desc: "Serene getaway homes built rapidly on agricultural land with natural aesthetics.",
-    },
-    {
-      title: "Holiday Cottages",
-      desc: "Vacation cottages at hill stations, forests, and coastal areas with premium comfort.",
-    },
-    {
-      title: "Resort Accommodation",
-      desc: "Prefab cottage units for eco-resorts, wildlife lodges, and glamping destinations.",
-    },
-    {
-      title: "Rural Homestays",
-      desc: "Comfortable and attractive homestay units for agritourism and rural hospitality.",
-    },
-    {
-      title: "Guest Houses",
-      desc: "Additional guest accommodation on farmland properties with full amenities.",
-    },
-    {
-      title: "Eco-Retreat Centers",
-      desc: "Sustainable living spaces for yoga retreats, wellness centers, and nature camps.",
-    },
-  ];
 
   const faqs = [
     {
@@ -90,343 +91,370 @@ const FarmhouseCottage = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
-      <section
-        className={styles.heroSec}
-        style={{
-          backgroundImage: "url('/Images/farmhouse.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className={styles.heroOverlay} />
+
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            MODERN PREFAB <br />
-            <span>FARMHOUSES &amp; COTTAGES</span>
+            Modern Prefab<br />
+            <span>Farmhouses & Cottages
+            </span>
           </h1>
-          <p className={styles.subtitle}>
-            Beautifully designed, rapidly built prefabricated farmhouses and
-            cottages — combining natural aesthetics with the speed and quality
-            of modern construction technology.
-          </p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <p className={styles.heroDesc}>
+            We build modern LGSF farmhouses that deliver fast construction, high
+            durability, and superior comfort—ideal for weekend retreats, agricultural
+            homes, and luxury countryside living.</p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
 
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}>
+
+      {/* ----------intro---------------- */}
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Prefabricated Cottages<br />
+            <span>& Farm Houses</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.introText}>
+            <p>
+              At L&R Enterprises, we specialize in designing and manufacturing high-quality prefabricated cottages and
+              farm houses that blend modern aesthetics with strong structural durability and advanced rapid construction
+              techniques. Our modular living solutions are crafted to deliver maximum comfort, practical functionality,
+              and refined architectural elegance while significantly reducing overall construction time and project costs.
+            </p>
+            <p>
+              With the growing demand for weekend homes, eco-friendly retreats, farmhouse developments, and resort-style
+              accommodations, prefabricated cottages have become a smart and efficient alternative to conventional construction
+              methods. Our solutions provide excellent thermal insulation, flexible design options, and long-lasting performance,
+              making them suitable for both personal living spaces and commercial hospitality projects.
+            </p>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
+          </div>
+          <div className={styles.prefabImageContainer}>
+            <div className={styles.prefabImageFrame}>
+              <img
+                src={farm1}
+                alt="Prefab Cabin"
+                className={styles.prefabImage}
+              />
+            </div>
+            <div className={styles.prefabAccent}></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* -------------image cards -------------- */}
+
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              Structural Features of<br />
+              <span>Prefab farmhouse & Cottage</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p >
+            Our prefabricated cottages and farm houses use high-quality materials and modern
+            systems to ensure strength, durability, comfort, and energy efficiency with a premium finish.
+          </p>
+        </div>
+
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
                 <img
-                  src="/Images/farmhouse1.jpg"
-                  alt="Prefab Farmhouse"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                  }}
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
                 />
               </div>
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/farmhouse2.jpg"
-                  alt="Prefab Cottage"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                  }}
-                />
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* -------------Applications of Prefabricated----------------- */}
+
+      <section className={styles.FarmHouse}>
+        <div className={styles.farmHouseTitle}>
+          <h2> Applications of Prefabricated<br /><span>Cottages & Farm Houses</span></h2>
+          <div className={styles.farmLine}></div>
+        </div>
+        <div className={styles.farmFlex}>
+          <div className={styles.cabinPreviewContainer}>
+            <div className={styles.cabinPreviewFrame}>
+              <img
+                src={farm5}
+                alt="Prefab Cabin"
+                className={styles.cabinPreviewImage}
+              />
+            </div>
+            {/* Bottom Right Accent */}
+            <div className={styles.cabinAccentBlock}></div>
+          </div>
+          {/*  */}
+          <div className={styles.farmText}>
+            <p>Prefabricated cottages and farm houses are versatile modular
+              structures designed for multiple residential and commercial
+              uses. They provide quick, efficient, and comfortable living
+              solutions across different environments.</p>
+            <ul>
+              <li><strong>Farm houses</strong></li>
+              <li><strong>Resort accommodations</strong></li>
+              <li><strong>Weekend homes</strong></li>
+              <li><strong>Eco-tourism projects</strong></li>
+              <li><strong>Staff housing</strong></li>
+              <li><strong>Guest houses</strong></li>
+              <li><strong>Rural development housing</strong></li>
+              <li><strong>Holiday villas</strong></li>
+
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      {/* -------------Energy Efficiency-------------------- */}
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R  LGSF Modern LGSF Farmhouses & Cottages  </h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Energy Efficiency, Sustainability<br />
+              & Customization Options
+            </h2>
+            <p>
+              Our cottages are designed for sustainability and flexibility, featuring PUF insulation,
+              recyclable steel structures, minimal waste construction, and solar-ready roofing systems,
+              along with fully customizable layouts, roofing styles, interior designs, and utility
+              integrations to match every lifestyle need. This ensures eco-friendly performance with
+              complete design freedom for every project.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------------------- */}
+
+
+
+
+
+      {/* ── SECTION 5: farmhouse ── */}
+      <section className={styles.advSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Advantages of Prefabricated<br />
+            <span>Farm Houses</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
+        <div className={styles.advFlex}>
+          <div className={styles.advContainer}>
+            <div className={styles.advText}>
+              <p>
+                Prefabricated farm houses provide fast, efficient, and sustainable living
+                solutions with strong structural performance and modern design flexibility.
+              </p>
+              <div className={styles.featureListWrap}>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Rapid construction (weeks instead of months)</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Energy-efficient insulation</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Cost-effective compared to RCC buildings</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Fully customizable layouts</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Earthquake-resistant structure</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Eco-friendly construction approach</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Prefabricated Cottages <br />
-              <span>&amp; Farm Houses</span>
-            </h2>
-            <div className={styles.divider} />
-            <p
-              style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}
-            >
-              L&amp;R Green India Pvt Ltd brings your dream farmhouse or
-              countryside cottage to life with factory-precision prefabrication
-              technology, delivering structures that are strong, beautiful, and
-              sustainable.
-            </p>
-            <p>
-              Our prefab farmhouses and cottages are designed with sloped roofs,
-              natural finish cladding, large windows, and premium interiors —
-              built to blend seamlessly into their natural surroundings while
-              providing all modern comforts.
-            </p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
-              Read more &nbsp;→
-            </button>
+          <div className={styles.cabinShowcaseContainer}>
+            <div className={styles.cabinShowcaseFrame}>
+              <img
+                src={farm2}
+                alt="Prefab Cabin"
+                className={styles.cabinShowcaseImage}
+              />
+            </div>
+            <div className={styles.cabinBottomAccent}></div>
           </div>
         </div>
       </section>
 
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>
-              Structural Features of <br />
-              <span>Prefab Farmhouse &amp; Cottage</span>
-            </h2>
-            <div className={styles.divider} />
+
+
+      {/* -------------why farm house ----------------------------- */}
+
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Why Choose Prefab<br /><span>Farm Houses & Cottages</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          {/*  */}
+          <div className={styles.prefabDisplayContainer}>
+            <div className={styles.prefabDisplayFrame}>
+              <img
+                src={farm3}
+                alt="Prefab Cabin"
+                className={styles.prefabDisplayImage}
+              />
+            </div>
+            <div className={styles.prefabCornerAccent}></div>
+
           </div>
-          <div className={styles.cardGrid}>
-            {structuralFeatures.map((card, idx) => (
-              <div key={idx} className={styles.strengthCard}>
-                <div className={styles.cardImageWrap}>
-                  <img
-                    className={styles.cardImage}
-                    src={card.img}
-                    alt={card.title}
-                  />
+          <div className={styles.solartext}>
+            <p>At L&R Enterprises, we bring strong expertise in modular and PEB construction,
+              ensuring every project is executed with precision, durability, and modern engineering
+              standards. We use only high-quality materials and follow strict engineering practices
+              to deliver reliable and long-lasting structures.</p>
+            <p>We also provide complete end-to-end turnkey solutions with a strong commitment to
+              on-time delivery and pan-India project execution. Every project we complete reflects
+              architectural excellence, quality craftsmanship, and customer satisfaction.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------faqs--------------------------------------- */}
+
+      <section className={styles.faqSec}>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p>Prefabricated rooftop servant rooms are compact, safe living units built on existing
+            buildings for domestic staff. Below are common FAQs about their features and benefits.</p>
+        </div>
+        <div className={styles.faqBody}>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-                <div className={styles.cardContent}>
-                  <h3>{card.title}</h3>
-                  <p>{card.desc}</p>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Applications of Prefabricated <br />
-              <span>Cottages &amp; Farm Houses</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              Our prefab farmhouses and cottages are versatile enough for a wide
-              range of residential, hospitality, and agritourism applications
-              across diverse terrains.
-            </p>
-            <div className={styles.appsGrid}>
-              {applications.map((app, i) => (
-                <div key={i} className={styles.appCard}>
-                  <strong>{app.title}</strong>
-                  <p>{app.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div
-            className={styles.imgCol}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            <img
-              src="/Images/farmapplication.jpg"
-              alt="Farmhouse Applications"
-              style={{
-                width: "100%",
-                maxWidth: "500px",
-                height: "auto",
-                objectFit: "cover",
-                borderRadius: "14px",
-              }}
-            />
+          <div className={styles.faqImg}>
+            <img src={farm4} alt="warehouse" />
           </div>
         </div>
       </section>
 
-      <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>FARMHOUSE</div>
-        <div className={styles.blueBannerContainer}>
-          <div className={styles.blueBannerText}>
-            <h2>
-              Energy Efficiency, Sustainability <br />
-              <strong>&amp; Customization Options</strong>
-            </h2>
-            <div
-              className={styles.divider}
-              style={{ background: "#ffffff", marginBottom: "30px" }}
-            />
-            <p>
-              Our prefabricated farmhouses use PUF insulated panels that
-              dramatically reduce energy consumption for heating and cooling.
-              The eco-friendly construction process minimizes site waste, and
-              all materials are sustainably sourced. Choose from a wide range of
-              exterior finishes, interior layouts, roof styles, and add-on
-              features to create your perfect countryside retreat.
-            </p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img
-              src="/Images/farmenergy.jpg"
-              alt="Energy Efficient Farmhouse"
-              style={{
-                width: "100%",
-                maxWidth: "480px",
-                height: "auto",
-                objectFit: "cover",
-                borderRadius: "14px",
-              }}
-            />
-          </div>
-        </div>
-      </section>
 
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/whyfarm1.jpg"
-                  alt="Why Choose prefab farmhouse"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                  }}
-                />
-              </div>
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/whyfarm2.jpg"
-                  alt="Farmhouse interior"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Advantages of Prefabricated <br />
-              <span>Farm Houses</span>
-            </h2>
-            <div className={styles.divider} />
-            <div className={styles.bulletList} style={{ marginTop: "30px" }}>
-              {[
-                "3–8x faster construction than conventional methods",
-                "20–40% cost savings over traditional builds",
-                "Fully customizable floor plans and facades",
-                "Superior thermal insulation for year-round comfort",
-                "Earthquake and wind resistant steel frame structure",
-                "Low maintenance and long service life (30+ years)",
-              ].map((item, i) => (
-                <div key={i} className={styles.bulletItem}>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    style={{ flexShrink: 0 }}
-                  >
-                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                    <path
-                      d="M8 12.5L10.5 15L16 9"
-                      stroke="white"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span className={styles.bulletLabel}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* -----------------cta ---------------- */}
+      <section className={styles.cta}>
+        <h2>Ready for Your Prefab Farm Houses & CottagesSolutions?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized insulated  PrefabFarm Houses & Cottages solutions tailored to your site needs..
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
 
-      <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
-          <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
-              <h2 className={styles.secTitle}>
-                Frequently Asked <br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqDesc}>
-              Common questions about our prefab farmhouses and cottages —
-              construction, customization, and more.
-            </p>
-          </div>
-          <div className={styles.faqContent}>
-            <div
-              className={styles.faqImgOuter}
-              style={{
-                width: "100%",
-                height: "480px",
-                overflow: "hidden",
-                borderRadius: "12px",
-              }}
-            >
-              <img
-                src="/Images/faqfarm.jpg"
-                alt="FAQ farmhouse"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
-                >
-                  <div
-                    className={styles.faqHeader}
-                    onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}
-                  >
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqBody}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className={styles.ctaBanner}
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/Images/ctafarm.jpg')",
-        }}
-      >
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your Prefab Farm Houses &amp; Cottages Solutions?</h2>
-          <p>
-            Connect with our team to design and deliver durable, beautiful, and
-            fully customized prefab farmhouse and cottage solutions.
-          </p>
-          <button className={styles.btnSecondary}>Contact US &nbsp;→</button>
-        </div>
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />

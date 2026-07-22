@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopServantRooms.module.css";
 import {
-  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X,
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X, 
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import servent1 from '../assets/rooftop/servent/servent1.png'
@@ -28,6 +28,9 @@ const RooftopServantRooms = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+
+
 
   const faqs = [
     {
@@ -423,8 +426,8 @@ const RooftopServantRooms = () => {
       <section className={styles.cta}>
         <h2>Ready for Your Prefab Servant Room Solutions?</h2>
         <p>
-         Connect with our team to design and deliver durable, efficient, and fully customized insulated  
-         Prefab Servant Room solutions tailored to your site needs.
+          Connect with our team to design and deliver durable, efficient, and fully customized insulated
+          Prefab Servant Room solutions tailored to your site needs.
         </p>
         <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
           <span className={styles.contactText}>Contact Us</span>

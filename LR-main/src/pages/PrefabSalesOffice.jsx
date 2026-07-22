@@ -2,34 +2,64 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabSalesOffice.module.css";
+import {
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X, Zap,
+  Sparkles,
+  Armchair,
+  Expand,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import site1 from '../assets/LGFS/prefabsite/site1.png'
+import site2 from '../assets/LGFS/prefabsite/site2.png'
+import site3 from '../assets/LGFS/prefabsite/site3.png'
+import site4 from '../assets/LGFS/prefabsite/site4.png'
+import user1 from '../assets/LGFS/prefabsite/user1.png'
+import user2 from '../assets/LGFS/prefabsite/user2.png'
+import user3 from '../assets/LGFS/prefabsite/user3.png'
+import user4 from '../assets/LGFS/prefabsite/user4.png'
+import design from '../assets/LGFS/prefabsite/design.png'
+import design1 from '../assets/LGFS/prefabsite/design1.png'
 
 const PrefabSalesOffice = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const applications = [
+
+  const galleryCards = [
     {
+      id: 1,
+      image: user1,
       title: "Project Sales Offices",
-      desc: "Used by real estate developers as on-site offices to present projects, handle client meetings, and support marketing activities in a professional setup.",
-      img: "/Images/salestype1.jpg",
+      description:
+        "Used by real estate developers as on-site offices to present projects, handle client meetings, and support marketing activities in a professional setup.",
     },
     {
+      id: 2,
+      image: user2,
       title: "Construction Site Offices",
-      desc: "Provides quick-to-install workspace for engineers and project teams, ensuring smooth site management and supervision at construction locations.",
-      img: "/Images/salestype2.jpg",
+      description:
+        "Provides quick-to-install workspace for engineers and project teams, ensuring smooth site management and supervision at construction locations.",
     },
     {
+      id: 3,
+      image: user3,
       title: "Event & Exhibition Units",
-      desc: "Ideal for exhibitions, trade fairs, and promotional setups, offering fast installation with flexible layouts and branding options.",
-      img: "/Images/salestype3.jpg",
+      description:
+        "Ideal for exhibitions, trade fairs, and promotional setups, offering fast installation with flexible layouts and branding options.",
     },
     {
+      id: 4,
+      image: user4,
       title: "Mobile & Retail Units",
-      desc: "Used for temporary corporate spaces, kiosks, and small retail outlets with easy relocation and minimal setup time.",
-      img: "/Images/salestype4.jpg",
+      description:
+        "Used for temporary corporate spaces, kiosks, and small retail outlets with easy relocation and minimal setup time.",
     },
   ];
 
@@ -61,539 +91,398 @@ const PrefabSalesOffice = () => {
     },
   ];
 
+
+  const processCards = [
+    {
+      icon: <Zap size={42} strokeWidth={1.7} />,
+      title: "Requirement Analysis",
+      description:
+        "Understanding client needs, space planning, and site conditions to define project scope and functionality.",
+    },
+    {
+      icon: <Sparkles size={42} strokeWidth={1.7} />,
+      title: "Structural Engineering",
+      description:
+        "Designing safe and efficient steel frameworks that ensure strength, stability, and compliance with standards.",
+      active: true,
+    },
+    {
+      icon: <Armchair size={42} strokeWidth={1.7} />,
+      title: "On-Site Installation",
+      description:
+        "Quick assembly of prefabricated modules, panels, and finishes at the project location for fast execution.",
+    },
+    {
+      icon: <Expand size={42} strokeWidth={1.7} />,
+      title: "Final Handover",
+      description:
+        "Quality inspection, finishing works, and delivery of a fully ready-to-use LGSF office space.",
+    },
+  ];
   return (
     <div className={styles.wrapper}>
       <Header />
 
       {/* ── HERO ── */}
-      <section
-        className={styles.heroSec}
-        style={{
-          backgroundColor: "black",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            MODERN LGSF PREFABRICATED
-            <br /> SALES OFFICES
+            Modern LGSF Prefabricated  <br />
+            <span>Sales Offices
+            </span>
           </h1>
-          <p className={styles.subtitle}>
-            Fast, durable, and sustainable workspace solutions for commercial
-            projects. Built using <br />
-            Light Gauge Steel Framing technology for rapid deployment and
-            premium aesthetics.
+          <p className={styles.heroDesc}>
+            Fast, durable, and sustainable workspace solutions for commercial projects.
+            Built using Light Gauge Steel Framing technology for rapid deployment and premium aesthetics.
+
+
           </p>
-          <button className={styles.btnPrimary}>
-            Contact us &nbsp;
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
 
+
+
+
+
+
+
       {/* ── INTRO ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              LGSF Prefabricated <br />
-              <span>Sales Offices</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              LGSF (Light Gauge Steel Frame) prefabricated sales offices are
-              modern, rapidly assembled commercial spaces designed using
-              lightweight yet high-strength steel sections. These structures are
-              ideal for both temporary and permanent use, offering faster
-              construction, better durability, and high design flexibility
-              compared to conventional building methods. This enables modern,
-              scalable and efficient workspace solutions tailored for
-              fast-growing commercial needs.
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            LGSF Prefabricated<br />
+            <span>Sales Offices</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.introText}>
+            <p>
+              LGSF (Light Gauge Steel Frame) prefabricated sales offices are modern, rapidly assembled commercial
+              spaces designed using lightweight yet high-strength steel sections. These structures are ideal for
+              both temporary and permanent use, offering faster construction, better durability, and high design
+              flexibility compared to conventional building methods. This enables modern, scalable and efficient
+              workspace solutions tailored for fast-growing commercial needs.
             </p>
             <p>
-              On average, LGSF construction is significantly faster than
-              traditional methods, making it highly suitable for real estate
-              developers, exhibitions, and on-site project offices. This
-              significantly improves project timelines and overall operational
-              efficiency, ensuring quicker project delivery and improved
-              workflow efficiency.
+              On average, LGSF construction is significantly faster than traditional methods, making it highly
+              suitable for real estate developers, exhibitions, and on-site project offices. This significantly
+              improves project timelines and overall operational efficiency, ensuring quicker project delivery and
+              improved workflow efficiency.
             </p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
-              Get Contact &nbsp;
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
             </button>
           </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/sales1.jpg"
-                  alt="LGSF Prefab Sales Office exterior"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
+          <div className={styles.interiorCard}>
+            <div className={styles.leftAccent}></div>
+
+            <div className={styles.imageBox}>
+              <img
+                src={site2}
+                alt="Interior"
+                className={styles.cardImage}
+              />
             </div>
+
           </div>
         </div>
       </section>
 
+
+
       {/* ── APPLICATIONS ── */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.containerMax}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-end",
-              flexWrap: "wrap",
-              gap: "24px",
-              marginBottom: "20px",
-            }}
-          >
-            <div>
-              <h2 className={styles.secTitle}>
-                Applications of LGSF <br />
-                <span>Prefab Office Structures</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p
-              style={{
-                maxWidth: "480px",
-                color: "#64748b",
-                fontSize: "15px",
-                lineHeight: "1.7",
-              }}
-            >
-              LGSF office structures are versatile and widely used in modern
-              construction and commercial environments. Their modular design
-              allows them to be adapted quickly for different functional
-              requirements.
-            </p>
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              Applications of LGSF<br />
+              <span>Prefab Office Structures</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.cardGrid}>
-            {applications.map((card, idx) => (
-              <div key={idx} className={styles.strengthCard}>
-                <div className={styles.cardImageWrap}>
-                  <img
-                    className={styles.cardImage}
-                    src={card.img}
-                    alt={card.title}
-                  />
+          <p >
+            LGSF office structures are versatile and widely used in modern construction
+            and commercial environments. Their modular design allows them to be adapted
+            quickly for different functional requirements.
+          </p>
+        </div>
+
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
+                />
+              </div>
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+
+
+      {/* --------prefab office site ----------------- */}
+      <section className={styles.advSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Advantages of LGSF<br />
+            <span>Prefab Office Structures</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
+        <div className={styles.advFlex}>
+          <div className={styles.interiorImageWrapper}>
+            <div className={styles.interiorSideStrip}></div>
+            <div className={styles.interiorImageContainer}>
+              <img
+                src={site3}
+                alt="Interior"
+                className={styles.interiorImage}
+              />
+            </div>
+          </div>
+          <div className={styles.advContainer}>
+            <div className={styles.advText}>
+              <p>
+                LGSF homes offer unmatched speed, strength, and sustainability, making them a
+                future-ready construction solution. Their lightweight yet durable structure
+                ensures faster construction, reduced costs, and long-term performance with minimal maintenance.
+              </p>
+              <div className={styles.featureListWrap}>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Rapid Deployment</p>
                 </div>
-                <div className={styles.cardContent}>
-                  <h3>{card.title}</h3>
-                  <p>{card.desc}</p>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Professional Aesthetics</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Design Flexibility</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Durability & Safety</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Sustainable & Modular Benefits</p>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── ADVANTAGES ── */}
-      <section className={styles.splitSec} style={{ background: "#ffffff" }}>
-        <div className={styles.containerMax}>
-          <h2 className={styles.secTitle}>
-            Advantages of LGSF <br />
-            <span>Prefab Office Structures</span>
-          </h2>
-          <div className={styles.divider} />
-          <div className={styles.splitContainer} style={{ marginTop: "40px" }}>
-            <div className={styles.imgCol}>
-              <div
-                style={{
-                  width: "100%",
-                  height: "380px",
-                  borderRadius: "14px",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src="/Images/sales2.png"
-                  alt="Advantages of LGSF Sales Office"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-              </div>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R LGSF Prefabricated Sales Offices  </h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Manufacturing &<br />
+              Service Providers
+            </h2>
+            <p>
+              LGSF sales office systems are delivered by specialized prefabrication companies
+              that manage the entire lifecycle of the project, including structural design and
+              engineering, factory fabrication of steel frames, paneling and interior finishing,
+              on-site assembly and installation, and complete turnkey project delivery to ensure
+              high-quality execution and ready-to-use office spaces.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
             </div>
-            <div className={styles.textCol}>
-              <p style={{ marginBottom: "28px" }}>
-                LGSF homes offer unmatched speed, strength, and sustainability,
-                making them a future-ready construction solution. Their
-                lightweight yet durable structure ensures faster construction,
-                reduced costs, and long-term performance with minimal
-                maintenance.
-              </p>
-              <div className={styles.bulletList}>
-                {[
-                  "Rapid Deployment",
-                  "Professional Aesthetics",
-                  "Design Flexibility",
-                  "Durability & Safety",
-                  "Sustainable & Modular Benefits",
-                ].map((item, i) => (
-                  <div key={i} className={styles.bulletItem}>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      style={{ flexShrink: 0 }}
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        fill="none"
-                        stroke="#233a5e"
-                        strokeWidth="2"
-                      />
-                      <circle cx="12" cy="12" r="4" fill="#233a5e" />
-                    </svg>
-                    <span className={styles.bulletLabel}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          </div>
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
           </div>
         </div>
       </section>
 
-      {/* ── MANUFACTURING & SERVICE PROVIDERS ── */}
-      <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>L &amp; R LGSF PREFABRICATED</div>
-        <div className={styles.blueBannerContainer}>
-          <div className={styles.blueBannerText}>
-            <h2>
-              Manufacturing &amp; <br />
-              <strong>Service Providers</strong>
-            </h2>
-            <div
-              className={styles.divider}
-              style={{ background: "#ffffff", marginBottom: "30px" }}
-            />
-            <p>
-              LGSF sales office systems are delivered by specialized
-              prefabrication companies that manage the entire lifecycle of the
-              project, including structural design and engineering, factory
-              fabrication of steel frames, paneling and interior finishing,
-              on-site assembly and installation, and complete turnkey project
-              delivery to ensure high-quality execution and ready-to-use office
-              spaces.
-            </p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img
-              src="/Images/salesblue.png"
-              alt="Manufacturing & Service Providers"
-              style={{
-                width: "100%",
-                maxWidth: "500px",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "14px",
-                display: "block",
-              }}
-            />
-          </div>
-        </div>
-      </section>
+
 
       {/* ── DESIGN & PROJECT WORKFLOW ── */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.containerMax}>
-          <div className={styles.workflowHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Design &amp; Project <br />
-                <span>Workflow</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.workflowDesc}>
-              The LGSF design and execution process follows a structured
-              workflow that ensures precision, quality, and fast project
-              delivery from concept to completion.
-            </p>
+      <section className={styles.sieWorkFlow}>
+        <div className={styles.siteWorkFlex}>
+          <div className={styles.siteWorkTitle}>
+            <h2>Design & Project <br /><span>Workflow</span></h2>
+            <div className={styles.siteLine}></div>
           </div>
-          <div className={styles.workflowCardGrid}>
-            {[
-              {
-                icon: (
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                  </svg>
-                ),
-                label: "Requirement Analysis",
-                desc: "Understanding client needs, space planning, and site conditions to define project scope and functionality.",
-                active: false,
-              },
-              {
-                icon: (
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z" />
-                  </svg>
-                ),
-                label: "Structural Engineering",
-                desc: "Designing safe and efficient steel frameworks that ensure strength, stability, and compliance with standards.",
-                active: true,
-              },
-              {
-                icon: (
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20 9V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2" />
-                    <path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v0a2 2 0 0 1-4 0v0a2 2 0 0 1-4 0v0a2 2 0 0 0-4 0z" />
-                  </svg>
-                ),
-                label: "On-Site Installation",
-                desc: "Quick assembly of prefabricated modules, panels, and finishes at the project location for fast execution.",
-                active: false,
-              },
-              {
-                icon: (
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="15 3 21 3 21 9" />
-                    <polyline points="9 21 3 21 3 15" />
-                    <line x1="21" y1="3" x2="14" y2="10" />
-                    <line x1="3" y1="21" x2="10" y2="14" />
-                  </svg>
-                ),
-                label: "Final Handover",
-                desc: "Quality inspection, finishing works, and delivery of a fully ready-to-use LGSF office space.",
-                active: false,
-              },
-            ].map((card, i) => (
+          <p>The LGSF design and execution process follows a structured workflow that
+            ensures precision, quality, and fast project delivery from concept to completion.</p>
+        </div>
+        <div className={styles.processCardsGrid}>
+          {processCards.map((card, index) => (
+            <div
+              key={index}
+              className={`${styles.processItemCard} ${card.active ? styles.processCardActive : ""
+                }`}
+            >
+              <span className={styles.processHoverBackground}></span>
+              <div className={styles.processIconWrapper}>
+                {card.icon}
+              </div>
+              <div className={styles.processTextContent}>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
+
+      {/* ── WHY CHOOSE ── */}
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Why Choose LGSF <br /><span>Prefab Sale Office ?</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>LGSF construction offers a perfect balance of speed, strength, and sustainability.
+              It reduces project delays, minimizes material wastage, and provides a modern architectural
+              appearance suitable for premium commercial branding. It also ensures a professional
+              and future-ready workspace environment for modern businesses.</p>
+            <p>This makes it especially suitable for fast-track commercial and project-based office
+              requirements where efficiency, quality, and rapid execution are essential for timely
+              project delivery. LGSF prefabricated sales offices are the future of fast-track commercial
+              construction. With flexibility, durability, and cost efficiency, they provide an ideal
+              solution for modern business environments requiring quick deployment and high-quality infrastructure.</p>
+          </div>
+          <div className={styles.showcaseFrame}>
+            <div className={styles.showcaseRibbon}></div>
+            <div className={styles.showcaseImageWrapper}>
+              <img
+                src={site4}
+                alt="Interior"
+                className={styles.showcaseImage}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* ── FAQ ── */}
+      <section className={styles.faqSec}>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p>LGSF prefabricated sales offices are fast, modern workspace structures
+            offering flexibility, durability, and quick execution. Below are FAQs.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={site1} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
               <div
-                key={i}
-                className={`${styles.workflowCard} ${card.active ? styles.workflowCardActive : ""}`}
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
               >
-                <div className={styles.workflowCardIcon}>{card.icon}</div>
-                <h3 className={styles.workflowCardLabel}>{card.label}</h3>
-                <p className={styles.workflowCardDesc}>{card.desc}</p>
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
+                </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── WHY CHOOSE ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Why Choose LGSF <br />
-              <span>Prefab Sale Office ?</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              LGSF construction offers a perfect balance of speed, strength, and
-              sustainability. It reduces project delays, minimizes material
-              wastage, and provides a modern architectural appearance suitable
-              for premium commercial branding. It also ensures a professional
-              and future-ready workspace environment for modern businesses.
-            </p>
-            <p>
-              This makes it especially suitable for fast-track commercial and
-              project- based office requirements where efficiency, quality, and
-              rapid execution are essential for timely project delivery. LGSF
-              prefabricated sales offices are the future of fast-track
-              commercial construction. With flexibility, durability, and cost
-              efficiency, they provide an ideal solution for modern business
-              environments requiring quick deployment and high-quality
-              infrastructure.
-            </p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/sales3.jpg"
-                  alt="Why Choose L&R Sales Office"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── FAQ ── */}
-      <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
-          <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
-              <h2 className={styles.secTitle}>
-                Frequently Asked <br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqDesc}>
-              LGSF prefabricated sales offices are fast, modern workspace
-              structures offering flexibility, durability, and quick execution.
-              Below are FAQs.
-            </p>
-          </div>
-          <div className={styles.faqContent}>
-            <div
-              className={styles.faqImgOuter}
-              style={{
-                width: "100%",
-                height: "480px",
-                overflow: "hidden",
-                borderRadius: "12px",
-              }}
-            >
-              <img
-                src="/Images/salesfre.jpg"
-                alt="Frequently Asked Questions"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
-                >
-                  <div
-                    className={styles.faqHeader}
-                    onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}
-                  >
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqBody}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── CTA BANNER ── */}
-      <section
-        className={styles.ctaBanner}
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/ctaoffice.jpg')",
-        }}
-      >
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your LGSF Prefab Sales Offices Solutions?</h2>
-          <p>
-            Connect with our team to design and deliver durable, efficient, and
-            fully customized insulated <br /> Prefab Sales Offices solutions
-            tailored to your site needs.
-          </p>
-          <button className={styles.btnSecondary}>
-            Contact US &nbsp;
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Ready for Your LGSF Prefab Sales Offices Solutions?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully customized insulated
+          Prefab Sales Offices solutions tailored to your site needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />
