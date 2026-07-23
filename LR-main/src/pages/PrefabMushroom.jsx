@@ -361,7 +361,6 @@ const PrefabMushroom = () => {
             <div className={styles.floatingImageCard}>
               <img src={mashroom4} alt="Interior" />
             </div>
-
           </div>
           <div className={styles.advContainer}>
             <div className={styles.advText}>
