@@ -55,28 +55,6 @@ const RooftopPartyLounge = () => {
     },
   ];
 
-  const strengthCards = [
-    {
-      title: "Ambient LED lighting setups",
-      desc: "Creates a vibrant and stylish mood with customizable lighting effects for day and night events.",
-      img: "/Images/party1.jpg",
-    },
-    {
-      title: "Open seating arrangements",
-      desc: "Offers comfortable and flexible seating layouts that enhance social interaction and rooftop views.",
-      img: "/Images/party2.jpg",
-    },
-    {
-      title: "Music & sound system",
-      desc: "Supports high-quality audio systems to set the perfect vibe for parties and gatherings.",
-      img: "/Images/party3.jpg",
-    },
-    {
-      title: "Glass railing & modern",
-      desc: "Ensures safety while adding a sleek, contemporary look to the rooftop space.",
-      img: "/Images/party4.jpg",
-    },
-  ];
   const galleryCards = [
     {
       id: 1,

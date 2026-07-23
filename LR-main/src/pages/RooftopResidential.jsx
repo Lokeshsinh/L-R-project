@@ -22,7 +22,6 @@ import user4 from '../assets/rooftop/resident/user4.png'
 import design from '../assets/rooftop/resident/design.png'
 import design1 from '../assets/rooftop/resident/design1.png'
 const RooftopResidential = () => {
-  const [openFaq, setOpenFaq] = useState(0)
   const navigate = useNavigate()
   const [activeIndex, setActiveIndex] = useState(1);
   const toggleFAQ = (index) => {
@@ -425,6 +424,9 @@ const RooftopResidential = () => {
           </div>
         </div>
       </section>
+
+
+      
 
       {/* ── SECTION 7: FAQ SECTION ── */}
       <section className={styles.faqSec}>
