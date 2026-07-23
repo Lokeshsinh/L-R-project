@@ -159,6 +159,9 @@ const PrefabMushroom = () => {
         </div>
       </section>
 
+
+
+      
       {/* ── What is... ── */}
       <section className={styles.intro}>
         <div className={styles.introContent}>
