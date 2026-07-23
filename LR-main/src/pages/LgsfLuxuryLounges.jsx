@@ -2,12 +2,29 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LgsfLuxuryLounges.module.css";
-
+import {
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import luxury1 from '../assets/LGFS/Luxury/luxury1.png'
+import luxury2 from '../assets/LGFS/Luxury/luxury2.png'
+import luxury3 from '../assets/LGFS/Luxury/luxury3.png'
+import luxury4 from '../assets/LGFS/Luxury/luxury4.png'
+import design from '../assets/LGFS/Luxury/design.png'
+import design1 from '../assets/LGFS/Luxury/design2.png'
+import user1 from '../assets/LGFS/Luxury/user1.png'
+import user2 from '../assets/LGFS/Luxury/user2.png'
+import user3 from '../assets/LGFS/Luxury/user3.png'
+import user4 from '../assets/LGFS/Luxury/user4.png'
 // const BLANK =
 //   "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
 const LgsfLuxuryLounges = () => {
-  const [openFaq, setOpenFaq] = useState(1); // Second item open by default (Index 1)
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,393 +58,365 @@ const LgsfLuxuryLounges = () => {
     },
   ];
 
+  const galleryCards = [
+    {
+      id: 1,
+      image: user1,
+      title: "High-performance insulation",
+      description:
+        "Ensures excellent thermal control and energy efficiency, maintaining a comfortable indoor environment in all conditions.",
+    },
+    {
+      id: 2,
+      image: user2,
+      title: "Elegant Interior Finishes",
+      description:
+        "Premium-quality interior designs that enhance aesthetics and deliver a luxurious look and feel.",
+    },
+    {
+      id: 3,
+      image: user3,
+      title: "Acoustic & Thermal Comfort",
+      description:
+        "Provides superior sound insulation and temperature regulation for a calm and comfortable space experience.",
+    },
+    {
+      id: 4,
+      image: user4,
+      title: "Strong & Lightweight Steel Structure",
+      description:
+        "Built using advanced LGSF technology, offering high strength, safety, and long-lasting durability with reduced weight.",
+    },
+  ];
+
   return (
     <div className={styles.wrapper}>
       <Header />
 
       {/* ── HERO ── */}
-      <section
-        className={styles.heroSec}
-        style={{
-          backgroundImage: `url("/Images/lux1.jpg")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            LGSF LUXURY <br />
-            LOUNGES
+            LGSF Luxury<br />
+            <span>Lounges
+            </span>
           </h1>
-          <p className={styles.subtitle}>
-            Experience modern luxury with L&amp;R Green Pvt Ltd’s LGSF prefab
-            lounges offering elegant design, fast construction, and lasting
-            durability for residential and commercial spaces.
+          <p className={styles.heroDesc}>
+            Experience modern luxury with L&R Green Pvt Ltd’s LGSF prefab lounges offering elegant
+            design, fast construction, and lasting durability for residential and commercial spaces.
           </p>
-          <button className={styles.btnPrimary}>
-            Conatct us &nbsp;
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
 
+
+
+
       {/* ── SECTION 2: INTRODUCTION TO LGSF LUXURY LOUNGES ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          {/* LEFT: Content */}
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Introduction to LGSF <br />
-              <span>Luxury Lounges</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              An LGSF Luxury Lounge is a high-end modular structure built using
-              lightweight steel framing technology, enabling sophisticated
-              architectural designs with faster construction than traditional
-              methods. It ensures superior quality, strength, and long-term
-              durability. This makes it a smart choice for modern construction
-              needs.
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Introduction to LGSF<br />
+            <span>Luxury Lounges</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.introText}>
+            <p>
+              An LGSF Luxury Lounge is a high-end modular structure built using lightweight steel framing technology,
+              enabling sophisticated architectural designs with faster construction than traditional methods. It ensures
+              superior quality, strength, and long-term durability. This makes it a smart choice for modern construction needs.
             </p>
             <p>
-              These lounges are ideal for premium environments where aesthetics,
-              speed, and performance matter most. They offer a perfect blend of
-              modern design, efficient construction, and reliable solutions for
-              residential and commercial spaces. Their versatility makes them
-              suitable for a wide range of luxury applications.
+              These lounges are ideal for premium environments where aesthetics, speed, and performance matter most.
+              They offer a perfect blend of modern design, efficient construction, and reliable solutions for residential
+              and commercial spaces. Their versatility makes them suitable for a wide range of luxury applications.
             </p>
-            <button className={styles.btnPill}>
-              Get Contact &nbsp;
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
             </button>
           </div>
+          <div className={styles.modernImageFrame}>
 
-          {/* RIGHT: Image with decoration box on left */}
-          <div className={styles.imgCol}>
-            <div className={styles.imageDecorWrap}>
-              <div className={styles.decorBox} />
+            {/* Corner Decorations */}
+            <span className={`${styles.corner} ${styles.topLeft}`}></span>
+            <span className={`${styles.corner} ${styles.topRight}`}></span>
+            <span className={`${styles.corner} ${styles.bottomLeft}`}></span>
+            <span className={`${styles.corner} ${styles.bottomRight}`}></span>
+
+            <div className={styles.modernImageWrapper}>
               <img
-                src="/Images/lux2.jpg"
-                alt="LGSF Luxury Lounge"
-                className={styles.decorImage}
+                src={luxury1}
+                alt="Modern Living Room"
+                className={styles.modernImage}
               />
             </div>
+
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── SECTION 3: WHERE YOU CAN USE LGSF LUXURY LOUNGES ── */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.splitContainer}>
-          {/* LEFT: Image with decoration box on left */}
-          <div className={styles.imgCol}>
-            <div className={styles.imageDecorWrap}>
-              <div className={styles.decorBox} />
+      <section className={styles.advSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Where You Can Use<br />
+            <span>LGSF Luxury Lounges</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
+        <div className={styles.advFlex}>
+          <div className={styles.livingFrameContainer}>
+
+            {/* Corner Decorations */}
+            <span className={`${styles.frameCorner} ${styles.cornerTopLeft}`}></span>
+            <span className={`${styles.frameCorner} ${styles.cornerTopRight}`}></span>
+            <span className={`${styles.frameCorner} ${styles.cornerBottomLeft}`}></span>
+            <span className={`${styles.frameCorner} ${styles.cornerBottomRight}`}></span>
+
+            <div className={styles.livingImageContainer}>
               <img
-                src="/Images/lux2.jpg"
-                alt="Where you can use LGSF Luxury Lounges"
-                className={styles.decorImage}
+                src={luxury2}
+                alt="Modern Living Room"
+                className={styles.livingRoomImage}
               />
             </div>
+
           </div>
-
-          {/* RIGHT: Content */}
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Where You Can Use <br />
-              <span>LGSF Luxury Lounges</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              LGSF homes offer unmatched speed, strength, and sustainability,
-              making them a future-ready construction solution. Their
-              lightweight yet durable structure ensures faster construction,
-              reduced costs, and long-term performance with minimal maintenance.
-            </p>
-
-            <div className={styles.bulletList}>
-              {[
-                "VIP Meeting Areas",
-                "Airport Lounges",
-                "Exclusive Event Spaces",
-                "Premium Residential Extensions",
-                "Resorts & Retreats",
-              ].map((item, idx) => (
-                <div className={styles.bulletItem} key={idx}>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    style={{ flexShrink: 0 }}
-                  >
-                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                    <path
-                      d="M8 12.5L10.5 15L16 9"
-                      stroke="white"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span className={styles.bulletLabel}>{item}</span>
+          <div className={styles.advContainer}>
+            <div className={styles.advText}>
+              <p>
+                LGSF homes offer unmatched speed, strength, and sustainability, making them a future-ready
+                construction solution. Their lightweight yet durable structure ensures faster construction,
+                reduced costs, and long-term performance with minimal maintenance.
+              </p>
+              <div className={styles.featureListWrap}>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>VIP Meeting Areas</p>
                 </div>
-              ))}
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Airport Lounges</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Exclusive Event Spaces</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Premium Residential Extensions</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Resorts & Retreats</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+
+
+
+
       {/* ── SECTION 4: BUILD THE FUTURE OF LUXURY SPACES ── */}
-      <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>L&amp;R PREFAB RESIDENTIAL</div>
-        <div className={styles.blueBannerContainer}>
-          {/* LEFT: Text */}
-          <div className={styles.blueBannerText}>
-            <h2>
-              Build the Future <br />
-              <strong>of Luxury Spaces</strong>
-            </h2>
-            <div className={styles.dividerWhite} />
-            <p style={{ marginTop: "30px" }}>
-              From concept to completion, L&amp;R Green Pvt Ltd delivers premium
-              prefabricated lounge solutions that redefine comfort, durability,
-              and modern architecture. We focus on innovative engineering and
-              precision craftsmanship to ensure every structure meets global
-              quality standards, combining speed, sustainability, and
-              long-lasting performance for modern infrastructure needs.
-            </p>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R Prefab Residential Houses</h1>
           </div>
-          {/* RIGHT: Image */}
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Build the Future<br />
+              of Luxury Spaces
+            </h2>
+            <p>
+              From concept to completion, L&R Green Pvt Ltd delivers premium prefabricated lounge
+              solutions that redefine comfort, durability, and modern architecture. We focus on
+              innovative engineering and precision craftsmanship to ensure every structure meets
+              global quality standards, combining speed, sustainability, and long-lasting
+              performance for modern infrastructure needs.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+          <div className={styles.mfgImgWrapper}>
             <img
-              src="/Images/lux4.png"
-              alt="Luxury LGSF 3D Render"
-              className={styles.bannerImg}
+              src={design}
+              alt="Manufacturing"
             />
           </div>
         </div>
       </section>
 
+
+
+
       {/* ── SECTION 5: LUXURY MEETS ENGINEERING ── */}
-      <section
-        className={styles.splitSec}
-        style={{ padding: "100px 8% 120px 8%" }}
-      >
-        <div className={styles.containerMax}>
-          <div className={styles.sectionHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Luxury Meets <br />
-                <span>Engineering</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.sectionDescText}>
-              At L&amp;R Green Pvt Ltd, we combine advanced engineering with
-              premium architectural design to create luxury lounge spaces that
-              deliver comfort, performance, and long-lasting value.
-            </p>
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              Luxury Meets<br />
+              <span>Engineering</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
+          <p >
+            At L&R Green Pvt Ltd, we combine advanced engineering with premium architectural
+            design to create luxury lounge spaces that deliver comfort, performance, and long-lasting value.
+          </p>
+        </div>
 
-          <div className={styles.cardGrid}>
-            {/* Card 1 */}
-            <div className={styles.strengthCard}>
-              <div className={styles.cardImageWrap}>
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
                 <img
-                  className={styles.cardImage}
-                  src="/Images/luxtype1.jpg"
-                  alt="High-performance insulation"
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
                 />
               </div>
-              <div className={styles.cardContent}>
-                <h3>High-performance insulation</h3>
-                <p>
-                  Ensures excellent thermal control and energy efficiency,
-                  maintaining a comfortable indoor environment in all
-                  conditions.
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
                 </p>
               </div>
             </div>
-
-            {/* Card 2 */}
-            <div className={styles.strengthCard}>
-              <div className={styles.cardImageWrap}>
-                <img
-                  className={styles.cardImage}
-                  src="/Images/luxtype2.jpg"
-                  alt="Elegant Interior Finishes"
-                />
-              </div>
-              <div className={styles.cardContent}>
-                <h3>Elegant Interior Finishes</h3>
-                <p>
-                  Premium-quality interior designs that enhance aesthetics and
-                  deliver a luxurious look and feel.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className={styles.strengthCard}>
-              <div className={styles.cardImageWrap}>
-                <img
-                  className={styles.cardImage}
-                  src="/Images/luxtype3.jpg"
-                  alt="Acoustic &amp; Thermal Comfort"
-                />
-              </div>
-              <div className={styles.cardContent}>
-                <h3>Acoustic &amp; Thermal Comfort</h3>
-                <p>
-                  Provides superior sound insulation and temperature regulation
-                  for a calm and comfortable space experience.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className={styles.strengthCard}>
-              <div className={styles.cardImageWrap}>
-                <img
-                  className={styles.cardImage}
-                  src="/Images/luxtype4.jpg"
-                  alt="Strong &amp; Lightweight Steel Structure"
-                />
-              </div>
-              <div className={styles.cardContent}>
-                <h3>Strong &amp; Lightweight Steel Structure</h3>
-                <p>
-                  Built using advanced LGSF technology, offering high strength,
-                  safety, and long-lasting durability with reduced weight.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
+
+
 
       {/* ── SECTION 6: WHY CHOOSE LGSF LUXURY LOUNGES ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          {/* LEFT: Content */}
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Why Choose LGSF <br />
-              <span>Luxury Lounges</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              At L&amp;R Green Pvt Ltd, we specialize in delivering
-              next-generation LGSF luxury lounge solutions that combine
-              precision engineering with modern architectural design. Our
-              approach focuses on creating innovative, durable, and visually
-              refined structures that meet the evolving demands of premium
-              infrastructure.
-            </p>
-            <p>
-              We ensure high-quality steel framing systems, fast and efficient
-              project execution, fully customized architectural designs, and
-              sustainable construction practices. With complete end-to-end
-              project management, we handle every stage seamlessly to deliver
-              reliable, future-ready luxury lounge solutions.
-            </p>
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Why Choose LGSF<br /><span>Luxury Lounges</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>At L&R Green Pvt Ltd, we specialize in delivering next-generation LGSF luxury lounge
+              solutions that combine precision engineering with modern architectural design. Our approach
+              focuses on creating innovative, durable, and visually refined structures that meet the evolving
+              demands of premium infrastructure.</p>
+            <p>We ensure high-quality steel framing systems, fast and efficient project execution, fully
+              customized architectural designs, and sustainable construction practices. With complete
+              end-to-end project management, we handle every stage seamlessly to deliver reliable,
+              future-ready luxury lounge solutions.</p>
           </div>
+          <div className={styles.interiorFrame}>
+            <span className={`${styles.frameEdge} ${styles.edgeTopLeft}`}></span>
+            <span className={`${styles.frameEdge} ${styles.edgeTopRight}`}></span>
+            <span className={`${styles.frameEdge} ${styles.edgeBottomLeft}`}></span>
+            <span className={`${styles.frameEdge} ${styles.edgeBottomRight}`}></span>
 
-          {/* RIGHT: Image with decoration box on left */}
-          <div className={styles.imgCol}>
-            <div className={styles.imageDecorWrap}>
-              <div className={styles.decorBox} />
+            <div className={styles.interiorImageWrapper}>
               <img
-                src="/Images/luxtype5.jpg"
-                alt="Why Choose L&R LGSF"
-                className={styles.decorImage}
+                src={luxury3}
+                alt="Modern Living Room"
+                className={styles.interiorImage}
               />
             </div>
+
           </div>
         </div>
       </section>
+
+
 
       {/* ── SECTION 7: FAQ SECTION ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FQS</span>
-          <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
-              <h2 className={styles.secTitle}>
-                Frequently Asked <br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqDesc}>
-              Find quick answers to common questions about LGSF luxury lounges
-              and L&amp;R Green Pvt Ltd's prefabricated construction solutions.
-            </p>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqContent}>
-            {/* LEFT: Rounded image */}
-            <div className={styles.faqImgOuter}>
-              <img
-                src="/Images/frelux.jpg"
-                alt="Frequently Asked Questions"
-                className={styles.faqImg}
-              />
-            </div>
-
-            {/* RIGHT: FAQ list */}
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+          <p>Find quick answers to common questions about LGSF luxury lounges and
+            L&R Green Pvt Ltd’s prefabricated construction solutions.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={luxury4} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div
-                    className={styles.faqHeader}
-                    onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}
-                  >
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqBody}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── CTA BANNER ── */}
       <section
