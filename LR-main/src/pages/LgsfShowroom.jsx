@@ -97,8 +97,8 @@ const LgsfShowroom = () => {
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            Rooftop Prefabricated<br />
-            <span>Rooms for Residential Flats
+            LGSF Showroom<br />
+            <span>Solutions
             </span>
           </h1>
           <p className={styles.heroDesc}>
