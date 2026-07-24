@@ -1,46 +1,113 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/SolarHardware.module.css";
+import {
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X, Shield,
+  Weight,
+  Hexagon,
+  Hammer,
+  ChevronLeft, ChevronRight,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import hardware1 from '../assets/solar/hardware/hardware1.png'
+import hardware2 from '../assets/solar/hardware/hardware2.png'
+import hardware3 from '../assets/solar/hardware/hardware3.png'
+import hardware4 from '../assets/solar/hardware/hardware4.png'
+import hardware5 from '../assets/solar/hardware/hardware5.png'
+import hardware6 from '../assets/solar/hardware/hardware6.png'
+import hardware7 from '../assets/solar/hardware/hardware7.png'
+import hardware8 from '../assets/solar/hardware/hardware8.png'
+import hardware9 from '../assets/solar/hardware/hardware9.png'
+import card1 from '../assets/solar/hardware/card1.png';
+import card2 from '../assets/solar/hardware/card2.png';
+import card3 from '../assets/solar/hardware/card3.png';
+import card4 from '../assets/solar/hardware/card4.png';
+import card5 from '../assets/solar/hardware/card5.png';
+import card6 from '../assets/solar/hardware/card6.png';
+import design from '../assets/solar/hardware/design.png'
+import design1 from '../assets/solar/hardware/design1.png'
+
 
 const SolarHardware = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [index, setIndex] = useState(0);
+
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const keyFeatures = [
-    "Corrosion-resistant hot-dip galvanized & anodized aluminium finish",
-    "Pre-assembled and pre-drilled for ultra-fast site installation",
-    "Compatible with all major solar panel brands and frame sizes",
-    "Rated for wind speeds up to 170 km/h and seismic zone compliance",
-    "Stainless steel T-bolts, spring nuts, and mid/end clamps included",
-    "25+ year design life with zero maintenance requirements",
+
+
+
+  const industryProjects = [
+    {
+      title: "Spiral Lock Nuts",
+      desc: "High-strength lock nuts designed to prevent loosening under vibration. Ideal for industrial, automotive, and structural fastening applications.",
+      img: card1,
+    },
+    {
+      title: "Hex Bolts & Nuts",
+      desc: "Durable hex bolts and nuts for secure and reliable fastening. Suitable for construction, machinery, and engineering projects.",
+      img: card2,
+    },
+    {
+      title: "Allen Bolts",
+      desc: "Precision Allen bolts designed for strong and accurate fastening. Perfect for machinery, equipment, and industrial assemblies.",
+      img: card3,
+    },
+    {
+      title: "Square Nuts",
+      desc: "Heavy-duty square nuts offering a firm and dependable grip. Widely used in structural, fabrication, and mechanical applications.",
+      img: card4,
+    },
+    {
+      title: "High-Strength Rivets",
+      desc: "Durable rivets designed for permanent and vibration-resistant fastening. Ideal for construction, automotive, and industrial applications.",
+      img: card5,
+    },
+    {
+      title: "Lockbolts",
+      desc: "Heavy-duty lockbolts engineered for maximum strength and secure fastening. Perfect for structural steel, bridges, and heavy engineering projects.",
+      img: card6,
+    },
+
   ];
 
-  const fasteningCards = [
-    { title: "T-Bolts & Spring Nuts", desc: "Precision-forged stainless steel fasteners for rock-solid panel-to-rail connections.", img: "/Images/tbolt.jpg" },
-    { title: "Mid & End Clamps", desc: "Aluminium clamps engineered to grip panel frames securely without stress concentration.", img: "/Images/clamp.jpg" },
-    { title: "Roof Hooks", desc: "Weatherproof roof hooks for metal sheet, RCC flat, and tiled roof installations.", img: "/Images/roofhook.jpg" },
+
+
+  const hardwareFeatures = [
+    {
+      icon: <Shield />,
+      title: "Enhanced Durability",
+      description:
+        "Built with premium materials to withstand extreme weather and long-term usage, ensuring durability in demanding outdoor environments.",
+    },
+    {
+      icon: <Weight />,
+      title: "Corrosion Resistance",
+      description:
+        "Advanced coatings like galvanization protect against rust and environmental damage, ensuring durability in harsh outdoor conditions.",
+    },
+    {
+      icon: <Hexagon />,
+      title: "Structural Reliability",
+      description:
+        "Ensures strong, stable, and secure fastening for critical solar components, for long-term reliable structural performance.",
+    },
+    {
+      icon: <Hammer />,
+      title: "Installation Efficiency",
+      description:
+        "Designed for quick, easy, and hassle-free installation on-site, reducing labor time and improving overall project efficiency significantly.",
+    },
   ];
 
-  const strengthCards = [
-    { title: "High-Grade Materials", desc: "Every component is manufactured from grade 304/316 stainless steel or 6063-T5 anodized aluminium." },
-    { title: "Load-Tested Design", desc: "All hardware is tested to handle dead loads, wind uplift, and dynamic seismic forces." },
-    { title: "Anti-Corrosion Coating", desc: "Multi-layer galvanizing and anodizing protect against salt, humidity and UV degradation." },
-    { title: "Precision Manufacturing", desc: "CNC-machined components with tight tolerances for perfect fit and reliable long-term performance." },
-  ];
 
-  const advantages = [
-    { num: "01", title: "Faster Installation", desc: "Pre-drilled, pre-slotted hardware reduces on-site assembly time by up to 50%." },
-    { num: "02", title: "Universal Compatibility", desc: "Works with panels from 60 to 144 cell format and all major mounting rail brands." },
-    { num: "03", title: "Lifetime Durability", desc: "Designed to outlast the 25-year solar panel warranty in all climate conditions." },
-    { num: "04", title: "Cost Effective", desc: "Competitive pricing with no hidden costs — bulk project pricing available." },
-  ];
 
-  const applications = [
-    { title: "Rooftop Solar Systems", desc: "Complete fastening kits for residential, commercial, and industrial rooftop installations.", img: "/Images/hardapp1.jpg" },
-    { title: "Ground-Mounted Farms", desc: "Pile anchors, rail clamps, and module hardware for utility-scale solar projects.", img: "/Images/hardapp2.jpg" },
-    { title: "Carport Solar Structures", desc: "Elevated structure hardware for solar carports and parking shade structures.", img: "/Images/hardapp3.jpg" },
-  ];
 
   const faqs = [
     { id: 0, q: "What solar hardware products do you supply?", a: "We supply a complete range of solar mounting hardware including T-bolts, spring nuts, mid/end clamps, roof hooks, flashings, grounding clips, cable management clips, and rail splices." },
@@ -50,193 +117,485 @@ const SolarHardware = () => {
     { id: 4, q: "Can you provide custom hardware for special mounting systems?", a: "Absolutely. We accept custom orders for non-standard module sizes, special roof profiles, or unique structural requirements with engineering support." },
   ];
 
+  const visibleCards = 4;
+
+  const nextSlide = useCallback(() => {
+    setIndex((prev) =>
+      prev >= industryProjects.length - visibleCards ? 0 : prev + 1
+    );
+  }, [industryProjects.length]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 1 + industryProjects.length) % industryProjects.length);
+  };
+
   return (
     <div className={styles.wrapper}>
       <Header />
 
       {/* HERO */}
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/solarhardware.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>SMART HARDWARE <br /><span>FOR SOLAR SYSTEMS</span></h1>
-          <p className={styles.subtitle}>High-performance solar mounting hardware engineered for durability, speed of installation, and universal compatibility — powering reliable solar installations across India.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            Smart Hardware<br />
+            <span>for Solar Systems
+            </span>
+          </h1>
+          <p className={styles.heroDesc}>
+            At L&R Green Pvt Ltd, we manufacture high-performance solar hardware that
+            supports efficient, durable, and cost-effective energy systems.
+          </p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
+
+
+
+
 
       {/* INTRO */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Solar Hardware For <br /><span>Reliable Performance</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>L&amp;R Green India Pvt Ltd supplies a complete range of precision-engineered solar mounting hardware — from roof hooks and flashings to module clamps, T-bolts, and grounding clips.</p>
-            <p>Every component is manufactured to the highest quality standards using corrosion-resistant materials, ensuring your solar installation stays secure, watertight, and fully operational throughout its 25+ year lifecycle.</p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>Get a Quote &nbsp;→</button>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/solarhardware1.jpg" alt="Solar hardware products" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/solarhardware2.jpg" alt="Solar fasteners closeup" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Solar Hardware for<br />
+            <span>Reliable Performance</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.solarImageContainer}>
+            <div className={styles.mainImageWrapper}>
+              <img
+                src={hardware1}
+                alt="Solar Mounting Structure"
+                className={styles.mainImage}
+              />
             </div>
+            <div className={styles.floatingImageFrame}>
+              <div className={styles.floatingImageWrapper}>
+                <img
+                  src={hardware2}
+                  alt="Solar Rail Detail"
+                  className={styles.floatingImage}
+                />
+              </div>
+            </div>
+
+          </div>
+
+          <div className={styles.introText}>
+            <p>
+              Our solar hardware solutions cover a complete range of components designed to mount, secure, and connect
+              solar systems with precision. We focus on high-quality fasteners and structural elements that ensure strong
+              mechanical integrity, long-term durability, and consistent performance across all types of installations.
+            </p>
+            <p>
+              Working closely with solar developers, EPC contractors, and manufacturers, we deliver both standard and customized
+              solutions tailored to specific project requirements. Our approach ensures flexibility, efficiency, and dependable
+              support for residential, commercial, and utility-scale solar projects.
+            </p>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
         </div>
       </section>
+
+
+
 
       {/* KEY FEATURES */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Key Features of <br /><span>Our Solar Hardware</span></h2>
-            <div className={styles.divider} />
-          </div>
-          <div className={styles.featuresGrid}>
-            {keyFeatures.map((feat, i) => (
-              <div key={i} className={styles.featureItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span>{feat}</span>
-              </div>
-            ))}
-          </div>
+      <section className={styles.advSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Key Features of<br />
+            <span>Our Solar Hardware</span>
+          </h2>
+          <div className={styles.introLine}></div>
         </div>
-      </section>
-
-      {/* FASTENING SOLUTIONS */}
-      <section className={styles.splitSec}>
-        <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Fastening Solutions <br /><span>for Solar Construction</span></h2>
-            <div className={styles.divider} />
-          </div>
-          <div className={styles.threeCardGrid}>
-            {fasteningCards.map((card, i) => (
-              <div key={i} className={styles.fasteningCard}>
-                <div className={styles.fasteningImgWrap}><img src={card.img} alt={card.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div>
-                <div className={styles.fasteningContent}><h3>{card.title}</h3><p>{card.desc}</p></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STRENGTH BANNER */}
-      <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>HARDWARE</div>
-        <div className={styles.blueBannerContainer}>
-          <div className={styles.blueBannerText}>
-            <h2>Built for Strength &amp; <br /><strong>Reliability in Solar Hardware</strong></h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
-            <div className={styles.strengthGrid}>
-              {strengthCards.map((sc, i) => (
-                <div key={i} className={styles.strengthItem}>
-                  <strong>{sc.title}</strong>
-                  <p>{sc.desc}</p>
+        <div className={styles.advFlex}>
+          <div className={styles.advContainer}>
+            <div className={styles.advText}>
+              <p>
+                Our solar hardware is designed to deliver superior strength, precision, and long-term
+                reliability, ensuring secure and efficient performance across all types of solar installations
+                while meeting diverse project requirements.
+              </p>
+              <div className={styles.featureListWrap}>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>High load-bearing capacity for structural stability</p>
                 </div>
-              ))}
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Precision-engineered for accurate fitting and alignment</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Excellent corrosion resistance with advanced coatings</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Compatible with rooftop and ground-mounted systems</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Designed for quick and easy installation</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Customization options for diverse project needs</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img src="/Images/solarstrength.jpg" alt="Solar hardware strength" style={{ width: "100%", maxWidth: "480px", height: "auto", objectFit: "cover", borderRadius: "14px" }} />
+          <div className={styles.hardwareImageContainer}>
+            <div className={styles.hardwareMainFrame}>
+              <img
+                src={hardware3}
+                alt="Solar Mounting Structure"
+                className={styles.hardwareMainImage}
+              />
+            </div>
+
+            <div className={styles.hardwareFloatingCard}>
+              <div className={styles.hardwareFloatingFrame}>
+                <img
+                  src={hardware4}
+                  alt="Solar Rail Detail"
+                  className={styles.hardwareFloatingImage}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ADVANTAGES */}
-      <section className={styles.splitSec}>
-        <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Advantages of Our <br /><span>Solar Hardware Fasteners</span></h2>
-            <div className={styles.divider} />
+
+
+
+
+
+      {/* FASTENING SOLUTIONS */}
+      <section className={styles.spaceUser}>
+        <div className={styles.spaceUserFlex}>
+          <div className={styles.spaceuserText}>
+            <h2>Fastening Solutions <br /> <span>for Solar Construction</span></h2>
+            <div className={styles.divider}></div>
           </div>
-          <div className={styles.advGrid}>
-            {advantages.map((adv, i) => (
-              <div key={i} className={styles.advCard}>
-                <span className={styles.advNum}>{adv.num}</span>
-                <h4>{adv.title}</h4>
-                <p>{adv.desc}</p>
+          <p>Solar installations require strong, reliable fastening solutions to ensure stability
+            and long-term performance. Our systems are designed to withstand harsh outdoor conditions
+            while delivering consistent durability and structural integrity.</p>
+        </div>
+        <div className={styles.controls}>
+          <button className={styles.Btn} onClick={prevSlide}>
+            <ChevronLeft size={22} />
+          </button>
+
+          <button className={styles.btn1} onClick={nextSlide}>
+            <ChevronRight size={22} />
+          </button>
+        </div>
+        <div
+          className={styles.expertiseGrid}
+          style={{
+            transform: `translateX(-${index * (100 / visibleCards)}%)`,
+          }}
+        >
+          {industryProjects.map((item, index) => (
+            <div className={styles.expCard} key={index}>
+              <img src={item.img} alt={item.title} className={styles.expImg} />
+
+              <div className={styles.expLabel}>
+                <h4>{item.title}</h4>
+
+                <div className={styles.desc}>
+                  <p>{item.desc}</p>
+                </div>
               </div>
-            ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      {/* STRENGTH BANNER */}
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R SOLar hardware</h1>
           </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Built for Strength &<br />
+              Reliability in Solar Hardware
+            </h2>
+            <p>
+              Our solar hardware solutions are engineered to deliver exceptional strength, durability,
+              and long-term reliability, ensuring secure structural support and consistent performance
+              across all solar installations, even in demanding environmental conditions.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
+          </div>
+        </div>
+      </section>
+
+
+
+
+      {/* ADVANTAGES */}
+      <section className={styles.advantagesUser}>
+        <div className={styles.advantagesGrid}>
+          <div className={styles.advantageText}>
+            <h2>Advantages of Our <br /><span>Solar Hardware Fasteners</span></h2>
+            <div className={styles.divider} ></div>
+          </div>
+          <p>Our solar fasteners are designed to deliver long-lasting strength, reliability,
+            and performance in demanding environments. They ensure secure connections while
+            improving efficiency and reducing overall project costs.</p>
+        </div>
+
+        <div className={styles.hardwareFeatureGrid}>
+          {hardwareFeatures.map((item, index) => (
+            <div key={index} className={styles.hardwareFeatureCard}>
+              <div className={styles.hardwareIcon}>
+                {item.icon}
+              </div>
+
+              <div className={styles.hardwareContent}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* APPLICATIONS */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Applications of Solar <br /><span>Hardware Fasteners</span></h2>
-            <div className={styles.divider} />
-          </div>
-          <div className={styles.threeCardGrid}>
-            {applications.map((card, i) => (
-              <div key={i} className={styles.appCard}>
-                <div className={styles.appImgWrap}><img src={card.img} alt={card.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div>
-                <div className={styles.appContent}><h3>{card.title}</h3><p>{card.desc}</p></div>
+      <section className={styles.conatineUser}>
+        <div className={styles.containerMaxs}>
+          <h2>
+            Applications of Solar<br />
+            <span>Hardware Fasteners</span>
+          </h2>
+          <div className={styles.divider}></div>
+        </div>
+        <div className={styles.containerFlex}>
+          <div className={styles.containerText}>
+            <p>Our solar hardware solutions are designed to support a wide range of solar projects,
+              ensuring strength, adaptability, and reliable performance across different installation
+              environments and scales.</p>
+            <div className={styles.applicationFeatureList}>
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={17} strokeWidth={2.2} />
+                </div>
+                <p className={styles.applicationFeatureText}>Residential rooftop solar systems</p>
               </div>
-            ))}
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={17} strokeWidth={2.2} />
+                </div>
+                <p className={styles.applicationFeatureText}>Commercial and industrial solar installations</p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={17} strokeWidth={2.2} />
+                </div>
+                <p className={styles.applicationFeatureText}>Utility-scale solar power plants</p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={17} strokeWidth={2.2} />
+                </div>
+                <p className={styles.applicationFeatureText}>Ground-mounted solar structures</p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={17} strokeWidth={2.2} />
+                </div>
+                <p className={styles.applicationFeatureText}>Solar installations in harsh or coastal environments</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.mountingGalleryContainer}>
+            <div className={styles.mountingMainImageWrapper}>
+              <img
+                src={hardware8}
+                alt="Solar Mounting Structure"
+                className={styles.mountingMainImage}
+              />
+            </div>
+
+            <div className={styles.mountingPreviewCard}>
+              <div className={styles.mountingPreviewWrapper}>
+                <img
+                  src={hardware9}
+                  alt="Solar Rail Detail"
+                  className={styles.mountingPreviewImage}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* WHY CHOOSE */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/whyhardware1.jpg" alt="Why choose L&R hardware" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/whyhardware2.jpg" alt="Solar hardware quality" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Why Choose Solar<br /><span>Hardware Fasteners</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          <div className={styles.solarHardwareContainer}>
+            <div className={styles.solarHardwareMainImageBox}>
+              <img
+                src={hardware6}
+                alt="Solar Mounting Structure"
+                className={styles.solarHardwareMainImage}
+              />
+            </div>
+
+            <div className={styles.solarHardwarePreviewCard}>
+              <div className={styles.solarHardwarePreviewImageBox}>
+                <img
+                  src={hardware7}
+                  alt="Solar Rail Detail"
+                  className={styles.solarHardwarePreviewImage}
+                />
+              </div>
             </div>
           </div>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Why Choose Solar <br /><span>Hardware Fasteners</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>L&amp;R Green India Pvt Ltd is your trusted solar hardware partner — supplying certified, tested, and warranty-backed mounting hardware for every type of solar installation.</p>
-            <p>With in-house quality control, bulk supply capability, and PAN India delivery, we ensure your project gets the right hardware, on time, every time.</p>
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>L&R Green Pvt Ltd provides specialized solar fastening solutions engineered to withstand
+              demanding environmental conditions. By combining industry-focused expertise with rigorous
+              quality standards, we deliver hardware that ensures long-term structural integrity and consistent
+              performance. Our focus on Reliable Performance minimizes maintenance risks, making us a trusted
+              partner for durable renewable energy infrastructure.</p>
+            <p>We differentiate ourselves through Customization Capabilities and comprehensive End-to-End Support,
+              tailoring every system to meet specific project requirements. From the initial design consultation to
+              final delivery, our team provides the technical guidance and high-quality components necessary for seamless
+              installation. Choosing L&R Green means investing in precision-engineered solutions backed by dedicated professional service.</p>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
-          <div className={styles.faqHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>Frequently Asked <br /><span>Questions</span></h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqDesc}>Common questions about our solar hardware products — materials, compatibility, and supply.</p>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter}>
-              <img src="/Images/faqhardware.jpg" alt="FAQ solar hardware" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: "12px" }} />
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div key={faq.id} className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}>
-                  <div className={styles.faqHeader} onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>{openFaq === faq.id ? "↓" : "↑"}</span>
-                  </div>
-                  {openFaq === faq.id && <div className={styles.faqBody}><p>{faq.a}</p></div>}
+          <p>Solar hardware solutions provide stability, durability, and proper alignment,
+            enhancing system performance, safety, and lifespan.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={hardware5} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+
+
+
       {/* CTA */}
-      <section className={styles.ctaBanner} style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.62)), url('/Images/ctahardware.jpg')" }}>
-        <div className={styles.ctaInner}>
-          <h2>Start Your Solar Fasteners Today</h2>
-          <p>Connect with our team to source certified, high-performance solar mounting hardware for your next installation project.</p>
-          <button className={styles.btnSecondary}>Contact US &nbsp;→</button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Start Your Solar Fasteners Today?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized solar plant infrastructure solutions tailored to your project needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />
