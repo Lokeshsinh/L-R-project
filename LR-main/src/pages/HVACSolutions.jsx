@@ -2,48 +2,62 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/HVACSolutions.module.css";
+import {
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X, Wind,
+  Leaf,
+  AirVent,
+  Fan,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import hvm1 from '../assets/hvm/hvm1.png'
+import hvm2 from '../assets/hvm/hvm2.png'
+import hvm3 from '../assets/hvm/hvm3.png'
+import hvm4 from '../assets/hvm/hvm4.png'
+import hvm5 from '../assets/hvm/hvm5.png'
+import hvm6 from '../assets/hvm/hvm6.png'
+import hvm7 from '../assets/hvm/hvm7.png'
+import hvm8 from '../assets/hvm/hvm8.png'
+import hvm9 from '../assets/hvm/hvm9.png'
+import user1 from '../assets/hvm/user1.png'
+import user2 from '../assets/hvm/user2.png'
+import user3 from '../assets/hvm/user3.png'
+import user4 from '../assets/hvm/user4.png'
+import design from '../assets/hvm/design.png'
+import design1 from '../assets/rooftop/resident/design1.png'
 
 const HVACSolutions = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const systemCards = [
-    { title: "Central AC Systems", desc: "High-capacity centralized air conditioning for large commercial and industrial spaces.", img: "/Images/hvac1.jpg" },
-    { title: "VRF/VRV Systems", desc: "Variable refrigerant flow systems for multi-zone precise temperature control.", img: "/Images/hvac2.jpg" },
-    { title: "Ductable Split Units", desc: "Concealed ducted systems for offices, hotels, and malls with clean aesthetics.", img: "/Images/hvac3.jpg" },
-    { title: "Precision Cooling", desc: "Server room and data center precision cooling for critical IT infrastructure.", img: "/Images/hvac4.jpg" },
-  ];
-
-  const applicationAreas = [
-    { title: "Commercial Offices", desc: "Energy-efficient HVAC systems designed for productive office environments." },
-    { title: "Industrial Facilities", desc: "Heavy-duty ventilation and cooling for factories, warehouses, and process plants." },
-    { title: "Healthcare Facilities", desc: "Clean-room grade HVAC with HEPA filtration for hospitals and clinics." },
-    { title: "Hotels & Hospitality", desc: "Silent, zone-controlled climate systems for superior guest comfort." },
-    { title: "Data Centers", desc: "Precision temperature and humidity control for mission-critical server environments." },
-    { title: "Prefab Buildings", desc: "Integrated HVAC solutions tailored for modular and prefabricated structures." },
-  ];
-
-  const coreServices = [
-    { num: "01", title: "System Design & Engineering", desc: "Load calculations, equipment selection, and detailed HVAC system design drawings." },
-    { num: "02", title: "Supply & Installation", desc: "Procurement from certified brands and professional installation by our licensed technicians." },
-    { num: "03", title: "Commissioning & Testing", desc: "Full system commissioning, performance testing, and handover documentation." },
-    { num: "04", title: "AMC & Maintenance", desc: "Annual maintenance contracts for preventive servicing and 24/7 emergency support." },
-  ];
-
-  const maintenanceTips = [
-    "Regular filter cleaning and replacement every 3 months",
-    "Annual refrigerant pressure check and top-up if required",
-    "Coil cleaning and heat exchanger inspection every 6 months",
-    "Duct inspection and sanitization for healthier indoor air quality",
-    "Electrical connection inspection and motor lubrication annually",
-    "BMS integration check and thermostat calibration every year",
-  ];
-
-  const components = [
-    { title: "Air Handling Units", desc: "Large-capacity AHUs for central HVAC systems in commercial buildings." },
-    { title: "Fan Coil Units", desc: "Room-level FCUs for quiet, individual zone temperature control." },
-    { title: "Chillers", desc: "Air and water-cooled chillers for central plant cooling applications." },
-    { title: "Cooling Towers", desc: "Efficient heat rejection systems for large-scale industrial cooling plants." },
+  const hardwareFeatures = [
+    {
+      icon: <Wind />,
+      title: "Supply Air Duct Installation",
+      description:
+        "We design and install ducts that efficiently distribute conditioned air, ensuring balanced airflow and consistent temperature.",
+    },
+    {
+      icon: <Leaf />,
+      title: "Fresh Air Duct Installation",
+      description:
+        "Our fresh air duct systems bring in clean outdoor air to improve ventilation and maintain healthy indoor air quality.",
+    },
+    {
+      icon: <AirVent />,
+      title: "Supply Air Diffuser Installation",
+      description:
+        "Supports innovative designs including curved walls, modern facades, and customized layouts.",
+    },
+    {
+      icon: <Fan />,
+      title: "Toilet Exhaust Duct Installation",
+      description:
+        "Our exhaust duct systems remove moisture, odors, and stale air, ensuring proper ventilation and a hygienic environment.",
+    },
   ];
 
   const faqs = [
@@ -54,209 +68,466 @@ const HVACSolutions = () => {
     { id: 4, q: "What is the typical timeline for HVAC installation?", a: "Small to medium projects (up to 50 TR) are typically completed within 2–4 weeks. Large industrial or commercial projects may take 6–12 weeks depending on complexity." },
   ];
 
+  const galleryCards = [
+    {
+      id: 1,
+      image: user1,
+      title: "Rails & Frames",
+      description:
+        "Efficient and quiet systems designed to provide maximum comfort and clean air for homes.",
+    },
+    {
+      id: 2,
+      image: user2,
+      title: "Electrical System Design",
+      description:
+        "Reliable systems tailored for offices, malls, and commercial spaces to maintain consistent temperature and air quality.",
+    },
+    {
+      id: 3,
+      image: user3,
+      title: "Fasteners & Screws",
+      description:
+        "Robust solutions for factories and warehouses, ensuring proper ventilation, temperature control, and safe working conditions.",
+    },
+    {
+      id: 4,
+      image: user4,
+      title: "Heavy-Duty Mounts",
+      description:
+        "Specialized HVAC solutions for hospitals, schools, and public buildings, ensuring clean air, controlled environments, and consistent climate.",
+    },
+  ];
+
+
   return (
     <div className={styles.wrapper}>
       <Header />
 
       {/* HERO */}
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/hvachero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>SMART &amp; ENERGY-EFFICIENT <br /><span>HVAC SOLUTIONS FOR EVERY SPACE</span></h1>
-          <p className={styles.subtitle}>Complete HVAC design, supply, installation, and maintenance services — engineered for maximum energy efficiency, indoor comfort, and long-term reliability.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            HVAC Solutions<br />
+            <span>by Application
+            </span>
+          </h1>
+          <p className={styles.heroDesc}>
+            L&R Green Pvt Ltd provides application-specific HVAC solutions for optimal comfort, efficient
+            airflow, and reliable, energy-efficient performance across all sectors.
+          </p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
+
+
+
+
 
       {/* COMPLETE HVAC SYSTEM SOLUTIONS */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/hvacmain1.jpg" alt="HVAC system installation" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/hvacmain2.jpg" alt="HVAC duct installation" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
-            </div>
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Complete HVAC<br />
+            <span>System Solutions</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.introText}>
+            <p>
+              HVAC (Heating, Ventilation, and Air Conditioning) systems play a critical role in creating comfortable,
+              healthy, and controlled indoor environments across residential, commercial, and industrial spaces.
+              At L&R Green Pvt Ltd, we deliver comprehensive HVAC solutions covering every stage—from design and
+              engineering to installation and maintenance—ensuring consistent performance, durability, and long-term reliability.
+            </p>
+            <p>
+              Our HVAC solutions are built using advanced, energy-efficient technologies that optimize airflow, maintain precise
+              temperature control, and regulate humidity for enhanced indoor comfort. We integrate smart designs and high-quality
+              components to improve air quality while reducing energy consumption and supporting sustainable, cost-effective environments.
+            </p>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Complete HVAC <br /><span>System Solutions</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>L&amp;R Green India Pvt Ltd delivers end-to-end HVAC solutions — from initial load calculations and system design through supply, installation, commissioning, and after-sales maintenance.</p>
-            <p>Whether you need a centralized chiller plant for a large commercial complex, a VRF system for a hotel, precision cooling for a data center, or industrial ventilation for a factory, our certified HVAC engineers design and deliver the right system for your specific requirements.</p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>Get a Quote &nbsp;→</button>
+          <div className={styles.imageWrapper}>
+            <div className={styles.mainImage}>
+              <img src={hvm1} alt="Main Building" />
+            </div>
+            <div className={styles.smallImage}>
+              <img src={hvm2} alt="Interior" />
+            </div>
           </div>
         </div>
       </section>
+
+
+
+
+
 
       {/* HVAC BY APPLICATION */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.containerMax}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px", marginBottom: "50px" }}>
-            <div>
-              <h2 className={styles.secTitle}>HVAC Solutions <br /><span>by Application</span></h2>
-              <div className={styles.divider} />
-            </div>
-            <p style={{ maxWidth: "440px", color: "#64748b", fontSize: "15px", lineHeight: "1.7" }}>Tailored HVAC systems for every sector — from offices and hospitals to factories and prefab buildings.</p>
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              Designed Around<br />
+              <span>Your Lifestyle</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.cardGrid}>
-            {systemCards.map((card, idx) => (
-              <div key={idx} className={styles.strengthCard}>
-                <div className={styles.cardImageWrap}><img className={styles.cardImage} src={card.img} alt={card.title} /></div>
-                <div className={styles.cardContent}><h3>{card.title}</h3><p>{card.desc}</p></div>
+          <p >
+            Each rooftop residential unit is fully customizable to match
+            your requirements, whether for personal living or rental purposes.
+          </p>
+        </div>
+
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
+                />
               </div>
-            ))}
-          </div>
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
+
+
+
+
 
       {/* IMPORTANCE */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Importance of <br /><span>HVAC Systems</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>A properly designed and installed HVAC system is critical for occupant health, comfort, and productivity. It regulates temperature, controls humidity, filters indoor air pollutants, and ensures proper fresh air exchange — creating a safe and comfortable indoor environment year-round.</p>
-            <div className={styles.importanceGrid}>
-              {applicationAreas.map((area, i) => (
-                <div key={i} className={styles.importanceCard}>
-                  <strong>{area.title}</strong>
-                  <p>{area.desc}</p>
-                </div>
-              ))}
+      <section className={styles.advSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Importance of<br />
+            <span>HVAC Systems</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
+        <div className={styles.advFlex}>
+          <div className={styles.residentialImageWrapper}>
+            <div className={styles.residentialMainImage}>
+              <img src={hvm3} alt="Main Building" />
+            </div>
+
+            <div className={styles.residentialFloatingImage}>
+              <img src={hvm4} alt="Interior" />
             </div>
           </div>
-          <div className={styles.imgCol} style={{ display: "flex", justifyContent: "center" }}>
-            <img src="/Images/hvacimportance.jpg" alt="HVAC importance" style={{ width: "100%", maxWidth: "500px", height: "auto", objectFit: "cover", borderRadius: "14px" }} />
+          <div className={styles.advContainer}>
+            <div className={styles.advText}>
+              <p>
+                Solar module mounting structures provide strong support, stability, and proper
+                alignment for maximum solar efficiency. At L&R Green Pvt Ltd, we offer durable
+                solutions for all types of solar projects.
+              </p>
+              <div className={styles.featureListWrap}>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Comfortable indoor temperature</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Improved air quality</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Humidity control</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Enhanced productivity</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Energy efficiency</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* DARK BANNER — ADVANCED COMPONENTS */}
-      <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>HVAC SOLUTIONS</div>
-        <div className={styles.blueBannerContainer}>
-          <div className={styles.blueBannerText}>
-            <h2>Advanced HVAC Components <br /><strong>&amp; System Importance</strong></h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
-            <p>We source and install only certified, tier-1 HVAC components from globally recognized manufacturers. Each component is selected based on efficiency ratings, reliability data, and compatibility with the overall system design to ensure peak performance.</p>
-            <div className={styles.componentGrid}>
-              {components.map((comp, i) => (
-                <div key={i} className={styles.componentItem}>
-                  <strong>{comp.title}</strong>
-                  <p>{comp.desc}</p>
-                </div>
-              ))}
+
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R  hvac solutions</h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Advanced HVAC Components<br />
+              & System Importance
+            </h2>
+            <p>
+              HVAC systems play a vital role in maintaining comfortable indoor temperatures, improving air
+              quality, controlling humidity, and reducing energy consumption through efficient operation.
+              At L&R Green Pvt Ltd, we integrate advanced components such as VRV/VRF systems for precise
+              multi-zone temperature control and high-quality copper piping for durability and efficient
+              heat transfer. Together, these technologies ensure reliable performance and long-lasting comfort
+              across residential, commercial, and industrial spaces.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img src="/Images/hvacadvanced.jpg" alt="Advanced HVAC components" style={{ width: "100%", maxWidth: "480px", height: "auto", objectFit: "cover", borderRadius: "14px" }} />
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
           </div>
         </div>
       </section>
 
+
+
+
+
+
       {/* OUR CORE SERVICES */}
-      <section className={styles.splitSec}>
-        <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Our Core <br /><span>HVAC Services</span></h2>
-            <div className={styles.divider} />
+      <section className={styles.CoreService}>
+        <div className={styles.CoreServiceFlex}>
+          <div className={styles.coreServiceText}>
+            <h2>Our Core <br /><span>HVAC Services</span></h2>
+            <div className={styles.divider}></div>
           </div>
-          <div className={styles.coreServicesGrid}>
-            {coreServices.map((svc, i) => (
-              <div key={i} className={styles.coreServiceCard}>
-                <span className={styles.coreNum}>{svc.num}</span>
-                <h4>{svc.title}</h4>
-                <p>{svc.desc}</p>
+          <p>Essential HVAC services focused on efficient airflow, ventilation, and indoor comfort
+            using high-quality installation and system design.</p>
+        </div>
+        <div className={styles.hardwareFeatureGrid}>
+          {hardwareFeatures.map((item, index) => (
+            <div key={index} className={styles.hardwareFeatureCard}>
+              <div className={styles.hardwareIcon}>
+                {item.icon}
               </div>
-            ))}
-          </div>
+
+              <div className={styles.hardwareContent}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* MAINTENANCE */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Keep Your HVAC System <br /><span>Running Efficiently</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>Regular preventive maintenance is the key to maximizing the efficiency, lifespan, and reliability of your HVAC system. Our AMC plans include:</p>
-            <div className={styles.maintenanceList}>
-              {maintenanceTips.map((tip, i) => (
-                <div key={i} className={styles.maintenanceItem}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                    <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>{tip}</span>
+      <section className={styles.hvacSection}>
+        <div className={styles.hvacSectionTitle}>
+          <h2>
+            Keep Your HVAC System<br />
+            <span>Running Efficiently</span>
+          </h2>
+          <div className={styles.hvacIntroLine}></div>
+        </div>
+
+        <div className={styles.hvacContentWrapper}>
+          <div className={styles.hvacTextContainer}>
+            <div className={styles.hvacContent}>
+              <p>
+                Regular maintenance ensures optimal performance, energy efficiency, and long system life.
+                It also helps prevent unexpected breakdowns and costly repairs. Our maintenance services include:
+              </p>
+
+              <div className={styles.hvacFeatureList}>
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Filter replacement and cleaning</p>
                 </div>
-              ))}
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>System inspection and diagnostics</p>
+                </div>
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Coil cleaning and servicing</p>
+                </div>
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Refrigerant level checks</p>
+                </div>
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Duct cleaning and sealing</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/hvacmaint1.jpg" alt="HVAC maintenance" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/hvacmaint2.jpg" alt="HVAC servicing" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+          <div className={styles.hvacImageWrapper}>
+            <div className={styles.hvacMainImage}>
+              <img src={hvm8} alt="Main Building" />
+            </div>
+
+            <div className={styles.hvacFloatingImage}>
+              <img src={hvm9} alt="Interior" />
             </div>
           </div>
         </div>
       </section>
 
+
+
       {/* WHY CHOOSE */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/whyhvac1.jpg" alt="Why choose HVAC solutions" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/whyhvac2.jpg" alt="HVAC expert team" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Why Choose<br /><span>HVAC Solutions</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          <div className={styles.stackedImageLayout}>
+            <div className={styles.heroImageFrame}>
+              <img src={hvm5} alt="Main Building" />
+            </div>
+
+            <div className={styles.overlayImageFrame}>
+              <img src={hvm6} alt="Interior" />
             </div>
           </div>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Why Choose <br /><span>HVAC Solutions</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>L&amp;R Green India Pvt Ltd brings certified HVAC engineers, trusted brand partnerships, and a proven project delivery track record to every HVAC installation — from small offices to large industrial facilities.</p>
-            <p>Our energy-efficient system designs typically deliver 20–35% savings on electricity costs compared to conventional installations, with superior indoor air quality and long-term reliability backed by our AMC support.</p>
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>Choosing the right HVAC solution is essential for creating a comfortable, healthy, and
+              energy-efficient indoor environment. A well-designed system ensures consistent temperature
+              control, proper ventilation, and improved air quality by reducing pollutants and allergens.
+              It also helps maintain balanced humidity levels, which is important for both occupant comfort
+              and the longevity of building interiors and equipment.</p>
+            <p>Modern HVAC solutions are built with advanced, energy-efficient technologies that reduce power
+              consumption and operational costs over time. With reliable performance, smart controls, and low
+              maintenance requirements, these systems provide long-term value for residential, commercial, and
+              industrial spaces while supporting sustainable and eco-friendly operations.</p>
           </div>
         </div>
       </section>
+
+
 
       {/* FAQ */}
       <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
-          <div className={styles.faqHeaderRow}>
-            <div>
-              <h2 className={styles.secTitle}>Frequently Asked <br /><span>Questions</span></h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqDesc}>Common questions about our HVAC services — system types, installation timelines, and maintenance.</p>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter}>
-              <img src="/Images/faqhvac.jpg" alt="FAQ HVAC" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: "12px" }} />
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div key={faq.id} className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}>
-                  <div className={styles.faqHeader} onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>{openFaq === faq.id ? "↓" : "↑"}</span>
-                  </div>
-                  {openFaq === faq.id && <div className={styles.faqBody}><p>{faq.a}</p></div>}
+          <p>Find answers to common questions about prefabricated rooftop residential flats, including
+            installation, safety, customization, and suitability for different building types.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={hvm7} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+
       {/* CTA */}
-      <section className={styles.ctaBanner} style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.62)), url('/Images/ctahvac.jpg')" }}>
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your HVAC Solutions ?</h2>
-          <p>Connect with our team to design and deliver energy-efficient, reliable HVAC systems for your commercial, industrial, or prefab facility.</p>
-          <button className={styles.btnSecondary}>Contact US &nbsp;→</button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Ready for Your HVAC Solutions ?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized insulated  HVAC Solutions  solutions tailored to your site needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
+
 
       <Footer />
     </div>

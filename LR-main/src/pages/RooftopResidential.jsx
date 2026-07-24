@@ -480,6 +480,8 @@ const RooftopResidential = () => {
         </div>
       </section>
 
+      
+
       {/* ── CTA BANNER ── */}
       <section className={styles.cta}>
         <h2>Ready for Your Prefab Servant Room Solutions?</h2>
