@@ -47,6 +47,7 @@ import ContactUs from "./pages/ContactUs";
 import Brochure from "./pages/Brochure";
 import HomeContainer from "./pages/HomeContainer";
 import PreBuild from "./pages/PreBuild";
+import EpcPanel from "./pages/EpcPanel";
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
         <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
 
         <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
+        <Route path="/eps-panels" element={<EpcPanel />} />
         <Route path="/wall-puf-panels" element={<WallPufPanels />} />
         <Route path="/roof-puf-panels" element={<RoofPufPanels />} />
 

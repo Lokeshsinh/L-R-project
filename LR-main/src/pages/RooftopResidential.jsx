@@ -91,6 +91,7 @@ const RooftopResidential = () => {
   ];
 
 
+
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -426,7 +427,7 @@ const RooftopResidential = () => {
       </section>
 
 
-      
+
 
       {/* ── SECTION 7: FAQ SECTION ── */}
       <section className={styles.faqSec}>
@@ -480,7 +481,7 @@ const RooftopResidential = () => {
         </div>
       </section>
 
-      
+
 
       {/* ── CTA BANNER ── */}
       <section className={styles.cta}>
