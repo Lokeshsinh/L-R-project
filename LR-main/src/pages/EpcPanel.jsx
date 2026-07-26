@@ -217,7 +217,6 @@ function EpcPanel() {
             </section>
 
             {/* ------------------key------------------------ */}
-
             <section className={styles.TechUser}>
                 <div className={styles.TechText}>
                     <h2>EPS Panels <br /><span>Technical Specifications</span></h2>
@@ -250,6 +249,7 @@ function EpcPanel() {
                     </div>
                 </div>
             </section>
+
 
 
 

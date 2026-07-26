@@ -2,87 +2,117 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RoofPufPanels.module.css";
+import {
+  ArrowRight, ArrowUpRight, Paperclip, Plus, X, CheckCircle2,
+} from "lucide-react";
+import roof1 from '../assets/panel/rufpanel/roof1.png'
+import roof2 from '../assets/panel/rufpanel/roof2.png'
+import roof4 from '../assets/panel/rufpanel/roof4.png'
+import roof5 from '../assets/panel/rufpanel/roof5.png'
+import roof6 from '../assets/panel/rufpanel/roof6.png'
+import roof7 from '../assets/panel/rufpanel/roof7.png'
+import roof8 from '../assets/panel/rufpanel/roof8.png'
 
+import design from '../assets/panel/rufpanel/design.png'
+import design1 from '../assets/panel/rufpanel/design1.png'
+import { useNavigate } from 'react-router-dom'
 const RoofPufPanels = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const applicationsList = [
-    "Industrial Manufacturing Units",
-    "Warehouses",
-    "Cold Storages",
-    "Food Processing Facilities",
-    "Pharmaceutical Facilities",
-    "Commercial Buildings",
-  ];
-
-  const thicknessCards = [
+  const applications = [
     {
-      title: "30 + 30 mm",
-      desc: "Ideal for general roof insulation where moderate thermal control is required.",
-      active: false,
+      number: "01",
+      title: "Industrial Sheds",
+      desc: "Manufacturing and production units demanding stable thermal envelopes.",
     },
     {
-      title: "40 + 30 mm",
-      desc: "Offers balanced insulation for warehouses and industrial sheds.",
-      active: true, // Dark blue background
+      number: "02",
+      title: "Warehouses & Logistics",
+      desc: "Temperature stability for stored goods and high-throughput hubs.",
+      active: true,
+    },
+    {
+      number: "03",
+      title: "Cold Storage",
+      desc: "Insulation-critical buildings for controlled-temperature environments.",
+    },
+    {
+      number: "04",
+      title: "Pre-Engineered Buildings",
+      desc: "Integrated roofing for modular and PEB construction systems.",
+    },
+    {
+      number: "05",
+      title: "Commercial Complexes",
+      desc: "Lightweight insulated solutions for retail, office and mixed-use.",
+    },
+    {
+      number: "06",
+      title: "Agricultural Storage",
+      desc: "Protection from heat and moisture for produce and equipment.",
+    },
+  ];
+
+
+
+  const cards = [
+    {
+      title: "30 + 30 mm",
+      thickness: "Total thickness: 60 mm",
+      description:
+        "Suitable for moderate insulation requirements and light industrial structures.",
     },
     {
       title: "50 + 30 mm",
-      desc: "Excellent thermal resistance for cold storages and food processing units.",
-      active: false,
+      thickness: "Total thickness: 80 mm",
+      description:
+        "Wipe-clean surfaces and durable finishes simplify daily upkeep.",
+      active: true,
+    },
+    {
+      title: "80 + 30 mm",
+      thickness: "Total thickness: 110 mm",
+      description:
+        "Designed for high thermal insulation needs in hot or cold climates.",
     },
     {
       title: "100 + 30 mm",
-      desc: "Maximum insulation for extreme temperature control requirements.",
-      active: false,
+      thickness: "Total thickness: 130 mm",
+      description:
+        "Recommended for temperature-sensitive environments and high-performance roofing.",
     },
   ];
 
-  const gridApplications = [
+  const specifications = [
     {
-      num: "01",
-      title: "Industrial Sheds",
-      desc: "Ideal for large span roofing that requires superior thermal insulation.",
+      feature: "Conventional Roofing",
+      value: "Roof PUF Panels",
     },
     {
-      num: "02",
-      title: "Warehouses & Logistics",
-      desc: "Maintains optimal indoor temperature for storage of goods.",
+      feature: "Longer installation time",
+      value: "Rapid installation",
     },
     {
-      num: "03",
-      title: "Cold Storages",
-      desc: "Prevents heat transfer and reduces cooling costs significantly.",
+      feature: "Heavy structure",
+      value: "Lightweight system",
     },
     {
-      num: "04",
-      title: "Pre-Engineered Buildings",
-      desc: "Seamless integration with PEB structures for fast installation.",
+      feature: "Higher maintenance",
+      value: "Low maintenance",
     },
     {
-      num: "05",
-      title: "Commercial Complexes",
-      desc: "Enhances energy efficiency and provides acoustic insulation.",
-    },
-    {
-      num: "06",
-      title: "Agricultural Storage",
-      desc: "Protects agricultural produce from extreme weather variations.",
+      feature: "Poor energy efficiency",
+      value: "Energy-saving solution",
     },
   ];
-
-  const qualityList = [
-    "ISO certified manufacturing processes",
-    "Premium quality raw materials",
-    "Advanced continuous panel presses",
-    "Strict quality control procedures",
-    "Prompt delivery and customer support",
-  ];
-
   const faqs = [
     {
       id: 0,
@@ -111,559 +141,481 @@ const RoofPufPanels = () => {
     },
   ];
 
-  const CheckIcon = () => (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="12" cy="12" r="10" fill="#2b3a55" />
-      <path
-        d="M8 12L11 15L16 9"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+
 
   return (
     <div className={styles.wrapper}>
       <Header />
 
       {/* ── HERO ── */}
-      <section
-        className={styles.heroSec}
-        style={{
-          backgroundImage: "url('/Images/insulatedroof.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            HIGH-PERFORMANCE <br />
-            INSULATED ROOFING SYSTEMS
+            High-Performance<br />
+            <span>Insulated Roofing Systems
+            </span>
           </h1>
-          <p className={styles.subtitle}>
-            L&amp;R Enterprises has been updated roofing systems providing high
-            thermal insulation with strong structure and excellent thermal
-            resistance for modern construction.
+          <p className={styles.heroDesc}>
+            High-performance insulated sandwich roofing made with
+            PPGI sheets and a high-density polyurethane core.
+
           </p>
-          <button className={styles.btnPrimary}>
-            Contact us &nbsp;
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
 
+
+
+
+
+
       {/* ── ADVANCED INSULATED SOLUTIONS ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <h2 className={styles.secTitle}>
-              Advanced Insulated <br />
-              <span>Solutions</span>
-            </h2>
-            <div className={styles.divider} />
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft}></div>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/inslulatedsolution.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Advanced Insulated <br />
+            <span>Solutions</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.metalPanelWrapper}>
+            <div className={styles.metalPanelBackground}></div>
+
+            <div className={styles.metalPanelImageBox}>
+              <img
+                src={roof1}
+                alt="Metal Panel"
+                className={styles.metalPanelImage}
+              />
             </div>
           </div>
-          <div className={styles.textCol}>
+          <div className={styles.introText}>
             <p>
-              Roof PUF panels are one of the most advanced roofing systems used
-              in modern construction. They offer a winning combination of
-              structural strength and exceptional thermal insulation. The top
-              sheet has a trapezoidal profile, while the bottom sheet can be
-              profile or plain, depending on the requirement.
+              Wall PUF panels are advanced insulated sandwich panels designed for modern construction needs.
+              They consist of strong metal facings bonded with a high-density polyurethane foam core, creating
+              a rigid structure that delivers excellent thermal insulation and overall stability. These panels
+              help maintain consistent indoor temperatures while enhancing the durability of industrial and commercial buildings.
             </p>
             <p>
-              Our Roof PUF panels are manufactured using state-of-the-art
-              continuous sandwich panel presses, ensuring uniform foam density
-              and strong adhesion between the foam core and the metal facings.
-              This results in superior thermal performance and long-term
-              durability.
+              The construction of Wall PUF panels includes inner and outer metal sheets—typically made from PPGI or
+              GI—combined with a high-performance polyurethane foam core. A tongue-and-groove interlocking system
+              ensures tight panel joints, allowing quick installation, improved airtightness, and a seamless finished appearance.
             </p>
-            <button
-              className={styles.btnSecondary}
-              style={{ marginTop: "16px" }}
-            >
-              Get Contact &nbsp;
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
             </button>
           </div>
+
         </div>
       </section>
+
+
 
       {/* ── COMPOSITION & APPLICATIONS ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Roof PUF Panels <br />
-              <span>Composition &amp; Applications</span>
-            </h2>
-            <div className={styles.divider} />
-            <p>
-              L&amp;R Green India Pvt Ltd offers high-quality Roof PUF Panels
-              designed to meet the demands of various industrial and commercial
-              roofing projects. Our panels are widely recognized for their
-              excellent insulation, structural rigidity, and easy installation.
-            </p>
-            <div className={styles.featureList}>
-              {applicationsList.map((app, i) => (
-                <div key={i} className={styles.featureItem}>
-                  <CheckIcon />
-                  <span>{app}</span>
+      <section className={styles.advSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Roof PUF Panels<br />
+            <span>Composition & Applications</span>
+          </h2>
+          <div className={styles.introLine}></div>
+        </div>
+        <div className={styles.advFlex}>
+          <div className={styles.advContainer}>
+            <div className={styles.advText}>
+              <p>
+                Roof PUF panels are insulated sandwich panels consisting of external pre-painted galvanized
+                iron (PPGI) sheet, high-density polyurethane foam core, internal PPGI sheet, and an interlocking
+                joint system. The polyurethane core acts as a high-performance insulation layer that minimizes
+                heat transfer while maintaining structural rigidity.
+              </p>
+              <div className={styles.featureListWrap}>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} color="white" />
+                  </div>
+                  <p className={styles.featureText}>Pre-engineered buildings (PEB)</p>
                 </div>
-              ))}
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Industrial sheds</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Warehouses</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Cold rooms</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Modular cabins</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Commercial buildings</p>
+                </div>
+                <div className={styles.featureRow}>
+                  <div className={styles.featureIconBox}>
+                    <Paperclip size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.featureText}>Clean room facilities</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className={styles.imgCol}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeRight}></div>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/roofpuf.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
+          {/*  */}
+          <div className={styles.RoofImage}>
+            <img src={roof2} alt="error" />
           </div>
         </div>
       </section>
+
+
+
+      <section className={styles.AvableSection}>
+        <div className={styles.AvableFlex}>
+          <div className={styles.AvableText}>
+            <h2>Available Thickness <br /> <span>Combinations</span></h2>
+            <div className={styles.AvableLine}></div>
+          </div>
+          <p>The +30 mm layer ensures structural rigidity while maintaining
+            insulation stability across the panel.</p>
+        </div>
+
+        <div className={styles.thicknessSection}>
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`${styles.thicknessCard} ${card.active ? styles.activeCard : ""
+                }`}
+            >
+              <h2>{card.title}</h2>
+              <h4>{card.thickness}</h4>
+              <p>{card.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+
+
 
       {/* ── AVAILABLE THICKNESS COMBINATIONS ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.containerMax}>
-          <div className={styles.thicknessHeaderRow}>
-            <div className={styles.thicknessHeaderLeft}>
-              <h2 className={styles.secTitle} style={{ marginBottom: "14px" }}>
-                Available Thickness <br />
-                <span>Combinations</span>
-              </h2>
-              <div className={styles.divider} style={{ marginBottom: 0 }} />
-            </div>
-            <p className={styles.thicknessDesc}>
-              Our Roof PUF Panels are available in various thickness
-              combinations to suit different requirements:
-            </p>
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Features, Performance<br /><span>& Safety</span></h2>
+          <div className={styles.AvableLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          <div className={styles.safetyImage}>
+            <img src={roof4} alt="error" />
           </div>
-          <div className={styles.thicknessGrid}>
-            {thicknessCards.map((card, i) => (
-              <div
-                key={i}
-                className={`${styles.thicknessCard} ${card.active ? styles.thicknessCardActive : ""}`}
-              >
-                <h3>{card.title}</h3>
-                <p>{card.desc}</p>
-              </div>
-            ))}
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>Roof PUF panels are designed for high performance, combining thermal insulation,
+              structural strength, and long-lasting durability. The high-density PUF core reduces
+              heat transfer, while the strong panel structure withstands wind loads and environmental
+              stress. A secure interlocking system ensures effective waterproofing and leak protection.</p>
+            <p>These panels also offer enhanced safety with fire-retardant options, along with corrosion
+              and UV resistance for extended service life. Their low-maintenance design and excellent
+              insulation performance help improve energy efficiency, indoor comfort, and HVAC effectiveness.</p>
           </div>
+
         </div>
       </section>
+
+
 
       {/* ── FEATURES, PERFORMANCE & SAFETY ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <h2 className={styles.secTitle}>
-              Features, Performance <br />
-              <span>&amp; Safety</span>
-            </h2>
-            <div className={styles.divider} />
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft}></div>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/safetyroof.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
-            <p>
-              Roof PUF panels offer a range of features that enhance roofing
-              performance. They provide excellent thermal insulation, which
-              helps in maintaining the desired indoor temperature and
-              significantly reduces energy consumption for heating and cooling.
-            </p>
-            <p>
-              These panels are also lightweight, making them easy to handle and
-              install. The rigid polyurethane foam core provides high structural
-              strength, ensuring the stability and durability of the roofing
-              system even under harsh weather conditions.
-            </p>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── WEATHERPROOF BANNER ── */}
-      <section className={styles.blueBannerSec}>
-        <div className={styles.blueBannerContainer}>
-          <div className={styles.blueBannerText}>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L & R Ro0f PUF PANELS </h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
             <h2>
-              Weatherproof Performance <br />
-              &amp; Fast Installation Benefits
+              Weatherproof Performance<br />
+              & Fast Installation Benefits
             </h2>
             <p>
-              Our Roof PUF panels are designed to withstand extreme weather
-              conditions. The robust metal facings and the tightly sealed joints
-              ensure excellent weather resistance, preventing water ingress and
-              protecting the interior space.
+              Roof PUF panels provide strong protection against rain, wind, UV exposure, corrosion,
+              and moisture, with an advanced interlocking system that ensures a leak-proof and durable
+              roofing solution. They are also factory-made for precision, allowing fast installation
+              with minimal labor, reduced on-site work, and quicker project completion.
             </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
           </div>
-          <div className={styles.blueBannerImg}>
-            <div
-              className={styles.placeholderImgTransparent}
-              style={{
-                backgroundImage: "url('/Images/weatherproof.png')",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-            ></div>
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
           </div>
         </div>
       </section>
 
-      {/* ── APPLICATIONS OF ROOF PUF PANELS (GRID) ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.containerMax}>
-          <div
-            className={styles.thicknessHeaderRow}
-            style={{ marginBottom: "40px" }}
-          >
-            <div>
-              <h2 className={styles.secTitle}>
-                Applications of <br />
-                <span>Roof PUF Panels</span>
-              </h2>
-              <div className={styles.divider} />
+      {/* -----cards--------------- */}
+      <section className={styles.roofPuf}>
+        <div className={styles.roofPufText}>
+          <h2>Applications of  <br /><span>Roof PUF Panels</span></h2>
+          <div className={styles.AvableLine}></div>
+        </div>
+
+        <div className={styles.applicationGrid}>
+          {applications.map((item, index) => (
+            <div
+              key={index}
+              className={`${styles.applicationCard} ${item.active ? styles.activeCard : ""
+                }`}
+            >
+              <span className={styles.cardNumber}>{item.number}</span>
+
+              <h3>{item.title}</h3>
+
+              <p>{item.desc}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+
+
+
+
+
+      {/* ── APPLICATIONS OF ROOF PUF PANELS (GRID) ── */}
+      <section className={styles.roofPanelSection}>
+        <div className={styles.roofPanelHeading}>
+          <h2>
+            Sustainable Performance
+            <br />
+            <span>& Customization Options</span>
+          </h2>
+          <div className={styles.AvableLine}></div>
+        </div>
+
+        <div className={styles.roofPanelContent}>
+
+          <div className={styles.roofPanelText}>
+            <p>
+              Roof PUF panels support sustainable construction by reducing energy consumption,
+              improving thermal efficiency, lowering operational costs, and minimizing carbon
+              footprint. Their energy-efficient design helps maintain stable indoor conditions,
+              making buildings more eco-friendly and cost-effective. The use of recyclable steel
+              components further promotes environmentally responsible construction practices.
+            </p>
+
+            <p>
+              L&R Enterprises also provides complete customization to meet different project needs, including
+              thickness configuration (30+30, 50+30, 80+30, 100+30 mm), PPGI sheet thickness options ranging
+              from 0.3 to 0.8 mm, color selection, panel length as per project requirements, roof profile design,
+              and insulation density adjustments. Each roofing system is carefully tailored based on location,
+              climate conditions, and structural requirements to ensure maximum performance and efficiency.
+            </p>
           </div>
-          <div className={styles.appGrid3x2}>
-            {gridApplications.map((app, i) => (
-              <div key={i} className={styles.appGridCard}>
-                <div className={styles.appGridNum}>{app.num}</div>
-                <h4>{app.title}</h4>
-                <p>{app.desc}</p>
+          <div className={styles.roofPanelImageCard}>
+            <img src={roof5} alt="Roof Panel" />
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      {/* ── ADVANTAGES OVER CONVENTIONAL ROOFING ── */}
+      <section className={styles.TechUser}>
+        <div className={styles.TechText}>
+          <h2>EPS Panels <br /><span>Technical Specifications</span></h2>
+          <div className={styles.TechLine}></div>
+        </div>
+        <div className={styles.TechFlex}>
+          <div className={styles.roofCard}>
+            <img src={roof8} alt="Roof Panel" className={styles.roofCard__img} />
+            <div className={styles.roofCard__dimmer} />
+          </div>
+          <div className={styles.specificationTable}>
+            {specifications.map((item, index) => (
+              <div className={styles.tableRow} key={index}>
+                <div className={styles.featureColumn}>
+                  {item.feature}
+                </div>
+
+                <div className={styles.valueColumn}>
+                  {item.value}
+                </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ── SUSTAINABLE PERFORMANCE ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Sustainable Performance <br />
-              <span>&amp; Customization Options</span>
-            </h2>
-            <div className={styles.divider} />
-            <p>
-              L&amp;R Enterprises is committed to providing sustainable building
-              solutions. The polyurethane foam used in our Roof PUF Panels is
-              free from CFCs and HCFCs, making it an environmentally friendly
-              choice that helps reduce the carbon footprint of your building.
-            </p>
-            <p>
-              We offer a wide range of customization options to meet specific
-              project requirements. You can choose from various panel
-              thicknesses, profile designs, and color options for the metal
-              facings. This allows you to achieve the desired aesthetic appeal
-              while ensuring optimal thermal performance and structural
-              integrity.
-            </p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeRight}></div>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/customroof.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── ADVANTAGES OVER CONVENTIONAL ROOFING ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <h2 className={styles.secTitle}>
-              Advantages Over <br />
-              <span>Conventional Roofing</span>
-            </h2>
-            <div className={styles.divider} />
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft}></div>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/advroof.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
-            <div className={styles.compareGrid}>
-              <div className={styles.compareRow}>
-                <span className={styles.compareLabel}>
-                  Conventional Roofing
-                </span>
-                <span className={styles.compareValue}>Roof PUF Panels</span>
-              </div>
-              <div className={styles.compareRow}>
-                <span className={styles.compareLabel}>
-                  High Installation Time
-                </span>
-                <span className={styles.compareValue}>Fast &amp; Simple</span>
-              </div>
-              <div className={styles.compareRow}>
-                <span className={styles.compareLabel}>
-                  Poor Thermal Insulation
-                </span>
-                <span className={styles.compareValue}>Excellent</span>
-              </div>
-              <div className={styles.compareRow}>
-                <span className={styles.compareLabel}>
-                  Low Water Resistance
-                </span>
-                <span className={styles.compareValue}>Low Maintenance</span>
-              </div>
-              <div className={styles.compareRow}>
-                <span className={styles.compareLabel}>
-                  High Energy Consumption
-                </span>
-                <span className={styles.compareValue}>
-                  Energy Saving (up to 40%)
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── QUALITY ASSURANCE ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Quality Assurance &amp; Why <br />
-              <span>Choose L&amp;R Green</span>
-            </h2>
-            <div className={styles.divider} />
-            <p>
-              At L&amp;R Green India Pvt Ltd, quality is our top priority. Our
-              Roof PUF Panels undergo rigorous quality control checks at every
-              stage of the manufacturing process to ensure they meet the highest
-              industry standards.
-            </p>
-            <div className={styles.numList}>
-              {qualityList.map((q, i) => (
-                <div key={i} className={styles.numItem}>
-                  <span className={styles.numBadge}>{i + 1}</span>
-                  <span>{q}</span>
+      <section className={styles.roofApplicationSection}>
+        <div className={styles.roofApplicationHeading}>
+          <h2>Quality Assurance & Why <br />Choose L&R Green</h2>
+          <div className={styles.roofApplicationLine}></div>
+        </div>
+        <div className={styles.hvacContentWrapper}>
+          <div className={styles.hvacTextContainer}>
+            <div className={styles.hvacContent}>
+              <p>
+                At L&R Green, Roof PUF panels undergo strict quality checks including material inspection, density
+                testing, thickness verification, coating inspection, and dimensional accuracy, ensuring durable, reliable,
+                and consistent performance.
+              </p>
+
+              <div className={styles.hvacFeatureList}>
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Strict quality control with raw material inspection and testing checks</p>
                 </div>
-              ))}
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Advanced manufacturing facility ensuring precision and consistent output</p>
+                </div>
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Custom engineering support with ISO-aligned quality standards</p>
+                </div>
+
+                <div className={styles.hvacFeatureItem}>
+                  <div className={styles.hvacFeatureIcon}>
+                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                  </div>
+                  <p className={styles.hvacFeatureText}>Pan-India supply with competitive pricing and timely delivery</p>
+                </div>
+              </div>
+              <p>L&R Green India delivers durable, efficient panels with reliable
+                quality and quick installation for modern construction.</p>
             </div>
           </div>
-          <div className={styles.imgCol}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeRight}></div>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/greenroof.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
+          <div className={styles.container}>
+            <img src={roof7} alt="Roof Panel" className={styles.media} />
+            <div className={styles.shade} />
           </div>
+
         </div>
       </section>
 
       {/* ── FAQ SECTION ── */}
+      {/* ── SECTION 8: FAQ SECTION ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqContainer}>
-          <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
-              <h2 className={styles.secTitle} style={{ marginBottom: "14px" }}>
-                Frequently Asked <br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} style={{ marginBottom: 0 }} />
-            </div>
-            <p className={styles.faqDesc}>
-              Find answers to common questions about insulated roofing systems,
-              thermal performance, and installation.
-            </p>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-
-          <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter}>
+          <p>Find answers to common questions about prefabricated rooftop residential flats, including
+            installation, safety, customization, and suitability for different building types.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={roof6} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
               <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/feqroof.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqItemActive : ""
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
                   }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div
-                    className={styles.faqHeader}
-                    onClick={() =>
-                      setOpenFaq(openFaq === faq.id ? null : faq.id)
-                    }
-                  >
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? (
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <polyline points="19 12 12 19 5 12" />
-                        </svg>
-                      ) : (
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <line x1="12" y1="19" x2="12" y2="5" />
-                          <polyline points="5 12 12 5 19 12" />
-                        </svg>
-                      )}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqBody}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* ── CTA BANNER ── */}
-      <section
-        className={styles.ctaBanner}
-        style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/Images/catroof.jpg')",
-        }}
-      >
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your Insulated PUF Panels Solution?</h2>
-          <p>
-            Connect with our team to design and deliver durable, efficient, and fully
-            customized insulated PUF panel solutions tailored to your site needs.
-          </p>
-          <button
-            className={styles.btnSecondary}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              background: "#3164a6",
-              color: "#fff",
-            }}
-          >
-            Contact US &nbsp;
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
-        </div>
+
+
+      <section className={styles.cta}>
+        <h2>Ready for Your Rockwool Panels Solution?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized insulated Rockwool Panels solutions tailored to your site needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
+
+
 
       <Footer />
     </div>
