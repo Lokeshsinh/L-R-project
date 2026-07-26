@@ -19,25 +19,25 @@ const WhyPartner = () => {
     {
       num: "01",
       title: "Our Goals",
-      text: "Our goal is to provide excellent quality products, which satisfy every need of our clients adequately and serve them well.",
+      text: "To deliver innovative prefabricated solutions with quality and efficiency. We focus on customer satisfaction and sustainable construction.",
       icon: <Goal size={30} strokeWidth={2} />,
     },
     {
       num: "02",
       title: "Our Mission",
-      text: "Our mission is to work hard to take care of whatever our clients want now and in the future and prosper doing so.",
+      text: "To provide reliable modular building solutions through advanced technology. We create safe, durable, and cost-effective structures worldwide.",
       icon: <Flag size={30} strokeWidth={2} />,
     },
     {
       num: "03",
       title: "Our Client",
-      text: "Our aim is to keep thriving tirelessly to reach the core of the satisfaction of our clients with our amazing services. We make client happy.",
+      text: "We proudly serve industrial, commercial, infrastructure, and government sectors. Our commitment is to build lasting partnerships through trust and quality.",
       icon: <Users size={30} strokeWidth={2} />,
     },
     {
       num: "04",
       title: "Our Vision",
-      text: "Big or small we have delivered every project on time and to customers satisfaction.",
+      text: "To become a global leader in prefabricated modular construction. We strive for innovation, sustainability, and excellence in every project.",
       icon: <Eye size={30} strokeWidth={2} />,
     },
   ];

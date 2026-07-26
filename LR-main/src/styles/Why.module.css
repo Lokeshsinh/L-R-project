@@ -355,7 +355,8 @@
 /* WHITE CARD */
 
 .whiteCard {
-  background: #fff;
+  background: #2f456f;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,7 +369,7 @@
   font-size: 34px;
   font-weight: 500;
   line-height: 1.3;
-  color: #111;
+  color: white;
   margin-bottom: 20px; /* Space between title and image */
 }
 
@@ -436,57 +437,425 @@
   }
 }
 
-@media (max-width: 900px) {
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+/* 1440px */
+@media (max-width:1440px){
+
+  .section-head h2{
+    font-size:48px;
   }
 
-  .technical-section {
-    grid-template-columns: 1fr;
-    padding: 24px;
+  .whyGrid{
+    gap:18px;
   }
+
+  .whyCard{
+    min-height:290px;
+    padding:24px;
+  }
+
+  .whyCard h3{
+    font-size:20px;
+  }
+
+  .blueCard h2{
+    font-size:30px;
+  }
+
+  .buildBox{
+    font-size:48px;
+  }
+
+  .whiteCard h3{
+    font-size:30px;
+  }
+
 }
 
-@media (max-width: 760px) {
-  .section-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+/* 1366px */
+@media (max-width:1366px){
+
+  .why-section{
+    padding:70px 45px;
   }
 
-  .center {
-    align-items: center;
+  .grid{
+    grid-auto-rows:300px;
   }
 
-  .section-head h2 {
-    font-size: 30px;
+  .iconCircle{
+    width:78px;
+    height:78px;
   }
 
-  .why-section {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
 }
 
-@media (max-width: 560px) {
-  .why-section {
-    padding: 55px 22px;
+/* 1280px */
+@media (max-width:1280px){
+
+  .section-head h2{
+    font-size:44px;
   }
 
-  .why-grid {
-    grid-template-columns: 1fr;
+  .subtitle{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:18px;
   }
 
-  .technical-grid {
-    grid-template-columns: 1fr;
+  .whyGrid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .technical-grid img:first-child {
-    height: 220px;
-    grid-row: auto;
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+    grid-auto-rows:300px;
   }
 
-  .technical-grid img {
-    height: 220px;
+  .whiteCard img{
+    margin-top:-40px;
   }
+
+}
+
+/* 1199px */
+@media (max-width:1199px){
+
+  .why-section{
+    padding:65px 40px;
+  }
+
+  .whyCard{
+    min-height:270px;
+  }
+
+  .blueCard h2{
+    font-size:28px;
+  }
+
+  .buildBox{
+    font-size:42px;
+  }
+
+}
+
+/* 1024px */
+@media (max-width:1024px){
+
+  .why-section{
+    padding:60px 35px;
+  }
+
+  .section-head h2{
+    font-size:40px;
+  }
+
+  .subtitle{
+    font-size:15px;
+  }
+
+  .whyCard{
+    padding:22px;
+  }
+
+  .iconBox{
+    width:64px;
+    height:64px;
+  }
+
+  .number{
+    font-size:40px;
+  }
+
+  .grid{
+    gap:0;
+    grid-template-columns:repeat(2,1fr);
+    grid-auto-rows:280px;
+    padding:10px;
+  }
+
+  .whiteCard h3{
+    font-size:28px;
+  }
+
+}
+
+/* 991px */
+@media (max-width:991px){
+
+  .whyGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    grid-auto-rows:320px;
+  }
+
+  .blueCard h2{
+    font-size:30px;
+  }
+
+  .buildBox{
+    font-size:46px;
+  }
+
+  .whiteCard img{
+    width:80%;
+    margin-top:-20px;
+  }
+
+}
+
+/* 768px */
+@media (max-width:768px){
+
+  .why-section{
+    padding:55px 25px;
+  }
+
+  .section-head{
+    margin-bottom:30px;
+  }
+
+  .section-head h2{
+    font-size:34px;
+    line-height:1.3;
+  }
+
+  .subtitle{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .tag{
+    font-size:14px;
+    padding:7px 18px;
+  }
+
+  .divider{
+    margin-top:12px;
+  }
+
+  .whyGrid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .whyCard{
+    min-height:auto;
+    padding:24px;
+  }
+
+  .topArea{
+    margin-bottom:20px;
+  }
+
+  .number{
+    font-size:36px;
+  }
+
+  .whyCard h3{
+    font-size:22px;
+  }
+
+  .whyCard p{
+    font-size:15px;
+  }
+
+  .grid{
+    margin-top:40px;
+    grid-template-columns:1fr;
+    grid-auto-rows:280px;
+  }
+
+  .whiteCard h3{
+    font-size:26px;
+  }
+
+  .blueCard h2{
+    font-size:28px;
+  }
+
+  .buildBox{
+    font-size:40px;
+  }
+
+}
+
+/* 600px */
+@media (max-width:600px){
+
+  .why-section{
+    padding:50px 20px;
+  }
+
+  .section-head h2{
+    font-size:30px;
+  }
+
+  .subtitle{
+    font-size:14px;
+  }
+
+  .iconCircle{
+    width:72px;
+    height:72px;
+  }
+
+  .iconCircle svg{
+    width:32px;
+    height:32px;
+  }
+
+  .grid{
+    grid-auto-rows:260px;
+  }
+
+  .whiteCard{
+    padding:24px;
+  }
+
+  .whiteCard h3{
+    font-size:24px;
+  }
+
+}
+
+/* 480px */
+@media (max-width:480px){
+
+  .why-section{
+    padding:45px 16px;
+  }
+
+  .tag{
+    font-size:13px;
+    padding:6px 16px;
+  }
+
+  .section-head h2{
+    font-size:27px;
+  }
+
+  .subtitle{
+    font-size:13px;
+  }
+
+  .whyCard{
+    padding:20px;
+    border-radius:14px;
+  }
+
+  .iconBox{
+    width:58px;
+    height:58px;
+  }
+
+  .iconBox svg{
+    width:26px;
+    height:26px;
+  }
+
+  .number{
+    font-size:32px;
+  }
+
+  .whyCard h3{
+    font-size:20px;
+  }
+
+  .whyCard p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .grid{
+    grid-auto-rows:240px;
+  }
+
+  .blueCard h2{
+    font-size:24px;
+  }
+
+  .whiteCard h3{
+    font-size:22px;
+  }
+
+  .buildBox{
+    font-size:34px;
+    padding:18px 28px;
+  }
+
+}
+
+/* 390px */
+@media (max-width:390px){
+
+  .section-head h2{
+    font-size:24px;
+  }
+
+  .whyCard{
+    padding:18px;
+  }
+
+  .blueCard h2{
+    font-size:22px;
+  }
+
+  .whiteCard h3{
+    font-size:20px;
+  }
+
+  .buildBox{
+    font-size:30px;
+    padding:16px 22px;
+  }
+
+  .grid{
+    grid-auto-rows:220px;
+  }
+
+}
+
+/* 360px */
+@media (max-width:360px){
+
+  .why-section{
+    padding:40px 14px;
+  }
+
+  .section-head h2{
+    font-size:22px;
+  }
+
+  .subtitle{
+    font-size:12px;
+  }
+
+  .tag{
+    font-size:12px;
+  }
+
+  .whyCard h3{
+    font-size:18px;
+  }
+
+  .whyCard p{
+    font-size:13px;
+  }
+
+  .blueCard h2{
+    font-size:20px;
+  }
+
+  .whiteCard h3{
+    font-size:18px;
+  }
+
+  .buildBox{
+    font-size:26px;
+  }
+
 }

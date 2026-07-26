@@ -1,7 +1,7 @@
 import styles from "../../styles/ClientStrip.module.css";
 
-import animation1 from "../../assets/Home/animation1.png";
-import animation2 from "../../assets/Home/animation2.png";
+import animation1 from "../../assets/Home/logos1.png";
+import animation2 from "../../assets/Home/logos2.png";
 import animation3 from "../../assets/Home/animation3.png";
 import animation4 from "../../assets/Home/animation4.png";
 import animation5 from "../../assets/Home/animation5.png";

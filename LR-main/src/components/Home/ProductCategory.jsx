@@ -1,6 +1,8 @@
 import React from "react";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+// import { ArrowUpRight,  } from "lucide-react";
 import styles from "../../styles/Products.module.css";
+import office from '../../assets/Home/office.jpg'
+import labour from '../../assets/Home/labour.jpg'
 
 const ProductCategory = () => {
   const products = [
@@ -10,9 +12,9 @@ const ProductCategory = () => {
       desc: "Pre-Engineered Buildings are durable, flexible, and cost-efficient steel structures built for faster construction.",
     },
     {
-      title: "Solar Structure",
-      img: "/Images/Solarstructure.jpg",
-      desc: "",
+      title: "Pre-Fab site office",
+      img: office,
+      desc: "Prefabricated site offices for workspaces. Built for quick installation at construction and industrial sites.",
     },
     {
       title: "MS Container",
@@ -20,9 +22,9 @@ const ProductCategory = () => {
       desc: "Compact, secure storage and office solutions. Manufactured with Mild Steel for uncompromising security in the field.",
     },
     {
-      title: "HVAC",
-      img: "/Images/hvac.jpg",
-      desc: "HVAC systems ensure comfortable environments. At L&R Green Pvt Ltd, we provide solutions for efficient performance.",
+      title: "Labour Accommodation",
+      img: labour,
+      desc: "Labour accommodation for safe living. Built with durable materials for construction and industrial sites.",
     },
   ];
   return (
@@ -44,13 +46,13 @@ const ProductCategory = () => {
       </div>
 
       <div className={styles.viewButton}>
-        <button className={styles.viewAllBtn}>
+        {/* <button className={styles.viewAllBtn}>
           <span className={styles.text}>View All</span>
 
           <span className={styles.icon}>
             <ChevronRight size={18} strokeWidth={3} />
           </span>
-        </button>
+        </button> */}
       </div>
 
       <div className={styles.productGrid}>
@@ -59,9 +61,9 @@ const ProductCategory = () => {
             <div className={styles.cardHeader}>
               <h3>{item.title}</h3>
 
-              <div className={styles.arrow}>
+              {/* <div className={styles.arrow}>
                 <ArrowUpRight size={20} strokeWidth={2.4} />
-              </div>
+              </div> */}
             </div>
 
             <div

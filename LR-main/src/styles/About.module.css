@@ -4,7 +4,7 @@
   background-color: #f7f7f753;
   display: flex;
   justify-content: space-between;
-  align-items:  start;
+  align-items: start;
   animation: softReveal 0.9s ease both;
 }
 
@@ -14,10 +14,12 @@
 
   border-radius: 14px;
 }
-.aboutImage{
+
+.aboutImage {
   width: 570px;
   height: 660px;
 }
+
 .aboutImage img {
   width: 100%;
   height: 100%;
@@ -101,7 +103,8 @@
   color: #111;
   font-weight: 500;
 }
-.AboutPrevLine{
+
+.AboutPrevLine {
   width: 150px;
   height: 3px;
   background-color: #263f69;
@@ -198,15 +201,423 @@
   }
 }
 
-@media (max-width: 900px) {
+
+
+/* ===========================
+   Responsive - About Section
+=========================== */
+
+/* 1440px */
+@media (max-width:1440px) {
+
   .about-section {
-    flex-direction: column;
+    padding: 70px 45px;
+    gap: 45px;
   }
+
+  .about-left,
+  .about-right {
+    flex: 1;
+  }
+
+  .aboutImage {
+    width: 100%;
+    max-width: 540px;
+    height: 600px;
+  }
+
+  .experience-card {
+    right: 45px;
+  }
+
+  .about-right h2 {
+    font-size: 38px;
+  }
+
+  .sub {
+    font-size: 20px;
+  }
+
 }
 
-@media (max-width: 760px) {
-  .about-section {
-    padding-left: 22px;
-    padding-right: 22px;
+/* 1366px */
+@media (max-width:1366px) {
+
+  .aboutImage {
+    max-width: 500px;
+    height: 570px;
   }
+
+  .about-right h2 {
+    font-size: 35px;
+  }
+
+}
+
+/* 1200px */
+@media (max-width:1200px) {
+
+  .about-section {
+    padding: 65px 35px;
+    gap: 35px;
+  }
+
+  .aboutImage {
+    max-width: 470px;
+    height: 670px;
+  }
+
+  .experience-card {
+    right: 25px;
+    top: 26%;
+  }
+
+  .about-right {
+    max-width: 620px;
+  }
+
+  .about-right h2 {
+    font-size: 33px;
+  }
+
+  .about-right p {
+    font-size: 16px;
+  }
+
+}
+
+/* 1024px */
+@media (max-width:1024px) {
+
+  .about-section {
+    gap: 30px;
+    align-items: center;
+  }
+
+  .aboutImage {
+    max-width: 430px;
+    height: 500px;
+  }
+
+  .experience-card {
+    width: 130px;
+    right: 18px;
+    top: 24%;
+  }
+
+  .profiles img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-right h2 {
+    font-size: 30px;
+    line-height: 1.35;
+  }
+
+  .sub {
+    font-size: 19px;
+  }
+
+}
+
+/* 991px */
+@media (max-width:991px) {
+
+  .about-section {
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 55px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .aboutImage {
+    width: 100%;
+    max-width: 700px;
+    height: 520px;
+    margin: auto;
+  }
+
+  .experience-card {
+    right: 30px;
+    top: 30%;
+  }
+
+  .about-right {
+    max-width: 100%;
+  }
+
+  .sub {
+    text-align: left;
+  }
+
+}
+
+/* 768px */
+@media (max-width:768px) {
+
+  .about-section {
+    padding: 55px 25px;
+  }
+
+  .tag {
+    font-size: 14px;
+  }
+
+  .about-right h2 {
+    font-size: 30px;
+  }
+
+  .AboutPrevLine {
+    width: 120px;
+  }
+
+  .aboutImage {
+    height: 450px;
+  }
+
+  .experience-card {
+    width: 125px;
+    padding: 15px 10px;
+    right: 20px;
+  }
+
+  .primaryBtn {
+    width: 190px;
+    justify-content: center;
+  }
+
+}
+
+/* 600px */
+@media (max-width:600px) {
+
+  .about-section {
+    padding: 50px 20px;
+  }
+
+  .aboutImage {
+    height: 390px;
+  }
+
+  .experience-card {
+    width: 118px;
+    right: 12px;
+    top: 24%;
+  }
+
+  .profiles img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about-right h2 {
+    font-size: 27px;
+  }
+
+  .sub {
+    font-size: 18px;
+    margin-top: 22px;
+  }
+
+  .about-right p {
+    font-size: 15px;
+  }
+
+}
+
+/* 480px */
+@media (max-width:480px) {
+
+  .about-section {
+    padding: 45px 18px;
+    gap: 40px;
+  }
+
+  .tag {
+    font-size: 13px;
+    padding: 6px 18px;
+  }
+
+  .about-right h2 {
+    font-size: 24px;
+  }
+
+  .AboutPrevLine {
+    width: 100px;
+  }
+
+  .sub {
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .aboutImage {
+    height: 330px;
+  }
+
+  .experience-card {
+    width: 110px;
+    top: 18px;
+    right: 10px;
+    padding: 12px 8px;
+  }
+
+  .profiles img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .exp-title {
+    font-size: 13px;
+  }
+
+  .exp-text {
+    font-size: 12px;
+  }
+
+  .primaryBtn {
+    width: 180px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+}
+
+/* 390px */
+@media (max-width:390px) {
+
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .aboutImage {
+    height: 290px;
+  }
+
+  .experience-card {
+    width: 100px;
+    right: 8px;
+    padding: 10px 6px;
+  }
+
+  .profiles img {
+    width: 28px;
+    height: 28px;
+    margin-left: -8px;
+  }
+
+  .about-right h2 {
+    font-size: 22px;
+  }
+
+  .sub {
+    font-size: 16px;
+  }
+
+  .about-right p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .primaryBtn {
+    width: 170px;
+    height: 46px;
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+}
+
+/* 360px */
+@media (max-width:360px) {
+
+  .about-section {
+    padding: 38px 14px;
+  }
+
+  .aboutImage {
+    height: 260px;
+  }
+
+  .experience-card {
+    width: 95px;
+    right: 6px;
+    top: 12px;
+  }
+
+  .about-right h2 {
+    font-size: 20px;
+  }
+
+  .sub {
+    font-size: 15px;
+  }
+
+  .about-right p {
+    font-size: 13.5px;
+  }
+
+  .primaryBtn {
+    width: 165px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+}
+
+/* 320px */
+@media (max-width:320px) {
+
+  .about-section {
+    padding: 35px 12px;
+  }
+
+  .aboutImage {
+    height: 230px;
+  }
+
+  .experience-card {
+    width: 90px;
+    padding: 8px 5px;
+  }
+
+  .profiles img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .exp-title {
+    font-size: 12px;
+  }
+
+  .exp-text {
+    font-size: 11px;
+  }
+
+  .about-right h2 {
+    font-size: 18px;
+  }
+
+  .sub {
+    font-size: 14px;
+  }
+
+  .about-right p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .primaryBtn {
+    width: 160px;
+    height: 42px;
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
 }
