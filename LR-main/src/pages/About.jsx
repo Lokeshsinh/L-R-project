@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styles from "../styles/AboutPage.module.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import {
-  Building2, Factory, House, BadgeCheck,
+  Building2, Factory, House, BadgeCheck, ChevronLeft, ChevronRight,
   Box,
 } from "lucide-react";
 import {
@@ -12,6 +12,8 @@ import {
 import { useNavigate } from 'react-router-dom'
 import about1 from '../assets/About/about1.png'
 import about2 from '../assets/About/about2.jpg'
+import about3 from '../assets/About/about3.jpg'
+import about4 from '../assets/About/about4.jpg'
 import officeImage from '../assets/About/officeImage.png'
 import officeImg from "../assets/About/user1.jpg";
 import labourImg from "../assets/About/user2.jpg";
@@ -27,8 +29,21 @@ import img3 from '../assets/About/img3.jpg'
 import img4 from '../assets/About/img4.jpg'
 import img5 from '../assets/About/img5.jpg'
 import img6 from '../assets/About/img6.jpg'
-import workerImage from '../assets/About/workImage.png'
-
+import workerImage from '../assets/About/create.jpg'
+import video1 from '../assets/About/video1.mp4'
+import video2 from '../assets/About/video2.mp4'
+import video3 from '../assets/About/video3.mp4'
+import video4 from '../assets/About/video4.mp4'
+import video5 from '../assets/About/video5.mp4'
+import video6 from '../assets/About/video6.mp4'
+import video7 from '../assets/About/video7.mp4'
+import video8 from '../assets/About/video8.mp4'
+import video9 from '../assets/About/video9.mp4'
+import video10 from '../assets/About/video10.mp4'
+import founded from "../assets/About/foundation.png";
+import manufacturing from "../assets/About/manufacturing.png";
+import expansion from "../assets/About/expansion.png";
+import projects from "../assets/About/projects.png";
 
 const About = () => {
   const navigate = useNavigate()
@@ -37,6 +52,83 @@ const About = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+
+
+  const galleryVideos = [
+    {
+      id: 1,
+      video: video1,
+      // title: "Prefab Site Office",
+    },
+    {
+      id: 2,
+      video: video2,
+      // title: "Labour Accommodation",
+    },
+    {
+      id: 3,
+      video: video3,
+      // title: "MS Container",
+    },
+    {
+      id: 4,
+      video: video4,
+      // title: "Sandwich Panels",
+    },
+    {
+      id: 5,
+      video: video5,
+      // title: "PEB Warehouse",
+    },
+    {
+      id: 6,
+      video: video6,
+      // title: "Portable Cabin",
+    },
+    {
+      id: 7,
+      video: video7,
+      // title: "Steel Structure",
+    },
+    {
+      id: 8,
+      video: video8,
+      // title: "Industrial Shed",
+    },
+    {
+      id: 9,
+      video: video9,
+      // title: "Steel Structure",
+    },
+    {
+      id: 10,
+      video: video10,
+      // title: "Industrial Shed",
+    },
+  ];
+
+
+  const [currentSlides, setCurrentSlides] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlides((prev) =>
+      prev === galleryVideos.length - 1 ? 0 : prev + 1
+    );
+  }, [galleryVideos.length]);
+
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(autoSlide);
+  }, [nextSlide]);
+
+  const prevSlide = () => {
+    setCurrentSlides((prev) =>
+      prev === 0 ? galleryVideos.length - 1 : prev - 1
+    );
+  };
 
 
 
@@ -109,7 +201,32 @@ const About = () => {
 
 
 
-
+  const journey = [
+    {
+      image: founded,
+      category: "OUR HISTORY",
+      title: "Company Founded",
+      desc: "Started with a vision to provide reliable and innovative prefabricated building solutions with a strong focus on quality and customer satisfaction.",
+    },
+    {
+      image: manufacturing,
+      category: "MANUFACTURING",
+      title: "Manufacturing Facility",
+      desc: "Established advanced manufacturing capabilities to deliver precision-engineered structures with superior quality and efficiency.",
+    },
+    {
+      image: expansion,
+      category: "EXPANSION",
+      title: "PAN India Expansion",
+      desc: "Expanded our operations across India, delivering customized prefabricated and modular solutions to diverse industries and projects.",
+    },
+    {
+      image: projects,
+      category: "SUCCESS",
+      title: "100+ Projects Completed",
+      desc: "Successfully executed numerous projects across commercial, industrial, and infrastructure sectors with trusted performance.",
+    },
+  ];
   const cards = [
     {
       id: 1,
@@ -280,82 +397,84 @@ const About = () => {
 
 
 
-        {/* <section className={styles.aboutIntro}>
-          <div className={styles.introImages}>
-            <img
-              className={styles.imgBack}
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
-              alt="Factory"
-            />
-            <img
-              className={styles.imgFront}
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80"
-              alt="Prefab"
-            />
+        <section className={styles.aboutIntro}>
+          <div className={styles.aboutFlex}>
+            <div className={styles.galleryWrapper}>
+
+              <div className={styles.leftImageCard}>
+                <img src={about3} alt="Project One" />
+              </div>
+
+              <div className={styles.rightImageCard}>
+                <img src={about4} alt="Project Two" />
+              </div>
+
+            </div>
+            <div className={styles.introText}>
+              <span className={styles.badge}>• About us</span>
+              <div className={styles.introUser}>
+                <h2>
+                  Company <span>Overview</span>
+                </h2>
+                <div class={styles.introLine}></div>
+              </div>
+              <p>With over 10 years of industry experience, L&R Enterprises is a trusted manufacturer
+                of prefabricated buildings, modular structures, pre-engineered buildings (PEBs), sandwich
+                panels, and steel fabrication solutions. We are committed to delivering innovative, durable,
+                and cost-effective infrastructure for commercial, industrial, and infrastructure projects.</p>
+              <p>From concept and engineering to manufacturing, installation, and final project handover,
+                we provide complete turnkey solutions tailored to our clients' requirements. Backed by modern
+                manufacturing facilities, skilled professionals, and a strong commitment to quality, we proudly
+                serve customers across India with reliable and timely project execution.</p>
+              <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                <span>Get Contact</span>
+
+                <span className={styles.iconWrap}>
+                  <ArrowUpRight className={styles.icon1} size={18} />
+                  <ArrowUpRight className={styles.icon2} size={18} />
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section className={styles.journey}>
+          <div className={styles.Teamuser}>
+            <span className={styles.TeamBoder}>Our journey</span>
+          </div>
+          <div className={styles.journeyText}>
+            <h2> Building Growth Through <br /><span> Innovation & Excellence</span></h2>
+            <div className={styles.journeyLine}></div>
           </div>
 
-          <div className={styles.introText}>
-            <span className={styles.badge}>• About us</span>
-            <h2>
-              10 Years of <span>Structural</span>
-            </h2>
-            <p>
-              L&R Green India Pvt Ltd is a New Delhi-based manufacturer
-              <br />
-              specializing in prefabricated structures, mild steel containers,
-              <br />
-              and prefabricated cabins. Established in 2015, we have built a
-              <br />
-              strong reputation for delivering high-quality, cost-effective
-              <br />
-              building solutions across India.
-            </p>
+          <div className={styles.cardGrid}>
+            {journey.map((card, index) => (
+              <div className={styles.card} key={index}>
+                <button className={styles.close}>
+                  <X size={18} strokeWidth={2.5} />
+                </button>
 
-            <p>
-              Our extensive product range includes Prefab Site Office
-              <br />
-              Structures, Pre Engineered Building Structures, Poultry Farm
-              <br />
-              Sheds, Prefabricated Warehouse Sheds, Prefabricated Farm Houses,
-              <br />
-              and Prefabricated Control Rooms — all manufactured with precision
-              <br />
-              engineering and the finest materials.
-            </p>
-            <button>
-              Get Contact <span>↗</span>
-            </button>
-          </div>
-        </section> */}
-
-
-
-        {/* <section className={styles.journey}>
-          <h2>
-            Our <span>Journey</span>
-          </h2>
-
-          <div className={styles.timeline}>
-            {journey.map((item, index) => (
-              <div
-                className={`${styles.timelineItem} ${item.side === "left" ? styles.left : styles.right
-                  }`}
-                key={item.year}
-              >
-                <div className={styles.yearBox}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{item.year}</h3>
+                <div className={styles.imageBox}>
+                  <img src={card.image} alt={card.title} />
                 </div>
 
-                <div className={styles.journeyCard}>
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                  <button>↗</button>
-                </div>
+                <span className={styles.category}>
+                  {card.category}
+                </span>
+
+                <h3 className={styles.title}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.desc}>
+                  {card.desc}
+                </p>
               </div>
             ))}
           </div>
-        </section> */}
+        </section>
 
 
         <section className={styles.teamSection}>
@@ -371,6 +490,15 @@ const About = () => {
           </div>
 
           <div className={styles.ourTeamFlex}>
+            <div className={styles.imageWrapper}>
+              <div className={styles.yellowShape}></div>
+
+              <div className={styles.imageCard}>
+                <img src={workerImage} alt="Worker" />
+              </div>
+
+              <div className={styles.dots}></div>
+            </div>
             <div className={styles.ourTeamPara}>
               <p>Our team is made up of experienced engineers, architects, project managers, and skilled
                 technicians who are passionate about delivering high-quality prefabricated and modular
@@ -381,23 +509,7 @@ const About = () => {
                 engineering with modern manufacturing practices, we deliver reliable, durable, and
                 customized solutions that meet the unique requirements of every client.</p>
             </div>
-            <div className={styles.imageSection}>
-              <div className={styles.imageWrapper}>
 
-                <div className={styles.yellowShape}></div>
-
-                <div className={styles.imageCard}>
-                  <img
-                    src={workerImage}
-                    alt="Worker"
-                    className={styles.workerImage}
-                  />
-                </div>
-
-                <div className={styles.dotPattern}></div>
-
-              </div>
-            </div>
 
           </div>
         </section>
@@ -628,7 +740,7 @@ const About = () => {
             </div>
 
             <div className={styles.rightSide}>
-              <div className={styles.imageWrapper}>
+              <div className={styles.imageWrappers}>
                 <img src={about2} alt="" />
               </div>
             </div>
@@ -732,6 +844,80 @@ const About = () => {
             ))}
           </div>
         </section>
+
+
+
+
+        <section className={styles.galaryCard}>
+          <div className={styles.galaryText}>
+            <h2>Explore <span>Our Solutions</span></h2>
+            <div className={styles.galaryLine}></div>
+          </div>
+
+          <div className={styles.gallerySlider}>
+            <button
+              className={`${styles.arrowBtns} ${styles.leftArrows}`}
+              onClick={prevSlide}
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <div className={styles.galleryViewport}>
+              <div
+                className={styles.galleryTrack}
+                style={{
+                  transform: `translateX(-${currentSlides * 375}px)`,
+                }}
+              >
+                {galleryVideos.map((item) => (
+                  <div
+                    className={styles.gallerySlide}
+                    key={item.id}
+                  >
+                    <video
+                      className={styles.galleryVideo}
+                      src={item.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+
+                    <div className={styles.videoOverlay}>
+                      <h3>{item.title}</h3>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              className={`${styles.arrowBtns} ${styles.rightArrows}`}
+              onClick={nextSlide}
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          <div className={styles.galleryDots}>
+            {galleryVideos.map((_, index) => (
+              <span
+                key={index}
+                className={
+                  currentSlides === index
+                    ? styles.activeDot
+                    : styles.dot
+                }
+                onClick={() => setCurrentSlides(index)}
+              ></span>
+            ))}
+          </div>
+        </section>
+
+
+
+
+
 
 
 
