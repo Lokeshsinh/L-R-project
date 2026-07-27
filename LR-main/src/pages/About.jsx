@@ -3,7 +3,10 @@ import styles from "../styles/AboutPage.module.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import {
-  Building2, Factory, House, BadgeCheck, ChevronLeft, ChevronRight,
+  Building2, Factory, House, BadgeCheck, ChevronLeft, ChevronRight, Award,
+  ClipboardCheck,
+  ShieldCheck,
+  Leaf,
   Box,
 } from "lucide-react";
 import {
@@ -44,6 +47,7 @@ import founded from "../assets/About/foundation.png";
 import manufacturing from "../assets/About/manufacturing.png";
 import expansion from "../assets/About/expansion.png";
 import projects from "../assets/About/projects.png";
+import found from '../assets/About/foun1.jpg'
 
 const About = () => {
   const navigate = useNavigate()
@@ -279,6 +283,38 @@ const About = () => {
     },
   ];
 
+  const qualityData = [
+    {
+      id: 1,
+      icon: <Award size={34} strokeWidth={2.2} />,
+      title: "ISO Certifications",
+      description:
+        "Certified under ISO 9001 Quality Management System and ISO 14001 Environmental Management System, ensuring consistent product quality, efficient processes, and sustainable manufacturing practices.",
+    },
+    {
+      id: 2,
+      icon: <ClipboardCheck size={34} strokeWidth={2.2} />,
+      title: "Quality Assurance",
+      description:
+        "Every prefabricated structure undergoes rigorous inspections and quality testing to guarantee superior strength, precision engineering, durability, and long-lasting performance.",
+    },
+    {
+      id: 3,
+      icon: <ShieldCheck size={34} strokeWidth={2.2} />,
+      title: "Safety Standards",
+      description:
+        "We strictly follow industry-approved safety regulations throughout design, manufacturing, transportation, and on-site installation to ensure complete reliability.",
+    },
+    {
+      id: 4,
+      icon: <Leaf size={34} strokeWidth={2.2} />,
+      title: "Environmental Commitment",
+      description:
+        "Committed to eco-friendly manufacturing by reducing waste, improving resource efficiency, and delivering sustainable prefabricated construction solutions.",
+    },
+  ];
+
+
 
 
 
@@ -440,6 +476,8 @@ const About = () => {
 
 
 
+
+
         <section className={styles.journey}>
           <div className={styles.Teamuser}>
             <span className={styles.TeamBoder}>Our journey</span>
@@ -474,6 +512,41 @@ const About = () => {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className={styles.founderSection}>
+          <div className={styles.founderFlex}>
+            <div className={styles.founderpara}>
+              <span className={styles.founderBedge}>About the Founder</span>
+              <div className={styles.founderHeader}>
+                <h2>Visionary Leadership, <span>Lasting Impact</span></h2>
+                <div className={styles.founderLine}></div>
+              </div>
+              <p>L&R Enterprises was founded with a vision to transform the prefabricated construction
+                industry by delivering innovative, high-quality, and cost-effective building solutions.
+                Guided by a passion for excellence and customer satisfaction, the company has grown into
+                a trusted name known for reliability, precision, and timely project execution.</p>
+              <p>With a strong focus on quality, innovation, and sustainable growth, the founder has
+                built a culture of integrity, teamwork, and continuous improvement. This commitment
+                continues to inspire the organization to deliver world-class prefabricated structures
+                and engineering solutions that meet the evolving needs of clients across India.</p>
+            </div>
+            <div className={styles.founderContainer}>
+              <img
+                src={found}
+                alt="Engineers working in prefabricated solutions"
+                className={styles.founderPhoto}
+              />
+
+              <div className={styles.founderBadge}>
+                <h2 className={styles.founderHeading}>10+ Years of Leadership</h2>
+                <p className={styles.founderDescription}>
+                  Leading innovation, quality, trust, and excellence in prefabricated building solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </section>
 
 
@@ -786,28 +859,6 @@ const About = () => {
 
 
 
-        {/* <section className={styles.commitment}>
-          <div>
-            <h2>
-              Strength, Quality <br />& Commitment
-            </h2>
-            <p>
-              At L & R Enterprises, we are committed to delivering high-quality
-              prefabricated <br />
-              structures and steel containers built with precision and care. Our
-              focus on durability, <br /> timely execution, and customer
-              satisfaction makes us a trusted choice for modern <br />{" "}
-              construction needs.
-            </p>
-          </div>
-
-          <img
-            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80"
-            alt="Structure"
-          />
-
-          <h1> L & R ENTERPRISES</h1>
-        </section> */}
 
         <section className={styles.productsImage} >
           <div className={styles.ProductBox}>
@@ -846,6 +897,42 @@ const About = () => {
         </section>
 
 
+
+
+        <section className={styles.qualitySection}>
+          <div className={styles.qualityFlex}>
+          <div className={styles.qualityHeading}>
+            <span className={styles.qualityTag}>
+              • Quality & Certifications
+            </span>
+
+            <h2>
+              Committed to Excellence <br />
+              <span>in Every Project</span>
+            </h2>
+
+            <div className={styles.qualityLine}></div>
+          </div>
+          <p className={styles.qualityDescription}>
+            We follow international quality standards to deliver reliable, durable, and safe
+            prefabricated building solutions, ensuring customer satisfaction and long-term performance.
+          </p>
+          </div>
+
+          <div className={styles.qualityGrid}>
+            {qualityData.map((item) => (
+              <div className={styles.qualityCard} key={item.id}>
+                <div className={styles.iconWrapper}>
+                  {item.icon}
+                </div>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
 
         <section className={styles.galaryCard}>
