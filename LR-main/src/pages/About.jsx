@@ -1,91 +1,202 @@
+import { useState, useEffect } from "react";
 import styles from "../styles/AboutPage.module.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import { Building2, Package, Factory, House } from "lucide-react";
-import workImg from "../assets/aboutus-work.jpeg";
-import processBg from "../assets/process-bg.jpeg";
+import {
+  Building2, Factory, House, BadgeCheck,
+  Box,
+} from "lucide-react";
+import {
+  ArrowRight, ArrowUpRight, Plus, X,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import about1 from '../assets/About/about1.png'
+import about2 from '../assets/About/about2.jpg'
+import officeImage from '../assets/About/officeImage.png'
+import officeImg from "../assets/About/user1.jpg";
+import labourImg from "../assets/About/user2.jpg";
+import containerImg from "../assets/About/user3.jpg";
+import panelImg from "../assets/About/user4.jpg";
+import design from '../assets/About/design.png'
+import design1 from '../assets/About/design1.png'
+import design3 from '../assets/About/design3.png'
+import design4 from '../assets/About/design4.png'
+import img2 from '../assets/About/img2.jpg'
+import img1 from '../assets/About/img1.png'
+import img3 from '../assets/About/img3.jpg'
+import img4 from '../assets/About/img4.jpg'
+import img5 from '../assets/About/img5.jpg'
+import img6 from '../assets/About/img6.jpg'
+import workerImage from '../assets/About/workImage.png'
+
 
 const About = () => {
-  const journey = [
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+
+
+
+  const chooseData = [
     {
-      year: "2015",
-      title: "Foundation",
-      text: "L & R Enterprises established in New Delhi with a vision to redefine modular construction through technical precision and high-grade materials.",
-      side: "right",
+      image: img1,
+      title: "10+ Years Experience",
+      description:
+        "Delivering trusted prefabricated and modular construction solutions.",
     },
     {
-      year: "2018",
-      title: "Industrial Scale",
-      text: "Expanded manufacturing capacities to include large-scale MS Container fabrication and industrial warehouse assets for the booming logistics sector.",
-      side: "left",
+      image: img2,
+      title: "Turnkey Solutions",
+      description:
+        "Complete design, manufacturing, installation and project delivery.",
     },
     {
-      year: "2021",
-      title: "Specialized Solutions",
-      text: "Added solar structures, prefab rooms, and pharma buildings to cater to specialized industry requirements.",
-      side: "right",
+      image: img3,
+      title: "Engineering Team",
+      description:
+        "Experienced engineers ensuring precision and superior quality.",
     },
     {
-      year: "2025",
-      title: "Innovation & Growth",
-      text: "Pioneering LGSF technology and insulated panel solutions for next-generation prefab construction.",
-      side: "left",
+      image: img4,
+      title: "PAN India Network",
+      description:
+        "Serving projects across India with timely delivery and support.",
+    },
+    {
+      image: img5,
+      title: "Modern Facility",
+      description:
+        "Advanced manufacturing for durable and high-performance structures.",
+    },
+    {
+      image: img6,
+      title: "Quality & Safety",
+      description:
+        "Strict quality control with international safety standards.",
     },
   ];
 
-  const process = [
+  const sliderItems = [...chooseData, ...chooseData];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [pauseSlider, setPauseSlider] = useState(false);
+  const [transition, setTransition] = useState(true);
+
+  useEffect(() => {
+    if (pauseSlider) return;
+
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => prev + 1);
+      setTransition(true);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [pauseSlider]);
+
+  useEffect(() => {
+    if (currentSlide === chooseData.length) {
+      const reset = setTimeout(() => {
+        setTransition(false);
+        setCurrentSlide(0);
+      }, 3000);
+
+      return () => clearTimeout(reset);
+    }
+  }, [currentSlide, chooseData.length]);
+
+
+
+
+  const cards = [
     {
-      step: "STEP 01",
-      title: "Requirement Analysis",
-      text: "We begin by understanding your project needs, space requirements, and specifications to provide the most suitable prefabricated solution.",
-      icon: <Building2 size={28} strokeWidth={1.8} />,
+      id: 1,
+      image: officeImg,
+      title: "Prefabricated Site Office",
+      description:
+        "Modern site offices designed for efficient workspaces and quick installation. Built with durable materials for lasting performance.",
     },
     {
-      step: "STEP 02",
-      title: "Design & Planning",
-      text: "Our team creates detailed designs and structural plans using modern techniques to ensure accuracy, efficiency, and durability.",
-      icon: <Package size={28} strokeWidth={1.8} />,
-      active: true,
+      id: 2,
+      image: labourImg,
+      title: "Labour Accommodation",
+      description:
+        "Comfortable accommodation units for workers at project sites. Designed for safety, durability, and convenient living.",
     },
     {
-      step: "STEP 03",
-      title: "Manufacturing",
-      text: "Using high-quality materials and advanced fabrication methods, we manufacture structures and containers with precision and strict quality control.",
-      icon: <Factory size={28} strokeWidth={1.8} />,
+      id: 3,
+      image: containerImg,
+      title: "Modular MS Containers",
+      description:
+        "Versatile modular containers for commercial and industrial applications. Engineered for strength, portability, and flexible use.",
     },
     {
-      step: "STEP 04",
-      title: "Delivery & Installation",
-      text: "We ensure timely delivery and provide smooth on-site installation, making the entire process quick, hassle-free, and reliable.",
-      icon: <House size={28} strokeWidth={1.8} />,
+      id: 4,
+      image: panelImg,
+      title: "Sandwich Panels",
+      description:
+        "High-performance insulated sandwich panels for modern construction. Provide excellent thermal efficiency, durability, and energy savings.",
     },
   ];
 
-  const products = [
+  const features = [
     {
-      title: "Prefab Building",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      id: 1,
+      icon: <House size={44} strokeWidth={1.6} />,
+      title: "Diverse Prefabricated Solutions",
+      desc: "Our mild steel containers are engineered to provide adaptable workspace and storage solutions for various applications.",
     },
     {
-      title: "Canteen",
-      img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      id: 2,
+      icon: <Factory size={44} strokeWidth={1.6} />,
+      title: "Advanced Manufacturing Approach",
+      desc: "We combine modern fabrication techniques with high-quality materials to deliver superior structural performance.",
     },
     {
-      title: "Insulated Puf Panels",
-      img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "Industrial shed",
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+      id: 3,
+      icon: <BadgeCheck size={44} strokeWidth={1.6} />,
+      title: "Commitment to Client Success",
+      desc: "We believe strong relationships are built on trust, consistency, and dependable service. Through timely delivery and customized solutions, we continue to support businesses with structures built for the future.",
     },
   ];
+
+
+
+
 
   const faqs = [
-    "What products does L & R Enterprises manufacture?",
-    "Are your prefabricated structures customizable?",
-    "How durable are your mild steel containers?",
-    "Do you provide installation services?",
-    "What industries do you serve?",
+    {
+      id: 1,
+      q: "What products does L & R Enterprises manufacture?",
+      a:
+        "We manufacture prefabricated buildings, PEB structures, MS containers, sandwich panels, warehouses, industrial sheds, and modular construction solutions.",
+    },
+    {
+      id: 2,
+      q: "Are your prefabricated structures customizable?",
+      a:
+        "Yes, all our structures can be customized in size, layout, insulation, interiors, doors, windows, and finishes to meet project requirements.",
+    },
+    {
+      id: 3,
+      q: "How durable are your mild steel containers?",
+      a:
+        "Our MS containers are built using high-quality steel with protective coatings, ensuring excellent strength, durability, and weather resistance.",
+    },
+    {
+      id: 4,
+      q: "Do you provide installation services?",
+      a:
+        "Yes, we offer complete transportation, on-site installation, and after-sales support for all our prefabricated and modular solutions.",
+    },
+    {
+      id: 5,
+      q: "What industries do you serve?",
+      a:
+        "We serve construction, industrial, commercial, infrastructure, warehousing, healthcare, education, and government sectors across India.",
+    },
   ];
 
   return (
@@ -93,7 +204,11 @@ const About = () => {
       <Header />
 
       <main>
-        <section className={styles.hero}>
+
+
+
+
+        {/* <section className={styles.hero}>
           <div className={styles.heroContent}>
             <p>About Our Company</p>
             <h1>
@@ -119,9 +234,53 @@ const About = () => {
               alt="Modular Office"
             />
           </div>
+        </section> */}
+
+
+        <section className={styles.hero}>
+          <div className={styles.heroOverlay}></div>
+
+          <div className={styles.heroContent}>
+            <span className={styles.topLabel}>About Our Company</span>
+
+            <h1 className={styles.mainTitle}>
+              Building the Future with  <br />
+              <span>L&R Green India Pvt Ltd</span>
+            </h1>
+
+            <p className={styles.heroDesc}>
+              Leading manufacturer of prefabricated structures, mild steel
+              containers & prefabricated cabins from New Delhi, India.
+            </p>
+
+            <button
+              onClick={() => navigate("/contact")}
+              className={styles.btnWhite}
+            >
+              <span>Contact Us</span>
+              <ArrowRight className={styles.arrow} size={18} />
+            </button>
+          </div>
+
+          {/* Floating Product Card */}
+          <div className={styles.heroProductCard}>
+            <div className={styles.cardHeader}>
+              <h4>Modular Office</h4>
+              <ArrowRight size={22} />
+            </div>
+
+            <div className={styles.cardImage}>
+              <img src={officeImage} alt="Modular Office" />
+            </div>
+          </div>
         </section>
 
-        <section className={styles.aboutIntro}>
+
+
+
+
+
+        {/* <section className={styles.aboutIntro}>
           <div className={styles.introImages}>
             <img
               className={styles.imgBack}
@@ -167,9 +326,11 @@ const About = () => {
               Get Contact <span>↗</span>
             </button>
           </div>
-        </section>
+        </section> */}
 
-        <section className={styles.journey}>
+
+
+        {/* <section className={styles.journey}>
           <h2>
             Our <span>Journey</span>
           </h2>
@@ -177,9 +338,8 @@ const About = () => {
           <div className={styles.timeline}>
             {journey.map((item, index) => (
               <div
-                className={`${styles.timelineItem} ${
-                  item.side === "left" ? styles.left : styles.right
-                }`}
+                className={`${styles.timelineItem} ${item.side === "left" ? styles.left : styles.right
+                  }`}
                 key={item.year}
               >
                 <div className={styles.yearBox}>
@@ -195,70 +355,255 @@ const About = () => {
               </div>
             ))}
           </div>
+        </section> */}
+
+
+        <section className={styles.teamSection}>
+          <div className={styles.Teamuser}>
+            <span className={styles.TeamBoder}>Our Team</span>
+          </div>
+          <div className={styles.TeamText}>
+            <h2>
+              Meet Our <br />
+              <span>Expert Team</span>
+            </h2>
+            <div className={styles.teamLine}></div>
+          </div>
+
+          <div className={styles.ourTeamFlex}>
+            <div className={styles.ourTeamPara}>
+              <p>Our team is made up of experienced engineers, architects, project managers, and skilled
+                technicians who are passionate about delivering high-quality prefabricated and modular
+                building solutions. With extensive industry knowledge and technical expertise, we ensure
+                every project is executed with precision, efficiency, and attention to detail.</p>
+              <p>Working collaboratively from design to installation, our professionals focus on
+                innovation, safety, and customer satisfaction at every stage. By combining advanced
+                engineering with modern manufacturing practices, we deliver reliable, durable, and
+                customized solutions that meet the unique requirements of every client.</p>
+            </div>
+            <div className={styles.imageSection}>
+              <div className={styles.imageWrapper}>
+
+                <div className={styles.yellowShape}></div>
+
+                <div className={styles.imageCard}>
+                  <img
+                    src={workerImage}
+                    alt="Worker"
+                    className={styles.workerImage}
+                  />
+                </div>
+
+                <div className={styles.dotPattern}></div>
+
+              </div>
+            </div>
+
+          </div>
         </section>
 
-        <section className={styles.blueBanner}>
-          <div>
+
+
+        <section className={styles.mfgBand}>
+          <div className={styles.scrollWrap}>
+            <div className={styles.scrollTrack}>
+              <h1>L & R Enterprises</h1>
+            </div>
+          </div>
+
+          <div className={styles.mfgContainer}>
+            <div className={styles.mfgText}>
+              <h2>
+                Delivering Reliable <br />
+                Prefabricated Structures
+              </h2>
+              <p>
+                L&R Green India Pvt Ltd specializes in manufacturing high-quality prefabricated
+                structures and mild steel containers in New Delhi. From site offices to warehouse
+                sheds and portable containers, our solutions are built for durability, flexibility,
+                and modern industrial use.
+              </p>
+              <div className={styles.LastImage}>
+                <img src={design1} alt="png" />
+              </div>
+            </div>
+            <div className={styles.mfgImgWrapper}>
+              <img
+                src={design}
+                alt="Manufacturing"
+              />
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <section className={styles.processCards}>
+          <div className={styles.processCardText}>
             <h2>
-              Delivering Reliable <br />
-              Prefabricated Structures
+              Our <span>Process</span>
             </h2>
+            <div className={styles.processCardLine}></div>
+          </div>
+
+          <div className={styles.processGrid}>
+
+            {/* Card 1 */}
+            <div className={styles.processCard}>
+              <div className={styles.cardHeader}>
+                <Building2
+                  size={48}
+                  strokeWidth={1.6}
+                  className={styles.cardIcon}
+                />
+
+                <span className={styles.step}>STEP 01</span>
+              </div>
+
+              <h3>Requirement Analysis</h3>
+
+              <p>
+                We begin by understanding your project needs, space
+                requirements, and specifications to provide the most
+                suitable prefabricated solution.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className={`${styles.processCard} ${styles.activeCard}`}>
+              <div className={styles.cardHeader}>
+                <Box
+                  size={48}
+                  strokeWidth={1.6}
+                  className={styles.cardIcon}
+                />
+
+                <span className={styles.step}>STEP 02</span>
+              </div>
+
+              <h3 style={{ color: "white" }}>Design &amp; Planning</h3>
+
+              <p style={{ color: "white" }}>
+                Our team creates detailed designs and structural plans
+                using modern techniques to ensure accuracy,
+                efficiency, and durability.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className={styles.processCard}>
+              <div className={styles.cardHeader}>
+                <Factory
+                  size={48}
+                  strokeWidth={1.6}
+                  className={styles.cardIcon}
+                />
+
+                <span className={styles.step}>STEP 03</span>
+              </div>
+
+              <h3>Manufacturing</h3>
+
+              <p>
+                Using high-quality materials and advanced fabrication
+                methods, we manufacture structures and containers
+                with precision and strict quality control.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className={styles.processCard}>
+              <div className={styles.cardHeader}>
+                <House
+                  size={48}
+                  strokeWidth={1.6}
+                  className={styles.cardIcon}
+                />
+
+                <span className={styles.step}>STEP 04</span>
+              </div>
+
+              <h3>Delivery &amp; Installation</h3>
+
+              <p>
+                We ensure timely delivery and provide smooth on-site
+                installation, making the entire process quick,
+                hassle-free, and reliable.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+
+
+        <section className={styles.whyChoose}>
+          <div className={styles.WhyChoose}>
+            <span className={styles.WhooseBoder}>WHY CHOOSE US</span>
+          </div>
+          <div className={styles.headings}>
+            <div className={styles.WhyChoseText}>
+              <h2>Building Trust Through<br /> <span> Quality & Innovation</span></h2>
+              <div className={styles.WhyChooseLine}></div>
+            </div>
             <p>
-              L&R Green India Pvt Ltd specializes in manufacturing high-quality
-              prefabricated
-              <br /> structures and mild steel containers in New Delhi. From
-              site offices to warehouse <br /> sheds and portable containers,
-              our solutions are built for durability, flexibility, and <br />
-              modern industrial use.
+              We deliver reliable prefabricated and modular building solutions with
+              advanced engineering, premium quality and exceptional customer
+              support.
             </p>
           </div>
 
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
-            alt="Prefab Building"
-          />
+          <div
+            className={styles.chooseSlider}
+            onMouseEnter={() => setPauseSlider(true)}
+            onMouseLeave={() => setPauseSlider(false)}
+          >
+            <div
+              className={styles.chooseTrack}
+              style={{
+                transform: `translateX(calc(-${currentSlide} * 25%))`,
+                transition: transition ? "transform .8s ease" : "none",
+              }}
+            >
+              {sliderItems.map((feature, index) => (
+                <div className={styles.chooseItem} key={index}>
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className={styles.chooseImage}
+                  />
 
-          <h1> L & R ENTERPRISES</h1>
-        </section>
-
-        <section
-          className={styles.process}
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url(${processBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h2>
-            Our <span>Process</span>
-          </h2>
-
-          <div className={styles.processGrid}>
-            {process.map((item) => (
-              <div
-                className={`${styles.processCard} ${
-                  item.active ? styles.activeProcess : ""
-                }`}
-                key={item.step}
-              >
-                <div className={styles.processTop}>
-                  <span className={styles.processIcon}>{item.icon}</span>
-                  <small>{item.step}</small>
+                  <div className={styles.chooseOverlay}>
+                    <div className={styles.chooseInfo}>
+                      <h3>{feature.title}</h3>
+                      <p>{feature.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+
         </section>
+
+
+
+
+
+
+
 
         <section className={styles.smart}>
-          <div className={styles.smartHead}>
-            <h2>
-              Building Smarter Spaces <br />
-              <span>with Precision and Trust</span>
-            </h2>
+          <div className={styles.SmartFlex}>
+            <div className={styles.smartHead}>
+              <h2>
+                Building Smarter Spaces <br />
+                <span>with Precision and Trust</span>
+              </h2>
+              <div className={styles.smartLine}></div>
+            </div>
             <p>
               L & R Enterprises delivers durable prefabricated structures and
               steel containers designed for modern industrial and commercial
@@ -266,107 +611,70 @@ const About = () => {
             </p>
           </div>
 
-          <div className={styles.smartBody}>
-            <div className={styles.smartList}>
-              <div className={styles.smartItem}>
-                {/* Building Icon */}
-                <div className={styles.icon}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18" />
-                    <path d="M6 12H4a2 2 0 0 0-2 2v8h20v-8a2 2 0 0 0-2-2h-2" />
-                    <path d="M10 6h4" />
-                    <path d="M10 10h4" />
-                    <path d="M10 14h4" />
-                  </svg>
-                </div>
+          <div className={styles.featuresSection}>
+            <div className={styles.leftSide}>
+              {features.map((item) => (
+                <div className={styles.featureCard} key={item.id}>
+                  <div className={styles.iconBox}>
+                    {item.icon}
+                  </div>
 
-                <div>
-                  <h4>Diverse Prefabricated Solutions</h4>
-                  <p>
-                    Our mild steel containers are engineered to provide
-                    adaptable workspace and storage solutions for various
-                    applications.
-                  </p>
+                  <div className={styles.content}>
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            <div className={styles.rightSide}>
+              <div className={styles.imageWrapper}>
+                <img src={about2} alt="" />
               </div>
+            </div>
+          </div>
 
-              <div className={styles.smartItem}>
-                {/* Factory Icon */}
-                <div className={styles.icon}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M3 21h18" />
-                    <path d="M5 21V8l7 5V8l7 5v8" />
-                    <path d="M8 17h.01" />
-                    <path d="M12 17h.01" />
-                    <path d="M16 17h.01" />
-                  </svg>
-                </div>
+        </section>
 
-                <div>
-                  <h4>Advanced Manufacturing Approach</h4>
-                  <p>
-                    We combine modern fabrication techniques with high-quality
-                    materials to deliver superior structural performance.
-                  </p>
-                </div>
-              </div>
 
-              <div className={styles.smartItem}>
-                {/* Heart Check Icon */}
-                <div className={styles.icon}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
-                    <path d="m9.5 12.5 2 2 4-4" />
-                  </svg>
-                </div>
+        <section className={styles.prefabShowcaseSection}>
+          <div className={styles.prefabWatermark}>
+            <div className={styles.prefabWatermarkTrack}>
+              <h1>L & R Enterprises</h1>
+            </div>
+          </div>
 
-                <div>
-                  <h4>Commitment to Client Success</h4>
-                  <p>
-                    We believe strong relationships are built on trust,
-                    consistency, and dependable service. Through timely delivery
-                    and customized solutions, we continue to support businesses
-                    with structures built for the future.
-                  </p>
-                </div>
+          <div className={styles.prefabShowcaseContainer}>
+            <div className={styles.prefabContent}>
+              <h2>
+                Strength, Quality<br />
+                & Commitment
+              </h2>
+
+              <p>
+                At L & R Enterprises, we are committed to delivering high-quality prefabricated
+                structures and steel containers built with precision and care. Our focus on durability,
+                timely execution, and customer satisfaction makes us a trusted choice for modern construction needs.
+              </p>
+
+
+              <div className={styles.prefabShape}>
+                <img src={design4} alt="Decoration" />
               </div>
             </div>
 
-            <img src={workImg} alt="Work" />
+            <div className={styles.prefabImageCard}>
+              <img
+                src={design3}
+                alt="Prefabricated Structure"
+              />
+            </div>
           </div>
         </section>
 
-        <section className={styles.commitment}>
+
+
+        {/* <section className={styles.commitment}>
           <div>
             <h2>
               Strength, Quality <br />& Commitment
@@ -387,78 +695,100 @@ const About = () => {
           />
 
           <h1> L & R ENTERPRISES</h1>
-        </section>
+        </section> */}
 
-        <section className={styles.products}>
+        <section className={styles.productsImage} >
+          <div className={styles.ProductBox}>
+            <span className={styles.introLabels}>• Our Product</span>
+          </div>
           <div className={styles.productHead}>
-            <div>
-              <span className={styles.badge}>• Our Product</span>
-              <h2>
-                Quality Products <br />
-                We Offer
-              </h2>
-            </div>
+            <h2>
+              Quality Products <br />
+              <span>We Offer</span>
+            </h2>
+            <div className={styles.ProductImageLine}></div>
           </div>
 
           <div className={styles.productGrid}>
-            {products.map((item) => (
-              <div className={styles.productCard} key={item.title}>
-                <img src={item.img} alt={item.title} />
+            {cards.map((card) => (
+              <div className={styles.productCard}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.cardImage}
+                />
 
-                <button className={styles.arrowBtn}>↗</button>
+                <div className={styles.darkOverlay}></div>
 
-                <div className={styles.productInfo}>
-                  <p>{item.title}</p>
+                <button className={styles.arrowBtn}>
+                  <ArrowUpRight size={28} strokeWidth={2.5} />
+                </button>
+
+                <div className={styles.cardContent}>
+                  <h3>{card.title}</h3>
+                  <p>{card.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className={styles.faq}>
-          <div className={styles.faqTop}>
-            <div>
-              <span className={styles.badge}>• FAQS</span>
-              <h2>
-                Frequently Asked <br />
-                <span>Questions</span>
-              </h2>
+
+
+
+
+        {/* =================Faq================ */}
+        <section className={styles.faqSec}>
+          <span className={styles.introLabel}>• FAQS</span>
+          <div className={styles.faqHeader}>
+            <div className={styles.faqText}>
+              <h2>Frequently Asked<br /><span>Questions</span></h2>
+              <div className={styles.FaqsLine}></div>
             </div>
-            <p>
-              Find answers to common questions about our <br />
-              prefabricated structures, containers, and services.
-            </p>
+            <p>Find answers to common questions about our
+              prefabricated structures, containers, and services.</p>
           </div>
-
           <div className={styles.faqBody}>
-            <img
-              src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80"
-              alt="Factory"
-            />
-
-            <div className={styles.faqList}>
-              {faqs.map((faq, index) => (
+            <div className={styles.faqImg}>
+              <img src={about1} alt="warehouse" />
+            </div>
+            {/*  */}
+            <div className={styles.container}>
+              {faqs.map((item, index) => (
                 <div
-                  className={`${styles.faqItem} ${
-                    index === 1 ? styles.activeFaq : ""
-                  }`}
-                  key={faq}
+                  key={index}
+                  className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                    }`}
                 >
-                  <h4>{faq}</h4>
-                  <span>{index === 1 ? "↓" : "↑"}</span>
-                  {index === 1 && (
-                    <p>
-                      Yes, all our structures and containers can be customized
-                      based on your requirements, including size, design,
-                      layout, and functionality.
-                    </p>
-                  )}
+                  <div
+                    className={styles.question}
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <h3>{item.q}</h3>
+
+                    <span className={styles.icon}>
+                      {activeIndex === index ? (
+                        <X size={28} strokeWidth={2} />
+                      ) : (
+                        <Plus size={28} strokeWidth={2} />
+                      )}
+                    </span>
+                  </div>
+
+                  <div
+                    className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                      }`}
+                  >
+                    <div className={styles.answer}>
+                      <p>{item.a}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-      </main>
+      </main >
 
       <Footer />
     </>

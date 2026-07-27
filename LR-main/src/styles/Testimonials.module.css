@@ -10,15 +10,11 @@
 
 .bgOverlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.03; /* Faint blueprint look */
+  opacity: 0.03;
   pointer-events: none;
-  z-index: 1;
 }
 
 .headerContainer {
@@ -32,228 +28,496 @@
 
 .tag {
   display: inline-block;
-  background: #fff;
   padding: 6px 25px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 35px;
   font-size: 15px;
   margin-bottom: 15px;
-  border: 1px solid #e5e7eb;
 }
 
 .headerContainer h2 {
   font-size: 55px;
   font-weight: 400;
+  line-height: 1.2;
   color: #111;
-  line-height: 1.25;
-  margin: 0 0 16px 0;
 }
 
 .blueText {
-  color: #263f69;
+  color: #293F67;
 }
 
 .underline {
   width: 120px;
   height: 3px;
-  background: #263f69;
-  border-radius: 1px;
+  margin-top: 15px;
+  border-radius: 50px;
+  background: #293F67;
 }
 
-.cardContainer {
+/*======================
+ Slider
+======================*/
+
+.cardSlider {
   width: 100%;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 45px 0;
+}
+
+.cardTrack {
+  display: flex;
   gap: 30px;
-  position: relative;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  overflow: hidden;
+  transition: transform .8s ease-in-out;
 }
 
 .card {
-  background: #ffffff;
+  flex: 0 0 calc((100% - 60px) / 3);
+  background: #fff;
   border-radius: 8px;
-  padding: 40px 30px 30px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid #f0f0f0;
-  border-bottom: 6px solid #263f69;
+  padding: 40px 30px;
+  min-height: 330px;
+  border-bottom: 6px solid #293F67;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+  transition: .35s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 320px;
-  transition: all 0.3s ease;
 }
 
-
+.card:hover,
 .activeCard {
-  background: #263f69;
-  color: #ffffff;
-  border-color: #263f69;
-  border-bottom: 6px solid #ffffff;
-  box-shadow: 0 15px 40px rgba(38, 63, 105, 0.2);
+  background: #293F67;
+  border-bottom-color: #fff;
+  transform: translateY(-8px);
 }
-
-.quoteIcon {
-  font-size: 60px;
-  font-family: serif;
-  color: #bcc6d2;
-  line-height: 1;
-  margin-bottom: -10px;
-  margin-top: -20px;
-}
-
 
 .quote {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 28px;
+  color: #8b9ab7;
+  margin-bottom: 20px;
+  transition: .35s;
 }
 
-.lightCard .quote {
-  color: #7b8ba9;
-}
-
-.darkCard .quote {
-  color: #d5dced;
-}
-.quote {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 15px;
-  color: #7b8ba9;
-}
-
-.lightCard .quote {
-  color: #7b8ba9;
-}
-
-.darkCard .quote {
-  color: #d5dced;
-}
-
-.activeCard .quoteIcon {
-  color: rgba(255, 255, 255, 0.3);
+.activeCard .quote,
+.card:hover .quote {
+  color: rgba(255, 255, 255, .4);
 }
 
 .quoteText {
   font-size: 15px;
-  line-height: 1.7;
-  color: #444;
-  margin: 0 0 30px 0;
-  font-style: normal;
+  line-height: 1.8;
+  color: #555;
+  flex: 1;
+  transition: .35s;
 }
 
-
-.iconBox {
-  width: 65px;
-  height: 65px;
-  background: #000;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+.activeCard .quoteText,
+.card:hover .quoteText {
+  color: rgba(255, 255, 255, .9);
 }
 
-.iconWhite {
-  background: #fff;
-  color: #314a78;
-}
-.activeCard .quoteText {
-  color: rgba(255, 255, 255, 0.9);
-}
+/*======================
+ Author
+======================*/
 
 .authorBlock {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: 30px;
 }
 
 .iconBox {
-  width: 44px;
-  height: 44px;
-  background: #111111;
-  color: #ffffff;
+  width: 52px;
+  height: 52px;
+  background: #111;
+  color: #fff;
   border-radius: 4px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  align-items: center;
+  transition: .35s;
 }
 
-.activeCard .iconBox {
-  background: #ffffff;
-  color: #263f69;
+.activeCard .iconBox,
+.card:hover .iconBox {
+  background: #fff;
+  color: #293F67;
 }
 
 .authorInfo {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .authorName {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  color: #111111;
+  color: #111;
   margin: 0;
-  letter-spacing: 0.5px;
-}
-
-.activeCard .authorName {
-  color: #ffffff;
+  transition: .35s;
 }
 
 .authorRole {
-  font-size: 12.5px;
-  color: #666666;
+  font-size: 13px;
+  color: #666;
   margin: 0;
+  transition: .35s;
 }
 
-.activeCard .authorRole {
-  color: rgba(255, 255, 255, 0.75);
+.activeCard .authorName,
+.card:hover .authorName {
+  color: #fff;
 }
 
-/* Scrollbar/Progress bar at bottom */
+.activeCard .authorRole,
+.card:hover .authorRole {
+  color: rgba(255, 255, 255, .75);
+}
+
+/*======================
+ Progress
+======================*/
+
 .scrollbarContainer {
   display: flex;
   justify-content: center;
-  position: relative;
-  z-index: 2;
+  margin-top: 35px;
 }
 
 .scrollTrack {
   width: 180px;
   height: 4px;
-  background: #e2e8f0;
-  border-radius: 2px;
-  position: relative;
+  background: #d8d8d8;
+  border-radius: 50px;
   overflow: hidden;
+  position: relative;
 }
 
 .scrollIndicator {
-  width: 80px;
-  height: 100%;
-  background: #263f69;
-  border-radius: 2px;
   position: absolute;
-  left: 30px; /* Positioned to match screenshot */
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #293F67;
+  border-radius: 50px;
+  transition: transform .8s ease;
 }
 
-@media (max-width: 992px) {
-  .cardContainer {
-    grid-template-columns: 1fr;
+
+@media (max-width:1440px) {
+
+  .testimonialSection {
+    padding: 75px 45px;
+  }
+
+  .headerContainer h2 {
+    font-size: 46px;
+  }
+
+  .card {
+    padding: 35px 26px;
+    min-height: 320px;
+  }
+
+}
+
+
+/* ==========================================================
+   1366px
+========================================================== */
+
+@media (max-width:1366px) {
+
+  .headerContainer h2 {
+    font-size: 42px;
+  }
+
+  .cardTrack {
+    gap: 24px;
+  }
+
+  .card {
+    flex: 0 0 calc((100% - 48px)/3);
+  }
+
+}
+
+
+/* ==========================================================
+   1280px
+========================================================== */
+
+@media (max-width:1280px) {
+
+  .testimonialSection {
+    padding: 70px 40px;
+  }
+
+  .headerContainer h2 {
+    font-size: 40px;
+  }
+
+  .quote {
+    margin-bottom: 18px;
+  }
+
+}
+
+
+/* ==========================================================
+   1200px
+========================================================== */
+
+@media (max-width:1200px) {
+
+  .testimonialSection {
+    padding: 65px 35px;
+  }
+
+  .headerContainer h2 {
+    font-size: 36px;
+  }
+
+  .quoteText {
+    font-size: 14px;
+  }
+
+}
+
+
+/* ==========================================================
+   1024px
+========================================================== */
+
+@media (max-width:1024px) {
+
+  .testimonialSection {
+    padding: 60px 30px;
+  }
+
+  .headerContainer {
+    margin-bottom: 35px;
+  }
+
+  .headerContainer h2 {
+    font-size: 34px;
+  }
+
+  .cardTrack {
     gap: 20px;
   }
+
+  .card {
+    flex: 0 0 calc((100% - 20px)/2);
+    min-height: 300px;
+  }
+
 }
 
-@media (max-width: 760px) {
+
+/* ==========================================================
+   992px
+========================================================== */
+
+@media (max-width:992px) {
+
   .testimonialSection {
-    padding: 60px 22px;
+    padding: 55px 28px;
   }
-  
+
+  .tag {
+    font-size: 14px;
+  }
+
   .headerContainer h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
+
+  .card {
+    flex: 0 0 calc((100% - 20px)/2);
+    padding: 30px 22px;
+  }
+
+}
+
+
+/* ==========================================================
+   768px
+========================================================== */
+
+@media (max-width:768px) {
+
+  .testimonialSection {
+    padding: 50px 22px;
+  }
+
+  .headerContainer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerContainer h2 {
+    font-size: 28px;
+  }
+
+  .underline {
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .cardTrack {
+    gap: 18px;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    min-height: auto;
+    padding: 28px 22px;
+  }
+
+  .quote svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .quoteText {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .authorBlock {
+    margin-top: 24px;
+  }
+
+}
+
+
+/* ==========================================================
+   576px
+========================================================== */
+
+@media (max-width:576px) {
+
+  .testimonialSection {
+    padding: 45px 18px;
+  }
+
+  .headerContainer h2 {
+    font-size: 24px;
+  }
+
+  .tag {
+    padding: 6px 18px;
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 24px 18px;
+  }
+
+  .iconBox {
+    width: 48px;
+    height: 48px;
+  }
+
+  .authorName {
+    font-size: 15px;
+  }
+
+}
+
+
+/* ==========================================================
+   480px
+========================================================== */
+
+@media (max-width:480px) {
+
+  .testimonialSection {
+    padding: 40px 16px;
+  }
+
+  .headerContainer h2 {
+    font-size: 22px;
+  }
+
+  .quoteText {
+    font-size: 13px;
+  }
+
+  .authorRole {
+    font-size: 12px;
+  }
+
+  .scrollTrack {
+    width: 140px;
+  }
+
+}
+
+
+/* ==========================================================
+   375px
+========================================================== */
+
+@media (max-width:375px) {
+
+  .testimonialSection {
+    padding: 35px 14px;
+  }
+
+  .headerContainer h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .quote svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .iconBox {
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+
+/* ==========================================================
+   320px
+========================================================== */
+
+@media (max-width:320px) {
+
+  .testimonialSection {
+    padding: 30px 12px;
+  }
+
+  .headerContainer h2 {
+    font-size: 18px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 14px;
+  }
+
+  .quoteText {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .authorName {
+    font-size: 14px;
+  }
+
+  .authorRole {
+    font-size: 11px;
+  }
+
 }

@@ -1,8 +1,95 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import styles from '../../styles/Contact.module.css';
 import { ArrowRight, School } from "lucide-react";
-
+import {
+  ChevronDown,
+  Building2,
+  Container,
+  Warehouse,
+  SunMedium,
+} from "lucide-react";
 const ContactCTA = () => {
+  const projects = [
+    {
+      value: "Pre-Engineered Building",
+      icon: <Building2 size={22} />,
+      desc: "Industrial Steel Structures",
+    },
+    {
+      value: "MS Container",
+      icon: <Container size={22} />,
+      desc: "Portable Container Solutions",
+    },
+    {
+      value: "LGSF Structure",
+      icon: <Warehouse size={22} />,
+      desc: "Light Gauge Steel Frame",
+    },
+    {
+      value: "Solar Mounting Structure",
+      icon: <SunMedium size={22} />,
+      desc: "Solar Support Systems",
+    },
+  ];
+
+  const [selectedProject, setSelectedProject] = useState("");
+  const [openProjects, setOpenProjects] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const closeDropdown = (e) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target)
+      ) {
+        setOpenProjects(false);
+      }
+    };
+
+    document.addEventListener("mousedown", closeDropdown);
+
+    return () => {
+      document.removeEventListener("mousedown", closeDropdown);
+    };
+  }, []);
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    project: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const message = `*New Project Inquiry*
+
+👤 Name: ${formData.name}
+
+🏗 Project: ${formData.project}
+
+📞 Phone: ${formData.phone}
+
+📧 Email: ${formData.email}
+
+📝 Message:
+${formData.message}`;
+
+    const whatsappURL = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <section className={styles.contactSection}>
       {/* Background blueprint overlay */}
@@ -37,28 +124,73 @@ const ContactCTA = () => {
           <form className={styles.contactForm}>
             <div className={styles.formGroup}>
               <label>Full Name</label>
-              <input type="text" placeholder="John Doe" />
+              <input type="text" placeholder="John Doe"
+                name="name"
+               
+                value={formData.name}
+                onChange={handleChange} />
             </div>
 
             <div className={styles.formGroup}>
               <label>Select Project</label>
-              <select defaultValue="">
-                <option value="" disabled>Select Projects</option>
-                <option value="peb">Pre-Engineered Building</option>
-                <option value="container">MS Container</option>
-                <option value="lgsf">LGSF Structure</option>
-                <option value="solar">Solar Mounting Structure</option>
-              </select>
+
+              <div className={styles.projectDropdown} ref={dropdownRef}>
+                <div
+                  className={styles.projectSelect}
+                  onClick={() => setOpenProjects(!openProjects)}
+                >
+                  <span>
+                    {selectedProject || "Select Project"}
+                  </span>
+
+                  <ChevronDown
+                    size={20}
+                    className={`${styles.arrowIcon} ${openProjects ? styles.rotate : ""
+                      }`}
+                  />
+                </div>
+
+                {openProjects && (
+                  <div className={styles.projectPopup}>
+                    {projects.map((project, index) => (
+                      <div
+                        key={index}
+                        className={styles.projectCard}
+                        onClick={() => {
+                          setSelectedProject(project.value);
+                          setOpenProjects(false);
+                        }}
+                      >
+                        <div className={styles.projectIcon}>
+                          {project.icon}
+                        </div>
+
+                        <div className={styles.projectContent}>
+                          <h4>{project.value}</h4>
+                          <p>{project.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className={styles.formGroup}>
               <label>Phone Number</label>
-              <input type="text" placeholder="+91 00000 00000" />
+              <input type="text" 
+                name="phone"
+                placeholder="+91 00000 00000"
+                value={formData.phone}
+                onChange={handleChange} />
             </div>
 
             <div className={styles.formGroup}>
               <label>Email Address</label>
-              <input type="email" placeholder="Dragon@gmail.com" />
+              <input type="email" name="email"
+                placeholder="Dragon@gmail.com"
+                value={formData.email}
+                onChange={handleChange} />
             </div>
 
             <div className={`${styles.formGroup} ${styles.fullWidth}`}>
@@ -66,9 +198,12 @@ const ContactCTA = () => {
               <textarea placeholder="Describe you project scope, location, and demenions"></textarea>
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
+            <button type="submit" onClick={handleSubmit} className={styles.submitBtn}>
               <span>Submit Proposal</span>
-              <ArrowRight size={18} strokeWidth={2.5} className={styles.arrow} />
+              <ArrowRight name="message"
+                placeholder="Describe your project scope, location and dimensions"
+                value={formData.message}
+                onChange={handleChange} size={18} strokeWidth={2.5} className={styles.arrow} />
             </button>
           </form>
         </div>

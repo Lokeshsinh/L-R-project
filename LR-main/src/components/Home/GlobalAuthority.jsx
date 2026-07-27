@@ -8,9 +8,6 @@ const GlobalAuthority = () => {
       <div className={styles.watermarkWrapper}>
         <div className={styles.watermarkTrack}>
           <span className={styles.watermark}>PRE-ENGINEERED</span>
-          <span className={styles.watermark}>PRE-ENGINEERED</span>
-          <span className={styles.watermark}>PRE-ENGINEERED</span>
-          <span className={styles.watermark}>PRE-ENGINEERED</span>
         </div>
       </div>
 

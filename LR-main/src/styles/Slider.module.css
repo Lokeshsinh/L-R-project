@@ -238,34 +238,365 @@
   color: #fff;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .section-head {
-    flex-direction: column;
+/* ===========================================================
+   1440px
+=========================================================== */
+
+@media (max-width:1440px){
+
+  .innovation-section{
+    padding:75px 45px;
+  }
+
+  .section-head{
+    gap:30px;
+  }
+
+  .section-head h2{
+    font-size:48px;
+  }
+
+  .head-desc{
+    max-width:470px;
+    font-size:15px;
+  }
+
+  .card{
+    flex:0 0 calc((100% - 40px)/3);
+    margin-right:20px;
+    height:400px;
+  }
+
+  .overlay h3{
+    font-size:28px;
+  }
+
+}
+
+/* ===========================================================
+   1280px
+=========================================================== */
+
+@media (max-width:1280px){
+
+  .innovation-section{
+    padding:70px 40px;
+  }
+
+  .section-head h2{
+    font-size:44px;
+  }
+
+  .card{
+    height:380px;
+  }
+
+  .bottomTitle span{
+    font-size:20px;
+  }
+
+}
+
+/* ===========================================================
+   1200px
+=========================================================== */
+
+@media (max-width:1200px){
+
+  .section-head{
+    align-items:flex-start;
+    gap:25px;
+  }
+
+  .head-desc{
+    flex:1;
+    padding-top:40px;
+  }
+
+  .card{
+    flex:0 0 calc((100% - 20px)/2);
+    margin-right:20px;
+    height:420px;
+  }
+
+}
+
+/* ===========================================================
+   1024px
+=========================================================== */
+
+@media (max-width:1024px){
+
+  .innovation-section{
+    padding:65px 30px;
+  }
+
+  .section-head{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .head-desc{
+    max-width:100%;
+    padding-top:0;
+  }
+
+  .section-head h2{
+    font-size:40px;
+  }
+
+  .card{
+    flex:0 0 calc((100% - 20px)/2);
+    height:390px;
+  }
+
+  .overlay{
+    padding:24px;
+  }
+
+  .overlay h3{
+    font-size:25px;
+  }
+
+}
+
+/* ===========================================================
+   991px
+=========================================================== */
+
+@media (max-width:991px){
+
+  .card{
+    flex:0 0 calc((100% - 16px)/2);
+    margin-right:16px;
+    height:370px;
+  }
+
+  .bottomTitle{
+    padding:16px;
+  }
+
+  .bottomTitle span{
+    font-size:18px;
+  }
+
+}
+
+/* ===========================================================
+   768px
+=========================================================== */
+
+@media (max-width:768px){
+
+  .innovation-section{
+    padding:60px 22px;
+  }
+
+  .section-head h2{
+    font-size:34px;
+  }
+
+  .head-desc{
+    font-size:15px;
+  }
+
+  .card{
+    flex:0 0 100%;
+    margin-right:0;
+    height:420px;
+  }
+
+  .overlay{
+    transform:translateY(0);
+    background:linear-gradient(to top,
+    rgba(38,63,105,.96),
+    rgba(38,63,105,.70),
+    rgba(38,63,105,.20));
+  }
+
+  .bottomTitle{
+    display:none;
+  }
+
+  .slider-controls{
+    justify-content:center;
+    margin-top:25px;
+  }
+
+}
+
+/* ===========================================================
+   600px
+=========================================================== */
+
+@media (max-width:600px){
+
+  .innovation-section{
+    padding:55px 18px;
+  }
+
+  .tag{
+    font-size:13px;
+    padding:6px 18px;
+  }
+
+  .section-head h2{
+    font-size:30px;
+  }
+
+  .card{
+    height:380px;
+  }
+
+  .overlay{
+    padding:20px;
+  }
+
+  .overlay h3{
+    font-size:22px;
+  }
+
+  .overlay p{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .overlay button{
+    font-size:14px;
+  }
+
+  .slider-controls button{
+    width:48px;
+    height:48px;
+  }
+
+}
+
+/* ===========================================================
+   480px
+=========================================================== */
+
+@media (max-width:480px){
+
+  .innovation-section{
+    padding:50px 15px;
+  }
+
+  .section-head{
+    margin-bottom:30px;
+  }
+  .sliderTrack{
     gap: 20px;
   }
 
-  .head-desc {
-    padding-top: 0;
+  .section-head h2{
+    font-size:26px;
   }
 
-  .slider-wrap {
-    grid-template-columns: 1fr;
-    min-height: unset;
+  .divider{
+    width:80px;
   }
 
-  .img-card {
-    height: 240px;
+  .head-desc{
+    font-size:14px;
   }
+
+  .card{
+    height:340px;
+  }
+
+  .overlay{
+    padding:18px;
+  }
+
+  .overlay h3{
+    font-size:20px;
+    margin-bottom:12px;
+  }
+
+  .overlay p{
+    font-size:12px;
+    line-height:1.5;
+    margin-bottom:16px;
+
+    display:-webkit-box;
+    -webkit-line-clamp:5;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+
+  .bottomTitle span{
+    font-size:16px;
+  }
+
 }
 
-@media (max-width: 760px) {
-  .innovation-section {
-    padding-left: 22px;
-    padding-right: 22px;
+/* ===========================================================
+   390px
+=========================================================== */
+
+@media (max-width:390px){
+
+  .section-head h2{
+    font-size:23px;
   }
 
-  .section-head h2 {
-    font-size: 30px;
+  .card{
+    height:310px;
   }
+
+  .overlay h3{
+    font-size:18px;
+  }
+
+  .overlay p{
+    -webkit-line-clamp:4;
+  }
+
+  .slider-controls{
+    gap:15px;
+  }
+
+  .slider-controls button{
+    width:44px;
+    height:44px;
+  }
+
+}
+
+/* ===========================================================
+   360px
+=========================================================== */
+
+@media (max-width:360px){
+
+  .innovation-section{
+    padding:45px 12px;
+  }
+
+  .section-head h2{
+    font-size:21px;
+  }
+
+  .tag{
+    font-size:12px;
+  }
+
+  .card{
+    height:290px;
+  }
+
+  .overlay{
+    padding:15px;
+  }
+
+  .overlay h3{
+    font-size:17px;
+  }
+
+  .overlay p{
+    font-size:11px;
+    -webkit-line-clamp:3;
+  }
+
 }

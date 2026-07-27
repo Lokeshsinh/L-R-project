@@ -14,6 +14,7 @@
   position: absolute;
   inset: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 120px;
   overflow: hidden;
@@ -22,7 +23,7 @@
 }
 
 .bannerSectionHidden h1 {
-  font-size: 170px;
+  font-size: 120px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.06);
   white-space: nowrap;
@@ -30,15 +31,7 @@
   animation: marquee 18s linear infinite;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(-100%);
-  }
 
-  to {
-    transform: translateX(100%);
-  }
-}
 
 .solarBannerFlex {
   display: flex;
@@ -104,27 +97,7 @@
 }
 
 
-/* ===========================================================
-   Responsive Media Queries
-=========================================================== */
 
-/* 1600px */
-@media screen and (max-width:1600px) {
-
-  .bannerSection {
-    padding: 0 4% 0 2%;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 50px;
-  }
-
-  .SolarBannerImg {
-    width: 420px;
-    height: 380px;
-  }
-
-}
 
 /* 1440px */
 
@@ -193,7 +166,7 @@
   }
 
   .SolarBannerText h1 {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .bannerSectionHidden h1 {
@@ -395,12 +368,13 @@
     font-size: 12px;
   }
 
+
   .SolarBannerImg {
     width: 95%;
   }
 
   .bannerSloarBottom img {
-    width: 180px;
+    display: none;
   }
 
   .bannerSectionHidden {
