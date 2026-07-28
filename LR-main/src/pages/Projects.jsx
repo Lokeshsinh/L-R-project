@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import {
+  ArrowRight,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/Projects.module.css";
@@ -68,6 +71,7 @@ const ALL_PROJECTS = [
 const PAGE_SIZE = 9;
 
 const Projects = () => {
+  const navigate = useNavigate()
   const [activeFilter, setActiveFilter] = useState("all");
   const [hoveredParent, setHoveredParent] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -117,15 +121,34 @@ const Projects = () => {
       <Header />
 
       {/* HERO */}
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/projectshero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>L&amp;R GREEN <br /><span>PROJECTS</span></h1>
-          <p className={styles.subtitle}>At L&amp;R Green India Pvt Ltd, we manufacture LGSF prefab rooftops and sandwich panels for construction workers and cost-effective projects.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            L&r green <br />
+            <span>Projects 
+            </span>
+          </h1>
+          <p className={styles.heroDesc}>
+            At L&R Green Pvt Ltd, we deliver high-performance Rockwool panels designed for demanding
+            industrial, commercial, and specialized environments.
+          </p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
 
       {/* PROJECTS GRID */}
       <section className={styles.projectsSec}>
@@ -133,9 +156,8 @@ const Projects = () => {
 
           {/* Heading row */}
           <div className={styles.headingRow}>
-            <div>
-              <h2 className={styles.discoverTitle}>Discover Our</h2>
-              <h2 className={styles.discoverSub}>Projects</h2>
+            <div className={styles.ProjectText}>
+              <h2>Discover Our <br /> Projects</h2>
               <div className={styles.discoverDivider} />
             </div>
             <p className={styles.discoverDesc}>Advanced modular solar energy solutions bringing circular innovation and eco-skills.</p>
