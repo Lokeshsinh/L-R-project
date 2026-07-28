@@ -23,6 +23,20 @@ import rooftop5 from '../assets/Projects/rooftop/rooftop5.jpg'
 import solar1 from '../assets/Projects/solar/solar.jpg'
 import solar2 from '../assets/Projects/solar/solar2.jpg'
 import solar3 from '../assets/Projects/solar/solar3.jpg'
+import panel1 from '../assets/Projects/Pufpanel/penal1.jpg'
+import panel2 from '../assets/Projects/Pufpanel/panel2.jpg'
+import panel3 from '../assets/Projects/Pufpanel/panel3.jpg'
+import panel4 from '../assets/Projects/Pufpanel/panel4.jpg'
+import panel5 from '../assets/Projects/Pufpanel/panel5.jpg'
+import panel6 from '../assets/Projects/Pufpanel/panel6.jpg'
+import pre1 from '../assets/Projects/Pre-eng/pre1.jpeg'
+import pre2 from '../assets/Projects/Pre-eng/pre2.jpeg'
+import pre3 from '../assets/Projects/Pre-eng/pre3.jpg'
+import pre4 from '../assets/Projects/Pre-eng/pre4.jpg'
+import pre5 from '../assets/Projects/Pre-eng/pre5.jpg'
+import prefab1 from '../assets/Projects/Prefab/prefab1.jpg'
+import prefab2 from '../assets/Projects/Prefab/prefab2.jpg'
+import container1 from '../assets/Projects/Container/container1.jpg'
 
 // ── Filter taxonomy (matches screenshots exactly) ──────────────────────────
 const FILTER_TREE = [
@@ -73,15 +87,15 @@ const FILTER_TREE = [
 const ALL_PROJECTS = [
   { id: 1, title: "Light Gauge Steel Frame Construction", category: "lgsf", tag: "LGSF", img: lgsf1, desc: "LGSF (Light Gauge Steel Frame) is a modern system using cold-formed steel for strong, lightweight structures. At L&R Green Pvt Ltd, we build prefab rooftop and structural systems that are quick to install, durable, and ideal for all project types." },
   { id: 2, title: "Solar EPC Farm Installation", category: "solar-epc", tag: "Solar EPC", img: solar1, desc: "End-to-end solar EPC project delivering a 500 kW ground-mounted solar power plant for an industrial client in Rajasthan." },
-  { id: 3, title: "Prefab Labour Accommodation", category: "prefab-modular", tag: "Prefab Modular", img: "/Images/proj3.jpg", desc: "Complete prefabricated labour accommodation complex with 200 rooms, canteen, and washrooms for a construction project site." },
-  { id: 4, title: "Industrial Warehouse — Steel Structure", category: "pre-engineered", tag: "Pre-engineered", img: "/Images/proj4.jpg", desc: "Pre-engineered steel warehouse of 15,000 sq ft for a logistics company requiring rapid completion within 6 weeks." },
+  { id: 3, title: "Prefab Labour Accommodation", category: "prefab-modular", tag: "Prefab Modular", img: prefab1, desc: "Complete prefabricated labour accommodation complex with 200 rooms, canteen, and washrooms for a construction project site." },
+  { id: 4, title: "Industrial Warehouse — Steel Structure", category: "pre-engineered", tag: "Pre-engineered", img: pre1, desc: "Pre-engineered steel warehouse of 15,000 sq ft for a logistics company requiring rapid completion within 6 weeks." },
   { id: 5, title: "Rooftop Residential Flat (G+2)", category: "rooftop-room", tag: "Rooftop Room", img: rooftop5, desc: "Prefabricated rooftop residential flat on an existing RCC building using LGSF technology with complete finishing." },
-  { id: 6, title: "Module Mounting Structure — 1 MW", category: "solar-mounting", tag: "Solar Mounting", img: "/Images/proj6.jpg", desc: "Supply and installation of galvanized steel module mounting structures for a 1 MW ground-mounted solar farm." },
-  { id: 7, title: "MS Executive Container Office", category: "ms-containers", tag: "MS Containers", img: "/Images/proj7.jpg", desc: "Custom-built executive MS container office with AC, full electrical fittings, and premium interior for a site office." },
-  { id: 8, title: "Factory Building — PEB Structure", category: "pre-engineered", tag: "Pre-engineered", img: "/Images/proj8.jpg", desc: "Pre-engineered factory building of 25,000 sq ft with mezzanine floors for a manufacturing unit in Noida." },
+  { id: 6, title: "Module Mounting Structure — 1 MW", category: "solar-mounting", tag: "Solar Mounting", img: solar2, desc: "Supply and installation of galvanized steel module mounting structures for a 1 MW ground-mounted solar farm." },
+  { id: 7, title: "MS Executive Container Office", category: "ms-containers", tag: "MS Containers", img: container1, desc: "Custom-built executive MS container office with AC, full electrical fittings, and premium interior for a site office." },
+  { id: 8, title: "Factory Building — PEB Structure", category: "pre-engineered", tag: "Pre-engineered", img: pre2, desc: "Pre-engineered factory building of 25,000 sq ft with mezzanine floors for a manufacturing unit in Noida." },
   { id: 9, title: "Prefab Sales Office — LGSF", category: "lgsf", tag: "LGSF", img: lgsf6, desc: "Premium LGSF prefabricated sales office with glass facade and branded exterior for a real estate developer." },
-  { id: 10, title: "PUF Wall Panels — Cold Storage", category: "sandwich-panels", tag: "Sandwich Panels", img: "/Images/proj10.jpg", desc: "Complete cold storage insulation using PUF wall and roof panels for a 2,000 sq ft food processing facility." },
-  { id: 11, title: "Solar Carport — Parking Structure", category: "solar-hardware", tag: "Solar Hardware", img: "/Images/proj11.jpg", desc: "Solar carport mounting structure for 50 kW rooftop system over a commercial parking area in Delhi NCR." },
+  { id: 10, title: "PUF Wall Panels — Cold Storage", category: "sandwich-panels", tag: "Sandwich Panels", img: panel6, desc: "Complete cold storage insulation using PUF wall and roof panels for a 2,000 sq ft food processing facility." },
+  { id: 11, title: "Solar Carport — Parking Structure", category: "solar-hardware", tag: "Solar Hardware", img: solar3, desc: "Solar carport mounting structure for 50 kW rooftop system over a commercial parking area in Delhi NCR." },
   { id: 12, title: "Prefab Farmhouses", category: "lgsf", tag: "Farmhouse", img: lgsf8, desc: "Prefab Farmhouses offer modern, durable, and comfortable living spaces. Designed for quick installation, energy efficiency, and lasting performance." },
   { id: 13, title: "LGSF Prefab Dry Wall", category: "lgsf", tag: "Prefab Dry Wall", img: lgsf2, desc: "LGSF prefab dry walls offer lightweight, durable, and energy-efficient partition solutions. They ensure quick installation, excellent insulation, and long-lasting performance." },
   { id: 14, title: "LGSF Prefab Residential Houses (G+1 & G+2)", category: "lgsf", tag: "Prefab Residential Houses (G+1 & G+2)", img: lgsf3, desc: "LGSF G+1 and G+2 residential houses provide strong, lightweight, and energy-efficient living spaces. Designed for faster construction, durability, and modern comfort." },
@@ -93,8 +107,16 @@ const ALL_PROJECTS = [
   { id: 20, title: "Rooftop Party Lounge Rooms for Residential Flats", category: "rooftop-room", tag: "Rooftop Party Lounge", img: rooftop2, desc: "Stylish prefabricated rooftop party lounge rooms designed for residential flats. Create elegant entertainment spaces with modern interiors, quick installation, and durable construction." },
   { id: 21, title: "Rooftop Guest Rooms", category: "rooftop-room", tag: "Rooftop Guest Rooms", img: rooftop3, desc: "Comfortable prefabricated rooftop guest rooms designed for residential and commercial spaces. Built with modern layouts, quick installation, and durable materials for a welcoming stay experience." },
   { id: 22, title: "Rooftop Servant Rooms", category: "rooftop-room", tag: "Rooftop Servant Rooms", img: rooftop4, desc: "Compact and durable prefabricated rooftop servant rooms designed for residential needs. Providing comfortable living spaces with quick installation, smart design, and reliable performance." },
-  { id: 23, title: "Solar Module Mounting", category: "solar-epc", tag: "Module Mounting", img: solar2, desc: "Reliable solar module mounting systems designed for secure and efficient panel installation. Built with durable materials to provide stability, long-term performance, and easy maintenance." },
-  { id: 23, title: "Hardware for Solar Systems", category: "solar-epc", tag: "Hardware Solar", img: solar3, desc: "Advanced solar hardware solutions designed for efficient and secure solar installations. Built for durability, easy integration, and reliable performance to maximize renewable energy output." },
+  { id: 23, title: "Puf Sandwich Panel", category: "sandwich-panels", tag: "Sandwich Panels", img: panel1, desc: "High-performance PUF sandwich panels designed for superior thermal insulation and durability. Ideal for prefabricated structures, cold rooms, and industrial applications with energy-efficient solutions." },
+  { id: 24, title: "Roof PUF Panel", category: "sandwich-panels", tag: "Roof PUF Panel", img: panel2, desc: "Durable roof PUF panels designed for excellent thermal insulation and weather protection. Ideal for prefabricated buildings, warehouses, and industrial structures with long-lasting performance." },
+  { id: 25, title: "EPS PUF Panels", category: "sandwich-panels", tag: "Roof PUF Panel", img: panel3, desc: "High-quality EPS PUF panels designed for effective insulation, strength, and energy efficiency. Ideal for prefabricated buildings, clean rooms, and industrial applications with reliable performance." },
+  { id: 26, title: "Rock Wool Panels", category: "sandwich-panels", tag: "Rock Wool Panels", img: panel4, desc: "Fire-resistant rock wool panels designed for superior thermal and acoustic insulation. Ideal for industrial buildings, clean rooms, and prefabricated structures requiring safety, durability, and energy efficiency." },
+  { id: 27, title: "Glass Wool Sandwich Panels", category: "sandwich-panels", tag: "Glass Wool Panels", img: panel5, desc: "Premium glass wool sandwich panels designed for excellent thermal and sound insulation. Ideal for industrial, commercial, and prefabricated structures with enhanced safety, durability, and energy efficiency." },
+  { id: 28, title: "Warehouse", category: "pre-engineered", tag: "Pre-engineered", img: pre3, desc: "Advanced pre-engineered warehouses designed for efficient storage and industrial applications. Built with robust steel structures, faster installation, and customizable designs for durable long-term performance." },
+  { id: 29, title: "Industrial Shed", category: "pre-engineered", tag: "Pre-engineered", img: pre4, desc: "Durable industrial sheds designed for manufacturing, storage, and commercial applications. Built with strong structures, quick installation, and customized solutions to meet diverse industrial requirements." },
+  { id: 30, title: "Cold Room", category: "pre-engineered", tag: "Cold Room", img: pre5, desc: "Advanced cold room solutions designed for efficient temperature control and product preservation. Built with high-quality insulation, energy efficiency, and reliable performance for storage applications." },
+  { id: 31, title: "Prefabricated Site Office", category: "prefab-modular", tag: "Prefab Modular", img: prefab2, desc: "Modern prefabricated site offices designed for construction and industrial projects. Built for quick installation, durability, and comfortable workspaces with customizable layouts." },
+
 
 
 ];
