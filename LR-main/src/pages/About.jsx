@@ -1066,7 +1066,21 @@ const About = () => {
 
 
         {/* cta */}
+        <section className={styles.cta}>
+          <h2>Let's Build Your Next Project Together</h2>
+          <p>
+            From prefabricated buildings to steel structures, L&R Enterprises delivers reliable,
+            high-quality, and customized solutions for every project. Contact our team today and turn your vision into reality.
+          </p>
+          <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+            <span className={styles.contactText}>Contact Us</span>
 
+            <span className={styles.iconBoxs}>
+              <ArrowRight className={styles.iconOne} size={18} />
+              <ArrowRight className={styles.iconTwo} size={18} />
+            </span>
+          </button>
+        </section>
 
 
 

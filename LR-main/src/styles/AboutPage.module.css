@@ -5742,3 +5742,107 @@ why choose
 }
 
 /* ==============================cta============================== */
+
+.cta {
+  width: 100%;
+  background: url('../assets/cta.png');
+  background-attachment:fixed ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 60px;
+}
+
+.cta h2 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.cta p {
+  font-size: 0.97rem;
+  opacity: 0.85;
+  max-width: 800px;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contactBtn {
+  width: 267px;
+  height: 54px;
+  padding: 0 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1a3c6e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .35s ease;
+}
+
+.contactText {
+  font-size: 15px;
+  font-weight: 600;
+  transition: .35s;
+}
+
+.contactBtn:hover {
+  background: #fff;
+  color: #1a3c6e;
+  box-shadow: 0 12px 30px rgba(26, 60, 110, .18);
+}
+
+
+
+.iconBoxs {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.iconOne,
+.iconTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform .35s ease;
+}
+
+
+
+.iconOne {
+  transform: translateX(0);
+}
+
+
+
+.iconTwo {
+  transform: translateX(-24px);
+}
+
+.contactBtn:hover .iconOne {
+  transform: translateX(24px);
+}
+
+.contactBtn:hover .iconTwo {
+  transform: translateX(0);
+}
+
+.contactBtn:hover .contactText {
+  transform: translateX(-3px);
+}
+
+.btnBlue:hover {
+  background: #2550a0;
+}
