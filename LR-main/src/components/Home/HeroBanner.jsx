@@ -8,13 +8,16 @@ import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
 import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
 import user from '../../assets/conatiners/HomeConatiner/user.png'
+import banner1 from '../../assets/banner5.png'
+import container from '../../assets/banner3.png'
 function HeroBanner() {
   const [current, setCurrent] = useState(0);
 
-  // Auto Slider
+  const totalSlides = 4;
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
+      setCurrent((prev) => (prev + 1) % totalSlides);
     }, 5000);
 
     return () => clearInterval(timer);
@@ -22,7 +25,7 @@ function HeroBanner() {
 
   // Next Slide
   const nextSlide = () => {
-    if (current === 2) {
+    if (current === 3) {
       setCurrent(0);
     } else {
       setCurrent(current + 1);
@@ -42,6 +45,62 @@ function HeroBanner() {
     <section className={styles.hero}>
       {/* ================= Slide 1 ================= */}
 
+      <div
+        className={`${styles.HomeSlider} ${current === 0 ? styles.active : ""
+          }`}
+      >
+        <div className={styles.heroShape}></div>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContents}>
+            <h1 className={styles.heroTitle}>
+              PRECISION FABRICATION
+            </h1>
+
+            <h2 className={styles.heroSubTitle}>
+              Pre-Engineered Buildings Segment
+            </h2>
+
+            <p className={styles.heroDescription}>
+              Manufacturer of prefabricated structures, mild steel containers &
+              prefabricated cabins and solar. Established in 2015, New Delhi.
+            </p>
+
+            <button className={styles.heroButton}>
+              <span>All Category</span>
+              <ArrowRight size={20} />
+            </button>
+
+            <div className={styles.heroStats}>
+              <div className={styles.heroThumb}>
+                <img src={previewImg} alt="" />
+              </div>
+
+              <div className={styles.heroStat}>
+                <h3>500+</h3>
+                <p>Completed Projects</p>
+              </div>
+
+              <div className={styles.heroStat}>
+                <h3>25+</h3>
+                <p>Years Of Experience</p>
+              </div>
+
+              <div className={styles.heroStat}>
+                <h3>900+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.heroImage}>
+            <img src={user} alt="Building" />
+          </div>
+        </div>
+
+      </div>
+
+
+      {/* ================= Slide 2 ================= */}
       <div
         className={`${styles.slide} ${current === 1 ? styles.active : ""
           }`}
@@ -111,8 +170,9 @@ function HeroBanner() {
         </div>
       </div>
 
-      {/* ================= Slide 2 ================= */}
 
+
+      {/* ================= Slide 3 ================= */}
       <div
         className={`${styles.heroPanel} ${current === 2 ? styles.active : ""
           }`}
@@ -181,62 +241,83 @@ function HeroBanner() {
 
       </div>
 
-      {/* ================= Slide 3 ================= */}
+
+      {/* ===============slide4====================== */}
+
+      {/* ================= Slide 4 ================= */}
 
       <div
-        className={`${styles.HomeSlider} ${current === 0 ? styles.active : ""
+        className={`${styles.containerHeroPanel} ${current === 3 ? styles.active : ""
           }`}
       >
-        <div className={styles.heroShape}></div>
-        <div className={styles.heroContainer}>
-          <div className={styles.heroContents}>
-            <h1 className={styles.heroTitle}>
-              PRECISION FABRICATION
-            </h1>
+        {/* Background */}
+        <img
+          src={banner1}
+          alt="Solar Fastener"
+          className={styles.containerHeroBg}
+        />
 
-            <h2 className={styles.heroSubTitle}>
-              Pre-Engineered Buildings Segment
-            </h2>
+        <div className={styles.containerOverlay}></div>
 
-            <p className={styles.heroDescription}>
-              Manufacturer of prefabricated structures, mild steel containers &
-              prefabricated cabins and solar. Established in 2015, New Delhi.
-            </p>
+        {/* Heading */}
+        <div className={styles.containerHeading}>
+          <h3>L&amp;R GREEN INDIA PVT LTD</h3>
 
-            <button className={styles.heroButton}>
-              <span>All Category</span>
-              <ArrowRight size={20} />
-            </button>
-
-            <div className={styles.heroStats}>
-              <div className={styles.heroThumb}>
-                <img src={previewImg} alt="" />
-              </div>
-
-              <div className={styles.heroStat}>
-                <h3>500+</h3>
-                <p>Completed Projects</p>
-              </div>
-
-              <div className={styles.heroStat}>
-                <h3>25+</h3>
-                <p>Years Of Experience</p>
-              </div>
-
-              <div className={styles.heroStat}>
-                <h3>900+</h3>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.heroImage}>
-            <img src={user} alt="Building" />
-          </div>
+          <h1>
+            ENGINEERED FOR STRENGTH. BUILT FOR MOBILITY.
+          </h1>
         </div>
 
+        {/* Left Content */}
+        <div className={styles.containerContent}>
+          <p>
+           High-quality modular steel containers for construction, oil & gas, 
+           renewable energy, industrial projects, railways, and infrastructure. <br/>
+           Built for durability, rapid deployment, and performance across India.
+          </p>
+
+          <button className={styles.containerBtn}>
+            <span>All Category</span>
+            <ArrowRight
+              className={styles.containerArrow}
+              size={20}
+            />
+          </button>
+        </div>
+
+        {/* Product Image */}
+        <div className={styles.containerProductImage}>
+          <img
+            src={container}
+            alt="Solar Components"
+          />
+        </div>
+
+        {/* Statistics */}
+        <div className={styles.containerStatsCard}>
+          <div className={styles.containerStatItem}>
+            <h2>500+</h2>
+            <p>Completed Projects</p>
+          </div>
+
+          <div className={styles.containerStatItem}>
+            <h2>25+</h2>
+            <p>Years Of Experience</p>
+          </div>
+
+          <div className={styles.containerStatItem}>
+            <h2>900+</h2>
+            <p>Happy Clients</p>
+          </div>
+
+          <div className={styles.containerStatItem}>
+            <h2>150+</h2>
+            <p>Team Workers</p>
+          </div>
+        </div>
       </div>
 
+      
       {/* ================= Arrows ================= */}
 
       <button

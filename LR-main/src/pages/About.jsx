@@ -478,6 +478,7 @@ const About = () => {
 
 
 
+
         <section className={styles.journey}>
           <div className={styles.Teamuser}>
             <span className={styles.TeamBoder}>Our journey</span>
@@ -901,22 +902,22 @@ const About = () => {
 
         <section className={styles.qualitySection}>
           <div className={styles.qualityFlex}>
-          <div className={styles.qualityHeading}>
-            <span className={styles.qualityTag}>
-              • Quality & Certifications
-            </span>
+            <div className={styles.qualityHeading}>
+              <span className={styles.qualityTag}>
+                • Quality & Certifications
+              </span>
 
-            <h2>
-              Committed to Excellence <br />
-              <span>in Every Project</span>
-            </h2>
+              <h2>
+                Committed to Excellence <br />
+                <span>in Every Project</span>
+              </h2>
 
-            <div className={styles.qualityLine}></div>
-          </div>
-          <p className={styles.qualityDescription}>
-            We follow international quality standards to deliver reliable, durable, and safe
-            prefabricated building solutions, ensuring customer satisfaction and long-term performance.
-          </p>
+              <div className={styles.qualityLine}></div>
+            </div>
+            <p className={styles.qualityDescription}>
+              We follow international quality standards to deliver reliable, durable, and safe
+              prefabricated building solutions, ensuring customer satisfaction and long-term performance.
+            </p>
           </div>
 
           <div className={styles.qualityGrid}>
@@ -1061,6 +1062,14 @@ const About = () => {
             </div>
           </div>
         </section>
+
+
+
+        {/* cta */}
+
+
+
+
       </main >
 
       <Footer />

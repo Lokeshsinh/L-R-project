@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logo from '../../assets/Home/logo.jpg'
+import logo from '../../assets/logos.png'
 
 import "../../styles/Header.css";
 

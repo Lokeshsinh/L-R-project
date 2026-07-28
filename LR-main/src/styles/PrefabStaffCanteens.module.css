@@ -1116,106 +1116,102 @@
    CTA BANNER
 =========================== */
 .cta {
-    width: 100%;
-    background: url('../assets/Pre-Build/canteen/cta.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    padding: 40px 60px;
+  width: 100%;
+  min-height: 420px;
+  padding: 80px 60px;
+  background: linear-gradient(rgba(16, 29, 53, 0.55), rgba(16, 29, 53, 0.55)),
+    url("../assets/Pre-Build/canteen/cta.png") center center/cover no-repeat;
+
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
 }
 
 .cta h2 {
-    font-size: 50px;
-    font-weight: 600;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .cta p {
-    font-size: 0.97rem;
-    opacity: 0.85;
-    max-width: 560px;
-    line-height: 1.7;
-    text-align: center;
-    margin-bottom: 20px;
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
 }
 
 .contactBtn {
-    width: 267px;
-    height: 54px;
-    padding: 0 28px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    background: #1a3c6e;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all .35s ease;
+  width: 267px;
+  height: 54px;
+  border: none;
+  border-radius: 4px;
+  background: #1a3c6e;
+  color: #fff;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  transition: all 0.35s ease;
+  overflow: hidden;
 }
 
 .contactText {
-    font-size: 15px;
-    font-weight: 600;
-    transition: .35s;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.35s ease;
 }
-
-.contactBtn:hover {
-    background: #fff;
-    color: #1a3c6e;
-    box-shadow: 0 12px 30px rgba(26, 60, 110, .18);
-}
-
-
 
 .iconBox {
-    position: relative;
-    width: 18px;
-    height: 18px;
-    overflow: hidden;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
 }
 
 .iconOne,
 .iconTwo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform .35s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.35s ease;
 }
-
-
 
 .iconOne {
-    transform: translateX(0);
+  transform: translateX(0);
 }
-
-
 
 .iconTwo {
-    transform: translateX(-24px);
+  transform: translateX(-24px);
 }
 
-.contactBtn:hover .iconOne {
-    transform: translateX(24px);
-}
-
-.contactBtn:hover .iconTwo {
-    transform: translateX(0);
+.contactBtn:hover {
+  background: #fff;
+  color: #1a3c6e;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
 .contactBtn:hover .contactText {
-    transform: translateX(-3px);
+  transform: translateX(-4px);
 }
 
-.btnBlue:hover {
-    background: #2550a0;
+.contactBtn:hover .iconOne {
+  transform: translateX(24px);
+}
+
+.contactBtn:hover .iconTwo {
+  transform: translateX(0);
 }
 /* ===========================
    RESPONSIVE
