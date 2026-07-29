@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ContactUs.module.css";
@@ -6,25 +6,92 @@ import {
   ArrowRight, ShieldCheck,
   Share2,
   Truck,
+  User,
+  Phone,
+  Mail,
+  MapPin,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({ firstName: "", projectName: "", phone: "", projectPlace: "", productName: "", cityName: "", message: "", file: null });
-  const [submitted, setSubmitted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    project: "",
+    phone: "",
+    email: "",
+    product: "",
+    city: "",
+    message: "",
+  });
 
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const [fileName, setFileName] = useState("No File Chosen");
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setFormData(prev => ({ ...prev, [name]: files ? files[0] : value }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleFile = (e) => {
+    if (e.target.files.length > 0) {
+      setFileName(e.target.files[0].name);
+    } else {
+      setFileName("No File Chosen");
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+
+    if (
+      !formData.fullName ||
+      !formData.phone ||
+      !formData.email ||
+      !formData.message
+    ) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    const whatsappMessage = `*Technical Inquiry*
+
+ Full Name : ${formData.fullName}
+
+ Project : ${formData.project}
+
+ Phone : ${formData.phone}
+
+ Email : ${formData.email}
+
+City : ${formData.city}
+
+ Product : ${formData.product}
+
+ Message :
+${formData.message}
+
+📎 Selected File :
+${fileName}`;
+    setFormData({
+      fullName: "",
+      project: "",
+      phone: "",
+      email: "",
+      product: "",
+      city: "",
+      message: "",
+
+    })
+
+    window.open(
+      `https://wa.me/918595351363?text=${encodeURIComponent(
+        whatsappMessage
+      )}`,
+      "_blank"
+    );
   };
 
   const features = [
@@ -87,127 +154,252 @@ const ContactUs = () => {
 
       {/* GET IN TOUCH */}
       <section className={styles.touchSec} id="#contact">
-        <div className={styles.touchContainer}>
-          <div className={styles.touchHeader}>
-            <div>
-              <h2 className={styles.secTitle}>Get in <span>Touch</span></h2>
-              <div className={styles.divider} />
+        <div className={styles.touchHeader}>
+          <div className={styles.touchText}>
+            <h2 >Get in <span>Touch</span></h2>
+            <div className={styles.divider} />
+          </div>
+          <p className={styles.touchDesc}>Get in touch with our team for project updates, enquiries, quotations and complaint request for your project needs.</p>
+        </div>
+        <div className={styles.container}>
+          {/* LEFT PANEL */}
+
+          <div className={styles.leftPanel}>
+            <div className={styles.contactBox}>
+              <span>Name</span>
+
+              <div className={styles.contactItem}>
+                <User size={34} strokeWidth={1.6} />
+                <h4>Mr. Lalit Gautam</h4>
+              </div>
+
+              <span>Phone no</span>
+
+              <div className={styles.contactItem}>
+                <Phone size={34} strokeWidth={1.6} />
+                <h4>+91 8595351363 ; 9758813668</h4>
+              </div>
+
+              <span>Technical Support</span>
+
+              <div className={styles.contactItem}>
+                <Mail size={34} strokeWidth={1.6} />
+                <h4>info.lr1995@gmail.com</h4>
+              </div>
+
+              <span>Office Address</span>
+
+              <div className={styles.contactItem}>
+                <MapPin size={34} strokeWidth={1.6} />
+
+                <h4>
+                  216/2, Gautam Nagar,
+                  <br />
+                  Gulmohar Enclave,
+                  <br />
+                  New Delhi-110049
+                </h4>
+              </div>
             </div>
-            <p className={styles.touchDesc}>Get in touch with our team for project updates, enquiries, quotations and complaint request for your project needs.</p>
+
+            <div className={styles.bottomCounter}>
+              <div className={styles.bottomText}>
+                <h2>100+</h2>
+                <p>Success Rate</p>
+              </div>
+
+              <div className={styles.bottomText}>
+                <h2>10+</h2>
+                <p>Years Expertise</p>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.touchGrid}>
-            {/* LEFT — Contact Info */}
-            <div className={styles.contactInfoCol}>
-              <div className={styles.infoCard}>
-                <div className={styles.infoItem}>
-                  <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
-                  </div>
-                  <div>
-                    <span className={styles.infoLabel}>Name</span>
-                    <strong>Mr. Lalit Gautam</strong>
+
+          {/* =====right====== */}
+          <div className={styles.rightPanel}>
+            <h2>Technical Inquiry</h2>
+
+            <div className={styles.line}></div>
+
+            <form onSubmit={handleSubmit}>
+              <div className={styles.grid}>
+                <div className={styles.formGroup}>
+                  <label>Full Name</label>
+
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="John Doe"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>Select Project</label>
+
+                  <div className={styles.customSelect}>
+                    <div
+                      className={styles.selectBox}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      {formData.project || "Select Projects"}
+                      <span className={styles.arrow}>▼</span>
+                    </div>
+
+                    <div
+                      className={`${styles.options} ${isOpen ? styles.showOptions : ""
+                        }`}
+                    >
+                      <div
+                        className={styles.option}
+                        onClick={() => {
+                          setFormData({ ...formData, project: "Prefab Site Office" });
+                          setIsOpen(false);
+                        }}
+                      >
+                        Prefab Site Office
+                      </div>
+
+                      <div
+                        className={styles.option}
+                        onClick={() => {
+                          setFormData({ ...formData, project: "PUF Panel" });
+                          setIsOpen(false);
+                        }}
+                      >
+                        PUF Panel
+                      </div>
+
+                      <div
+                        className={styles.option}
+                        onClick={() => {
+                          setFormData({ ...formData, project: "Labour Accommodation" });
+                          setIsOpen(false);
+                        }}
+                      >
+                        Labour Accommodation
+                      </div>
+
+                      <div
+                        className={styles.option}
+                        onClick={() => {
+                          setFormData({ ...formData, project: "MS Container" });
+                          setIsOpen(false);
+                        }}
+                      >
+                        MS Container
+                      </div>
+
+                      <div
+                        className={styles.option}
+                        onClick={() => {
+                          setFormData({ ...formData, project: "Warehouse" });
+                          setIsOpen(false);
+                        }}
+                      >
+                        Warehouse
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div className={styles.infoItem}>
-                  <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                  </div>
-                  <div>
-                    <span className={styles.infoLabel}>Phone</span>
-                    <strong>+91 8595351363 / 9758813668</strong>
-                  </div>
+                <div className={styles.formGroup}>
+                  <label>Phone Number</label>
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+91 00000 00000"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
                 </div>
 
-                <div className={styles.infoItem}>
-                  <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-                  </div>
-                  <div>
-                    <span className={styles.infoLabel}>Technical Support</span>
-                    <strong>Info.Lr1995@gmail.Com</strong>
-                  </div>
+                <div className={styles.formGroup}>
+                  <label>Email Address</label>
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="dragon@gmail.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </div>
 
-                <div className={styles.infoItem}>
-                  <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                  </div>
-                  <div>
-                    <span className={styles.infoLabel}>Office Address</span>
-                    <strong>21/02, Gautam Nagar, Gulmohar Enclave, New Delhi-110049</strong>
-                  </div>
+                <div className={styles.formGroup}>
+                  <label>Product Name</label>
+
+                  <input
+                    type="text"
+                    name="product"
+                    placeholder="Product Name"
+                    value={formData.product}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>City Name</label>
+
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="City Name"
+                    value={formData.city}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
-              {/* Stats */}
-              <div className={styles.statsRow}>
-                <div className={styles.statBox}>
-                  <span className={styles.statNum}>100+</span>
-                  <span className={styles.statLabel}>Success Rate</span>
-                </div>
-                <div className={styles.statBox}>
-                  <span className={styles.statNum}>10+</span>
-                  <span className={styles.statLabel}>Years Expertise</span>
+              <div className={styles.formGroup}>
+                <label>Detailed Message</label>
+
+                <textarea
+                  rows="6"
+                  name="message"
+                  placeholder="Describe your project scope, location, dimensions and requirements..."
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+
+              <div className={styles.formGroup}>
+                <label>Upload File</label>
+
+                <div className={styles.uploadBox}>
+                  <label
+                    htmlFor="upload"
+                    className={styles.chooseButton}
+                  >
+                    Choose File
+                  </label>
+
+                  <span>{fileName}</span>
+
+                  <input
+                    id="upload"
+                    type="file"
+                    accept=".pdf,.jpg,.jpeg,.png,.webp,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt"
+                    onChange={handleFile}
+                  />
                 </div>
               </div>
-            </div>
 
-            {/* RIGHT — Technical Inquiry Form */}
-            <div className={styles.formCol}>
-              <h3 className={styles.formTitle}>Technical Inquiry</h3>
-              {submitted && <div className={styles.successBanner}>✓ Your enquiry has been submitted. We'll be in touch shortly!</div>}
-              <form className={styles.inquiryForm} onSubmit={handleSubmit}>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label>First Name</label>
-                    <input type="text" name="firstName" placeholder="Your Name" value={formData.firstName} onChange={handleChange} required />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label>Select Project</label>
-                    <input type="text" name="projectName" placeholder="Project Name" value={formData.projectName} onChange={handleChange} />
-                  </div>
-                </div>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label>Phone/Tel</label>
-                    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" value={formData.phone} onChange={handleChange} required />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label>Project Place</label>
-                    <input type="text" name="projectPlace" placeholder="Project Location" value={formData.projectPlace} onChange={handleChange} />
-                  </div>
-                </div>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label>Product Name</label>
-                    <input type="text" name="productName" placeholder="Product / Service" value={formData.productName} onChange={handleChange} />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label>City Name</label>
-                    <input type="text" name="cityName" placeholder="Your City" value={formData.cityName} onChange={handleChange} />
-                  </div>
-                </div>
-                <div className={styles.formGroup} style={{ marginBottom: "20px" }}>
-                  <label>Detailed Message</label>
-                  <textarea name="message" rows={4} placeholder="Describe your project requirements in detail..." value={formData.message} onChange={handleChange} />
-                </div>
-                <div className={styles.fileRow}>
-                  <div className={styles.formGroup} style={{ flex: 1 }}>
-                    <label>Upload File</label>
-                    <label className={styles.fileLabel}>
-                      <input type="file" name="file" onChange={handleChange} style={{ display: "none" }} />
-                      <span className={styles.fileBtn}>Choose File</span>
-                      <span className={styles.fileHint}>{formData.file ? formData.file.name : "10 MB Max"}</span>
-                    </label>
-                  </div>
-                </div>
-                <button type="submit" className={styles.submitBtn}>Submit Proposal &nbsp;→</button>
-              </form>
-            </div>
+              <button
+                type="submit"
+                className={styles.submitBtn}
+              >
+                Submit Proposal
+
+                <ArrowRight size={24} />
+              </button>
+            </form>
           </div>
         </div>
+
       </section>
 
 
