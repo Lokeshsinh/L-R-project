@@ -1149,6 +1149,56 @@
 
 
 /* ================================================== */
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 56px;
+}
+
+.pageBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.pageBtn:hover {
+  border-color: #3164a6;
+  color: #3164a6;
+}
+
+.pageBtnActive {
+  background: #1e3a63;
+  border-color: #1e3a63;
+  color: #fff;
+}
+
+/* CONNECT BANNER */
+.connectBanner {
+  background: #1e3a63;
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.connectInner h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+
 /* ==============================cta============================== */
 
 .cta {
