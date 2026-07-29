@@ -91,7 +91,7 @@ const PrefabRailwayShelters = () => {
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             Prefab Railway &  <br />
-            <span>Prefab Railway & Telecom Shelters
+            <span>Telecom Shelters
             </span>
           </h1>
           <p className={styles.heroDesc}>

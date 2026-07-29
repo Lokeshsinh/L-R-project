@@ -36,7 +36,27 @@ import pre4 from '../assets/Projects/Pre-eng/pre4.jpg'
 import pre5 from '../assets/Projects/Pre-eng/pre5.jpg'
 import prefab1 from '../assets/Projects/Prefab/prefab1.jpg'
 import prefab2 from '../assets/Projects/Prefab/prefab2.jpg'
+import prefab3 from '../assets/Projects/Prefab/prefab3.jpg'
+import prefab4 from '../assets/Projects/Prefab/prefab4.jpg'
+import prefab5 from '../assets/Projects/Prefab/prefab5.jpg'
+import prefab6 from '../assets/Projects/Prefab/prefab6.jpg'
+import prefab7 from '../assets/Projects/Prefab/prefab7.jpg'
+import prefab8 from '../assets/Projects/Prefab/prefab8.jpg'
 import container1 from '../assets/Projects/Container/container1.jpg'
+import container2 from '../assets/Projects/Container/container2.jpg'
+import container3 from '../assets/Projects/Container/container3.jpg'
+import container4 from '../assets/Projects/Container/container4.jpg'
+import container5 from '../assets/Projects/Container/container5.jpg'
+import container6 from '../assets/Projects/Container/container6.jpg'
+import container7 from '../assets/Projects/Container/container7.jpg'
+import container8 from '../assets/Projects/Container/container8.jpg'
+import hvac1 from '../assets/Projects/HVAC/hvac1.jpg'
+import hvac2 from '../assets/Projects/HVAC/hvac2.jpg'
+import hvac3 from '../assets/Projects/HVAC/hvac3.jpg'
+import hvac4 from '../assets/Projects/HVAC/hvac4.jpg'
+import module from '../assets/Projects/Container/module.jpg'
+import steel from '../assets/Projects/Pre-eng/steel.jpeg'
+import energe from '../assets/Projects/solar/energ.jpg'
 
 // ── Filter taxonomy (matches screenshots exactly) ──────────────────────────
 const FILTER_TREE = [
@@ -116,6 +136,29 @@ const ALL_PROJECTS = [
   { id: 29, title: "Industrial Shed", category: "pre-engineered", tag: "Pre-engineered", img: pre4, desc: "Durable industrial sheds designed for manufacturing, storage, and commercial applications. Built with strong structures, quick installation, and customized solutions to meet diverse industrial requirements." },
   { id: 30, title: "Cold Room", category: "pre-engineered", tag: "Cold Room", img: pre5, desc: "Advanced cold room solutions designed for efficient temperature control and product preservation. Built with high-quality insulation, energy efficiency, and reliable performance for storage applications." },
   { id: 31, title: "Prefabricated Site Office", category: "prefab-modular", tag: "Prefab Modular", img: prefab2, desc: "Modern prefabricated site offices designed for construction and industrial projects. Built for quick installation, durability, and comfortable workspaces with customizable layouts." },
+  { id: 32, title: "Prefabricated Control Panel Rooms", category: "prefab-modular", tag: "Control Room", img: prefab3, desc: "Secure prefabricated control panel rooms designed to protect electrical and automation systems. Built with durable materials, quick installation, and reliable performance for industrial applications." },
+  { id: 33, title: "Prefabricated Clean Room", category: "prefab-modular", tag: "Clean Room", img: prefab4, desc: "High-performance prefabricated clean rooms designed for controlled and contamination-free environments. Built with superior insulation, hygienic materials, and customizable layouts for industrial and pharmaceutical applications." },
+  { id: 34, title: "Prefabricated Mushroom Farms", category: "prefab-modular", tag: "Mushroom Farm", img: prefab4, desc: "Efficient prefabricated mushroom farms designed for controlled cultivation and higher productivity. Built with durable insulated panels, quick installation, and optimal growing conditions for year-round farming." },
+  { id: 35, title: "Prefabricated Mushroom Farms", category: "prefab-modular", tag: "Mushroom Farm", img: prefab4, desc: "Efficient prefabricated mushroom farms designed for controlled cultivation and higher productivity. Built with durable insulated panels, quick installation, and optimal growing conditions for year-round farming." },
+  { id: 36, title: "Prefab Industrial Enclosures", category: "prefab-modular", tag: "Industrial Enclosures", img: prefab5, desc: "Robust prefab industrial enclosures designed to protect equipment and critical operations. Built with durable materials, quick installation, and customizable designs for reliable industrial performance." },
+  { id: 37, title: "Prefab Industrial Enclosures", category: "prefab-modular", tag: "Industrial Enclosures", img: prefab6, desc: "Robust prefab industrial enclosures designed to protect equipment and critical operations. Built with durable materials, quick installation, and customizable designs for reliable industrial performance." },
+  { id: 38, title: "Prefabricated Staff Canteens & Recreation Rooms", category: "prefab-modular", tag: "Staff Canteens & Recreation Rooms", img: prefab7, desc: "Modern prefabricated staff canteens and recreation rooms designed for employee comfort and convenience. Built with durable materials, quick installation, and customizable layouts for productive workplaces." },
+  { id: 39, title: "Prefab Railway & Telecom Shelters", category: "prefab-modular", tag: "Railway & Telecom Shelters", img: prefab8, desc: "Durable prefab railway and telecom shelters designed to protect critical equipment in all weather conditions. Built for quick installation, high strength, and reliable long-term performance." },
+  { id: 40, title: "MS Containers", category: "ms-containers", tag: "MS Containers", img: container2, desc: "High-strength MS containers designed for secure storage, site offices, and industrial applications. Built with durable mild steel, quick installation, and customizable layouts for long-lasting performance." },
+  { id: 41, title: "Premium MS Containers", category: "ms-containers", tag: "Premium Containers", img: container3, desc: "Premium MS containers designed for superior strength, security, and long-lasting performance. Ideal for site offices, storage, and industrial applications with fully customizable layouts." },
+  { id: 42, title: "Executive MS Containers", category: "ms-containers", tag: "Executive Containers", img: container4, desc: "Premium executive MS containers designed for modern offices and commercial spaces. Built with durable steel, elegant interiors, and customizable layouts for comfort and professional functionality." },
+  { id: 43, title: "L&R Value MS Container", category: "ms-containers", tag: "L&R Value Container", img: container5, desc: "L&R Value MS Containers offer durable, cost-effective solutions for storage, site offices, and industrial use. Built with high-quality steel, quick installation, and customizable designs for reliable performance." },
+  { id: 44, title: "Home MS Containers", category: "ms-containers", tag: "Home Containers", img: container6, desc: "Modern Home MS Containers designed for comfortable and stylish living spaces. Built with durable steel, quick installation, and customizable interiors for long-lasting residential use." },
+  { id: 45, title: "PUF MS Container", category: "ms-containers", tag: "PUF Container", img: container7, desc: "Insulated PUF containers designed for superior thermal performance and durability. Ideal for site offices, storage, accommodation, and industrial applications with quick installation and energy efficiency." },
+  { id: 46, title: "Hinge MS Container", category: "ms-containers", tag: "Hinge Container", img: container8, desc: "Hinge MS containers designed for easy access, secure storage, and industrial applications. Built with durable mild steel, quick installation, and reliable long-term performance." },
+  { id: 47, title: "HVAC Solutions", category: "hvac", tag: "HVAC", img: hvac1, desc: "Advanced HVAC solutions designed for efficient heating, ventilation, and air conditioning. Built for optimal indoor comfort, energy efficiency, and reliable performance across commercial and industrial spaces." },
+  { id: 48, title: "Central AC Systems", category: "central-ac", tag: "Central AC", img: hvac2, desc: "High-performance central AC systems designed for efficient cooling and consistent indoor comfort. Ideal for commercial, industrial, and residential spaces with energy-efficient and reliable operation." },
+  { id: 49, title: "VRF/VRV Systems", category: "vrf", tag: "HVAC", img: hvac3, desc: "Energy-efficient VRF/VRV systems designed for precise climate control and maximum comfort. Ideal for commercial, residential, and industrial spaces with flexible installation and reliable performance." },
+  { id: 50, title: "Industrial Ventilation", category: "industrial-ventilation", tag: "HVAC", img: hvac4, desc: "Efficient industrial ventilation systems designed to improve air quality and workplace safety. Built for reliable airflow, energy efficiency, and optimal performance in industrial environments." },
+  { id: 51, title: "Modular Solutions", category: "modular", tag: "Modular Solutions", img: module, desc: "Innovative modular solutions designed for fast construction and flexible space requirements. Built with durable materials, customizable designs, and quick installation for residential, commercial, and industrial applications." },
+  { id: 53, title: "Steel Structure Buildings", category: "steel", tag: "Steel Buildings", img: steel, desc: "High-strength steel structure buildings designed for industrial, commercial, and infrastructure projects. Built for durability, rapid construction, and customizable layouts with long-lasting performance." },
+  { id: 54, title: "Solar Energy Solutions", category: "solar", tag: "Solar Energy", img: energe, desc: "Comprehensive solar energy solutions designed for efficient, sustainable, and cost-effective power generation. Built with high-quality components for reliable performance, long-term savings, and maximum energy efficiency." },
+
 
 
 
@@ -315,11 +358,23 @@ const Projects = () => {
       </section>
 
       {/* CONNECT BANNER */}
-      <section className={styles.connectBanner}>
-        <div className={styles.connectInner}>
-          <h2>LET'S CONNECT L&amp;R GREEN INDIA</h2>
-        </div>
+      <section className={styles.cta}>
+        <h2>Let's Build Your Next Project Together</h2>
+        <p>
+          From prefabricated buildings to steel structures, L&R Enterprises delivers reliable,
+          high-quality, and customized solutions for every project. Contact our team today and turn your vision into reality.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBoxs}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
+
+
 
       <Footer />
     </div>
