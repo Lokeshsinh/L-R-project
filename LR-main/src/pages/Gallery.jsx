@@ -6,8 +6,26 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import preEng1 from '../assets/Gallary/PreEngineed/preEng1.jpeg'
+import preEng2 from '../assets/Gallary/PreEngineed/preEng2.jpeg'
+import preEng3 from '../assets/Gallary/PreEngineed/preEng3.jpeg'
+import preEng4 from '../assets/Gallary/PreEngineed/preEng4.jpeg'
+import preEng5 from '../assets/Gallary/PreEngineed/preEng5.jpeg'
+import preEng6 from '../assets/Gallary/PreEngineed/preEng6.jpeg'
+import preEng7 from '../assets/Gallary/PreEngineed/preEng7.jpeg'
+import preEng8 from '../assets/Gallary/PreEngineed/preEng8.jpeg'
+import preEng9 from '../assets/Gallary/PreEngineed/preEng9.jpeg'
+import preEng10 from '../assets/Gallary/PreEngineed/PreEng10.jpeg'
+import preEng11 from '../assets/Gallary/PreEngineed/PreEng11.jpeg'
+import preEng12 from '../assets/Gallary/PreEngineed/preEng12.jpeg'
+import preEng13 from '../assets/Gallary/PreEngineed/preEng13.jpeg'
+import preEng14 from '../assets/Gallary/PreEngineed/preEng14.jpeg'
+import video1 from '../assets/About/video5.mp4'
+import video2 from '../assets/About/video3.mp4'
+import video3 from '../assets/Gallary/PreEngineed/preEngVideo.mp4'
 const CATEGORIES = [
   { label: "All", key: "all" },
+  { label: "Pre-Engineered", key: "pre-engine" },
   { label: "LGSF", key: "lgsf" },
   { label: "Labor Hutment", key: "labor-hutment" },
   { label: "Modular Office", key: "modular-office" },
@@ -18,57 +36,89 @@ const CATEGORIES = [
   { label: "20X10 MS Container", key: "20x10-ms" },
 ];
 
-const ALL_IMAGES = [
-  { id: 1, category: "lgsf", img: "/Images/gal1.jpg", title: "LGSF Structure" },
-  { id: 2, category: "modular-office", img: "/Images/gal2.jpg", title: "Modular Office" },
-  { id: 3, category: "lgsf", img: "/Images/gal3.jpg", title: "LGSF Building" },
-  { id: 4, category: "labor-hutment", img: "/Images/gal4.jpg", title: "Labor Hutment" },
-  { id: 5, category: "10x10-ms", img: "/Images/gal5.jpg", title: "10X10 MS Container" },
-  { id: 6, category: "40x8-ms", img: "/Images/gal6.jpg", title: "40X8 MS Container" },
-  { id: 7, category: "lgsf", img: "/Images/gal7.jpg", title: "LGSF Rooftop" },
-  { id: 8, category: "20x8-ms", img: "/Images/gal8.jpg", title: "20X8 MS Container" },
-  { id: 9, category: "40x10-ms", img: "/Images/gal9.jpg", title: "40X10 MS Container" },
-  { id: 10, category: "labor-hutment", img: "/Images/gal10.jpg", title: "Labor Accommodation" },
-  { id: 11, category: "modular-office", img: "/Images/gal11.jpg", title: "Site Office" },
-  { id: 12, category: "20x10-ms", img: "/Images/gal12.jpg", title: "20X10 MS Container" },
-  { id: 13, category: "lgsf", img: "/Images/gal13.jpg", title: "LGSF Panel Structure" },
-  { id: 14, category: "40x8-ms", img: "/Images/gal14.jpg", title: "40X8 Container Unit" },
-  { id: 15, category: "modular-office", img: "/Images/gal15.jpg", title: "Modular Cabin" },
-  { id: 16, category: "10x10-ms", img: "/Images/gal16.jpg", title: "MS Office Unit" },
-  { id: 17, category: "labor-hutment", img: "/Images/gal17.jpg", title: "Workers Housing" },
-  { id: 18, category: "lgsf", img: "/Images/gal18.jpg", title: "LGSF Steel Frame" },
+const ALL_MEDIA = [
+  { id: 1, type: "image", category: "lgsf", src: preEng1 },
+  { id: 2, type: "image", category: "lgsf", src: preEng2 },
+  { id: 3, type: "image", category: "lgsf", src: "/Images/gal1.jpg" },
+  { id: 4, type: "image", category: "modular-office", src: "/Images/gal2.jpg" },
+  { id: 5, type: "video", category: "lgsf", src: video1 },
+  { id: 6, type: "image", category: "modular-office", src: "/Images/gal2.jpg" },
+  { id: 7, type: "video", category: "lgsf", src: video2 },
+  { id: 8, type: "image", category: "labor-hutment", src: "/Images/gal4.jpg" },
+  { id: 9, type: "video", category: "40x8-ms", src: "/Videos/video2.mp4" },
+  { id: 10, type: "image", category: "20x8-ms", src: "/Images/gal6.jpg" },
+  { id: 11, type: "video", category: "lgsf", src: video3 },
+  { id: 12, type: "image", category: "lgsf", src: preEng3 },
+  { id: 13, type: "image", category: "lgsf", src: preEng4 },
+  { id: 14, type: "image", category: "lgsf", src: preEng5 },
+  { id: 15, type: "image", category: "pre-engine", src: preEng6 },
+  { id: 16, type: "image", category: "pre-engine", src: preEng7 },
+  { id: 17, type: "image", category: "pre-engine", src: preEng8 },
+  { id: 18, type: "image", category: "pre-engine", src: preEng9 },
+  { id: 19, type: "image", category: "pre-engine", src: preEng10 },
+  { id: 20, type: "image", category: "pre-engine", src: preEng11 },
+  { id: 21, type: "image", category: "lgsf", src: preEng12 },
+  { id: 22, type: "image", category: "lgsf", src: preEng13 },
+  { id: 23, type: "image", category: "lgsf", src: preEng14 },
+
+
+
 ];
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 12;
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [lightbox, setLightbox] = useState(null);
-  const dropdownRef = useRef(null);
-  const navigate = useNavigate()
+  const [popup, setPopup] = useState(null);
 
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const dropdownRef = useRef(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const handler = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) setDropdownOpen(false);
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target)
+      ) {
+        setDropdownOpen(false);
+      }
     };
+
     document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
   }, []);
 
-  const filtered = activeFilter === "all" ? ALL_IMAGES : ALL_IMAGES.filter(i => i.category === activeFilter);
-  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
-  const paginated = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const filtered = React.useMemo(() => {
+    if (activeFilter === "all") return ALL_MEDIA;
 
-  const activeLabel = CATEGORIES.find(c => c.key === activeFilter)?.label || "All";
+    return ALL_MEDIA.filter(
+      (item) => item.category === activeFilter
+    );
+  }, [activeFilter]);
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+
+  const paginated = filtered.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
+  const activeLabel =
+    CATEGORIES.find((c) => c.key === activeFilter)?.label || "All";
 
   const handleFilter = (key) => {
     setActiveFilter(key);
-    setDropdownOpen(false);
     setCurrentPage(1);
+    setDropdownOpen(false);
   };
 
   return (
@@ -143,8 +193,8 @@ const Gallery = () => {
                     <div
                       key={cat.key}
                       className={`${styles.dropdownItem} ${activeFilter === cat.key
-                          ? styles.dropdownItemActive
-                          : ""
+                        ? styles.dropdownItemActive
+                        : ""
                         }`}
                       onClick={() => handleFilter(cat.key)}
                     >
@@ -163,11 +213,34 @@ const Gallery = () => {
         {/* Image Grid */}
         <div className={styles.imageGrid}>
           {paginated.map((item) => (
-            <div key={item.id} className={styles.imageCard} onClick={() => setLightbox(item)}>
-              <img src={item.img} alt={item.title} className={styles.gridImg} />
-              <div className={styles.imageOverlay}>
-                <span className={styles.imageTitle}>{item.title}</span>
-              </div>
+            <div
+              key={item.id}
+              className={styles.imageCard}
+              onClick={() => setPopup(item)}
+            >
+              {item.type === "image" ? (
+                <img
+                  src={item.src}
+                  alt=""
+                  className={styles.gridImg}
+                />
+              ) : (
+                <>
+                  <video
+                    className={styles.gridImg}
+                    muted
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+
+                  <div className={styles.playIcon}>
+                    ▶
+                  </div>
+                </>
+              )}
+              <div className={styles.hoverOverlay}></div>
             </div>
           ))}
         </div>
@@ -185,16 +258,40 @@ const Gallery = () => {
       </section>
 
       {/* LIGHTBOX */}
-      {lightbox && (
-        <div className={styles.lightboxOverlay} onClick={() => setLightbox(null)}>
-          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.lightboxClose} onClick={() => setLightbox(null)}>✕</button>
-            <img src={lightbox.img} alt={lightbox.title} className={styles.lightboxImg} />
-            <p className={styles.lightboxTitle}>{lightbox.title}</p>
+      {popup && (
+        <div
+          className={styles.popupOverlay}
+          onClick={() => setPopup(null)}
+        >
+          <button
+            className={styles.closeBtn}
+            onClick={() => setPopup(null)}
+          >
+            ✕
+          </button>
+
+          <div
+            className={styles.popupBox}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {popup.type === "image" ? (
+              <img
+                src={popup.src}
+                alt=""
+                className={styles.popupMedia}
+              />
+            ) : (
+              <video
+                className={styles.popupMedia}
+                controls
+                autoPlay
+              >
+                <source src={popup.src} type="video/mp4" />
+              </video>
+            )}
           </div>
         </div>
       )}
-
       {/* CONNECT BANNER */}
 
       <section className={styles.cta}>
