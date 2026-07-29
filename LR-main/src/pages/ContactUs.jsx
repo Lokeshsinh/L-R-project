@@ -153,7 +153,7 @@ ${fileName}`;
 
 
       {/* GET IN TOUCH */}
-      <section className={styles.touchSec} id="#contact">
+      <section className={styles.touchSec} id="contact">
         <div className={styles.touchHeader}>
           <div className={styles.touchText}>
             <h2 >Get in <span>Touch</span></h2>
@@ -460,7 +460,11 @@ ${fileName}`;
         <p>
           From MS Containers to PEB Structures and PUF Panels, we're ready to support your next project.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('#contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Send an Enquiry</span>
 
           <span className={styles.iconBoxs}>

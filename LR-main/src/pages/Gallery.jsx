@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/Gallery.module.css";
-
+import {
+  ArrowRight,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const CATEGORIES = [
   { label: "All", key: "all" },
   { label: "LGSF", key: "lgsf" },
@@ -44,6 +47,7 @@ const Gallery = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [lightbox, setLightbox] = useState(null);
   const dropdownRef = useRef(null);
+  const navigate = useNavigate()
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -72,28 +76,37 @@ const Gallery = () => {
       <Header />
 
       {/* HERO */}
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/galleryhero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>OUR PROJECT <br /><span>GALLERY</span></h1>
-          <p className={styles.subtitle}>Explore our portfolio of prefabricated and pre-engineered building solutions, showcasing strength, precision, and versatility across diverse projects.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            Our Project<br />
+            <span>Gallery
+            </span>
+          </h1>
+          <p className={styles.heroDesc}>
+            Explore our portfolio of prefabricated and pre-engineered building solutions,
+            showcasing strength, precision, and versatility across diverse projects.
+          </p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
 
+
+
+
       {/* GALLERY SECTION */}
       <section className={styles.gallerySec}>
-        <div className={styles.galleryContainer}>
-
           {/* Heading Row */}
           <div className={styles.headingRow}>
-            <div>
-              <h2 className={styles.discoverTitle}>Discover Our</h2>
-              <h2 className={styles.discoverSub}>Gallery</h2>
-              <div className={styles.discoverDivider} />
+            <div className={styles.galleryText}>
+              <h2>Discover Our <br /><span>Projects</span></h2>
+              <div className={styles.discoverDivider} ></div>
             </div>
-            <p className={styles.discoverDesc}>Advanced modular cold storage solutions ensuring consistent temperature, energy efficiency, and reliability.</p>
+            <p>Advanced modular cold storage solutions ensuring consistent temperature, energy efficiency, and reliability.</p>
           </div>
 
           {/* Filter Row */}
@@ -145,7 +158,6 @@ const Gallery = () => {
               <button className={`${styles.pageBtn} ${currentPage === totalPages ? styles.pageBtnDisabled : ""}`} onClick={() => currentPage < totalPages && setCurrentPage(p => p + 1)}>›</button>
             </div>
           )}
-        </div>
       </section>
 
       {/* LIGHTBOX */}
@@ -160,10 +172,21 @@ const Gallery = () => {
       )}
 
       {/* CONNECT BANNER */}
-      <section className={styles.connectBanner}>
-        <div className={styles.connectInner}>
-          <h2>LET'S CONNECT L&amp;R GREEN INDIA</h2>
-        </div>
+
+      <section className={styles.cta}>
+        <h2>Building Excellence, One Project at a Time</h2>
+        <p>
+          Explore our portfolio of completed modular construction projects, showcasing
+          innovation, precision, and engineering excellence.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBoxs}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />
