@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ContactUs.module.css";
+import {
+  ArrowRight,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({ firstName: "", projectName: "", phone: "", projectPlace: "", productName: "", cityName: "", message: "", file: null });
   const [submitted, setSubmitted] = useState(false);
 
@@ -58,15 +63,31 @@ const ContactUs = () => {
       <Header />
 
       {/* HERO */}
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/contacthero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className={styles.heroOverlay} />
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>CONTACT L&amp;R <br /><span>GREEN INDIA</span></h1>
-          <p className={styles.subtitle}>Get in touch with L&amp;R Green India Pvt Ltd for reliable prefabrication and modular building solutions tailored to your project needs.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            Contact L&R  <br />
+            <span>Green India
+            </span>
+          </h1>
+          <p className={styles.heroDesc}>
+            Get in touch with L&R Green India Pvt Ltd for reliable prefabricated and
+            modular building solutions tailored to your project needs.
+          </p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
+
+
+
+
+
+
+
 
       {/* GET IN TOUCH */}
       <section className={styles.touchSec}>
@@ -85,7 +106,7 @@ const ContactUs = () => {
               <div className={styles.infoCard}>
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Name</span>
@@ -95,7 +116,7 @@ const ContactUs = () => {
 
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Phone</span>
@@ -105,7 +126,7 @@ const ContactUs = () => {
 
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Technical Support</span>
@@ -115,7 +136,7 @@ const ContactUs = () => {
 
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Office Address</span>
