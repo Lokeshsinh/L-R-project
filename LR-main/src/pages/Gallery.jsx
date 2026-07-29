@@ -100,32 +100,52 @@ const Gallery = () => {
 
       {/* GALLERY SECTION */}
       <section className={styles.gallerySec}>
-          {/* Heading Row */}
-          <div className={styles.headingRow}>
-            <div className={styles.galleryText}>
-              <h2>Discover Our <br /><span>Projects</span></h2>
-              <div className={styles.discoverDivider} ></div>
-            </div>
-            <p>Advanced modular cold storage solutions ensuring consistent temperature, energy efficiency, and reliability.</p>
+        {/* Heading Row */}
+        <div className={styles.headingRow}>
+          <div className={styles.galleryText}>
+            <h2>Discover Our <br /><span>Projects</span></h2>
+            <div className={styles.discoverDivider} ></div>
           </div>
+          <p>Advanced modular cold storage solutions ensuring consistent temperature, energy efficiency, and reliability.</p>
+        </div>
 
-          {/* Filter Row */}
-          <div className={styles.filterRow}>
+        {/* Filter Row */}
+        <div className={styles.filterRow}>
+          <div className={styles.filterFlex}>
             <span className={styles.sortByLabel}>SORT BY</span>
-            <div className={styles.filterDropdownWrap} ref={dropdownRef}>
-              <button className={styles.filterBtn} onClick={() => setDropdownOpen(!dropdownOpen)} aria-expanded={dropdownOpen}>
+            <div
+              className={styles.filterDropdownWrap}
+              ref={dropdownRef}
+            >
+              <button
+                type="button"
+                className={styles.filterBtn}
+                onClick={() => setDropdownOpen((prev) => !prev)}
+              >
                 <span>{activeLabel}</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  className={dropdownOpen ? styles.arrowOpen : ""}
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <polyline points="6 9 12 15 18 9" />
                 </svg>
               </button>
-
               {dropdownOpen && (
                 <div className={styles.dropdownPanel}>
                   {CATEGORIES.map((cat) => (
                     <div
                       key={cat.key}
-                      className={`${styles.dropdownItem} ${activeFilter === cat.key ? styles.dropdownItemActive : ""}`}
+                      className={`${styles.dropdownItem} ${activeFilter === cat.key
+                          ? styles.dropdownItemActive
+                          : ""
+                        }`}
                       onClick={() => handleFilter(cat.key)}
                     >
                       {cat.label}
@@ -135,29 +155,33 @@ const Gallery = () => {
               )}
             </div>
           </div>
+        </div>
 
-          {/* Image Grid */}
-          <div className={styles.imageGrid}>
-            {paginated.map((item) => (
-              <div key={item.id} className={styles.imageCard} onClick={() => setLightbox(item)}>
-                <img src={item.img} alt={item.title} className={styles.gridImg} />
-                <div className={styles.imageOverlay}>
-                  <span className={styles.imageTitle}>{item.title}</span>
-                </div>
+
+
+
+        {/* Image Grid */}
+        <div className={styles.imageGrid}>
+          {paginated.map((item) => (
+            <div key={item.id} className={styles.imageCard} onClick={() => setLightbox(item)}>
+              <img src={item.img} alt={item.title} className={styles.gridImg} />
+              <div className={styles.imageOverlay}>
+                <span className={styles.imageTitle}>{item.title}</span>
               </div>
-            ))}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className={styles.pagination}>
-              <button className={`${styles.pageBtn} ${currentPage === 1 ? styles.pageBtnDisabled : ""}`} onClick={() => currentPage > 1 && setCurrentPage(p => p - 1)}>‹</button>
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button key={page} className={`${styles.pageBtn} ${currentPage === page ? styles.pageBtnActive : ""}`} onClick={() => { setCurrentPage(page); window.scrollTo({ top: 0, behavior: "smooth" }); }}>{page}</button>
-              ))}
-              <button className={`${styles.pageBtn} ${currentPage === totalPages ? styles.pageBtnDisabled : ""}`} onClick={() => currentPage < totalPages && setCurrentPage(p => p + 1)}>›</button>
             </div>
-          )}
+          ))}
+        </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
+            <button className={`${styles.pageBtn} ${currentPage === 1 ? styles.pageBtnDisabled : ""}`} onClick={() => currentPage > 1 && setCurrentPage(p => p - 1)}>‹</button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button key={page} className={`${styles.pageBtn} ${currentPage === page ? styles.pageBtnActive : ""}`} onClick={() => { setCurrentPage(page); window.scrollTo({ top: 0, behavior: "smooth" }); }}>{page}</button>
+            ))}
+            <button className={`${styles.pageBtn} ${currentPage === totalPages ? styles.pageBtnDisabled : ""}`} onClick={() => currentPage < totalPages && setCurrentPage(p => p + 1)}>›</button>
+          </div>
+        )}
       </section>
 
       {/* LIGHTBOX */}
