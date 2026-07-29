@@ -667,6 +667,478 @@
   box-shadow: 0 8px 18px rgba(32, 55, 95, 0.25);
 }
 
+@media (max-width:1440px){
+
+  .touchSec{
+    padding:70px 4%;
+  }
+
+  .touchText h2{
+    font-size:48px;
+  }
+
+}
+
+@media (max-width:1280px){
+
+  .touchHeader{
+    gap:40px;
+    margin-bottom:70px;
+  }
+
+  .touchText{
+    width:60%;
+  }
+
+  .touchHeader p{
+    width:40%;
+  }
+
+  .touchText h2{
+    font-size:44px;
+  }
+
+  .leftPanel{
+    width:500px;
+  }
+
+  .rightPanel{
+    width: 600px;
+  }
+
+  .contactBox{
+    padding:40px;
+  }
+
+}
+
+@media (max-width:1200px){
+
+  .touchSec{
+    padding:65px 4%;
+  }
+
+  .touchText h2{
+    font-size:40px;
+  }
+
+  .container{
+    display:flex;
+  }
+
+  .leftPanel{
+    width: 480px;
+  }
+
+  .rightPanel{
+    padding-left: 10px;
+    width: 600px;
+  }
+
+}
+
+
+@media (max-width:1024px){
+
+  .touchText h2{
+    font-size:36px;
+  }
+
+  .contactBox{
+    padding:30px;
+  }
+
+  .grid{
+    gap:20px;
+  }
+
+   .leftPanel{
+    width: 400px;
+  }
+
+  .rightPanel{
+    padding-left: 10px;
+    width: 500px;
+  }
+
+}
+
+
+@media (max-width:992px){
+
+  .touchSec{
+    padding:60px 5%;
+  }
+
+  .touchHeader{
+    flex-direction:column;
+    text-align:center;
+    gap:25px;
+    margin-bottom:50px;
+  }
+
+  .touchText{
+    width:100%;
+    align-items:center;
+  }
+
+  .divider{
+    margin:auto;
+  }
+
+  .touchHeader p{
+    width:100%;
+    max-width:700px;
+  }
+
+  .container{
+    flex-direction:column;
+  }
+
+  .leftPanel,
+  .rightPanel{
+    width:100%;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+
+@media (max-width:768px){
+
+  .touchSec{
+    padding:55px 5%;
+  }
+
+  .touchText h2{
+    font-size:32px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .rightPanel{
+    padding:25px;
+  }
+
+  .contactBox{
+    padding:30px 25px;
+  }
+
+  .submitBtn{
+    width:100%;
+  }
+
+}
+
+
+@media (max-width:576px){
+
+  .touchSec{
+    padding:50px 20px;
+  }
+
+  .touchText h2{
+    font-size:28px;
+  }
+
+  .divider{
+    width:90px;
+  }
+
+  .contactBox{
+    padding:25px 20px;
+  }
+
+  .contactBox span{
+    font-size:18px;
+  }
+
+  .contactItem{
+    gap:18px;
+    margin-bottom:20px;
+  }
+
+  .contactItem h4{
+    font-size:15px;
+  }
+
+  .contactItem svg{
+    width:26px;
+    height:26px;
+  }
+
+  .bottomCounter{
+    flex-direction:column;
+    gap:18px;
+    text-align:center;
+  }
+
+  .bottomText h2{
+    font-size:28px;
+  }
+
+  .bottomText p{
+    font-size:15px;
+  }
+
+  .rightPanel{
+    padding:20px;
+  }
+
+  .rightPanel h2{
+    font-size:24px;
+  }
+
+  .line{
+    width:90px;
+  }
+
+  .formGroup input,
+  .selectBox{
+    height:50px;
+    font-size:15px;
+  }
+
+  .formGroup textarea{
+    height:110px;
+    font-size:15px;
+  }
+
+  .uploadBox{
+    flex-direction:column;
+    align-items:stretch;
+    height:auto;
+    border:none;
+    gap:10px;
+  }
+
+  .chooseButton{
+    width:100%;
+    height:52px;
+    margin-top:0;
+    border-radius:50px;
+    font-size:17px;
+  }
+
+  .uploadBox span{
+    padding:0;
+    text-align:center;
+    font-size:14px;
+  }
+
+  .submitBtn{
+    width:100%;
+    height:52px;
+    font-size:17px;
+  }
+
+}
+
+
+@media (max-width:480px){
+
+  .touchSec{
+    padding:45px 18px;
+  }
+
+  .touchText h2{
+    font-size:24px;
+  }
+
+  .touchHeader p{
+    font-size:14px;
+  }
+
+  .contactBox{
+    padding:20px 18px;
+  }
+
+  .contactBox span{
+    font-size:17px;
+  }
+
+  .contactItem h4{
+    font-size:14px;
+  }
+
+  .rightPanel{
+    padding:18px;
+  }
+
+  .rightPanel h2{
+    font-size:22px;
+  }
+
+}
+
+
+@media (max-width:390px){
+
+  .touchText h2{
+    font-size:22px;
+  }
+
+  .contactItem{
+    align-items:flex-start;
+  }
+
+  .contactItem h4{
+    font-size:13px;
+  }
+
+}
+
+
+@media (max-width:360px){
+
+  .touchSec{
+    padding:40px 15px;
+  }
+
+  .touchText h2{
+    font-size:20px;
+  }
+
+  .divider{
+    width:70px;
+  }
+
+  .contactBox{
+    padding:18px 15px;
+  }
+
+  .contactBox span{
+    font-size:16px;
+  }
+
+  .bottomText h2{
+    font-size:24px;
+  }
+
+  .bottomText p{
+    font-size:13px;
+  }
+
+  .rightPanel{
+    padding:15px;
+  }
+
+  .rightPanel h2{
+    font-size:20px;
+  }
+
+  .formGroup label{
+    font-size:14px;
+  }
+
+  .formGroup input,
+  .selectBox{
+    height:46px;
+    font-size:14px;
+  }
+
+  .formGroup textarea{
+    font-size:14px;
+  }
+
+  .submitBtn{
+    height:48px;
+    font-size:16px;
+  }
+
+}
+
+@media (max-width:320px){
+
+  .touchSec{
+    padding:35px 12px;
+  }
+
+  .touchText h2{
+    font-size:18px;
+  }
+
+  .touchHeader p{
+    font-size:12px;
+  }
+
+  .divider{
+    width:60px;
+  }
+
+  .contactBox{
+    padding:15px 12px;
+  }
+
+  .contactBox span{
+    font-size:15px;
+  }
+
+  .contactItem{
+    gap:12px;
+  }
+
+  .contactItem svg{
+    width:22px;
+    height:22px;
+  }
+
+  .contactItem h4{
+    font-size:12px;
+    line-height:1.5;
+  }
+
+  .bottomText h2{
+    font-size:22px;
+  }
+
+  .bottomText p{
+    font-size:12px;
+  }
+
+  .rightPanel{
+    padding:12px;
+  }
+
+  .rightPanel h2{
+    font-size:18px;
+  }
+
+  .formGroup label{
+    font-size:13px;
+  }
+
+  .formGroup input,
+  .selectBox{
+    height:44px;
+    padding:0 16px;
+    font-size:13px;
+  }
+
+  .formGroup textarea{
+    height:100px;
+    padding:16px;
+    font-size:13px;
+  }
+
+  .chooseButton{
+    height:46px;
+    font-size:15px;
+  }
+
+  .submitBtn{
+    height:46px;
+    font-size:15px;
+    gap:10px;
+  }
+
+}
 
 /* ================================================ */
 /* WHY CHOOSE */
