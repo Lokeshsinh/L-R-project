@@ -353,11 +353,11 @@
 .infoCard {
   background: #f8fafc;
   border-radius: 14px;
-  padding: 32px;
+  padding: 22px;
   border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .infoItem {
@@ -546,145 +546,841 @@
   transform: translateY(-2px);
 }
 
+
+
+/* ================================================ */
 /* WHY CHOOSE */
 .whySec {
-  padding: 90px 8%;
-  background: #f8fafc;
+  width: 100%;
+  padding: 71px 60px;
+  background-color: #f7f7f753;
 }
 
-.whyContainer {
-  max-width: 1320px;
-  margin: 0 auto;
-}
+
 
 .whyHeader {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
-.whyDesc {
-  max-width: 420px;
-  color: #64748b;
-  font-size: 0.95rem;
+.whyText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.whyText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
+}
+
+.whyText h2 span {
+  color: #233E70;
+}
+
+.divider {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #233E70;
+}
+
+.whyHeader p {
+  font-size: 15px;
+  color: #555;
   line-height: 1.7;
+  padding-top: 8px;
+  max-width: 440px;
 }
 
-.whyGrid {
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
-.whyCard {
+.cards {
+  position: relative;
+  min-height: 300px;
+  padding: 22px 24px;
   background: #fff;
-  border-radius: 14px;
-  padding: 32px 28px;
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
-  text-align: center;
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: all .45s ease;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.whyCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-  border-color: #3164a6;
+.cards::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #233E70;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .45s ease;
+  z-index: 0;
 }
 
-.whyIcon {
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
-  background: #1e3a63;
+.cards>* {
+  position: relative;
+  z-index: 2;
+}
+
+.iconBox {
+  width: 58px;
+  height: 58px;
+  border-radius: 10px;
+  background: #233E70;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px auto;
+  margin-bottom: 34px;
+  transition: .4s ease;
 }
 
-.whyCard h4 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 12px;
+.cards h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #151515;
+  margin: 0 0 22px;
+  transition: .4s ease;
 }
 
-.whyCard p {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.6;
+.cards p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #5b5b5b;
   margin: 0;
+  transition: .4s ease;
 }
 
-/* MAP */
-.mapSec {
-  line-height: 0;
+/* Default active card */
+
+.activeCard {
+  background: #233E70;
 }
 
-/* CONNECT BANNER */
-.connectBanner {
-  background: #1e3a63;
-  padding: 80px 8%;
-  text-align: center;
-}
-
-.connectInner h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
+.activeCard h3,
+.activeCard p {
   color: #fff;
-  letter-spacing: 0.04em;
-  margin: 0;
 }
 
-@media (max-width: 1024px) {
-  .touchGrid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+.activeCard .iconBox {
+  background: #fff;
+  color: #233E70;
+}
+
+/* Hover */
+
+.cards:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, .18);
+}
+
+.cards:hover::before {
+  transform: scaleY(1);
+}
+
+.cards:hover h3,
+.cards:hover p {
+  color: #fff;
+}
+
+.cards:hover .iconBox {
+  background: #fff;
+  color: #233E70;
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* Hover active card becomes white */
+
+.activeCard:hover {
+  background: #fff;
+}
+
+.activeCard:hover::before {
+  transform: scaleY(0);
+}
+
+.activeCard:hover h3,
+.activeCard:hover p {
+  color: #151515;
+}
+
+.activeCard:hover .iconBox {
+  background: #233E70;
+  color: #fff;
+}
+
+
+@media (max-width:1440px) {
+
+  .whySec {
+    padding: 70px 4%;
   }
 
-  .whyGrid {
+  .whyText h2 {
+    font-size: 48px;
+  }
+
+  .container {
+    gap: 24px;
+  }
+
+}
+
+@media (max-width:1280px) {
+
+  .whyHeader {
+    gap: 40px;
+    margin-bottom: 70px;
+  }
+
+  .whyText {
+    width: 60%;
+  }
+
+  .whyHeader p {
+    width: 40%;
+  }
+
+  .whyText h2 {
+    font-size: 44px;
+  }
+
+  .cards {
+    min-height: 280px;
+  }
+
+  .cards h3 {
+    font-size: 30px;
+  }
+
+  .cards p {
+    font-size: 17px;
+  }
+
+}
+
+@media (max-width:1200px) {
+
+  .whySec {
+    padding: 65px 4%;
+  }
+
+  .container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .mainTitle {
-    font-size: 2.8rem;
+  .whyText h2 {
+    font-size: 40px;
   }
+
 }
 
-@media (max-width: 768px) {
-  .formRow {
-    grid-template-columns: 1fr;
+
+@media (max-width:1024px) {
+
+  .whyHeader {
+    margin-bottom: 60px;
   }
 
-  .whyGrid,
-  .statsRow {
-    grid-template-columns: 1fr;
+  .whyText h2 {
+    font-size: 36px;
   }
 
-  .heroSec {
-    min-height: auto;
-    padding: 120px 5%;
+  .cards {
+    min-height: 260px;
+    padding: 22px;
   }
 
-  .mainTitle {
-    font-size: 2.2rem;
+  .cards h3 {
+    font-size: 28px;
   }
 
-  .touchSec,
+  .cards p {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width:992px) {
+
   .whySec {
-    padding: 70px 5%;
+    padding: 60px 5%;
   }
 
-  .connectInner h2 {
-    font-size: 1.6rem;
-  }
-
-  .touchHeader,
   .whyHeader {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    margin-bottom: 50px;
   }
+
+  .whyText {
+    width: 100%;
+    align-items: center;
+  }
+
+  .divider {
+    margin: auto;
+  }
+
+  .whyHeader p {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .whySec {
+    padding: 55px 5%;
+  }
+
+  .whyText h2 {
+    font-size: 32px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .cards {
+    min-height: 240px;
+  }
+
+  .cards h3 {
+    font-size: 26px;
+  }
+
+  .cards p {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .whySec {
+    padding: 50px 20px;
+  }
+
+  .whyText h2 {
+    font-size: 28px;
+  }
+
+  .divider {
+    width: 90px;
+  }
+
+  .whyHeader {
+    margin-bottom: 40px;
+  }
+
+  .cards {
+    padding: 20px;
+    min-height: 220px;
+  }
+
+  .iconBox {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+  }
+
+  .cards h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .cards p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+}
+
+
+@media (max-width:480px) {
+
+  .whySec {
+    padding: 45px 18px;
+  }
+
+  .whyText h2 {
+    font-size: 24px;
+  }
+
+  .whyHeader p {
+    font-size: 14px;
+  }
+
+  .cards {
+    min-height: 210px;
+  }
+
+  .cards h3 {
+    font-size: 22px;
+  }
+
+  .cards p {
+    font-size: 13px;
+  }
+
+}
+
+
+@media (max-width:390px) {
+
+  .whyText h2 {
+    font-size: 22px;
+  }
+
+  .cards {
+    min-height: 200px;
+  }
+
+  .cards h3 {
+    font-size: 20px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .whySec {
+    padding: 40px 15px;
+  }
+
+  .whyText h2 {
+    font-size: 20px;
+  }
+
+  .divider {
+    width: 70px;
+  }
+
+  .iconBox {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cards {
+    padding: 18px;
+    min-height: 190px;
+  }
+
+  .cards h3 {
+    font-size: 18px;
+  }
+
+  .cards p {
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width:320px) {
+
+  .whySec {
+    padding: 35px 12px;
+  }
+
+  .whyText h2 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .divider {
+    width: 60px;
+  }
+
+  .whyHeader p {
+    font-size: 12px;
+  }
+
+  .iconBox {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+  }
+
+  .cards {
+    padding: 16px;
+    min-height: 180px;
+  }
+
+  .cards h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .cards p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+}
+
+/* ========================================================== */
+/* ==============================cta============================== */
+
+.cta {
+  width: 100%;
+  background: url('../assets/Contact/cta.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 60px;
+}
+
+.cta h2 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.cta p {
+  font-size: 0.97rem;
+  opacity: 0.85;
+  max-width: 800px;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contactBtn {
+  width: 267px;
+  height: 54px;
+  padding: 0 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1a3c6e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .35s ease;
+}
+
+.contactText {
+  font-size: 15px;
+  font-weight: 600;
+  transition: .35s;
+}
+
+.contactBtn:hover {
+  background: #fff;
+  color: #1a3c6e;
+  box-shadow: 0 12px 30px rgba(26, 60, 110, .18);
+}
+
+
+
+.iconBoxs {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.iconOne,
+.iconTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform .35s ease;
+}
+
+
+
+.iconOne {
+  transform: translateX(0);
+}
+
+
+
+.iconTwo {
+  transform: translateX(-24px);
+}
+
+.contactBtn:hover .iconOne {
+  transform: translateX(24px);
+}
+
+.contactBtn:hover .iconTwo {
+  transform: translateX(0);
+}
+
+.contactBtn:hover .contactText {
+  transform: translateX(-3px);
+}
+
+.btnBlue:hover {
+  background: #2550a0;
+}
+
+
+@media (max-width:1440px) {
+
+  .cta {
+    padding: 70px 4%;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+  }
+
+}
+
+
+@media (max-width:1280px) {
+
+  .cta h2 {
+    font-size: 42px;
+  }
+
+  .cta p {
+    max-width: 700px;
+  }
+
+}
+
+
+@media (max-width:1200px) {
+
+  .cta {
+    padding: 65px 5%;
+    background-attachment: scroll;
+  }
+
+  .cta h2 {
+    font-size: 38px;
+  }
+
+  .cta p {
+    font-size: 15px;
+    max-width: 650px;
+  }
+
+}
+
+
+@media (max-width:1024px) {
+
+  .cta h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .cta p {
+    max-width: 620px;
+  }
+
+}
+
+
+@media (max-width:992px) {
+
+  .cta {
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .cta p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .cta {
+    padding: 55px 5%;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .contactBtn {
+    width: 220px;
+    height: 50px;
+  }
+
+}
+
+
+@media (max-width:576px) {
+
+  .cta {
+    padding: 50px 20px;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+
+  .cta p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .contactBtn {
+    width: 200px;
+    height: 48px;
+  }
+
+  .contactText {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width:480px) {
+
+  .cta {
+    padding: 45px 18px;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+  }
+
+  .cta p {
+    font-size: 12px;
+  }
+
+  .contactBtn {
+    width: 185px;
+    height: 46px;
+    gap: 10px;
+  }
+
+}
+
+
+@media (max-width:390px) {
+
+  .cta h2 {
+    font-size: 20px;
+  }
+
+  .contactBtn {
+    width: 175px;
+    height: 44px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .cta {
+    padding: 40px 15px;
+  }
+
+  .cta h2 {
+    font-size: 18px;
+  }
+
+  .cta p {
+    font-size: 11px;
+  }
+
+  .contactBtn {
+    width: 165px;
+    height: 42px;
+  }
+
+  .contactText {
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width:320px) {
+
+  .cta {
+    padding: 35px 12px;
+  }
+
+  .cta h2 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .contactBtn {
+    width: 150px;
+    height: 40px;
+    padding: 0 18px;
+  }
+
+  .contactText {
+    font-size: 11px;
+  }
+
+  .iconBoxs {
+    width: 16px;
+    height: 16px;
+  }
+
 }

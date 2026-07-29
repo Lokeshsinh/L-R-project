@@ -3,7 +3,9 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ContactUs.module.css";
 import {
-  ArrowRight,
+  ArrowRight, ShieldCheck,
+  Share2,
+  Truck,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -25,36 +27,30 @@ const ContactUs = () => {
     setTimeout(() => setSubmitted(false), 4000);
   };
 
-  const whyCards = [
+  const features = [
     {
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <rect x="3" y="3" width="26" height="26" rx="4" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M10 16l4 4 8-8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ),
+      id: 1,
       title: "High-Quality Solutions",
-      desc: "We deliver durable and precision-engineered prefab and modular structures using advanced manufacturing excellence.",
+      description:
+        "We deliver durable and precision-engineered structures using premium materials and advanced manufacturing standards.",
+      icon: <ShieldCheck size={34} strokeWidth={1.8} />,
+      active: false,
     },
     {
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="16" r="13" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M16 8v8l5 3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      ),
+      id: 2,
       title: "Pan-India Presence",
-      desc: "With strong execution capability across India, we ensure exceptional installation teams in remote locations too.",
+      description:
+        "With strong execution capability across India, we ensure seamless delivery and installation even in remote locations.",
+      icon: <Share2 size={34} strokeWidth={1.8} />,
+      active: true,
     },
     {
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M6 26V12l10-8 10 8v14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          <rect x="12" y="18" width="8" height="8" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        </svg>
-      ),
+      id: 3,
       title: "Timely Project Delivery",
-      desc: "Our streamlined processes and project team ensure all projects are completed on schedule without compromising quality.",
+      description:
+        "Our streamlined processes and expert team ensure projects are completed on schedule without compromising quality.",
+      icon: <Truck size={34} strokeWidth={1.8} />,
+      active: false,
     },
   ];
 
@@ -90,7 +86,7 @@ const ContactUs = () => {
 
 
       {/* GET IN TOUCH */}
-      <section className={styles.touchSec}>
+      <section className={styles.touchSec} id="#contact">
         <div className={styles.touchContainer}>
           <div className={styles.touchHeader}>
             <div>
@@ -214,27 +210,38 @@ const ContactUs = () => {
         </div>
       </section>
 
+
+
+
       {/* WHY CHOOSE */}
       <section className={styles.whySec}>
-        <div className={styles.whyContainer}>
-          <div className={styles.whyHeader}>
-            <div>
-              <h2 className={styles.secTitle}>Why Choose L&amp;R <br /><span>Green India</span></h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.whyDesc}>Delivering reliable, high-quality modular solutions with efficiency and indisputable value.</p>
+        <div className={styles.whyHeader}>
+          <div className={styles.whyText}>
+            <h2>Why Choose L&amp;R <br /><span>Green India</span></h2>
+            <div className={styles.divider} />
           </div>
-          <div className={styles.whyGrid}>
-            {whyCards.map((card, i) => (
-              <div key={i} className={styles.whyCard}>
-                <div className={styles.whyIcon}>{card.icon}</div>
-                <h4>{card.title}</h4>
-                <p>{card.desc}</p>
+          <p className={styles.whyDesc}>Delivering reliable, high-quality modular solutions with efficiency and indisputable value.</p>
+        </div>
+        <div className={styles.container}>
+          {features.map((item) => (
+            <div
+              key={item.id}
+              className={`${styles.cards} ${item.active ? styles.activeCard : ""
+                }`}
+            >
+              <div className={styles.iconBox}>
+                {item.icon}
               </div>
-            ))}
-          </div>
+
+              <h3>{item.title}</h3>
+
+              <p>{item.description}</p>
+            </div>
+          ))}
         </div>
       </section>
+
+
 
       {/* GOOGLE MAP */}
       <section className={styles.mapSec}>
@@ -250,11 +257,25 @@ const ContactUs = () => {
         />
       </section>
 
+
+
+
+
       {/* CONNECT BANNER */}
-      <section className={styles.connectBanner}>
-        <div className={styles.connectInner}>
-          <h2>LET'S CONNECT L&amp;R GREEN INDIA</h2>
-        </div>
+
+      <section className={styles.cta}>
+        <h2>Get Expert Guidance Today</h2>
+        <p>
+          From MS Containers to PEB Structures and PUF Panels, we're ready to support your next project.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('#contact')}>
+          <span className={styles.contactText}>Send an Enquiry</span>
+
+          <span className={styles.iconBoxs}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />
