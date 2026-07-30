@@ -287,12 +287,13 @@ const Projects = () => {
                     {FILTER_TREE.map((group) => (
                       <div
                         key={group.key}
-                        className={`${styles.dropdownItem} ${hoveredParent === group.key ? styles.dropdownItemActive : ""}`}
+                        className={`${styles.dropdownItem} ${hoveredParent === group.key ? styles.dropdownItemActive : ""
+                          }`}
                         onMouseEnter={() => setHoveredParent(group.key)}
-                        onClick={() => handleSelectFilter(group.key, group.label)}
                       >
                         <span>{group.label}</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+
+                        <svg width="14" height="14" viewBox="0 0 24 24">
                           <polyline points="9 6 15 12 9 18" />
                         </svg>
                       </div>
