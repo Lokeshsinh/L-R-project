@@ -1312,6 +1312,488 @@ safety
   background: rgba(0, 0, 0, 0.2);
 }
 
+
+
+/* ==================Advantages================================ */
+
+.wallFeatureSection {
+  width: 100%;
+  padding: 72px 60px;
+  background-color: #f7f7f753;
+}
+
+.wallFeatureHeading {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 70px;
+  gap: 10px;
+}
+
+.wallFeatureHeading h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
+}
+
+.wallFeatureHeading h2 span {
+  color: #233E70;
+}
+
+.wallFeatureLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
+}
+
+.wallFeatureWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.wallFeatureTextContainer {
+  display: flex;
+}
+
+.wallFeatureContent {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+}
+
+.wallFeatureContent p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.wallFeatureList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wallFeatureItem {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.wallFeatureIcon {
+  width: 32px;
+  height: 32px;
+  background: #293F67;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: .35s ease;
+}
+
+.wallFeatureIcon svg {
+  color: #fff;
+}
+
+.wallFeatureItem:hover .wallFeatureIcon {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(41, 63, 103, .35);
+}
+
+.wallFeatureText {
+  font-size: 17px;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  transition: .35s ease;
+}
+
+.wallFeatureItem:hover .wallFeatureText {
+  color: #293F67;
+}
+
+.wallFeatureImageContainer {
+  position: relative;
+  width: 630px;
+  height: 420px;
+  border-radius: 10px;
+  background-color: #808080;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.45s ease;
+}
+
+.wallFeatureImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+.wallFeatureOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color 0.45s ease;
+}
+
+.wallFeatureImageContainer:hover {
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.28);
+}
+
+.wallFeatureImageContainer:hover .wallFeatureImage {
+  transform: scale(1.08);
+}
+
+.wallFeatureImageContainer:hover .wallFeatureOverlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width:1440px) {
+
+  .wallFeatureSection {
+    padding: 72px 4%;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 48px;
+  }
+
+  .wallFeatureImageContainer {
+    width: 560px;
+    height: 390px;
+  }
+
+}
+
+
+@media (max-width:1366px) {
+
+  .wallFeatureHeading h2 {
+    font-size: 44px;
+  }
+
+  .wallFeatureWrapper {
+    gap: 40px;
+  }
+
+  .wallFeatureImageContainer {
+    width: 520px;
+    height: 500px;
+  }
+
+}
+
+
+
+@media (max-width:1280px) {
+
+  .wallFeatureWrapper {
+    gap: 35px;
+  }
+
+  .wallFeatureImageContainer {
+    width: 590px;
+    height: 400px;
+  }
+
+  .wallFeatureTextContainer {
+    max-width: 550px;
+  }
+
+  .wallFeatureContent p,
+  .wallFeatureText {
+    font-size: 16px;
+  }
+
+}
+
+
+
+@media (max-width:1200px) {
+
+  .wallFeatureSection {
+    padding: 68px 4%;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 40px;
+  }
+
+  .wallFeatureImageContainer {
+    width: 500px;
+    height: 410px;
+  }
+
+}
+
+
+
+@media (max-width:1024px) {
+
+  .wallFeatureHeading h2 {
+    font-size: 36px;
+  }
+
+  .wallFeatureWrapper {
+    gap: 30px;
+  }
+
+  .wallFeatureImageContainer {
+    width: 390px;
+    height: 300px;
+  }
+
+  .wallFeatureContent {
+    gap: 16px;
+  }
+
+}
+
+
+
+@media (max-width:992px) {
+
+  .wallFeatureSection {
+    padding: 65px 5%;
+  }
+
+  .wallFeatureHeading {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .wallFeatureLine {
+    margin: auto;
+  }
+
+  .wallFeatureWrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .wallFeatureImageContainer {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    order: 1;
+  }
+
+  .wallFeatureTextContainer {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .wallFeatureContent {
+    max-width: 100%;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .wallFeatureSection {
+    padding: 60px 5%;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 32px;
+  }
+
+  .wallFeatureImageContainer {
+    height: 330px;
+  }
+
+  .wallFeatureContent p,
+  .wallFeatureText {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .wallFeatureItem {
+    gap: 14px;
+  }
+
+  .wallFeatureIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+
+
+@media (max-width:576px) {
+
+  .wallFeatureSection {
+    padding: 55px 20px;
+  }
+
+  .wallFeatureHeading {
+    margin-bottom: 35px;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 28px;
+  }
+
+  .wallFeatureLine {
+    width: 90px;
+  }
+
+  .wallFeatureImageContainer {
+    height: 260px;
+  }
+
+  .wallFeatureItem {
+    align-items: flex-start;
+  }
+
+  .wallFeatureIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .wallFeatureIcon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .wallFeatureContent p,
+  .wallFeatureText {
+    font-size: 14px;
+  }
+
+}
+
+
+
+@media (max-width:480px) {
+
+  .wallFeatureSection {
+    padding: 50px 18px;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 24px;
+  }
+
+  .wallFeatureImageContainer {
+    height: 220px;
+  }
+
+  .wallFeatureContent {
+    gap: 15px;
+  }
+
+}
+
+
+
+@media (max-width:390px) {
+
+  .wallFeatureHeading h2 {
+    font-size: 22px;
+  }
+
+  .wallFeatureImageContainer {
+    height: 200px;
+  }
+
+}
+
+
+
+@media (max-width:360px) {
+
+  .wallFeatureSection {
+    padding: 45px 15px;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 20px;
+  }
+
+  .wallFeatureLine {
+    width: 70px;
+  }
+
+  .wallFeatureImageContainer {
+    height: 190px;
+  }
+
+  .wallFeatureContent p,
+  .wallFeatureText {
+    font-size: 13px;
+  }
+
+  .wallFeatureIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+}
+
+
+
+@media (max-width:320px) {
+
+  .wallFeatureSection {
+    padding: 40px 12px;
+  }
+
+  .wallFeatureHeading h2 {
+    font-size: 18px;
+  }
+
+  .wallFeatureLine {
+    width: 60px;
+  }
+
+  .wallFeatureImageContainer {
+    height: 170px;
+  }
+
+  .wallFeatureContent p,
+  .wallFeatureText {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .wallFeatureItem {
+    gap: 10px;
+  }
+
+  .wallFeatureIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .wallFeatureIcon svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
 /* ===========================
    FAQ SECTION
 =========================== */

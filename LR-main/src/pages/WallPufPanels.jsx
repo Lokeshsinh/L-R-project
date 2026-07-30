@@ -1,14 +1,15 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/WallPufPanels.module.css";
 import {
-  ArrowRight, ArrowUpRight,  CheckCircle2,
+  ArrowRight, ArrowUpRight, CheckCircle2,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import wallpuf1 from '../assets/panel/wallpuf/wallpuf1.png'
 import wallpuf2 from '../assets/panel/wallpuf/WALLPUF2.png'
 import wallpuf3 from '../assets/panel/wallpuf/wallpuf3.png'
+import wallpuf4 from '../assets/panel/wallpuf/wallpuf4.png'
 import design from '../assets/panel/wallpuf/design.png'
 import design1 from '../assets/panel/wallpuf/design1.png'
 
@@ -24,7 +25,7 @@ export const WallPufPanels = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  
+
 
 
 
@@ -56,7 +57,7 @@ export const WallPufPanels = () => {
   //   },
   // ];
 
-;
+  ;
 
   return (
     <div className={styles.wrapper}>
@@ -215,7 +216,7 @@ export const WallPufPanels = () => {
       {/* ── TECHNICAL SPECIFICATIONS ── */}
 
       {/* ── APPLICATIONS ── */}
-    
+
 
 
       {/* ── SUSTAINABILITY BANNER ── */}
@@ -330,85 +331,70 @@ export const WallPufPanels = () => {
 
 
       {/* ── ADVANTAGES ── */}
-      {/* <section className={styles.wallPufSection}>
-        <div className={styles.wallPufHeading}>
-          <h2>
-            Advantages of Prefabricated
-            <br />
-            <span>Railway & Telecom Shelters</span>
-          </h2>
-          <div className={styles.wallPufLine}></div>
+      <section className={styles.wallFeatureSection}>
+        <div className={styles.wallFeatureHeading}>
+          <h2>Advantages of Prefabricated <br /><span>Railway & Telecom Shelters</span></h2>
+          <div className={styles.wallFeatureLine}></div>
         </div>
 
-        <div className={styles.wallPufWrapper}>
-          <div className={styles.wallPufImageContainer}>
-            <img
-              src={wallpuf2}
-              alt="Wall PUF Panel"
-              className={styles.wallPufImage}
-            />
-            <div className={styles.wallPufOverlay} />
+        <div className={styles.wallFeatureWrapper}>
+          <div className={styles.wallFeatureImageContainer}>
+            <img src={wallpuf4} alt="Roof Panel" className={styles.wallFeatureImage} />
+            <div className={styles.wallFeatureOverlay} />
           </div>
-          <div className={styles.wallPufTextContainer}>
-            <div className={styles.wallPufContent}>
+          <div className={styles.wallFeatureTextContainer}>
+            <div className={styles.wallFeatureContent}>
               <p>
-                Wall PUF panels resist moisture, rust, and harsh conditions with
-                anti-corrosion coatings, and are customizable to suit project needs.
+                Wall PUF panels resist moisture, rust, and harsh conditions
+                with anti-corrosion coatings, and are customizable to suit project needs.
               </p>
 
-              <div className={styles.wallPufFeatureList}>
-                <div className={styles.wallPufFeatureItem}>
-                  <div className={styles.wallPufFeatureIcon}>
+              <div className={styles.wallFeatureList}>
+                <div className={styles.wallFeatureItem}>
+                  <div className={styles.wallFeatureIcon}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.wallPufFeatureText}>
-                    Moisture & corrosion resistance
-                  </p>
+                  <p className={styles.wallFeatureText}>Moisture & corrosion resistance</p>
                 </div>
 
-                <div className={styles.wallPufFeatureItem}>
-                  <div className={styles.wallPufFeatureIcon}>
+                <div className={styles.wallFeatureItem}>
+                  <div className={styles.wallFeatureIcon}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.wallPufFeatureText}>
-                    Customizable design & specification
-                  </p>
+                  <p className={styles.wallFeatureText}> Customizable design & specification</p>
                 </div>
 
-                <div className={styles.wallPufFeatureItem}>
-                  <div className={styles.wallPufFeatureIcon}>
+                <div className={styles.wallFeatureItem}>
+                  <div className={styles.wallFeatureIcon}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.wallPufFeatureText}>
-                    High thermal and structural performance
-                  </p>
+                  <p className={styles.wallFeatureText}>High thermal and structural performance</p>
                 </div>
 
-                <div className={styles.wallPufFeatureItem}>
-                  <div className={styles.wallPufFeatureIcon}>
+                <div className={styles.wallFeatureItem}>
+                  <div className={styles.wallFeatureIcon}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.wallPufFeatureText}>
-                    Pan-India supply & timely delivery
-                  </p>
+                  <p className={styles.wallFeatureText}>Pan-India supply & timely delivery</p>
                 </div>
 
-                <div className={styles.wallPufFeatureItem}>
-                  <div className={styles.wallPufFeatureIcon}>
+                <div className={styles.wallFeatureItem}>
+                  <div className={styles.wallFeatureIcon}>
                     <CheckCircle2 size={17} strokeWidth={2.2} />
                   </div>
-                  <p className={styles.wallPufFeatureText}>
-                    Cost-effective and long-lasting solution
-                  </p>
+                  <p className={styles.wallFeatureText}>Cost-effective and long-lasting solution</p>
                 </div>
               </div>
-              <p>L&R Green India delivers durable, efficient panels with reliable quality
-                and quick installation for modern construction.</p>
+              <p>
+                L&R Green India delivers durable, efficient panels with
+                reliable quality and quick installation for modern construction.
+              </p>
             </div>
-
           </div>
+
         </div>
-      </section> */}
+      </section>
+
 
       {/* ── FAQ SECTION ── */}
 
