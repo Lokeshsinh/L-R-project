@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import control1 from '../assets/PREFAB/controllRoom/control1.png'
+import control2 from '../assets/PREFAB/controllRoom/control2.png'
+import control3 from '../assets/PREFAB/controllRoom/control3.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const functions = [
@@ -60,14 +62,6 @@ const functions = [
   },
 ];
 
-const keyFeaturePoints = [
-  "Insulated Wall Panels",
-  "Fire-resistant construction options",
-  "Temperature control provisions",
-  "Cable tray support systems",
-  "Ventilation & air conditioning integration",
-  "Anti-static flooring options",
-];
 
 const benefits = [
   {
@@ -161,9 +155,6 @@ const ControlPanelRoomPage = () => {
       </section>
 
 
-
-
-
       {/* ── Prefabricated Control Panel Rooms ── */}
       <section className={styles.introSec}>
         <div className={styles.secTitle}>
@@ -198,7 +189,7 @@ const ControlPanelRoomPage = () => {
           <div className={styles.imageCard}>
             <div className={styles.imageWrapper}>
               <img
-                src={control1}
+                src={control2}
                 alt="Prefab Building"
                 className={styles.image}
               />
@@ -242,44 +233,55 @@ const ControlPanelRoomPage = () => {
         </div>
       </section>
 
+
+
+
       {/* ── Key Features ── */}
-      <section className={styles.keyFeaturesSec}>
-        <div className={styles.keyFeaturesInner}>
-          <div className={styles.keyFeaturesGrid}>
-            <div className={styles.keyFeaturesImgCol}>
+      <section className={styles.epsSection}>
+        <div className={styles.epsHeading}>
+          <h2>
+            Applications of<br />
+            <span>Rockwool Panels</span>
+          </h2>
+          <div className={styles.headingDivider}></div>
+        </div>
+
+        <div className={styles.epsContentWrapper}>
+          <div className={styles.prefabCard}>
+            <div className={styles.prefabWrapper}>
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&q=80"
-                alt="Control Panel Room Interior"
+                src={control3}
+                alt="Prefab Building"
+                className={styles.prefabImage}
               />
+              <div className={styles.prefabOverlay}></div>
+              <div className={styles.prefabAccentPanel}></div>
             </div>
-            <div className={styles.keyFeaturesContent}>
-              <h2 className={styles.secTitle}>
-                Control Panel Room<br />
-                <span>Key Features</span>
-              </h2>
-              <div className={styles.divider} />
-              <p>
-                Designed with advanced components like insulated panels, fire-resistant
-                materials, temperature control systems, cable management support, ventilation
-                integration, and anti-static flooring to ensure safety, efficiency, and
-                reliable performance in critical environments.
-              </p>
-              <ul className={styles.featureList}>
-                {keyFeaturePoints.map((f, i) => (
-                  <li key={i}>
-                    <span className={styles.bullet}>•</span> {f}
-                  </li>
-                ))}
-              </ul>
-              <p>
-                Built with advanced engineering elements to deliver high safety, optimised
-                performance, and dependable protection for critical electrical systems in
-                demanding environments.
-              </p>
-            </div>
+          </div>
+
+          <div className={styles.epsContent}>
+            <p>
+              Designed with insulated panels, fire-resistant materials, temperature control systems,
+              cable management support, ventilation integration, and anti-static flooring for safe,
+              efficient, and reliable performance in critical environments.
+            </p>
+            <ul>
+              <li>Insulated Wall Panels</li>
+              <li>Fire-resistant construction options</li>
+              <li>Temperature control provisions</li>
+              <li> Cable tray support systems</li>
+              <li>Ventilation & air conditioning integration</li>
+              <li>Anti-static flooring options</li>
+            </ul>
+            <p>Built with advanced engineering elements to deliver high safety, optimized performance,
+              and dependable protection for critical electrical systems in demanding environments.</p>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* ── Structural Strength & Safety ── */}
       <section className={styles.structuralSec}>
