@@ -6,6 +6,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import labour1 from '../assets/Gallary/Labour/labour1.jpeg'
 import preEng1 from '../assets/Gallary/PreEngineed/preEng1.jpeg'
 import preEng2 from '../assets/Gallary/PreEngineed/preEng2.jpeg'
 import preEng3 from '../assets/Gallary/PreEngineed/preEng3.jpeg'
@@ -23,13 +24,22 @@ import preEng14 from '../assets/Gallary/PreEngineed/preEng14.jpeg'
 import video1 from '../assets/About/video5.mp4'
 import video2 from '../assets/About/video3.mp4'
 import video3 from '../assets/Gallary/PreEngineed/preEngVideo.mp4'
+import container1 from '../assets/Gallary/msContainer/con1.jpeg'
+import container2 from '../assets/Gallary/msContainer/con2.jpeg'
+import container3 from '../assets/Gallary/msContainer/con3.jpeg'
+import container4 from '../assets/Gallary/msContainer/con4.jpg'
+import container5 from '../assets/Gallary/msContainer/con5.jpeg'
+import container6 from '../assets/Gallary/msContainer/con6.jpeg'
+import container7 from '../assets/Gallary/msContainer/con7.jpeg'
+import container8 from '../assets/Gallary/msContainer/con8.jpeg'
+import container9 from '../assets/Gallary/msContainer/con9.jpeg'
 const CATEGORIES = [
   { label: "All", key: "all" },
   { label: "Pre-Engineered", key: "pre-engine" },
   { label: "LGSF", key: "lgsf" },
   { label: "Labor Hutment", key: "labor-hutment" },
   { label: "Modular Office", key: "modular-office" },
-  { label: "10X10 MS Container", key: "10x10-ms" },
+  { label: "MS Container", key: "ms-container" },
   { label: "40X8 MS Container", key: "40x8-ms" },
   { label: "20X8 MS Container", key: "20x8-ms" },
   { label: "40X10 MS Container", key: "40x10-ms" },
@@ -44,8 +54,8 @@ const ALL_MEDIA = [
   { id: 5, type: "video", category: "lgsf", src: video1 },
   { id: 6, type: "image", category: "modular-office", src: "/Images/gal2.jpg" },
   { id: 7, type: "video", category: "lgsf", src: video2 },
-  { id: 8, type: "image", category: "labor-hutment", src: "/Images/gal4.jpg" },
-  { id: 9, type: "video", category: "40x8-ms", src: "/Videos/video2.mp4" },
+  { id: 8, type: "image", category: "labor-hutment", src: labour1 },
+  { id: 9, type: "video", category: "ms-container", src: "/Videos/video2.mp4" },
   { id: 10, type: "image", category: "20x8-ms", src: "/Images/gal6.jpg" },
   { id: 11, type: "video", category: "lgsf", src: video3 },
   { id: 12, type: "image", category: "lgsf", src: preEng3 },
@@ -60,6 +70,15 @@ const ALL_MEDIA = [
   { id: 21, type: "image", category: "lgsf", src: preEng12 },
   { id: 22, type: "image", category: "lgsf", src: preEng13 },
   { id: 23, type: "image", category: "lgsf", src: preEng14 },
+  { id: 24, type: "image", category: "ms-container", src: container1 },
+  { id: 25, type: "image", category: "ms-container", src: container2 },
+  { id: 26, type: "image", category: "ms-container", src: container3 },
+  { id: 27, type: "image", category: "ms-container", src: container4 },
+  { id: 28, type: "image", category: "ms-container", src: container5 },
+  { id: 29, type: "image", category: "ms-container", src: container6 },
+  { id: 30, type: "image", category: "ms-container", src: container7 },
+  { id: 31, type: "image", category: "ms-container", src: container8 },
+  { id: 32, type: "image", category: "ms-container", src: container9 },
 
 
 

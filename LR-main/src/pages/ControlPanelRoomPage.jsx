@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ControlPanelRoom.module.css";
-
+import {
+  ArrowRight, Plus, X,
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import control1 from '../assets/PREFAB/controllRoom/control1.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const functions = [
   {
     icon: (
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <path d="M15 3l-9 5v8c0 5.25 3.84 10.15 9 11.35C20.16 26.15 24 21.25 24 16V8l-9-5z" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
-        <path d="M10 15l3.5 3.5L20 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M15 3l-9 5v8c0 5.25 3.84 10.15 9 11.35C20.16 26.15 24 21.25 24 16V8l-9-5z" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinejoin="round" />
+        <path d="M10 15l3.5 3.5L20 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     title: "Power Plants",
@@ -20,8 +24,8 @@ const functions = [
   {
     icon: (
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <circle cx="15" cy="15" r="5" stroke="currentColor" strokeWidth="1.8" fill="none"/>
-        <path d="M15 2v4M15 24v4M2 15h4M24 15h4M5.5 5.5l2.8 2.8M21.7 21.7l2.8 2.8M5.5 24.5l2.8-2.8M21.7 8.3l2.8-2.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+        <circle cx="15" cy="15" r="5" stroke="currentColor" strokeWidth="1.8" fill="none" />
+        <path d="M15 2v4M15 24v4M2 15h4M24 15h4M5.5 5.5l2.8 2.8M21.7 21.7l2.8 2.8M5.5 24.5l2.8-2.8M21.7 8.3l2.8-2.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
     title: "Solar Parks",
@@ -31,11 +35,11 @@ const functions = [
   {
     icon: (
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <rect x="3" y="8" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" fill="none"/>
-        <path d="M10 8V5M20 8V5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-        <line x1="3" y1="14" x2="27" y2="14" stroke="currentColor" strokeWidth="1.4"/>
-        <rect x="8" y="17" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.4" fill="none"/>
-        <rect x="16" y="17" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.4" fill="none"/>
+        <rect x="3" y="8" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" fill="none" />
+        <path d="M10 8V5M20 8V5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <line x1="3" y1="14" x2="27" y2="14" stroke="currentColor" strokeWidth="1.4" />
+        <rect x="8" y="17" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.4" fill="none" />
+        <rect x="16" y="17" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.4" fill="none" />
       </svg>
     ),
     title: "Industrial Facilities",
@@ -45,9 +49,9 @@ const functions = [
   {
     icon: (
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <rect x="3" y="10" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" fill="none"/>
-        <path d="M15 10V5M9 10V7M21 10V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-        <line x1="3" y1="16" x2="27" y2="16" stroke="currentColor" strokeWidth="1.4"/>
+        <rect x="3" y="10" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" fill="none" />
+        <path d="M15 10V5M9 10V7M21 10V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <line x1="3" y1="16" x2="27" y2="16" stroke="currentColor" strokeWidth="1.4" />
       </svg>
     ),
     title: "Infrastructure Projects",
@@ -124,8 +128,12 @@ const faqs = [
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
 const ControlPanelRoomPage = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   const [activeBenefit, setActiveBenefit] = useState(1);
+  const navigate = useNavigate()
 
   return (
     <div className={styles.wrapper}>
@@ -134,17 +142,27 @@ const ControlPanelRoomPage = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            CONTROL PANEL<br />
-            <span>ROOMS</span>
+            Control Panel<br />
+            <span>Rooms
+            </span>
           </h1>
-          <p className={styles.heroSub}>
-            Secure &amp; engineered modular enclosures for critical electrical systems.
+          <p className={styles.heroDesc}>
+            Secure & engineered modular enclosures for critical
+            electrical systems.
+
           </p>
-          <button className={styles.btnHero}>Contact us &nbsp;→</button>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
+
+
+
+
 
       {/* ── Prefabricated Control Panel Rooms ── */}
       <section className={styles.intro}>
@@ -317,70 +335,79 @@ const ControlPanelRoomPage = () => {
         </div>
       </section>
 
+
+
+
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqTopRow}>
-            <div className={styles.faqLeft}>
-              <span className={styles.faqBreadcrumb}>• Faqs</span>
-              <h2 className={styles.secTitle}>
-                Frequently Asked<br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} />
-              <div className={styles.faqSideImg}
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80')",
-                }}
-              />
-            </div>
-            <div className={styles.faqRight}>
-              <p className={styles.faqSubtext}>
-                Description: Quick answers to common questions about modular control panel room solutions.
-              </p>
-              <div className={styles.faqList}>
-                {faqs.map((faq) => (
-                  <div
-                    key={faq.id}
-                    className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""}`}
-                    onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
-                  >
-                    <div className={styles.faqQuestion}>
-                      <span>{faq.q}</span>
-                      <span className={styles.faqArrow}>{openFaq === faq.id ? "↑" : "↓"}</span>
-                    </div>
-                    {openFaq === faq.id && (
-                      <div className={styles.faqAnswer}>
-                        <p>{faq.a}</p>
-                      </div>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={control1} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
                     )}
+                  </span>
+                </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA Banner ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Ready to Build Your Control Panel Room?</h2>
-          <p>
-            Connect with our team to design and deliver durable, efficient, and fully customised
-            Executive Control Panel Room tailored to your storage needs.
-          </p>
-          <button className={styles.btnCTA}>Contact US &nbsp;→</button>
-        </div>
-      </section>
 
-      {/* ── Let's Connect ── */}
-      <div className={styles.letsConnect}>
-        <div className={styles.letsConnectInner}>
-          <h2>LET'S CONNECT L&amp;R GREEN INDIA</h2>
-        </div>
-      </div>
+      {/* ── CTA Banner ── */}
+      <section className={styles.cta}>
+        <h2>Ready to Build Your Control Panel Room?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully customized
+          Executive Control Panel Room tailored to your storage needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
+      </section>
 
       <Footer />
     </div>
