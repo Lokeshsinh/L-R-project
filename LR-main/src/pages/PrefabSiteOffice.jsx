@@ -128,28 +128,7 @@ const applications = [
   "Solar Office Cabins",
 ];
 
-const advantages = [
-  {
-    num: "01",
-    title: "Time Efficiency",
-    desc: "Fast delivery and installation significantly reduce project downtime and site setup costs.",
-  },
-  {
-    num: "02",
-    title: "Cost Optimization",
-    desc: "Affordable pricing with minimal maintenance costs over the entire project lifecycle.",
-  },
-  {
-    num: "03",
-    title: "Reusable Asset",
-    desc: "Relocate across multiple project sites — your investment works for every assignment.",
-  },
-  {
-    num: "04",
-    title: "Eco-Friendly Build",
-    desc: "Sustainable materials and reusable structure reduce environmental impact significantly.",
-  },
-];
+
 
 const faqs = [
   {
