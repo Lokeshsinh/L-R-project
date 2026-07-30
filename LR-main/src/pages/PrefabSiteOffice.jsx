@@ -3,10 +3,11 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabSiteOffice.module.css";
 import {
-  ArrowRight, Plus, X, 
+  ArrowRight, Plus, X, ArrowUpRight,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import site1 from '../assets/PREFAB/sitOffice/site1.png'
+import site2 from '../assets/PREFAB/sitOffice/site2.png'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -215,46 +216,56 @@ const PrefabSiteOffice = () => {
 
 
       {/* ── What Are Prefab ── */}
-      <section className={styles.intro}>
-        <div className={styles.introGrid}>
-          <div className={styles.introVisuals}>
-            <div
-              className={styles.imgMain}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1497366754035-f200968a6e23?w=800&q=80')",
-              }}
-            />
-            <div
-              className={styles.imgSub}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=400&q=80')",
-              }}
-            />
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            What Are Prefabricated<br />
+            <span>Site Office Cabins?</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.introText}>
+            <p>
+              Prefabricated site office cabins are modular workspace units manufactured off-site
+              in a controlled factory environment and then quickly installed at project locations.
+              These cabins act as temporary administrative hubs for engineering, planning, coordination,
+              and documentation work, helping ensure smooth and efficient project execution without delays.
+            </p>
+            <p>
+              They are designed for fast installation and easy relocation, making them highly suitable for
+              dynamic project sites. Built with factory-precision quality, these cabins offer reliable performance
+              and are widely used across infrastructure and industrial projects where flexibility, speed, and
+              organized workspace solutions are essential.
+            </p>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
-          <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              What Are Prefabricated<br />
-              <span>Site Office Cabins?</span>
-            </h2>
-            <div className={styles.divider} />
-            <p>
-              Prefabricated site office cabins are modular, ready-to-use workspace solutions
-              manufactured off-site and transported to the project location. Designed to be
-              durable, weatherproof, and fully functional, these cabins provide a professional
-              working environment even in remote or rugged terrains.
-            </p>
-            <p>
-              Ideal for construction companies, infrastructure firms, mining operations, and
-              large-scale project sites that require temporary yet effective office setups.
-              With options for insulation, electrical fittings, and customized interiors,
-              these cabins offer convenience without compromising quality.
-            </p>
-            <button className={styles.btnSecondary}>Read More &nbsp;↗</button>
+          {/*  */}
+          <div className={styles.imageCard}>
+            <div className={styles.imageWrapper}>
+              <img
+                src={site2}
+                alt="Interior"
+                className={styles.image}
+              />
+              <div className={styles.overlay}></div>
+              <div className={styles.bottomAccent}></div>
+            </div>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* ── Key Features ── */}
       <section className={styles.featuresSec}>
