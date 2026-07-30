@@ -3,117 +3,19 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabSiteOffice.module.css";
 import {
-  ArrowRight, Plus, X, ArrowUpRight,
+  ArrowRight, Plus, X, ArrowUpRight, CheckCircle2,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import site1 from '../assets/PREFAB/sitOffice/site1.png'
 import site2 from '../assets/PREFAB/sitOffice/site2.png'
 import site3 from '../assets/PREFAB/sitOffice/site3.png'
+import site4 from '../assets/PREFAB/sitOffice/site4.png'
 import design from '../assets/PREFAB/sitOffice/design.png'
 import design1 from '../assets/PREFAB/sitOffice/design1.png'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
-const keyFeatures = [
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <rect x="3" y="10" width="28" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M10 10V7M24 10V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <line x1="3" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="8" y="20" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        <rect x="16" y="20" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      </svg>
-    ),
-    title: "Rapid Site Deployment",
-    desc: "Pre-manufactured off-site and installed within days — no delays to your project schedule.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <path d="M17 3L3 12v19h28V12L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
-        <rect x="12" y="20" width="10" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      </svg>
-    ),
-    title: "Weatherproof & Durable",
-    desc: "Built to withstand extreme weather, dust, and harsh site conditions without compromise.",
-    highlight: true,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <circle cx="17" cy="17" r="14" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M10 17l5 5 9-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Customizable Interiors",
-    desc: "Tailored layouts, insulation, electrical fittings, and finishes per project requirements.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <circle cx="10" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
-        <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M6 24H4V14l6-8h16l4 8v10h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="14" y1="24" x2="20" y2="24" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-    title: "Fully Relocatable",
-    desc: "Dismantle and shift to the next project site with zero structural wastage.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <rect x="2" y="8" width="30" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-        <rect x="6" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        <rect x="16" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        <line x1="2" y1="28" x2="32" y2="28" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-    title: "Modular & Scalable",
-    desc: "Connect multiple units to build large office complexes as your project scales up.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <path d="M17 3l2.5 8h8.5l-6.8 5 2.5 8L17 19l-6.7 5 2.5-8L6 11h8.5L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
-      </svg>
-    ),
-    title: "Quality Certified",
-    desc: "Every unit meets stringent manufacturing and safety standards before delivery.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <path d="M17 3C10 3 5 9 5 17c0 5 3 9 7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-        <path d="M17 3c7 0 12 6 12 14 0 5-3 9-7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-        <line x1="17" y1="3" x2="17" y2="31" stroke="currentColor" strokeWidth="1.5" />
-        <line x1="5" y1="17" x2="29" y2="17" stroke="currentColor" strokeWidth="1.5" />
-      </svg>
-    ),
-    title: "Eco-Friendly Materials",
-    desc: "Sustainable sandwich panel systems reduce environmental impact and energy costs.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <rect x="3" y="8" width="28" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M10 8V5M24 8V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <line x1="3" y1="14" x2="31" y2="14" stroke="currentColor" strokeWidth="1.5" />
-        <line x1="17" y1="14" x2="17" y2="28" stroke="currentColor" strokeWidth="1.2" />
-      </svg>
-    ),
-    title: "After-Sales Support",
-    desc: "Dedicated support team ensures cabins stay in peak condition throughout the project.",
-    highlight: false,
-  },
-];
+
 
 const applications = [
   "Construction Site Offices",
@@ -377,36 +279,117 @@ const PrefabSiteOffice = () => {
 
 
 
-
-      <section className={styles.featuresSec}>
-        <div className={styles.featuresInner}>
-          <div className={styles.featuresTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Key Features of Our<br />
-                <span>Prefab Site Cabins</span>
-              </h2>
-              <div className={styles.featuresDivider} />
+      <section className={styles.conatineUser}>
+        <div className={styles.containerMax}>
+          <h2>
+            Prefab Site Office <br />
+            <span>Applications</span>
+          </h2>
+          <div className={styles.divider}></div>
+        </div>
+        <div className={styles.containerFlex}>
+          <div className={styles.applicationsCard}>
+            <div className={styles.applicationsViewport}>
+              <img
+                src={site4}
+                alt="Interior"
+                className={styles.applicationsImage}
+              />
+              <div className={styles.applicationsOverlay}></div>
+              <div className={styles.applicationsBottomBar}></div>
             </div>
-            <p className={styles.featuresDesc}>
-              Every L&amp;R cabin is engineered with structural strength, rapid deployment,
-              and on-site comfort as core priorities.
-            </p>
           </div>
-          <div className={styles.featuresGrid}>
-            {keyFeatures.map((feat, i) => (
-              <div
-                key={i}
-                className={`${styles.featureCard} ${feat.highlight ? styles.featureCardActive : ""}`}
-              >
-                <div className={styles.featureIcon}>{feat.icon}</div>
-                <h4>{feat.title}</h4>
-                <p>{feat.desc}</p>
+          <div className={styles.containerText}>
+            <p>L&R Green India Pvt Ltd prefabricated site office cabins provide
+              fast and reliable workspace solutions for a wide range of industries at project sites.</p>
+            <div className={styles.applicationFeatureList}>
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Infrastructure & highway projects
+                </p>
               </div>
-            ))}
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Labour accommodation units
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Industrial construction sites
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Project control rooms
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Commercial development projects
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Solar power plants
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Multi-story modular office buildings
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Temporary event offices
+                </p>
+              </div>
+
+              <div className={styles.applicationFeatureItem}>
+                <div className={styles.applicationFeatureIcon}>
+                  <CheckCircle2 size={16} strokeWidth={2.4} />
+                </div>
+                <p className={styles.applicationFeatureText}>
+                  Sales & marketing offices
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── Applications ── */}
       <section className={styles.applicationsSec}>
@@ -440,33 +423,7 @@ const PrefabSiteOffice = () => {
       </section>
 
       {/* ── Built for Growing Demands ── */}
-      <section className={styles.builtForSec}>
-        <div className={styles.builtForInner}>
-          <div className={styles.builtForText}>
-            <h2>
-              Built for Growing<br />
-              Project Demands
-            </h2>
-            <p>
-              As your project scales, our modular cabin systems scale with you. Connect
-              multiple units to create larger office complexes, conference rooms, or
-              multi-functional spaces — without any permanent construction.
-            </p>
-            <p>
-              Available in a range of sizes and configurations to accommodate growing teams.
-              Whether you need a single-room office or a multi-unit complex, L&amp;R Green
-              India Pvt Ltd has the right solution for you.
-            </p>
-          </div>
-          <div className={styles.builtForImgCol}>
-            <img
-              src="https://images.unsplash.com/photo-1590516408010-c6d81cf8c15b?w=800&q=80"
-              alt="Scalable Modular Cabins"
-            />
-            <div className={styles.builtForWatermark}>SITE OFFICE</div>
-          </div>
-        </div>
-      </section>
+
 
 
 
