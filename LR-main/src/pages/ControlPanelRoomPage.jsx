@@ -329,7 +329,6 @@ const ControlPanelRoomPage = () => {
                   }`}
               >
                 <div className={styles.benefitDot}></div>
-
                 <div className={styles.benefitContent}>
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>

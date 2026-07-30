@@ -8,6 +8,7 @@ import {
 import { useNavigate } from 'react-router-dom'
 import site1 from '../assets/PREFAB/sitOffice/site1.png'
 import site2 from '../assets/PREFAB/sitOffice/site2.png'
+import site3 from '../assets/PREFAB/sitOffice/site3.png'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -268,110 +269,97 @@ const PrefabSiteOffice = () => {
 
 
       {/* ── Key Features ── */}
-      <section className={styles.featuresSec}>
-        <div className={styles.featuresInner}>
-          <div className={styles.featuresTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Key Features of Our<br />
-                <span>Prefab Site Cabins</span>
-              </h2>
-              <div className={styles.featuresDivider} />
-            </div>
-            <p className={styles.featuresDesc}>
-              Every L&amp;R cabin is engineered with structural strength, rapid deployment,
-              and on-site comfort as core priorities.
-            </p>
-          </div>
-          <div className={styles.featuresGrid}>
-            {keyFeatures.map((feat, i) => (
-              <div
-                key={i}
-                className={`${styles.featureCard} ${feat.highlight ? styles.featureCardActive : ""}`}
-              >
-                <div className={styles.featureIcon}>{feat.icon}</div>
-                <h4>{feat.title}</h4>
-                <p>{feat.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
+
+
+
 
       {/* ── Designed for Mobility ── */}
-      <section className={styles.mobilitySec}>
-        <div className={styles.mobilityGrid}>
-          <div className={styles.mobilityImgCol}>
-            <div
-              className={styles.mobilityImg}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80')",
-              }}
-            />
+      <section className={styles.epsSection}>
+        <div className={styles.epsHeading}>
+          <h2>
+            Designed for<br />
+            <span>Mobility & Strength</span>
+          </h2>
+          <div className={styles.headingDivider}></div>
+        </div>
+
+        <div className={styles.epsContentWrapper}>
+          <div className={styles.interiorCard}>
+            <div className={styles.interiorWrapper}>
+              <img
+                src={site2}
+                alt="Interior"
+                className={styles.interiorMedia}
+              />
+              <div className={styles.interiorOverlay}></div>
+              <div className={styles.interiorFooterAccent}></div>
+            </div>
           </div>
-          <div className={styles.mobilityContent}>
-            <h2 className={styles.secTitle}>
-              Designed for Mobility<br />
-              <span>&amp; Strength</span>
-            </h2>
-            <div className={styles.divider} />
+          {/*  */}
+          <div className={styles.epsContent}>
             <p>
-              Our prefab site office cabins are built with high-quality steel frames and
-              sandwich panel walls that ensure superior strength while keeping the overall
-              structure lightweight and easy to transport.
+              Our portable office cabins are built using high-grade steel frameworks for structural
+              stability and durability. The exterior is engineered for weather resistance, while
+              interiors are optimized for professional functionality.
             </p>
-            <ul className={styles.featureList}>
-              {[
-                "Lightweight yet Sturdy Steel Frame Construction",
-                "Quick Assembly and Dismantling",
-                "Portable and Easily Relocatable",
-                "Suitable for All Weather Conditions",
-                "Customizable Interiors and Layouts",
-              ].map((f, i) => (
-                <li key={i}>
-                  <span className={styles.checkIcon}>✔</span> {f}
-                </li>
-              ))}
+            <p><strong>Key structural features:</strong></p>
+            <ul>
+
+              <li>Heavy-duty steel base frame</li>
+              <li>Corrosion-resistant treatment</li>
+              <li>Insulated wall and roof panels</li>
+              <li>Optimized interior finishing</li>
+              <li>Stackable and relocatable design</li>
+              <li>Safe access systems</li>
             </ul>
-            <p>
-              Engineered for rapid deployment and long-term performance, making them the
-              trusted choice for leading project management teams across India.
-            </p>
+            <p>These cabins are engineered to withstand challenging site
+              conditions while maintaining internal comfort.</p>
           </div>
         </div>
       </section>
 
+
+
+
       {/* ── Why Choose ── */}
-      <section className={styles.whyChooseSec}>
-        <div className={styles.welfareContainer}>
-          <div className={styles.welfareText}>
-            <h2>
-              Why Choose L&amp;R<br />
-              Green India Pvt Ltd
-            </h2>
-            <p>
-              At L&amp;R Green India Pvt Ltd, we bring years of expertise in prefabricated
-              construction with a commitment to delivering world-class quality products. Our
-              state-of-the-art manufacturing facility ensures every cabin meets stringent
-              quality standards.
-            </p>
-            <p>
-              We work closely with project managers, site engineers, and procurement teams
-              to deliver tailored solutions aligned with project timelines and budgets. From
-              design to delivery, we ensure a seamless experience for every client.
-            </p>
-            <button className={styles.btnSecondaryWhite}>Get a Quote &nbsp;→</button>
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Why Choose L&R  <br /><span>Green India Pvt Ltd</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>L&R Green India Pvt Ltd is a trusted provider of high-quality prefabricated site office
+              cabins built with premium materials and advanced engineering. We focus on strong structural
+              design, safety, and long-lasting performance to ensure reliable use in demanding project
+              environments, with consistent quality across all modular solutions.</p>
+            <p>We also offer fully customizable designs, fast production, and timely delivery to match
+              project schedules. Supported by advanced fabrication, seismic-resistant engineering, and
+              dedicated customer service, we provide a smooth process from design to installation,
+              making us a dependable partner for infrastructure and industrial needs.</p>
           </div>
-          <div className={styles.welfareImgCol}>
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-              alt="Why Choose L&R"
-            />
-            <div className={styles.welfareWatermark}>OFFICE</div>
+          {/*  */}
+          <div className={styles.showcaseCard}>
+            <div className={styles.showcaseCard__frame}>
+              <img
+                src={site3}
+                alt="Interior"
+                className={styles.showcaseCard__image}
+              />
+              <div className={styles.showcaseCard__shade}></div>
+              <div className={styles.showcaseCard__bar}></div>
+            </div>
           </div>
         </div>
       </section>
+
+
+
+
+
+
 
       {/* ── Advantages ── */}
       <section className={styles.advantagesSec}>
@@ -408,6 +396,37 @@ const PrefabSiteOffice = () => {
               <div key={i} className={styles.badge}>
                 <span>{b.icon}</span>
                 <span>{b.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section className={styles.featuresSec}>
+        <div className={styles.featuresInner}>
+          <div className={styles.featuresTopRow}>
+            <div>
+              <h2 className={styles.secTitle}>
+                Key Features of Our<br />
+                <span>Prefab Site Cabins</span>
+              </h2>
+              <div className={styles.featuresDivider} />
+            </div>
+            <p className={styles.featuresDesc}>
+              Every L&amp;R cabin is engineered with structural strength, rapid deployment,
+              and on-site comfort as core priorities.
+            </p>
+          </div>
+          <div className={styles.featuresGrid}>
+            {keyFeatures.map((feat, i) => (
+              <div
+                key={i}
+                className={`${styles.featureCard} ${feat.highlight ? styles.featureCardActive : ""}`}
+              >
+                <div className={styles.featureIcon}>{feat.icon}</div>
+                <h4>{feat.title}</h4>
+                <p>{feat.desc}</p>
               </div>
             ))}
           </div>
