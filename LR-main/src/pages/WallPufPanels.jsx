@@ -26,7 +26,28 @@ export const WallPufPanels = () => {
   }, []);
 
 
-
+  const specifications = [
+    {
+      title: "Thickness",
+      value: "30mm to 150mm",
+    },
+    {
+      title: "Density of PUF core",
+      value: "38–42 kg/m³",
+    },
+    {
+      title: "Outer sheet thickness",
+      value: "0.4mm to 0.6mm",
+    },
+    {
+      title: "Effective width",
+      value: "Approx. 1000mm",
+    },
+    {
+      title: "Length",
+      value: "As per project requirement",
+    },
+  ];
 
 
   const faqs = [
@@ -138,7 +159,7 @@ export const WallPufPanels = () => {
 
       <section className={styles.roofApplicationSection}>
         <div className={styles.roofApplicationHeading}>
-          <h2>Key Features of<br />Wall PUF Panels</h2>
+          <h2>Key Features of<br /><span>Wall PUF Panels</span></h2>
           <div className={styles.roofApplicationLine}></div>
         </div>
         <div className={styles.hvacContentWrapper}>
@@ -214,6 +235,31 @@ export const WallPufPanels = () => {
       </section>
 
       {/* ── TECHNICAL SPECIFICATIONS ── */}
+      <section className={styles.WallPufTech}>
+        <div className={styles.wallPufTechFlex}>
+          <div className={styles.wallPufTectpara}>
+            <div className={styles.wallPufTechText}>
+              <h2>Technical Specifications<br /> <span>Wall PUF Panels</span></h2>
+              <div className={styles.wallPufTechLine}></div>
+            </div>
+            <p>Wall PUF panels are available in a range of customizable specifications to
+              suit different project requirements. They are designed to deliver consistent
+              performance with optimal thickness, density, and structural balance.</p>
+            <p>These panels also come in various color-coated finishes, allowing flexibility
+              in design while maintaining durability and aesthetic appeal for modern construction.</p>
+          </div>
+          {/* table */}
+          <div className={styles.specificationCard}>
+            {specifications.map((item, index) => (
+              <div key={index} className={styles.specificationRow}>
+                <h4>{item.title}</h4>
+                <p>{item.value}</p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
 
       {/* ── APPLICATIONS ── */}
 

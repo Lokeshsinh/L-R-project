@@ -717,6 +717,414 @@
 }
 
 /* ===========================
+  Tech
+============================== */
+.WallPufTech {
+  width: 100%;
+  padding: 71px 60px;
+  background-color: #f7f7f753;
+}
+
+.wallPufTechText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wallPufTechText h2 {
+  margin-top: 10px;
+  font-size: 55px;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.2;
+}
+
+.wallPufTechText h2 span {
+  color: #1a3c6e;
+}
+
+.wallPufTechLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #0d2244;
+}
+
+.wallPufTechFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.wallPufTectpara {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 700px;
+}
+
+.wallPufTectpara p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* table */
+.specificationCard {
+  width: 100%;
+  max-width: 620px;
+}
+
+.specificationRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 22px 18px;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.specificationRow:last-child {
+  border-bottom: none;
+}
+
+.specificationRow h4 {
+  margin: 0;
+  flex: 1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #111;
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.specificationRow p {
+  margin: 0;
+  flex: 1;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #111;
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+
+/* Hover Effect */
+
+.specificationRow:hover {
+  background: #20375f;
+  border-color: #20375f;
+  transform: translateX(8px);
+  box-shadow: 0 12px 30px rgba(32, 55, 95, 0.18);
+}
+
+.specificationRow:hover h4,
+.specificationRow:hover p {
+  color: #fff;
+}
+
+.specificationRow:hover h4 {
+  transform: translateX(5px);
+}
+
+.specificationRow:hover p {
+  transform: translateX(-5px);
+}
+
+
+
+@media (max-width:1440px) {
+
+  .WallPufTech {
+    padding: 72px 4%;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 48px;
+  }
+
+}
+
+
+
+@media (max-width:1366px) {
+
+  .wallPufTechText h2 {
+    font-size: 44px;
+  }
+
+  .wallPufTechFlex {
+    gap: 40px;
+  }
+
+}
+
+
+
+@media (max-width:1280px) {
+
+  .wallPufTechFlex {
+    gap: 35px;
+  }
+
+  .wallPufTectpara {
+    max-width: 55%;
+  }
+
+  .specificationCard {
+    max-width: 45%;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 18px;
+  }
+
+}
+
+
+
+@media (max-width:1200px) {
+
+  .WallPufTech {
+    padding: 68px 4%;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 40px;
+  }
+
+  .wallPufTectpara p {
+    font-size: 16px;
+  }
+
+}
+
+
+
+@media (max-width:1024px) {
+
+  .wallPufTechText h2 {
+    font-size: 36px;
+  }
+
+  .wallPufTechFlex {
+    gap: 30px;
+  }
+
+  .specificationRow {
+    padding: 18px 14px;
+    gap: 20px;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 17px;
+  }
+
+}
+
+
+@media (max-width:992px) {
+
+  .WallPufTech {
+    padding: 65px 5%;
+  }
+
+  .wallPufTechFlex {
+    flex-direction: column;
+    gap: 45px;
+    align-items: center;
+  }
+
+  .wallPufTectpara {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .wallPufTechText {
+    align-items: center;
+  }
+
+  .wallPufTechLine {
+    margin: auto;
+  }
+
+  .specificationCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .WallPufTech {
+    padding: 60px 5%;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 32px;
+  }
+
+  .wallPufTectpara {
+    gap: 18px;
+  }
+
+  .wallPufTectpara p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width:576px) {
+
+  .WallPufTech {
+    padding: 55px 20px;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 28px;
+  }
+
+  .wallPufTechLine {
+    width: 90px;
+  }
+
+  .specificationRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 18px;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .specificationRow:hover {
+    transform: none;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .WallPufTech {
+    padding: 50px 18px;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 24px;
+  }
+
+  .wallPufTectpara p {
+    font-size: 14px;
+  }
+
+  .specificationRow {
+    padding: 16px;
+  }
+
+}
+
+
+@media (max-width:390px) {
+
+  .wallPufTechText h2 {
+    font-size: 22px;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .WallPufTech {
+    padding: 45px 15px;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 20px;
+  }
+
+  .wallPufTechLine {
+    width: 70px;
+  }
+
+  .wallPufTectpara p {
+    font-size: 13px;
+  }
+
+  .specificationRow {
+    padding: 14px;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 13px;
+  }
+
+}
+
+
+@media (max-width:320px) {
+
+  .WallPufTech {
+    padding: 40px 12px;
+  }
+
+  .wallPufTechText h2 {
+    font-size: 18px;
+  }
+
+  .wallPufTechLine {
+    width: 60px;
+  }
+
+  .wallPufTectpara p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .specificationRow {
+    padding: 12px;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 12px;
+  }
+
+}
+
+/* ===========================
    BLUE BANNER SECTION
 =========================== */
 .mfgBand {
