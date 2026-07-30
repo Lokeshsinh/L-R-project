@@ -1354,6 +1354,439 @@
 
 }
 
+/* =================================================
+  cards
+  ================================================== */
+
+.functionSec {
+  width: 100%;
+  padding: 72px 60px;
+  background-color: #f7f7f753;
+}
+
+.functionTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.functionText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.functionText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
+}
+
+.functionText h2 span {
+  color: #233E70;
+}
+
+.funtcionsLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
+}
+
+.functionTopRow p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  padding-top: 8px;
+  max-width: 470px;
+}
+
+
+.cardsSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  padding: 34px 26px;
+  background: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+  transition: .45s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background Animation */
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #324b79;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: .45s ease;
+  z-index: 0;
+}
+
+/* Shine */
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70px;
+  height: 100%;
+  background: rgba(255, 255, 255, .18);
+  transform: skewX(-25deg);
+  transition: .9s;
+  z-index: 1;
+}
+
+.icon,
+.card h3,
+.card p {
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #324b79;
+  margin-bottom: 38px;
+  transition: .4s ease;
+}
+
+.card h3 {
+  margin: 0 0 20px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #111;
+  transition: .35s ease;
+}
+
+.card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #444;
+  transition: .35s ease;
+}
+
+/* Active */
+
+.activeCard {
+  background: #324b79;
+
+}
+
+.activeCard::before {
+  transform: scaleY(1);
+
+}
+
+.activeCard .icon {
+  color: #fff;
+
+}
+
+.activeCard h3,
+.activeCard p {
+  color: #fff;
+
+}
+
+/* Hover */
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .22);
+
+}
+
+.card:hover::before {
+  transform: scaleY(1);
+
+}
+
+.card:hover::after {
+  left: 140%;
+
+}
+
+.card:hover .icon {
+  color: #fff;
+  transform: rotate(-8deg) scale(1.1);
+
+}
+
+.card:hover h3 {
+  color: #fff;
+  transform: translateX(6px);
+
+}
+
+.card:hover p {
+  color: #fff;
+  transform: translateX(8px);
+}
+
+@media (max-width:1400px){
+
+  .functionSec{
+    padding:70px 40px;
+  }
+
+  .functionTopRow{
+    margin-bottom:60px;
+    gap:40px;
+  }
+
+  .functionText h2{
+    font-size:48px;
+  }
+
+  .functionTopRow p{
+    max-width:420px;
+  }
+
+  .cardsSection{
+    gap:20px;
+  }
+
+  .card{
+    min-height:260px;
+    padding:30px 22px;
+  }
+
+  .card h3{
+    font-size:21px;
+  }
+
+  .card p{
+    font-size:15px;
+  }
+
+}
+
+@media (max-width:1200px){
+
+  .functionSec{
+    padding:70px 30px;
+  }
+
+  .functionText h2{
+    font-size:42px;
+  }
+
+  .cardsSection{
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+
+  .card{
+    min-height:240px;
+  }
+
+}
+
+@media (max-width:992px){
+
+  .functionSec{
+    padding:60px 25px;
+  }
+
+  .functionTopRow{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:45px;
+  }
+
+  .functionText h2{
+    font-size:38px;
+  }
+
+  .functionTopRow p{
+    max-width:100%;
+    padding-top:0;
+  }
+
+  .cardsSection{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  .card{
+    min-height:230px;
+    padding:26px 20px;
+  }
+
+  .icon{
+    width:55px;
+    height:55px;
+    margin-bottom:28px;
+  }
+
+}
+
+
+@media (max-width:768px){
+
+  .functionSec{
+    padding:55px 20px;
+  }
+
+  .functionText h2{
+    font-size:34px;
+  }
+
+  .funtcionsLine{
+    width:90px;
+  }
+
+  .cardsSection{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .card{
+    min-height:auto;
+    padding:24px 20px;
+  }
+
+  .icon{
+    margin-bottom:22px;
+  }
+
+  .card h3{
+    font-size:20px;
+    margin-bottom:15px;
+  }
+
+  .card p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+}
+
+@media (max-width:576px){
+
+  .functionSec{
+    padding:50px 16px;
+  }
+
+  .functionText h2{
+    font-size:29px;
+  }
+
+  .functionTopRow{
+    margin-bottom:35px;
+  }
+
+  .functionTopRow p{
+    font-size:14px;
+  }
+
+  .card{
+    padding:20px 18px;
+    border-radius:10px;
+  }
+
+  .icon{
+    width:48px;
+    height:48px;
+    margin-bottom:18px;
+  }
+
+  .card h3{
+    font-size:18px;
+  }
+
+  .card p{
+    font-size:14px;
+  }
+
+}
+@media (max-width:480px){
+
+  .functionText h2{
+    font-size:26px;
+  }
+
+  .card{
+    padding:18px 16px;
+  }
+
+  .icon{
+    width:44px;
+    height:44px;
+  }
+
+  .card h3{
+    font-size:17px;
+  }
+
+  .card p{
+    font-size:13.5px;
+    line-height:1.6;
+  }
+
+}
+
+@media (max-width:360px){
+
+  .functionSec{
+    padding:45px 12px;
+  }
+
+  .functionText h2{
+    font-size:22px;
+  }
+
+  .functionTopRow p{
+    font-size:13px;
+  }
+
+  .card{
+    padding:16px 14px;
+  }
+
+  .icon{
+    width:40px;
+    height:40px;
+    margin-bottom:16px;
+  }
+
+  .card h3{
+    font-size:16px;
+    margin-bottom:12px;
+  }
+
+  .card p{
+    font-size:13px;
+  }
+
+}
+
 /* ===========================
    STRUCTURAL STRENGTH
 =========================== */

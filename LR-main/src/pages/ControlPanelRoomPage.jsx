@@ -3,7 +3,10 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ControlPanelRoom.module.css";
 import {
-  ArrowRight, Plus, X, ArrowUpRight
+  ArrowRight, Plus, X, ArrowUpRight, Zap,
+  Sun,
+  Wrench,
+  Building2,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import control1 from '../assets/PREFAB/controllRoom/control1.png'
@@ -14,56 +17,7 @@ import design from '../assets/PREFAB/controllRoom/design.png'
 import design1 from '../assets/PREFAB/controllRoom/design1.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
-const functions = [
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <path d="M15 3l-9 5v8c0 5.25 3.84 10.15 9 11.35C20.16 26.15 24 21.25 24 16V8l-9-5z" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinejoin="round" />
-        <path d="M10 15l3.5 3.5L20 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Power Plants",
-    desc: "Centralised control housing for generation and distribution assets.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <circle cx="15" cy="15" r="5" stroke="currentColor" strokeWidth="1.8" fill="none" />
-        <path d="M15 2v4M15 24v4M2 15h4M24 15h4M5.5 5.5l2.8 2.8M21.7 21.7l2.8 2.8M5.5 24.5l2.8-2.8M21.7 8.3l2.8-2.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-    title: "Solar Parks",
-    desc: "Field-deployed enclosures resilient to heat, dust, and UV exposure.",
-    highlight: true,
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <rect x="3" y="8" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" fill="none" />
-        <path d="M10 8V5M20 8V5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="3" y1="14" x2="27" y2="14" stroke="currentColor" strokeWidth="1.4" />
-        <rect x="8" y="17" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.4" fill="none" />
-        <rect x="16" y="17" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.4" fill="none" />
-      </svg>
-    ),
-    title: "Industrial Facilities",
-    desc: "Process automation rooms integrated with existing plant layouts.",
-    highlight: false,
-  },
-  {
-    icon: (
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <rect x="3" y="10" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" fill="none" />
-        <path d="M15 10V5M9 10V7M21 10V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="3" y1="16" x2="27" y2="16" stroke="currentColor" strokeWidth="1.4" />
-      </svg>
-    ),
-    title: "Infrastructure Projects",
-    desc: "Process automation rooms integrated with existing plant layouts.",
-    highlight: false,
-  },
-];
+
 
 
 
@@ -123,6 +77,35 @@ const features = [
       "Can be moved and reused across different project locations easily.",
   },
 ];
+
+const cards = [
+  {
+    icon: <Zap size={44} strokeWidth={1.5} />,
+    title: "Power Plants",
+    description:
+      "Centralized control housing for generation and distribution assets.",
+  },
+  {
+    icon: <Sun size={44} strokeWidth={1.5} />,
+    title: "Solar Parks",
+    description:
+      "Field-deployed enclosures resilient to heat, dust and UV exposure.",
+    active: true,
+  },
+  {
+    icon: <Wrench size={44} strokeWidth={1.5} />,
+    title: "Industrial Facilities",
+    description:
+      "Process automation rooms integrated with existing plant layouts.",
+  },
+  {
+    icon: <Building2 size={44} strokeWidth={1.5} />,
+    title: "Infrastructure Projects",
+    description:
+      "Process automation rooms integrated with existing plant layouts.",
+  },
+];
+
 
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
@@ -210,30 +193,33 @@ const ControlPanelRoomPage = () => {
 
       {/* ── Function & Importance ── */}
       <section className={styles.functionSec}>
-        <div className={styles.functionInner}>
-          <div className={styles.functionTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Function &amp; <span>Importance</span>
-              </h2>
-              <div className={styles.featuresDivider} />
-            </div>
-            <p className={styles.functionDesc}>
-              Control panel rooms protect electrical systems, ensuring reliable operations.
-            </p>
+        <div className={styles.functionTopRow}>
+          <div className={styles.functionText}>
+            <h2>
+              Function & <span>Importance</span>
+            </h2>
+            <div className={styles.funtcionsLine} />
           </div>
-          <div className={styles.functionGrid}>
-            {functions.map((item, i) => (
-              <div
-                key={i}
-                className={`${styles.functionCard} ${item.highlight ? styles.functionCardActive : ""}`}
-              >
-                <div className={styles.functionIcon}>{item.icon}</div>
-                <h4>{item.title}</h4>
-                <p>{item.desc}</p>
+          <p>
+            Control panel rooms protect electrical systems, ensuring reliable operations.
+          </p>
+        </div>
+        <div className={styles.cardsSection}>
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`${styles.card} ${card.active ? styles.activeCard : ""
+                }`}
+            >
+              <div className={styles.icon}>
+                {card.icon}
               </div>
-            ))}
-          </div>
+
+              <h3>{card.title}</h3>
+
+              <p>{card.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
