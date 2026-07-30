@@ -12,6 +12,7 @@ import wallpuf3 from '../assets/panel/wallpuf/wallpuf3.png'
 import wallpuf4 from '../assets/panel/wallpuf/wallpuf4.png'
 import wallpuf5 from '../assets/panel/wallpuf/wallpuf5.png'
 import wallpuf6 from '../assets/panel/wallpuf/wallpuf6.png'
+import wallpuf7 from '../assets/panel/wallpuf/wallpuf7.png'
 import design from '../assets/panel/wallpuf/design.png'
 import design1 from '../assets/panel/wallpuf/design1.png'
 
@@ -87,6 +88,28 @@ export const WallPufPanels = () => {
       id: 4,
       q: "What is the life of Wall PUF panels?",
       a: "Wall PUF panels are highly durable, rust-proof, and designed to last for several decades with minimal maintenance.",
+    },
+  ];
+  const features = [
+    {
+      title: "Reduces heat transfer",
+      description:
+        "Withstands heavy loads without deformation, ensuring structural reliability.",
+    },
+    {
+      title: "Maintains indoor temperature",
+      description:
+        "Maintains shape and size over time, even under temperature variations.",
+    },
+    {
+      title: "Improves energy efficiency",
+      description:
+        "Offers durability against external forces and mechanical stress.",
+    },
+    {
+      title: "Strong load-bearing capacity",
+      description:
+        "Supports structural loads effectively when integrated with frameworks.",
     },
   ];
 
@@ -306,7 +329,7 @@ export const WallPufPanels = () => {
         </div>
       </section>
 
-      
+
 
       {/* ── SUSTAINABILITY BANNER ── */}
       <section className={styles.mfgBand}>
@@ -343,44 +366,37 @@ export const WallPufPanels = () => {
 
 
       {/* ── THERMAL INSULATION ── */}
-      {/* <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <h2 className={styles.secTitle}>
-              Thermal Insulation <br />
-              <span>Performance</span>
-            </h2>
-            <div className={styles.divider} />
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft}></div>
-        
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('/Images/thermal.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
+      <section className={styles.ThermalWall}>
+        <div className={styles.ThermalWallText}>
+          <h2>Thermal Insulation <br /> <span>Performance</span></h2>
+          <div className={styles.ThermalLine}></div>
+        </div>
+
+        <div className={styles.ThermalWallFlex}>
+          <div className={styles.applicationsCard}>
+            <img src={wallpuf7} alt="Roof Panel" className={styles.applicationsCard__media} />
+            <div className={styles.applicationsCard__overlay} />
           </div>
-          <div className={styles.textCol}>
-            <p>
-              The high density PUF core provides excellent thermal insulation,
-              which significantly reduces the energy required for cooling and
-              heating. It acts as a strong barrier against heat transfer.
-            </p>
-            <div className={styles.featureListBordered}>
-              {thermalInsulationList.map((item, i) => (
-                <div key={i} className={styles.featureItemBordered}>
-                  <div className={styles.bulletDot}></div>
-                  <span>{item}</span>
+          {/*  */}
+          <div className={styles.ThermalWallPara}>
+            <p>One of the major advantages of wall PUF panels is their superior insulation
+              capability. The closed-cell polyurethane foam:</p>
+            <div className={styles.featuresWrapper}>
+              {features.map((item, index) => (
+                <div className={styles.featureItem} key={index}>
+                  <div className={styles.leftBar}></div>
+
+                  <div className={styles.featureContent}>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section> */}
+
+      </section>
 
       {/* ── EFFICIENT INSTALLATION ── */}
       {/* ── APPLICATIONS OF ROOF PUF PANELS (GRID) ── */}

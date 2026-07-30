@@ -1270,309 +1270,310 @@
 
 
 
-@media (max-width:1440px){
+@media (max-width:1440px) {
 
-  .ApplicationWallPuf{
-    padding:72px 4%;
+  .ApplicationWallPuf {
+    padding: 72px 4%;
   }
 
-  .ApplicationWallText h2{
-    font-size:48px;
+  .ApplicationWallText h2 {
+    font-size: 48px;
   }
 
-  .applicationsContainer{
-    width:560px;
-    height:360px;
-  }
-
-}
-
-
-@media (max-width:1366px){
-
-  .ApplicationWallText h2{
-    font-size:44px;
-  }
-
-  .ApplicationWallFlex{
-    gap:40px;
-  }
-
-  .applicationsContainer{
-    width:520px;
-    height:340px;
+  .applicationsContainer {
+    width: 560px;
+    height: 360px;
   }
 
 }
 
 
+@media (max-width:1366px) {
 
-@media (max-width:1280px){
-
-  .ApplicationWallFlex{
-    gap:35px;
+  .ApplicationWallText h2 {
+    font-size: 44px;
   }
 
-  .ApplicationWallPara{
-    max-width:55%;
+  .ApplicationWallFlex {
+    gap: 40px;
   }
 
-  .applicationsContainer{
-    width:45%;
-    height:330px;
+  .applicationsContainer {
+    width: 520px;
+    height: 340px;
+  }
+
+}
+
+
+
+@media (max-width:1280px) {
+
+  .ApplicationWallFlex {
+    gap: 35px;
+  }
+
+  .ApplicationWallPara {
+    max-width: 55%;
+  }
+
+  .applicationsContainer {
+    width: 45%;
+    height: 330px;
   }
 
   .ApplicationWallPara p,
-  .applicationTag{
-    font-size:16px;
+  .applicationTag {
+    font-size: 16px;
   }
 
 }
 
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
-  .ApplicationWallPuf{
-    padding:68px 4%;
+  .ApplicationWallPuf {
+    padding: 68px 4%;
   }
 
-  .ApplicationWallText h2{
-    font-size:40px;
+  .ApplicationWallText h2 {
+    font-size: 40px;
   }
 
-  .applicationsContainer{
-    height:380px;
-  }
-
-}
-
-
-@media (max-width:1024px){
-
-  .ApplicationWallText h2{
-    font-size:36px;
-  }
-
-  .ApplicationWallFlex{
-    gap:30px;
-  }
-
-  .ApplicationWallPara p{
-    font-size:16px;
-  }
-
-  .applicationWrapper{
-    gap:12px;
-  }
-
-  .applicationTag{
-    padding:12px 16px;
-    font-size:15px;
-  }
-
-  .applicationsContainer{
-    height:370px;
+  .applicationsContainer {
+    height: 380px;
   }
 
 }
 
 
-@media (max-width:992px){
+@media (max-width:1024px) {
 
-  .ApplicationWallPuf{
-    padding:65px 5%;
+  .ApplicationWallText h2 {
+    font-size: 36px;
   }
 
-  .ApplicationWallText{
-    align-items:center;
-    text-align:center;
-    margin-bottom:45px;
+  .ApplicationWallFlex {
+    gap: 30px;
   }
 
-  .ApplicationWallLine{
-    margin:auto;
+  .ApplicationWallPara p {
+    font-size: 16px;
   }
 
-  .ApplicationWallFlex{
-    flex-direction:column;
-    gap:40px;
-    align-items:center;
+  .applicationWrapper {
+    gap: 12px;
   }
 
-  .ApplicationWallPara{
-    max-width:100%;
-    align-items:center;
-    text-align:center;
+  .applicationTag {
+    padding: 12px 16px;
+    font-size: 15px;
   }
 
-  .applicationWrapper{
-    justify-content:center;
-    max-width:100%;
-  }
-
-  .applicationsContainer{
-    width:100%;
-    max-width:700px;
-    height:420px;
+  .applicationsContainer {
+    height: 370px;
   }
 
 }
 
 
-@media (max-width:768px){
+@media (max-width:992px) {
 
-  .ApplicationWallPuf{
-    padding:60px 5%;
+  .ApplicationWallPuf {
+    padding: 65px 5%;
   }
 
-  .ApplicationWallText h2{
-    font-size:32px;
+  .ApplicationWallText {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 45px;
   }
 
-  .ApplicationWallPara p{
-    font-size:15px;
-    line-height:1.7;
+  .ApplicationWallLine {
+    margin: auto;
   }
 
-  .applicationTag{
-    font-size:14px;
-    padding:11px 15px;
+  .ApplicationWallFlex {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
   }
 
-  .applicationsContainer{
-    height:340px;
+  .ApplicationWallPara {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
-}
-
-
-@media (max-width:576px){
-
-  .ApplicationWallPuf{
-    padding:55px 20px;
+  .applicationWrapper {
+    justify-content: center;
+    max-width: 100%;
   }
 
-  .ApplicationWallText{
-    margin-bottom:35px;
-  }
-
-  .ApplicationWallText h2{
-    font-size:28px;
-  }
-
-  .ApplicationWallLine{
-    width:90px;
-  }
-
-  .applicationsContainer{
-    height:270px;
-  }
-
-  .applicationWrapper{
-    gap:10px;
-  }
-
-  .applicationTag{
-    width:100%;
-    text-align:center;
-    padding:14px;
-    font-size:14px;
+  .applicationsContainer {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
   }
 
 }
 
 
-@media (max-width:480px){
+@media (max-width:768px) {
 
-  .ApplicationWallPuf{
-    padding:50px 18px;
+  .ApplicationWallPuf {
+    padding: 60px 5%;
   }
 
-  .ApplicationWallText h2{
-    font-size:24px;
+  .ApplicationWallText h2 {
+    font-size: 32px;
   }
 
-  .ApplicationWallPara p{
-    font-size:14px;
+  .ApplicationWallPara p {
+    font-size: 15px;
+    line-height: 1.7;
   }
 
-  .applicationsContainer{
-    height:230px;
+  .applicationTag {
+    font-size: 14px;
+    padding: 11px 15px;
   }
 
-}
-
-@media (max-width:390px){
-
-  .ApplicationWallText h2{
-    font-size:22px;
-  }
-
-  .applicationsContainer{
-    height:210px;
-  }
-
-}
-
-@media (max-width:360px){
-
-  .ApplicationWallPuf{
-    padding:45px 15px;
-  }
-
-  .ApplicationWallText h2{
-    font-size:20px;
-  }
-
-  .ApplicationWallLine{
-    width:70px;
-  }
-
-  .ApplicationWallPara p{
-    font-size:13px;
-  }
-
-  .applicationTag{
-    font-size:13px;
-    padding:12px;
-  }
-
-  .applicationsContainer{
-    height:190px;
+  .applicationsContainer {
+    height: 340px;
   }
 
 }
 
 
-@media (max-width:320px){
+@media (max-width:576px) {
 
-  .ApplicationWallPuf{
-    padding:40px 12px;
+  .ApplicationWallPuf {
+    padding: 55px 20px;
   }
 
-  .ApplicationWallText h2{
-    font-size:18px;
+  .ApplicationWallText {
+    margin-bottom: 35px;
   }
 
-  .ApplicationWallLine{
-    width:60px;
+  .ApplicationWallText h2 {
+    font-size: 28px;
   }
 
-  .ApplicationWallPara p{
-    font-size:12px;
-    line-height:1.6;
+  .ApplicationWallLine {
+    width: 90px;
   }
 
-  .applicationTag{
-    font-size:12px;
-    padding:10px;
+  .applicationsContainer {
+    height: 270px;
   }
 
-  .applicationsContainer{
-    height:170px;
+  .applicationWrapper {
+    gap: 10px;
+  }
+
+  .applicationTag {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
   }
 
 }
+
+
+@media (max-width:480px) {
+
+  .ApplicationWallPuf {
+    padding: 50px 18px;
+  }
+
+  .ApplicationWallText h2 {
+    font-size: 24px;
+  }
+
+  .ApplicationWallPara p {
+    font-size: 14px;
+  }
+
+  .applicationsContainer {
+    height: 230px;
+  }
+
+}
+
+@media (max-width:390px) {
+
+  .ApplicationWallText h2 {
+    font-size: 22px;
+  }
+
+  .applicationsContainer {
+    height: 210px;
+  }
+
+}
+
+@media (max-width:360px) {
+
+  .ApplicationWallPuf {
+    padding: 45px 15px;
+  }
+
+  .ApplicationWallText h2 {
+    font-size: 20px;
+  }
+
+  .ApplicationWallLine {
+    width: 70px;
+  }
+
+  .ApplicationWallPara p {
+    font-size: 13px;
+  }
+
+  .applicationTag {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .applicationsContainer {
+    height: 190px;
+  }
+
+}
+
+
+@media (max-width:320px) {
+
+  .ApplicationWallPuf {
+    padding: 40px 12px;
+  }
+
+  .ApplicationWallText h2 {
+    font-size: 18px;
+  }
+
+  .ApplicationWallLine {
+    width: 60px;
+  }
+
+  .ApplicationWallPara p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .applicationTag {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .applicationsContainer {
+    height: 170px;
+  }
+
+}
+
 /* ===========================
    BLUE BANNER SECTION
 =========================== */
@@ -1917,8 +1918,421 @@
 
 }
 
+/* ===============================================
+Tharmal
+================================================== */
+.ThermalWall {
+  width: 100%;
+  padding: 72px 60px;
+  background-color: #f7f7f753;
+}
+
+.ThermalWallText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 80px;
+}
 
 
+.ThermalWallText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
+}
+
+.ThermalWallText h2 span {
+  color: #233E70;
+}
+
+.ThermalLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #20375f;
+}
+
+.ThermalWallFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.ThermalWallPara {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 730px;
+}
+
+.ThermalWallPara p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.featuresWrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  transition: all .35s ease;
+}
+
+.leftBar {
+  width: 4px;
+  height: 56px;
+  background: #20375f;
+  border-radius: 50px;
+  flex-shrink: 0;
+  transition: all .35s ease;
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureContent h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #161616;
+  line-height: 1.35;
+  transition: .35s ease;
+}
+
+.featureContent p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.7;
+  transition: .35s ease;
+}
+
+/* Hover Animation */
+
+.featureItem:hover {
+  transform: translateX(8px);
+}
+
+.featureItem:hover .leftBar {
+  width: 8px;
+  background: #1a2f53;
+  box-shadow: 0 10px 18px rgba(32, 55, 95, .25);
+}
+
+.featureItem:hover h4 {
+  color: #20375f;
+}
+
+.featureItem:hover p {
+  color: #111;
+}
+
+
+.applicationsCard {
+  position: relative;
+  width: 610px;
+  height: 420px;
+  border-radius: 10px;
+  background-color: #808080;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.45s ease;
+}
+
+.applicationsCard__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+.applicationsCard__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color 0.45s ease;
+}
+
+.applicationsCard:hover {
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.28);
+}
+
+.applicationsCard:hover .applicationsCard__media {
+  transform: scale(1.08);
+}
+
+.applicationsCard:hover .applicationsCard__overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width:1400px){
+  .ThermalWallPara{
+    max-width: 530px;
+  }
+  .applicationsCard{
+    width: 550px;
+    height: 500px;
+  }
+}
+@media (max-width:1200px){
+
+  .ThermalWall{
+    padding:70px 40px;
+  }
+
+  .ThermalWallFlex{
+    gap:40px;
+  }
+
+  .applicationsCard{
+    width:520px;
+    height:490px;
+  }
+
+  .ThermalWallPara{
+    max-width: 550px;
+  }
+
+  .ThermalWallText h2{
+    font-size:46px;
+  }
+
+}
+
+
+@media (max-width:992px){
+
+  .ThermalWall{
+    padding:60px 30px;
+  }
+
+  .ThermalWallText{
+    margin-bottom:50px;
+  }
+
+  .ThermalWallText h2{
+    font-size:40px;
+  }
+
+  .ThermalWallFlex{
+    flex-direction:column;
+    gap:40px;
+  }
+
+  .applicationsCard{
+    width:100%;
+    max-width:700px;
+    height:420px;
+    margin:auto;
+  }
+
+  .ThermalWallPara{
+    max-width:100%;
+  }
+
+  .featuresWrapper{
+    max-width:100%;
+  }
+
+}
+
+
+@media (max-width:768px){
+
+  .ThermalWall{
+    padding:55px 22px;
+  }
+
+  .ThermalWallText{
+    margin-bottom:40px;
+    align-items:center;
+    text-align:center;
+  }
+
+  .ThermalWallText h2{
+    font-size:34px;
+  }
+
+  .ThermalLine{
+    width:90px;
+  }
+
+  .applicationsCard{
+    height:340px;
+  }
+
+  .ThermalWallPara p{
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  .featureContent h4{
+    font-size:17px;
+  }
+
+  .featureContent p{
+    font-size:15px;
+  }
+
+}
+
+
+@media (max-width:576px){
+
+  .ThermalWall{
+    padding:50px 18px;
+  }
+
+  .ThermalWallText h2{
+    font-size:30px;
+  }
+
+  .applicationsCard{
+    height:270px;
+    border-radius:8px;
+  }
+
+  .featuresWrapper{
+    gap:16px;
+  }
+
+  .featureItem{
+    gap:12px;
+  }
+
+  .leftBar{
+    height:48px;
+  }
+
+}
+
+
+@media (max-width:425px){
+
+  .ThermalWall{
+    padding:45px 16px;
+  }
+
+  .ThermalWallText{
+    margin-bottom:35px;
+  }
+
+  .ThermalWallText h2{
+    font-size:27px;
+  }
+
+  .ThermalWallPara p{
+    font-size:15px;
+  }
+
+  .applicationsCard{
+    height:220px;
+  }
+
+  .featureContent h4{
+    font-size:16px;
+  }
+
+  .featureContent p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .leftBar{
+    width:3px;
+    height:44px;
+  }
+
+}
+
+@media (max-width:375px){
+
+  .ThermalWall{
+    padding:40px 14px;
+  }
+
+  .ThermalWallText h2{
+    font-size:24px;
+  }
+
+  .applicationsCard{
+    height:200px;
+  }
+
+  .featureItem{
+    gap:10px;
+  }
+
+  .featureContent h4{
+    font-size:15px;
+  }
+
+  .featureContent p{
+    font-size:13px;
+  }
+
+}
+
+
+@media (max-width:325px){
+
+  .ThermalWall{
+    padding:35px 12px;
+  }
+
+  .ThermalWallText h2{
+    font-size:21px;
+  }
+
+  .ThermalLine{
+    width:70px;
+  }
+
+  .applicationsCard{
+    height:170px;
+  }
+
+  .ThermalWallPara p{
+    font-size:13px;
+  }
+
+  .featureContent h4{
+    font-size:14px;
+  }
+
+  .featureContent p{
+    font-size:12px;
+    line-height:1.5;
+  }
+
+  .leftBar{
+    width:3px;
+    height:40px;
+  }
+
+}
 /* ===============================================
 safety
 ================================================== */
