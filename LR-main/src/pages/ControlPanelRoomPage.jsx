@@ -9,6 +9,9 @@ import { useNavigate } from 'react-router-dom'
 import control1 from '../assets/PREFAB/controllRoom/control1.png'
 import control2 from '../assets/PREFAB/controllRoom/control2.png'
 import control3 from '../assets/PREFAB/controllRoom/control3.png'
+import control4 from '../assets/PREFAB/controllRoom/control4.png'
+import design from '../assets/PREFAB/controllRoom/design.png'
+import design1 from '../assets/PREFAB/controllRoom/design1.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const functions = [
@@ -63,33 +66,6 @@ const functions = [
 ];
 
 
-const benefits = [
-  {
-    id: 0,
-    title: "Rapid Deployment",
-    desc: "Pre-engineered units shipped factory-tested for fast on-site installation.",
-  },
-  {
-    id: 1,
-    title: "Enhanced Equipment Protection",
-    desc: "Sealed enclosure shields electronics from environmental stress.",
-  },
-  {
-    id: 2,
-    title: "Easy Maintenance Access",
-    desc: "Designed clearances and access doors simplify routine service.",
-  },
-  {
-    id: 3,
-    title: "Weatherproof & Dustproof Structure",
-    desc: "Protects dust and moisture, ensuring consistent internal performance.",
-  },
-  {
-    id: 4,
-    title: "Rapid Deployment",
-    desc: "Can be moved and reused across different project location needs.",
-  },
-];
 
 const faqs = [
   {
@@ -119,6 +95,35 @@ const faqs = [
   },
 ];
 
+const features = [
+  {
+    title: "Rapid Deployment:",
+    description:
+      "Pre-engineered units shipped factory-tested for fast on-site installation.",
+  },
+  {
+    title: "Enhanced Equipment Protection:",
+    description:
+      "Sealed envelope safeguards electronics from environmental stress.",
+    active: true,
+  },
+  {
+    title: "Easy Maintenance Access:",
+    description:
+      "Designed clearances and access doors simplify routine service.",
+  },
+  {
+    title: "Weatherproof & Dustproof Structure:",
+    description:
+      "Prevents dust and moisture, ensuring consistent internal performance.",
+  },
+  {
+    title: "Rapid Deployment:",
+    description:
+      "Can be moved and reused across different project locations easily.",
+  },
+];
+
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
 const ControlPanelRoomPage = () => {
@@ -126,7 +131,6 @@ const ControlPanelRoomPage = () => {
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-  const [activeBenefit, setActiveBenefit] = useState(1);
   const navigate = useNavigate()
 
   return (
@@ -284,72 +288,82 @@ const ControlPanelRoomPage = () => {
 
 
       {/* ── Structural Strength & Safety ── */}
-      <section className={styles.structuralSec}>
-        <div className={styles.structuralInner}>
-          <div className={styles.structuralText}>
-            <h2>
-              Structural Strength<br />
-              &amp; Safety
-            </h2>
-            <div className={styles.structuralDivider} />
-            <p>
-              Engineered with strong steel frames and high-quality insulated panels, these
-              control panel rooms ensure structural stability while maintaining optimal
-              internal conditions for safe and reliable operation of electrical equipment.
-            </p>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R Control panel Room</h1>
           </div>
-          <div className={styles.structuralImgCol}>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Structural Strength <br />
+              & Safety
+            </h2>
+            <p>
+              Engineered with strong steel frames and high-quality insulated panels,
+              these control panel rooms ensure structural stability while maintaining
+              optimal internal conditions for safe and reliable operation of electrical equipment.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
+          </div>
+          <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-              alt="Structural Control Panel Room"
+              src={design}
+              alt="Manufacturing"
             />
-            <div className={styles.structuralWatermark}>CONTROL PANEL</div>
           </div>
         </div>
       </section>
 
+
+
+
+
       {/* ── Benefits ── */}
-      <section className={styles.benefitsSec}>
-        <div className={styles.benefitsInner}>
-          <div className={styles.benefitsTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Benefits of<br />
-                <span>Control Panel</span>
-              </h2>
-              <div className={styles.featuresDivider} />
-              <p className={styles.benefitsSubText}>
-                Built with advanced engineering elements to deliver high safety, optimised
-                performance, and dependable protection for critical electrical systems in
-                demanding environments.
-              </p>
-            </div>
+      <section className={styles.SolarEpic}>
+        <div className={styles.BenfitControlFlex}>
+          <div className={styles.solarEpicTitle}>
+            <h2>Why Choose Solar <br /><span>EPC Services</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.benefitsGrid}>
-            <div className={styles.benefitsList}>
-              {benefits.map((b) => (
-                <div
-                  key={b.id}
-                  className={`${styles.benefitItem} ${activeBenefit === b.id ? styles.benefitItemActive : ""}`}
-                  onClick={() => setActiveBenefit(b.id)}
-                >
-                  <div className={styles.benefitQuestion}>
-                    <span>{b.title}</span>
-                    <span className={styles.benefitArrow}>{activeBenefit === b.id ? "−" : "+"}</span>
-                  </div>
-                  {activeBenefit === b.id && (
-                    <div className={styles.benefitAnswer}>{b.desc}</div>
-                  )}
+          <p>Built with advanced engineering elements to deliver high safety, optimized performance,
+            and dependable protection for critical electrical systems in demanding environments.</p>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+
+          <div className={styles.benefitCards}>
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.benefitCard} ${item.active ? styles.benefitCardActive : ""
+                  }`}
+              >
+                <div className={styles.benefitDot}></div>
+
+                <div className={styles.benefitContent}>
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
                 </div>
-              ))}
-            </div>
-            <div className={styles.benefitsImgCol}>
+              </div>
+            ))}
+          </div>
+          {/*  */}
+          <div className={styles.applicationsCard}>
+            <div className={styles.applicationsFrame}>
               <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80"
-                alt="Control Panel Benefits"
+                src={control4}
+                alt="Prefab Building"
+                className={styles.applicationsMedia}
               />
+              <div className={styles.applicationsOverlay}></div>
+              <div className={styles.applicationsSidePanel}></div>
             </div>
           </div>
+
         </div>
       </section>
 

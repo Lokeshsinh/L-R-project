@@ -505,7 +505,8 @@
   .introText {
     max-width: 550px
   }
-  .introText p{
+
+  .introText p {
     font-size: 16px;
   }
 
@@ -1022,7 +1023,7 @@
 
 @media (max-width: 1400px) {
 
-  
+
 
   .epsContentWrapper {
     gap: 45px;
@@ -1094,7 +1095,8 @@
   .epsSection {
     padding: 70px 40px;
   }
-  .epsContent{
+
+  .epsContent {
     max-width: 500px;
   }
 
@@ -1355,164 +1357,919 @@
 /* ===========================
    STRUCTURAL STRENGTH
 =========================== */
-.structuralSec {
-  background: #1a2a4a;
+.mfgBand {
+  width: 100%;
+  height: 410px;
+  background: #293F67;
   color: #fff;
-  padding: 80px 8%;
+  padding: 75px 60px;
   position: relative;
   overflow: hidden;
 }
 
-.structuralInner {
+.scrollWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scrollTrack {
   display: flex;
   align-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.structuralText {
-  flex: 1;
-}
-
-.structuralText h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 6px;
-  color: #fff;
-}
-
-.structuralDivider {
-  width: 50px;
-  height: 3px;
-  background: #4a9eff;
-  margin: 14px 0 22px;
-}
-
-.structuralText p {
-  font-size: 0.93rem;
-  line-height: 1.85;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.structuralImgCol {
-  flex: 1;
-  position: relative;
-}
-
-.structuralImgCol img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  max-height: 320px;
-}
-
-.structuralWatermark {
-  position: absolute;
-  bottom: -18px;
-  right: -10px;
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.05);
-  letter-spacing: 0.16em;
-  pointer-events: none;
   white-space: nowrap;
+  animation: marquee 20s linear infinite;
 }
+
+.scrollTrack h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.LastImage {
+  position: absolute;
+  bottom: 40%;
+  left: -6%;
+}
+
+.LastImage img {
+  width: 300px;
+  height: 240px;
+}
+
+
+
+.mfgContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.mfgText {
+  max-width: 700px;
+}
+
+.mfgText h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #ffffffc3;
+  margin-bottom: 15px;
+}
+
+.mfgText p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, .85);
+}
+
+.LastImage {
+  width: 100px;
+  height: 100px;
+}
+
+.mfgImgWrapper {
+  width: 550px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  bottom: 50px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.mfgImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Dark Overlay */
+.mfgImgWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+
+.mfgImgWrapper:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mfgImgWrapper:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+.mfgImgWrapper:hover::after {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width:1400px) {
+
+  .scrollTrack h1 {
+    font-size: 75px;
+  }
+
+  .mfgText h2 {
+    font-size: 50px;
+  }
+
+  .mfgImgWrapper {
+    width: 40%;
+    height: 320px;
+  }
+
+  .LastImage img {
+    width: 260px;
+    height: 210px;
+  }
+
+}
+
+@media (max-width:1200px) {
+
+  .mfgBand {
+    height: auto;
+    padding: 70px 5%;
+  }
+
+  .mfgContainer {
+    gap: 40px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 65px;
+  }
+
+  .mfgText {
+    max-width: 55%;
+  }
+
+  .mfgText h2 {
+    font-size: 42px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
+    width: 42%;
+    height: 290px;
+    bottom: 0;
+  }
+
+  .LastImage {
+    left: -3%;
+    bottom: 30%;
+  }
+
+  .LastImage img {
+    width: 220px;
+    height: 180px;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .mfgBand {
+    height: auto;
+    padding: 60px 5%;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 2px;
+  }
+
+  .mfgContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .mfgText {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .mfgText h2 {
+    font-size: 38px;
+  }
+
+  .mfgText p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    max-width: 650px;
+    height: 360px;
+    bottom: 0;
+  }
+
+  .LastImage {
+    display: none;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .mfgBand {
+    padding: 55px 5%;
+  }
+
+  .scrollTrack h1 {
+    font-size: 45px;
+  }
+
+  .mfgText h2 {
+    font-size: 34px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    height: 300px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .mfgBand {
+    padding: 50px 20px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+  }
+
+  .mfgText h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .mfgBand {
+    padding: 45px 18px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 28px;
+  }
+
+  .mfgText h2 {
+    font-size: 24px;
+  }
+
+  .mfgText p {
+    font-size: 13.5px;
+  }
+
+  .mfgImgWrapper {
+    height: 210px;
+  }
+
+}
+
+@media (max-width:360px) {
+
+  .scrollTrack h1 {
+    font-size: 22px;
+  }
+
+  .mfgText h2 {
+    font-size: 21px;
+  }
+
+  .mfgText p {
+    font-size: 13px;
+  }
+
+  .mfgImgWrapper {
+    height: 180px;
+  }
+
+}
+
 
 /* ===========================
    BENEFITS
 =========================== */
-.benefitsSec {
-  padding: 80px 8%;
-  background: #f7f9fc;
+.SolarEpic {
+  width: 100%;
+  padding: 72px 60px;
+  background-color: #f7f7f753;
 }
 
-.benefitsInner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.benefitsTopRow {
-  margin-bottom: 36px;
-}
-
-.benefitsSubText {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.7;
-  max-width: 520px;
-  margin-top: 8px;
-}
-
-.benefitsGrid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 50px;
-  align-items: start;
-}
-
-.benefitsList {
+.solarEpicTitle {
   display: flex;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
-.benefitItem {
-  background: #fff;
-  border-radius: 6px;
-  padding: 14px 18px;
-  cursor: pointer;
-  border: 1px solid #e8edf3;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
-  transition: all 0.2s;
+.solarEpicTitle h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
 }
 
-.benefitItemActive {
-  background: #1a2a4a;
-  color: #fff;
-  border-color: #1a2a4a;
+.solarEpicTitle h2 span {
+  color: #233E70;
 }
 
-.benefitQuestion {
+.BenfitControlFlex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1a2a4a;
+  margin-bottom: 80px;
 }
 
-.benefitItemActive .benefitQuestion {
+.BenfitControlFlex p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  padding-top: 8px;
+  max-width: 470px;
+}
+
+.SolarEpicFLex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+}
+
+.benefitCards {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefitCard {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  transition: all 0.45s ease;
+}
+
+/* Sliding Background */
+
+.benefitCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #32486f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s ease;
+  z-index: 0;
+}
+
+/* Shine Animation */
+
+.benefitCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60px;
+  height: 100%;
+  background: rgba(255, 255, 255, .18);
+  transform: skewX(-25deg);
+  transition: left .8s ease;
+  z-index: 1;
+}
+
+.benefitDot,
+.benefitContent {
+  position: relative;
+  z-index: 2;
+}
+
+.benefitDot {
+  width: 8px;
+  height: 8px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: #111;
+  flex-shrink: 0;
+  transition: .35s ease;
+}
+
+.benefitContent {
+  flex: 1;
+}
+
+.benefitContent h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.4;
+  transition: .35s ease;
+}
+
+.benefitContent p {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  transition: .35s ease;
+}
+
+/* Active */
+
+.benefitCardActive {
+  background: #32486f;
+}
+
+.benefitCardActive::before {
+  transform: scaleX(1);
+}
+
+.benefitCardActive .benefitDot {
+  background: #fff;
+}
+
+.benefitCardActive h4,
+.benefitCardActive p {
   color: #fff;
 }
 
-.benefitArrow {
-  font-size: 1.1rem;
-  font-weight: 400;
-  flex-shrink: 0;
-  margin-left: 12px;
+/* Hover */
+
+.benefitCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .22);
 }
 
-.benefitAnswer {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.72);
+.benefitCard:hover::before {
+  transform: scaleX(1);
 }
 
-.benefitsImgCol {
-  border-radius: 8px;
-  overflow: hidden;
-  height: 360px;
+.benefitCard:hover::after {
+  left: 140%;
 }
 
-.benefitsImgCol img {
+.benefitCard:hover .benefitDot {
+  background: #fff;
+  transform: scale(1.5);
+}
+
+.benefitCard:hover .benefitContent h4,
+.benefitCard:hover .benefitContent p {
+  color: #fff;
+}
+
+.benefitCard:hover .benefitContent h4 {
+  transform: translateX(6px);
+}
+
+.benefitCard:hover .benefitContent p {
+  transform: translateX(10px);
+}
+
+
+
+.applicationsCard {
   width: 100%;
+  max-width: 630px;
+}
+
+.applicationsFrame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* Image */
+.applicationsMedia {
+  width: calc(100% - 70px);
   height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 10px 0 0 10px;
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+/* Right Blue Block */
+.applicationsSidePanel {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 70px;
+  height: calc(100% - 60px);
+  background: #304774;
+  transition: width 0.45s ease, background-color 0.45s ease;
+}
+
+/* Overlay */
+.applicationsOverlay {
+  position: absolute;
+  inset: 0;
+  width: calc(100% - 70px);
+  background: rgba(0, 0, 0, 0);
+  transition: background-color 0.45s ease;
+}
+
+/* Hover States */
+.applicationsFrame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.25);
+}
+
+.applicationsFrame:hover .applicationsMedia {
+  transform: scale(1.08);
+  filter: brightness(0.82);
+}
+
+.applicationsFrame:hover .applicationsOverlay {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.applicationsFrame:hover .applicationsSidePanel {
+  width: 90px;
+  background: #20375f;
+}
+
+
+@media (max-width:1400px) {
+
+  .SolarEpic {
+    padding: 70px 40px;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 50px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 48px;
+  }
+
+  .BenfitControlFlex {
+    gap: 40px;
+
+  }
+
+  .BenfitControlFlex p {
+    max-width: 420px;
+    font-size: 15px;
+  }
+
+  .SolarEpicFLex {
+    gap: 40px;
+
+  }
+
+  .benefitCards {
+    max-width: 650px;
+  }
+
+  .applicationsCard {
+    max-width: 560px;
+  }
+
+  .applicationsFrame {
+    height: 580px;
+  }
+
+  .applicationsMedia,
+  .applicationsOverlay {
+    width: calc(100% - 65px);
+  }
+
+  .applicationsSidePanel {
+    width: 65px;
+    top: 25px;
+    height: calc(100% - 50px);
+  }
+
+  .applicationsFrame:hover .applicationsSidePanel {
+    width: 82px;
+  }
+
+}
+
+
+@media (max-width:1200px) {
+
+  .SolarEpic {
+    padding: 70px 30px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 42px;
+  }
+
+  .SolarEpicFLex {
+    gap: 35px;
+  }
+
+  .benefitCards {
+    max-width: 560px;
+  }
+
+  .benefitCard {
+    padding: 20px;
+  }
+
+  .benefitContent h4 {
+    font-size: 17px;
+  }
+
+  .benefitContent p {
+    font-size: 15px;
+  }
+
+  .applicationsCard {
+    max-width: 520px;
+  }
+
+  .applicationsFrame {
+    height: 590px;
+  }
+
+}
+
+
+@media (max-width:992px) {
+
+  .SolarEpic {
+    padding: 60px 25px;
+  }
+
+  .BenfitControlFlex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 0;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 38px;
+  }
+
+  .BenfitControlFlex p {
+    max-width: 100%;
+  }
+
+  .SolarEpicFLex {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .benefitCards,
+  .applicationsCard {
+    max-width: 100%;
+  }
+
+  .applicationsFrame {
+    height: 460px;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .SolarEpic {
+    padding: 55px 20px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 34px;
+  }
+
+  .FaqsLine {
+    width: 90px;
+  }
+
+  .benefitCards {
+    gap: 18px;
+  }
+
+  .benefitCard {
+    padding: 18px;
+  }
+
+  .benefitContent h4 {
+    font-size: 17px;
+  }
+
+  .benefitContent p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .applicationsFrame {
+    height: 380px;
+  }
+
+  .applicationsMedia,
+  .applicationsOverlay {
+    width: calc(100% - 60px);
+  }
+
+  .applicationsSidePanel {
+    width: 60px;
+    top: 20px;
+    height: calc(100% - 40px);
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .SolarEpic {
+    padding: 50px 16px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 29px;
+  }
+
+  .BenfitControlFlex p {
+    font-size: 14px;
+  }
+
+  .benefitCard {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .benefitDot {
+    margin-top: 8px;
+  }
+
+  .benefitContent h4 {
+    font-size: 16px;
+  }
+
+  .benefitContent p {
+    font-size: 14px;
+  }
+
+  .applicationsFrame {
+    height: 300px;
+  }
+
+  .applicationsMedia,
+  .applicationsOverlay {
+    width: calc(100% - 50px);
+  }
+
+  .applicationsSidePanel {
+    width: 50px;
+    top: 18px;
+    height: calc(100% - 36px);
+  }
+
+}
+
+
+
+@media (max-width:480px) {
+
+  .solarEpicTitle h2 {
+    font-size: 26px;
+  }
+
+  .benefitCard {
+    padding: 14px;
+  }
+
+  .benefitContent h4 {
+    font-size: 15px;
+  }
+
+  .benefitContent p {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .applicationsFrame {
+    height: 260px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .SolarEpic {
+    padding: 45px 12px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 22px;
+  }
+
+  .BenfitControlFlex p {
+    font-size: 13px;
+  }
+
+  .benefitCard {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .benefitDot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .benefitContent h4 {
+    font-size: 14px;
+  }
+
+  .benefitContent p {
+    font-size: 13px;
+  }
+
+  .applicationsFrame {
+    height: 220px;
+  }
+
+  .applicationsMedia,
+  .applicationsOverlay {
+    width: calc(100% - 42px);
+  }
+
+  .applicationsSidePanel {
+    width: 42px;
+    top: 15px;
+    height: calc(100% - 30px);
+  }
+
 }
 
 /* ===========================
