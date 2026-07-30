@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import site1 from '../assets/PREFAB/sitOffice/site1.png'
 import site2 from '../assets/PREFAB/sitOffice/site2.png'
 import site3 from '../assets/PREFAB/sitOffice/site3.png'
+import design from '../assets/PREFAB/sitOffice/design.png'
+import design1 from '../assets/PREFAB/sitOffice/design1.png'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -362,45 +364,39 @@ const PrefabSiteOffice = () => {
 
 
       {/* ── Advantages ── */}
-      <section className={styles.advantagesSec}>
-        <div className={styles.advantagesInner}>
-          <div className={styles.advantagesTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Advantages of Prefabricated<br />
-                <span>&amp; Modular Construction</span>
-              </h2>
-              <div className={styles.advantagesDivider} />
-            </div>
-            <div className={styles.advantagesNavRow}>
-              <button className={styles.navBtn}>‹</button>
-              <button className={`${styles.navBtn} ${styles.navBtnActive}`}>›</button>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L & R Prefab SITE OFFICE</h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
+            <h2>
+              Built for Growing <br />
+              Project Demands
+            </h2>
+            <p>
+              As projects expand and timelines get shorter, the need for fast and reliable site infrastructure
+              is increasing. Our modular site office cabins provide comfortable, organized, and efficient
+              workspaces at project sites, offering durability and reusability that make them a smart long-term
+              solution for contractors and developers.
+            </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
             </div>
           </div>
-          <div className={styles.advantagesGrid}>
-            {advantages.map((adv, i) => (
-              <div key={i} className={styles.advantageCard}>
-                <span className={styles.advantageNum}>{adv.num}</span>
-                <h4>{adv.title}</h4>
-                <p>{adv.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className={styles.badgesRow}>
-            {[
-              { icon: "🔧", label: "Custom Built" },
-              { icon: "🌿", label: "Sustainable Build" },
-              { icon: "🌦", label: "Weather & Fire Resistant" },
-              { icon: "🏆", label: "Quality Certified" },
-            ].map((b, i) => (
-              <div key={i} className={styles.badge}>
-                <span>{b.icon}</span>
-                <span>{b.label}</span>
-              </div>
-            ))}
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
           </div>
         </div>
       </section>
+
+
 
 
       <section className={styles.featuresSec}>
