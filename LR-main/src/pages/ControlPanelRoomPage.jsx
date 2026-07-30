@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/ControlPanelRoom.module.css";
 import {
-  ArrowRight, Plus, X,
+  ArrowRight, Plus, X, ArrowUpRight
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import control1 from '../assets/PREFAB/controllRoom/control1.png'
@@ -165,37 +165,53 @@ const ControlPanelRoomPage = () => {
 
 
       {/* ── Prefabricated Control Panel Rooms ── */}
-      <section className={styles.intro}>
-        <div className={styles.introGrid}>
-          <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              Prefabricated Control<br />
-              <span>Panel Rooms</span>
-            </h2>
-            <div className={styles.divider} />
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Prefabricated Control <br />
+            <span>Panel Rooms</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+          <div className={styles.introText}>
             <p>
-              L&amp;R Enterprises manufactures prefabricated control panel rooms designed to
-              safely house electrical panels, switchgear, and automation systems across
-              industries like power, solar, and manufacturing. These weatherproof enclosures
-              enhance operational safety by protecting critical equipment in demanding
-              environments.
+              L&R Enterprises manufactures prefabricated control panel rooms designed to safely house electrical
+              panels, switchgear, and automation systems across industries like power, solar, and manufacturing.
+              These modular units ensure reliable performance by protecting critical equipment in demanding environments.
             </p>
             <p>
-              Built with strong steel frames and insulated panels, they offer protection
-              against dust, moisture, and temperature changes. With quick installation, easy
-              maintenance, and flexible design, they provide a durable and efficient solution
-              for modern projects.
+              Built with strong steel frames and insulated panels, they offer protection against dust, moisture,
+              and temperature changes. With quick installation, easy maintenance, and flexible design, they provide
+              a durable and efficient solution for modern projects.
             </p>
-            <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
-          <div className={styles.introImgCol}>
-            <img
-              src="https://images.unsplash.com/photo-1565459305272-f5b93a08a734?w=700&q=80"
-              alt="Prefabricated Control Panel Room"
-            />
+          <div className={styles.imageCard}>
+            <div className={styles.imageWrapper}>
+              <img
+                src={control1}
+                alt="Prefab Building"
+                className={styles.image}
+              />
+              <div className={styles.overlay}></div>
+              <div className={styles.bluePanel}></div>
+            </div>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* ── Function & Importance ── */}
       <section className={styles.functionSec}>
