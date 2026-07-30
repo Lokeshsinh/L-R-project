@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabSiteOffice.module.css";
+import {
+  ArrowRight, Plus, X, 
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import site1 from '../assets/PREFAB/sitOffice/site1.png'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -9,11 +14,11 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <rect x="3" y="10" width="28" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M10 10V7M24 10V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <line x1="3" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.5"/>
-        <rect x="8" y="20" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-        <rect x="16" y="20" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+        <rect x="3" y="10" width="28" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M10 10V7M24 10V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <line x1="3" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="8" y="20" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <rect x="16" y="20" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
       </svg>
     ),
     title: "Rapid Site Deployment",
@@ -23,8 +28,8 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <path d="M17 3L3 12v19h28V12L17 3z" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <rect x="12" y="20" width="10" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+        <path d="M17 3L3 12v19h28V12L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
+        <rect x="12" y="20" width="10" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
       </svg>
     ),
     title: "Weatherproof & Durable",
@@ -34,8 +39,8 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <circle cx="17" cy="17" r="14" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M10 17l5 5 9-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="17" cy="17" r="14" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M10 17l5 5 9-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     title: "Customizable Interiors",
@@ -45,10 +50,10 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <circle cx="10" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M6 24H4V14l6-8h16l4 8v10h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <line x1="14" y1="24" x2="20" y2="24" stroke="currentColor" strokeWidth="2"/>
+        <circle cx="10" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
+        <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M6 24H4V14l6-8h16l4 8v10h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="14" y1="24" x2="20" y2="24" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
     title: "Fully Relocatable",
@@ -58,10 +63,10 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <rect x="2" y="8" width="30" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <rect x="6" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-        <rect x="16" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-        <line x1="2" y1="28" x2="32" y2="28" stroke="currentColor" strokeWidth="2"/>
+        <rect x="2" y="8" width="30" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+        <rect x="6" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <rect x="16" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <line x1="2" y1="28" x2="32" y2="28" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
     title: "Modular & Scalable",
@@ -71,7 +76,7 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <path d="M17 3l2.5 8h8.5l-6.8 5 2.5 8L17 19l-6.7 5 2.5-8L6 11h8.5L17 3z" stroke="currentColor" strokeWidth="2" fill="none"/>
+        <path d="M17 3l2.5 8h8.5l-6.8 5 2.5 8L17 19l-6.7 5 2.5-8L6 11h8.5L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
       </svg>
     ),
     title: "Quality Certified",
@@ -81,10 +86,10 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <path d="M17 3C10 3 5 9 5 17c0 5 3 9 7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-        <path d="M17 3c7 0 12 6 12 14 0 5-3 9-7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-        <line x1="17" y1="3" x2="17" y2="31" stroke="currentColor" strokeWidth="1.5"/>
-        <line x1="5" y1="17" x2="29" y2="17" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M17 3C10 3 5 9 5 17c0 5 3 9 7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+        <path d="M17 3c7 0 12 6 12 14 0 5-3 9-7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+        <line x1="17" y1="3" x2="17" y2="31" stroke="currentColor" strokeWidth="1.5" />
+        <line x1="5" y1="17" x2="29" y2="17" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
     title: "Eco-Friendly Materials",
@@ -94,10 +99,10 @@ const keyFeatures = [
   {
     icon: (
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-        <rect x="3" y="8" width="28" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M10 8V5M24 8V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <line x1="3" y1="14" x2="31" y2="14" stroke="currentColor" strokeWidth="1.5"/>
-        <line x1="17" y1="14" x2="17" y2="28" stroke="currentColor" strokeWidth="1.2"/>
+        <rect x="3" y="8" width="28" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M10 8V5M24 8V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <line x1="3" y1="14" x2="31" y2="14" stroke="currentColor" strokeWidth="1.5" />
+        <line x1="17" y1="14" x2="17" y2="28" stroke="currentColor" strokeWidth="1.2" />
       </svg>
     ),
     title: "After-Sales Support",
@@ -173,7 +178,11 @@ const faqs = [
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
 const PrefabSiteOffice = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -182,23 +191,28 @@ const PrefabSiteOffice = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            SMART PREFABRICATED<br />
-            <span>SITE OFFICE CABINS</span>
+            Smart Prefabricated Site <br />
+            <span>Office Cabins
+            </span>
           </h1>
-          <p className={styles.heroSub}>
-            Durable, movable, and efficiently engineered modular cabins — the perfect
-            solution for site operations across construction, civil, and industrial projects.
+          <p className={styles.heroDesc}>
+            Durable, secure, and intelligently engineered modular cabins that power seamless
+            on-site operations for infrastructure, solar, and industrial projects.
+
           </p>
-          <button className={styles.btnHero}>Contact Us &nbsp;→</button>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
 
 
 
 
-      
+
 
       {/* ── What Are Prefab ── */}
       <section className={styles.intro}>
@@ -449,74 +463,82 @@ const PrefabSiteOffice = () => {
         </div>
       </section>
 
+
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqLeft}>
-            <div
-              className={styles.faqSideImg}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1497366754035-f200968a6e23?w=600&q=80')",
-              }}
-            />
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FAQ</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked<br />
-                  <span>Questions</span>
-                </h2>
-                <div className={styles.faqDivider} />
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers about our prefab cabins, delivery timelines, customization,
-                and after-sales support.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+        </div>
+        <div className={styles.faqBody}>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""}`}
-                  onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>{openFaq === faq.id ? "↓" : "↑"}</span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.faqImg}>
+            <img src={site1} alt="warehouse" />
           </div>
         </div>
       </section>
+
+
+
+
+
+
 
       {/* ── CTA Banner ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Ready for Your Prefab Site Office?</h2>
-          <p>
-            Get in touch with our team today and receive a detailed, site-specific quote.
-            Fast turnaround, competitive pricing, and unmatched quality guaranteed.
-          </p>
-          <button className={styles.btnCTA}>Contact Us &nbsp;→</button>
-        </div>
-      </section>
+      <section className={styles.cta}>
+        <h2>Ready for Your Prefab Site Office ?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized Prefab Site office solutions tailored to your site needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
 
-      {/* ── Let's Connect ── */}
-      <div className={styles.letsConnect}>
-        <div className={styles.letsConnectInner}>
-          <h2>LET'S CONNECT — L&amp;R GREEN INDIA</h2>
-        </div>
-      </div>
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
+      </section>
 
       <Footer />
     </div>
