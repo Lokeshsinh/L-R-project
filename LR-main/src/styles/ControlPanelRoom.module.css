@@ -497,7 +497,290 @@
   box-shadow: 0 28px 60px rgba(0, 0, 0, .25);
 }
 
+@media (max-width: 1400px){
+  .introContainer{
+    gap: 30px
+  }
+  .introText{
+    max-width: 550px
+  }
 
+  .imageCard{
+    max-width:550px
+  }
+  .imageWrapper{
+    height: 410px;
+  }
+
+}
+
+@media (max-width:1200px){
+
+  .introSec{
+    padding:70px 40px;
+  }
+
+  .introContainer{
+    gap:40px;
+
+  }
+
+  .secTitle h2{
+    font-size:46px;
+  }
+
+  .introText{
+    max-width: 500px;
+  }
+
+  .imageCard{
+    max-width:520px;
+  }
+
+  .imageWrapper{
+    height:440px;
+  }
+
+}
+
+@media (max-width:992px){
+
+  .introSec{
+    padding:60px 30px;
+  }
+
+  .introContainer{
+    flex-direction:column-reverse;
+    align-items:center;
+    gap:45px;
+  }
+
+  .secTitle{
+    margin-bottom:45px;
+  }
+
+  .secTitle h2{
+    font-size:40px;
+  }
+
+  .introText{
+    max-width:100%;
+  }
+
+  .imageCard{
+    width:100%;
+    max-width:700px;
+  }
+
+  .imageWrapper{
+    height:400px;
+  }
+
+}
+
+
+@media (max-width:768px){
+
+  .introSec{
+    padding:55px 22px;
+  }
+
+  .secTitle{
+    align-items:center;
+    text-align:center;
+    margin-bottom:35px;
+  }
+
+  .secTitle h2{
+    font-size:34px;
+  }
+
+  .introLine{
+    width:90px;
+  }
+
+  .introText{
+    align-items:center;
+    text-align:center;
+    gap:18px;
+  }
+
+  .introText p{
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  .imageWrapper{
+    height:340px;
+  }
+
+}
+
+@media (max-width:576px){
+
+  .introSec{
+    padding:50px 18px;
+  }
+
+  .secTitle h2{
+    font-size:30px;
+  }
+
+  .imageWrapper{
+    height:280px;
+  }
+
+  .image{
+    width:calc(100% - 55px);
+  }
+
+  .overlay{
+    width:calc(100% - 55px);
+  }
+
+  .bluePanel{
+    width:55px;
+    top:20px;
+    height:calc(100% - 40px);
+  }
+
+  .imageWrapper:hover .bluePanel{
+    width:70px;
+  }
+
+}
+
+
+@media (max-width:425px){
+
+  .introSec{
+    padding:45px 16px;
+  }
+
+  .secTitle h2{
+    font-size:27px;
+  }
+
+  .introText p{
+    font-size:15px;
+  }
+
+  .btnOutline{
+    width:180px;
+    height:50px;
+    font-size:14px;
+  }
+
+  .imageWrapper{
+    height:230px;
+    border-radius:8px;
+  }
+
+  .image{
+    width:calc(100% - 45px);
+  }
+
+  .overlay{
+    width:calc(100% - 45px);
+  }
+
+  .bluePanel{
+    width:45px;
+    top:18px;
+    height:calc(100% - 36px);
+  }
+
+  .imageWrapper:hover .bluePanel{
+    width:60px;
+  }
+
+}
+
+@media (max-width:375px){
+
+  .introSec{
+    padding:40px 14px;
+  }
+
+  .secTitle h2{
+    font-size:24px;
+  }
+
+  .introText p{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  .btnOutline{
+    width:170px;
+    height:48px;
+    font-size:13px;
+  }
+
+  .imageWrapper{
+    height:205px;
+  }
+
+}
+
+@media (max-width:325px){
+
+  .introSec{
+    padding:35px 12px;
+  }
+
+  .secTitle h2{
+    font-size:21px;
+  }
+
+  .introLine{
+    width:70px;
+  }
+
+  .introText{
+    gap:16px;
+  }
+
+  .introText p{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .btnOutline{
+    width:160px;
+    height:44px;
+    font-size:12px;
+    gap:8px;
+  }
+
+  .iconWrap{
+    width:16px;
+    height:16px;
+  }
+
+  .imageWrapper{
+    height:180px;
+  }
+
+  .image{
+    width:calc(100% - 38px);
+  }
+
+  .overlay{
+    width:calc(100% - 38px);
+  }
+
+  .bluePanel{
+    width:38px;
+    top:15px;
+    height:calc(100% - 30px);
+  }
+
+  .imageWrapper:hover .bluePanel{
+    width:50px;
+  }
+
+}
 /* ===========================
    FUNCTION & IMPORTANCE
 =========================== */
