@@ -1,25 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/WallPufPanels.module.css";
 import {
-  ArrowRight, ArrowUpRight, CheckCircle2,
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import wallpuf1 from '../assets/panel/wallpuf/wallpuf1.png'
 import wallpuf2 from '../assets/panel/wallpuf/WALLPUF2.png'
 import wallpuf3 from '../assets/panel/wallpuf/wallpuf3.png'
 import wallpuf4 from '../assets/panel/wallpuf/wallpuf4.png'
+import wallpuf5 from '../assets/panel/wallpuf/wallpuf5.png'
 import design from '../assets/panel/wallpuf/design.png'
 import design1 from '../assets/panel/wallpuf/design1.png'
 
 export const WallPufPanels = () => {
-  // const [openFaq, setOpenFaq] = useState(1);
   const navigate = useNavigate()
-  // const [activeIndex, setActiveIndex] = useState(1);
-  // const toggleFAQ = (index) => {
-  //   setActiveIndex(activeIndex === index ? null : index);
-  // };
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,35 +29,35 @@ export const WallPufPanels = () => {
 
 
 
-  // const faqs = [
-  //   {
-  //     id: 0,
-  //     q: "What are PUF panels used for?",
-  //     a: "Wall PUF panels are widely used for vertical wall cladding, partitions, clean rooms, cold storages, telecom shelters, and modular cabins to offer high durability and insulation.",
-  //   },
-  //   {
-  //     id: 1,
-  //     q: "Are Wall PUF panels energy-efficient?",
-  //     a: "Yes, due to their excellent thermal insulation properties, they minimize heat transfer and can reduce heating or cooling costs by up to 40%.",
-  //   },
-  //   {
-  //     id: 2,
-  //     q: "Are Wall PUF panels fire-retardant?",
-  //     a: "Yes, we manufacture fire-retardant Wall PUF panels that comply with industry safety standards to protect your buildings and assets.",
-  //   },
-  //   {
-  //     id: 3,
-  //     q: "Can they be used as partitions?",
-  //     a: "Yes, they are ideal for internal partition walls in warehouses, factories, clean rooms, and commercial offices, offering quick installation and clean aesthetics.",
-  //   },
-  //   {
-  //     id: 4,
-  //     q: "What is the life of Wall PUF panels?",
-  //     a: "Wall PUF panels are highly durable, rust-proof, and designed to last for several decades with minimal maintenance.",
-  //   },
-  // ];
+  const faqs = [
+    {
+      id: 0,
+      q: "What are PUF panels used for?",
+      a: "Wall PUF panels are widely used for vertical wall cladding, partitions, clean rooms, cold storages, telecom shelters, and modular cabins to offer high durability and insulation.",
+    },
+    {
+      id: 1,
+      q: "Are Wall PUF panels energy-efficient?",
+      a: "Yes, due to their excellent thermal insulation properties, they minimize heat transfer and can reduce heating or cooling costs by up to 40%.",
+    },
+    {
+      id: 2,
+      q: "Are Wall PUF panels fire-retardant?",
+      a: "Yes, we manufacture fire-retardant Wall PUF panels that comply with industry safety standards to protect your buildings and assets.",
+    },
+    {
+      id: 3,
+      q: "Can they be used as partitions?",
+      a: "Yes, they are ideal for internal partition walls in warehouses, factories, clean rooms, and commercial offices, offering quick installation and clean aesthetics.",
+    },
+    {
+      id: 4,
+      q: "What is the life of Wall PUF panels?",
+      a: "Wall PUF panels are highly durable, rust-proof, and designed to last for several decades with minimal maintenance.",
+    },
+  ];
 
-  ;
+
 
   return (
     <div className={styles.wrapper}>
@@ -398,9 +398,73 @@ export const WallPufPanels = () => {
 
       {/* ── FAQ SECTION ── */}
 
+      <section className={styles.faqSec}>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
+          </div>
+          <p>Find answers to common questions about prefabricated rooftop residential flats, including
+            installation, safety, customization, and suitability for different building types.</p>
+        </div>
+        <div className={styles.faqBody}>
+          {/*  */}
+          <div className={styles.containers}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>{item.q}</h3>
 
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
+                </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.faqImg}>
+            <img src={wallpuf5} alt="warehouse" />
+          </div>        </div>
+      </section>
 
       {/* ── CTA BANNER ── */}
+
+      <section className={styles.cta}>
+        <h2>Ready for Your Sandwich Wall Puf Panels Solution?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized sandwich wall puf panel solutions tailored to your site needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
+      </section>
 
       <Footer />
     </div>
