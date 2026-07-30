@@ -11,6 +11,7 @@ import wallpuf2 from '../assets/panel/wallpuf/WALLPUF2.png'
 import wallpuf3 from '../assets/panel/wallpuf/wallpuf3.png'
 import wallpuf4 from '../assets/panel/wallpuf/wallpuf4.png'
 import wallpuf5 from '../assets/panel/wallpuf/wallpuf5.png'
+import wallpuf6 from '../assets/panel/wallpuf/wallpuf6.png'
 import design from '../assets/panel/wallpuf/design.png'
 import design1 from '../assets/panel/wallpuf/design1.png'
 
@@ -47,6 +48,17 @@ export const WallPufPanels = () => {
       title: "Length",
       value: "As per project requirement",
     },
+  ];
+  const applications = [
+    { title: "Pre-engineered buildings (PEB)", active: true },
+    { title: "Modular site offices" },
+    { title: "Industrial sheds" },
+    { title: "Clean rooms", active: true },
+    { title: "Cold rooms" },
+    { title: "Portable cabins" },
+    { title: "Labour accommodation", active: true },
+    { title: "Warehouses" },
+    { title: "Food processing units" },
   ];
 
 
@@ -163,6 +175,11 @@ export const WallPufPanels = () => {
           <div className={styles.roofApplicationLine}></div>
         </div>
         <div className={styles.hvacContentWrapper}>
+          <div className={styles.container}>
+            <img src={wallpuf2} alt="Roof Panel" className={styles.media} />
+            <div className={styles.shade} />
+          </div>
+
           <div className={styles.hvacTextContainer}>
             <div className={styles.hvacContent}>
               <p>
@@ -226,11 +243,6 @@ export const WallPufPanels = () => {
               </div>
             </div>
           </div>
-          <div className={styles.container}>
-            <img src={wallpuf2} alt="Roof Panel" className={styles.media} />
-            <div className={styles.shade} />
-          </div>
-
         </div>
       </section>
 
@@ -261,9 +273,40 @@ export const WallPufPanels = () => {
         </div>
       </section>
 
+
       {/* ── APPLICATIONS ── */}
+      <section className={styles.ApplicationWallPuf}>
+        <div className={styles.ApplicationWallText}>
+          <h2>Applications of Wall <br /> <span>PUF Panels</span></h2>
+          <div className={styles.ApplicationWallLine}></div>
+        </div>
+        <div className={styles.ApplicationWallFlex}>
+          <div className={styles.ApplicationWallPara}>
+            <p>Wall PUF panels are widely used across multiple industries due to their versatility,
+              insulation efficiency, and quick installation capabilities. They are ideal for both
+              temporary setups and permanent structures, providing reliable performance
+              in diverse environments.</p>
+            <div className={styles.applicationWrapper}>
+              {applications.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${styles.applicationTag} ${item.active ? styles.active : ""
+                    }`}
+                >
+                  {item.title}
+                </div>
+              ))}
+            </div>
+          </div>
+          {/*  */}
+          <div className={styles.applicationsContainer}>
+            <img src={wallpuf6} alt="Roof Panel" className={styles.applicationsMedia} />
+            <div className={styles.applicationsShade} />
+          </div>
+        </div>
+      </section>
 
-
+      
 
       {/* ── SUSTAINABILITY BANNER ── */}
       <section className={styles.mfgBand}>
