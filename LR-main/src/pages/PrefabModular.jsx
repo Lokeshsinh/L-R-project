@@ -4,7 +4,15 @@ import styles from '../styles/PrefabModular.module.css'
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import {
-    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2,
+    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2, Factory,
+    Sofa,
+    Building2,
+    Hospital, Hexagon,
+    Leaf,
+    Shield,
+    Construction,
+    Puzzle,
+    Truck,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import modular1 from '../assets/PREFAB/PrefabModular/modular1.png'
@@ -13,6 +21,56 @@ import modular3 from '../assets/PREFAB/PrefabModular/modular3.png'
 import modular4 from '../assets/PREFAB/PrefabModular/modular4.png'
 import design from '../assets/PREFAB/PrefabModular/design.png'
 import design1 from '../assets/PREFAB/controllRoom/design1.png'
+import card1 from '../assets/PREFAB/PrefabModular/card1.png';
+import card2 from '../assets/PREFAB/PrefabModular/card2.png';
+import card3 from '../assets/PREFAB/PrefabModular/card3.png';
+import card4 from '../assets/PREFAB/PrefabModular/card4.jpg';
+
+
+const benefitCards = [
+    {
+        id: 1,
+        title: "Rapid Construction",
+        description:
+            "Prefab structures can be installed within days instead of months, enabling faster project handover.",
+        icon: Hexagon,
+    },
+    {
+        id: 2,
+        title: "Reduced Construction Waste",
+        description:
+            "Controlled manufacturing significantly reduces material wastage and environmental impact.",
+        icon: Leaf,
+    },
+    {
+        id: 3,
+        title: "Strong & Reliable Structures",
+        description:
+            "Engineered to withstand harsh weather conditions, corrosion, and heavy operational usage.",
+        icon: Shield,
+    },
+    {
+        id: 4,
+        title: "Minimal Site Disruption",
+        description:
+            "Most manufacturing work is completed off-site, reducing noise, labor congestion, and construction disturbance.",
+        icon: Construction,
+    },
+    {
+        id: 5,
+        title: "Custom Design Flexibility",
+        description:
+            "Available in multiple layouts, sizes, elevations, and interior configurations based on project requirements.",
+        icon: Puzzle,
+    },
+    {
+        id: 6,
+        title: "Relocatable & Reusable",
+        description:
+            "Many prefab modular structures can be dismantled, transported, and reinstalled at different locations.",
+        icon: Truck,
+    },
+];
 function PrefabModular() {
     const [activeIndex, setActiveIndex] = useState(1);
     const toggleFAQ = (index) => {
@@ -53,6 +111,57 @@ function PrefabModular() {
             q: "Are modular buildings relocatable?",
             a:
                 "Yes, many modular buildings are designed to be dismantled, transported, and reinstalled at different locations without compromising their structural integrity.",
+        },
+    ];
+    const cards = [
+        {
+            icon: <Factory size={42} strokeWidth={1.8} />,
+            title: "Industrial Buildings",
+            description:
+                "Factory buildings, manufacturing units, production facilities, and warehouses are prefab structures for industrial performance.",
+        },
+        {
+            icon: <Sofa size={42} strokeWidth={1.8} />,
+            title: "Commercial Buildings",
+            description:
+                "Office spaces, retail outlets, showrooms, and commercial complexes are prefab structures for commercial use.",
+            active: true,
+        },
+        {
+            icon: <Building2 size={42} strokeWidth={1.8} />,
+            title: "Residential Solutions",
+            description:
+                "Prefab homes, villas, staff accommodation, and modular housing are fast, cost-effective living solutions.",
+        },
+        {
+            icon: <Hospital size={42} strokeWidth={1.8} />,
+            title: "Institutional Buildings",
+            description:
+                "Schools, hospitals, healthcare centers, and government infrastructure are prefab structures for public facilities.",
+        },
+    ];
+
+
+    const industryProjects = [
+        {
+            title: "Prefab Site Offices",
+            desc: "Modern site offices designed for efficient workspaces and daily operations. Built for quick installation, durability, and long-lasting performance.",
+            img: card1,
+        },
+        {
+            title: "Portable Cabins",
+            desc: "Portable cabins offering flexible spaces for offices, storage, and accommodation. Designed for easy relocation, durability, and reliable performance.",
+            img: card2,
+        },
+        {
+            title: "Labor Hutments",
+            desc: "Comfortable labor hutments providing safe and practical workforce accommodation. Built for quick installation, strength, and long-term durability.",
+            img: card3,
+        },
+        {
+            title: "Prefabricated Toilets",
+            desc: "Prefabricated toilets offering hygienic and efficient sanitation solutions. Designed for fast installation, easy maintenance, and reliable daily use.",
+            img: card4,
         },
     ];
 
@@ -129,6 +238,41 @@ function PrefabModular() {
                             <div className={styles.overlay}></div>
 
                         </div>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* ── Products ── */}
+            <section className={styles.productsSec}>
+                <div className={styles.productsInner}>
+                    <div className={styles.productsHeader}>
+                        <div className={styles.productText}>
+                            <h2>
+                               Our Prefabricated<br />
+                                <span>Modular Building Solutions</span>
+                            </h2>
+                            <div className={styles.productsDivider}></div>
+                        </div>
+                        <p className={styles.productsSubtext}>
+                           We offer durable, fast-to-install, and cost-effective modular structures for 
+                           site setups, worker housing, industrial needs, and specialized applications.
+                        </p>
+                    </div>
+                    <div className={styles.expertiseGrid}>
+                        {industryProjects.map((item, index) => (
+                            <div className={styles.expCard} key={index}>
+                                <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                                <div className={styles.expLabel}>
+                                    <h4>{item.title}</h4>
+
+                                    <div className={styles.desc}>
+                                        <p>{item.desc}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -239,6 +383,87 @@ function PrefabModular() {
                     </div>
                 </div>
             </section>
+
+
+            {/* ================Modular Applictaions==================== */}
+            <section className={styles.modularBuild}>
+                <div className={styles.modularBuildFlex}>
+                    <div className={styles.modularBuildText}>
+                        <h2>Benefits of Prefabricated <br /><span>Modular Buildings</span></h2>
+                        <div className={styles.modularBuildLine}></div>
+                    </div>
+                    <p>Prefab modular buildings offer fast installation, low waste, strong durability, flexible design, and easy
+                        relocation, making them cost-effective and efficient solutions.</p>
+                </div>
+                <div className={styles.prefabGrid}>
+                    {benefitCards.map((item) => {
+                        const Icon = item.icon;
+
+                        return (
+                            <article
+                                key={item.id}
+                                className={styles.benefitCard}
+                            >
+                                <span className={styles.hoverLayer}></span>
+
+                                <div className={styles.iconWrapper}>
+                                    <Icon
+                                        className={styles.cardIcon}
+                                        strokeWidth={1.7}
+                                    />
+                                </div>
+
+                                <div className={styles.contentArea}>
+                                    <h3 className={styles.cardTitle}>
+                                        {item.title}
+                                    </h3>
+
+                                    <p className={styles.cardDescription}>
+                                        {item.description}
+                                    </p>
+                                </div>
+
+                                <span className={styles.cornerGlow}></span>
+                            </article>
+                        );
+                    })}
+                </div>
+            </section>
+
+
+            {/* --------------------Applications----------------------- */}
+            <section className={styles.ApplictaionBuild}>
+                <div className={styles.ApplictaionBuildFlex}>
+                    <div className={styles.ApplictaionBuildText}>
+                        <h2>Prefabricated Building <br /><span>Applications</span></h2>
+                        <div className={styles.ApplicationLine}></div>
+                    </div>
+                    <p>Prefabricated buildings are used in industrial, commercial, residential, and institutional
+                        sectors for fast, durable, and cost-effective construction solutions.</p>
+                </div>
+
+                <div className={styles.industryWrapper}>
+                    {cards.map((item) => (
+                        <div className={styles.industryCard} key={item.id}>
+                            <div className={styles.hoverFill}></div>
+
+                            <div className={styles.iconHolder}>
+                                {item.icon}
+                            </div>
+
+                            <h3 className={styles.cardHeading}>
+                                {item.title}
+                            </h3>
+
+                            <p className={styles.cardText}>
+                                {item.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+            </section>
+
 
 
             {/* ── SECTION 6: WHY CHOOSE ROOFTOP PREFAB ROOMS ── */}

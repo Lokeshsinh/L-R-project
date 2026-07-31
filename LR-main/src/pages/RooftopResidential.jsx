@@ -397,6 +397,8 @@ const RooftopResidential = () => {
 
 
 
+
+
       {/* ── SECTION 6: WHY CHOOSE ROOFTOP PREFAB ROOMS ── */}
       <section className={styles.SolarEpic}>
         <div className={styles.solarEpicTitle}>
