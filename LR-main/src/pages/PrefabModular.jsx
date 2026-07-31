@@ -10,6 +10,9 @@ import { useNavigate } from 'react-router-dom'
 import modular1 from '../assets/PREFAB/PrefabModular/modular1.png'
 import modular2 from '../assets/PREFAB/PrefabModular/modular2.png'
 import modular3 from '../assets/PREFAB/PrefabModular/modular3.png'
+import modular4 from '../assets/PREFAB/PrefabModular/modular4.png'
+import design from '../assets/PREFAB/PrefabModular/design.png'
+import design1 from '../assets/PREFAB/controllRoom/design1.png'
 function PrefabModular() {
     const [activeIndex, setActiveIndex] = useState(1);
     const toggleFAQ = (index) => {
@@ -202,6 +205,75 @@ function PrefabModular() {
             </section>
 
 
+
+            {/* ── Structural Strength & Safety ── */}
+            <section className={styles.mfgBand}>
+                <div className={styles.scrollWrap}>
+                    <div className={styles.scrollTrack}>
+                        <h1>Prefabricated modular building</h1>
+                    </div>
+                </div>
+
+                <div className={styles.mfgContainer}>
+                    <div className={styles.mfgText}>
+                        <h2>
+                            What is Modular<br />
+                            Construction?
+                        </h2>
+                        <p>
+                            Modular construction is an advanced form of prefabrication where complete
+                            building modules are manufactured off-site with finished interiors, electrical
+                            systems, plumbing, insulation, and structural components already integrated.The
+                            modules are transported to the site and assembled into a complete building,
+                            significantly reducing project completion time and site disruption.
+                        </p>
+                        <div className={styles.LastImage}>
+                            <img src={design1} alt="png" />
+                        </div>
+                    </div>
+                    <div className={styles.mfgImgWrapper}>
+                        <img
+                            src={design}
+                            alt="Manufacturing"
+                        />
+                    </div>
+                </div>
+            </section>
+
+
+            {/* ── SECTION 6: WHY CHOOSE ROOFTOP PREFAB ROOMS ── */}
+            <section className={styles.SolarEpic}>
+                <div className={styles.solarEpicTitle}>
+                    <h2>Why Prefabricated  <span>Construction is the Future</span></h2>
+                    <div className={styles.FaqsLine}></div>
+                </div>
+                <div className={styles.SolarEpicFLex}>
+                    {/*  */}
+                    <div className={styles.solartext}>
+                        <p>Prefabricated modular construction is rapidly transforming the building industry by offering faster,
+                            smarter, and more sustainable solutions compared to traditional methods. With factory-controlled
+                            manufacturing, it ensures superior quality, reduced project timelines, minimal material waste,
+                            and improved energy efficiency, making it a highly reliable choice for modern infrastructure development.</p>
+                        <p>As demand for efficient and flexible construction grows, prefab buildings are becoming the preferred solution
+                            across industrial, commercial, residential, and institutional sectors. L&R Green Private Limited delivers
+                            advanced prefabricated modular building systems with complete end-to-end support, ensuring durable,
+                            cost-effective, and customized solutions for every project requirement.</p>
+                    </div>
+                    <div className={styles.previewCard}>
+                        <div className={styles.mediaFrame}>
+                            <div className={styles.sidebarTab}></div>
+                            <img
+                                src={modular4}
+                                alt="Building"
+                                className={styles.mediaItem}
+                            />
+                            <div className={styles.backdropOverlay}></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
             {/* -----------------------Faqs------------------------ */}
             <section className={styles.faqSec}>
                 <span className={styles.introLabel}>• FAQS</span>
@@ -210,7 +282,7 @@ function PrefabModular() {
                         <h2>Frequently Asked<br /><span>Questions</span></h2>
                         <div className={styles.FaqsLine}></div>
                     </div>
-                    <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+                    <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
                 </div>
                 <div className={styles.faqBody}>
                     <div className={styles.faqImg}>
