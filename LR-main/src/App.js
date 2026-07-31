@@ -48,6 +48,7 @@ import Brochure from "./pages/Brochure";
 import HomeContainer from "./pages/HomeContainer";
 import PreBuild from "./pages/PreBuild";
 import EpcPanel from "./pages/EpcPanel";
+import PrefabModular from "./pages/PrefabModular";
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
         <Route path="/ms-containers" element={<MsContainer />} />
         <Route path="/control-rooms" element={<ControlPanelRoomPage />} />
         <Route path="/clean-rooms" element={<CleanRoomPage />} />
+        <Route path="/prefab-modular" element={<PrefabModular />} />
         <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
         <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
 

@@ -298,7 +298,7 @@ const Header = () => {
                   <li
                     className={`nested-submenu${openNested === "prefab" ? " mobile-nested-open" : ""}`}
                   >
-                    <button type="button" onClick={handleNestedClick("prefab")}>
+                    <button type="button" onClick={handleNestedClick("prefab", "/prefab-modular")}>
                       <span>Prefabricated Modular Building</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
