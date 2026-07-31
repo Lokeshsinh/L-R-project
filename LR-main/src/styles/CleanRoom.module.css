@@ -314,63 +314,468 @@
 /* ===========================
    INTRO — Our Clean Room Solutions
 =========================== */
-.intro {
-  padding: 80px 8%;
-  background: #fff;
+.introSec {
+  width: 100%;
+  padding: 71px 60px;
+  background-color: #f7f7f753;
 }
 
-.introGrid {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 60px;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.introLeft {
+.secTitle {
   display: flex;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
+  gap: 10px;
+  margin-bottom: 80px;
 }
 
-.introImgCol {
-  border-radius: 8px;
+.secTitle h2 {
+  margin-top: 10px;
+  font-size: 55px;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.2;
+}
+
+.secTitle h2 span {
+  color: #1a3c6e;
+}
+
+.introLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #0d2244;
+}
+
+
+.introContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+
+.introText {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 700px;
+}
+
+.introText p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.btnOutline {
+  width: 190px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1a3c6e;
+  color: #fff;
+  border: 2px solid #1a3c6e;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
   overflow: hidden;
-  height: 280px;
-  margin-top: 4px;
+  transition: all .35s ease;
 }
 
-.introImgCol img {
+.btnOutline:hover {
+  background: #fff;
+  color: #1a3c6e;
+}
+
+.cleanContainer {
+  width: 600px;
+  position: relative;
+  height: 400px;
+}
+
+/* Same blue block */
+.backgroundShape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 250px;
+  background: #223b67;
+  border-radius: 0 0 0 0;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+/* Same image position */
+.imageCard {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 600px;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.imageCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .8s ease;
 }
 
-.introContent p {
-  font-size: 0.93rem;
-  color: #555;
-  line-height: 1.85;
-  margin-bottom: 16px;
+.imageCard:hover img {
+  transform: scale(1.08);
 }
 
-.btnSecondary {
-  background: #1a2a4a;
-  color: #fff;
-  border: none;
-  padding: 11px 28px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 3px;
-  margin-top: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: background 0.2s;
+
+
+@media (max-width:1400px) {
+
+  .introSec {
+    padding: 70px 45px;
+  }
+
+  .introText {
+    max-width: 550px;
+  }
+
+  .introText p {
+    font-size: 16px;
+  }
+
+  .secTitle h2 {
+    font-size: 48px;
+  }
+
+  .cleanContainer {
+    width: 520px;
+    height: 370px;
+  }
+
+  .backgroundShape {
+    width: 400px;
+    height: 300px;
+  }
+
+  .imageCard {
+    width: 520px;
+    height: 410px;
+  }
+
 }
 
-.btnSecondary:hover {
-  background: #2b9e6e;
+
+@media (max-width:1200px) {
+
+  .introSec {
+    padding: 65px 40px;
+  }
+
+  .introContainer {
+    gap: 45px;
+  }
+
+  .secTitle h2 {
+    font-size: 44px;
+  }
+
+  .cleanContainer {
+    width: 470px;
+    height: 340px;
+  }
+
+  .backgroundShape {
+    width: 290px;
+    height: 300px;
+  }
+
+  .imageCard {
+    width: 490px;
+    height: 430px;
+  }
+
+  .introText {
+    max-width: 520px;
+  }
+
+}
+
+@media (max-width: 1070px) {
+  .introText {
+    max-width: 400px;
+  }
+
+  .introText p {
+    font-size: 15px;
+  }
+
+  .backgroundShape {
+    width: 290px;
+    height: 350px;
+  }
+
+  .imageCard {
+    width: 490px;
+    height: 500px;
+  }
+}
+
+@media (max-width:992px) {
+
+  .introSec {
+    padding: 60px 32px;
+  }
+
+  .secTitle {
+    margin-bottom: 55px;
+  }
+
+  .secTitle h2 {
+    font-size: 38px;
+  }
+
+  .introContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .cleanContainer {
+    width: 100%;
+    height: 420px;
+  }
+
+  .backgroundShape {
+    width: 340px;
+    height: 230px;
+  }
+
+  .imageCard {
+    width: 100%;
+    height: 390px;
+    left: 20px;
+    max-width: calc(100% - 20px);
+  }
+
+  .introText {
+    max-width: 100%;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .introSec {
+    padding: 55px 24px;
+  }
+
+  .secTitle {
+    margin-bottom: 45px;
+  }
+
+  .secTitle h2 {
+    font-size: 32px;
+  }
+
+  .introLine {
+    width: 90px;
+  }
+
+  .cleanContainer {
+    height: 340px;
+  }
+
+  .backgroundShape {
+    width: 250px;
+    height: 170px;
+  }
+
+  .imageCard {
+    left: 15px;
+    top: 15px;
+    width: calc(100% - 15px);
+    height: 320px;
+  }
+
+  .introText p {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width:576px) {
+
+  .introSec {
+    padding: 50px 20px;
+  }
+
+  .secTitle h2 {
+    font-size: 28px;
+  }
+
+  .cleanContainer {
+    height: 290px;
+  }
+
+  .backgroundShape {
+    width: 190px;
+    height: 140px;
+  }
+
+  .imageCard {
+    left: 12px;
+    top: 12px;
+    width: calc(100% - 12px);
+    height: 275px;
+    border-radius: 14px;
+  }
+
+  .introText {
+    gap: 18px;
+  }
+
+  .introText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .btnOutline {
+    width: 170px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .introSec {
+    padding: 45px 16px;
+  }
+
+  .secTitle h2 {
+    font-size: 26px;
+  }
+
+  .introLine {
+    width: 75px;
+  }
+
+  .cleanContainer {
+    height: 250px;
+  }
+
+  .backgroundShape {
+    width: 160px;
+    height: 115px;
+  }
+
+  .imageCard {
+    height: 238px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .btnOutline {
+    width: 160px;
+    height: 46px;
+    font-size: 13px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .introSec {
+    padding: 40px 14px;
+  }
+
+  .secTitle h2 {
+    font-size: 23px;
+  }
+
+  .cleanContainer {
+    height: 220px;
+  }
+
+  .backgroundShape {
+    width: 135px;
+    height: 95px;
+  }
+
+  .imageCard {
+    height: 210px;
+    left: 8px;
+    top: 8px;
+    border-radius: 12px;
+  }
+
+  .introText p {
+    font-size: 14px;
+  }
+
+  .btnOutline {
+    width: 150px;
+    height: 44px;
+  }
+
+}
+
+@media (max-width:320px) {
+
+  .introSec {
+    padding: 35px 12px;
+  }
+
+  .secTitle h2 {
+    font-size: 21px;
+  }
+
+  .introLine {
+    width: 65px;
+  }
+
+  .cleanContainer {
+    height: 195px;
+  }
+
+  .backgroundShape {
+    width: 120px;
+    height: 80px;
+  }
+
+  .imageCard {
+    height: 185px;
+    left: 7px;
+    top: 7px;
+    border-radius: 10px;
+  }
+
+  .introText p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .btnOutline {
+    width: 145px;
+    height: 42px;
+    font-size: 12px;
+  }
+
 }
 
 /* ===========================

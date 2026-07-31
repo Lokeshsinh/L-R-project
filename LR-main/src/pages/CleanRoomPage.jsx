@@ -3,10 +3,11 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/CleanRoom.module.css";
 import {
-  ArrowRight, Plus, X, 
+  ArrowRight, Plus, X, ArrowUpRight,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import clean1 from '../assets/PREFAB/cleanroom/clean1.png'
+import clean2 from '../assets/PREFAB/cleanroom/clean2.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const applications = [
@@ -143,41 +144,53 @@ const CleanRoomPage = () => {
 
 
       {/* ── Our Clean Room Solutions ── */}
-      <section className={styles.intro}>
-        <div className={styles.introGrid}>
-          <div className={styles.introLeft}>
-            <h2 className={styles.secTitle}>
-              Our Clean<br />
-              <span>Room Solutions</span>
-            </h2>
-            <div className={styles.divider} />
-            <div className={styles.introImgCol}>
-              <img
-                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=700&q=80"
-                alt="Clean Room Interior"
-              />
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Our Clean <br /><span>Room Solutions</span>
+
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+        <div className={styles.introContainer}>
+          <div className={styles.cleanContainer}>
+            <div className={styles.backgroundShape}></div>
+            <div className={styles.imageCard}>
+              <img src={clean2} alt="error" />
             </div>
+
           </div>
-          <div className={styles.introContent}>
+          <div className={styles.introText}>
             <p>
-              L&amp;R Green India Pvt Ltd delivers high-performance prefabricated clean rooms
-              designed for industries that demand precise environmental control and
-              contamination-free conditions. Built using advanced modular construction
-              techniques, our clean rooms are engineered to maintain strict standards of air
-              quality, temperature, and hygiene, making them ideal for critical applications
-              across various sectors.
+              L&R Green India Pvt Ltd delivers high-performance prefabricated clean rooms designed for industries
+              that demand precise environmental control and contamination-free conditions. Built using advanced modular
+              construction techniques, our clean rooms are engineered to maintain strict standards of air quality,
+              temperature, and hygiene, making them ideal for critical applications across various sectors.
             </p>
             <p>
-              Our solutions combine durability, flexibility, and efficiency, allowing for
-              quick installation and easy scalability based on project requirements. With a
-              focus on compliance and operational reliability, we ensure that every clean room
-              meets industry regulations while providing a safe, controlled, and productive
-              working environment.
+              Our solutions combine durability, flexibility, and efficiency, allowing for quick installation and
+              easy scalability based on project requirements. With a focus on compliance and operational reliability,
+              we ensure that every clean room meets industry regulations while providing a safe, controlled,
+              and productive working environment.
             </p>
-            <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
+
         </div>
       </section>
+
+
+
+
+
+
 
       {/* ── Clean Room Applications ── */}
       <section className={styles.applicationsSec}>
