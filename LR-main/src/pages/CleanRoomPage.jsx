@@ -8,15 +8,9 @@ import {
 import { useNavigate } from 'react-router-dom'
 import clean1 from '../assets/PREFAB/cleanroom/clean1.png'
 import clean2 from '../assets/PREFAB/cleanroom/clean2.png'
+import clean3 from '../assets/PREFAB/cleanroom/clean3.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
-const applications = [
-  "Pharmaceutical manufacturing",
-  "Medical device production",
-  "Electronics assembly",
-  "Laboratories",
-  "Food processing",
-];
 
 const coreFeatures = [
   {
@@ -193,37 +187,38 @@ const CleanRoomPage = () => {
 
 
       {/* ── Clean Room Applications ── */}
-      <section className={styles.applicationsSec}>
-        <div className={styles.applicationsInner}>
-          <div className={styles.applicationsLeft}>
-            <h2 className={styles.secTitle}>
-              Clean Room<br />
-              <span>Applications</span>
-            </h2>
-            <div className={styles.divider} />
-            <p>
-              Our prefabricated clean room solutions are designed to support a wide range
-              of industries that require controlled, sterile, and contamination-free
-              environments. With adaptable modular designs and precision engineering, these
-              clean rooms ensure optimal performance across critical operations, helping
-              maintain quality, safety, and compliance in every application.
-            </p>
-            <ul className={styles.appList}>
-              {applications.map((a, i) => (
-                <li key={i}>
-                  <span className={styles.appBullet}>•</span> {a}
-                </li>
-              ))}
+      <section className={styles.SolarEpic}>
+        <div className={styles.solarEpicTitle}>
+          <h2>Clean Room <br /> <span>Applications</span></h2>
+          <div className={styles.FaqsLine}></div>
+        </div>
+        <div className={styles.SolarEpicFLex}>
+          {/*  */}
+          <div className={styles.solartext}>
+            <p>Our prefabricated clean room solutions are designed to support a wide range of industries
+              that require controlled, sterile, and contamination-free environments. With adaptable modular
+              designs and precision engineering, these clean rooms ensure optimal performance across critical
+              operations, helping maintain quality, safety, and compliance in every application.</p>
+            <ul>
+              <li>Pharmaceutical manufacturing</li>
+              <li>Medical device production</li>
+              <li>Electronics assembly</li>
+              <li>Laboratories</li>
+              <li>Food processing</li>
             </ul>
           </div>
-          <div className={styles.applicationsImgCol}>
-            <img
-              src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=700&q=80"
-              alt="Clean Room Applications"
-            />
+          <div className={styles.showcase}>
+            <div className={styles.backdrop}></div>
+            <div className={styles.frame}>
+              <img src={clean3} alt="Clean preview" className={styles.asset} />
+            </div>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* ── Precision Clean Environments ── */}
       <section className={styles.precisionSec}>
