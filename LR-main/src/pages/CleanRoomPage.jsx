@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/CleanRoom.module.css";
-
+import {
+  ArrowRight, Plus, X, 
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import clean1 from '../assets/PREFAB/cleanroom/clean1.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const applications = [
@@ -69,36 +73,45 @@ const benefitCards = [
 
 const faqs = [
   {
-    id: 0,
-    q: "What is a clean room?",
-    a: "A clean room is a controlled environment where airborne particles, contaminants, temperature, humidity, and pressure are regulated to meet specific industry standards for sensitive manufacturing and research.",
-  },
-  {
     id: 1,
-    q: "Which industries use clean rooms?",
-    a: "Clean rooms are used in pharmaceutical manufacturing, medical device production, electronics assembly, biotechnology, and food processing industries.",
+    q: "What is a clean room?",
+    a:
+      "A clean room is a controlled environment designed to minimize airborne particles, contaminants, temperature, and humidity, ensuring safe and precise manufacturing processes.",
   },
   {
     id: 2,
-    q: "How is air quality maintained in a clean room?",
-    a: "Air quality is maintained using HEPA filtration systems, controlled airflow designs (laminar or turbulent), positive pressure environments, and regular particle monitoring protocols.",
+    q: "Which industries use clean rooms?",
+    a:
+      "Clean rooms are widely used in pharmaceutical manufacturing, medical device production, electronics, biotechnology, laboratories, food processing, and semiconductor industries.",
   },
   {
     id: 3,
-    q: "Why is temperature and humidity control important?",
-    a: "Temperature and humidity control ensures product integrity, prevents static build-up, and maintains the stability of sensitive materials and processes in clean room environments.",
+    q: "How is air quality maintained in a clean room?",
+    a:
+      "Air quality is maintained using HEPA or ULPA filtration systems, controlled airflow, positive air pressure, and regular monitoring to prevent contamination.",
   },
   {
     id: 4,
+    q: "Why is temperature and humidity control important?",
+    a:
+      "Maintaining stable temperature and humidity helps protect sensitive products, improves manufacturing accuracy, and ensures compliance with industry standards.",
+  },
+  {
+    id: 5,
     q: "Are prefabricated clean rooms customizable?",
-    a: "Yes. L&R prefabricated clean rooms are fully customizable in terms of size, ISO classification, insulation type, flooring, filtration systems, and internal layouts to match your operational needs.",
+    a:
+      "Yes, prefabricated clean rooms can be customized with different layouts, wall panels, filtration systems, lighting, doors, and utilities to meet specific operational requirements.",
   },
 ];
 
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
 const CleanRoomPage = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -107,18 +120,27 @@ const CleanRoomPage = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            PRECISION-CONTROLLED PREFABRICATED<br />
-            <span>CLEAN ROOM SOLUTIONS</span>
+            Precision-Controlled Prefabricated<br />
+            <span>Clean Room Solutions
+            </span>
           </h1>
-          <p className={styles.heroSub}>
-            L&amp;R Green India Pvt Ltd delivers advanced prefabricated clean rooms, designed
-            for industries that demand controlled, contamination-free environments.
+          <p className={styles.heroDesc}>
+            L&R Green India Pvt Ltd delivers advanced prefabricated clean rooms designed for
+            industries that demand controlled, contamination-free environments.
+
           </p>
-          <button className={styles.btnHero}>Contact us &nbsp;→</button>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
         </div>
       </section>
+
+
+
+
 
       {/* ── Our Clean Room Solutions ── */}
       <section className={styles.intro}>
@@ -290,71 +312,81 @@ const CleanRoomPage = () => {
         </div>
       </section>
 
+
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqTopRow}>
-            <div className={styles.faqLeft}>
-              <span className={styles.faqBreadcrumb}>• Fqs</span>
-              <h2 className={styles.secTitle}>
-                Frequently Asked<br />
-                <span>Questions</span>
-              </h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqSubtext}>
-              Essential answers to common questions about clean room design, functionality,
-              and requirements.
-            </p>
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqContentRow}>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
+          <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
+        </div>
+        <div className={styles.faqBody}>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+              >
                 <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqOpen : ""}`}
-                  onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>{openFaq === faq.id ? "↑" : "↓"}</span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
-            <div className={styles.faqImgCol}>
-              <img
-                src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=600&q=80"
-                alt="FAQ Clean Room"
-              />
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.faqImg}>
+            <img src={clean1} alt="warehouse" />
           </div>
         </div>
       </section>
+
+
+
+
+
 
       {/* ── CTA Banner ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Ready to Build Your Clean Room?</h2>
-          <p>
-            Connect with our team to design and deliver durable, efficient, and fully customised
-            Executive Clean Room tailored to your storage needs.
-          </p>
-          <button className={styles.btnCTA}>Contact US &nbsp;→</button>
-        </div>
-      </section>
+      <section className={styles.cta}>
+        <h2>Ready to Build Your Clean Room?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully customized
+          Executive Clean Room tailored to your storage needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
 
-      {/* ── Let's Connect ── */}
-      <div className={styles.letsConnect}>
-        <div className={styles.letsConnectInner}>
-          <h2>LET'S CONNECT L&amp;R GREEN INDIA</h2>
-        </div>
-      </div>
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
+      </section>
 
       <Footer />
     </div>
