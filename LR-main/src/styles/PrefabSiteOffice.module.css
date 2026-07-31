@@ -841,7 +841,7 @@
 
 .featureCard {
   background: #f9f9f9;
-  padding: 26px 22px;
+  padding: 20px 22px;
   border-radius: 8px;
   border: 1px solid #e8edf3;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -863,7 +863,7 @@
 
 .featureIcon {
   color: #1e3a6e;
-  margin-bottom: 14px;
+  margin-bottom: 5px;
 }
 
 .featureCardActive .featureIcon {
@@ -2249,299 +2249,299 @@
 
 
 
-@media (max-width:1400px){
+@media (max-width:1400px) {
 
-  .conatineUser{
-    padding:60px 40px;
+  .conatineUser {
+    padding: 60px 40px;
   }
 
-  .containerMax{
-    margin-bottom:50px;
+  .containerMax {
+    margin-bottom: 50px;
   }
 
-  .containerMax h2{
-    font-size:48px;
+  .containerMax h2 {
+    font-size: 48px;
   }
 
-  .containerFlex{
-    gap:45px;
+  .containerFlex {
+    gap: 45px;
   }
 
-  .applicationsCard{
-    max-width:540px;
+  .applicationsCard {
+    max-width: 540px;
   }
 
-  .applicationsViewport{
-    height:440px;
+  .applicationsViewport {
+    height: 440px;
   }
 
-  .containerText{
-    max-width:600px;
+  .containerText {
+    max-width: 600px;
   }
 
-  .containerText p{
-    font-size:16px;
+  .containerText p {
+    font-size: 16px;
   }
 
-  .applicationFeatureList{
-    column-gap:30px;
-    row-gap:18px;
+  .applicationFeatureList {
+    column-gap: 30px;
+    row-gap: 18px;
   }
 
-  .applicationFeatureItem{
-    width:calc(50% - 15px);
-  }
-
-}
-
-
-
-@media (max-width:1200px){
-
-  .conatineUser{
-    padding:55px 30px;
-  }
-
-  .containerMax h2{
-    font-size:42px;
-  }
-
-  .containerFlex{
-    gap:35px;
-  }
-
-  .applicationsCard{
-    max-width:470px;
-  }
-
-  .applicationsViewport{
-    height:400px;
-  }
-
-  .containerText{
-    max-width:560px;
-  }
-
-  .containerText p{
-    font-size:15px;
-    line-height:1.7;
-  }
-
-  .applicationFeatureList{
-    column-gap:20px;
-    row-gap:16px;
-  }
-
-  .applicationFeatureItem{
-    width:calc(50% - 10px);
-  }
-
-  .applicationFeatureIcon{
-    width:30px;
-    height:30px;
-  }
-
-  .applicationFeatureText{
-    font-size:14px;
+  .applicationFeatureItem {
+    width: calc(50% - 15px);
   }
 
 }
 
 
 
+@media (max-width:1200px) {
 
-@media (max-width:992px){
-
-  .conatineUser{
-    padding:50px 25px;
+  .conatineUser {
+    padding: 55px 30px;
   }
 
-  .containerMax{
-    align-items:center;
-    text-align:center;
-    margin-bottom:40px;
+  .containerMax h2 {
+    font-size: 42px;
   }
 
-  .containerMax h2{
-    font-size:38px;
+  .containerFlex {
+    gap: 35px;
   }
 
-  .divider{
-    margin:auto;
+  .applicationsCard {
+    max-width: 470px;
   }
 
-  .containerFlex{
-    flex-direction:column;
-    gap:40px;
+  .applicationsViewport {
+    height: 400px;
+  }
+
+  .containerText {
+    max-width: 560px;
+  }
+
+  .containerText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .applicationFeatureList {
+    column-gap: 20px;
+    row-gap: 16px;
+  }
+
+  .applicationFeatureItem {
+    width: calc(50% - 10px);
+  }
+
+  .applicationFeatureIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .applicationFeatureText {
+    font-size: 14px;
+  }
+
+}
+
+
+
+
+@media (max-width:992px) {
+
+  .conatineUser {
+    padding: 50px 25px;
+  }
+
+  .containerMax {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .containerMax h2 {
+    font-size: 38px;
+  }
+
+  .divider {
+    margin: auto;
+  }
+
+  .containerFlex {
+    flex-direction: column;
+    gap: 40px;
   }
 
   .applicationsCard,
-  .containerText{
-    width:100%;
-    max-width:100%;
+  .containerText {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .applicationsViewport{
-    height:420px;
+  .applicationsViewport {
+    height: 420px;
   }
 
-  .containerText{
-    align-items:center;
-    text-align:center;
+  .containerText {
+    align-items: center;
+    text-align: center;
   }
 
-  .applicationFeatureList{
-    width:100%;
-    justify-content:center;
-  }
-
-}
-
-
-@media (max-width:768px){
-
-  .conatineUser{
-    padding:45px 20px;
-  }
-
-  .containerMax h2{
-    font-size:32px;
-  }
-
-  .applicationsViewport{
-    height:340px;
-  }
-
-  .containerText p{
-    font-size:15px;
-  }
-
-  .applicationFeatureList{
-    flex-direction:column;
-    gap:18px;
-  }
-
-  .applicationFeatureItem{
-    width:100%;
-  }
-
-  .applicationFeatureIcon{
-    width:30px;
-    height:30px;
+  .applicationFeatureList {
+    width: 100%;
+    justify-content: center;
   }
 
 }
 
 
+@media (max-width:768px) {
 
-@media (max-width:576px){
-
-  .conatineUser{
-    padding:40px 15px;
+  .conatineUser {
+    padding: 45px 20px;
   }
 
-  .containerMax{
-    margin-bottom:30px;
+  .containerMax h2 {
+    font-size: 32px;
   }
 
-  .containerMax h2{
-    font-size:28px;
-    line-height:1.3;
+  .applicationsViewport {
+    height: 340px;
   }
 
-  .divider{
-    width:80px;
+  .containerText p {
+    font-size: 15px;
   }
 
-  .applicationsViewport{
-    height:250px;
-    border-radius:10px;
+  .applicationFeatureList {
+    flex-direction: column;
+    gap: 18px;
   }
 
-  .applicationsBottomBar{
-    left:18px;
-    right:18px;
-    height:42px;
+  .applicationFeatureItem {
+    width: 100%;
   }
 
-  .applicationsOverlay{
-    height:calc(100% - 42px);
-  }
-
-  .applicationsViewport::before{
-    height:calc(100% - 42px);
-  }
-
-  .applicationsViewport:hover .applicationsBottomBar{
-    left:12px;
-    right:12px;
-    height:48px;
-  }
-
-  .containerText{
-    gap:15px;
-  }
-
-  .containerText p{
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  .applicationFeatureItem{
-    gap:10px;
-  }
-
-  .applicationFeatureIcon{
-    width:28px;
-    height:28px;
-  }
-
-  .applicationFeatureIcon svg{
-    width:14px;
-    height:14px;
-  }
-
-  .applicationFeatureText{
-    font-size:14px;
-    line-height:1.5;
+  .applicationFeatureIcon {
+    width: 30px;
+    height: 30px;
   }
 
 }
 
 
 
-@media (max-width:400px){
+@media (max-width:576px) {
 
-  .conatineUser{
-    padding:35px 12px;
+  .conatineUser {
+    padding: 40px 15px;
   }
 
-  .containerMax h2{
-    font-size:24px;
+  .containerMax {
+    margin-bottom: 30px;
   }
 
-  .applicationsViewport{
-    height:220px;
+  .containerMax h2 {
+    font-size: 28px;
+    line-height: 1.3;
   }
 
-  .applicationsBottomBar{
-    left:12px;
-    right:12px;
-    height:38px;
+  .divider {
+    width: 80px;
   }
 
-  .applicationsViewport:hover .applicationsBottomBar{
-    left:8px;
-    right:8px;
-    height:44px;
+  .applicationsViewport {
+    height: 250px;
+    border-radius: 10px;
   }
 
-  .containerText p{
-    font-size:13.5px;
+  .applicationsBottomBar {
+    left: 18px;
+    right: 18px;
+    height: 42px;
   }
 
-  .applicationFeatureText{
-    font-size:13px;
+  .applicationsOverlay {
+    height: calc(100% - 42px);
+  }
+
+  .applicationsViewport::before {
+    height: calc(100% - 42px);
+  }
+
+  .applicationsViewport:hover .applicationsBottomBar {
+    left: 12px;
+    right: 12px;
+    height: 48px;
+  }
+
+  .containerText {
+    gap: 15px;
+  }
+
+  .containerText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .applicationFeatureItem {
+    gap: 10px;
+  }
+
+  .applicationFeatureIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .applicationFeatureIcon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .applicationFeatureText {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+}
+
+
+
+@media (max-width:400px) {
+
+  .conatineUser {
+    padding: 35px 12px;
+  }
+
+  .containerMax h2 {
+    font-size: 24px;
+  }
+
+  .applicationsViewport {
+    height: 220px;
+  }
+
+  .applicationsBottomBar {
+    left: 12px;
+    right: 12px;
+    height: 38px;
+  }
+
+  .applicationsViewport:hover .applicationsBottomBar {
+    left: 8px;
+    right: 8px;
+    height: 44px;
+  }
+
+  .containerText p {
+    font-size: 13.5px;
+  }
+
+  .applicationFeatureText {
+    font-size: 13px;
   }
 
 }
@@ -2551,6 +2551,603 @@
 /* ===========================
    BUILT FOR GROWING DEMANDS
 =========================== */
+.applicationsSec {
+  width: 100%;
+  padding: 72px 60px;
+  background-color: #f7f7f753;
+}
+
+.applicationsImgCol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  align-items: start;
+}
+
+.applicationsContent {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.applicationsContent h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
+}
+
+.applicationsContent h2 span {
+  color: #233E70;
+}
+
+.applicationsDivider {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
+}
+
+.applicationsImgCol p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  padding-top: 8px;
+  max-width: 470px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.featureCards {
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+  padding: 34px 30px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.45s ease;
+}
+
+/* Animated Background */
+
+.featureCards::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #344b79;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .45s ease;
+  z-index: 0;
+}
+
+/* Shine Animation */
+
+.featureCards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 70px;
+  height: 100%;
+  background: rgba(255, 255, 255, .22);
+  transform: skewX(-25deg);
+  transition: .9s;
+  z-index: 1;
+}
+
+.iconWrapper,
+.featureCards h3,
+.featureCards p {
+  position: relative;
+  z-index: 2;
+}
+
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  color: #324b79;
+  transition: .45s;
+}
+
+.featureCards h3 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #111;
+  transition: .4s;
+}
+
+.featureCards p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #555;
+  transition: .4s;
+}
+
+/* Default Active Card */
+
+.activeCard {
+  background: #344b79;
+  border-color: #344b79;
+}
+
+.activeCard::before {
+  transform: scaleY(1);
+}
+
+.activeCard .iconWrapper {
+  color: #fff;
+}
+
+.activeCard h3,
+.activeCard p {
+  color: #fff;
+}
+
+/* Hover Animation */
+
+.featureCards:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, .22);
+  border-color: #344b79;
+}
+
+.featureCards:hover::before {
+  transform: scaleY(1);
+}
+
+.featureCards:hover::after {
+  left: 140%;
+}
+
+.featureCards:hover .iconWrapper {
+  color: #fff;
+  transform: rotate(-10deg) scale(1.12);
+}
+
+.featureCards:hover h3 {
+  color: #fff;
+  transform: translateX(6px);
+}
+
+.featureCards:hover p {
+  color: #fff;
+  transform: translateX(8px);
+}
+
+/* Floating Icon */
+
+.featureCards:hover .iconWrapper svg {
+  animation: iconFloat .8s ease;
+}
+
+@keyframes iconFloat {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@media (max-width:1400px){
+
+  .applicationsSec{
+    padding:60px 40px;
+  }
+
+  .applicationsImgCol{
+    margin-bottom:60px;
+    gap:40px;
+  }
+
+  .applicationsContent h2{
+    font-size:48px;
+  }
+
+  .applicationsImgCol p{
+    max-width:420px;
+    font-size:15px;
+  }
+
+  .featureGrid{
+    gap:20px;
+  }
+
+  .featureCards{
+    min-height:250px;
+    padding:30px 26px;
+  }
+
+  .iconWrapper{
+    width:64px;
+    height:64px;
+    margin-bottom:18px;
+  }
+
+  .featureCards h3{
+    font-size:22px;
+  }
+
+  .featureCards p{
+    font-size:16px;
+  }
+
+}
+
+@media (max-width:1200px){
+
+  .applicationsSec{
+    padding:55px 30px;
+  }
+
+  .applicationsImgCol{
+    gap:35px;
+    margin-bottom:50px;
+  }
+
+  .applicationsContent h2{
+    font-size:42px;
+  }
+
+  .applicationsImgCol p{
+    max-width:380px;
+    font-size:15px;
+  }
+
+  .featureGrid{
+    gap:18px;
+  }
+
+  .featureCards{
+    min-height:235px;
+    padding:26px 22px;
+  }
+
+  .iconWrapper{
+    width:58px;
+    height:58px;
+  }
+
+  .featureCards h3{
+    font-size:20px;
+    margin-bottom:14px;
+  }
+
+  .featureCards p{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+}
+
+@media (max-width:992px){
+
+  .applicationsSec{
+    padding:50px 25px;
+  }
+
+  .applicationsImgCol{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-bottom:45px;
+    gap:20px;
+  }
+
+  .applicationsContent{
+    align-items:center;
+  }
+
+  .applicationsContent h2{
+    font-size:38px;
+  }
+
+  .applicationsDivider{
+    margin:auto;
+  }
+
+  .applicationsImgCol p{
+    max-width:100%;
+  }
+
+  .featureGrid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  .featureCards{
+    min-height:230px;
+  }
+
+}
+
+
+@media (max-width:768px){
+
+  .applicationsSec{
+    padding:45px 20px;
+  }
+
+  .applicationsContent h2{
+    font-size:32px;
+  }
+
+  .applicationsDivider{
+    width:90px;
+  }
+
+  .applicationsImgCol{
+    margin-bottom:35px;
+  }
+
+  .featureGrid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .featureCards{
+    min-height:auto;
+    padding:26px 22px;
+  }
+
+  .iconWrapper{
+    width:56px;
+    height:56px;
+    margin-bottom:16px;
+  }
+
+  .featureCards h3{
+    font-size:20px;
+  }
+
+  .featureCards p{
+    font-size:15px;
+  }
+
+}
+
+@media (max-width:576px){
+
+  .applicationsSec{
+    padding:40px 15px;
+  }
+
+  .applicationsContent h2{
+    font-size:28px;
+  }
+
+  .applicationsDivider{
+    width:80px;
+  }
+
+  .applicationsImgCol{
+    margin-top:0;
+    margin-bottom:30px;
+  }
+
+  .applicationsImgCol p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .featureCards{
+    padding:22px 18px;
+    border-radius:10px;
+  }
+
+  .iconWrapper{
+    width:50px;
+    height:50px;
+    margin-bottom:14px;
+  }
+
+  .iconWrapper svg{
+    width:34px;
+    height:34px;
+  }
+
+  .featureCards h3{
+    font-size:18px;
+    margin-bottom:10px;
+  }
+
+  .featureCards p{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+}
+
+@media (max-width:400px){
+
+  .applicationsSec{
+    padding:35px 12px;
+  }
+
+  .applicationsContent h2{
+    font-size:24px;
+  }
+
+  .applicationsDivider{
+    width:70px;
+  }
+
+  .applicationsImgCol p{
+    font-size:13px;
+  }
+
+  .featureCards{
+    padding:20px 16px;
+  }
+
+  .iconWrapper{
+    width:46px;
+    height:46px;
+  }
+
+  .iconWrapper svg{
+    width:30px;
+    height:30px;
+  }
+
+  .featureCards h3{
+    font-size:17px;
+  }
+
+  .featureCards p{
+    font-size:13px;
+  }
+
+}
+
+
+@media (max-width:360px){
+
+  .applicationsSec{
+    padding:32px 10px;
+  }
+
+  .applicationsImgCol{
+    margin-bottom:25px;
+    gap:16px;
+  }
+
+  .applicationsContent{
+    align-items:center;
+    text-align:center;
+  }
+
+  .applicationsContent h2{
+    font-size:22px;
+    line-height:1.3;
+  }
+
+  .applicationsDivider{
+    width:60px;
+    height:2px;
+  }
+
+  .applicationsImgCol p{
+    font-size:13px;
+    line-height:1.65;
+  }
+
+  .featureGrid{
+    gap:15px;
+  }
+
+  .featureCards{
+    padding:18px 14px;
+    min-height:auto;
+    border-radius:8px;
+  }
+
+  .iconWrapper{
+    width:42px;
+    height:42px;
+    margin-bottom:12px;
+  }
+
+  .iconWrapper svg{
+    width:28px;
+    height:28px;
+  }
+
+  .featureCards h3{
+    font-size:16px;
+    margin-bottom:8px;
+  }
+
+  .featureCards p{
+    font-size:12px;
+    line-height:1.6;
+  }
+
+}
+
+
+@media (max-width:320px){
+
+  .applicationsSec{
+    padding:28px 8px;
+  }
+
+  .applicationsImgCol{
+    margin-bottom:20px;
+    gap:14px;
+  }
+
+  .applicationsContent h2{
+    font-size:20px;
+    line-height:1.35;
+  }
+
+  .applicationsDivider{
+    width:55px;
+  }
+
+  .applicationsImgCol p{
+    font-size:12px;
+    line-height:1.6;
+  }
+
+  .featureGrid{
+    gap:12px;
+  }
+
+  .featureCards{
+    padding:16px 12px;
+    border-radius:8px;
+  }
+
+  .iconWrapper{
+    width:38px;
+    height:38px;
+    margin-bottom:10px;
+  }
+
+  .iconWrapper svg{
+    width:24px;
+    height:24px;
+  }
+
+  .featureCards h3{
+    font-size:15px;
+    margin-bottom:6px;
+  }
+
+  .featureCards p{
+    font-size:11.5px;
+    line-height:1.55;
+  }
+
+}
+
 
 /* ===========================
    FAQ

@@ -3,7 +3,12 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabSiteOffice.module.css";
 import {
-  ArrowRight, Plus, X, ArrowUpRight, CheckCircle2,
+  ArrowRight, Plus, X, ArrowUpRight, CheckCircle2, TimerReset,
+  Wrench,
+  Truck,
+  Workflow,
+  Store,
+  Flame,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import site1 from '../assets/PREFAB/sitOffice/site1.png'
@@ -17,18 +22,6 @@ import design1 from '../assets/PREFAB/sitOffice/design1.png'
 
 
 
-const applications = [
-  "Construction Site Offices",
-  "Mining Site Cabins",
-  "Industrial Site Offices",
-  "Security Cabins",
-  "Labour Accommodation",
-  "Temporary Classrooms",
-  "Storage Units",
-  "Portable Toilets / Washrooms",
-  "Guard Rooms",
-  "Solar Office Cabins",
-];
 
 
 
@@ -60,6 +53,45 @@ const faqs = [
   },
 ];
 
+const features = [
+  {
+    icon: <TimerReset size={52} strokeWidth={1.6} />,
+    title: "Time Efficiency",
+    description:
+      "Factory-built modules reduce on-site construction time, allowing quick deployment.",
+  },
+  {
+    icon: <Wrench size={52} strokeWidth={1.6} />,
+    title: "Cost Optimization",
+    description:
+      "Lower labor demand and minimal wastage keep budgets in check.",
+    active: true,
+  },
+  {
+    icon: <Truck size={52} strokeWidth={1.6} />,
+    title: "Easy Relocation",
+    description:
+      "Dismantle, transport and reuse across multiple project sites.",
+  },
+  {
+    icon: <Workflow size={52} strokeWidth={1.6} />,
+    title: "Custom-Built",
+    description:
+      "AC, washrooms, partitions and specialized fittings on demand.",
+  },
+  {
+    icon: <Store size={52} strokeWidth={1.6} />,
+    title: "Sustainable Build",
+    description:
+      "Minimal waste and efficient material usage by design.",
+  },
+  {
+    icon: <Flame size={52} strokeWidth={1.6} />,
+    title: "Weather & Fire Resistant",
+    description:
+      "Treated steel and durable panels for extreme conditions.",
+  },
+];
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
 const PrefabSiteOffice = () => {
@@ -278,6 +310,44 @@ const PrefabSiteOffice = () => {
       </section>
 
 
+      {/* ── Applications ── */}
+      <section className={styles.applicationsSec}>
+        <div className={styles.applicationsImgCol}>
+          <div className={styles.applicationsContent}>
+            <h2 >
+              Prefab Site Office<br />
+              <span>Applications</span>
+            </h2>
+            <div className={styles.applicationsDivider} />
+          </div>
+          <p>
+            Our prefabricated cabins serve a wide range of industries and sectors —
+            delivering real value wherever a professional workspace is needed on the ground.
+          </p>
+        </div>
+        <div className={styles.featureGrid}>
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className={`${styles.featureCards} ${item.active ? styles.activeCard : ""
+                }`}
+            >
+              <div className={styles.iconWrapper}>
+                {item.icon}
+              </div>
+
+              <h3>{item.title}</h3>
+
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+
+      </section>
+
+
+
 
       <section className={styles.conatineUser}>
         <div className={styles.containerMax}>
@@ -391,36 +461,6 @@ const PrefabSiteOffice = () => {
 
 
 
-      {/* ── Applications ── */}
-      <section className={styles.applicationsSec}>
-        <div className={styles.applicationsGrid}>
-          <div className={styles.applicationsImgCol}>
-            <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
-              alt="Applications"
-            />
-          </div>
-          <div className={styles.applicationsContent}>
-            <span className={styles.applicationsLabel}>L&amp;R</span>
-            <h2 className={styles.secTitle}>
-              Prefab Site Office<br />
-              <span>Applications</span>
-            </h2>
-            <div className={styles.applicationsDivider} />
-            <p>
-              Our prefabricated cabins serve a wide range of industries and sectors —
-              delivering real value wherever a professional workspace is needed on the ground.
-            </p>
-            <div className={styles.appsGrid}>
-              {applications.map((a, i) => (
-                <div key={i} className={styles.appItem}>
-                  <span className={styles.appDot}>●</span> {a}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── Built for Growing Demands ── */}
 
