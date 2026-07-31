@@ -22,6 +22,8 @@ import container4 from '../assets/msConatiner/container4.png';
 import read1 from '../assets/msConatiner/read1.png';
 import read2 from '../assets/msConatiner/read2.png';
 import read3 from '../assets/msConatiner/read3.png';
+import design from '../assets/msConatiner/design.png'
+import design1 from '../assets/msConatiner/design1.png'
 
 
 const containerTypes = [
@@ -40,7 +42,7 @@ const containerTypes = [
   {
     title: "L&R Value Series Containers",
     desc: "Economical container solutions in all sizes, built for strength and flexibility—ideal for budget-friendly, durable, and quick-deployment projects across various industries and site conditions.",
-    img:  read3,
+    img: read3,
     path: "/lr-value-containers",
   },
 ];
@@ -320,27 +322,39 @@ const MsContainer = () => {
 
 
       {/* STRUCTURAL STRENGTH BAND */}
-      <section className={styles.structural}>
-        <div className={styles.structuralWatermark}> L&R MS CONTAINER</div>
-        <div className={styles.structuralContent}>
-          <div className={styles.structuralText}>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>Prefabricated modular building</h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
             <h2>
-              Structural Strength for Harsh
-              <br />
-              Environmental &amp; Climatic Conditions
+              What is Modular<br />
+              Construction?
             </h2>
             <p>
-              The skid-mounted containers produced within this project were
-              designed to <br /> withstand harsh climatic conditions, industrial
-              environments, and intensive <br /> usage scenarios. The steel
-              structural system provides high structural strength
-              <br /> while the modular construction approach allows customised
-              solutions in line <br /> with project requirements.
+              Modular construction is an advanced form of prefabrication where complete
+              building modules are manufactured off-site with finished interiors, electrical
+              systems, plumbing, insulation, and structural components already integrated.The
+              modules are transported to the site and assembled into a complete building,
+              significantly reducing project completion time and site disruption.
             </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
           </div>
-          <div className={styles.structuralImg} />
+          <div className={styles.mfgImgWrapper}>
+            <img
+              src={design}
+              alt="Manufacturing"
+            />
+          </div>
         </div>
       </section>
+
 
 
 
@@ -431,7 +445,7 @@ const MsContainer = () => {
             design process, and performance benefits.
           </p>
         </div>
-        
+
         <div className={styles.faqBody}>
           <div className={styles.container}>
             {faqs.map((item, index) => (
