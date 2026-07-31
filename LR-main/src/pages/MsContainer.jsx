@@ -73,24 +73,26 @@ const industryProjects = [
 
 const deliveryFeatures = [
   {
-    icon: <CalendarClock size={48} strokeWidth={1.6} />,
-    title: "End-to-End Execution",
-    desc: "Complete project handling from design and engineering to manufacturing and final installation, ensuring a smooth and coordinated workflow.",
+    icon: <HousePlug size={48} strokeWidth={1.6} />,
+    title: "Quality Construction",
+    desc: "Built using premium materials and modern techniques to ensure durability, safety, and long-term structural performance.",
   },
   {
     icon: <Box size={48} strokeWidth={1.6} />,
-    title: "In-House Manufacturing",
-    desc: "All container units are produced within dedicated facilities, maintaining strict quality control and faster production timelines.",
+    title: "Skilled Engineering",
+    desc: "Experienced engineers and project experts deliver precise planning, efficient execution, and superior construction quality.",
   },
   {
-    icon: <HousePlug size={48} strokeWidth={1.6} />,
-    title: "Plug-and-Play Units",
-    desc: "Pre-fabricated skid-mounted containers delivered ready-to-use, reducing on-site work and enabling quick setup.",
+    icon: <CalendarClock size={48} strokeWidth={1.6} />,
+    title: "Timely Project Delivery",
+    desc: "Well-planned workflows and advanced construction methods ensure projects are completed on schedule without compromising quality.",
   },
+
+
   {
     icon: <ShieldCheck size={48} strokeWidth={1.6} />,
-    title: "Rapid Project Completion",
-    desc: "Efficient processes and minimal on-site labour ensure faster commissioning and timely project delivery.",
+    title: "Customer Satisfaction",
+    desc: "Providing customized construction solutions with reliable support, transparent communication, and complete client satisfaction.",
   },
 ];
 
@@ -400,15 +402,15 @@ const MsContainer = () => {
         <div className={styles.deliveryHeader}>
           <div className={styles.deliverytext}>
             <h2>
-              Fast &amp; Integrated
+              Reliable Construction
               <br />
-              <span>Project Delivery</span>
+              <span>Solutions</span>
             </h2>
             <div className={styles.deliveryLine}></div>
           </div>
           <p>
-            Seamless execution from design to installation, ensuring quick
-            deployment and timely completion.
+            Delivering innovative construction solutions with quality engineering, efficient execution,
+            and timely project completion for residential, commercial, and industrial developments.
           </p>
         </div>
         <div className={styles.deliveryGrid}>
@@ -492,12 +494,10 @@ const MsContainer = () => {
       <section className={styles.cta}>
         <h2>Ready to Build Your Ms Containers?</h2>
         <p>
-          Connect with our team to design and deliver durable, efficient, and
-          fully customised ms containers tailored to your storage needs.
+          Connect with our team to design and deliver durable, efficient, and fully customized
+          ms containers tailored to your storage needs.
         </p>
-
-
-        <button className={styles.contactBtn}>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

@@ -524,7 +524,7 @@
   margin: 16px 0 24px;
 }
 
-.mobilityContent{
+.mobilityContent {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -1984,6 +1984,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -1994,14 +1995,14 @@
 }
 
 .cta h2 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 600;
 }
 
 .cta p {
   font-size: 0.97rem;
   opacity: 0.85;
-  max-width: 560px;
+  max-width: 600px;
   line-height: 1.7;
   text-align: center;
   margin-bottom: 20px;
@@ -2036,7 +2037,7 @@
   box-shadow: 0 12px 30px rgba(26, 60, 110, .18);
 }
 
-/* Arrow */
+
 
 .iconBox {
   position: relative;
@@ -2053,19 +2054,13 @@
   transition: transform .35s ease;
 }
 
-/* Visible arrow */
-
 .iconOne {
   transform: translateX(0);
 }
 
-/* Hidden arrow */
-
 .iconTwo {
   transform: translateX(-24px);
 }
-
-/* Hover */
 
 .contactBtn:hover .iconOne {
   transform: translateX(24px);
@@ -2083,71 +2078,171 @@
   background: #2550a0;
 }
 
-/* ─── RESPONSIVE ─────────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .expertiseGrid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width:1200px) {
+
+  .cta {
+    padding: 60px 40px;
   }
 
-  .expertiseGrid::before,
-  .expertiseGrid::after {
-    display: none;
+  .cta h2 {
+    font-size: 44px;
+    text-align: center;
   }
 
-  .deliveryGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 70px 24px 60px;
+@media (max-width:992px) {
+
+  .cta {
+    padding: 55px 30px;
+    background-attachment: scroll;
   }
 
-  .introBody,
-  .mobilityGrid,
-  .structuralContent,
-  .typesHeader,
-  .expertiseHeader,
-  .deliveryHeader,
-  .faqHeader,
-  .faqBody {
-    grid-template-columns: 1fr;
+  .cta h2 {
+    font-size: 38px;
+    line-height: 1.3;
   }
 
-  .introTop {
-    flex-direction: column;
-    gap: 16px;
+  .cta p {
+    max-width: 700px;
+    font-size: 16px;
   }
 
-  .introThumb {
-    width: 100%;
-    height: 160px;
+}
+
+@media (max-width:768px) {
+
+  .cta {
+    padding: 50px 22px;
   }
 
-  .intro,
-  .typesSec,
-  .expertise,
-  .delivery,
-  .faqSec,
-  .cta,
-  .structural,
-  .mobilitySec {
-    padding: 48px 24px;
+  .cta h2 {
+    font-size: 32px;
   }
 
-  .typesGrid,
-  .expertiseGrid,
-  .deliveryGrid {
-    grid-template-columns: 1fr;
+  .cta p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
   }
 
-  .mobilityImagesCol {
-    height: 260px;
+  .contactBtn {
+    width: 240px;
+    height: 52px;
   }
 
-  .structuralImg,
-  .faqImg {
-    height: 220px;
+}
+
+@media (max-width:576px) {
+
+  .cta {
+    padding: 45px 18px;
   }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .contactBtn {
+    width: 220px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:425px) {
+
+  .cta {
+    padding: 40px 16px;
+    gap: 14px;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .cta p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contactBtn {
+    width: 200px;
+    height: 48px;
+    padding: 0 20px;
+  }
+
+  .contactText {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:375px) {
+
+  .cta {
+    padding: 35px 14px;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+  }
+
+  .cta p {
+    font-size: 13px;
+  }
+
+  .contactBtn {
+    width: 190px;
+    height: 46px;
+  }
+
+}
+
+@media (max-width:325px) {
+
+  .cta {
+    padding: 30px 12px;
+  }
+
+  .cta h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .contactBtn {
+    width: 175px;
+    height: 44px;
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .contactText {
+    font-size: 13px;
+  }
+
+  .iconBox {
+    width: 16px;
+    height: 16px;
+  }
+
+  .iconOne,
+  .iconTwo {
+    width: 16px;
+    height: 16px;
+  }
+
 }
