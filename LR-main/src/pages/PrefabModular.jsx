@@ -4,10 +4,12 @@ import styles from '../styles/PrefabModular.module.css'
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import {
-    ArrowRight, Plus, X, 
+    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import modular1 from '../assets/PREFAB/PrefabModular/modular1.png'
+import modular2 from '../assets/PREFAB/PrefabModular/modular2.png'
+import modular3 from '../assets/PREFAB/PrefabModular/modular3.png'
 function PrefabModular() {
     const [activeIndex, setActiveIndex] = useState(1);
     const toggleFAQ = (index) => {
@@ -78,7 +80,126 @@ function PrefabModular() {
             </section>
 
             {/* --------------------Intro-------------------------- */}
+            <section className={styles.introSec}>
+                <div className={styles.secTitle}>
+                    <h2>
+                        What is a <span>Prefabricated Building?</span>
 
+                    </h2>
+                    <div className={styles.introLine} />
+                </div>
+
+                <div className={styles.introContainer}>
+                    <div className={styles.introText}>
+                        <p>
+                            Prefabricated buildings are structures manufactured in controlled factory environments and
+                            then assembled at the project site. All major components such as walls, roofs, flooring systems,
+                            structural frames, and modular units are pre-engineered with precision to ensure faster installation,
+                            consistent quality, and reliable performance.
+                        </p>
+                        <p>
+                            These structures significantly reduce construction timelines while improving accuracy and efficiency.
+                            By minimizing material waste and on-site labor requirements, prefabricated buildings offer a cost-effective
+                            and sustainable solution suitable for a wide range of industrial, commercial, residential, and infrastructure
+                            applications.
+                        </p>
+                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                            <span>Get Contact</span>
+
+                            <span className={styles.iconWrap}>
+                                <ArrowUpRight className={styles.icon1} size={18} />
+                                <ArrowUpRight className={styles.icon2} size={18} />
+                            </span>
+                        </button>
+                    </div>
+                    <div className={styles.imageSection}>
+                        <div className={styles.imageWrapper}>
+
+                            <div className={styles.leftAccent}></div>
+
+                            <img
+                                src={modular2}
+                                alt="Building"
+                                className={styles.image}
+                            />
+
+                            <div className={styles.overlay}></div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* ------------------Prefaoffice----------------------- */}
+            <section className={styles.advSec}>
+                <div className={styles.secTitle}>
+                    <h2>
+                        Features of Our<br />
+                        <span>Prefabricated Structures</span>
+                    </h2>
+                    <div className={styles.introLine}></div>
+                </div>
+                <div className={styles.advFlex}>
+                    <div className={styles.cardContainer}>
+                        <div className={styles.cardWrapper}>
+                            <div className={styles.accentBadge}></div>
+                            <img
+                                src={modular3}
+                                alt="Building"
+                                className={styles.cardImage}
+                            />
+                            <div className={styles.cardOverlay}></div>
+                        </div>
+                    </div>
+
+                    {/*  */}
+                    <div className={styles.advContainer}>
+                        <div className={styles.advText}>
+                            <p>
+                                Our prefabricated structures are made with high-strength steel and insulated
+                                panels for durability, safety, and energy efficiency. Built to withstand all
+                                weather conditions, they provide corrosion resistance, insulation, fast installation,
+                                low maintenance, and long-lasting performance with flexible and customizable designs.
+                            </p>
+                            <div className={styles.featureListWrap}>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Strong & Durable Structure</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Weather & Corrosion Resistance</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Energy Efficient Insulation</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Fast & Easy Installation</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Flexible & Low Maintenance Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
 
             {/* -----------------------Faqs------------------------ */}
