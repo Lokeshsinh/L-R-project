@@ -9,62 +9,17 @@ import { useNavigate } from 'react-router-dom'
 import clean1 from '../assets/PREFAB/cleanroom/clean1.png'
 import clean2 from '../assets/PREFAB/cleanroom/clean2.png'
 import clean3 from '../assets/PREFAB/cleanroom/clean3.png'
+import clean4 from '../assets/PREFAB/cleanroom/clean4.png'
+import design from '../assets/PREFAB/cleanroom/design.png'
+import design1 from '../assets/PREFAB/cleanroom/design1.png'
+import user1 from '../assets/PREFAB/cleanroom/user1.png'
+import user2 from '../assets/PREFAB/cleanroom/user2.png'
+import user3 from '../assets/PREFAB/cleanroom/user3.png'
+import user4 from '../assets/PREFAB/cleanroom/user4.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 
-const coreFeatures = [
-  {
-    title: "PUF Insulated Panels",
-    desc: "Provides insulation, maintains temperature, improves efficiency, ensures durability.",
-  },
-  {
-    title: "Seamless Internal Finishing",
-    desc: "Smooth surfaces prevent dust, enable cleaning, reduce hygiene standards.",
-  },
-  {
-    title: "HEPA Filtration Compatibility",
-    desc: "Supports HEPA filters, removes particles, ensures clean air quality.",
-  },
-  {
-    title: "Controlled Airflow Systems",
-    desc: "Maintains airflow, reduces contamination risk, ensures consistent environment control.",
-  },
-  {
-    title: "Anti-Bacterial Wall Panels",
-    desc: "Prevents microbes, improves hygiene, supports sterile clean room conditions.",
-  },
-  {
-    title: "Hygiene Flooring Systems",
-    desc: "Durable hygienic flooring, easy cleaning, resists dust, maintains hygiene.",
-  },
-];
 
-const benefitCards = [
-  {
-    img: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80",
-    title: "Air Quality Standards",
-    desc: "Maintains clean, particle-controlled air using advanced filtration systems to ensure a contamination-free environment.",
-    highlight: false,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&q=80",
-    title: "Temperature Control",
-    desc: "Ensures consistent temperature levels to support sensitive processes and maintain product integrity.",
-    highlight: true,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&q=80",
-    title: "Humidity Regulation",
-    desc: "Precise humidity controls to prevent damage to sensitive materials, support positive operational conditions.",
-    highlight: false,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=400&q=80",
-    title: "Contamination Prevention",
-    desc: "Minimises the risk of pollutants and microbes through sealed structures and controlled airflow systems.",
-    highlight: false,
-  },
-];
 
 const faqs = [
   {
@@ -99,6 +54,38 @@ const faqs = [
   },
 ];
 
+
+
+const galleryCards = [
+  {
+    id: 1,
+    image: user1,
+    title: "Air Quality Standards",
+    description:
+      "Maintains clean, particle-controlled air using advanced filtration systems to ensure a contamination-free environment.",
+  },
+  {
+    id: 2,
+    image: user2,
+    title: "Temperature Control",
+    description:
+      "Ensures consistent temperature levels to support sensitive processes and maintain product integrity.",
+  },
+  {
+    id: 3,
+    image: user3,
+    title: "Humidity Regulation",
+    description:
+      "Controls moisture levels to prevent damage, improve stability, and support precise operational conditions.",
+  },
+  {
+    id: 4,
+    image: user4,
+    title: "Contamination Prevention",
+    description:
+      "Minimizes the risk of pollutants and microbes through sealed structures and controlled airflow systems.",
+  },
+];
 // ─── PAGE COMPONENT ──────────────────────────────────────────────────────────
 
 const CleanRoomPage = () => {
@@ -221,102 +208,122 @@ const CleanRoomPage = () => {
 
 
       {/* ── Precision Clean Environments ── */}
-      <section className={styles.precisionSec}>
-        <div className={styles.precisionInner}>
-          <div className={styles.precisionText}>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>L&R Clean Room</h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
             <h2>
               Precision Clean<br />
               Environments
             </h2>
             <p>
-              Clean rooms create controlled environments where even the smallest particles
-              are managed with precision. Designed for critical operations, they ensure
-              consistent air quality, temperature, humidity, and pressure — upholding strict
-              standards of cleanliness, stability, and operational reliability across
-              high-performance industries.
+              Clean rooms create controlled environments where even the smallest particles are
+              managed with precision. Designed for critical operations, they ensure consistency,
+              protect sensitive processes, and maintain uncompromised standards of cleanliness,
+              stability, and operational reliability across high-performance industries.
             </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
           </div>
-          <div className={styles.precisionImgCol}>
+          <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=700&q=80"
-              alt="Precision Clean Room"
+              src={design}
+              alt="Manufacturing"
             />
-            <div className={styles.precisionWatermark}>CLEAN</div>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* ── Core Features ── */}
-      <section className={styles.featuresSec}>
-        <div className={styles.featuresInner}>
-          <div className={styles.featuresTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Core Features of<br />
-                <span>Clean Room Solutions</span>
-              </h2>
-              <div className={styles.featuresDivider} />
+      <section className={styles.cleanroomSection}>
+        <div className={styles.headerGroup}>
+          <h2>Core Features of <br /> <span>Clean Room Solutions</span></h2>
+          <div className={styles.dividerLine}></div>
+        </div>
+
+        <div className={styles.contentLayout}>
+          <div className={styles.imageContainer}>
+            <div className={styles.accentBackdrop}></div>
+            <div className={styles.imageFrame}>
+              <img src={clean4} alt="Clean room application preview" className={styles.previewImage} />
             </div>
           </div>
-          <div className={styles.featuresGrid}>
-            <div className={styles.featuresImgCol}>
-              <img
-                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=700&q=80"
-                alt="Clean Room Features"
-              />
-            </div>
-            <div className={styles.featuresContent}>
-              <p className={styles.featuresIntro}>
-                Engineered components ensuring hygiene, precision, and reliable performance
-                in controlled environments.
-              </p>
-              <ul className={styles.featureList}>
-                {coreFeatures.map((f, i) => (
-                  <li key={i}>
-                    <span className={styles.featureBullet}>•</span>
-                    <div>
-                      <strong>{f.title}:</strong> {f.desc}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className={styles.textContent}>
+            <p>
+              Engineered components ensuring hygiene, precision, and reliable performance in controlled environments.
+            </p>
+            <ul className={styles.featureList}>
+              <li><strong>PUF Insulated Panels:</strong>Provides insulation, maintains temperature,
+                improves efficiency, ensures durability.</li>
+              <li><strong>Seamless Internal Finishing:</strong>Smooth surfaces prevent dust, enable
+                cleaning, ensure hygiene standards.</li>
+              <li><strong>HEPA Filtration Compatibility:</strong> Supports HEPA filters, removes particles,
+                ensures clean air quality.</li>
+              <li><strong>Controlled Airflow Systems: </strong>Maintains airflow, reduces contamination,
+                ensures consistent environment control.</li>
+              <li><strong>Anti-Bacterial Wall Panels:</strong>Prevents microbes, improves hygiene,
+                supports sterile clean room conditions.</li>
+              <li><strong>Hygienic Flooring Systems:</strong>Durable flooring, easy cleaning,
+                resists dust, maintains hygiene.</li>
+
+            </ul>
           </div>
         </div>
       </section>
 
+
+
+
+
+
       {/* ── Controlled Environment Benefits ── */}
-      <section className={styles.benefitsSec}>
-        <div className={styles.benefitsInner}>
-          <div className={styles.benefitsTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Controlled Environment<br />
-                <span>Benefits</span>
-              </h2>
-              <div className={styles.featuresDivider} />
-            </div>
-            <p className={styles.benefitsDesc}>
-              Our clean rooms ensure stable, controlled conditions for critical operations
-              while meeting hygiene and compliance standards.
-            </p>
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              Controlled Environment  <br />
+              <span>Benefits</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.benefitsGrid}>
-            {benefitCards.map((card, i) => (
-              <div
-                key={i}
-                className={`${styles.benefitCard} ${card.highlight ? styles.benefitCardActive : ""}`}
-              >
-                <div className={styles.benefitImgWrap}>
-                  <img src={card.img} alt={card.title} />
-                </div>
-                <div className={styles.benefitCardBody}>
-                  <h4>{card.title}</h4>
-                  <p>{card.desc}</p>
-                </div>
+          <p >
+            Our clean rooms ensure stable, controlled conditions for critical
+            operations while meeting hygiene and compliance standards.
+          </p>
+        </div>
+
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
+                />
               </div>
-            ))}
-          </div>
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
