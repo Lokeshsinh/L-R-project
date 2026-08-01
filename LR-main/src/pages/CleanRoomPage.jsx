@@ -207,6 +207,9 @@ const CleanRoomPage = () => {
 
 
 
+
+
+
       {/* ── Precision Clean Environments ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>

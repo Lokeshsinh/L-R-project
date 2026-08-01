@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabLabour.module.css";
@@ -9,23 +9,103 @@ import {
   MoveUpRight,
   Settings,
   Snowflake,
-  Building,
+  Building, Check, ChevronLeft, ChevronRight
 
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import labour1 from '../assets/PREFAB/labour/labour1.png'
 import labour2 from '../assets/PREFAB/labour/labour2.png'
+import labour3 from '../assets/PREFAB/labour/labour3.png'
+import labour4 from '../assets/PREFAB/labour/labour4.png'
 import design from '../assets/PREFAB/labour/design.png'
 import design1 from '../assets/PREFAB/labour/design1.png'
+import user1 from '../assets/PREFAB/labour/user1.png'
+import user2 from '../assets/PREFAB/labour/user2.png'
+import user3 from '../assets/PREFAB/labour/user3.png'
+import user4 from '../assets/PREFAB/labour/user4.png'
+
+
+const benefits = [
+  {
+    id: 1,
+    number: "01",
+    title: "Faster Project Setup",
+    desc: "Reduces time required to establish worker accommodation quickly and efficiently.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Lower Overall Cost",
+    desc: "Minimizes labor-intensive on-site construction activities and expenses.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Reusable Investment",
+    desc: "Units can be dismantled and reused at multiple project locations.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Environmentally Responsible",
+    desc: "Reduced material waste compared to traditional construction methods.",
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Structured Planning",
+    desc: "Optimized layouts for accommodation, sanitation, and utilities.",
+  },
+  {
+    id: 6,
+    number: "06",
+    title: "Long Service Life",
+    desc: "Strong steel frameworks ensure durability for extended usage.",
+  },
+];
 const PrefabLabour = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   const navigate = useNavigate();
+  const getVisibleCards = () => {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1100) return 2;
+    return 4;
+  };
 
+  const [visibleCards, setVisibleCards] = useState(getVisibleCards());
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const resize = () => {
+      setVisibleCards(getVisibleCards());
+      setIndex(0);
+    };
 
+    window.addEventListener("resize", resize);
+
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
+  const maxIndex = Math.max(0, benefits.length - visibleCards);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [maxIndex]);
+
+  const nextSlide = () => {
+    setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  };
   const features = [
     {
       icon: Hammer,
@@ -78,68 +158,59 @@ const PrefabLabour = () => {
     },
   ];
 
+  const galleryCards = [
+    {
+      id: 1,
+      image: user1,
+      title: "Installed Rapidly",
+      description:
+        "Pre-engineered components reduce on-site time dramatically.",
+    },
+    {
+      id: 2,
+      image: user2,
+      title: "Relocated Efficiently",
+      description:
+        "Dismantle, transport and reassemble at the next site.",
+    },
+    {
+      id: 3,
+      image: user3,
+      title: "Reused Across Projects",
+      description:
+        "Dismantle, transport and reassemble at the next site.",
+    },
+    {
+      id: 4,
+      image: user4,
+      title: "Modified or Expanded",
+      description:
+        "Add blocks and reconfigure as workforce grows.",
+    },
+  ];
 
 
-  const facilitiesIncluded = [
-    "Sleeping Dorms",
-    "Wash Rooms",
-    "Prayer Rooms",
-    "Dining Rooms",
-    "Common Areas",
-    "Sports Terrace",
+  const keyFacilities = [
+    'Sleeping Areas',
+    'Washroom Blocks',
+    'Dining Areas',
+    'Drinking Water',
+    'Electrical Fittings',
+    'Ventilation Systems',
   ];
 
   const materialOptions = [
-    "28mm EPS Sandwich Panel",
-    "42mm EPS Sandwich Panel",
-    "50mm EPS Sandwich Panel",
-    "75mm EPS Sandwich Panel",
-    "100mm EPS Sandwich Panel",
-    "Rock Wool Sandwich Panel",
-    "PUF Sandwich Panel",
+    'PUF (Polyurethane Foam) Insulated Panels',
+    'Pre-Painted Galvanized Sheets (PPGI)',
+    'Cement-Based Panels',
+    'Composite Boards',
+    'PVC-Based Partitions',
+    'Aerated Lightweight Panels',
   ];
 
-  const mobilityImages = [
-    {
-      label: "Modular Panels",
-      img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      label: "Relocated Efficiently",
-      img: "https://images.unsplash.com/photo-1590516408010-c6d81cf8c15b?auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      label: "Recent Sunrise Projects",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      label: "Workforce Ac. Properties",
-      img: "https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=400&q=80",
-    },
-  ];
 
-  const advantages = [
-    {
-      num: "01",
-      title: "Faster Project Setup",
-      desc: "Modular units reduce site establishment timelines for workforce accommodation.",
-    },
-    {
-      num: "02",
-      title: "Lower Overall Cost",
-      desc: "Maximised efficiency through smarter procurement and construction techniques.",
-    },
-    {
-      num: "03",
-      title: "Reusable Investment",
-      desc: "Assets are relocated to multiple sites, delivering long-term value.",
-    },
-    {
-      num: "04",
-      title: "Enhanced Safety & Compliance",
-      desc: "Structural reliability meets regulatory requirements across all environments.",
-    },
-  ];
+
+
 
   const faqs = [
     {
@@ -290,51 +361,56 @@ const PrefabLabour = () => {
 
 
       {/* ── Facilities & Construction ── */}
-      <section className={styles.facilitiesSec}>
-        <div className={styles.facilitiesGrid}>
-          <div className={styles.facilitiesImgCol}>
-            <div
-              className={styles.facilitiesImg}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80')",
-              }}
-            />
-          </div>
-          <div className={styles.facilitiesContent}>
-            <h2 className={styles.secTitle}>
-              Facilities, Construction <br />
-              <span>&amp; Material Options</span>
-            </h2>
-            <div className={styles.facilitiesDivider} />
+      <section className={styles.workforceSection}>
+        <div className={styles.workforceHeader}>
+          <h2>
+            Facilities, Construction <br />
+            <span>& Material Options</span>
+          </h2>
+          <div className={styles.workforceDivider} />
+        </div>
+
+        <div className={styles.workforceGrid}>
+
+
+          <div className={styles.workforceText}>
             <p>
-              Our prefabricated labour accommodation units are designed to deliver safe,
-              comfortable, and efficient living for workers. Each unit comes with a range
-              of standard facilities and is available across different construction and
-              material specifications to suit your climate and budget.
+              Our prefabricated labour colonies are designed to deliver safe, comfortable, and efficient
+              living spaces for workers at project sites, with durable, project-specific materials ensuring
+              strength, insulation, and long-term performance in all conditions.
             </p>
-            <div className={styles.facilitiesListsRow}>
-              <div>
-                <h5 className={styles.listHeading}>Key Facilities Included</h5>
+            <div className={styles.facilitiesContainer}>
+              {/* Column 1: Key Facilities */}
+              <div className={styles.facilityColumn}>
+                <h3 className={styles.columnTitle}>Key Facilities Included:</h3>
                 <ul className={styles.facilityList}>
-                  {facilitiesIncluded.map((f, i) => (
-                    <li key={i}>
-                      <span className={styles.listBullet}>✔</span> {f}
+                  {keyFacilities.map((item, index) => (
+                    <li key={index} className={styles.facilityItem}>
+                      <Check className={styles.checkIcon} size={18} strokeWidth={2.5} />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div>
-                <h5 className={styles.listHeading}>Material / Construction Options</h5>
+
+              {/* Column 2: Material Construction Options */}
+              <div className={styles.facilityColumn}>
+                <h3 className={styles.columnTitle}>Material Construction Options:</h3>
                 <ul className={styles.facilityList}>
-                  {materialOptions.map((m, i) => (
-                    <li key={i}>
-                      <span className={styles.listBullet}>✔</span> {m}
+                  {materialOptions.map((item, index) => (
+                    <li key={index} className={styles.facilityItem}>
+                      <Check className={styles.checkIcon} size={18} strokeWidth={2.5} />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
+
+
+          </div>
+          <div className={styles.workforceVisual}>
+            <img src={labour4} alt="Prefab labour accommodation facility" className={styles.workforceImg} />
           </div>
         </div>
       </section>
@@ -380,21 +456,43 @@ const PrefabLabour = () => {
 
 
       {/* ── Mobility & Rapid Deployment ── */}
-      <section className={styles.mobilitySec}>
-        <div className={styles.mobilityInner}>
-          <h2 className={styles.secTitle}>
-            Mobility &amp; Rapid <br />
-            <span>Deployment Advantage</span>
-          </h2>
-          <div className={styles.mobilityDivider} />
-          <div className={styles.mobilityGrid}>
-            {mobilityImages.map((item, i) => (
-              <div key={i} className={styles.mobilityCard}>
-                <img src={item.img} alt={item.label} />
-                <div className={styles.mobilityLabel}>{item.label}</div>
-              </div>
-            ))}
+      <section className={styles.siteSec}>
+        <div className={styles.siteHeader}>
+          <div className={styles.siteText}>
+            <h2>
+              Mobility & Rapid <br />
+              <span>Deployment Advantage</span>
+            </h2>
+            <div className={styles.FaqsLine}></div>
           </div>
+          <p >
+            Unlike traditional brick-and-mortar construction, our
+            modular labour camps move with your projects.
+          </p>
+        </div>
+
+        <div className={styles.galleryGrid}>
+          {galleryCards.map((card) => (
+            <div key={card.id} className={styles.galleryCard}>
+              <div className={styles.galleryImageWrapper}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={styles.galleryImage}
+                />
+              </div>
+
+              <div className={styles.galleryContent}>
+                <h3 className={styles.galleryTitle}>
+                  {card.title}
+                </h3>
+
+                <p className={styles.galleryDescription}>
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -404,25 +502,40 @@ const PrefabLabour = () => {
       {/* ── Advantages ── */}
       <section className={styles.advantagesSec}>
         <div className={styles.advantagesInner}>
-          <div className={styles.advantagesTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Advantages of Modular <br />
-                <span>Labour Colonies</span>
-              </h2>
-              <div className={styles.advantagesDivider} />
-            </div>
-            <div className={styles.advantagesNavRow}>
-              <button className={styles.navBtn}>‹</button>
-              <button className={`${styles.navBtn} ${styles.navBtnActive}`}>›</button>
-            </div>
-          </div>
-          <div className={styles.advantagesGrid}>
-            {advantages.map((adv, i) => (
-              <div key={i} className={styles.advantageCard}>
-                <span className={styles.advantageNum}>{adv.num}</span>
-                <h4>{adv.title}</h4>
-                <p>{adv.desc}</p>
+          <h2 >
+            Advantages of Modular <br />
+            <span>Labour Colonies</span>
+          </h2>
+          <div className={styles.advantagesDivider} />
+        </div>
+
+        <div className={styles.topBar}>
+          <button className={styles.navBtn} onClick={prevSlide}>
+            <ChevronLeft size={28} />
+          </button>
+
+          <button className={`${styles.navBtn} ${styles.active}`} onClick={nextSlide}>
+            <ChevronRight size={28} />
+          </button>
+        </div>
+
+        <div className={styles.sliderWrapper}>
+          <div
+            className={styles.sliderTrack}
+            style={{
+              transform: `translateX(-${index * (100 / visibleCards)}%)`,
+            }}
+          >
+            {benefits.map((item) => (
+              <div className={styles.card} key={item.id} style={{
+                flex: `0 0 ${100 / visibleCards}%`,
+                maxWidth: `${100 / visibleCards}%`,
+              }}>
+                <span className={styles.number}>{item.number}</span>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -433,33 +546,34 @@ const PrefabLabour = () => {
 
 
       {/* ── Applications ── */}
-      <section className={styles.applicationsSec}>
-        <div className={styles.applicationsGrid}>
-          <div className={styles.applicationsImgCol}>
-            <img
-              src="https://images.unsplash.com/photo-1464082354059-27db6ce50048?auto=format&fit=crop&w=800&q=80"
-              alt="Applications"
-            />
+      <section className={styles.housingOverview}>
+        <div className={styles.housingOverviewHeader}>
+          <h2>
+            Prefab Labour Accommodation<br />
+            <span>& Workforce Housing</span>
+          </h2>
+          <div className={styles.housingOverviewDivider} />
+        </div>
+
+        <div className={styles.housingOverviewBody}>
+          <div className={styles.housingOverviewMedia}>
+            <img src={labour3} alt="Prefab labour accommodation facility" className={styles.housingOverviewImage} />
           </div>
-          <div className={styles.applicationsContent}>
-            <span className={styles.applicationsLabel}>L&R</span>
-            <h2 className={styles.secTitle}>
-              Applications Where <br />
-              <span>our camps deliver.</span>
-            </h2>
-            <div className={styles.applicationsDivider} />
+          <div className={styles.housingOverviewContent}>
             <p>
-              L&R Modular Labour Camps are designed to support large-scale workforce
-              housing on oil fields, construction sites, mining zones, and renewable energy
-              projects. Our camps provide structured, compliant workforce accommodation
-              rapidly deployed to meet your operational timeline.
+              L&R Enterprises’ Prefabricated Labour Camps are designed to support diverse industries by offering
+              reliable, scalable, and efficient workforce accommodation solutions across various project environments.
+              They ensure quick deployment and adaptability for both short-term and long-term project needs.
             </p>
             <p>
-              These units deliver the most reliable, modular labour camp experience for
-              international deployments, remote work sites, and government infrastructure
-              and corporate needs.
+
+              L&R Enterprises’ Prefabricated Labour Camps are designed to support diverse industries by offering reliable,
+              scalable, and efficient workforce accommodation solutions across various project environments. They ensure quick
+              deployment and adaptability for both short-term and long-term project needs.
             </p>
+
           </div>
+
         </div>
       </section>
 
@@ -477,9 +591,7 @@ const PrefabLabour = () => {
           <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
         </div>
         <div className={styles.faqBody}>
-          <div className={styles.faqImg}>
-            <img src={labour1} alt="warehouse" />
-          </div>
+
           {/*  */}
           <div className={styles.container}>
             {faqs.map((item, index) => (
@@ -513,6 +625,9 @@ const PrefabLabour = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className={styles.faqImg}>
+            <img src={labour1} alt="warehouse" />
           </div>
         </div>
       </section>
