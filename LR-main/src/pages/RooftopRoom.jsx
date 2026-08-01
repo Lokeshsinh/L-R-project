@@ -9,7 +9,10 @@ import {
 import { useNavigate } from 'react-router-dom'
 import room1 from '../assets/rooftop/rooftoproom/room1.jpg'
 import room2 from '../assets/rooftop/rooftoproom/room2.jpg'
-
+import card1 from '../assets/rooftop/rooftoproom/card1.jpg';
+import card2 from '../assets/rooftop/rooftoproom/card2.jpg';
+import card3 from '../assets/rooftop/rooftoproom/card3.jpg';
+import card4 from '../assets/rooftop/rooftoproom/card4.jpg';
 
 
 
@@ -53,6 +56,31 @@ function RooftopRoom() {
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+
+
+
+    const industryProjects = [
+        {
+            title: "Residential Rooftop Flat",
+            desc: "Modern one or two-bedroom rooftop homes with stylish interiors, kitchen, living area, and all essential amenities.",
+            img: card1,
+        },
+        {
+            title: "Guest Room",
+            desc: "Comfortable and elegant guest accommodations designed to provide privacy, convenience, and a premium stay experience.",
+            img: card2,
+        },
+        {
+            title: "Servant Room",
+            desc: "Compact and functional staff quarters with efficient layouts, essential utilities, and comfortable living spaces.",
+            img: card3,
+        },
+        {
+            title: "Party Hall",
+            desc: "Spacious rooftop party halls perfect for family gatherings, celebrations, corporate events, and social occasions.",
+            img: card4,
+        },
+    ];
     return (
         <>
             <Header />
@@ -118,6 +146,33 @@ function RooftopRoom() {
 
                         <div className={styles.sideAccent}></div>
                     </div>
+                </div>
+            </section>
+
+
+            {/* PRODUCTS */}
+            <section className={styles.showcase}>
+                <div className={styles.secHeader}>
+                    <div className={styles.secText}>
+                        <h2>Industrial Shed<br /><span>Project Showcase</span></h2>
+                        <div className={styles.productsDivider}></div>
+                    </div>
+                    <p className={styles.secDesc}>Strong, scalable, and customizable industrial sheds built for heavy-duty performance and long-term reliability.</p>
+                </div>
+                <div className={styles.expertiseGrid}>
+                    {industryProjects.map((item, index) => (
+                        <div className={styles.expCard} key={index}>
+                            <img src={item.img} alt={item.title} className={styles.expImg} />
+
+                            <div className={styles.expLabel}>
+                                <h4>{item.title}</h4>
+
+                                <div className={styles.desc}>
+                                    <p>{item.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
 
