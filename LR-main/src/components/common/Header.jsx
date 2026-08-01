@@ -429,7 +429,7 @@ const Header = () => {
                   >
                     <button
                       type="button"
-                      onClick={handleNestedClick("rooftop")}
+                      onClick={handleNestedClick("rooftop", "/rooftop-rooms")}
                     >
                       <span>Rooftop Room</span>
                       <i

@@ -49,6 +49,7 @@ import HomeContainer from "./pages/HomeContainer";
 import PreBuild from "./pages/PreBuild";
 import EpcPanel from "./pages/EpcPanel";
 import PrefabModular from "./pages/PrefabModular";
+import RooftopRoom from "./pages/RooftopRoom"
 
 function App() {
   return (
@@ -90,6 +91,7 @@ function App() {
 
         <Route path="/rockwool-panels" element={<RockwoolPanels />} />
         <Route path="/glasswool-panels" element={<GlasswoolPanels />} />
+        <Route path="/rooftop-rooms" element={<RooftopRoom />} />
         <Route path="/rooftop-residential-flats" element={<RooftopResidential />} />
         <Route path="/rooftop-party-lounge" element={<RooftopPartyLounge />} />
         <Route path="/rooftop-guest-rooms" element={<RooftopGuestRooms />} />
