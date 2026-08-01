@@ -4,16 +4,22 @@ import styles from '../styles/RooftopRoom.module.css'
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import {
-    ArrowRight, Plus, X, ArrowUpRight,
+    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2, MapPinned,
+    PencilRuler,
+    Truck,
+    BadgeCheck,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import room1 from '../assets/rooftop/rooftoproom/room1.jpg'
 import room2 from '../assets/rooftop/rooftoproom/room2.jpg'
+import room3 from '../assets/rooftop/rooftoproom/room3.jpg'
+import room4 from '../assets/rooftop/rooftoproom/room4.jpg'
 import card1 from '../assets/rooftop/rooftoproom/card1.jpg';
 import card2 from '../assets/rooftop/rooftoproom/card2.jpg';
 import card3 from '../assets/rooftop/rooftoproom/card3.jpg';
 import card4 from '../assets/rooftop/rooftoproom/card4.jpg';
-
+import design from '../assets/rooftop/rooftoproom/design.png'
+import design1 from '../assets/rooftop/rooftoproom/design1.png'
 
 
 const faqs = [
@@ -57,7 +63,36 @@ function RooftopRoom() {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-
+    const process = [
+        {
+            id: "01",
+            icon: <MapPinned size={38} />,
+            title: "Site Assessment & Planning",
+            description:
+                "Our experts inspect the rooftop, evaluate structural capacity, and understand your space requirements to create the ideal rooftop solution.",
+        },
+        {
+            id: "02",
+            icon: <PencilRuler size={38} />,
+            title: "Custom Design & Manufacturing",
+            description:
+                "Based on the assessment, we prepare customized designs and manufacture high-quality prefabricated components using advanced engineering techniques.",
+        },
+        {
+            id: "03",
+            icon: <Truck size={38} />,
+            title: "Delivery & Installation",
+            description:
+                "The completed modules are safely transported to the site and installed quickly with minimal disruption, ensuring precision and structural stability.",
+        },
+        {
+            id: "04",
+            icon: <BadgeCheck size={38} />,
+            title: "Final Inspection & Handover",
+            description:
+                "After thorough quality checks and finishing work, the rooftop house is handed over as a ready-to-use space with complete customer satisfaction.",
+        },
+    ];
 
     const industryProjects = [
         {
@@ -177,6 +212,179 @@ function RooftopRoom() {
             </section>
 
 
+            <div className={styles.PEBStructure}>
+                <div className={styles.PEBStructureTExt}>
+                    <h2>Premium Interior Features <br /><span>Our Rooftop Rooms</span></h2>
+                    <div className={styles.productsDivider}></div>
+                </div>
+
+                <div className={styles.PEBStructureFlex}>
+                    <div className={styles.mediaContainer}>
+                        <img
+                            src={room3}
+                            alt="PEB Building"
+                            className={styles.mediaImage}
+                        />
+                        <div className={styles.accentBadge}></div>
+                    </div>
+
+                    <div className={styles.PEBStructurePara}>
+                        <p>Discover thoughtfully designed interiors that combine modern aesthetics, functionality, and everyday
+                            comfort. Every rooftop house is equipped with premium finishes and essential amenities to create a
+                            stylish, durable, and comfortable living environment.</p>
+                        <div className={styles.featureListWrap}>
+
+                            <div className={styles.featureRow}>
+                                <div className={styles.featureIconBox}>
+                                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                                </div>
+                                <p className={styles.featureText}>Luxury Bedroom</p>
+                            </div>
+
+                            <div className={styles.featureRow}>
+                                <div className={styles.featureIconBox}>
+                                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                                </div>
+                                <p className={styles.featureText}>Modern Living Room</p>
+                            </div>
+
+                            <div className={styles.featureRow}>
+                                <div className={styles.featureIconBox}>
+                                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                                </div>
+                                <p className={styles.featureText}>Modular Kitchen</p>
+                            </div>
+
+                            <div className={styles.featureRow}>
+                                <div className={styles.featureIconBox}>
+                                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                                </div>
+                                <p className={styles.featureText}>Attached Bathroom</p>
+                            </div>
+
+                            <div className={styles.featureRow}>
+                                <div className={styles.featureIconBox}>
+                                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                                </div>
+                                <p className={styles.featureText}>Premium Interior Finishes</p>
+                            </div>
+                            <div className={styles.featureRow}>
+                                <div className={styles.featureIconBox}>
+                                    <CheckCircle2 size={17} strokeWidth={2.2} />
+                                </div>
+                                <p className={styles.featureText}>Electrical & Plumbing Ready</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    {/* image */}
+
+
+
+                </div>
+            </div>
+
+
+
+            {/* STRENGTH BAND */}
+            <section className={styles.mfgBand}>
+                <div className={styles.scrollWrap}>
+                    <div className={styles.scrollTrack}>
+                        <h1>Built for Rooftop Living</h1>
+
+                    </div>
+                </div>
+
+                <div className={styles.mfgContainer}>
+                    <div className={styles.mfgText}>
+                        <h2>
+                            Strong & Secure <br />
+                            Rooftop Solutions
+                        </h2>
+                        <p>
+                            Built with premium steel structures and high-quality materials, our rooftop houses
+                            deliver exceptional strength, long-lasting durability, and reliable performance in
+                            all weather conditions. Engineered to withstand harsh environmental conditions, they
+                            offer superior structural stability and lasting protection. Every rooftop solution
+                            is designed for years of safe, low-maintenance performance.
+                        </p>
+                        <div className={styles.LastImage}>
+                            <img src={design1} alt="png" />
+                        </div>
+                    </div>
+                    <div className={styles.mfgImgWrapper}>
+                        <img
+                            src={design}
+                            alt="Manufacturing"
+                        />
+                    </div>
+                </div>
+            </section>
+
+
+            {/* --------process --------- */}
+
+            <section className={styles.processSec}>
+                <div className={styles.secHeaders}>
+                    <div className={styles.secTexts}>
+                        <h2>Our Construction<br /><span>Process</span></h2>
+                        <div className={styles.productsDividers}></div>
+                    </div>
+                    <p >Our efficient construction process covers everything from site assessment and custom design to professional
+                        installation and final handover, ensuring a safe, durable, and ready-to-use rooftop solution.</p>
+                </div>
+
+                <div className={styles.grid}>
+                    {process.map((item) => (
+                        <div className={styles.card} key={item.id}>
+                            <span className={styles.step}>{item.id}</span>
+
+                            <div className={styles.iconBoxs}>
+                                {item.icon}
+                            </div>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+
+
+            {/* Why PEB Engineered */}
+
+            <section className={styles.whyPEBEnginer}>
+                <div className={styles.whyPEBEnginerTitle}>
+                    <h2>Why Choose Our <br /><span>Rooftop Houses?</span></h2>
+                    <div className={styles.productsDivider}></div>
+                </div>
+                <div className={styles.whyPEBEnginerFlex}>
+
+                    <div className={styles.pebEnginerPara}>
+                        <p>Our prefabricated rooftop houses are built with lightweight steel structures that
+                            minimize the load on existing buildings while ensuring exceptional strength and
+                            long-term durability. With rapid installation, waterproof roofing, and fire-resistant
+                            materials, they provide a safe, reliable, and hassle-free solution for modern rooftop
+                            living. Every structure is engineered to deliver lasting performance with minimal maintenance.</p>
+                        <p>Designed for year-round comfort and maximum efficiency, our rooftop homes feature advanced
+                            thermal insulation that helps maintain indoor temperatures and reduce energy consumption.
+                            Every project is fully customizable, allowing you to personalize layouts, interiors,
+                            finishes, and elevations to create a space that perfectly suits your lifestyle and
+                            requirements. From concept to installation, we deliver complete turnkey rooftop solutions
+                            with uncompromising quality.</p>
+                    </div>
+                    <div className={styles.imageBox}>
+                        <img
+                            src={room4}
+                            alt="PEB Building"
+                            className={styles.featuredPhoto}
+                        />
+                        <div className={styles.badgeBar}></div>
+                    </div>
+
+                </div>
+            </section>
+
 
 
             {/* ── FAQ ── */}
@@ -190,6 +398,9 @@ function RooftopRoom() {
                     <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
                 </div>
                 <div className={styles.faqBody}>
+                    <div className={styles.faqImg}>
+                        <img src={room1} alt="warehouse" />
+                    </div>
                     {/*  */}
                     <div className={styles.container}>
                         {faqs.map((item, index) => (
@@ -222,9 +433,7 @@ function RooftopRoom() {
                             </div>
                         ))}
                     </div>
-                    <div className={styles.faqImg}>
-                        <img src={room1} alt="warehouse" />
-                    </div>
+
                 </div>
             </section>
 
