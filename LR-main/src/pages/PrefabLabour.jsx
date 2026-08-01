@@ -2,18 +2,26 @@ import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabLabour.module.css";
-
+import {
+  ArrowRight, Plus, X, 
+} from "lucide-react";
+import { useNavigate } from 'react-router-dom'
+import labour1 from '../assets/PREFAB/labour/labour1.png'
 const PrefabLabour = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+  const navigate = useNavigate();
 
   const keyFeatures = [
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <rect x="2" y="8" width="30" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <rect x="6" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-          <rect x="16" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-          <line x1="2" y1="28" x2="32" y2="28" stroke="currentColor" strokeWidth="2"/>
+          <rect x="2" y="8" width="30" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+          <rect x="6" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <rect x="16" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          <line x1="2" y1="28" x2="32" y2="28" stroke="currentColor" strokeWidth="2" />
         </svg>
       ),
       title: "Modular & Fast Installation",
@@ -23,8 +31,8 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M17 3L3 12v19h28V12L17 3z" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <rect x="12" y="20" width="10" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+          <path d="M17 3L3 12v19h28V12L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
+          <rect x="12" y="20" width="10" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
         </svg>
       ),
       title: "On-site Shelter & Adaptation",
@@ -34,8 +42,8 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <circle cx="17" cy="17" r="14" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <path d="M17 9v8l5 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="17" cy="17" r="14" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M17 9v8l5 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
       ),
       title: "Designed for Structural Integrity",
@@ -45,7 +53,7 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M5 17h24M17 5l12 12-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M5 17h24M17 5l12 12-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
       title: "Cost-Effective & Scalable",
@@ -55,9 +63,9 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <rect x="3" y="10" width="28" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <path d="M10 10V7M24 10V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          <line x1="3" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.5"/>
+          <rect x="3" y="10" width="28" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M10 10V7M24 10V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <line x1="3" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.5" />
         </svg>
       ),
       title: "Fully Equipped Living Units",
@@ -67,10 +75,10 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <circle cx="10" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <path d="M6 24H4V14l6-8h16l4 8v10h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <line x1="14" y1="24" x2="20" y2="24" stroke="currentColor" strokeWidth="2"/>
+          <circle cx="10" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
+          <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M6 24H4V14l6-8h16l4 8v10h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <line x1="14" y1="24" x2="20" y2="24" stroke="currentColor" strokeWidth="2" />
         </svg>
       ),
       title: "Easy Relocation",
@@ -80,7 +88,7 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M17 3l2.5 8h8.5l-6.8 5 2.5 8L17 19l-6.7 5 2.5-8L6 11h8.5L17 3z" stroke="currentColor" strokeWidth="2" fill="none"/>
+          <path d="M17 3l2.5 8h8.5l-6.8 5 2.5 8L17 19l-6.7 5 2.5-8L6 11h8.5L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
       ),
       title: "Certification Backed",
@@ -90,10 +98,10 @@ const PrefabLabour = () => {
     {
       icon: (
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M17 3C10 3 5 9 5 17c0 5 3 9 7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-          <path d="M17 3c7 0 12 6 12 14 0 5-3 9-7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-          <line x1="17" y1="3" x2="17" y2="31" stroke="currentColor" strokeWidth="1.5"/>
-          <line x1="5" y1="17" x2="29" y2="17" stroke="currentColor" strokeWidth="1.5"/>
+          <path d="M17 3C10 3 5 9 5 17c0 5 3 9 7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+          <path d="M17 3c7 0 12 6 12 14 0 5-3 9-7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+          <line x1="17" y1="3" x2="17" y2="31" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="5" y1="17" x2="29" y2="17" stroke="currentColor" strokeWidth="1.5" />
         </svg>
       ),
       title: "Thermal Comfort & Insulation",
@@ -200,18 +208,22 @@ const PrefabLabour = () => {
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            PREFAB LABOUR ACCOMMODATION <br />
-            <span>&amp; WORKER ACCOMMODATION</span>
+            Prefab labour accommodation<br />
+            <span>& Worker Accommodation
+            </span>
           </h1>
-          <p className={styles.heroSub}>
-            Modular labour solutions engineered for rapid deployment, structural
-            stability, and workforce dignity — adaptable across industrial and remote fields.
+          <p className={styles.heroDesc}>
+            Modular labour colonies engineered for rapid deployment, structural stability,
+            and worker dignity — delivered and installed across India.
           </p>
-          <button className={styles.btnHero}>
-            Contact us &nbsp;<span>→</span>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
+
+
 
       {/* ── Intro ── */}
       <section className={styles.intro}>
@@ -257,6 +269,9 @@ const PrefabLabour = () => {
         </div>
       </section>
 
+
+
+
       {/* ── Key Features ── */}
       <section className={styles.featuresSec}>
         <div className={styles.featuresInner}>
@@ -277,9 +292,8 @@ const PrefabLabour = () => {
             {keyFeatures.map((feat, i) => (
               <div
                 key={i}
-                className={`${styles.featureCard} ${
-                  feat.highlight ? styles.featureCardActive : ""
-                }`}
+                className={`${styles.featureCard} ${feat.highlight ? styles.featureCardActive : ""
+                  }`}
               >
                 <div className={styles.featureIcon}>{feat.icon}</div>
                 <h4>{feat.title}</h4>
@@ -289,6 +303,9 @@ const PrefabLabour = () => {
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── Facilities & Construction ── */}
       <section className={styles.facilitiesSec}>
@@ -367,6 +384,9 @@ const PrefabLabour = () => {
         </div>
       </section>
 
+
+
+
       {/* ── Mobility & Rapid Deployment ── */}
       <section className={styles.mobilitySec}>
         <div className={styles.mobilityInner}>
@@ -385,6 +405,9 @@ const PrefabLabour = () => {
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── Advantages ── */}
       <section className={styles.advantagesSec}>
@@ -413,6 +436,9 @@ const PrefabLabour = () => {
           </div>
         </div>
       </section>
+
+
+
 
       {/* ── Applications ── */}
       <section className={styles.applicationsSec}>
@@ -445,72 +471,82 @@ const PrefabLabour = () => {
         </div>
       </section>
 
+
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <div className={styles.faqInner}>
-          <div className={styles.faqLeft}>
-            <div
-              className={styles.faqSideImg}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80')",
-              }}
-            />
+        <span className={styles.introLabel}>• FAQS</span>
+        <div className={styles.faqHeader}>
+          <div className={styles.faqText}>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
+            <div className={styles.FaqsLine}></div>
           </div>
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FAQ</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked <br />
-                  <span>Questions</span>
-                </h2>
-                <div className={styles.faqDivider} />
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers to common queries about labour camp design, usage,
-                durability, and deployment for workforce accommodation.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqOpen : ""
+          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+        </div>
+        <div className={styles.faqBody}>
+          <div className={styles.faqImg}>
+            <img src={labour1} alt="warehouse" />
+          </div>
+          {/*  */}
+          <div className={styles.container}>
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
                   }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
+              >
+                <div
+                  className={styles.question}
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↓" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+                  <h3>{item.q}</h3>
+
+                  <span className={styles.icon}>
+                    {activeIndex === index ? (
+                      <X size={28} strokeWidth={2} />
+                    ) : (
+                      <Plus size={28} strokeWidth={2} />
+                    )}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                <div
+                  className={`${styles.answerWrapper} ${activeIndex === index ? styles.open : ""
+                    }`}
+                >
+                  <div className={styles.answer}>
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+
+
+
+
+
+
       {/* ── CTA ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2>Build smarter workforce facilities with L&amp;R Green India Pvt Ltd</h2>
-          <p>
-            Connect with us to explore custom, scalable modular labour accommodation solutions
-            with safe, cost-efficient, and modern workforce accommodation solutions.
-          </p>
-          <button className={styles.btnCTA}>Contact Us &nbsp;→</button>
-        </div>
+      <section className={styles.cta}>
+        <h2>Build smarter workforce facilities with L&R Green India Pvt Ltd</h2>
+        <p>
+          Connect with us to explore scalable, durable workforce housing solutions tailored
+          to your project — safe, cost-efficient and aligned with modern construction standards.
+
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />
