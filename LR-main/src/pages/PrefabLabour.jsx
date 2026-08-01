@@ -3,10 +3,18 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabLabour.module.css";
 import {
-  ArrowRight, Plus, X, 
+  ArrowRight, Plus, X, ArrowUpRight, Hammer,
+  Truck,
+  ShieldCheck,
+  MoveUpRight,
+  Settings,
+  Snowflake,
+  Building,
+
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import labour1 from '../assets/PREFAB/labour/labour1.png'
+import labour2 from '../assets/PREFAB/labour/labour2.png'
 const PrefabLabour = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const toggleFAQ = (index) => {
@@ -14,101 +22,61 @@ const PrefabLabour = () => {
   };
   const navigate = useNavigate();
 
-  const keyFeatures = [
+
+
+  const features = [
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <rect x="2" y="8" width="30" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-          <rect x="6" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-          <rect x="16" y="12" width="7" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-          <line x1="2" y1="28" x2="32" y2="28" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      ),
+      icon: Hammer,
       title: "Modular & Fast Installation",
-      desc: "Rapidly deployable modular units assembled on-site using standard components.",
-      highlight: false,
+      description:
+        "Pre-engineered components allow quick assembly with minimal site disruption.",
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M17 3L3 12v19h28V12L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
-          <rect x="12" y="20" width="10" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        </svg>
-      ),
-      title: "On-site Shelter & Adaptation",
-      desc: "Designed for structural integrity in diverse on-site environments and conditions.",
-      highlight: true,
+      icon: Truck,
+      title: "Pan-India Delivery & Installation",
+      description:
+        "Pre-engineered components allow quick assembly with minimal site disruption.",
+      active: true,
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <circle cx="17" cy="17" r="14" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M17 9v8l5 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      ),
-      title: "Designed for Structural Integrity",
-      desc: "Engineered containers ensure optimum structural strength for all environments.",
-      highlight: false,
+      icon: ShieldCheck,
+      title: "Designed for Structural Stability",
+      description:
+        "Pre-engineered components allow quick assembly with minimal site disruption.",
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M5 17h24M17 5l12 12-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ),
+      icon: Hammer,
       title: "Cost-Effective & Scalable",
-      desc: "Optimised manufacturing and scalable deployment reduce costs significantly.",
-      highlight: false,
+      description:
+        "Economical solutions that expand with workforce strength and project phases.",
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <rect x="3" y="10" width="28" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M10 10V7M24 10V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <line x1="3" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      ),
+      icon: Building,
       title: "Fully Equipped Living Units",
-      desc: "Sleeping areas, washrooms, kitchens, and recreational facilities integrated.",
-      highlight: false,
+      description:
+        "Sleeping areas, washroom blocks, dining, drinking water, electrical fittings & ventilation.",
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <circle cx="10" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
-          <circle cx="24" cy="24" r="4" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M6 24H4V14l6-8h16l4 8v10h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <line x1="14" y1="24" x2="20" y2="24" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      ),
+      icon: MoveUpRight,
       title: "Easy Relocation",
-      desc: "Containers shift with project phases, reducing capital outlay and asset waste.",
-      highlight: false,
+      description:
+        "Dismantle and shift to new project locations — long-term asset value retained.",
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M17 3l2.5 8h8.5l-6.8 5 2.5 8L17 19l-6.7 5 2.5-8L6 11h8.5L17 3z" stroke="currentColor" strokeWidth="2" fill="none" />
-        </svg>
-      ),
-      title: "Certification Backed",
-      desc: "All engineered containers meet safety and international field standards.",
-      highlight: false,
+      icon: Settings,
+      title: "Customizable Layouts",
+      description:
+        "Pre-engineered components allow quick assembly with minimal site disruption.",
     },
     {
-      icon: (
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-          <path d="M17 3C10 3 5 9 5 17c0 5 3 9 7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-          <path d="M17 3c7 0 12 6 12 14 0 5-3 9-7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-          <line x1="17" y1="3" x2="17" y2="31" stroke="currentColor" strokeWidth="1.5" />
-          <line x1="5" y1="17" x2="29" y2="17" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      ),
+      icon: Snowflake,
       title: "Thermal Comfort & Insulation",
-      desc: "Thermally regulated modules ensure worker comfort in all weather conditions.",
-      highlight: false,
+      description:
+        "Economical solutions that expand with workforce strength and project phases.",
     },
   ];
+
+
 
   const facilitiesIncluded = [
     "Sleeping Dorms",
@@ -226,46 +194,46 @@ const PrefabLabour = () => {
 
 
       {/* ── Intro ── */}
-      <section className={styles.intro}>
-        <div className={styles.introGrid}>
-          <div className={styles.introVisuals}>
-            <div
-              className={styles.imgMain}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80')",
-              }}
-            />
-            <div
-              className={styles.imgSub}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=400&q=80')",
-              }}
-            />
+      <section className={styles.introSec}>
+        <div className={styles.secTitle}>
+          <h2>
+            Prefab Labour Accommodation<br />
+            <span>& Workforce Housing</span>
+          </h2>
+          <div className={styles.introLine} />
+        </div>
+
+        <div className={styles.introContainer}>
+
+          <div className={styles.introImage}>
+            <img src={labour2} alt="error" />
           </div>
-          <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              Prefab Labour Accommodation <br />
-              <span>&amp; Workforce Housing</span>
-            </h2>
+          <div className={styles.introText}>
             <p>
-              Prefab Labour Accommodation by L&R Green India Pvt Ltd provides versatile,
-              pre-engineered modular units that deliver rapid deployment, structural
-              stability, and worker comfort across diverse industrial and site environments.
+              Prefab Labour Accommodation by L&R Green India Pvt Ltd provides fast, modular, and ready-to-install
+              housing solutions for project workers. These units are designed for quick setup, making them ideal
+              for construction, industrial, and remote-site projects where speed and efficiency are important.
             </p>
             <p>
-              These structures are fully scalable, cost-effective, and thermally insulated
-              — offering smart management, reduced lead times, and assured smooth project
-              implementation.
+              Built with strong and durable materials, the accommodation ensures safe and comfortable living spaces
+              including sleeping, dining, and basic utility facilities. The design focuses on hygiene, stability,
+              and worker comfort even in challenging site conditions.
             </p>
             <p>
-              These units are fully scalable, cost-effective, and thermally insulated —
-              offering smart management, reduced lead times, and assured smooth project
-              implementation.
+              These structures are fully scalable, cost-effective, and easily relocatable, allowing them to be
+              reused across multiple project sites. They help improve workforce management, reduce setup time,
+              and support smooth project execution.
             </p>
-            <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
+
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
+
         </div>
       </section>
 
@@ -275,32 +243,44 @@ const PrefabLabour = () => {
       {/* ── Key Features ── */}
       <section className={styles.featuresSec}>
         <div className={styles.featuresInner}>
-          <div className={styles.featuresTopRow}>
-            <div>
-              <h2 className={styles.secTitle}>
-                Key Features of <br />
-                <span>Labour Camps</span>
-              </h2>
-              <div className={styles.featuresDivider} />
-            </div>
-            <p className={styles.featuresDesc}>
-              Every L&R Labour Camp is engineered with structural strength, rapid
-              deployment, and worker comfort as core priorities.
-            </p>
+          <div className={styles.featureText}>
+            <h2 >
+              Key Features of <br />
+              <span>Labour Camps</span>
+            </h2>
+            <div className={styles.featuresDivider} />
           </div>
-          <div className={styles.featuresGrid}>
-            {keyFeatures.map((feat, i) => (
+          <p>
+            Every L&R Labour Camp is engineered with structural strength, rapid
+            deployment, and worker comfort as core priorities.
+          </p>
+        </div>
+
+        <div className={styles.featuresGrid}>
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+
+            return (
               <div
-                key={i}
-                className={`${styles.featureCard} ${feat.highlight ? styles.featureCardActive : ""
+                key={index}
+                className={`${styles.featureCard} ${feature.active ? styles.active : ""
                   }`}
               >
-                <div className={styles.featureIcon}>{feat.icon}</div>
-                <h4>{feat.title}</h4>
-                <p>{feat.desc}</p>
+                <div className={styles.iconBoxs}>
+                  <Icon size={38} strokeWidth={1.7} />
+                </div>
+
+                <h3 className={styles.title}>{feature.title}</h3>
+
+                <p className={styles.description}>
+                  {feature.description}
+                </p>
+
+                {/* Hover Overlay */}
+                <span className={styles.hoverBg}></span>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
