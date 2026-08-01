@@ -15,6 +15,8 @@ import {
 import { useNavigate } from 'react-router-dom'
 import labour1 from '../assets/PREFAB/labour/labour1.png'
 import labour2 from '../assets/PREFAB/labour/labour2.png'
+import design from '../assets/PREFAB/labour/design.png'
+import design1 from '../assets/PREFAB/labour/design1.png'
 const PrefabLabour = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const toggleFAQ = (index) => {
@@ -337,29 +339,39 @@ const PrefabLabour = () => {
         </div>
       </section>
 
+
+
+
       {/* ── Enhancing Worker Welfare ── */}
-      <section className={styles.welfareBand}>
-        <div className={styles.welfareContainer}>
-          <div className={styles.welfareText}>
+      <section className={styles.mfgBand}>
+        <div className={styles.scrollWrap}>
+          <div className={styles.scrollTrack}>
+            <h1>Prefab labour accommodation</h1>
+          </div>
+        </div>
+
+        <div className={styles.mfgContainer}>
+          <div className={styles.mfgText}>
             <h2>
               Enhancing Worker <br />
-              Welfare &amp; Productivity
+              Welfare & Productivity
             </h2>
             <p>
-              L&R Labour Accommodation goes beyond shelter — it plays a vital role in
-              improving worker wellbeing, motivation, and on-site productivity. By
-              providing hygienic, comfortable, and well-equipped living quarters, we help
-              companies maintain workforce standards and comply with labour welfare
-              regulations. Modern facilities and thoughtful design ensure workers are rested
-              and ready for peak performance each day.
+              Well-planned labour accommodation plays a vital role in improving worker satisfaction and overall
+              project efficiency. By providing organized, hygienic, and secure living spaces, our labour camps
+              help reduce travel time, boost morale, enhance productivity, and ensure better supervision,
+              coordination, and compliance with safety standards—all while prioritizing workforce comfort,
+              dignity, and practical site operations.
             </p>
+            <div className={styles.LastImage}>
+              <img src={design1} alt="png" />
+            </div>
           </div>
-          <div className={styles.welfareImgCol}>
+          <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
-              alt="Worker Welfare"
+              src={design}
+              alt="Manufacturing"
             />
-            <div className={styles.welfareWatermark}>ACCOM</div>
           </div>
         </div>
       </section>
