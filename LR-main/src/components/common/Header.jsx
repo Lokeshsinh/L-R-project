@@ -468,7 +468,7 @@ const Header = () => {
                   <li
                     className={`nested-submenu${openNested === "lgsf" ? " mobile-nested-open" : ""}`}
                   >
-                    <button type="button" onClick={handleNestedClick("lgsf")}>
+                    <button type="button" onClick={handleNestedClick("lgsf","/lgsf-modular")}>
                       <span>LGSF Modular Solutions</span>
                       <i
                         className="ti ti-chevron-right side-arrow"

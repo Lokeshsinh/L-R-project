@@ -50,6 +50,7 @@ import PreBuild from "./pages/PreBuild";
 import EpcPanel from "./pages/EpcPanel";
 import PrefabModular from "./pages/PrefabModular";
 import RooftopRoom from "./pages/RooftopRoom"
+import LgsfModular from './pages/LgsfModular'
 
 function App() {
   return (
@@ -97,6 +98,7 @@ function App() {
         <Route path="/rooftop-guest-rooms" element={<RooftopGuestRooms />} />
         <Route path="/rooftop-servant-rooms" element={<RooftopServantRooms />} />
         <Route path="/prefab-residential-house" element={<PrefabResidentialHouse />} />
+        <Route path="/lgsf-modular" element={<LgsfModular />} />
         <Route path="/lgsf-luxury-lounges" element={<LgsfLuxuryLounges />} />
         <Route path="/lgsf-showroom" element={<LgsfShowroom />} />
         <Route path="/prefab-sales-office" element={<PrefabSalesOffice />} />
