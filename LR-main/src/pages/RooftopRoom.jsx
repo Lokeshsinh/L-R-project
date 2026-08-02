@@ -323,7 +323,6 @@ function RooftopRoom() {
 
 
             {/* --------process --------- */}
-
             <section className={styles.processSec}>
                 <div className={styles.secHeaders}>
                     <div className={styles.secTexts}>

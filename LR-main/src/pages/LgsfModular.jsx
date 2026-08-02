@@ -4,16 +4,22 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import styles from '../styles/LgsfModular.module.css'
 import {
-    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2,
+    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2, ClipboardCheck,
+    Cog,
+    Wrench,
+    ShieldCheck,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import modular1 from '../assets/LGFS/LgsfModular/modular1.png'
 import modular2 from '../assets/LGFS/LgsfModular/modular2.png'
 import modular3 from '../assets/LGFS/LgsfModular/modular3.png'
+import modular4 from '../assets/LGFS/LgsfModular/modular4.png'
 import card1 from '../assets/LGFS/LgsfModular/card1.jpg';
 import card2 from '../assets/LGFS/LgsfModular/card2.png';
 import card3 from '../assets/LGFS/LgsfModular/card3.jpg';
 import card4 from '../assets/LGFS/LgsfModular/card4.png';
+import design from '../assets/LGFS/LgsfModular/design.png'
+import design1 from '../assets/LGFS/LgsfModular/design1.png'
 
 const faqs = [
     {
@@ -47,6 +53,38 @@ const faqs = [
             "Absolutely. LGSF structures can be customized in terms of layouts, elevations, finishes, and interior designs to meet project requirements.",
     },
 ];
+
+const processData = [
+    {
+        id: "01",
+        title: "Site Planning",
+        description:
+            "We evaluate project requirements and prepare detailed structural plans.",
+        icon: <ClipboardCheck size={34} />,
+    },
+    {
+        id: "02",
+        title: "Engineering & Manufacturing",
+        description:
+            "Steel frame components are manufactured using precision engineering.",
+        icon: <Cog size={34} />,
+    },
+    {
+        id: "03",
+        title: "On-Site Installation",
+        description:
+            "Frames are assembled quickly with professional installation techniques.",
+        icon: <Wrench size={34} />,
+    },
+    {
+        id: "04",
+        title: "Final Inspection",
+        description:
+            "Quality checks are completed before project handover.",
+        icon: <ShieldCheck size={34} />,
+    },
+];
+
 
 function LgsfModular() {
     const [activeIndex, setActiveIndex] = useState(1);
@@ -249,6 +287,104 @@ function LgsfModular() {
 
                 </div>
             </div>
+
+
+            {/* STRENGTH BAND */}
+            <section className={styles.mfgBand}>
+                <div className={styles.scrollWrap}>
+                    <div className={styles.scrollTrack}>
+                        <h1>Light Gauge Steel Framing</h1>
+
+                    </div>
+                </div>
+
+                <div className={styles.mfgContainer}>
+                    <div className={styles.mfgText}>
+                        <h2>
+                            Strength & Durability <br />
+                            Built for Lasting Performance
+                        </h2>
+                        <p>
+                            Manufactured using premium galvanized steel, our LGSF structures provide exceptional strength,
+                            corrosion resistance, and long-term durability. Designed to withstand harsh weather conditions
+                            and seismic forces, they ensure reliable performance with minimal maintenance.
+                        </p>
+                        <div className={styles.LastImage}>
+                            <img src={design1} alt="png" />
+                        </div>
+                    </div>
+                    <div className={styles.mfgImgWrapper}>
+                        <img
+                            src={design}
+                            alt="Manufacturing"
+                        />
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* --------process --------- */}
+            <section className={styles.processSec}>
+                <div className={styles.secHeaders}>
+                    <div className={styles.secTexts}>
+                        <h2>Our Construction<br /><span>Process</span></h2>
+                        <div className={styles.productsDividers}></div>
+                    </div>
+                    <p >From planning and engineering to installation and project handover, our
+                        streamlined process ensures precision, quality, and timely project completion.</p>
+                </div>
+
+                <div className={styles.grid}>
+                    {processData.map((item) => (
+                        <div className={styles.card} key={item.id}>
+                            <span className={styles.step}>{item.id}</span>
+                            <div className={styles.top}>
+                                <div className={styles.iconBoxs}>{item.icon}</div>
+                            </div>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <div className={styles.bottomLine}></div>
+                        </div>
+                    ))}
+                </div>
+
+
+            </section>
+
+
+
+            {/* Why PEB Engineered */}
+            <section className={styles.whyPEBEnginer}>
+                <div className={styles.whyPEBEnginerTitle}>
+                    <h2>Why Choose LGSF<br /><span>Engineered for Performance?</span></h2>
+                    <div className={styles.productsDivider}></div>
+                </div>
+                <div className={styles.whyPEBEnginerFlex}>
+
+                    <div className={styles.pebEnginerPara}>
+                        <p>LGSF technology provides exceptional structural strength while significantly reducing
+                            construction time and maintenance costs. Manufactured with precision engineering, every
+                            component ensures consistent quality and reliable performance. Its high strength-to-weight
+                            ratio makes it ideal for fast, safe, and efficient construction projects.</p>
+                        <p>Its lightweight construction, energy efficiency, and eco-friendly materials make LGSF
+                            an ideal solution for modern infrastructure projects. With flexible design options
+                            and long service life, it delivers outstanding value for residential, commercial,
+                            and industrial developments. The result is a sustainable building solution that combines
+                            durability, performance, and cost-effectiveness.</p>
+                    </div>
+                    <div className={styles.bannerCard}>
+                        <div className={styles.accentEdge}></div>
+
+                        <img
+                            src={modular4}
+                            alt="PUF Panel"
+                            className={styles.panelImage}
+                        />
+                    </div>
+
+                </div>
+            </section>
 
 
 
