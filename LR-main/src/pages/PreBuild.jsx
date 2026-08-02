@@ -265,7 +265,7 @@ function PreBuild() {
                                     }`}
                             >
                                 <div
-                                    className={`${styles.iconBox} ${item.featured ? styles.featuredIcon : ""
+                                    className={`${styles.iconBoxs} ${item.featured ? styles.featuredIcon : ""
                                         }`}
                                 >
                                     {item.icon}

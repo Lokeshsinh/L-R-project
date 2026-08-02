@@ -352,7 +352,6 @@ function RooftopRoom() {
 
 
             {/* Why PEB Engineered */}
-
             <section className={styles.whyPEBEnginer}>
                 <div className={styles.whyPEBEnginerTitle}>
                     <h2>Why Choose Our <br /><span>Rooftop Houses?</span></h2>

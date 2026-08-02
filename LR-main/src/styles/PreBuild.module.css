@@ -987,7 +987,7 @@
     background: #2f4777;
 }
 
-.iconBox {
+.iconBoxs {
     width: 76px;
     height: 76px;
     border-radius: 12px;
@@ -1000,7 +1000,7 @@
     transition: all .45s ease;
 }
 
-.iconBox svg {
+.iconBoxs svg {
     width: 36px;
     height: 36px;
     stroke-width: 1.8;
@@ -1060,13 +1060,13 @@
     color: #fff;
 }
 
-.benefitCard:hover .iconBox {
+.benefitCard:hover .iconBoxs {
     background: #fff;
     color: #2f4777;
     transform: translateY(-5px);
 }
 
-.benefitCard:hover .iconBox svg {
+.benefitCard:hover .iconBoxs svg {
     transform: rotate(8deg);
     transition: .35s;
 }
@@ -1080,7 +1080,7 @@
     background: #243b67;
 }
 
-.featuredCard:hover .iconBox {
+.featuredCard:hover .iconBoxs {
     background: #fff;
     color: #2f4777;
 }
