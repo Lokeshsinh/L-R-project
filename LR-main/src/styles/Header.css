@@ -111,6 +111,180 @@
   opacity: 0.75;
 }
 
+@media (max-width:1400px) {
+
+  .top-label {
+    padding: 15px 18px;
+    font-size: 13px;
+  }
+
+  .top-info {
+    gap: 18px;
+    padding: 15px 18px;
+  }
+
+  .info-item span {
+    font-size: 13px;
+  }
+
+  .top-social {
+    padding: 15px 20px;
+    gap: 14px;
+  }
+
+}
+
+@media (max-width:1200px) {
+
+  .top-label {
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .top-info {
+    gap: 14px;
+    padding: 15px;
+  }
+
+  .info-item span {
+    font-size: 12px;
+  }
+
+  .top-social {
+    padding: 15px 18px;
+    gap: 12px;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .top-bar {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .top-header {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .top-label {
+    width: 100%;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .top-info {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 15px;
+  }
+
+  .top-social {
+    border-radius: 10px;
+    padding: 12px 20px;
+  }
+
+}
+@media (max-width:768px) {
+
+  .top-bar {
+    padding: 12px 18px;
+  }
+
+  .top-info {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+
+  .info-item span {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .top-social {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+
+}
+
+
+@media (max-width:576px) {
+
+  .top-bar {
+    padding: 12px 15px;
+  }
+
+  .top-label {
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .info-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-item span {
+    font-size: 12px;
+  }
+
+  .top-social {
+    padding: 12px;
+    gap: 16px;
+  }
+
+}
+
+
+@media (max-width:480px) {
+
+  .top-bar {
+    padding: 10px;
+  }
+
+  .top-label {
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .top-info {
+    gap: 8px;
+  }
+
+  .info-item span {
+    font-size: 11px;
+    word-break: break-word;
+  }
+
+  .top-social {
+    padding: 10px;
+    gap: 14px;
+    border-radius: 8px;
+  }
+
+  .top-social a .ti {
+    font-size: 15px;
+  }
+
+}
 /* ══════════════════════════════════
    NAVBAR
 ══════════════════════════════════ */

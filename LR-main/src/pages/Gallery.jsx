@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import labour1 from '../assets/Gallary/Labour/labour1.jpeg'
+import labour2 from '../assets/Gallary/Labour/labour2.png'
 import preEng1 from '../assets/Gallary/PreEngineed/preEng1.jpeg'
 import preEng2 from '../assets/Gallary/PreEngineed/preEng2.jpeg'
 import preEng3 from '../assets/Gallary/PreEngineed/preEng3.jpeg'
@@ -23,7 +24,12 @@ import preEng13 from '../assets/Gallary/PreEngineed/preEng13.jpeg'
 import preEng14 from '../assets/Gallary/PreEngineed/preEng14.jpeg'
 import video1 from '../assets/About/video5.mp4'
 import video2 from '../assets/About/video3.mp4'
-import video3 from '../assets/Gallary/PreEngineed/preEngVideo.mp4'
+import video3 from '../assets/About/video6.mp4'
+import video4 from '../assets/Gallary/PreEngineed/preEngVideo.mp4'
+import video5 from '../assets/About/video6.mp4'
+import video6 from '../assets/About/video6.mp4'
+import video7 from '../assets/About/video8.mp4'
+import video8 from '../assets/About/video10.mp4'
 import container1 from '../assets/Gallary/msContainer/con1.jpeg'
 import container2 from '../assets/Gallary/msContainer/con2.jpeg'
 import container3 from '../assets/Gallary/msContainer/con3.jpeg'
@@ -33,13 +39,33 @@ import container6 from '../assets/Gallary/msContainer/con6.jpeg'
 import container7 from '../assets/Gallary/msContainer/con7.jpeg'
 import container8 from '../assets/Gallary/msContainer/con8.jpeg'
 import container9 from '../assets/Gallary/msContainer/con9.jpeg'
+import container10 from '../assets/Gallary/msContainer/con10.png'
+import siteOffice1 from '../assets/Gallary/siteOffice/site.jpeg'
+import siteOffice2 from '../assets/Gallary/siteOffice/site2.png'
+import siteOffice3 from '../assets/Gallary/siteOffice/site3.png'
+import siteOffice4 from '../assets/Gallary/siteOffice/site4.png'
+import siteOffice5 from '../assets/Gallary/siteOffice/site5.png'
+import siteOffice6 from '../assets/Gallary/siteOffice/site6.png'
+import premium1 from '../assets/Gallary/premium/premium1.png'
+import premium2 from '../assets/Gallary/premium/premium2.png'
+import premium3 from '../assets/Gallary/premium/premium3.png'
+import premium4 from '../assets/Gallary/premium/premium1.png'
+import premium5 from '../assets/Gallary/premium/premium5.png'
+import sandwich1 from '../assets/Gallary/sandwich/sandwich1.png'
+import sandwich2 from '../assets/Gallary/sandwich/sandwich2.png'
+import sandwich3 from '../assets/Gallary/sandwich/sandwich3.png'
+
+
 const CATEGORIES = [
   { label: "All", key: "all" },
   { label: "Pre-Engineered", key: "pre-engine" },
   { label: "LGSF", key: "lgsf" },
+  { label: "Prefab Site Office", key: "site-office" },
   { label: "Labor Hutment", key: "labor-hutment" },
   { label: "Modular Office", key: "modular-office" },
   { label: "MS Container", key: "ms-container" },
+  { label: "Premium Container", key: "container-premium" },
+  { label: "Sandwich Panel", key: "sandwich-panel" },
   { label: "40X8 MS Container", key: "40x8-ms" },
   { label: "20X8 MS Container", key: "20x8-ms" },
   { label: "40X10 MS Container", key: "40x10-ms" },
@@ -55,7 +81,7 @@ const ALL_MEDIA = [
   { id: 6, type: "image", category: "modular-office", src: "/Images/gal2.jpg" },
   { id: 7, type: "video", category: "lgsf", src: video2 },
   { id: 8, type: "image", category: "labor-hutment", src: labour1 },
-  { id: 9, type: "video", category: "ms-container", src: "/Videos/video2.mp4" },
+  { id: 9, type: "video", category: "ms-container", src: video8},
   { id: 10, type: "image", category: "20x8-ms", src: "/Images/gal6.jpg" },
   { id: 11, type: "video", category: "lgsf", src: video3 },
   { id: 12, type: "image", category: "lgsf", src: preEng3 },
@@ -67,6 +93,7 @@ const ALL_MEDIA = [
   { id: 18, type: "image", category: "pre-engine", src: preEng9 },
   { id: 19, type: "image", category: "pre-engine", src: preEng10 },
   { id: 20, type: "image", category: "pre-engine", src: preEng11 },
+  { id: 20, type: "video", category: "pre-engine", src: video4 },
   { id: 21, type: "image", category: "lgsf", src: preEng12 },
   { id: 22, type: "image", category: "lgsf", src: preEng13 },
   { id: 23, type: "image", category: "lgsf", src: preEng14 },
@@ -79,6 +106,28 @@ const ALL_MEDIA = [
   { id: 30, type: "image", category: "ms-container", src: container7 },
   { id: 31, type: "image", category: "ms-container", src: container8 },
   { id: 32, type: "image", category: "ms-container", src: container9 },
+  { id: 33, type: "image", category: "site-office", src: siteOffice1 },
+  { id: 34, type: "image", category: "site-office", src: siteOffice2 },
+  { id: 35, type: "image", category: "site-office", src: siteOffice3 },
+  { id: 36, type: "image", category: "site-office", src: siteOffice4 },
+  { id: 37, type: "image", category: "site-office", src: siteOffice5 },
+  { id: 38, type: "image", category: "site-office", src: siteOffice6 },
+  { id: 39, type: "image", category: "labor-hutment", src: labour2 },
+  { id: 40, type: "image", category: "ms-container", src: container10 },
+  { id: 41, type: "image", category: "container-premium", src: premium1 },
+  { id: 42, type: "image", category: "container-premium", src: premium2 },
+  { id: 43, type: "image", category: "container-premium", src: premium3 },
+  { id: 44, type: "image", category: "container-premium", src: premium4 },
+  { id: 45, type: "image", category: "container-premium", src: premium5 },
+  { id: 46, type: "image", category: "sandwich-panel", src: sandwich1 },
+  { id: 47, type: "image", category: "sandwich-panel", src: sandwich2 },
+  { id: 48, type: "image", category: "sandwich-panel", src: sandwich3 },
+  { id: 49, type: "video", category: "container-premium", src:video5 },
+  { id: 50, type: "video", category: "container-premium", src:video6 },
+  { id: 51, type: "video", category: "ms-container", src:video7 },
+
+
+
 
 
 
