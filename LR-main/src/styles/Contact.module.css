@@ -467,362 +467,351 @@
   color: #666;
 }
 
-/* ── Responsive ── */
-@media screen and (max-width:1440px) {
 
-  .aboutImage {
-    width: 520px;
-    height: 610px;
+
+@media (max-width:1440px){
+
+  .contactSection{
+    padding:75px 45px;
   }
 
-  .experience-card {
-    right: 40px;
+  .headerLeft h2{
+    font-size:50px;
   }
 
-  .section-head h2,
-  .headerLeft h2,
-  .faqTitle h2,
-  .headerContainer h2 {
-    font-size: 48px;
+  .formColumn{
+    padding:42px;
   }
 
-  .card {
-    height: 410px;
+  .infoBox{
+    padding:42px 35px;
   }
 
 }
 
-@media screen and (max-width:1366px) {
+@media (max-width:1280px){
 
-  .section-head h2,
-  .headerLeft h2,
-  .faqTitle h2,
-  .headerContainer h2 {
-    font-size: 44px;
+  .contactSection{
+    padding:70px 40px;
   }
 
-  .about-right {
-    max-width: 620px;
+  .headerLeft h2{
+    font-size:45px;
   }
 
-}
-
-@media screen and (max-width:1280px) {
-
-  .about-section {
-    gap: 45px;
+  .headerDesc{
+    max-width:420px;
+    padding-top:50px;
   }
 
-  .aboutImage {
-    width: 470px;
-    height: 560px;
+  .formColumn{
+    padding:38px;
   }
 
-  .whyGrid {
-    gap: 18px;
-  }
-
-  .grid {
-    grid-auto-rows: 280px;
-  }
-
-  .card {
-    height: 390px;
-  }
-
-  .contactCard {
-    grid-template-columns: 1fr .9fr;
+  .infoBox{
+    padding:38px 30px;
   }
 
 }
 
 
-@media screen and (max-width:1200px) {
+@media (max-width:1200px){
 
-  .section-head {
-    gap: 30px;
+  .contactCard{
+    grid-template-columns:1fr;
   }
 
-  .aboutImage {
-    width: 430px;
-    height: 520px;
+  .infoColumn{
+    order:2;
   }
 
-  .experience-card {
-    width: 130px;
+  .formColumn{
+    order:1;
   }
 
-  .whyGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card {
-    height: 360px;
-  }
-
-}
-
-@media screen and (max-width:1024px) {
-
-  .about-section {
-    gap: 35px;
-  }
-
-  .aboutImage {
-    width: 100%;
-    height: 500px;
-  }
-
-  .about-right h2,
-  .section-head h2,
-  .headerLeft h2,
-  .headerContainer h2,
-  .faqTitle h2 {
-    font-size: 38px;
-  }
-
-  .contactCard {
-    grid-template-columns: 1fr;
-  }
-
-  .infoColumn {
-    width: 100%;
-  }
-
-  .slider-controls {
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 0 calc((100% - 30px)/2);
-  }
-
-}
-
-@media screen and (max-width:992px) {
-
-  .about-section,
-  .headerRow,
-  .section-head,
-  .FaqFlex {
-    flex-direction: column;
-  }
-
-  .about-left,
-  .about-right,
-  .headerLeft,
-  .headerDesc,
-  .faq-left,
-  .faq-right {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about-right {
-    text-align: center;
-  }
-
-  .AboutPrevLine,
-  .divider,
-  .underline,
-  .FaqLine {
-    margin: auto;
-  }
-
-  .whyGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    height: 380px;
-  }
-
-}
-
-@media screen and (max-width:768px) {
-
-  .about-section,
-  .why-section,
-  .contactSection,
-  .faq-section,
-  .innovation-section,
-  .testimonialSection {
-    padding: 60px 5%;
-  }
-
-  .section-head,
-  .headerContainer,
-  .headerRow,
-  .faqTitle {
-    text-align: center;
-    align-items: center;
-  }
-
-  .section-head h2,
-  .headerLeft h2,
-  .headerContainer h2,
-  .faqTitle h2,
-  .about-right h2 {
-    font-size: 32px;
-  }
-
-  .whyGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    flex: 0 0 100%;
-    margin-right: 0;
-  }
-
-  .cardTrack {
-    gap: 20px;
-  }
-
-  .aboutImage {
-    height: 420px;
-  }
-
-  .experience-card {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: 20px auto 0;
+  .statsBox{
+    justify-content:space-around;
   }
 
 }
 
 
-@media screen and (max-width:576px) {
+@media (max-width:1024px){
 
-  .section-head h2,
-  .headerLeft h2,
-  .headerContainer h2,
-  .faqTitle h2,
-  .about-right h2 {
-    font-size: 28px;
+  .contactSection{
+    padding:65px 30px;
   }
 
-  .tag {
-    font-size: 13px;
+  .headerRow{
+    flex-direction:column;
+    gap:20px;
   }
 
-  .aboutImage {
-    height: 360px;
+  .headerLeft h2{
+    font-size:40px;
   }
 
-  .question {
-    padding: 16px;
-  }
-
-  .question h3 {
-    font-size: 15px;
-  }
-
-  .submitBtn {
-    width: 100%;
+  .headerDesc{
+    padding-top:0;
+    max-width:100%;
   }
 
 }
 
-@media screen and (max-width:480px) {
 
-  .about-section,
-  .why-section,
-  .contactSection,
-  .faq-section,
-  .innovation-section,
-  .testimonialSection {
-    padding: 50px 4%;
+@media (max-width:992px){
+
+  .contactForm{
+    grid-template-columns:1fr;
   }
 
-  .section-head h2,
-  .headerLeft h2,
-  .headerContainer h2,
-  .faqTitle h2,
-  .about-right h2 {
-    font-size: 24px;
+  .fullWidth{
+    grid-column:span 1;
   }
 
-  .aboutImage {
-    height: 300px;
-  }
-
-  .card {
-    height: 300px;
-  }
-
-  .blueCard h2 {
-    font-size: 28px;
-  }
-
-  .buildBox {
-    font-size: 36px;
+  .submitBtn{
+    grid-column:span 1;
+    width:220px;
   }
 
 }
 
-@media screen and (max-width:375px) {
 
-  .section-head h2,
-  .headerLeft h2,
-  .headerContainer h2,
-  .faqTitle h2,
-  .about-right h2 {
-    font-size: 22px;
+@media (max-width:768px){
+
+  .contactSection{
+    padding:60px 22px;
   }
 
-  .aboutImage {
-    height: 260px;
+  .headerLeft h2{
+    font-size:34px;
   }
 
-  .experience-card {
-    width: 120px;
+  .tag{
+    font-size:14px;
+    padding:6px 18px;
   }
 
-  .primaryBtn,
-  .submitBtn {
-    width: 100%;
+  .underline{
+    width:90px;
+  }
+
+  .formColumn{
+    padding:30px 22px;
+  }
+
+  .formColumn h3{
+    font-size:24px;
+  }
+
+  .contactForm{
+    gap:18px;
+  }
+
+  .infoBox{
+    padding:30px 22px;
+  }
+
+  .statsBox{
+    padding:22px;
   }
 
 }
 
-@media screen and (max-width:320px) {
 
-  .section-head h2,
-  .headerLeft h2,
-  .headerContainer h2,
-  .faqTitle h2,
-  .about-right h2 {
-    font-size: 20px;
+@media (max-width:640px){
+
+  .headerLeft h2{
+    font-size:30px;
   }
 
-  .aboutImage {
-    height: 220px;
+  .headerDesc{
+    font-size:14px;
   }
 
-  .tag {
-    font-size: 12px;
-    padding: 6px 16px;
+  .projectCard{
+    gap:14px;
+    padding:14px;
   }
 
-  .question h3 {
-    font-size: 13px;
+  .projectIcon{
+    width:50px;
+    height:50px;
   }
 
-  .answer p,
-  .about-right p,
-  .subtitle,
-  .headerDesc {
-    font-size: 12px;
+  .projectContent h4{
+    font-size:15px;
+  }
+
+  .projectContent p{
+    font-size:12px;
+  }
+
+}
+
+
+@media (max-width:576px){
+
+  .contactSection{
+    padding:50px 18px;
+  }
+
+  .headerLeft h2{
+    font-size:28px;
+  }
+
+  .formColumn{
+    padding:24px 18px;
+  }
+
+  .infoBox{
+    padding:24px 18px;
+  }
+
+  .statsBox{
+    flex-direction:column;
+    gap:20px;
+    align-items:flex-start;
+  }
+
+  .submitBtn{
+    width:100%;
+  }
+
+}
+
+
+@media (max-width:480px){
+
+  .contactSection{
+    padding:45px 16px;
+  }
+
+  .headerLeft h2{
+    font-size:25px;
+  }
+
+  .tag{
+    font-size:13px;
+    padding:6px 16px;
+  }
+
+  .underline{
+    width:75px;
+  }
+
+  .formColumn h3{
+    font-size:22px;
+  }
+
+  .contactForm input,
+  .contactForm textarea,
+  .projectSelect{
+    font-size:14px;
+    padding:13px 14px;
+  }
+
+  .infoValue,
+  .infoLink{
+    font-size:15px;
+  }
+
+  .statNumber{
+    font-size:28px;
+  }
+
+}
+
+
+@media (max-width:390px){
+
+  .contactSection{
+    padding:40px 14px;
+  }
+
+  .headerLeft h2{
+    font-size:22px;
+  }
+
+  .formColumn{
+    padding:20px 15px;
+  }
+
+  .infoBox{
+    padding:20px 15px;
+  }
+
+  .submitBtn{
+    height:48px;
+    font-size:14px;
+  }
+
+  .projectIcon{
+    width:46px;
+    height:46px;
+  }
+
+  .projectContent h4{
+    font-size:14px;
+  }
+
+}
+
+
+@media (max-width:360px){
+
+  .contactSection{
+    padding:36px 12px;
+  }
+
+  .headerLeft h2{
+    font-size:20px;
+  }
+
+  .tag{
+    font-size:12px;
+    padding:5px 14px;
+  }
+
+  .formColumn{
+    padding:18px 12px;
+  }
+
+  .infoBox{
+    padding:18px 12px;
+  }
+
+  .contactForm input,
+  .contactForm textarea,
+  .projectSelect{
+    padding:12px;
+    font-size:13px;
+  }
+
+  .projectCard{
+    padding:12px;
+  }
+
+  .projectIcon{
+    width:42px;
+    height:42px;
+  }
+
+  .projectContent h4{
+    font-size:13px;
+  }
+
+  .projectContent p{
+    font-size:11px;
+  }
+
+  .infoValue,
+  .infoLink{
+    font-size:14px;
+  }
+
+  .statNumber{
+    font-size:24px;
   }
 
 }

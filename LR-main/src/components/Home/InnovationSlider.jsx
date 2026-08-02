@@ -59,12 +59,34 @@ const InnovationSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handlerLeft = () => {
-    setCurrent(prev => (prev + 1) % slides.length)
-  }
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth <= 1200) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const hanlderRight = () => {
-    setCurrent(prev => (prev - 1 ) % slides.length)
-  }
+    setCurrent((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
+  };
+  const handlerLeft = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
   return (
     <section className={styles["innovation-section"]}>
       {/* Header */}
@@ -89,7 +111,7 @@ const InnovationSlider = () => {
         <div
           className={styles.sliderTrack}
           style={{
-            transform: `translateX(-${current * 33.333}%)`,
+            transform: `translateX(-${current * (100 / cardsPerView)}%)`,
           }}
         >
           {slides.concat(slides.slice(0, 2)).map((item, index) => (
