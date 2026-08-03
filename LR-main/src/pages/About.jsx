@@ -50,6 +50,7 @@ import projects from "../assets/About/projects.png";
 import found from '../assets/About/foun1.jpg'
 import founder from '../assets/About/founder.png'
 
+
 const About = () => {
   const navigate = useNavigate()
   const [activeIndex, setActiveIndex] = useState(1);
@@ -683,7 +684,7 @@ const About = () => {
                 solutions across India.
               </p>
 
-              <button className={styles.readButton}>
+              <button onClick={() => navigate('/projects')} className={styles.readButton}>
                 Our Projects
               </button>
             </div>
