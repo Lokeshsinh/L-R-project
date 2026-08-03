@@ -5746,7 +5746,7 @@ why choose
 .cta {
   width: 100%;
   background: url('../assets/cta.png');
-  background-attachment:fixed ;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -5845,4 +5845,740 @@ why choose
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+
+/* =======================================founder ============================================ */
+.profileFounder {
+  width: 100%;
+  padding: 72px 60px;
+  background-color: #f7f7f753;
+}
+
+.FounderTitle {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+
+.FounderTitle h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111;
+}
+
+.FounderTitle h2 span {
+  color: #233E70;
+}
+
+.foundeLine {
+  width: 120px;
+  height: 3px;
+  border-radius: 20px;
+  background: #0d2244;
+}
+
+
+.profileContainer {
+  width: 100%;
+  padding: 30px 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.photoSection {
+  position: relative;
+  width: 600px;
+  height: 610px;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mainPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .7s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, .85),
+      rgba(0, 0, 0, .15),
+      transparent);
+  transition: .5s;
+}
+
+.badges {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.badges span {
+  padding: 6px 16px;
+  border: 1px solid rgba(255, 255, 255, .6);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.bottomContent {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  z-index: 5;
+}
+
+.bottomContent h2 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+
+
+.photoSection:hover .mainPhoto {
+  transform: scale(1.1);
+}
+
+.photoSection:hover .imageOverlay {
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, .92),
+      rgba(0, 0, 0, .35),
+      transparent);
+}
+
+.photoSection:hover {
+  transform: translateY(-8px);
+}
+
+.photoSection {
+  transition: .45s;
+}
+
+.photoSection:hover .arrowBtn {
+  background: #b99052;
+  color: #fff;
+  transform: rotate(45deg) scale(1.08);
+}
+
+.photoSection:hover .badges span {
+  background: rgba(255, 255, 255, .18);
+}
+
+.bottomContent h2 {
+  transition: .45s;
+}
+
+.photoSection:hover .bottomContent h2 {
+  transform: translateX(8px);
+}
+
+
+.infoSection {
+  flex: 1;
+  position: relative;
+}
+
+.designation {
+  font-size: 17px;
+  color: #293F67;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.personName {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.personName span {
+  color: #293F67;
+}
+
+.titleDivider {
+  width: 80px;
+  height: 4px;
+  background: #293F67;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+}
+
+.infoText {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+
+
+
+
+.readButton {
+  position: relative;
+  width: 180px;
+  height: 54px;
+  border: 2px solid #293F67;
+  background: #293F67;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.readButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transform: translateX(-100%);
+  transition: transform 0.45s ease;
+  z-index: -1;
+}
+
+.readButton:hover::before {
+  transform: translateX(0);
+}
+
+.readButton:hover {
+  color: #293F67;
+  border-color: #293F67;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(41, 63, 103, 0.35);
+}
+
+.readButton:active {
+  transform: translateY(-1px);
+}
+
+.backgroundTitle {
+  position: absolute;
+  right: -40px;
+  bottom: -10px;
+  font-size: 170px;
+  font-weight: 800;
+  color: #293f6733;
+  letter-spacing: 8px;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 1;
+}
+
+
+
+.photoSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 34, 68, 0.15);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.photoSection:hover::before {
+  background: rgba(13, 34, 68, 0);
+}
+
+.photoSection:hover .mainPhoto {
+  transform: scale(1.08);
+}
+
+.goldCorner {
+  transition: all 0.45s ease;
+}
+
+.photoSection:hover .goldCorner {
+  width: 55px;
+  background: #c79b5b;
+}
+
+
+
+
+.infoSection>* {
+  transition: all .45s ease;
+}
+
+.profileHero:hover .goldLine {
+  width: 140px;
+}
+
+.profileHero:hover .titleDivider {
+  width: 130px;
+}
+
+.profileHero:hover .personName {
+  transform: translateY(-3px);
+}
+
+.profileHero:hover .designation {
+  letter-spacing: 3px;
+}
+
+
+
+.backgroundTitle {
+  transition: all .6s ease;
+}
+
+.profileHero:hover .backgroundTitle {
+  transform: translateX(-20px);
+  color: rgba(255, 255, 255, .05);
+}
+
+
+.profileHero::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(185, 144, 82, .05);
+  top: -140px;
+  right: -120px;
+}
+
+.profileHero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .03);
+  bottom: -120px;
+  left: -120px;
+}
+
+
+.mainPhoto,
+.goldCorner,
+.goldLine,
+.titleDivider,
+.personName,
+.designation,
+.readButton,
+.backgroundTitle {
+  transition: all .45s ease;
+}
+
+
+
+@media (max-width:1440px){
+
+  .profileFounder{
+    padding:75px 45px;
+  }
+
+  .FounderTitle h2{
+    font-size:50px;
+  }
+
+  .profileContainer{
+    gap:60px;
+    padding:25px 20px;
+  }
+
+  .photoSection{
+    width:520px;
+    height:590px;
+  }
+
+  .personName{
+    font-size:46px;
+  }
+
+  .backgroundTitle{
+    font-size:150px;
+  }
+
+}
+
+@media (max-width:1280px){
+
+  .profileFounder{
+    padding:70px 40px;
+  }
+
+  .FounderTitle h2{
+    font-size:46px;
+  }
+
+  .photoSection{
+    width:470px;
+    height:560px;
+  }
+
+  .bottomContent h2{
+    font-size:38px;
+  }
+
+  .designation{
+    font-size:16px;
+  }
+
+  .personName{
+    font-size:42px;
+  }
+
+  .infoText{
+    font-size:16px;
+  }
+
+}
+
+@media (max-width:1200px){
+
+  .profileContainer{
+    gap:45px;
+  }
+
+  .photoSection{
+    width:430px;
+    height:650px;
+  }
+
+  .backgroundTitle{
+    font-size:120px;
+  }
+
+}
+
+
+
+@media (max-width:1024px){
+
+  .profileFounder{
+    padding:65px 30px;
+  }
+
+  .profileContainer{
+    flex-direction:column;
+    gap:45px;
+    padding:0;
+  }
+
+  .photoSection{
+    width:100%;
+    max-width:650px;
+    height:600px;
+  }
+
+  .infoSection{
+    width:100%;
+  }
+
+  .FounderTitle{
+    margin-bottom:35px;
+  }
+
+  .FounderTitle h2{
+    font-size:40px;
+  }
+
+  .designation{
+    margin-bottom:15px;
+  }
+
+  .personName{
+    font-size:40px;
+  }
+
+  .backgroundTitle{
+    display:none;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .profileFounder{
+    padding:60px 22px;
+  }
+
+  .FounderTitle h2{
+    font-size:34px;
+  }
+
+  .foundeLine{
+    width:90px;
+  }
+
+  .photoSection{
+    height:500px;
+    border-radius:18px;
+  }
+
+  .badges{
+    top:18px;
+    left:18px;
+  }
+
+  .badges span{
+    font-size:12px;
+    padding:5px 14px;
+  }
+
+  .bottomContent{
+    left:18px;
+    right:18px;
+    bottom:18px;
+  }
+
+  .bottomContent h2{
+    font-size:32px;
+  }
+
+  .designation{
+    font-size:15px;
+    letter-spacing:1px;
+  }
+
+  .personName{
+    font-size:34px;
+  }
+
+  .titleDivider{
+    width:70px;
+    margin-bottom:22px;
+  }
+
+  .infoText{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .readButton{
+    width:170px;
+    height:50px;
+    font-size:15px;
+  }
+
+}
+
+@media (max-width:600px){
+
+  .profileFounder{
+    padding:55px 18px;
+  }
+
+  .FounderTitle h2{
+    font-size:30px;
+  }
+
+  .photoSection{
+    height:440px;
+  }
+
+  .bottomContent h2{
+    font-size:28px;
+  }
+
+  .designation{
+    font-size:14px;
+  }
+
+  .personName{
+    font-size:30px;
+  }
+
+  .infoText{
+    font-size:14px;
+  }
+
+}
+
+
+@media (max-width:480px){
+
+  .profileFounder{
+    padding:50px 15px;
+  }
+
+  .FounderTitle{
+    margin-bottom:28px;
+  }
+
+  .FounderTitle h2{
+    font-size:26px;
+  }
+
+  .foundeLine{
+    width:70px;
+  }
+
+  .photoSection{
+    height:370px;
+    border-radius:15px;
+  }
+
+  .badges{
+    gap:8px;
+  }
+
+  .badges span{
+    padding:4px 12px;
+    font-size:11px;
+  }
+
+  .bottomContent h2{
+    font-size:24px;
+  }
+
+  .designation{
+    font-size:13px;
+    letter-spacing:.5px;
+    margin-bottom:12px;
+  }
+
+  .personName{
+    font-size:27px;
+    margin-bottom:18px;
+  }
+
+  .titleDivider{
+    width:60px;
+    height:3px;
+    margin-bottom:18px;
+  }
+
+  .infoText{
+    font-size:13px;
+    line-height:1.7;
+    margin-bottom:16px;
+  }
+
+  .readButton{
+    width:160px;
+    height:48px;
+    font-size:14px;
+  }
+
+}
+
+
+@media (max-width:390px){
+
+  .FounderTitle h2{
+    font-size:23px;
+  }
+
+  .photoSection{
+    height:330px;
+  }
+
+  .bottomContent h2{
+    font-size:21px;
+  }
+
+  .personName{
+    font-size:24px;
+  }
+
+  .designation{
+    font-size:12px;
+  }
+
+  .infoText{
+    font-size:12px;
+  }
+
+  .readButton{
+    width:150px;
+    height:45px;
+    font-size:13px;
+  }
+
+}
+
+
+@media (max-width:360px){
+
+  .profileFounder{
+    padding:45px 12px;
+  }
+
+  .FounderTitle h2{
+    font-size:21px;
+  }
+
+  .photoSection{
+    height:300px;
+  }
+
+  .bottomContent{
+    left:14px;
+    right:14px;
+    bottom:14px;
+  }
+
+  .bottomContent h2{
+    font-size:18px;
+  }
+
+  .badges{
+    top:14px;
+    left:14px;
+  }
+
+  .badges span{
+    font-size:10px;
+    padding:4px 10px;
+  }
+
+  .personName{
+    font-size:22px;
+  }
+
+  .designation{
+    font-size:11px;
+  }
+
+  .infoText{
+    font-size:11px;
+    line-height:1.6;
+  }
+
+  .readButton{
+    width:145px;
+    height:44px;
+    font-size:12px;
+  }
+
 }

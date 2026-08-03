@@ -48,6 +48,7 @@ import manufacturing from "../assets/About/manufacturing.png";
 import expansion from "../assets/About/expansion.png";
 import projects from "../assets/About/projects.png";
 import found from '../assets/About/foun1.jpg'
+import founder from '../assets/About/founder.png'
 
 const About = () => {
   const navigate = useNavigate()
@@ -619,6 +620,78 @@ const About = () => {
                 alt="Manufacturing"
               />
             </div>
+          </div>
+        </section>
+
+
+        {/* ==========================founder=============================== */}
+        <section className={styles.profileFounder}>
+          <div className={styles.FounderTitle}>
+            <h2>Meet <span>Our Founder</span></h2>
+            <div className={styles.foundeLine}></div>
+          </div>
+          <div className={styles.profileContainer}>
+            <div className={styles.photoSection}>
+              <img
+                src={founder}
+                alt="Founder"
+                className={styles.mainPhoto}
+              />
+
+              <div className={styles.imageOverlay}></div>
+
+              <div className={styles.badges}>
+                <span>Founder</span>
+                <span>CEO</span>
+              </div>
+
+              <div className={styles.bottomContent}>
+                <div>
+                  <h2> Lalit</h2>
+                  <h2>Gautam</h2>
+                </div>
+
+
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className={styles.infoSection}>
+
+
+              <p className={styles.designation}>
+                Founder & CEO, L&R Enterprises
+              </p>
+
+              <h2 className={styles.personName}>
+                Lalit <span>Gautam</span>
+              </h2>
+
+              <div className={styles.titleDivider}></div>
+
+              <p className={styles.infoText}>
+                With years of expertise in the prefab, PEB, and modular construction industry, Lalit Gautam
+                founded L&R Green India   with a vision to deliver innovative, high-quality, and sustainable
+                infrastructure solutions. His commitment to excellence has helped the company build a
+                reputation for engineering precision, premium craftsmanship, and customer satisfaction.
+              </p>
+
+              <p className={styles.infoText}>
+                Driven by innovation and quality, he leads every project with a focus on modern construction technologies,
+                timely execution, and long-term value. Under his leadership, L&R Green India  continues to provide customized
+                prefab buildings, portable cabins, PEB structures, LGSF buildings, rooftop houses, and turnkey infrastructure
+                solutions across India.
+              </p>
+
+              <button className={styles.readButton}>
+                Our Projects
+              </button>
+            </div>
+
+            {/* Watermark */}
+            <h1 className={styles.backgroundTitle}>
+              PROFILE
+            </h1>
           </div>
         </section>
 
