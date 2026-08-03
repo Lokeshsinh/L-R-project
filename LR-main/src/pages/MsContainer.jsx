@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "../styles/MsContainer.module.css";
 import home from '../assets/msConatiner/home.png'
-import container from '../assets/msConatiner/container.png'
 import {
   Plus, X, CalendarClock,
   Box,
@@ -14,11 +13,12 @@ import {
 } from "lucide-react";
 import container2 from '../assets/msConatiner/conatiner2.png'
 import container3 from '../assets/msConatiner/conatiner3.png'
+import container5 from '../assets/msConatiner/container4.jpg'
+import container6 from '../assets/msConatiner/container5.jpg'
 import card1 from '../assets/msConatiner/card1.png';
 import card2 from '../assets/msConatiner/card2.png';
 import card3 from '../assets/msConatiner/card3.png';
 import card4 from '../assets/msConatiner/card4.png';
-import container4 from '../assets/msConatiner/container4.png';
 import read1 from '../assets/msConatiner/read1.png';
 import read2 from '../assets/msConatiner/read2.png';
 import read3 from '../assets/msConatiner/read3.png';
@@ -135,18 +135,23 @@ const MsContainer = () => {
       <Header />
       {/* HERO */}
       <section className={styles.hero}>
-        <h3>L&R Green India Pvt Ltd </h3>
-        <h1>MS CONTAINERS</h1>
-        <p>
-          Portable Modular Steel Containers engineering for the Oil &amp; Gas,
-          Renewable, Construction,
-          <br /> Railways, Refineries, Highways, Food and Cement industries —
-          delivered Pan-India under a <br /> Design &amp; Build model.
-        </p>
-        <button className={styles.btnWhite}>
-          <span>Contact Us</span>
-          <ArrowRight className={styles.arrow} size={18} />
-        </button>
+        <div className={styles.heroContent}>
+          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <h1 className={styles.mainTitle}>
+            MS Container <br />
+            <span>Solutions
+            </span>
+          </h1>
+          <p className={styles.heroDesc}>
+            Portable Modular Steel Containers engineered for the Oil & Gas, Construction,
+            Railways, Refineries, Highways, and Cement industries — delivered under a Design & Build model.
+
+          </p>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+            <span>Contact Us</span>
+            <ArrowRight className={styles.arrow} size={18} />
+          </button>
+        </div>
       </section>
 
 
@@ -168,7 +173,7 @@ const MsContainer = () => {
         <div className={styles.introBody}>
           {/* Left Image */}
           <div className={styles.introImg}>
-            <img src={container} alt="container" />
+            <img src={container5} alt="container" />
           </div>
 
           {/* Right Content */}
@@ -312,7 +317,7 @@ const MsContainer = () => {
             <div className={styles.blueShape}></div>
 
             <img
-              src={container4}
+              src={container6}
               alt="Container"
               className={styles.containerImg}
             />

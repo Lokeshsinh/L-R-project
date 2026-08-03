@@ -5,6 +5,7 @@ import styles from "../styles/LRValueContainer.module.css";
 import { ArrowRight, ArrowUpRight, Plus, X, ChevronLeft, ChevronRight, Box } from "lucide-react";
 import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
 import container2 from '../assets/conatiners/L&RContainer/container2.jpg'
+import container3 from '../assets/conatiners/L&RContainer/container3.jpg'
 import card1 from '../assets/conatiners/L&RContainer/card1.jpg';
 import card2 from '../assets/conatiners/L&RContainer/card2.jpg';
 import card3 from '../assets/conatiners/L&RContainer/card3.jpg';
@@ -131,6 +132,33 @@ const LRValueContainer = () => {
     return () => clearInterval(timer);
   }, [current]);
 
+
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+
+    const handleResize = () => {
+
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1200) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+
+      }
+
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
+
+
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % cards.length);
   };
@@ -138,7 +166,6 @@ const LRValueContainer = () => {
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
   };
-
 
 
   const industryProjects = [
@@ -221,9 +248,6 @@ const LRValueContainer = () => {
       <section className={styles.intro}>
         <div className={styles.introGrid}>
           <div className={styles.frameWrap}>
-            <span className={styles.cornerTop}></span>
-            <span className={styles.cornerBottoms}></span>
-
             <div className={styles.photoFrame}>
               <img src={container2} alt="Container" />
             </div>
@@ -296,7 +320,7 @@ const LRValueContainer = () => {
             <div
               className={styles.sliderTrack}
               style={{
-                transform: `translateX(-${current * 33.333}%)`,
+                transform: `translateX(-${current * (100 / cardsPerView)}%)`,
               }}
             >
               {[...cards, ...cards.slice(0, 3)].map((card, index) => (
@@ -355,8 +379,6 @@ const LRValueContainer = () => {
             </p>
           </div>
           <div className={styles.wrapperss}>
-            <span className={styles.topCorners}></span>
-            <span className={styles.bottomCorners}></span>
             <div className={styles.imageBoxs}>
               <img src={container1} alt="Container" />
             </div>
@@ -371,9 +393,6 @@ const LRValueContainer = () => {
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
-            <h1>L&R VALUES CONTAINERS</h1>
-            <h1>L&R VALUES CONTAINERS</h1>
-            <h1>L&R VALUES CONTAINERS</h1>
             <h1>L&R VALUES CONTAINERS</h1>
           </div>
         </div>
@@ -466,13 +485,8 @@ const LRValueContainer = () => {
 
         {/*  */}
         <div className={styles.faqBody}>
-          <div className={styles.wrappers}>
-            <span className={styles.topCorner}></span>
-            <span className={styles.bottomCorner}></span>
-            <div className={styles.imageBox}>
-              <img src={container1} alt="Container" />
-            </div>
-
+          <div className={styles.faqImg}>
+            <img src={container3} alt="container" />
           </div>
           {/*  */}
 
@@ -513,8 +527,9 @@ const LRValueContainer = () => {
       </section>
 
 
+
       {/* ── CTA ── */}
-      <section className={styles.ctaBanner}>
+      {/* <section className={styles.ctaBanner}>
         <div className={styles.ctaInner}>
           <h2>Ready for Your L&R Value Granted MS Containers ?</h2>
           <p>
@@ -530,6 +545,26 @@ const LRValueContainer = () => {
             </span>
           </button>
         </div>
+      </section> */}
+
+
+
+      <section className={styles.cta}>
+        <h2>Ready for Your L&R Value Granted MS Containers ?</h2>
+        <p>
+          Connect with our team to design and deliver compact, durable, and
+          fully L&R Value Granted MS Containers tailored to your site needs.
+        </p>
+
+
+        <button className={styles.contactBtn}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
       </section>
 
       <Footer />

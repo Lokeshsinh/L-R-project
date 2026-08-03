@@ -4,11 +4,11 @@ import Footer from "../components/common/Footer";
 import styles from "../styles/PUFContainer.module.css";
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X } from "lucide-react";
 import can1 from '../assets/conatiners/pufContainer/can1.png'
-import can2 from '../assets/conatiners/pufContainer/can2.png'
-import card1 from '../assets/conatiners/pufContainer/card1.png';
-import card2 from '../assets/conatiners/pufContainer/card2.png';
-import card3 from '../assets/conatiners/pufContainer/card3.png';
-import card4 from '../assets/conatiners/pufContainer/card4.png';
+import can2 from '../assets/conatiners/pufContainer/can2.jpg'
+import card1 from '../assets/conatiners/pufContainer/card1.jpg';
+import card2 from '../assets/conatiners/pufContainer/card2.jpg';
+import card3 from '../assets/conatiners/pufContainer/card3.jpg';
+import card4 from '../assets/conatiners/pufContainer/card4.jpg';
 import faq from '../assets/conatiners/pufContainer/faq.png';
 import design from '../assets/conatiners/pufContainer/design1.png';
 import design1 from '../assets/conatiners/pufContainer/design2.png';
@@ -127,6 +127,29 @@ const PUFContainer = () => {
     return () => clearInterval(timer);
   }, [current]);
 
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+
+    const handleResize = () => {
+
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1200) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+
+      }
+
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
+
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % cards.length);
   };
@@ -134,7 +157,6 @@ const PUFContainer = () => {
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
   };
-
 
 
 
@@ -255,6 +277,10 @@ const PUFContainer = () => {
         </div>
       </section>
 
+
+
+
+
       {/* ── Sizes ── */}
       <section className={styles.sizesSec}>
         <div className={styles.sizesInner}>
@@ -287,7 +313,7 @@ const PUFContainer = () => {
             <div
               className={styles.sliderTrack}
               style={{
-                transform: `translateX(-${current * 33.333}%)`,
+                transform: `translateX(-${current * (100 / cardsPerView)}%)`,
               }}
             >
               {[...cards, ...cards.slice(0, 3)].map((card, index) => (
@@ -325,8 +351,8 @@ const PUFContainer = () => {
       <section className={styles.whySec}>
         <div className={styles.WhyText}>
           <h2 >
-            Why Choose L&R Value <br />
-            <span>Granted MS Containers</span>
+            Why Choose Puf <br />
+            <span>MS Containers</span>
           </h2>
           <div className={styles.introLine}></div>
         </div>
@@ -357,14 +383,15 @@ const PUFContainer = () => {
         </div>
       </section>
 
+
+
+
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
             <h1>PUF MS CONTAINER</h1>
-            <h1>PUF MS CONTAINER</h1>
-            <h1>PUF MS CONTAINER</h1>
-            <h1>PUF MS CONTAINER</h1>
+
 
           </div>
         </div>
@@ -377,15 +404,15 @@ const PUFContainer = () => {
             </h2>
 
             <p>
-            At L&R, we combine advanced engineering, high-quality materials,
-             and precision manufacturing processes 
-            to deliver durable and reliable MS and PUF container solutions 
-            that meet the highest industry standards.
+              At L&R, we combine advanced engineering, high-quality materials,
+              and precision manufacturing processes
+              to deliver durable and reliable MS and PUF container solutions
+              that meet the highest industry standards.
             </p>
 
             <div className={styles.LastImage}>
               <img src={design1} alt="png" />
-              </div>
+            </div>
           </div>
 
           <div className={styles.mfgImgWrapper}>

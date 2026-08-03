@@ -263,7 +263,7 @@ function HomeContainer() {
                                         className={`${styles.featureCard} ${item.active ? styles.activeCard : ""
                                             }`}
                                     >
-                                        <div className={styles.iconBox}>
+                                        <div className={styles.iconBoxs}>
                                             <Icon size={42} strokeWidth={1.5} />
                                         </div>
 
@@ -409,6 +409,8 @@ function HomeContainer() {
                     </div>
 
                 </section>
+
+
 
                 {/* ── FAQ ── */}
                 <section className={styles.faqSec}>

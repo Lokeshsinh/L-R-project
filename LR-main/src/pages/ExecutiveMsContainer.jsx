@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ChevronLeft, ChevronRight, Box } from "lucide-react";
 import { Plus, X } from "lucide-react";
 import container2 from '../assets/conatiners/ExecutiveContainer/contact.png'
-import card1 from '../assets/conatiners/ExecutiveContainer/card1.png';
+import card1 from '../assets/conatiners/ExecutiveContainer/card1.jpg';
 import card2 from '../assets/conatiners/ExecutiveContainer/card2.png';
 import card3 from '../assets/conatiners/ExecutiveContainer/card3.png';
 import card4 from '../assets/conatiners/ExecutiveContainer/card4.png';
@@ -133,6 +133,31 @@ const ExecutiveMsContainer = () => {
     return () => clearInterval(timer);
   }, [current]);
 
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+
+    const handleResize = () => {
+
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1200) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+
+      }
+
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
+
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % cards.length);
   };
@@ -200,19 +225,24 @@ const ExecutiveMsContainer = () => {
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            EXECUTIVE MS <br />
-            <span>CONTAINERS</span>
+            Executive MS <br />
+            <span>Containers
+            </span>
           </h1>
           <p className={styles.heroDesc}>
-            Strong and durable Executive MS Containers designed for offices,
-            accommodation, storage, and all site-based modular space needs.
+            Strong and durable Executive MS Containers designed for offices, accommodation,
+            storage, and all site-based modular space needs.
+
           </p>
-          <button className={styles.btnWhite}>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
+
+
+
 
 
       {/* ── Intro ── */}
@@ -253,14 +283,14 @@ const ExecutiveMsContainer = () => {
               they ensure comfort, safety, and efficiency, making them ideal for
               construction sites, industries, and remote project locations.
             </p>
-              <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
-                <span>Get Contact</span>
+            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <span>Get Contact</span>
 
-                <span className={styles.iconWrap}>
-                  <ArrowUpRight className={styles.icon1} size={18} />
-                  <ArrowUpRight className={styles.icon2} size={18} />
-                </span>
-              </button>
+              <span className={styles.iconWrap}>
+                <ArrowUpRight className={styles.icon1} size={18} />
+                <ArrowUpRight className={styles.icon2} size={18} />
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -299,7 +329,7 @@ const ExecutiveMsContainer = () => {
             <div
               className={styles.sliderTrack}
               style={{
-                transform: `translateX(-${current * 33.333}%)`,
+                transform: `translateX(-${current * (100 / cardsPerView)}%)`,
               }}
             >
               {[...cards, ...cards.slice(0, 3)].map((card, index) => (
@@ -384,10 +414,6 @@ const ExecutiveMsContainer = () => {
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
             <h1>L&R Executive ConTAINER </h1>
-            <h1>L&R Executive ConTAINER </h1>
-            <h1>L&R Executive ConTAINER </h1>
-            <h1>L&R Executive ConTAINER </h1>
-
           </div>
         </div>
 
@@ -399,11 +425,11 @@ const ExecutiveMsContainer = () => {
             </h2>
 
             <p>
-             Executive MS Containers are manufactured using high-grade mild steel 
-             with precision welding and strong structural design to ensure maximum
+              Executive MS Containers are manufactured using high-grade mild steel
+              with precision welding and strong structural design to ensure maximum
               strength and stability. Each unit is built under
               strict quality standards, making it durable, safe, and suitable for
-               heavy-duty construction and industrial site applications.
+              heavy-duty construction and industrial site applications.
             </p>
 
             <div className={styles.LastImage}>

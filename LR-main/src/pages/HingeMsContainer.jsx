@@ -3,12 +3,13 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/HingeMsContainer.module.css";
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Box, Plus, X } from "lucide-react";
-import container1 from '../assets/conatiners/HigneContainer/container1.png'
+import container1 from '../assets/conatiners/HigneContainer/container1.jpg'
 import container2 from '../assets/conatiners/HigneContainer/container2.png'
-import card1 from '../assets/conatiners/HigneContainer/card2.png';
-import card2 from '../assets/conatiners/HigneContainer/card1.png';
-import card3 from '../assets/conatiners/pufContainer/card3.png';
-import card4 from '../assets/conatiners/HigneContainer/card4.png';
+import container3 from '../assets/conatiners/HigneContainer/container3.jpg'
+import card1 from '../assets/conatiners/HigneContainer/card1.jpg';
+import card2 from '../assets/conatiners/HigneContainer/card2.png';
+import card3 from '../assets/conatiners/HigneContainer/card3.jpg';
+import card4 from '../assets/conatiners/HigneContainer/card4.jpg';
 import design from '../assets/conatiners/HigneContainer/design.png';
 import design1 from '../assets/conatiners/HigneContainer/design1.png';
 const cards = [
@@ -124,6 +125,29 @@ const HingeMsContainer = () => {
 
     return () => clearInterval(timer);
   }, [current]);
+
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+
+    const handleResize = () => {
+
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1200) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+
+      }
+
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % cards.length);
@@ -279,7 +303,7 @@ const HingeMsContainer = () => {
             <div
               className={styles.sliderTrack}
               style={{
-                transform: `translateX(-${current * 33.333}%)`,
+                transform: `translateX(-${current * (100 / cardsPerView)}%)`,
               }}
             >
               {[...cards, ...cards.slice(0, 3)].map((card, index) => (
@@ -309,6 +333,9 @@ const HingeMsContainer = () => {
           </div>
         </div>
       </section>
+
+
+
 
 
       {/* ── Why Choose ── */}
@@ -349,9 +376,6 @@ const HingeMsContainer = () => {
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
-            <h1>Hinge  MS Container</h1>
-            <h1>Hinge  MS Container</h1>
-            <h1>Hinge  MS Container</h1>
             <h1>Hinge  MS Container</h1>
           </div>
         </div>
@@ -477,7 +501,7 @@ const HingeMsContainer = () => {
           </div>
 
           <div className={styles.faqImg}>
-            <img src={container1} alt="container" />
+            <img src={container3} alt="container" />
           </div>
         </div>
       </section>

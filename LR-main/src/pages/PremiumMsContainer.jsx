@@ -3,18 +3,20 @@ import {
   Plus, X
 } from "lucide-react";
 import { ChevronLeft, ChevronRight, Box } from "lucide-react";
+import { useNavigate } from 'react-router-dom'
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "../styles/PremiumMsContainer.module.css";
 import room1 from '../assets/conatiners/premiumContainer/room1.png';
 import room2 from '../assets/conatiners/premiumContainer/room2.png'
-import room3 from '../assets/conatiners/premiumContainer/room3.png'
 import card1 from '../assets/conatiners/premiumContainer/can.png';
 import card2 from '../assets/conatiners/premiumContainer/can3.png';
 import card3 from '../assets/conatiners/premiumContainer/can2.png';
-import card4 from '../assets/conatiners/premiumContainer/can4.png';
-import container2 from '../assets/msConatiner/conatiner2.png'
+import card4 from '../assets/conatiners/premiumContainer/can4.jpg';
+import container3 from '../assets/conatiners/premiumContainer/con5.png';
+import container4 from '../assets/conatiners/premiumContainer/con5.jpg';
+import container5 from '../assets/conatiners/premiumContainer/con6.jpg';
 import design from '../assets/conatiners/premiumContainer/design.png';
 import design1 from '../assets/conatiners/premiumContainer/design1.png';
 
@@ -122,6 +124,7 @@ const cards = [
 
 const PremiumMsContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const navigate = useNavigate()
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -136,6 +139,32 @@ const PremiumMsContainer = () => {
 
     return () => clearInterval(timer);
   }, [current]);
+
+
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+
+    const handleResize = () => {
+
+      if (window.innerWidth < 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1200) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+
+      }
+
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+
+  }, []);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % cards.length);
@@ -205,19 +234,26 @@ const PremiumMsContainer = () => {
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
-            PREMIUM MS <br />
-            <span>CONTAINERS</span>
+            Premium MS<br />
+            <span>Containers
+            </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Value Granted MS Container delivers durable mild steel container solutions
-            for secure storage, transport, and industrial use.
+            Premium MS Containers delivering durable, flexible, and fast-deploy modular
+            solutions for industrial, commercial, and site-based applications.
+
           </p>
-          <button className={styles.btnWhite}>
+          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
       </section>
+
+
+
+
+
 
       {/* ── Intro ── */}
       <section className={styles.intro}>
@@ -263,6 +299,11 @@ const PremiumMsContainer = () => {
       </section>
 
 
+
+
+
+
+
       {/* ── Why Choose ── */}
       <section className={styles.whySec}>
         <div className={styles.whyText}>
@@ -291,14 +332,16 @@ const PremiumMsContainer = () => {
           </div>
           <div className={styles.whyImagesCol}>
             <div className={styles.whyImgTop}>
-              <img src={room3} alt="room" />
+              <img src={container4} alt="room" />
             </div>
             <div className={styles.whyImgBottom}>
-              <img src={room2} alt="room" />
+              <img src={container5} alt="room" />
             </div>
           </div>
         </div>
       </section>
+
+
 
 
       {/* ── Sizes Grid ── */}
@@ -331,7 +374,7 @@ const PremiumMsContainer = () => {
             <div
               className={styles.sliderTrack}
               style={{
-                transform: `translateX(-${current * 33.333}%)`,
+                transform: `translateX(-${current * (100 / cardsPerView)}%)`,
               }}
             >
               {[...cards, ...cards.slice(0, 3)].map((card, index) => (
@@ -368,10 +411,6 @@ const PremiumMsContainer = () => {
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
             <h1>PUF MS CONTAINER</h1>
-            <h1>PUF MS CONTAINER</h1>
-            <h1>PUF MS CONTAINER</h1>
-            <h1>PUF MS CONTAINER</h1>
-
           </div>
         </div>
 
@@ -383,9 +422,9 @@ const PremiumMsContainer = () => {
             </h2>
 
             <p>
-              Built with heavy-duty MS steel and precision fabrication, these containers 
-              deliver superior strength, stability, and long-lasting performance in tough working conditions.They are 
-              manufactured under strict quality control to ensure durability, safety, and 
+              Built with heavy-duty MS steel and precision fabrication, these containers
+              deliver superior strength, stability, and long-lasting performance in tough working conditions.They are
+              manufactured under strict quality control to ensure durability, safety, and
               reliable use across industrial and commercial applications
             </p>
 
@@ -461,7 +500,7 @@ const PremiumMsContainer = () => {
         {/*  */}
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
-            <img src={container2} alt="container" />
+            <img src={container3} alt="container" />
           </div>
           {/*  */}
 
