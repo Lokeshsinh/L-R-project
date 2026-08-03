@@ -151,7 +151,7 @@ const FactoryBuilding = () => {
           </div>
 
           <div className={styles.introImgs}>
-            <input src={container2} alt="container" />
+            <img  src={container2} alt="container" />
           </div>
         </div>
       </section>

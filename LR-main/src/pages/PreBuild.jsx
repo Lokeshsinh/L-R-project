@@ -183,7 +183,7 @@ function PreBuild() {
                 {/* INTRO */}
                 <section className={styles.splitSection}>
                     <div className={styles.splitText}>
-                        <h2>L&R Cold  <span>Room Solutions</span></h2>
+                        <h2> L&R Pre-Engineered <span>Building</span></h2>
                         <div className={styles.introLine}></div>
                     </div>
                     <div className={styles.textSide}>
