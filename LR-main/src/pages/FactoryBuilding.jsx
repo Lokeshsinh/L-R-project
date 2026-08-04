@@ -9,10 +9,14 @@ import container2 from '../assets/Pre-Build/Factory/container2.png'
 import container3 from '../assets/Pre-Build/Factory/container3.png'
 import card1 from '../assets/Pre-Build/Factory/card1.png';
 import card2 from '../assets/Pre-Build/Factory/card2.png';
-import card3 from '../assets/Pre-Build/Factory/card3.png';
+import card3 from '../assets/Pre-Build/Factory/card5.png';
 import card4 from '../assets/Pre-Build/Factory/card4.png';
 import design from '../assets/Pre-Build/Factory/design.png'
 import design1 from '../assets/Pre-Build/Factory/design1.png'
+import user1 from '../assets/Pre-Build/Factory/user1.jpg'
+import user2 from '../assets/Pre-Build/Factory/user2.jpg'
+import user3 from '../assets/Pre-Build/Factory/user3.jpg'
+import user4 from '../assets/Pre-Build/Factory/user4.jpg'
 
 
 
@@ -78,25 +82,25 @@ const FactoryBuilding = () => {
       title: "Design & Planning",
       description:
         "Detailed factory layout planning based on production workflow, machinery requirements, and load calculations.",
-      image: "/Images/process1.jpg",
+      image: user1,
     },
     {
       title: "Manufacturing",
       description:
         "Fabrication of steel structures and building components using high-quality materials and advanced technology.",
-      image: "/Images/process2.jpg",
+      image: user2,
     },
     {
       title: "Quality & Integration",
       description:
         "Comprehensive quality checks, structural validation, and integration of roofing, insulation, and utility systems.",
-      image: "/Images/process3.jpg",
+      image: user3,
     },
     {
       title: "Installation & Commissioning",
       description:
         "On-site erection, structural alignment, and final commissioning for ready-to-use factory buildings.",
-      image: "/Images/process4.jpg",
+      image: user4,
     },
   ];
   return (

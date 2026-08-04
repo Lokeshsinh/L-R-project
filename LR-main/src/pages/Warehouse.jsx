@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/Warehouse.module.css";
-import { ArrowRight, ArrowUpRight, Plus, X } from "lucide-react";
+import {
+  ArrowRight, ArrowUpRight, Plus, X, DraftingCompass,
+  Factory,
+  ShieldCheck,
+  HardHat,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import warehouse1 from '../assets/Pre-Build/warehouse/warehouse.png'
 import card1 from '../assets/Pre-Build/warehouse/card1.png';
@@ -28,7 +33,6 @@ const faqs = [
 
 const Warehouse = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-  const [activeStep, setActiveStep] = useState(0);
   const navigate = useNavigate()
 
   const toggleFAQ = (index) => {
@@ -37,30 +41,35 @@ const Warehouse = () => {
 
   const processData = [
     {
+      id: "01",
       title: "Design & Planning",
       description:
         "Customized warehouse layouts are developed based on storage capacity, site conditions, and operational requirements.",
-      image: "/Images/process1.jpg",
+      icon: <DraftingCompass size={34} />,
     },
     {
+      id: "02",
       title: "Manufacturing",
       description:
         "Precision fabrication using high-quality steel, advanced machinery, and controlled factory processes.",
-      image: "/Images/process2.jpg",
+      icon: <Factory size={34} />,
     },
     {
+      id: "03",
       title: "Quality & Integration",
       description:
         "Comprehensive quality checks, structural validation, and integration of insulation, ventilation, and accessories.",
-      image: "/Images/process3.jpg",
+      icon: <ShieldCheck size={34} />,
     },
     {
+      id: "04",
       title: "Installation & Handover",
       description:
         "On-site erection, alignment, and final finishing with timely project delivery and handover.",
-      image: "/Images/process4.jpg",
+      icon: <HardHat size={34} />,
     },
   ];
+
   const industryProjects = [
     {
       title: "Industrial Warehouses",
@@ -238,51 +247,20 @@ const Warehouse = () => {
           </div>
           <p>Our structured process ensures efficient execution from design and engineering to quality assurance and final handover.</p>
         </div>
-        <div className={styles.processSection}>
-          {/* LEFT IMAGE */}
-          <div className={styles.leftSide}>
-           
-          </div>
+        <div className={styles.cardWrapper}>
+          {processData.map((item) => (
+            <div className={styles.processCard} key={item.id}>
+              <span className={styles.step}>{item.id}</span>
 
-          <div className={styles.rightPanel}>
-            {processData.map((item, index) => (
-              <div
-                key={item.id}
-                className={styles.processItem}
-                onMouseEnter={() => setActiveStep(index)}
-              >
-                {/* Timeline */}
-                <div className={styles.timeline}>
-                  <div
-                    className={`${styles.circle} ${activeStep === index ? styles.circleActive : ""
-                      }`}
-                  >
-                    <span className={styles.innerCircle}></span>
-                  </div>
-
-                  {index !== processData.length - 1 && (
-                    <div
-                      className={`${styles.line} ${activeStep >= index ? styles.lineActive : ""
-                        }`}
-                    ></div>
-                  )}
-                </div>
-
-                {/* Text */}
-                <div className={styles.content}>
-                  <h3
-                    className={
-                      activeStep === index ? styles.titleActive : ""
-                    }
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p>{item.description}</p>
-                </div>
+              <div className={styles.iconCircle}>
+                {item.icon}
               </div>
-            ))}
-          </div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+
+              <span className={styles.topBorder}></span>
+            </div>
+          ))}
         </div>
       </section>
 
