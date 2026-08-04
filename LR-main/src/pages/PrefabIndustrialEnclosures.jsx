@@ -352,6 +352,9 @@ const PrefabIndustrialEnclosures = () => {
         </div>
       </section>
 
+
+
+
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
         <span className={styles.introLabel}>• FAQS</span>

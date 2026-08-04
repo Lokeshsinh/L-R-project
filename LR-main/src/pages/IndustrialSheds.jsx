@@ -10,12 +10,12 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import shed1 from '../assets/Pre-Build/industrylSheld/shed.png'
-import shed2 from '../assets/Pre-Build/industrylSheld/shed1.png'
+import shed2 from '../assets/Pre-Build/industrylSheld/shed1.jpg'
 import shed3 from '../assets/Pre-Build/industrylSheld/shed2.png'
-import card1 from '../assets/Pre-Build/industrylSheld/card1.png';
-import card2 from '../assets/Pre-Build/industrylSheld/card2.png';
-import card3 from '../assets/Pre-Build/industrylSheld/card3.png';
-import card4 from '../assets/Pre-Build/industrylSheld/card4.png';
+import card1 from '../assets/Pre-Build/industrylSheld/card5.jpg';
+import card2 from '../assets/Pre-Build/industrylSheld/card6.jpg';
+import card3 from '../assets/Pre-Build/industrylSheld/card7.jpg';
+import card4 from '../assets/Pre-Build/industrylSheld/card8.jpg';
 import design from '../assets/Pre-Build/industrylSheld/design.png'
 import design1 from '../assets/Pre-Build/industrylSheld/design1.png'
 

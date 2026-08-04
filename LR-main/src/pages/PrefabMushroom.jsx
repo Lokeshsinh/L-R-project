@@ -345,7 +345,9 @@ const PrefabMushroom = () => {
 
 
       {/* ── Advantages ── */}
-      <section className={styles.advSec}>
+ 
+
+     <section className={styles.advSec}>
         <div className={styles.secTitle}>
           <h2>
             Advantages of Prefab<br />
@@ -405,8 +407,6 @@ const PrefabMushroom = () => {
           </div>
         </div>
       </section>
-
-
 
 
 

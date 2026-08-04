@@ -23,8 +23,8 @@ import design from '../assets/PREFAB/PrefabModular/design.png'
 import design1 from '../assets/PREFAB/controllRoom/design1.png'
 import card1 from '../assets/PREFAB/PrefabModular/card1.png';
 import card2 from '../assets/PREFAB/PrefabModular/card2.png';
-import card3 from '../assets/PREFAB/PrefabModular/card3.png';
-import card4 from '../assets/PREFAB/PrefabModular/card4.jpg';
+import card3 from '../assets/PREFAB/PrefabModular/card6.jpg';
+import card4 from '../assets/PREFAB/PrefabModular/card7.jpg';
 
 
 const benefitCards = [
@@ -154,13 +154,13 @@ function PrefabModular() {
             img: card2,
         },
         {
-            title: "Labor Hutments",
-            desc: "Comfortable labor hutments providing safe and practical workforce accommodation. Built for quick installation, strength, and long-term durability.",
+            title: " Prefab labour accommodation",
+            desc: "Safe, durable, and comfortable modular accommodation for workforce housing with quick installation, low maintenance, and modern amenities.",
             img: card3,
         },
         {
-            title: "Prefabricated Toilets",
-            desc: "Prefabricated toilets offering hygienic and efficient sanitation solutions. Designed for fast installation, easy maintenance, and reliable daily use.",
+            title: "Prefab Sales Office",
+            desc: "Modern prefabricated sales offices designed to create a professional customer experience with quick installation, premium interiors, and fully customizable layouts.",
             img: card4,
         },
     ];

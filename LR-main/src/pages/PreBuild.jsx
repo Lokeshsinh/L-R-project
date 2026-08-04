@@ -15,10 +15,10 @@ import { useNavigate } from 'react-router-dom'
 import PreBuild1 from '../assets/Pre-Build/PreBuild/prebuild.png'
 import PreBuild2 from '../assets/Pre-Build/PreBuild/prebuild1.png'
 import PreBuild3 from '../assets/Pre-Build/PreBuild/prebuild2.png'
-import card1 from '../assets/Pre-Build/PreBuild/card.png';
-import card2 from '../assets/Pre-Build/PreBuild/card1.png';
-import card3 from '../assets/Pre-Build/PreBuild/card3.png';
-import card4 from '../assets/Pre-Build/PreBuild/card2.png';
+import card1 from '../assets/Pre-Build/PreBuild/card5.png';
+import card2 from '../assets/Pre-Build/PreBuild/card6.png';
+import card3 from '../assets/Pre-Build/PreBuild/card7.jpg';
+import card4 from '../assets/Pre-Build/PreBuild/card8.jpg';
 import design from '../assets/Pre-Build/PreBuild/design.png'
 import design1 from '../assets/Pre-Build/PreBuild/design1.png'
 import user1 from '../assets/Pre-Build/PreBuild/user1.png'
