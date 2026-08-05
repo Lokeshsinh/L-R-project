@@ -435,7 +435,7 @@ export const WallPufPanels = () => {
       {/* ── ADVANTAGES ── */}
       <section className={styles.wallFeatureSection}>
         <div className={styles.wallFeatureHeading}>
-          <h2>Advantages of Prefabricated <br /><span>Railway & Telecom Shelters</span></h2>
+          <h2>Advantages of <br /><span>Wall PUF Panel</span></h2>
           <div className={styles.wallFeatureLine}></div>
         </div>
 

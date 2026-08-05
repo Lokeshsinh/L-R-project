@@ -291,9 +291,7 @@ const RooftopResidential = () => {
       {/* ── SECTION 4: ENGINEERED FOR SAFE URBAN LIVING ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Roof top residential flat </h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -402,7 +400,7 @@ const RooftopResidential = () => {
       {/* ── SECTION 6: WHY CHOOSE ROOFTOP PREFAB ROOMS ── */}
       <section className={styles.SolarEpic}>
         <div className={styles.solarEpicTitle}>
-          <h2>Why Choose Solar <br /><span>EPC Services</span></h2>
+          <h2>Why Choose Roof<br /><span>Top Residential Flat</span></h2>
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>

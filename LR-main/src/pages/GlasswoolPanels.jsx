@@ -298,7 +298,7 @@ const GlasswoolPanels = () => {
       <section className={styles.CoreService}>
         <div className={styles.CoreServiceFlex}>
           <div className={styles.coreServiceText}>
-            <h2>Benefits of<br /><span>Rockwool Panels</span></h2>
+            <h2>Applications of <br /><span>Glass Wool Panels</span></h2>
             <div className={styles.divider}></div>
           </div>
           <p>Glass wool panels from L&R Green Pvt Ltd are designed for versatile use across industrial,

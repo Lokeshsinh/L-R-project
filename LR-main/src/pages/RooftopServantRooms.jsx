@@ -224,9 +224,7 @@ const RooftopServantRooms = () => {
       {/* ── SECTION 4: FULLY CUSTOMIZABLE ROOFTOP SERVANT ROOM SOLUTIONS ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R servant room</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -333,7 +331,7 @@ const RooftopServantRooms = () => {
       {/* ── SECTION 6: WHY CHOOSE ROOFTOP GUEST ROOM STRUCTURES? ── */}
       <section className={styles.SolarEpic}>
         <div className={styles.solarEpicTitle}>
-          <h2>Why Choose Solar <br /><span>EPC Services</span></h2>
+          <h2>Why Choose Rooftop <br /><span>Servent Room Structures?</span></h2>
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>

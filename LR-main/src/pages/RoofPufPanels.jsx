@@ -457,7 +457,7 @@ const RoofPufPanels = () => {
       {/* ── ADVANTAGES OVER CONVENTIONAL ROOFING ── */}
       <section className={styles.TechUser}>
         <div className={styles.TechText}>
-          <h2>EPS Panels <br /><span>Technical Specifications</span></h2>
+          <h2>Advantages Over <br /><span>Conventional Roofing</span></h2>
           <div className={styles.TechLine}></div>
         </div>
         <div className={styles.TechFlex}>

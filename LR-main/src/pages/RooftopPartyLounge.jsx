@@ -205,11 +205,11 @@ const RooftopPartyLounge = () => {
               </div>
             </div>
           </div>
-          <div className={styles.galleryImageContainer}>
+          <div className={styles.galleryImageContainers}>
             <img
               src={party2}
               alt="Terrace"
-              className={styles.galleryImage}
+              className={styles.galleryImages}
             />
 
             <div className={styles.galleryOverlay}></div>
@@ -227,9 +227,7 @@ const RooftopPartyLounge = () => {
 
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R party lou nge</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -316,7 +314,7 @@ const RooftopPartyLounge = () => {
       */}
       <section className={styles.SolarEpic}>
         <div className={styles.solarEpicTitle}>
-          <h2>Why Choose Solar <br /><span>EPC Services</span></h2>
+          <h2>Why L&R Rooftop<br /><span>Party Lounge Uses</span></h2>
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>
@@ -331,13 +329,14 @@ const RooftopPartyLounge = () => {
           </div>
           {/*  */}
           <div className={styles.solartext}>
-            <p>At L&R Green India Pvt Ltd, we specialize in delivering safe, durable, and high-performance
-              rooftop residential structures using advanced steel engineering and modern prefabrication
-              technology. Our focus is on creating reliable solutions that ensure strength, efficiency,
-              and long-term value for urban living spaces.</p>
-            <p>With a strong commitment to quality and precision, we provide complete turnkey solutions
-              from design to execution. Our expert team ensures fast project delivery, safe installation
-              over existing buildings, and the use of high-quality materials and insulation systems for superior results.</p>
+            <p>L&R Green India Pvt Ltd specializes in advanced prefabricated rooftop solutions that combine
+              safety, durability, and modern design to create premium rooftop party lounges. With strong
+              structural engineering expertise, high-quality materials, safe installation systems, quick
+              execution, and fully customized architectural solutions, we deliver reliable and stylish
+              rooftop transformations.</p>
+            <p>Our rooftop party lounges are perfect for a variety of uses, including birthday and private
+              parties, corporate gatherings, rooftop cafés and lounges, evening social events, weekend family
+              celebrations, and small event hosting spaces, making them a versatile solution for both personal and commercial needs.</p>
           </div>
         </div>
       </section>
@@ -352,8 +351,8 @@ const RooftopPartyLounge = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about prefabricated rooftop residential flats, including
-            installation, safety, customization, and suitability for different building types.</p>
+          <p>Prefabricated rooftop party lounges are lightweight structures that turn rooftops into modern
+            event spaces. Here are some common FAQs about their features and benefits.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
