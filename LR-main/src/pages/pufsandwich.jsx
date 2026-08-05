@@ -258,10 +258,6 @@ const PufSandwich = () => {
       {/* ── ADVANCED MANUFACTURING TECHNOLOGY ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R PUF Sandwich Panels</h1>
-
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>

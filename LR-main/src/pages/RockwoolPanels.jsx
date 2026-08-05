@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RockwoolPanels.module.css";
 import {
-  ArrowRight, ArrowUpRight, Paperclip, Plus, X, Flame,BriefcaseBusiness, Layers,Fan,
+  ArrowRight, ArrowUpRight, Paperclip, Plus, X, Flame, BriefcaseBusiness, Layers, Fan,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import rock1 from '../assets/panel/rookwall/roock1.png'
@@ -13,7 +13,8 @@ import rock4 from '../assets/panel/rookwall/rock4.png'
 import rock5 from '../assets/panel/rookwall/rock5.png'
 import rock6 from '../assets/panel/rookwall/rock6.png'
 import rock7 from '../assets/panel/rookwall/rock7.png'
-
+import rock8 from '../assets/panel/rookwall/rock8.png'
+import rock9 from '../assets/panel/rookwall/rock9.png'
 import design from '../assets/panel/rookwall/design.png'
 import design1 from '../assets/panel/rookwall/design1.png'
 
@@ -256,11 +257,11 @@ const RockwoolPanels = () => {
           </div>
           <div className={styles.rockwoolImageWrapper}>
             <div className={styles.rockwoolMainImage}>
-              <img src={rock1} alt="Main Building" />
+              <img src={rock8} alt="Main Building" />
             </div>
 
             <div className={styles.rockwoolFloatingImage}>
-              <img src={rock2} alt="Interior" />
+              <img src={rock9} alt="Interior" />
             </div>
           </div>
         </div>
@@ -271,9 +272,7 @@ const RockwoolPanels = () => {
       {/* ── SECTION 4: QUALITY & MANUFACTURING EXCELLENCE ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Rockwool Panels</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -492,12 +491,30 @@ const RockwoolPanels = () => {
 
 
       {/* ── CTA BANNER ── */}
+      {/* <section className={styles.cta}>
+        <h2>Ready for Your Rockwool Panels Solution?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and fully
+          customized insulated Rockwool Panels solutions tailored to your site needs.
+        </p>
+        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
+      </section> */}
+
       <section className={styles.cta}>
         <h2>Ready for Your Rockwool Panels Solution?</h2>
         <p>
           Connect with our team to design and deliver durable, efficient, and fully
           customized insulated Rockwool Panels solutions tailored to your site needs.
         </p>
+
+
         <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
           <span className={styles.contactText}>Contact Us</span>
 

@@ -257,9 +257,7 @@ function EpcPanel() {
             {/* ── SECTION 4: ENGINEERED FOR SAFE URBAN LIVING ── */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-                    <div className={styles.scrollTrack}>
-                        <h1>L & R EPS Panels</h1>
-                    </div>
+                
                 </div>
 
                 <div className={styles.mfgContainer}>
@@ -375,7 +373,7 @@ function EpcPanel() {
             <section className={styles.epsSection}>
                 <div className={styles.epsHeading}>
                     <h2>
-                        Why Choose<br />
+                       Applications of <br />
                         <span>EPS Panels?</span>
                     </h2>
                     <div className={styles.headingDivider}></div>

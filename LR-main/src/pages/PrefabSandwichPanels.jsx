@@ -324,9 +324,7 @@ const PrefabSandwichPanels = () => {
       {/* ── HIGH PERFORMANCE BANNER ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R  Sandwich Panel</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -363,15 +361,13 @@ const PrefabSandwichPanels = () => {
         <div className={styles.siteHeader}>
           <div className={styles.siteText}>
             <h2>
-              What’s Inside a <br />
-              <span>Rooftop Servant Room</span>
+              Applications of  <br />
+              <span>Sandwich Panels</span>
             </h2>
             <div className={styles.FaqsLine}></div>
           </div>
           <p >
-            A rooftop servant room is thoughtfully designed to provide all essential living comforts
-            within a compact and efficient layout. It ensures a balance of privacy, functionality,
-            and modern comfort for domestic staff.
+            Our sandwich panels are suitable for a wide range of modern construction and infrastructure projects.
           </p>
         </div>
 
@@ -457,8 +453,8 @@ const PrefabSandwichPanels = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Prefabricated rooftop servant rooms are compact, safe living units built on existing
-            buildings for domestic staff. Below are common FAQs about their features and benefits.</p>
+          <p>Find answers to common questions about sandwich panels, insulation performance, applications,
+            installation, and building solutions.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}

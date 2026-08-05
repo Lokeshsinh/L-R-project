@@ -505,6 +505,299 @@
   box-shadow: 0 35px 70px rgba(0, 0, 0, .28);
 }
 
+
+
+
+
+@media (max-width:1400px) {
+
+  .introSec {
+    padding: 70px 40px;
+  }
+
+  .introContainer {
+    gap: 50px;
+  }
+
+  .introText {
+    max-width: 55%;
+  }
+
+  .metalPanelWrapper {
+    width: 45%;
+    max-width: 600px;
+    height: 420px;
+  }
+
+  .metalPanelBackground {
+    width: 72%;
+    height: 380px;
+  }
+
+  .metalPanelImageBox {
+    width: 92%;
+    height: 100%;
+  }
+
+}
+
+@media (max-width:1280px) {
+
+  .introContainer,
+  .secTitle {
+    max-width: 100%;
+  }
+
+  .metalPanelWrapper {
+    max-width: 520px;
+  }
+
+  .metalPanelImageBox {
+    width: 100%;
+    height: 100%;
+  }
+
+  .metalPanelBackground {
+    width: 80%;
+    height: 92%;
+  }
+}
+
+@media (max-width:1200px) {
+
+  .secTitle h2 {
+    font-size: 48px;
+  }
+
+  .introContainer {
+    gap: 40px;
+  }
+
+  .introText {
+    max-width: 52%;
+  }
+
+  .metalPanelWrapper {
+    width: 48%;
+    height: 500px;
+  }
+
+  .metalPanelBackground {
+    width: 70%;
+    height: 440px;
+  }
+
+  .metalPanelImageBox {
+    width: 92%;
+    height: 100%;
+  }
+
+}
+
+
+@media (max-width:992px) {
+
+  .introSec {
+    padding: 60px 30px;
+  }
+
+  .secTitle {
+    margin-bottom: 50px;
+  }
+
+  .secTitle h2 {
+    font-size: 42px;
+  }
+
+  .introContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .introText {
+    max-width: 100%;
+  }
+
+  .metalPanelWrapper {
+    width: 100%;
+    max-width: 620px;
+    height: 430px;
+    margin: auto;
+  }
+
+  .metalPanelBackground {
+    width: 75%;
+    height: 380px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 100%;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .introSec {
+    padding: 50px 20px;
+  }
+
+  .secTitle {
+    margin-bottom: 40px;
+  }
+
+  .secTitle h2 {
+    font-size: 34px;
+  }
+
+  .introText p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .metalPanelWrapper {
+    width: 100%;
+    height: 320px;
+  }
+
+  .metalPanelBackground {
+    width: 74%;
+    height: 270px;
+    top: -12px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 100%;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .introSec {
+    padding: 40px 18px;
+  }
+
+  .secTitle h2 {
+    font-size: 28px;
+  }
+
+  .introText p {
+    font-size: 14px;
+  }
+
+  .btnOutline {
+    width: 170px;
+    height: 50px;
+  }
+
+  .metalPanelWrapper {
+    width: 100%;
+    height: 260px;
+  }
+
+  .metalPanelBackground {
+    width: 74%;
+    height: 220px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 100%;
+  }
+
+}
+
+
+/* 460px */
+@media (max-width:460px) {
+
+  .introSec {
+    padding: 40px 16px;
+  }
+
+  .metalPanelWrapper {
+    width: 100%;
+    height: 250px;
+  }
+
+  .metalPanelBackground {
+    width: 72%;
+    height: 210px;
+    top: -10px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 250px;
+  }
+
+}
+
+/* 390px */
+@media (max-width:390px) {
+
+  .metalPanelWrapper {
+    height: 220px;
+  }
+
+  .metalPanelBackground {
+    width: 70%;
+    height: 185px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 220px;
+  }
+
+}
+
+/* 360px */
+@media (max-width:360px) {
+
+  .metalPanelWrapper {
+    height: 205px;
+  }
+
+  .metalPanelBackground {
+    width: 70%;
+    height: 170px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 205px;
+  }
+
+}
+
+/* 320px */
+@media (max-width:320px) {
+
+  .introSec {
+    padding: 35px 12px;
+  }
+
+  .metalPanelWrapper {
+    height: 180px;
+  }
+
+  .metalPanelBackground {
+    width: 68%;
+    height: 150px;
+  }
+
+  .metalPanelImageBox {
+    width: 90%;
+    height: 180px;
+  }
+
+}
+
 /* ===========================
    LISTS & FEATURES
 =========================== */
@@ -657,6 +950,301 @@
 
 .container:hover .shade {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* 1400px */
+@media (max-width:1400px) {
+
+  .roofApplicationSection {
+    padding: 70px 40px;
+  }
+
+  .hvacContentWrapper {
+    gap: 50px;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 48%;
+    max-width: 600px;
+    height: 500px;
+    flex-shrink: 0;
+  }
+
+  .hvacContent {
+    max-width: 48%;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width:1280px) {
+
+  .roofApplicationSection {
+    padding: 70px 40px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 48px;
+  }
+
+  .hvacContentWrapper {
+    gap: 50px;
+  }
+
+  .container {
+    width: 560px;
+    height: 530px;
+    flex-shrink: 0;
+  }
+
+  .hvacContent {
+    max-width: 560px;
+  }
+
+  .hvacContent p,
+  .hvacFeatureText {
+    font-size: 16px;
+  }
+}
+
+
+
+/* 1200px */
+@media (max-width:1200px) {
+
+  .roofApplicationSection {
+    padding: 60px 30px;
+  }
+
+  .roofApplicationHeading {
+    margin-bottom: 45px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 36px;
+  }
+
+  .hvacContentWrapper {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    margin: auto;
+  }
+
+  .hvacContent {
+    max-width: 100%;
+  }
+
+
+}
+
+
+/* 992px */
+@media (max-width:992px) {
+
+  .roofApplicationSection {
+    padding: 60px 30px;
+  }
+
+  .roofApplicationHeading {
+    margin-bottom: 45px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 36px;
+  }
+
+  .hvacContentWrapper {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    margin: auto;
+  }
+
+  .hvacContent {
+    max-width: 100%;
+  }
+
+}
+
+
+/* 768px */
+@media (max-width:768px) {
+
+  .roofApplicationSection {
+    padding: 55px 20px;
+  }
+
+  .roofApplicationHeading {
+    margin-bottom: 40px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 30px;
+  }
+
+  .roofApplicationLine {
+    width: 90px;
+  }
+
+  .container {
+    height: 400px;
+  }
+
+  .hvacContent {
+    gap: 18px;
+  }
+
+  .hvacContent p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .hvacFeatureItem {
+    gap: 14px;
+  }
+
+  .hvacFeatureIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hvacFeatureText {
+    font-size: 15px;
+  }
+
+}
+
+
+/* 576px */
+@media (max-width:576px) {
+
+  .roofApplicationSection {
+    padding: 50px 16px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .container {
+    height: 330px;
+    border-radius: 8px;
+  }
+
+  .media {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hvacContent p {
+    font-size: 14px;
+  }
+
+  .hvacFeatureList {
+    gap: 10px;
+  }
+
+  .hvacFeatureItem {
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .hvacFeatureIcon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .hvacFeatureText {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* 420px */
+@media (max-width:420px) {
+
+  .roofApplicationSection {
+    padding: 45px 14px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 22px;
+  }
+
+  .roofApplicationLine {
+    width: 70px;
+  }
+
+  .container {
+    height: 260px;
+  }
+
+  .hvacContent p {
+    font-size: 13px;
+  }
+
+  .hvacFeatureText {
+    font-size: 13px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .roofApplicationSection {
+    padding: 35px 12px;
+  }
+
+  .roofApplicationHeading h2 {
+    font-size: 22px;
+  }
+
+  .roofApplicationLine {
+    width: 70px;
+  }
+
+  .container {
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  .hvacContent p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .hvacFeatureItem {
+    gap: 10px;
+  }
+
+  .hvacFeatureIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hvacFeatureText {
+    font-size: 13px;
+  }
 }
 
 /* ===========================
@@ -2087,252 +2675,255 @@ Tharmal
 }
 
 
-@media (max-width:1400px){
-  .ThermalWallPara{
+@media (max-width:1400px) {
+  .ThermalWallPara {
     max-width: 530px;
   }
-  .applicationsCard{
+
+  .applicationsCard {
     width: 550px;
     height: 500px;
   }
 }
-@media (max-width:1200px){
 
-  .ThermalWall{
-    padding:70px 40px;
+@media (max-width:1200px) {
+
+  .ThermalWall {
+    padding: 70px 40px;
   }
 
-  .ThermalWallFlex{
-    gap:40px;
+  .ThermalWallFlex {
+    gap: 40px;
   }
 
-  .applicationsCard{
-    width:520px;
-    height:490px;
+  .applicationsCard {
+    width: 520px;
+    height: 490px;
   }
 
-  .ThermalWallPara{
+  .ThermalWallPara {
     max-width: 550px;
   }
 
-  .ThermalWallText h2{
-    font-size:46px;
+  .ThermalWallText h2 {
+    font-size: 46px;
   }
 
 }
 
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-  .ThermalWall{
-    padding:60px 30px;
+  .ThermalWall {
+    padding: 60px 30px;
   }
 
-  .ThermalWallText{
-    margin-bottom:50px;
+  .ThermalWallText {
+    margin-bottom: 50px;
   }
 
-  .ThermalWallText h2{
-    font-size:40px;
+  .ThermalWallText h2 {
+    font-size: 40px;
   }
 
-  .ThermalWallFlex{
-    flex-direction:column;
-    gap:40px;
+  .ThermalWallFlex {
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .applicationsCard{
-    width:100%;
-    max-width:700px;
-    height:420px;
-    margin:auto;
+  .applicationsCard {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    margin: auto;
   }
 
-  .ThermalWallPara{
-    max-width:100%;
+  .ThermalWallPara {
+    max-width: 100%;
   }
 
-  .featuresWrapper{
-    max-width:100%;
-  }
-
-}
-
-
-@media (max-width:768px){
-
-  .ThermalWall{
-    padding:55px 22px;
-  }
-
-  .ThermalWallText{
-    margin-bottom:40px;
-    align-items:center;
-    text-align:center;
-  }
-
-  .ThermalWallText h2{
-    font-size:34px;
-  }
-
-  .ThermalLine{
-    width:90px;
-  }
-
-  .applicationsCard{
-    height:340px;
-  }
-
-  .ThermalWallPara p{
-    font-size:16px;
-    line-height:1.7;
-  }
-
-  .featureContent h4{
-    font-size:17px;
-  }
-
-  .featureContent p{
-    font-size:15px;
+  .featuresWrapper {
+    max-width: 100%;
   }
 
 }
 
 
-@media (max-width:576px){
+@media (max-width:768px) {
 
-  .ThermalWall{
-    padding:50px 18px;
+  .ThermalWall {
+    padding: 55px 22px;
   }
 
-  .ThermalWallText h2{
-    font-size:30px;
+  .ThermalWallText {
+    margin-bottom: 40px;
+    align-items: center;
+    text-align: center;
   }
 
-  .applicationsCard{
-    height:270px;
-    border-radius:8px;
+  .ThermalWallText h2 {
+    font-size: 34px;
   }
 
-  .featuresWrapper{
-    gap:16px;
+  .ThermalLine {
+    width: 90px;
   }
 
-  .featureItem{
-    gap:12px;
+  .applicationsCard {
+    height: 340px;
   }
 
-  .leftBar{
-    height:48px;
+  .ThermalWallPara p {
+    font-size: 16px;
+    line-height: 1.7;
   }
 
-}
-
-
-@media (max-width:425px){
-
-  .ThermalWall{
-    padding:45px 16px;
+  .featureContent h4 {
+    font-size: 17px;
   }
 
-  .ThermalWallText{
-    margin-bottom:35px;
-  }
-
-  .ThermalWallText h2{
-    font-size:27px;
-  }
-
-  .ThermalWallPara p{
-    font-size:15px;
-  }
-
-  .applicationsCard{
-    height:220px;
-  }
-
-  .featureContent h4{
-    font-size:16px;
-  }
-
-  .featureContent p{
-    font-size:14px;
-    line-height:1.6;
-  }
-
-  .leftBar{
-    width:3px;
-    height:44px;
-  }
-
-}
-
-@media (max-width:375px){
-
-  .ThermalWall{
-    padding:40px 14px;
-  }
-
-  .ThermalWallText h2{
-    font-size:24px;
-  }
-
-  .applicationsCard{
-    height:200px;
-  }
-
-  .featureItem{
-    gap:10px;
-  }
-
-  .featureContent h4{
-    font-size:15px;
-  }
-
-  .featureContent p{
-    font-size:13px;
+  .featureContent p {
+    font-size: 15px;
   }
 
 }
 
 
-@media (max-width:325px){
+@media (max-width:576px) {
 
-  .ThermalWall{
-    padding:35px 12px;
+  .ThermalWall {
+    padding: 50px 18px;
   }
 
-  .ThermalWallText h2{
-    font-size:21px;
+  .ThermalWallText h2 {
+    font-size: 30px;
   }
 
-  .ThermalLine{
-    width:70px;
+  .applicationsCard {
+    height: 270px;
+    border-radius: 8px;
   }
 
-  .applicationsCard{
-    height:170px;
+  .featuresWrapper {
+    gap: 16px;
   }
 
-  .ThermalWallPara p{
-    font-size:13px;
+  .featureItem {
+    gap: 12px;
   }
 
-  .featureContent h4{
-    font-size:14px;
-  }
-
-  .featureContent p{
-    font-size:12px;
-    line-height:1.5;
-  }
-
-  .leftBar{
-    width:3px;
-    height:40px;
+  .leftBar {
+    height: 48px;
   }
 
 }
+
+
+@media (max-width:425px) {
+
+  .ThermalWall {
+    padding: 45px 16px;
+  }
+
+  .ThermalWallText {
+    margin-bottom: 35px;
+  }
+
+  .ThermalWallText h2 {
+    font-size: 27px;
+  }
+
+  .ThermalWallPara p {
+    font-size: 15px;
+  }
+
+  .applicationsCard {
+    height: 220px;
+  }
+
+  .featureContent h4 {
+    font-size: 16px;
+  }
+
+  .featureContent p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .leftBar {
+    width: 3px;
+    height: 44px;
+  }
+
+}
+
+@media (max-width:375px) {
+
+  .ThermalWall {
+    padding: 40px 14px;
+  }
+
+  .ThermalWallText h2 {
+    font-size: 24px;
+  }
+
+  .applicationsCard {
+    height: 200px;
+  }
+
+  .featureItem {
+    gap: 10px;
+  }
+
+  .featureContent h4 {
+    font-size: 15px;
+  }
+
+  .featureContent p {
+    font-size: 13px;
+  }
+
+}
+
+
+@media (max-width:325px) {
+
+  .ThermalWall {
+    padding: 35px 12px;
+  }
+
+  .ThermalWallText h2 {
+    font-size: 21px;
+  }
+
+  .ThermalLine {
+    width: 70px;
+  }
+
+  .applicationsCard {
+    height: 170px;
+  }
+
+  .ThermalWallPara p {
+    font-size: 13px;
+  }
+
+  .featureContent h4 {
+    font-size: 14px;
+  }
+
+  .featureContent p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .leftBar {
+    width: 3px;
+    height: 40px;
+  }
+
+}
+
 /* ===============================================
 safety
 ================================================== */
@@ -2349,7 +2940,7 @@ safety
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .roofPanelHeading h2 {
@@ -2434,6 +3025,292 @@ safety
 .roofPanelImageCard:hover {
   box-shadow: 0 30px 65px rgba(0, 0, 0, 0.28);
 }
+
+
+@media (max-width:1400px) {
+
+  .roofPanelSection {
+    padding: 70px 40px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 70px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 48px;
+  }
+
+  .roofPanelContent {
+    gap: 50px;
+  }
+
+  .roofPanelText {
+    max-width: 55%;
+  }
+
+  .roofPanelImageCard {
+    width: 520px;
+    height: 300px;
+    flex-shrink: 0;
+  }
+
+  .roofPanelText p {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width:1280px) {
+
+  .roofPanelSection {
+    padding: 70px 40px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 70px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 48px;
+  }
+
+  .roofPanelContent {
+    gap: 50px;
+  }
+
+  .roofPanelText {
+    max-width: 55%;
+  }
+
+  .roofPanelImageCard {
+    width: 500px;
+    height: 290px;
+    flex-shrink: 0;
+  }
+
+  .roofPanelText p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width:1200px) {
+
+  .roofPanelSection {
+    padding: 70px 40px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 70px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 46px;
+  }
+
+  .roofPanelContent {
+    gap: 40px;
+
+  }
+
+  .roofPanelText {
+    max-width: 52%;
+  }
+
+  .roofPanelText p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .roofPanelImageCard {
+    width: 460px;
+    height: 310px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width:1024px) {
+
+  .roofPanelSection {
+    padding: 60px 30px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 55px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 40px;
+  }
+
+  .roofPanelContent {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .roofPanelText {
+    max-width: 100%;
+  }
+
+  .roofPanelImageCard {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    margin: auto;
+  }
+
+}
+
+@media (max-width:996px) {
+
+  .roofPanelSection {
+    padding: 60px 30px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 50px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 40px;
+  }
+
+  .roofPanelContent {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .roofPanelText {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .roofPanelImageCard {
+    width: 100%;
+    max-width: 720px;
+    height: 420px;
+    margin: 0 auto;
+    order: 1;
+  }
+}
+
+@media (max-width:768px) {
+
+  .roofPanelSection {
+    padding: 50px 25px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 45px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 32px;
+  }
+
+  .AvableLine {
+    width: 90px;
+  }
+
+  .roofPanelImageCard {
+    height: 340px;
+  }
+
+  .roofPanelText {
+    gap: 18px;
+  }
+
+  .roofPanelText p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .roofPanelSection {
+    padding: 45px 18px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 35px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .AvableLine {
+    width: 75px;
+  }
+
+  .roofPanelImageCard {
+    height: 280px;
+    border-radius: 8px;
+  }
+
+  .roofPanelText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+}
+
+@media (max-width:480px) {
+
+  .roofPanelSection {
+    padding: 40px 15px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 24px;
+  }
+
+  .roofPanelImageCard {
+    height: 230px;
+  }
+
+  .roofPanelText p {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .roofPanelSection {
+    padding: 35px 12px;
+  }
+
+  .roofPanelHeading {
+    margin-bottom: 30px;
+  }
+
+  .roofPanelHeading h2 {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  .AvableLine {
+    width: 60px;
+  }
+
+  .roofPanelImageCard {
+    height: 190px;
+    border-radius: 6px;
+  }
+
+  .roofPanelText p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+}
+
 
 /* ===========================
    LISTS & FEATURES
@@ -2598,7 +3475,7 @@ safety
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   gap: 10px;
 }
 
@@ -3523,7 +4400,8 @@ safety
 =========================== */
 .cta {
   width: 100%;
-  background: url('../assets/panel/wallpuf/cta.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/panel/wallpuf/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3619,4 +4497,173 @@ safety
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+@media (max-width:1200px) {
+
+  .cta {
+    padding: 60px 40px;
+  }
+
+  .cta h2 {
+    font-size: 44px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .cta {
+    padding: 55px 30px;
+    background-attachment: scroll;
+  }
+
+  .cta h2 {
+    font-size: 38px;
+    line-height: 1.3;
+  }
+
+  .cta p {
+    max-width: 700px;
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .cta {
+    padding: 50px 22px;
+  }
+
+  .cta h2 {
+    font-size: 32px;
+  }
+
+  .cta p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .cta {
+    padding: 45px 18px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .contactBtn {
+    width: 220px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:425px) {
+
+  .cta {
+    padding: 40px 16px;
+    gap: 14px;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .cta p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contactBtn {
+    width: 200px;
+    height: 48px;
+    padding: 0 20px;
+  }
+
+  .contactText {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:375px) {
+
+  .cta {
+    padding: 35px 14px;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+  }
+
+  .cta p {
+    font-size: 13px;
+  }
+
+  .contactBtn {
+    width: 190px;
+    height: 46px;
+  }
+
+}
+
+@media (max-width:325px) {
+
+  .cta {
+    padding: 30px 12px;
+  }
+
+  .cta h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .contactBtn {
+    width: 175px;
+    height: 44px;
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .contactText {
+    font-size: 13px;
+  }
+
+  .iconBox {
+    width: 16px;
+    height: 16px;
+  }
+
+  .iconOne,
+  .iconTwo {
+    width: 16px;
+    height: 16px;
+  }
+
 }

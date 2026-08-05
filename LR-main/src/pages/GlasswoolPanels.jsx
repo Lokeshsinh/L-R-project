@@ -135,14 +135,13 @@ const GlasswoolPanels = () => {
         </div>
 
         <div className={styles.introContainer}>
-          <div className={styles.epcImageWrapper}>
-            <div className={styles.epcSideAccent}></div>
-
-            <div className={styles.epcImageFrame}>
+          <div className={styles.panelWrapper}>
+            <div className={styles.sideAccent}></div>
+            <div className={styles.photoFrame}>
               <img
                 src={glass1}
-                alt="Solar Structure"
-                className={styles.epcMainImage}
+                alt="Sandwich Panel"
+                className={styles.panelPhoto}
               />
             </div>
           </div>
@@ -230,14 +229,14 @@ const GlasswoolPanels = () => {
           <div className={styles.TechLine}></div>
         </div>
         <div className={styles.TechFlex}>
-          <div className={styles.glassFacadeImageWrapper}>
-            <div className={styles.glassFacadeSideAccent}></div>
+          <div className={styles.epcImageWrapper}>
+            <div className={styles.epcSideAccent}></div>
 
-            <div className={styles.glassFacadeImageFrame}>
+            <div className={styles.epcImageFrame}>
               <img
                 src={glass5}
                 alt="Solar Structure"
-                className={styles.glassFacadeMainImage}
+                className={styles.epcMainImage}
               />
             </div>
           </div>
@@ -263,9 +262,7 @@ const GlasswoolPanels = () => {
       {/* ── SECTION 4: SUSTAINABLE STRENGTH & DURABILITY ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Rockwool Panels</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -347,16 +344,13 @@ const GlasswoolPanels = () => {
               and environmental stress. They help maintain consistent indoor temperatures, reduce noise levels,
               and lower energy consumption, ensuring cost-effective and durable solutions for modern construction projects.</p>
           </div>
-          <div className={styles.structureDisplayContainer}>
-            <div className={styles.leftDecorPanel}></div>
-            <div className={styles.structureImageContainer}>
+            <div className={styles.GlassConatinerImage}>
               <img
                 src={glass3}
                 alt="Solar Structure"
-                className={styles.structureDisplayImage}
+                
               />
             </div>
-          </div>
         </div>
       </section>
 

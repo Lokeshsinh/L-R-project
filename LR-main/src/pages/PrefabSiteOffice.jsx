@@ -15,6 +15,7 @@ import site1 from '../assets/PREFAB/sitOffice/site1.png'
 import site2 from '../assets/PREFAB/sitOffice/site2.png'
 import site3 from '../assets/PREFAB/sitOffice/site3.png'
 import site4 from '../assets/PREFAB/sitOffice/site4.png'
+import site5 from '../assets/PREFAB/sitOffice/site5.jpg'
 import design from '../assets/PREFAB/sitOffice/design.png'
 import design1 from '../assets/PREFAB/sitOffice/design1.png'
 
@@ -111,7 +112,7 @@ const PrefabSiteOffice = () => {
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             Smart Prefabricated Site <br />
-            <span>Office Cabins
+            <span>Office 
             </span>
           </h1>
           <p className={styles.heroDesc}>
@@ -136,7 +137,7 @@ const PrefabSiteOffice = () => {
         <div className={styles.secTitle}>
           <h2>
             What Are Prefabricated<br />
-            <span>Site Office Cabins?</span>
+            <span>Site Office?</span>
           </h2>
           <div className={styles.introLine} />
         </div>
@@ -203,7 +204,7 @@ const PrefabSiteOffice = () => {
           <div className={styles.interiorCard}>
             <div className={styles.interiorWrapper}>
               <img
-                src={site2}
+                src={site5}
                 alt="Interior"
                 className={styles.interiorMedia}
               />
@@ -280,7 +281,7 @@ const PrefabSiteOffice = () => {
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
-            <h1>L & R Prefab SITE OFFICE</h1>
+            
           </div>
         </div>
 

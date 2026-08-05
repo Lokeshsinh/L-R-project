@@ -8,7 +8,7 @@ import {
 import roof1 from '../assets/panel/rufpanel/roof1.png'
 import roof2 from '../assets/panel/rufpanel/roof2.png'
 import roof4 from '../assets/panel/rufpanel/roof4.png'
-import roof5 from '../assets/panel/rufpanel/roof5.png'
+import roof5 from '../assets/panel/roof/roof5.png'
 import roof6 from '../assets/panel/rufpanel/roof6.png'
 import roof7 from '../assets/panel/rufpanel/roof7.png'
 import roof8 from '../assets/panel/rufpanel/roof8.png'
@@ -356,9 +356,6 @@ const RoofPufPanels = () => {
       {/* ── WEATHERPROOF BANNER ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L & R Ro0f PUF PANELS </h1>
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>
@@ -445,7 +442,7 @@ const RoofPufPanels = () => {
               climate conditions, and structural requirements to ensure maximum performance and efficiency.
             </p>
           </div>
-          <div className={styles.roofPanelImageCard}>
+          <div className={styles.roofPanelImageCards}>
             <img src={roof5} alt="Roof Panel" />
           </div>
         </div>
@@ -489,7 +486,7 @@ const RoofPufPanels = () => {
       {/* ── QUALITY ASSURANCE ── */}
       <section className={styles.roofApplicationSection}>
         <div className={styles.roofApplicationHeading}>
-          <h2>Quality Assurance & Why <br />Choose L&R Green</h2>
+          <h2>Quality Assurance & Why <br /> <span>Choose L&R Green</span></h2>
           <div className={styles.roofApplicationLine}></div>
         </div>
         <div className={styles.hvacContentWrapper}>
@@ -559,7 +556,7 @@ const RoofPufPanels = () => {
             <img src={roof6} alt="warehouse" />
           </div>
           {/*  */}
-          <div className={styles.container}>
+          <div className={styles.containers}>
             {faqs.map((item, index) => (
               <div
                 key={index}
@@ -600,10 +597,10 @@ const RoofPufPanels = () => {
 
 
       <section className={styles.cta}>
-        <h2>Ready for Your Rockwool Panels Solution?</h2>
+        <h2>Ready for Your Roof PUF Panels Solution?</h2>
         <p>
           Connect with our team to design and deliver durable, efficient, and fully
-          customized insulated Rockwool Panels solutions tailored to your site needs.
+          customized insulated Roof PUF Panels solutions tailored to your site needs.
         </p>
         <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
           <span className={styles.contactText}>Contact Us</span>
