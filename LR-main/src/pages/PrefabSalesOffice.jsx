@@ -135,8 +135,6 @@ const PrefabSalesOffice = () => {
           <p className={styles.heroDesc}>
             Fast, durable, and sustainable workspace solutions for commercial projects.
             Built using Light Gauge Steel Framing technology for rapid deployment and premium aesthetics.
-
-
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
             <span>Contact Us</span>
@@ -314,9 +312,7 @@ const PrefabSalesOffice = () => {
       {/* ── ADVANTAGES ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R LGSF Prefabricated Sales Offices  </h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>

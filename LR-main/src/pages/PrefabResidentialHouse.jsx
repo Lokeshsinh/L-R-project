@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom'
 import reshouse1 from '../assets/PREFAB/prefabresi/reshouse1.png'
 import reshouse2 from '../assets/PREFAB/prefabresi/reshouse2.jpg'
 import reshouse3 from '../assets/PREFAB/prefabresi/reshouse3.png'
-import reshouse4 from '../assets/PREFAB/prefabresi/reshouse4.png'
+import reshouse4 from '../assets/PREFAB/prefabresi/reshouse5.jpg'
 import design from '../assets/PREFAB/prefabresi/design.png'
 import design1 from '../assets/PREFAB/prefabresi/design1.png'
 
@@ -245,9 +245,6 @@ const PrefabResidentialHouse = () => {
       {/* ── SECTION 4: G+1 / G+2 LGSF HOMES - FLEXIBLE DESIGNS ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Prefab Residential Houses</h1>
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>

@@ -237,9 +237,7 @@ const PrefabWaitingArea = () => {
       {/* Smart Prefab Solutions Banner */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R LGSF Prefabricated Waiting Areas  </h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -319,17 +317,17 @@ const PrefabWaitingArea = () => {
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>
-          <div className={styles.medicalImageContainer}>
 
-            {/* Bottom Decorative Bar */}
-            <div className={styles.medicalBottomBar}></div>
 
-            {/* Image */}
-            <div className={styles.medicalImageFrame}>
+
+
+          <div className={styles.cardWrapper}>
+            <div className={styles.bottomAccent}></div>
+            <div className={styles.imageFrame}>
               <img
                 src={wating3}
-                alt="Hospital Interior"
-                className={styles.medicalDisplayImage}
+                alt="Interior"
+                className={styles.cardImage}
               />
             </div>
 

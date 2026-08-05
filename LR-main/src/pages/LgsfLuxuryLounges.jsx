@@ -248,9 +248,7 @@ const LgsfLuxuryLounges = () => {
       {/* ── SECTION 4: BUILD THE FUTURE OF LUXURY SPACES ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Prefab Residential Houses</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -419,7 +417,7 @@ const LgsfLuxuryLounges = () => {
 
 
       {/* ── CTA BANNER ── */}
-      <section
+      {/* <section
         className={styles.ctaBanner}
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/Images/frelux.jpg")`,
@@ -449,8 +447,24 @@ const LgsfLuxuryLounges = () => {
             </svg>
           </button>
         </div>
-      </section>
+      </section> */}
+      <section className={styles.cta}>
+        <h2>Ready for Your LGSF Luxury Lounges?</h2>
+        <p>
+          Connect with our team to design and deliver durable, efficient, and
+          fully customized insulated LGSF Luxury Lounges solutions tailored to
+        </p>
 
+
+        <button className={styles.contactBtn}>
+          <span className={styles.contactText}>Contact Us</span>
+
+          <span className={styles.iconBox}>
+            <ArrowRight className={styles.iconOne} size={18} />
+            <ArrowRight className={styles.iconTwo} size={18} />
+          </span>
+        </button>
+      </section>
       <Footer />
     </div>
   );

@@ -210,9 +210,7 @@ const LgsfShowroom = () => {
       {/* ── SECTION 4: DURABILITY & SUSTAINABILITY OF LGSF SHOWROOMS ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R LGSF Showrooms  </h1>
-          </div>
+ 
         </div>
 
         <div className={styles.mfgContainer}>

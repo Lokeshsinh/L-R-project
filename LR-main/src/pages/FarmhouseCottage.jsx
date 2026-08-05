@@ -246,9 +246,6 @@ const FarmhouseCottage = () => {
       {/* -------------Energy Efficiency-------------------- */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R  LGSF Modern LGSF Farmhouses & Cottages  </h1>
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>
@@ -395,8 +392,8 @@ const FarmhouseCottage = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Prefabricated rooftop servant rooms are compact, safe living units built on existing
-            buildings for domestic staff. Below are common FAQs about their features and benefits.</p>
+          <p>Find quick answers about LGSF prefab waiting areas by L&R Green Pvt Ltd, covering design, durability, installation,
+            and usage to help you understand our modern construction solutions better.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -442,7 +439,7 @@ const FarmhouseCottage = () => {
 
       {/* -----------------cta ---------------- */}
       <section className={styles.cta}>
-        <h2>Ready for Your Prefab Farm Houses & CottagesSolutions?</h2>
+        <h2>Ready for Your Prefab Farm Houses & Cottages Solutions?</h2>
         <p>
           Connect with our team to design and deliver durable, efficient, and fully
           customized insulated  PrefabFarm Houses & Cottages solutions tailored to your site needs..
