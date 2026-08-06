@@ -227,10 +227,6 @@ const SolarEPC = () => {
       {/* ── SECTION 4: FINAL TESTING & COMMISSIONING ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R solar work epc</h1>
-
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>

@@ -515,14 +515,14 @@
 }
 
 
+/*====================================================
+=                    1440px
+====================================================*/
+
 @media (max-width:1440px) {
 
   .introSec {
     padding: 70px 50px;
-  }
-
-  .secTitle h2 {
-    font-size: 50px;
   }
 
   .introContainer {
@@ -530,31 +530,45 @@
   }
 
   .introText {
-    width: 52%;
-    max-width: 100%;
+    max-width: 620px;
   }
 
   .solarImageContainer {
-    width: 48%;
+    width: 600px;
     height: 410px;
   }
 
   .mainImageWrapper {
-    width: 92%;
-    height: 365px;
+    width: 560px;
+    height: 410px;
+  }
+
+  .floatingImageFrame {
+    width: 235px;
+    height: 155px;
+    right: 0;
+    top: -25px;
   }
 
 }
 
-/* 1366px */
-@media (max-width:1366px) {
 
-  .secTitle {
-    margin-bottom: 70px;
+@media (max-width:1280px) {
+
+  .introSec {
+    padding: 65px 45px;
   }
 
   .secTitle h2 {
-    font-size: 46px;
+    font-size: 48px;
+  }
+
+  .introContainer {
+    gap: 35px;
+  }
+
+  .introText {
+    max-width: 560px;
   }
 
   .introText p {
@@ -562,270 +576,356 @@
   }
 
   .solarImageContainer {
-    height: 390px;
+    width: 540px;
+    height: 400px;
   }
 
   .mainImageWrapper {
-    height: 350px;
-  }
-
-  .floatingImageFrame {
-    width: 235px;
-    height: 155px;
-    right: 20px;
-  }
-
-}
-
-/* 1200px */
-@media (max-width:1200px) {
-
-  .introSec {
-    padding: 60px 40px;
-  }
-
-  .introContainer {
-    gap: 35px;
-  }
-
-  .solarImageContainer {
-    width: 45%;
-    height: 360px;
-  }
-
-  .mainImageWrapper {
-    width: 92%;
+    width: 500px;
     height: 400px;
   }
 
   .floatingImageFrame {
     width: 210px;
-    height: 145px;
-    padding: 14px;
+    height: 140px;
+    top: -20px;
+    right: 0;
+    padding: 15px;
   }
 
 }
 
-/* 1024px */
-@media (max-width:1024px) {
 
-  .introSec {
-    padding: 55px 30px;
-  }
 
-  .secTitle {
-    margin-bottom: 50px;
-  }
-
-  .secTitle h2 {
-    font-size: 40px;
-  }
+@media (max-width:1200px) {
 
   .introContainer {
-    flex-direction: column;
-    gap: 55px;
-  }
-
-  .solarImageContainer {
-    width: 100%;
-    max-width: 720px;
-    height: 470px;
-    margin: auto;
-    order: 2;
-  }
-
-  .mainImageWrapper {
-    width: 92%;
-    height: 430px;
+    gap: 30px;
   }
 
   .introText {
-    width: 100%;
-    max-width: 100%;
-    order: 1;
-  }
-
-  .floatingImageFrame {
-    width: 250px;
-    height: 165px;
-  }
-
-}
-
-/* 992px */
-@media (max-width:992px) {
-
-  .introSec {
-    padding: 50px 25px;
-  }
-
-  .secTitle h2 {
-    font-size: 38px;
+    max-width: 520px;
   }
 
   .solarImageContainer {
+    width: 500px;
     height: 430px;
   }
 
   .mainImageWrapper {
-    height: 390px;
-  }
-
-}
-
-/* 768px */
-@media (max-width:768px) {
-
-  .introSec {
-    padding: 45px 20px;
-  }
-
-  .secTitle {
-    margin-bottom: 40px;
-  }
-
-  .secTitle h2 {
-    font-size: 34px;
-  }
-
-  .introText p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  .solarImageContainer {
-    height: 360px;
-  }
-
-  .mainImageWrapper {
-    width: 100%;
-    height: 320px;
+    width: 465px;
+    height: 430px;
   }
 
   .floatingImageFrame {
     width: 190px;
     height: 130px;
-    right: 0;
-    top: -20px;
+  }
+
+}
+
+
+@media (max-width:1130px) {
+
+  .introSec {
+    padding: 62px 40px;
+  }
+
+  .introContainer {
+    gap: 28px;
+  }
+
+  .introText {
+    max-width: 500px;
+  }
+
+  .introText p {
+    font-size: 15.5px;
+  }
+
+  .solarImageContainer {
+    width: 440px;
+    height: 420px;
+  }
+
+  .mainImageWrapper {
+    width: 410px;
+    height: 420px;
+  }
+
+  .floatingImageFrame {
+    width: 175px;
+    height: 120px;
     padding: 12px;
   }
 
 }
 
-/* 576px */
-@media (max-width:576px) {
+
+
+@media (max-width:1024px) {
 
   .introSec {
-    padding: 40px 16px;
+    padding: 60px 35px;
+  }
+
+  .secTitle {
+    margin-bottom: 55px;
   }
 
   .secTitle h2 {
-    font-size: 30px;
+    font-size: 42px;
   }
 
-  .introLine {
-    width: 90px;
+  .introContainer {
+    gap: 30px;
+
   }
 
-  .btnOutline {
-    width: 180px;
-    height: 50px;
-    font-size: 14px;
+  .introText {
+    max-width: 470px;
+  }
+
+  .introText p {
+    font-size: 15px;
+    line-height: 1.75;
   }
 
   .solarImageContainer {
-    height: 300px;
+    width: 390px;
+    height: 400px;
   }
 
   .mainImageWrapper {
-    height: 270px;
-    border-radius: 10px;
+    width: 365px;
+    height: 400px;
   }
 
   .floatingImageFrame {
     width: 160px;
     height: 110px;
-    top: -16px;
+    top: -15px;
+    padding: 10px;
+  }
+
+}
+
+
+
+@media (max-width:992px) {
+
+  .introContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .introText {
+    max-width: 100%;
+  }
+
+  .solarImageContainer {
+    width: 580px;
+    height: 400px;
+  }
+
+  .mainImageWrapper {
+    width: 540px;
+    height: 360px;
+  }
+
+  .floatingImageFrame {
+    width: 235px;
+    height: 155px;
+    top: -25px;
+    right: 0;
+    padding: 15px;
+  }
+
+}
+
+
+
+@media (max-width:768px) {
+
+  .introSec {
+    padding: 55px 25px;
+  }
+
+  .secTitle {
+    text-align: center;
+    align-items: center;
+  }
+
+  .secTitle h2 {
+    font-size: 36px;
+  }
+
+  .introText {
+    align-items: center;
+    text-align: center;
+  }
+
+  .solarImageContainer {
+    width: 450px;
+    height: 325px;
+  }
+
+  .mainImageWrapper {
+    width: 420px;
+    height: 325px;
+  }
+
+  .floatingImageFrame {
+    width: 180px;
+    height: 120px;
+    top: -15px;
     right: 0;
     padding: 10px;
   }
 
 }
 
-/* 480px */
-@media (max-width:480px) {
+
+@media (max-width:560px) {
 
   .introSec {
-    padding: 35px 14px;
+    padding: 50px 20px;
   }
 
   .secTitle h2 {
-    font-size: 26px;
+    font-size: 32px;
   }
 
   .introText p {
-    font-size: 14px;
-  }
-
-  .btnOutline {
-    width: 170px;
-    height: 48px;
+    font-size: 15px;
   }
 
   .solarImageContainer {
-    height: 260px;
+    width: 100%;
+    max-width: 390px;
+    height: 295px;
   }
 
   .mainImageWrapper {
-    height: 235px;
+    width: 100%;
+    height: 295px;
   }
 
   .floatingImageFrame {
     width: 145px;
     height: 100px;
+    top: -12px;
+    right: 5px;
     padding: 8px;
   }
 
 }
 
-/* 360px */
-@media (max-width:360px) {
+
+@media (max-width:480px) {
 
   .introSec {
-    padding: 30px 12px;
+    padding: 45px 16px;
   }
 
   .secTitle h2 {
-    font-size: 23px;
+    font-size: 28px;
+  }
+
+  .introText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .solarImageContainer {
+    max-width: 340px;
+    height: 255px;
+  }
+
+  .mainImageWrapper {
+    height: 255px;
+  }
+
+  .floatingImageFrame {
+    width: 125px;
+    height: 88px;
+    top: -10px;
+    right: 0;
+    padding: 7px;
+  }
+
+}
+
+
+
+@media (max-width:360px) {
+
+  .introSec {
+    padding: 40px 14px;
+  }
+
+  .secTitle h2 {
+    font-size: 24px;
+  }
+
+  .introText p {
+    font-size: 13.5px;
+  }
+
+  .solarImageContainer {
+    max-width: 300px;
+    height: 225px;
+  }
+
+  .mainImageWrapper {
+    height: 225px;
+  }
+
+  .floatingImageFrame {
+    width: 110px;
+    height: 78px;
+    top: -8px;
+    right: 0;
+    padding: 6px;
+  }
+
+}
+
+
+
+@media (max-width:320px) {
+
+  .introSec {
+    padding: 35px 12px;
+  }
+
+  .secTitle h2 {
+    font-size: 22px;
   }
 
   .introText p {
     font-size: 13px;
   }
 
-  .btnOutline {
-    width: 160px;
-    height: 46px;
-    font-size: 13px;
-  }
-
   .solarImageContainer {
-    height: 220px;
+    max-width: 270px;
+    height: 205px;
   }
 
   .mainImageWrapper {
-    height: 200px;
+    height: 205px;
   }
 
   .floatingImageFrame {
-    width: 120px;
-    height: 82px;
-    top: -12px;
-    padding: 6px;
+    width: 100px;
+    height: 70px;
+    top: -8px;
+    right: 0;
+    padding: 5px;
   }
 
 }
-
 
 /* ================================================== */
 /* KEY FEATURES */
@@ -1006,6 +1106,425 @@
 
 
 
+@media (max-width:1440px) {
+
+  .advSec {
+    padding: 70px 50px;
+  }
+
+  .advFlex {
+    gap: 40px;
+  }
+
+  .advText {
+    max-width: 620px;
+  }
+
+  .hardwareImageContainer {
+    width: 600px;
+    height: 410px;
+  }
+
+  .hardwareMainFrame {
+    width: 560px;
+    height: 390px;
+  }
+
+  .hardwareFloatingCard {
+    width: 235px;
+    height: 155px;
+    top: -25px;
+    right: 0;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 16px;
+  }
+}
+
+
+
+
+@media (max-width:1280px) {
+
+  .advSec {
+    padding: 65px 45px;
+  }
+
+  .advFlex {
+    gap: 35px;
+  }
+
+  .advText {
+    max-width: 560px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 16px;
+  }
+
+  .hardwareImageContainer {
+    width: 540px;
+    height: 440px;
+  }
+
+  .hardwareMainFrame {
+    width: 500px;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 210px;
+    height: 140px;
+    top: -20px;
+    right: 0;
+    padding: 15px;
+  }
+
+}
+
+
+
+@media (max-width:1200px) {
+
+  .advFlex {
+    gap: 30px;
+  }
+
+  .advText {
+    max-width: 520px;
+  }
+
+  .hardwareImageContainer {
+    width: 500px;
+    height: 445px;
+  }
+
+  .hardwareMainFrame {
+    width: 465px;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 190px;
+    height: 130px;
+  }
+
+}
+
+
+
+@media (max-width:1130px) {
+
+  .advSec {
+    padding: 62px 40px;
+  }
+
+  .advFlex {
+    gap: 28px;
+  }
+
+  .advText {
+    max-width: 500px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 15.5px;
+  }
+
+  .hardwareImageContainer {
+    width: 440px;
+    height: 420px;
+  }
+
+  .hardwareMainFrame {
+    width: 410px;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 175px;
+    height: 120px;
+    padding: 12px;
+  }
+
+}
+
+
+
+@media (max-width:1024px) {
+
+  .advSec {
+    padding: 60px 35px;
+  }
+
+  .advFlex {
+    gap: 30px;
+  }
+
+  .advText {
+    max-width: 470px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .featureRow {
+    gap: 15px;
+  }
+
+  .hardwareImageContainer {
+    width: 390px;
+    height: 400px;
+  }
+
+  .hardwareMainFrame {
+    width: 365px;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 160px;
+    height: 110px;
+    top: -15px;
+    padding: 10px;
+  }
+
+}
+
+
+
+@media (max-width:992px) {
+
+  .advFlex {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .advContainer {
+    width: 100%;
+  }
+
+  .advText {
+    max-width: 100%;
+  }
+
+  .hardwareImageContainer {
+    width: 580px;
+    height: 400px;
+  }
+
+  .hardwareMainFrame {
+    width: 540px;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 235px;
+    height: 155px;
+    top: -25px;
+    right: 0;
+    padding: 15px;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .advSec {
+    padding: 55px 25px;
+  }
+
+  .advText {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featureListWrap {
+    width: 100%;
+  }
+
+  .featureRow {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hardwareImageContainer {
+    width: 450px;
+    height: 325px;
+  }
+
+  .hardwareMainFrame {
+    width: 420px;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 180px;
+    height: 120px;
+    top: -15px;
+    right: 0;
+    padding: 10px;
+  }
+
+}
+
+
+
+@media (max-width:560px) {
+
+  .advSec {
+    padding: 50px 20px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 15px;
+  }
+
+  .hardwareImageContainer {
+    width: 100%;
+    max-width: 390px;
+    height: 295px;
+  }
+
+  .hardwareMainFrame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 145px;
+    height: 100px;
+    top: -12px;
+    right: 5px;
+    padding: 8px;
+  }
+
+}
+
+
+
+@media (max-width:480px) {
+
+  .advSec {
+    padding: 45px 16px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 14px;
+  }
+
+  .featureRow {
+    gap: 12px;
+  }
+
+  .featureIconBox {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hardwareImageContainer {
+    max-width: 340px;
+    height: 255px;
+  }
+
+  .hardwareMainFrame {
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 125px;
+    height: 88px;
+    top: -10px;
+    right: 0;
+    padding: 7px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .advSec {
+    padding: 40px 14px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 13.5px;
+  }
+
+  .featureIconBox {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hardwareImageContainer {
+    max-width: 300px;
+    height: 225px;
+  }
+
+  .hardwareMainFrame {
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 110px;
+    height: 78px;
+    top: -8px;
+    right: 0;
+    padding: 6px;
+  }
+
+}
+
+
+
+@media (max-width:320px) {
+
+  .advSec {
+    padding: 35px 12px;
+  }
+
+  .advText p,
+  .featureText {
+    font-size: 13px;
+  }
+
+  .featureIconBox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hardwareImageContainer {
+    max-width: 270px;
+    height: 205px;
+  }
+
+  .hardwareMainFrame {
+    height: 100%;
+  }
+
+  .hardwareFloatingCard {
+    width: 100px;
+    height: 70px;
+    top: -8px;
+    right: 0;
+    padding: 5px;
+  }
+
+}
+
 
 /* ================================================== */
 /* ================================================= */
@@ -1143,24 +1662,49 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
+@media (max-width:1280px) {
 
-  .scrollTrack h1 {
-    font-size: 75px;
+  .mfgBand {
+    padding: 45px 40px;
+  }
+
+  .mfgContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .mfgText {
+    flex: 1;
+    max-width: 600px;
   }
 
   .mfgText h2 {
-    font-size: 50px;
+    font-size: 46px;
+  }
+
+  .mfgText p {
+    font-size: 16px;
+    line-height: 1.8;
   }
 
   .mfgImgWrapper {
-    width: 40%;
-    height: 320px;
+    width: 500px;
+    height: 350px;
+    flex-shrink: 0;
+    bottom: 20px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 70px;
+    letter-spacing: 3px;
   }
 
   .LastImage img {
-    width: 260px;
-    height: 210px;
+    width: 270px;
+    bottom: -210px;
+    height: auto;
   }
 
 }
@@ -1168,24 +1712,63 @@
 @media (max-width:1200px) {
 
   .mfgBand {
-    height: auto;
-    padding: 70px 5%;
+    padding: 35px 35px;
   }
 
   .mfgContainer {
     gap: 40px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 65px;
+    align-items: center;
   }
 
   .mfgText {
-    max-width: 55%;
+    max-width: 100%;
   }
 
   .mfgText h2 {
     font-size: 42px;
+  }
+
+  .mfgImgWrapper {
+    width: 460px;
+    height: 320px;
+    bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 60px;
+  }
+
+  .LastImage img {
+    position: absolute;
+    bottom: -220px;
+    width: 240px;
+    height: auto;
+  }
+
+}
+
+@media (max-width:1090px) {
+
+  .mfgBand {
+    padding: 35px 30px;
+    height: 390px;
+  }
+
+  .mfgContainer {
+    gap: 30px;
+    align-items: center;
+  }
+
+  .mfgText {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  .mfgText h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 12px;
   }
 
   .mfgText p {
@@ -1194,14 +1777,20 @@
   }
 
   .mfgImgWrapper {
-    width: 42%;
-    height: 290px;
-    bottom: 0;
+    width: 440px;
+    height: 300px;
+    flex-shrink: 0;
+    bottom: 10px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 54px;
+    letter-spacing: 2px;
   }
 
   .LastImage {
-    left: -3%;
-    bottom: 30%;
+    left: -8%;
+    bottom: 32%;
   }
 
   .LastImage img {
@@ -1211,27 +1800,69 @@
 
 }
 
-@media (max-width:992px) {
+
+
+
+@media (max-width:1040px) {
 
   .mfgBand {
-    height: auto;
-    padding: 60px 5%;
-  }
-
-  .scrollTrack h1 {
-    font-size: 55px;
-    letter-spacing: 2px;
+    padding: 35px 30px;
   }
 
   .mfgContainer {
-    flex-direction: column-reverse;
+    gap: 30px;
     align-items: center;
-    gap: 45px;
+  }
+
+  .mfgText {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .mfgText h2 {
+    font-size: 40px;
+    line-height: 1.25;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
+    width: 430px;
+    height: 300px;
+    flex-shrink: 0;
+    bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 52px;
+    letter-spacing: 2px;
+  }
+
+  .LastImage img {
+    width: 220px;
+    bottom: -180px;
+    height: auto;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .mfgBand {
+    padding: 30px 30px;
+    height: auto
+  }
+
+  .mfgContainer {
+    flex-direction: column;
+    gap: 35px;
   }
 
   .mfgText {
     max-width: 100%;
-    text-align: center;
   }
 
   .mfgText h2 {
@@ -1239,16 +1870,20 @@
   }
 
   .mfgText p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .mfgImgWrapper {
     width: 100%;
-    max-width: 650px;
-    height: 360px;
+    max-width: 700px;
+    height: 420px;
     bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
   }
 
   .LastImage {
@@ -1257,100 +1892,117 @@
 
 }
 
+
 @media (max-width:768px) {
 
   .mfgBand {
-    padding: 55px 5%;
+    padding: 55px 22px;
   }
 
-  .scrollTrack h1 {
-    font-size: 45px;
+  .mfgContainer {
+    gap: 30px;
   }
 
   .mfgText h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .mfgText p {
     font-size: 15px;
-  }
-
-  .mfgImgWrapper {
-    width: 100%;
-    height: 300px;
-  }
-
-}
-
-@media (max-width:576px) {
-
-  .mfgBand {
-    padding: 50px 20px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 34px;
-    letter-spacing: 1px;
-  }
-
-  .mfgText h2 {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .mfgText p {
-    font-size: 14px;
     line-height: 1.8;
   }
 
   .mfgImgWrapper {
     width: 100%;
-    height: 240px;
-    border-radius: 10px;
+    height: 340px;
+    border-radius: 8px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
   }
 
 }
+
+
+@media (max-width:576px) {
+
+  .mfgBand {
+    padding: 50px 18px;
+  }
+
+  .mfgText h2 {
+    font-size: 28px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    height: 280px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 34px;
+  }
+
+}
+
+
 
 @media (max-width:480px) {
 
   .mfgBand {
-    padding: 45px 18px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 28px;
+    padding: 45px 15px;
   }
 
   .mfgText h2 {
     font-size: 24px;
-  }
-
-  .mfgText p {
-    font-size: 13.5px;
-  }
-
-  .mfgImgWrapper {
-    height: 210px;
-  }
-
-}
-
-@media (max-width:360px) {
-
-  .scrollTrack h1 {
-    font-size: 22px;
-  }
-
-  .mfgText h2 {
-    font-size: 21px;
+    line-height: 1.35;
   }
 
   .mfgText p {
     font-size: 13px;
+    line-height: 1.7;
   }
 
   .mfgImgWrapper {
-    height: 180px;
+    width: 100%;
+    height: 220px;
+    border-radius: 6px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .mfgBand {
+    padding: 40px 12px;
+  }
+
+  .mfgText h2 {
+    font-size: 22px;
+  }
+
+  .mfgText p {
+    font-size: 12.5px;
+  }
+
+  .mfgImgWrapper {
+    height: 190px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 22px;
   }
 
 }
@@ -2221,7 +2873,7 @@ Cards
 
   .spaceUser {
     padding: 30px 10px;
-    
+
   }
 
   .spaceuserText h2 {
@@ -2463,27 +3115,59 @@ Cards
     inset 0 1px 1px rgba(255, 255, 255, .08);
 }
 
-/* ---------- 1440 ---------- */
+
+
+
 @media (max-width:1440px) {
 
   .conatineUser {
-    padding: 65px 4%;
-  }
-
-  .containerMaxs {
-    margin-bottom: 70px;
-  }
-
-  .containerMaxs h2 {
-    font-size: clamp(42px, 3vw, 55px);
+    padding: 70px 50px;
   }
 
   .containerFlex {
-    gap: 50px;
+    gap: 40px;
   }
 
   .containerText {
-    max-width: 48%;
+    max-width: 620px;
+  }
+
+  .mountingGalleryContainer {
+    width: 600px;
+    height: 410px;
+  }
+
+  .mountingMainImageWrapper {
+    width: 560px;
+    height: 360px;
+  }
+
+  .mountingPreviewCard {
+    width: 235px;
+    height: 155px;
+    right: 0;
+    top: -25px;
+  }
+
+}
+
+
+@media (max-width:1280px) {
+
+  .conatineUser {
+    padding: 65px 45px;
+  }
+
+  .containerMaxs h2 {
+    font-size: 48px;
+  }
+
+  .containerFlex {
+    gap: 35px;
+  }
+
+  .containerText {
+    max-width: 560px;
   }
 
   .containerText p,
@@ -2492,71 +3176,151 @@ Cards
   }
 
   .mountingGalleryContainer {
-    width: min(44vw, 620px);
-  }
-
-}
-
-/* ---------- 1280 ---------- */
-@media (max-width:1280px) {
-
-  .conatineUser {
-    padding: 60px 3.5%;
-  }
-
-  .containerFlex {
-    gap: 45px;
+    width: 540px;
+    height: 370px;
   }
 
   .mountingMainImageWrapper {
-    width: 520px;
-  }
-
-  .mountingGalleryContainer {
-    width: min(43vw, 560px);
+    width: 500px;
+    height: 100%;
   }
 
   .mountingPreviewCard {
     width: 210px;
-    height: 150px;
-    right: 0;
+    height: 140px;
     top: -20px;
+    right: 0;
+    padding: 15px;
   }
 
 }
 
-/* ---------- 1200 ---------- */
+
+
 @media (max-width:1200px) {
 
   .containerFlex {
-    gap: 40px;
-    align-items: center;
-  }
-
-  .mountingMainImageWrapper {
-    width: 470px;
+    gap: 30px;
   }
 
   .containerText {
-    max-width: 52%;
+    max-width: 520px;
   }
 
   .mountingGalleryContainer {
-    width: min(42vw, 520px);
+    width: 480px;
+    height: 345px;
+  }
+
+  .mountingMainImageWrapper {
+    width: 445px;
+    height: 100%;
+  }
+
+  .mountingPreviewCard {
+    width: 190px;
+    height: 130px;
   }
 
 }
 
-/* ---------- 1024 ---------- */
+
+
+@media (max-width:1130px) {
+
+  .conatineUser {
+    padding: 62px 40px;
+  }
+
+  .containerFlex {
+    gap: 28px;
+  }
+
+  .containerText {
+    max-width: 500px;
+  }
+
+  .containerText p,
+  .applicationFeatureText {
+    font-size: 15.5px;
+  }
+
+  .mountingGalleryContainer {
+    width: 440px;
+    height: 340px;
+  }
+
+  .mountingMainImageWrapper {
+    width: 410px;
+    height: 100%;
+  }
+
+  .mountingPreviewCard {
+    width: 175px;
+    height: 120px;
+    padding: 12px;
+  }
+
+}
+
+
+
 @media (max-width:1024px) {
 
   .conatineUser {
-    padding: 55px 30px;
+    padding: 60px 35px;
   }
 
   .containerMaxs {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
+
+  .containerMaxs h2 {
+    font-size: 42px;
+  }
+
+  .containerFlex {
+    gap: 30px;
+
+  }
+
+  .containerText {
+    max-width: 470px;
+  }
+
+  .containerText p,
+  .applicationFeatureText {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .applicationFeatureItem {
+    gap: 15px;
+  }
+
+  .mountingGalleryContainer {
+    width: 390px;
+    height: 340px;
+  }
+
+  .mountingMainImageWrapper {
+    width: 365px;
+    height: 100%;
+  }
+
+  .mountingPreviewCard {
+    width: 160px;
+    height: 110px;
+    top: -15px;
+    right: 0;
+    padding: 10px;
+  }
+
+}
+
+
+
+@media (max-width:992px) {
 
   .containerFlex {
     flex-direction: column;
@@ -2565,171 +3329,133 @@ Cards
   }
 
   .containerText {
-    width: 100%;
     max-width: 100%;
   }
 
-  .containerText p {
-    font-size: 16px;
-  }
-
-  .applicationFeatureText {
-    font-size: 16px;
-  }
-
   .mountingGalleryContainer {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
+    width: 580px;
+    height: 400px;
   }
 
   .mountingMainImageWrapper {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 590/380;
+    width: 540px;
+    height: 360px;
   }
 
   .mountingPreviewCard {
-    width: 240px;
-    height: auto;
-    aspect-ratio: 255/165;
-    top: -20px;
-    right: 10px;
+    width: 235px;
+    height: 155px;
+    top: -25px;
+    right: 0;
+    padding: 15px;
   }
 
 }
 
-/* ---------- 992 ---------- */
-@media (max-width:992px) {
 
-  .containerMaxs h2 {
-    font-size: 40px;
-  }
 
-  .mountingPreviewCard {
-    width: 220px;
-  }
-
-}
-
-/* ---------- 768 ---------- */
 @media (max-width:768px) {
 
   .conatineUser {
-    padding: 50px 20px;
+    padding: 55px 25px;
   }
 
   .containerMaxs {
-    margin-bottom: 45px;
+    align-items: center;
+    text-align: center;
   }
 
   .containerMaxs h2 {
-    font-size: 34px;
-    line-height: 1.3;
-  }
-
-  .divider {
-    width: 90px;
+    font-size: 36px;
   }
 
   .containerText {
-    gap: 18px;
-  }
-
-  .containerText p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  .applicationFeatureList {
-    gap: 16px;
+    align-items: center;
+    text-align: center;
   }
 
   .applicationFeatureItem {
     align-items: flex-start;
-    gap: 12px;
-  }
-
-  .applicationFeatureIcon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .applicationFeatureText {
-    font-size: 15px;
-    line-height: 1.6;
+    text-align: left;
   }
 
   .mountingGalleryContainer {
-    width: 100%;
-    max-width: 100%;
+    width: 450px;
+    height: 325px;
   }
 
   .mountingMainImageWrapper {
-    border-radius: 12px;
+    width: 420px;
+    height: 290px;
   }
 
   .mountingPreviewCard {
     width: 180px;
-    padding: 12px;
-    top: -12px;
+    height: 120px;
+    top: -15px;
     right: 0;
-  }
-
-}
-
-/* ---------- 576 ---------- */
-@media (max-width:576px) {
-
-  .conatineUser {
-    padding: 45px 18px;
-  }
-
-  .containerMaxs {
-    margin-bottom: 35px;
-  }
-
-  .containerMaxs h2 {
-    font-size: 30px;
-  }
-
-  .containerText p {
-    font-size: 15px;
-  }
-
-  .applicationFeatureText {
-    font-size: 14px;
-  }
-
-  .mountingPreviewCard {
-    width: 150px;
     padding: 10px;
   }
 
 }
 
-/* ---------- 480 ---------- */
-@media (max-width:480px) {
+
+@media (max-width:560px) {
 
   .conatineUser {
-    padding: 40px 15px;
+    padding: 50px 20px;
   }
 
   .containerMaxs h2 {
-    font-size: 27px;
+    font-size: 32px;
   }
 
-  .divider {
-    width: 75px;
+  .containerText p,
+  .applicationFeatureText {
+    font-size: 15px;
   }
 
-  .containerText p {
+  .mountingGalleryContainer {
+    width: 100%;
+    max-width: 390px;
+    height: 295px;
+  }
+
+  .mountingMainImageWrapper {
+    width: 100%;
+    height: 255px;
+  }
+
+  .mountingPreviewCard {
+    width: 145px;
+    height: 100px;
+    top: -12px;
+    right: 5px;
+    padding: 8px;
+  }
+
+}
+
+
+
+@media (max-width:480px) {
+
+  .conatineUser {
+    padding: 45px 16px;
+  }
+
+  .containerMaxs h2 {
+    font-size: 28px;
+  }
+
+  .containerText p,
+  .applicationFeatureText {
     font-size: 14px;
     line-height: 1.7;
   }
 
   .applicationFeatureItem {
-    gap: 10px;
+    gap: 12px;
   }
 
   .applicationFeatureIcon {
@@ -2737,63 +3463,39 @@ Cards
     height: 28px;
   }
 
-  .applicationFeatureText {
-    font-size: 14px;
+  .mountingGalleryContainer {
+    max-width: 340px;
+    height: 255px;
+  }
+
+  .mountingMainImageWrapper {
+    height: 225px;
   }
 
   .mountingPreviewCard {
-    width: 130px;
-    padding: 8px;
+    width: 125px;
+    height: 88px;
     top: -10px;
+    right: 0;
+    padding: 7px;
   }
 
 }
 
-/* ---------- 375 ---------- */
-@media (max-width:375px) {
+
+@media (max-width:360px) {
 
   .conatineUser {
-    padding: 35px 12px;
+    padding: 40px 14px;
   }
 
   .containerMaxs h2 {
     font-size: 24px;
   }
 
-  .containerText p {
-    font-size: 13px;
-  }
-
+  .containerText p,
   .applicationFeatureText {
-    font-size: 13px;
-  }
-
-  .mountingPreviewCard {
-    width: 110px;
-    padding: 7px;
-    right: 0;
-  }
-
-}
-
-/* ---------- 320 ---------- */
-@media (max-width:320px) {
-
-  .conatineUser {
-    padding: 30px 10px;
-  }
-
-  .containerMaxs h2 {
-    font-size: 22px;
-  }
-
-  .containerText p {
-    font-size: 12px;
-    line-height: 1.6;
-  }
-
-  .applicationFeatureText {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 
   .applicationFeatureIcon {
@@ -2801,16 +3503,65 @@ Cards
     height: 26px;
   }
 
+  .mountingGalleryContainer {
+    max-width: 300px;
+    height: 225px;
+  }
+
+  .mountingMainImageWrapper {
+    height: 195px;
+  }
+
   .mountingPreviewCard {
-    width: 95px;
-    padding: 6px;
+    width: 110px;
+    height: 78px;
     top: -8px;
+    right: 0;
+    padding: 6px;
   }
 
 }
 
 
 
+@media (max-width:320px) {
+
+  .conatineUser {
+    padding: 35px 12px;
+  }
+
+  .containerMaxs h2 {
+    font-size: 22px;
+  }
+
+  .containerText p,
+  .applicationFeatureText {
+    font-size: 13px;
+  }
+
+  .applicationFeatureIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mountingGalleryContainer {
+    max-width: 270px;
+    height: 205px;
+  }
+
+  .mountingMainImageWrapper {
+    height: 180px;
+  }
+
+  .mountingPreviewCard {
+    width: 100px;
+    height: 70px;
+    top: -8px;
+    right: 0;
+    padding: 5px;
+  }
+
+}
 
 
 /* =================================================
@@ -2957,18 +3708,10 @@ Cards
 }
 
 
-@media (max-width:1440px) {
+@media (max-width:1400px) {
 
   .SolarEpic {
-    padding: 65px 4%;
-  }
-
-  .solarEpicTitle {
-    margin-bottom: 70px;
-  }
-
-  .solarEpicTitle h2 {
-    font-size: clamp(42px, 3vw, 55px);
+    padding: 70px 50px;
   }
 
   .SolarEpicFLex {
@@ -2976,7 +3719,49 @@ Cards
   }
 
   .solartext {
-    max-width: 48%;
+    max-width: 650px;
+  }
+
+  .solarHardwareContainer {
+    width: 560px;
+    height: 430px;
+  }
+
+  .solarHardwareMainImageBox {
+    width: 520px;
+    height: 100%;
+  }
+
+  .solarHardwarePreviewCard {
+    width: 220px;
+    height: 145px;
+    right: 0;
+  }
+
+  .solartext p {
+    font-size: 16px;
+  }
+
+}
+
+
+
+@media (max-width:1280px) {
+
+  .SolarEpic {
+    padding: 65px 40px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 48px;
+  }
+
+  .SolarEpicFLex {
+    gap: 40px;
+  }
+
+  .solartext {
+    max-width: 560px;
   }
 
   .solartext p {
@@ -2984,136 +3769,106 @@ Cards
   }
 
   .solarHardwareContainer {
-    width: min(44vw, 620px);
-  }
-
-}
-
-/* ---------- 1280px ---------- */
-@media (max-width:1280px) {
-
-  .SolarEpic {
-    padding: 60px 3.5%;
-  }
-
-  .SolarEpicFLex {
-    gap: 45px;
+    width: 520px;
+    height: 440px;
   }
 
   .solarHardwareMainImageBox {
-    width: 540px;
-    height: 450px
-  }
-
-  .solarHardwareContainer {
-    width: min(43vw, 560px);
+    width: 490px;
+    height: 100%;
   }
 
   .solarHardwarePreviewCard {
-    width: 210px;
-    right: -30px;
-    top: -20px;
+    width: 200px;
+    height: 135px;
+    padding: 14px;
+    top: -25px;
+    right: 0;
   }
 
 }
 
-/* ---------- 1200px ---------- */
-@media (max-width:1200px) {
+
+
+@media (max-width:1130px) {
 
   .SolarEpicFLex {
-    gap: 40px;
-    align-items: center;
+    gap: 35px;
+  }
+
+  .solarHardwareContainer {
+    width: 460px;
+    height: 430px;
   }
 
   .solarHardwareMainImageBox {
-    width: 450px;
-    height: 430px
+    width: 430px;
+    height: 100%;
   }
 
-  .solarHardwarePreviewImageBox {
-    height: 100px;
+  .solarHardwarePreviewCard {
+    width: 185px;
+    height: 125px;
   }
 
   .solartext {
-    max-width: 52%;
-  }
-
-  .solarHardwarePreviewCard {
-    height: 120px;
-  }
-
-  .solarHardwareContainer {
-    width: min(42vw, 520px);
+    max-width: 500px;
   }
 
 }
 
-/* ---------- 1024px ---------- */
+
+
 @media (max-width:1024px) {
 
   .SolarEpic {
-    padding: 55px 30px;
+    padding: 60px 35px;
   }
 
   .solarEpicTitle {
     margin-bottom: 55px;
   }
 
+  .solarEpicTitle h2 {
+    font-size: 42px;
+  }
+
   .SolarEpicFLex {
     flex-direction: column;
     align-items: center;
-    gap: 60px;
-  }
-
-  .solartext {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .solartext p {
-    font-size: 16px;
+    gap: 50px;
   }
 
   .solarHardwareContainer {
     width: 100%;
-    max-width: 650px;
-    height: auto;
+    max-width: 640px;
+    height: 430px;
   }
 
   .solarHardwareMainImageBox {
     width: 100%;
-    aspect-ratio: 590/380;
-    height: auto;
-  }
-
-  .solarHardwarePreviewCard {
-    width: 240px;
-    aspect-ratio: 255/165;
-    height: auto;
-    top: -20px;
-    right: 10px;
-  }
-
-}
-
-/* ---------- 992px ---------- */
-@media (max-width:992px) {
-
-  .solarEpicTitle h2 {
-    font-size: 40px;
+    height: 100%;
   }
 
   .solarHardwarePreviewCard {
     width: 220px;
+    height: 150px;
+    right: -10px;
+  }
+
+  .solartext {
+    max-width: 100%;
   }
 
 }
 
-/* ---------- 768px ---------- */
+
+
+
 @media (max-width:768px) {
 
   .SolarEpic {
-    padding: 50px 20px;
+    padding: 55px 25px;
   }
 
   .solarEpicTitle {
@@ -3121,45 +3876,68 @@ Cards
   }
 
   .solarEpicTitle h2 {
-    font-size: 34px;
-    line-height: 1.3;
-  }
-
-  .FaqsLine {
-    width: 90px;
-  }
-
-  .solartext {
-    gap: 16px;
+    font-size: 36px;
   }
 
   .solartext p {
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 1.75;
   }
 
   .solarHardwareContainer {
-    max-width: 100%;
+    height: 360px;
   }
 
   .solarHardwareMainImageBox {
-    border-radius: 12px;
+    height: 100%;
   }
 
   .solarHardwarePreviewCard {
     width: 180px;
+    height: 120px;
     padding: 12px;
-    top: -12px;
-    right: 0;
+    top: -18px;
+    right: -5px;
   }
 
 }
 
-/* ---------- 576px ---------- */
-@media (max-width:576px) {
+
+
+@media (max-width:560px) {
 
   .SolarEpic {
-    padding: 45px 18px;
+    padding: 50px 20px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 30px;
+  }
+
+  .solarHardwareContainer {
+    height: 300px;
+  }
+
+  .solarHardwareMainImageBox {
+    height: 270px;
+  }
+
+  .solarHardwarePreviewCard {
+    width: 145px;
+    height: 95px;
+    padding: 10px;
+    top: -12px;
+    right: 0;
+    border-radius: 10px;
+  }
+
+}
+
+
+@media (max-width:480px) {
+
+  .SolarEpic {
+    padding: 45px 16px;
   }
 
   .solarEpicTitle {
@@ -3167,91 +3945,86 @@ Cards
   }
 
   .solarEpicTitle h2 {
-    font-size: 30px;
-  }
-
-  .solartext p {
-    font-size: 15px;
-  }
-
-  .solarHardwarePreviewCard {
-    width: 150px;
-    padding: 10px;
-  }
-
-}
-
-/* ---------- 480px ---------- */
-@media (max-width:480px) {
-
-  .SolarEpic {
-    padding: 40px 15px;
-  }
-
-  .solarEpicTitle h2 {
     font-size: 27px;
-  }
-
-  .FaqsLine {
-    width: 75px;
   }
 
   .solartext p {
     font-size: 14px;
-    line-height: 1.7;
+  }
+
+  .solarHardwareContainer {
+    height: 265px;
+  }
+
+  .solarHardwareMainImageBox {
+    height: 100%;
+    border-radius: 12px;
   }
 
   .solarHardwarePreviewCard {
-    width: 130px;
+    width: 125px;
+    height: 85px;
     padding: 8px;
     top: -10px;
   }
 
 }
 
-/* ---------- 375px ---------- */
-@media (max-width:375px) {
+
+
+@media (max-width:360px) {
 
   .SolarEpic {
-    padding: 35px 12px;
+    padding: 40px 14px;
   }
 
   .solarEpicTitle h2 {
     font-size: 24px;
   }
 
-  .solartext p {
-    font-size: 13px;
+  .solarHardwareContainer {
+    height: 225px;
+  }
+
+  .solarHardwareMainImageBox {
+    height: 100%;
   }
 
   .solarHardwarePreviewCard {
-    width: 110px;
-    padding: 7px;
-    right: 0;
+    width: 105px;
+    height: 72px;
+    padding: 6px;
+    top: -8px;
   }
 
 }
 
-/* ---------- 320px ---------- */
+
+
+
 @media (max-width:320px) {
 
   .SolarEpic {
-    padding: 30px 10px;
+    padding: 35px 12px;
   }
 
   .solarEpicTitle h2 {
     font-size: 22px;
   }
 
-  .solartext p {
-    font-size: 12px;
-    line-height: 1.6;
+  .solarHardwareContainer {
+    height: 205px;
+  }
+
+  .solarHardwareMainImageBox {
+    height: 100%;
   }
 
   .solarHardwarePreviewCard {
     width: 95px;
-    padding: 6px;
-    top: -8px;
+    height: 65px;
+    padding: 5px;
+    right: -2px;
   }
 
 }
@@ -3453,7 +4226,7 @@ Cards
 
   .faqImg {
     width: 46%;
-    height: 470px;
+    height: 480px;
   }
 
   .container {
@@ -3715,10 +4488,12 @@ Cards
 /* ======================== */
 .cta {
   width: 100%;
-  background: url('../assets/rooftop/resident/cta.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/solar/hardware/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment:fixed ;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -3816,94 +4591,198 @@ Cards
   background: #2550a0;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+@media (max-width:1280px) {
 
-@media (max-width: 1200px) {
-  .mainTitle {
-    font-size: 3.8rem;
+  .cta {
+    padding: 65px 40px;
   }
 
-  .secTitle {
-    font-size: 3.2rem;
+  .cta h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: center;
   }
 
-  .thicknessGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .cta p {
+    max-width: 820px;
+    margin: 0 auto 24px;
+    font-size: 17px;
+    line-height: 1.8;
   }
+
+  .contactBtn {
+    width: 250px;
+    height: 54px;
+    font-size: 16px;
+  }
+
 }
 
-@media (max-width: 992px) {
+@media (max-width:1200px) {
 
-  .splitContainer,
-  .blueBannerContainer,
-  .faqContent {
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .cta {
+    padding: 60px 40px;
   }
 
-  .mainTitle {
-    font-size: 3.2rem;
+  .cta h2 {
+    font-size: 44px;
+    text-align: center;
   }
 
-  .secTitle {
-    font-size: 2.8rem;
-  }
-
-  .imgCol {
-    order: -1;
-  }
 }
 
-@media (max-width: 768px) {
-  .heroSec {
-    min-height: 78vh;
-    padding: 0 5%;
+@media (max-width:992px) {
+
+  .cta {
+    padding: 55px 30px;
+    background-attachment: scroll;
   }
 
-  .splitSec,
-  .splitSecAlt,
-  .blueBannerSec,
-  .faqSec,
-  .ctaBanner {
-    padding: 50px 5%;
+  .cta h2 {
+    font-size: 38px;
+    line-height: 1.3;
   }
 
-  .mainTitle {
-    font-size: 2.3rem;
-    line-height: 1.15;
+  .cta p {
+    max-width: 700px;
+    font-size: 16px;
   }
 
-  .subtitle {
-    font-size: 0.96rem;
+}
+
+@media (max-width:768px) {
+
+  .cta {
+    padding: 50px 22px;
   }
 
-  .secTitle {
-    font-size: 2.3rem;
-    line-height: 1.12;
+  .cta h2 {
+    font-size: 32px;
   }
 
-  .modernImageWrap {
-    padding-left: 20px;
-    padding-bottom: 20px;
+  .cta p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
   }
 
-  .mainModernImg {
-    height: 360px;
+  .contactBtn {
+    width: 240px;
+    height: 52px;
   }
 
-  .floatingImg {
-    width: 120px;
-    height: 90px;
+}
+
+@media (max-width:576px) {
+
+  .cta {
+    padding: 45px 18px;
   }
 
-  .thicknessGrid {
-    grid-template-columns: 1fr;
+  .cta h2 {
+    font-size: 28px;
   }
 
-  .blueBannerText h2,
-  .ctaInner h2 {
-    font-size: 2.2rem;
+  .cta p {
+    font-size: 14px;
+    margin-bottom: 18px;
   }
+
+  .contactBtn {
+    width: 220px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:425px) {
+
+  .cta {
+    padding: 40px 16px;
+    gap: 14px;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .cta p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contactBtn {
+    width: 200px;
+    height: 48px;
+    padding: 0 20px;
+  }
+
+  .contactText {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:375px) {
+
+  .cta {
+    padding: 35px 14px;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+  }
+
+  .cta p {
+    font-size: 13px;
+  }
+
+  .contactBtn {
+    width: 190px;
+    height: 46px;
+  }
+
+}
+
+@media (max-width:325px) {
+
+  .cta {
+    padding: 30px 12px;
+  }
+
+  .cta h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .contactBtn {
+    width: 175px;
+    height: 44px;
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .contactText {
+    font-size: 13px;
+  }
+
+  .iconBox {
+    width: 16px;
+    height: 16px;
+  }
+
+  .iconOne,
+  .iconTwo {
+    width: 16px;
+    height: 16px;
+  }
+
 }

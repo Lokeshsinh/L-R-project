@@ -594,9 +594,7 @@ const About = () => {
 
         <section className={styles.mfgBand}>
           <div className={styles.scrollWrap}>
-            <div className={styles.scrollTrack}>
-              <h1>L & R Enterprises</h1>
-            </div>
+
           </div>
 
           <div className={styles.mfgContainer}>
@@ -690,9 +688,7 @@ const About = () => {
             </div>
 
             {/* Watermark */}
-            <h1 className={styles.backgroundTitle}>
-              PROFILE
-            </h1>
+          
           </div>
         </section>
 

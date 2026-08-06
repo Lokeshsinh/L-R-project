@@ -117,14 +117,37 @@ const SolarHardware = () => {
     { id: 4, q: "Can you provide custom hardware for special mounting systems?", a: "Absolutely. We accept custom orders for non-standard module sizes, special roof profiles, or unique structural requirements with engineering support." },
   ];
 
-  const visibleCards = 4;
+  const [visibleCards, setVisibleCards] = useState(4);
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth <= 480) {
+        setVisibleCards(1);
+      } else if (window.innerWidth <= 768) {
+        setVisibleCards(2);
+      } else if (window.innerWidth <= 1024) {
+        setVisibleCards(3);
+      } else {
+        setVisibleCards(4);
+      }
+    };
+
+    updateVisibleCards();
+
+    window.addEventListener("resize", updateVisibleCards);
+
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setIndex((prev) =>
-      prev >= industryProjects.length - visibleCards ? 0 : prev + 1
+      prev >= industryProjects.length - visibleCards
+        ? 0
+        : prev + 1
     );
-  }, [industryProjects.length]);
+  }, [visibleCards, industryProjects.length]);
 
+  
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
@@ -134,7 +157,11 @@ const SolarHardware = () => {
   }, [nextSlide]);
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + industryProjects.length) % industryProjects.length);
+    setIndex((prev) =>
+      prev === 0
+        ? industryProjects.length - visibleCards
+        : prev - 1
+    );
   };
 
   return (
@@ -352,9 +379,6 @@ const SolarHardware = () => {
       {/* STRENGTH BANNER */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R SOLar hardware</h1>
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>
@@ -411,6 +435,10 @@ const SolarHardware = () => {
           ))}
         </div>
       </section>
+
+
+
+
 
       {/* APPLICATIONS */}
       <section className={styles.conatineUser}>

@@ -227,9 +227,7 @@ const SolarMountingStructure = () => {
       {/* ════ SECTION 4 · BENEFITS & MATERIALS (dark navy banner) ════ */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Module mounting structure</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -338,7 +336,8 @@ const SolarMountingStructure = () => {
       {/* ════ SECTION 6 · WHY CHOOSE SOLAR EPC SERVICES ════ */}
       <section className={styles.SolarEpic}>
         <div className={styles.solarEpicTitle}>
-          <h2>Why Choose Solar <br /><span>EPC Services</span></h2>
+          <h2>Why Choose Solar <br /><span> Module
+            Mounting </span></h2>
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>
@@ -390,8 +389,8 @@ const SolarMountingStructure = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>A Solar EPC company like L&R Green Pvt Ltd manages the full solar project lifecycle,
-            including design, procurement, construction, testing, and commissioning of the plant.</p>
+          <p>Solar module mounting structures ensure strong support, safety, and efficient solar energy
+            generation. At L&R Green Pvt Ltd, we provide durable and weather-resistant mounting solutions for all installations.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
