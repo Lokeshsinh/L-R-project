@@ -1,9 +1,10 @@
 import styles from "../../styles/About.module.css";
 import preBuild from '../../assets/Home/pre.png'
 import { ArrowUpRight } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 
 const AboutPreview = () => {
+  const navigate = useNavigate()
   return (
     <section className={styles["about-section"]}>
       <div className={styles["about-left"]}>
@@ -63,7 +64,13 @@ const AboutPreview = () => {
           and future-ready industrial growth across India.
         </p>
 
-        <button className={styles.primaryBtn}>
+        <button className={styles.primaryBtn} onClick={() => {
+          navigate("/about");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span>More About Us</span>
           <ArrowUpRight className={styles.icon} size={18} strokeWidth={2.3} />
         </button>

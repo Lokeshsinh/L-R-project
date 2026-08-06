@@ -807,6 +807,1317 @@
     }
 }
 
+
+
+
+
+
+@media (max-width:1440px) {
+
+  .gallerySec{
+    padding:70px 50px;
+  }
+
+  /* Heading */
+  .headingRow{
+    margin-bottom:60px;
+    gap:30px;
+  }
+
+  .galleryText h2{
+    font-size:48px;
+    line-height:1.2;
+  }
+
+  .headingRow p{
+    max-width:450px;
+    font-size:15px;
+  }
+
+  .discoverDivider{
+    width:110px;
+  }
+
+  /* Filter */
+
+  .filterRow{
+    margin-bottom:35px;
+  }
+
+  .filterFlex{
+    gap:14px;
+  }
+
+  .sortByLabel{
+    font-size:16px;
+  }
+
+  .filterDropdownWrap{
+    width:220px;
+  }
+
+  .filterBtn{
+    height:54px;
+    font-size:15px;
+    padding:0 18px;
+  }
+
+  /* Gallery */
+
+  .imageGrid{
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+
+  .imageCard{
+    border-radius:18px;
+  }
+
+  .playIcon{
+    width:72px;
+    height:72px;
+    font-size:30px;
+  }
+
+  /* Pagination */
+
+  .pagination{
+    margin-top:50px;
+  }
+
+  .pageBtn{
+    width:40px;
+    height:40px;
+    font-size:15px;
+  }
+
+  /* Popup */
+
+  .popupOverlay{
+    padding:30px;
+  }
+
+  .popupBox{
+    max-width:1050px;
+    border-radius:18px;
+  }
+
+  .popupMedia{
+    max-height:85vh;
+  }
+
+  .closeBtn{
+    width:46px;
+    height:46px;
+    font-size:20px;
+  }
+
+
+}
+
+
+
+@media (max-width:1280px) {
+
+  .gallerySec{
+    padding:60px 40px;
+  }
+
+  /* Heading */
+
+  .headingRow{
+    margin-bottom:55px;
+    gap:25px;
+  }
+
+  .galleryText{
+    gap:8px;
+  }
+
+  .galleryText h2{
+    font-size:44px;
+    line-height:1.2;
+  }
+
+  .discoverDivider{
+    width:100px;
+    height:3px;
+  }
+
+  .headingRow p{
+    max-width:420px;
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  /* Filter */
+
+  .filterRow{
+    margin-bottom:35px;
+  }
+
+  .filterFlex{
+    gap:12px;
+  }
+
+  .sortByLabel{
+    font-size:15px;
+  }
+
+  .filterDropdownWrap{
+    width:220px;
+  }
+
+  .filterBtn{
+    height:52px;
+    padding:0 18px;
+    font-size:14px;
+  }
+
+  .dropdownItem{
+    padding:15px 18px;
+    font-size:14px;
+  }
+
+  /* Image Grid */
+
+  .imageGrid{
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+
+  .imageCard{
+    border-radius:16px;
+  }
+
+  .gridImg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .playIcon{
+    width:68px;
+    height:68px;
+    font-size:28px;
+  }
+
+  /* Pagination */
+
+  .pagination{
+    margin-top:45px;
+    gap:8px;
+  }
+
+  .pageBtn{
+    width:38px;
+    height:38px;
+    font-size:14px;
+  }
+
+  /* Popup */
+
+  .popupOverlay{
+    padding:28px;
+  }
+
+  .popupBox{
+    max-width:980px;
+    border-radius:16px;
+  }
+
+  .popupMedia{
+    max-height:82vh;
+  }
+
+  .closeBtn{
+    width:44px;
+    height:44px;
+    font-size:20px;
+    top:16px;
+    right:16px;
+  }
+
+  /* CTA */
+
+  
+
+}
+
+
+
+/* ===========================
+   1200px
+=========================== */
+@media (max-width:1200px) {
+
+  .gallerySec{
+    padding:60px 35px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    margin-bottom:50px;
+    gap:25px;
+    align-items:flex-start;
+  }
+
+  .galleryText{
+    gap:8px;
+  }
+
+  .galleryText h2{
+    font-size:40px;
+    line-height:1.2;
+  }
+
+  .discoverDivider{
+    width:90px;
+    height:3px;
+  }
+
+  .headingRow p{
+    max-width:420px;
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    margin-bottom:35px;
+  }
+
+  .filterFlex{
+    gap:12px;
+  }
+
+  .sortByLabel{
+    font-size:15px;
+  }
+
+  .filterDropdownWrap{
+    width:210px;
+  }
+
+  .filterBtn{
+    height:50px;
+    padding:0 18px;
+    font-size:14px;
+  }
+
+  .dropdownPanel{
+    border-radius:12px;
+  }
+
+  .dropdownItem{
+    padding:15px 18px;
+    font-size:14px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+
+  .imageCard{
+    border-radius:16px;
+  }
+
+  .playIcon{
+    width:64px;
+    height:64px;
+    font-size:26px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    margin-top:45px;
+    gap:8px;
+  }
+
+  .pageBtn{
+    width:38px;
+    height:38px;
+    font-size:14px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:25px;
+  }
+
+  .popupBox{
+    width:96%;
+    max-width:900px;
+    border-radius:16px;
+  }
+
+  .popupMedia{
+    max-height:80vh;
+  }
+
+  .closeBtn{
+    width:42px;
+    height:42px;
+    font-size:20px;
+    top:15px;
+    right:15px;
+  }
+
+
+}
+
+
+/* ===========================
+   992px
+=========================== */
+@media (max-width:992px) {
+
+  .gallerySec{
+    padding:55px 30px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:22px;
+    margin-bottom:45px;
+  }
+
+  .galleryText{
+    align-items:center;
+  }
+
+  .galleryText h2{
+    font-size:36px;
+  }
+
+  .discoverDivider{
+    width:80px;
+  }
+
+  .headingRow p{
+    max-width:700px;
+    font-size:15px;
+    padding-top:0;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    justify-content:center;
+    margin-bottom:35px;
+  }
+
+  .filterFlex{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .sortByLabel{
+    font-size:14px;
+  }
+
+  .filterDropdownWrap{
+    width:230px;
+  }
+
+  .filterBtn{
+    height:50px;
+    font-size:14px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  .imageCard{
+    border-radius:16px;
+  }
+
+  .playIcon{
+    width:64px;
+    height:64px;
+    font-size:28px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    margin-top:40px;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:38px;
+    height:38px;
+    font-size:14px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:20px;
+  }
+
+  .popupBox{
+    width:100%;
+    max-width:850px;
+    border-radius:15px;
+  }
+
+  .popupMedia{
+    max-height:75vh;
+  }
+
+  .closeBtn{
+    width:42px;
+    height:42px;
+    top:12px;
+    right:12px;
+    font-size:18px;
+  }
+
+
+}
+
+
+
+
+/* ===========================
+   768px
+=========================== */
+@media (max-width:768px) {
+
+  .gallerySec{
+    padding:50px 25px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:20px;
+    margin-bottom:40px;
+  }
+
+  .galleryText{
+    align-items:center;
+    gap:8px;
+  }
+
+  .galleryText h2{
+    font-size:32px;
+    line-height:1.3;
+  }
+
+  .discoverDivider{
+    width:75px;
+    height:3px;
+  }
+
+  .headingRow p{
+    max-width:100%;
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    justify-content:center;
+    margin-bottom:30px;
+  }
+
+  .filterFlex{
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+
+  .sortByLabel{
+    font-size:14px;
+  }
+
+  .filterDropdownWrap{
+    width:260px;
+    max-width:100%;
+  }
+
+  .filterBtn{
+    width:100%;
+    height:50px;
+    font-size:14px;
+    padding:0 18px;
+  }
+
+  .dropdownItem{
+    padding:15px 18px;
+    font-size:14px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+  .imageCard{
+    border-radius:15px;
+  }
+
+  .playIcon{
+    width:58px;
+    height:58px;
+    font-size:24px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    margin-top:35px;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:36px;
+    height:36px;
+    font-size:13px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:15px;
+  }
+
+  .popupBox{
+    width:100%;
+    border-radius:14px;
+  }
+
+  .popupMedia{
+    max-height:70vh;
+  }
+
+  .closeBtn{
+    width:40px;
+    height:40px;
+    top:10px;
+    right:10px;
+    font-size:18px;
+  }
+
+
+}
+
+
+/* ===========================
+   576px
+=========================== */
+@media (max-width:576px) {
+
+  .gallerySec{
+    padding:45px 20px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    margin-bottom:35px;
+    gap:18px;
+    text-align:center;
+  }
+
+  .galleryText{
+    align-items:center;
+  }
+
+  .galleryText h2{
+    font-size:28px;
+    line-height:1.3;
+  }
+
+  .discoverDivider{
+    width:65px;
+    height:3px;
+  }
+
+  .headingRow p{
+    max-width:100%;
+    font-size:13px;
+    line-height:1.7;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    margin-bottom:28px;
+    justify-content:center;
+  }
+
+  .filterFlex{
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+
+  .sortByLabel{
+    font-size:13px;
+  }
+
+  .filterDropdownWrap{
+    width:100%;
+    max-width:320px;
+  }
+
+  .filterBtn{
+    height:48px;
+    padding:0 16px;
+    font-size:14px;
+    border-radius:10px;
+  }
+
+  .dropdownItem{
+    padding:14px 16px;
+    font-size:14px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .imageCard{
+    border-radius:14px;
+    aspect-ratio:4/3;
+  }
+
+  .playIcon{
+    width:56px;
+    height:56px;
+    font-size:22px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    margin-top:30px;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:36px;
+    height:36px;
+    font-size:13px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:12px;
+  }
+
+  .popupBox{
+    width:100%;
+    border-radius:12px;
+  }
+
+  .popupMedia{
+    max-height:65vh;
+  }
+
+  .closeBtn{
+    width:38px;
+    height:38px;
+    top:8px;
+    right:8px;
+    font-size:16px;
+  }
+
+
+}
+
+
+
+
+/* ===========================
+   480px
+=========================== */
+@media (max-width:480px) {
+
+  .gallerySec{
+    padding:40px 16px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    gap:16px;
+    margin-bottom:30px;
+    text-align:center;
+  }
+
+  .galleryText{
+    width:100%;
+    align-items:center;
+  }
+
+  .galleryText h2{
+    font-size:24px;
+    line-height:1.35;
+  }
+
+  .discoverDivider{
+    width:60px;
+    height:3px;
+  }
+
+  .headingRow p{
+    width:100%;
+    font-size:13px;
+    line-height:1.7;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    margin-bottom:25px;
+  }
+
+  .filterFlex{
+    width:100%;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .sortByLabel{
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+
+  .filterDropdownWrap{
+    width:100%;
+  }
+
+  .filterBtn{
+    width:100%;
+    height:46px;
+    padding:0 15px;
+    font-size:13px;
+    border-radius:8px;
+  }
+
+  .dropdownPanel{
+    border-radius:10px;
+  }
+
+  .dropdownItem{
+    padding:13px 15px;
+    font-size:13px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .imageCard{
+    border-radius:12px;
+    aspect-ratio:4/3;
+  }
+
+  .playIcon{
+    width:52px;
+    height:52px;
+    font-size:20px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    gap:6px;
+    margin-top:28px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:34px;
+    height:34px;
+    font-size:12px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:10px;
+  }
+
+  .popupBox{
+    width:100%;
+    border-radius:10px;
+  }
+
+  .popupMedia{
+    max-height:60vh;
+  }
+
+  .closeBtn{
+    width:36px;
+    height:36px;
+    top:8px;
+    right:8px;
+    font-size:15px;
+  }
+
+
+}
+
+
+
+/* ===========================
+   390px
+=========================== */
+@media (max-width:390px) {
+
+  .gallerySec{
+    padding:35px 14px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    gap:15px;
+    margin-bottom:28px;
+    text-align:center;
+  }
+
+  .galleryText{
+    width:100%;
+    align-items:center;
+  }
+
+  .galleryText h2{
+    font-size:22px;
+    line-height:1.35;
+  }
+
+  .discoverDivider{
+    width:55px;
+    height:3px;
+  }
+
+  .headingRow p{
+    font-size:12px;
+    line-height:1.7;
+    max-width:100%;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    margin-bottom:22px;
+  }
+
+  .filterFlex{
+    width:100%;
+    gap:10px;
+  }
+
+  .sortByLabel{
+    font-size:11px;
+    letter-spacing:.08em;
+  }
+
+  .filterDropdownWrap{
+    width:100%;
+  }
+
+  .filterBtn{
+    width:100%;
+    height:44px;
+    padding:0 14px;
+    font-size:12px;
+    border-radius:8px;
+  }
+
+  .filterBtn svg{
+    width:16px;
+    height:16px;
+  }
+
+  .dropdownPanel{
+    border-radius:10px;
+  }
+
+  .dropdownItem{
+    padding:12px 14px;
+    font-size:12px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .imageCard{
+    border-radius:10px;
+    aspect-ratio:4/3;
+  }
+
+  .playIcon{
+    width:48px;
+    height:48px;
+    font-size:18px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    gap:5px;
+    margin-top:24px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:32px;
+    height:32px;
+    font-size:11px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:8px;
+  }
+
+  .popupBox{
+    width:100%;
+    border-radius:8px;
+  }
+
+  .popupMedia{
+    max-height:55vh;
+  }
+
+  .closeBtn{
+    width:34px;
+    height:34px;
+    top:8px;
+    right:8px;
+    font-size:14px;
+  }
+
+}
+
+
+/* ===========================
+   360px
+=========================== */
+@media (max-width:360px) {
+
+  .gallerySec{
+    padding:32px 12px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    gap:14px;
+    margin-bottom:25px;
+    text-align:center;
+  }
+
+  .galleryText{
+    width:100%;
+    align-items:center;
+  }
+
+  .galleryText h2{
+    font-size:20px;
+    line-height:1.35;
+  }
+
+  .discoverDivider{
+    width:50px;
+    height:3px;
+  }
+
+  .headingRow p{
+    width:100%;
+    font-size:11px;
+    line-height:1.7;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    margin-bottom:20px;
+  }
+
+  .filterFlex{
+    width:100%;
+    gap:8px;
+  }
+
+  .sortByLabel{
+    font-size:10px;
+    letter-spacing:.08em;
+  }
+
+  .filterDropdownWrap{
+    width:100%;
+  }
+
+  .filterBtn{
+    width:100%;
+    height:42px;
+    padding:0 12px;
+    font-size:11px;
+    border-radius:8px;
+  }
+
+  .filterBtn svg{
+    width:15px;
+    height:15px;
+  }
+
+  .dropdownPanel{
+    border-radius:8px;
+  }
+
+  .dropdownItem{
+    padding:11px 12px;
+    font-size:11px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .imageCard{
+    border-radius:10px;
+    aspect-ratio:4/3;
+  }
+
+  .playIcon{
+    width:44px;
+    height:44px;
+    font-size:17px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    margin-top:22px;
+    gap:5px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:30px;
+    height:30px;
+    font-size:10px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:6px;
+  }
+
+  .popupBox{
+    width:100%;
+    border-radius:8px;
+  }
+
+  .popupMedia{
+    max-height:50vh;
+  }
+
+  .closeBtn{
+    width:32px;
+    height:32px;
+    top:6px;
+    right:6px;
+    font-size:13px;
+  }
+
+}
+
+
+
+/* ===========================
+   320px
+=========================== */
+@media (max-width:320px) {
+
+  .gallerySec{
+    padding:28px 10px;
+  }
+
+  /* ================= Heading ================= */
+
+  .headingRow{
+    gap:12px;
+    margin-bottom:22px;
+    text-align:center;
+  }
+
+  .galleryText{
+    width:100%;
+    align-items:center;
+  }
+
+  .galleryText h2{
+    font-size:18px;
+    line-height:1.4;
+  }
+
+  .discoverDivider{
+    width:45px;
+    height:2px;
+  }
+
+  .headingRow p{
+    width:100%;
+    font-size:10px;
+    line-height:1.7;
+    padding-top:0;
+  }
+
+  /* ================= Filter ================= */
+
+  .filterRow{
+    margin-bottom:18px;
+  }
+
+  .filterFlex{
+    width:100%;
+    gap:8px;
+  }
+
+  .sortByLabel{
+    font-size:10px;
+    letter-spacing:.06em;
+  }
+
+  .filterDropdownWrap{
+    width:100%;
+  }
+
+  .filterBtn{
+    width:100%;
+    height:40px;
+    padding:0 12px;
+    font-size:10px;
+    border-radius:6px;
+  }
+
+  .filterBtn svg{
+    width:14px;
+    height:14px;
+  }
+
+  .dropdownPanel{
+    border-radius:8px;
+    max-height:240px;
+  }
+
+  .dropdownItem{
+    padding:10px 12px;
+    font-size:10px;
+  }
+
+  /* ================= Gallery ================= */
+
+  .imageGrid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .imageCard{
+    border-radius:8px;
+    aspect-ratio:4/3;
+  }
+
+  .playIcon{
+    width:40px;
+    height:40px;
+    font-size:15px;
+  }
+
+  /* ================= Pagination ================= */
+
+  .pagination{
+    margin-top:20px;
+    gap:4px;
+    flex-wrap:wrap;
+  }
+
+  .pageBtn{
+    width:28px;
+    height:28px;
+    font-size:9px;
+    border-radius:6px;
+  }
+
+  /* ================= Popup ================= */
+
+  .popupOverlay{
+    padding:5px;
+  }
+
+  .popupBox{
+    width:100%;
+    border-radius:6px;
+  }
+
+  .popupMedia{
+    max-height:45vh;
+  }
+
+  .closeBtn{
+    width:30px;
+    height:30px;
+    top:5px;
+    right:5px;
+    font-size:12px;
+  }
+
+
+
+}
 /* ==============================cta============================== */
 
 .cta {
@@ -913,6 +2224,7 @@
 .btnBlue:hover {
     background: #2550a0;
 }
+
 
 
 /* ================== 1440px ================== */

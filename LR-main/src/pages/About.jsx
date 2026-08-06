@@ -464,7 +464,13 @@ const About = () => {
                 we provide complete turnkey solutions tailored to our clients' requirements. Backed by modern
                 manufacturing facilities, skilled professionals, and a strong commitment to quality, we proudly
                 serve customers across India with reliable and timely project execution.</p>
-              <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <button className={styles.btnOutline} onClick={() => {
+                navigate("/contact");
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}>
                 <span>Get Contact</span>
 
                 <span className={styles.iconWrap}>
@@ -688,7 +694,7 @@ const About = () => {
             </div>
 
             {/* Watermark */}
-          
+
           </div>
         </section>
 
@@ -1139,7 +1145,13 @@ const About = () => {
             From prefabricated buildings to steel structures, L&R Enterprises delivers reliable,
             high-quality, and customized solutions for every project. Contact our team today and turn your vision into reality.
           </p>
-          <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+          <button className={styles.contactBtn} onClick={() => {
+            navigate("/");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>
             <span className={styles.contactText}>Contact Us</span>
 
             <span className={styles.iconBoxs}>

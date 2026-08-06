@@ -205,7 +205,8 @@
   .leftContent h2 {
     font-size: 30px;
   }
-  .leftContent p{
+
+  .leftContent p {
     font-size: 15px;
   }
 
@@ -213,6 +214,21 @@
     font-size: 80px;
   }
 
+}
+
+
+@media (max-width:1070px) {
+  .bannerSection {
+    height: auto;
+  }
+
+  .LetImage {
+    position: absolute;
+    top: 60%;
+    left: -8%;
+    width: 300px;
+    height: 280px;
+  }
 }
 
 /* ===========================
@@ -243,9 +259,7 @@
     max-width: 450px;
   }
 
-  .LetImage {
-    display: none;
-  }
+
 
 }
 
@@ -282,6 +296,10 @@
   .buildingImg {
     width: 100%;
     max-width: 650px;
+  }
+
+  .LetImage {
+    display: none;
   }
 
   .watermark {

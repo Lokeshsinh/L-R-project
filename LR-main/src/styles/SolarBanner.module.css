@@ -169,6 +169,10 @@
     font-size: 34px;
   }
 
+  .SolarBannerText p{
+    font-size:16px;
+    line-height: 1.8;
+  }
   .bannerSectionHidden h1 {
     font-size: 135px;
   }
@@ -180,7 +184,7 @@
 @media screen and (max-width:1200px) {
 
   .bannerSection {
-    min-height: 42vh;
+    min-height: 50vh;
   }
 
   .SolarBannerText h1 {
@@ -203,6 +207,12 @@
 }
 
 /* 1024px */
+
+@media screen and (max-width: 1055px){
+    .bannerSection {
+    min-height: 54vh;
+  }
+}
 
 @media screen and (max-width:1024px) {
 
@@ -278,10 +288,7 @@
   }
 
   .bannerSloarBottom {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin-top: 25px;
+    display: none;
   }
 
   .bannerSloarBottom img {

@@ -31,7 +31,7 @@ const containerTypes = [
     title: "Premium Series Containers",
     desc: "High-end modular MS containers built for durability, portability, and customization ideal for luxury offices, accommodation, control rooms, and secure storage, with strong steel frames, insulation, and premium finishes.",
     img: read1,
-    path: "/puf-containers",
+    path: "/premium-ms-containers",
   },
   {
     title: "Executive Series Containers",
@@ -203,7 +203,13 @@ const MsContainer = () => {
               stability, efficiency, and long-lasting use.
             </p>
 
-            <button className={styles.btnOutline}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -331,7 +337,7 @@ const MsContainer = () => {
       {/* STRUCTURAL STRENGTH BAND */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-         
+
         </div>
 
         <div className={styles.mfgContainer}>

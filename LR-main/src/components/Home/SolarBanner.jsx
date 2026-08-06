@@ -11,9 +11,7 @@ const SolarBanner = ({
 }) => {
   return (
     <section className={styles.bannerSection}>
-      <div className={styles.bannerSectionHidden}>
-        <h1>L & R GREEN INDIA</h1>
-      </div>
+
       <div className={styles.solarBannerFlex}>
         {/* Text */}
         <div className={styles.SolarBannerText}>

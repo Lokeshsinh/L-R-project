@@ -135,7 +135,7 @@
 /* Col 2, 3, 5: Info, Legal, Help */
 .footer-col h4 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 26px;
   color: #fff;
 }
@@ -144,7 +144,8 @@
   position: relative;
   color: rgba(255, 255, 255, 0.78);
   margin: 0 0 16px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   transition: color 0.3s ease;
 }

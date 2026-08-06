@@ -6,8 +6,9 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom'
 const Footer = () => {
-
+  const navigate = useNavigate()
   return (
     <footer className="footer">
       {/* Top Header Section */}
@@ -24,7 +25,13 @@ const Footer = () => {
       <div className="footer-content">
         {/* Col 1: Brand & Social */}
         <div className="footer-brand">
-          <div className="footer-logo-row">
+          <div style={{ cursor: "pointer" }} onClick={() => {
+            navigate("/");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }} className="footer-logo-row">
             <img src={logo1} alt="logo" />
           </div>
           <p className="footer-desc">
@@ -52,12 +59,49 @@ const Footer = () => {
         {/* Col 2: Info */}
         <div className="footer-col">
           <h4>Info</h4>
-          <p>Home</p>
-          <p>About Us</p>
+          <p onClick={() => {
+            navigate("/");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }} >Home</p>
+          <p onClick={() => {
+            navigate("/about");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>About Us</p>
           <p>Our Products</p>
-          <p>Gallery</p>
-          <p>Brochure</p>
-          <p>Contact US</p>
+          <p onClick={() => {
+            navigate("/projects");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>Projects</p>
+          <p onClick={() => {
+            navigate("/gallery");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>Gallery</p>
+          <p onClick={() => {
+            navigate("/brochure");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>Brochure</p>
+          <p onClick={() => {
+            navigate("/contact");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>Contact US</p>
         </div>
 
         {/* Col 3: Legal */}

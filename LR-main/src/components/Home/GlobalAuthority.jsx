@@ -6,9 +6,7 @@ const GlobalAuthority = () => {
   return (
     <section className={styles.bannerSection}>
       <div className={styles.watermarkWrapper}>
-        <div className={styles.watermarkTrack}>
-          <span className={styles.watermark}>PRE-ENGINEERED</span>
-        </div>
+
       </div>
 
       <div className={styles.leftContent}>
