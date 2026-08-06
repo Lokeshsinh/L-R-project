@@ -292,7 +292,7 @@ const HVACSolutions = () => {
 
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-        
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -334,8 +334,9 @@ const HVACSolutions = () => {
             <h2>Our Core <br /><span>HVAC Services</span></h2>
             <div className={styles.divider}></div>
           </div>
-          <p>Essential HVAC services focused on efficient airflow, ventilation, and indoor comfort
-            using high-quality installation and system design.</p>
+          <p>Our solar fasteners are designed to deliver long-lasting strength, reliability, and performance in
+            demanding environments. They ensure secure connections while improving efficiency and reducing
+            overall project costs.</p>
         </div>
         <div className={styles.hardwareFeatureGrid}>
           {hardwareFeatures.map((item, index) => (
@@ -352,7 +353,7 @@ const HVACSolutions = () => {
           ))}
         </div>
       </section>
-      
+
 
       {/* MAINTENANCE */}
       <section className={styles.hvacSection}>
@@ -465,8 +466,8 @@ const HVACSolutions = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about prefabricated rooftop residential flats, including
-            installation, safety, customization, and suitability for different building types.</p>
+          <p>Solar hardware solutions provide stability, durability, and proper alignment,
+            enhancing system performance, safety, and lifespan.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
