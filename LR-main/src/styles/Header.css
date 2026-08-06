@@ -33,7 +33,8 @@
   font-size: 14px;
   overflow: hidden;
 }
-.top-header{
+
+.top-header {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -64,11 +65,12 @@
   min-width: 0;
 }
 
-.info-item span{
+.info-item span {
   font-size: 14px;
   color: #263f69;
   font-weight: 600;
 }
+
 .info-item {
   display: flex;
   align-items: center;
@@ -90,7 +92,7 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  border-top-left-radius:  45px;
+  border-top-left-radius: 45px;
   flex-shrink: 0;
 }
 
@@ -134,7 +136,7 @@
 
 }
 
-@media (max-width:1200px) {
+/* @media (max-width:1200px) {
 
   .top-label {
     padding: 15px;
@@ -155,7 +157,7 @@
     gap: 12px;
   }
 
-}
+} */
 
 @media (max-width:992px) {
 
@@ -189,11 +191,18 @@
   }
 
   .top-social {
+    height: auto;
+    padding: 12px;
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     border-radius: 10px;
-    padding: 12px 20px;
   }
 
 }
+
 @media (max-width:768px) {
 
   .top-bar {
@@ -285,6 +294,7 @@
   }
 
 }
+
 /* ══════════════════════════════════
    NAVBAR
 ══════════════════════════════════ */
@@ -307,14 +317,14 @@
   flex-shrink: 0;
 }
 
-.brand-icon-circle{
+.brand-icon-circle {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 240px;
 }
 
-.brand-icon-circle img{
+.brand-icon-circle img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -338,7 +348,7 @@
   position: relative;
 }
 
-.nav-links > li > a,
+.nav-links>li>a,
 .dropdown-toggle {
   padding: 28px 0;
   font-weight: 500;
@@ -376,15 +386,16 @@
   display: inline-block;
 }
 
-.dropdown:hover > .dropdown-toggle .arrow,
-.dropdown:focus-within > .dropdown-toggle .arrow,
-.dropdown.mobile-open > .dropdown-toggle .arrow {
+.dropdown:hover>.dropdown-toggle .arrow,
+.dropdown:focus-within>.dropdown-toggle .arrow,
+.dropdown.mobile-open>.dropdown-toggle .arrow {
   transform: rotate(180deg);
 }
 
 /* Desktop underline */
 @media (min-width: 901px) {
-  .nav-links > li > a::after,
+
+  .nav-links>li>a::after,
   .dropdown-toggle::after {
     content: "";
     position: absolute;
@@ -397,17 +408,17 @@
     transition: width 0.25s ease;
   }
 
-  .nav-links > li:hover > a,
-  .nav-links > li:hover > .dropdown-toggle,
+  .nav-links>li:hover>a,
+  .nav-links>li:hover>.dropdown-toggle,
   .nav-links a.active,
-  .dropdown:focus-within > .dropdown-toggle {
+  .dropdown:focus-within>.dropdown-toggle {
     color: #263f69;
   }
 
-  .nav-links > li:hover > a::after,
+  .nav-links>li:hover>a::after,
   .nav-links a.active::after,
-  .nav-links > li:hover > .dropdown-toggle::after,
-  .dropdown:focus-within > .dropdown-toggle::after {
+  .nav-links>li:hover>.dropdown-toggle::after,
+  .dropdown:focus-within>.dropdown-toggle::after {
     width: 100%;
   }
 }
@@ -487,9 +498,9 @@
    that is itself opening to the right and might overflow. */
 
 /* Override for menus that could overflow right side of viewport */
-.dropdown-submenu.flip-left > .submenu-list,
-.nested-submenu.flip-left > .nested-list,
-.deep-submenu.flip-left > .deep-list {
+.dropdown-submenu.flip-left>.submenu-list,
+.nested-submenu.flip-left>.nested-list,
+.deep-submenu.flip-left>.deep-list {
   left: auto;
   right: calc(100% + 8px);
   transform: translateX(-10px);
@@ -499,57 +510,58 @@
    DESKTOP HOVER REVEAL
 ══════════════════════════════════ */
 @media (min-width: 901px) {
-  .dropdown:hover > .dropdown-menu,
-  .dropdown:focus-within > .dropdown-menu {
+
+  .dropdown:hover>.dropdown-menu,
+  .dropdown:focus-within>.dropdown-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
 
-  .dropdown-submenu:hover > .submenu-list,
-  .dropdown-submenu:focus-within > .submenu-list {
+  .dropdown-submenu:hover>.submenu-list,
+  .dropdown-submenu:focus-within>.submenu-list {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
   }
 
-  .dropdown-submenu.flip-left:hover > .submenu-list,
-  .dropdown-submenu.flip-left:focus-within > .submenu-list {
+  .dropdown-submenu.flip-left:hover>.submenu-list,
+  .dropdown-submenu.flip-left:focus-within>.submenu-list {
     transform: translateX(0);
   }
 
-  .nested-submenu:hover > .nested-list,
-  .nested-submenu:focus-within > .nested-list {
+  .nested-submenu:hover>.nested-list,
+  .nested-submenu:focus-within>.nested-list {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
   }
 
-  .nested-submenu.flip-left:hover > .nested-list,
-  .nested-submenu.flip-left:focus-within > .nested-list {
+  .nested-submenu.flip-left:hover>.nested-list,
+  .nested-submenu.flip-left:focus-within>.nested-list {
     transform: translateX(0);
   }
 
-  .deep-submenu:hover > .deep-list,
-  .deep-submenu:focus-within > .deep-list {
+  .deep-submenu:hover>.deep-list,
+  .deep-submenu:focus-within>.deep-list {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
   }
 
-  .deep-submenu.flip-left:hover > .deep-list,
-  .deep-submenu.flip-left:focus-within > .deep-list {
+  .deep-submenu.flip-left:hover>.deep-list,
+  .deep-submenu.flip-left:focus-within>.deep-list {
     transform: translateX(0);
   }
 }
 
 /* Invisible bridge to prevent hover gap on submenu items */
-.dropdown-submenu > .submenu-list::before,
-.nested-submenu > .nested-list::before {
+.dropdown-submenu>.submenu-list::before,
+.nested-submenu>.nested-list::before {
   content: "";
   position: absolute;
   top: 0;
@@ -558,8 +570,8 @@
   height: 100%;
 }
 
-.dropdown-submenu.flip-left > .submenu-list::before,
-.nested-submenu.flip-left > .nested-list::before {
+.dropdown-submenu.flip-left>.submenu-list::before,
+.nested-submenu.flip-left>.nested-list::before {
   left: auto;
   right: -10px;
 }
@@ -574,13 +586,13 @@
   position: relative;
 }
 
-.dropdown-menu li > a,
-.submenu-list li > a,
-.nested-list li > a,
-.deep-list li > a,
-.dropdown-submenu > button,
-.nested-submenu > button,
-.deep-submenu > button {
+.dropdown-menu li>a,
+.submenu-list li>a,
+.nested-list li>a,
+.deep-list li>a,
+.dropdown-submenu>button,
+.nested-submenu>button,
+.deep-submenu>button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -604,16 +616,16 @@
     transform 0.15s ease;
 }
 
-.dropdown-menu li:hover > a,
-.submenu-list li:hover > a,
-.nested-list li:hover > a,
-.deep-list li:hover > a,
-.dropdown-submenu:hover > button,
-.nested-submenu:hover > button,
-.deep-submenu:hover > button,
-.dropdown-submenu:focus-within > button,
-.nested-submenu:focus-within > button,
-.deep-submenu:focus-within > button {
+.dropdown-menu li:hover>a,
+.submenu-list li:hover>a,
+.nested-list li:hover>a,
+.deep-list li:hover>a,
+.dropdown-submenu:hover>button,
+.nested-submenu:hover>button,
+.deep-submenu:hover>button,
+.dropdown-submenu:focus-within>button,
+.nested-submenu:focus-within>button,
+.deep-submenu:focus-within>button {
   background: linear-gradient(135deg, #3f557f 0%, #2d4672 100%);
   color: #fff;
   transform: translateX(3px);
@@ -626,28 +638,28 @@
   transition: transform 0.2s ease;
 }
 
-.dropdown-submenu:hover > button .side-arrow,
-.nested-submenu:hover > button .side-arrow,
-.deep-submenu:hover > button .side-arrow,
-.dropdown-submenu:focus-within > button .side-arrow,
-.nested-submenu:focus-within > button .side-arrow,
-.deep-submenu:focus-within > button .side-arrow {
+.dropdown-submenu:hover>button .side-arrow,
+.nested-submenu:hover>button .side-arrow,
+.deep-submenu:hover>button .side-arrow,
+.dropdown-submenu:focus-within>button .side-arrow,
+.nested-submenu:focus-within>button .side-arrow,
+.deep-submenu:focus-within>button .side-arrow {
   transform: translateX(3px);
 }
 
 /* Flip side arrow when menu opens left */
-.dropdown-submenu.flip-left > button .side-arrow,
-.nested-submenu.flip-left > button .side-arrow,
-.deep-submenu.flip-left > button .side-arrow {
+.dropdown-submenu.flip-left>button .side-arrow,
+.nested-submenu.flip-left>button .side-arrow,
+.deep-submenu.flip-left>button .side-arrow {
   transform: rotate(180deg);
 }
 
-.dropdown-submenu.flip-left:hover > button .side-arrow,
-.nested-submenu.flip-left:hover > button .side-arrow,
-.deep-submenu.flip-left:hover > button .side-arrow,
-.dropdown-submenu.flip-left:focus-within > button .side-arrow,
-.nested-submenu.flip-left:focus-within > button .side-arrow,
-.deep-submenu.flip-left:focus-within > button .side-arrow {
+.dropdown-submenu.flip-left:hover>button .side-arrow,
+.nested-submenu.flip-left:hover>button .side-arrow,
+.deep-submenu.flip-left:hover>button .side-arrow,
+.dropdown-submenu.flip-left:focus-within>button .side-arrow,
+.nested-submenu.flip-left:focus-within>button .side-arrow,
+.deep-submenu.flip-left:focus-within>button .side-arrow {
   transform: rotate(180deg) translateX(3px);
 }
 
@@ -676,12 +688,12 @@
    a CSS fallback for the outermost level. */
 
 /* If the dropdown itself would overflow, move it right-aligned */
-.nav-links > li.align-right > .dropdown-menu {
+.nav-links>li.align-right>.dropdown-menu {
   left: auto;
   right: 0;
 }
 
-.nav-links > li.align-right > .dropdown-menu::after {
+.nav-links>li.align-right>.dropdown-menu::after {
   left: auto;
   right: 28px;
 }
@@ -690,47 +702,47 @@
    BUTTONS
 ══════════════════════════════════ */
 .dark-btn {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 42px;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    transition: .4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 42px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .4s;
 }
 
 .dark-btn span {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    transition: color .4s ease;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  transition: color .4s ease;
 }
 
 .dark-btn::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    background: #263f69;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform .5s ease;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #263f69;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform .5s ease;
+  z-index: 1;
 }
 
 .dark-btn:hover::after {
-    transform: translate(-50%, -50%) scale(18);
+  transform: translate(-50%, -50%) scale(18);
 }
 
 .dark-btn:hover span {
-    color: #fff;
+  color: #fff;
 }
 
 .menu-btn {
@@ -756,7 +768,10 @@
 /* ══════════════════════════════════
    MOBILE
 ══════════════════════════════════ */
-@media (max-width: 900px) {
+
+
+
+@media (max-width: 1200px) {
   .desktop-btn {
     display: none;
   }
@@ -809,11 +824,11 @@
     overflow-y: auto;
   }
 
-  .nav-links > li {
+  .nav-links>li {
     width: 100%;
   }
 
-  .nav-links > li > a,
+  .nav-links>li>a,
   .dropdown-toggle {
     width: 100%;
     justify-content: space-between;
@@ -849,27 +864,27 @@
     -webkit-backdrop-filter: none;
   }
 
-  .mobile-open > .dropdown-menu {
+  .mobile-open>.dropdown-menu {
     max-height: 1200px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
   }
 
-  .mobile-sub-open > .submenu-list {
+  .mobile-sub-open>.submenu-list {
     max-height: 800px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
     background: #eaecf3;
   }
 
-  .mobile-nested-open > .nested-list {
+  .mobile-nested-open>.nested-list {
     max-height: 800px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
     background: #e1e4ef;
   }
 
-  .mobile-deep-open > .deep-list {
+  .mobile-deep-open>.deep-list {
     max-height: 400px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
@@ -877,54 +892,54 @@
   }
 
   .dropdown-menu::after,
-  .dropdown-submenu > .submenu-list::before,
-  .nested-submenu > .nested-list::before {
+  .dropdown-submenu>.submenu-list::before,
+  .nested-submenu>.nested-list::before {
     display: none;
   }
 
-  .dropdown-menu li > a,
-  .submenu-list li > a,
-  .nested-list li > a,
-  .deep-list li > a,
-  .dropdown-submenu > button,
-  .nested-submenu > button,
-  .deep-submenu > button {
+  .dropdown-menu li>a,
+  .submenu-list li>a,
+  .nested-list li>a,
+  .deep-list li>a,
+  .dropdown-submenu>button,
+  .nested-submenu>button,
+  .deep-submenu>button {
     padding: 11px 14px;
     white-space: normal;
     border-radius: 8px;
     transform: none !important;
   }
 
-  .dropdown-menu li:hover > a,
-  .submenu-list li:hover > a,
-  .nested-list li:hover > a,
-  .deep-list li:hover > a,
-  .dropdown-submenu:hover > button,
-  .nested-submenu:hover > button,
-  .deep-submenu:hover > button,
-  .dropdown-submenu:focus-within > button,
-  .nested-submenu:focus-within > button,
-  .deep-submenu:focus-within > button {
+  .dropdown-menu li:hover>a,
+  .submenu-list li:hover>a,
+  .nested-list li:hover>a,
+  .deep-list li:hover>a,
+  .dropdown-submenu:hover>button,
+  .nested-submenu:hover>button,
+  .deep-submenu:hover>button,
+  .dropdown-submenu:focus-within>button,
+  .nested-submenu:focus-within>button,
+  .deep-submenu:focus-within>button {
     background: rgba(38, 63, 105, 0.1);
     color: #263f69;
     transform: none !important;
   }
 
   /* Mobile: side arrows point down when open */
-  .dropdown-submenu.mobile-sub-open > button .side-arrow,
-  .nested-submenu.mobile-nested-open > button .side-arrow,
-  .deep-submenu.mobile-deep-open > button .side-arrow {
+  .dropdown-submenu.mobile-sub-open>button .side-arrow,
+  .nested-submenu.mobile-nested-open>button .side-arrow,
+  .deep-submenu.mobile-deep-open>button .side-arrow {
     transform: rotate(90deg);
   }
 
-  .nav-links > li > a::after {
+  .nav-links>li>a::after {
     display: none;
   }
 
   /* Disable flip-left logic on mobile */
-  .dropdown-submenu.flip-left > .submenu-list,
-  .nested-submenu.flip-left > .nested-list,
-  .deep-submenu.flip-left > .deep-list {
+  .dropdown-submenu.flip-left>.submenu-list,
+  .nested-submenu.flip-left>.nested-list,
+  .deep-submenu.flip-left>.deep-list {
     left: 0 !important;
     right: auto !important;
   }

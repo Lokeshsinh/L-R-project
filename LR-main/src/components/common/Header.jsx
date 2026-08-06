@@ -82,16 +82,61 @@ const Header = () => {
     }
   };
 
+  // const handleNestedClick = (name, path) => (e) => {
+  //   if (isMobile()) {
+  //     e.preventDefault();
+  //     setOpenNested((prev) => (prev === name ? null : name));
+  //     setOpenDeep(null);
+  //   } else if (path) {
+  //     navigate(path);
+  //     closeMenu();
+  //   }
+  // };
+
+
   const handleNestedClick = (name, path) => (e) => {
     if (isMobile()) {
       e.preventDefault();
-      setOpenNested((prev) => (prev === name ? null : name));
-      setOpenDeep(null);
-    } else if (path) {
-      navigate(path);
-      closeMenu();
+
+      // First click: open submenu
+      if (openNested !== name) {
+        setOpenNested(name);
+        setOpenDeep(null);
+        return;
+      }
+
+      // Second click: navigate
+      if (path) {
+        navigate(path);
+        closeMenu();
+      }
+    } else {
+      if (path) {
+        navigate(path);
+        closeMenu();
+      }
     }
   };
+
+
+  //   const handleNestedClick = (name, path) => (e) => {
+  //   if (isMobile()) {
+  //     if (path) {
+  //       navigate(path);
+  //       closeMenu();
+  //       return;
+  //     }
+
+  //     e.preventDefault();
+  //     setOpenNested((prev) => (prev === name ? null : name));
+  //     setOpenDeep(null);
+  //   } else {
+  //     if (path) {
+  //       navigate(path);
+  //       closeMenu();
+  //     }
+  //   }
+  // };
 
   const handleDeepClick = (name, path) => (e) => {
     if (isMobile()) {
@@ -468,7 +513,7 @@ const Header = () => {
                   <li
                     className={`nested-submenu${openNested === "lgsf" ? " mobile-nested-open" : ""}`}
                   >
-                    <button type="button" onClick={handleNestedClick("lgsf","/lgsf-modular")}>
+                    <button type="button" onClick={handleNestedClick("lgsf", "/lgsf-modular")}>
                       <span>LGSF Modular Solutions</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
