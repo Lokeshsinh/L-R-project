@@ -242,10 +242,7 @@ const IndustrialSheds = () => {
       {/* 5. STRENGTH BAND (image_bd3717_2.jpg bottom) */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Industrial Sheds </h1>
-
-          </div>
+          
         </div>
 
         <div className={styles.mfgContainer}>

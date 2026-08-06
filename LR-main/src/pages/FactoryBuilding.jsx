@@ -221,10 +221,7 @@ const FactoryBuilding = () => {
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R FACTORY BUILDING </h1>
 
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>

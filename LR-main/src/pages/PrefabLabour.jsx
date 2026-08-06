@@ -421,9 +421,7 @@ const PrefabLabour = () => {
       {/* ── Enhancing Worker Welfare ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>Prefab labour accommodation</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>

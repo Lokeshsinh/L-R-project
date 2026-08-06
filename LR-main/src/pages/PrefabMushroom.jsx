@@ -303,9 +303,7 @@ const PrefabMushroom = () => {
       {/* ── Farm Layout & Sizes ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Prefab Mashroom</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>

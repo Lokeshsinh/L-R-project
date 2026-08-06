@@ -375,9 +375,7 @@ const HingeMsContainer = () => {
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>Hinge  MS Container</h1>
-          </div>
+        
         </div>
 
         <div className={styles.mfgContainer}>

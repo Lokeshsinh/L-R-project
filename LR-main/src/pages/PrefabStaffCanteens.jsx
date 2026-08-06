@@ -250,10 +250,7 @@ const PrefabStaffCanteens = () => {
       {/* ── How We Create ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Prefabricated Staff Canteen</h1>
 
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>

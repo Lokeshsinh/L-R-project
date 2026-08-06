@@ -895,9 +895,6 @@ const About = () => {
 
         <section className={styles.prefabShowcaseSection}>
           <div className={styles.prefabWatermark}>
-            <div className={styles.prefabWatermarkTrack}>
-              <h1>L & R Enterprises</h1>
-            </div>
           </div>
 
           <div className={styles.prefabShowcaseContainer}>

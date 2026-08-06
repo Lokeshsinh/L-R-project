@@ -353,9 +353,7 @@ function PrefabModular() {
             {/* ── Structural Strength & Safety ── */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-                    <div className={styles.scrollTrack}>
-                        <h1>Prefabricated modular building</h1>
-                    </div>
+          
                 </div>
 
                 <div className={styles.mfgContainer}>

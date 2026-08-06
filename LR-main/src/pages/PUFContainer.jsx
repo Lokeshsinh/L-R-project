@@ -389,11 +389,7 @@ const PUFContainer = () => {
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>PUF MS CONTAINER</h1>
-
-
-          </div>
+      
         </div>
 
         <div className={styles.mfgContainer}>

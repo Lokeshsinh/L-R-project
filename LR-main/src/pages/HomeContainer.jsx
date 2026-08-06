@@ -281,10 +281,7 @@ function HomeContainer() {
                 {/* ── Manufacturing Strength ── */}
                 <section className={styles.mfgBand}>
                     <div className={styles.scrollWrap}>
-                        <div className={styles.scrollTrack}>
-                            <h1>Home MS Container</h1>
-
-                        </div>
+                       
                     </div>
 
                     <div className={styles.mfgContainer}>

@@ -292,10 +292,7 @@ function LgsfModular() {
             {/* STRENGTH BAND */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-                    <div className={styles.scrollTrack}>
-                        <h1>Light Gauge Steel Framing</h1>
-
-                    </div>
+                   
                 </div>
 
                 <div className={styles.mfgContainer}>

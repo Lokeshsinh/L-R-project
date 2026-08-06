@@ -276,9 +276,7 @@ const ControlPanelRoomPage = () => {
       {/* ── Structural Strength & Safety ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L&R Control panel Room</h1>
-          </div>
+
         </div>
 
         <div className={styles.mfgContainer}>

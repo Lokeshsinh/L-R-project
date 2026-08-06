@@ -206,10 +206,7 @@ const Warehouse = () => {
       {/* STRENGTH BAND */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          <div className={styles.scrollTrack}>
-            <h1>L & R WAREHOUSE </h1>
 
-          </div>
         </div>
 
         <div className={styles.mfgContainer}>
