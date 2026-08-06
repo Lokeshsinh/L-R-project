@@ -2301,7 +2301,7 @@
     left: 50%;
     bottom: 30px;
     transform: translateX(-50%);
-
+    bottom: 3%;
     width: 380px;
     z-index: 2;
   }
