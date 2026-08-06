@@ -12,6 +12,7 @@ import card3 from '../assets/conatiners/HigneContainer/card3.jpg';
 import card4 from '../assets/conatiners/HigneContainer/card4.jpg';
 import design from '../assets/conatiners/HigneContainer/design.png';
 import design1 from '../assets/conatiners/HigneContainer/design1.png';
+import { useNavigate } from "react-router-dom";
 const cards = [
   {
     title: "40×10×8.5 / 40×8×8.5",
@@ -111,7 +112,7 @@ const cards = [
 ];
 const HingeMsContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-
+  const navigate = useNavigate()
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -224,7 +225,13 @@ const HingeMsContainer = () => {
           </h1>
           <p className={styles.heroDesc}>Hinge MS Containers specializes in durable and high-quality mild steel
             container solutions designed for industrial, storage, transport, and customized business needs.</p>
-          <button className={styles.btnWhite}>
+          <button className={styles.btnWhite} onClick={() => {
+            navigate("/contact");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
@@ -259,7 +266,13 @@ const HingeMsContainer = () => {
               Their robust construction and customizable design make them a reliable solution for modern
               project site requirements.
             </p>
-            <button className={styles.btnOutline}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -375,7 +388,7 @@ const HingeMsContainer = () => {
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-        
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -458,8 +471,8 @@ const HingeMsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Get quick answers to the most common queries about our portable, durable,
-            and fully customizable Hinge MS Container solutions.
+           Find quick answers about Hinge containers, their insulation, applications, durability, 
+           and customization options for industrial and commercial use.
           </p>
         </div>
 
@@ -514,7 +527,13 @@ const HingeMsContainer = () => {
         </p>
 
 
-        <button className={styles.contactBtn}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

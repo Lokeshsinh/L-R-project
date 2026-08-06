@@ -144,7 +144,13 @@ const FactoryBuilding = () => {
               workflow layouts, and equipment integration. From small-scale units to large manufacturing
               plants, L&R ensures faster construction, optimized space utilization, and reliable structural performance.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -155,7 +161,7 @@ const FactoryBuilding = () => {
           </div>
 
           <div className={styles.introImgs}>
-            <img  src={container2} alt="container" />
+            <img src={container2} alt="container" />
           </div>
         </div>
       </section>
@@ -365,7 +371,13 @@ const FactoryBuilding = () => {
         </p>
 
 
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

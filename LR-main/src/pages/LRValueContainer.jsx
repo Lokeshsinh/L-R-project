@@ -3,6 +3,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LRValueContainer.module.css";
 import { ArrowRight, ArrowUpRight, Plus, X, ChevronLeft, ChevronRight, Box } from "lucide-react";
+import { useNavigate } from 'react-router-dom'
 import container1 from '../assets/conatiners/L&RContainer/container1.jpg'
 import container2 from '../assets/conatiners/L&RContainer/container2.jpg'
 import container3 from '../assets/conatiners/L&RContainer/container3.jpg'
@@ -117,7 +118,7 @@ const cards = [
 
 const LRValueContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-
+  const navigate = useNavigate()
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -237,7 +238,7 @@ const LRValueContainer = () => {
             modular solutions for industrial, commercial, and site-based
             applications.
           </p>
-          <button className={styles.btnWhite}>
+          <button className={styles.btnWhite} onClick={() => navigate('/contact')}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
@@ -277,7 +278,12 @@ const LRValueContainer = () => {
               performance.
             </p>
 
-            <button className={styles.btnOutline}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate('/contact'); window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -392,7 +398,7 @@ const LRValueContainer = () => {
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -476,8 +482,8 @@ const LRValueContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Find answers to common questions about our container solutions,
-            design process, and performance benefits.
+            Quick answers to common queries about our L&R MS containers,
+            covering features, customization, durability, and deployment.
           </p>
         </div>
 

@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import shed1 from '../assets/Pre-Build/industrylSheld/shed.png'
 import shed2 from '../assets/Pre-Build/industrylSheld/shed1.jpg'
 import shed3 from '../assets/Pre-Build/industrylSheld/shed2.png'
+import shed4 from '../assets/Pre-Build/industrylSheld/shed3.jpg'
 import card1 from '../assets/Pre-Build/industrylSheld/card5.jpg';
 import card2 from '../assets/Pre-Build/industrylSheld/card6.jpg';
 import card3 from '../assets/Pre-Build/industrylSheld/card7.jpg';
@@ -154,7 +155,13 @@ const IndustrialSheds = () => {
               tailored to specific operational needs, including production facilities, storage units,
               and workshop spaces.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -212,7 +219,7 @@ const IndustrialSheds = () => {
             <div className={styles.imageCardBackground}></div>
 
             <img
-              src={shed1}
+              src={shed4}
               alt="Construction"
               className={styles.imageCardPhoto}
             />
@@ -242,7 +249,7 @@ const IndustrialSheds = () => {
       {/* 5. STRENGTH BAND (image_bd3717_2.jpg bottom) */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-          
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -276,7 +283,7 @@ const IndustrialSheds = () => {
       <section className={styles.processSection}>
         <div className={styles.processHeader}>
           <div className={styles.processText}>
-            <h2>Sandwich Panel<br /><span>Manufacturing Process</span></h2>
+            <h2>Industrial Sheds<br /><span>Manufacturing Process</span></h2>
             <div className={styles.productsDivider}></div>
           </div>
           <p>Our industrial sheds are designed to deliver strength, durability, and efficient workspace solutions.</p>
@@ -312,7 +319,7 @@ const IndustrialSheds = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about our warehouse solutions, design process, and performance benefits.</p>
+          <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
@@ -364,7 +371,13 @@ const IndustrialSheds = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized industrial shed solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

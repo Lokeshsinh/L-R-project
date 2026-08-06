@@ -215,7 +215,13 @@ function PrefabModular() {
                             and sustainable solution suitable for a wide range of industrial, commercial, residential, and infrastructure
                             applications.
                         </p>
-                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                        <button className={styles.btnOutline} onClick={() => {
+                            navigate("/contact");
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            });
+                        }}>
                             <span>Get Contact</span>
 
                             <span className={styles.iconWrap}>
@@ -249,14 +255,14 @@ function PrefabModular() {
                     <div className={styles.productsHeader}>
                         <div className={styles.productText}>
                             <h2>
-                               Our Prefabricated<br />
+                                Our Prefabricated<br />
                                 <span>Modular Building Solutions</span>
                             </h2>
                             <div className={styles.productsDivider}></div>
                         </div>
                         <p className={styles.productsSubtext}>
-                           We offer durable, fast-to-install, and cost-effective modular structures for 
-                           site setups, worker housing, industrial needs, and specialized applications.
+                            We offer durable, fast-to-install, and cost-effective modular structures for
+                            site setups, worker housing, industrial needs, and specialized applications.
                         </p>
                     </div>
                     <div className={styles.expertiseGrid}>
@@ -353,7 +359,7 @@ function PrefabModular() {
             {/* ── Structural Strength & Safety ── */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-          
+
                 </div>
 
                 <div className={styles.mfgContainer}>
@@ -505,7 +511,7 @@ function PrefabModular() {
                         <h2>Frequently Asked<br /><span>Questions</span></h2>
                         <div className={styles.FaqsLine}></div>
                     </div>
-                    <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
+                    <p>Get answers to common questions about L&R Prefabricated modular , including design, durability, and installation.</p>
                 </div>
                 <div className={styles.faqBody}>
                     <div className={styles.faqImg}>
@@ -557,7 +563,13 @@ function PrefabModular() {
                     Connect with our team to design and deliver durable, efficient, and fully customized
                     Prefabricated modular building solutions tailored to your storage needs.
                 </p>
-                <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+                <button className={styles.contactBtn} onClick={() => {
+                    navigate("/contact");
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }}>
                     <span className={styles.contactText}>Contact Us</span>
 
                     <span className={styles.iconBox}>

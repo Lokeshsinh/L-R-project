@@ -283,7 +283,13 @@ const ExecutiveMsContainer = () => {
               they ensure comfort, safety, and efficiency, making them ideal for
               construction sites, industries, and remote project locations.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -497,8 +503,8 @@ const ExecutiveMsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Find answers to common questions about our container solutions,
-            design process, and performance benefits.
+           Common questions and answers about Executive MS Containers, covering 
+           their usage, features, and benefits for better understanding.
           </p>
         </div>
 
@@ -552,7 +558,13 @@ const ExecutiveMsContainer = () => {
         </p>
 
 
-        <button className={styles.contactBtn}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

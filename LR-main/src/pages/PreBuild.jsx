@@ -206,7 +206,13 @@ function PreBuild() {
                                 projects across India. Our engineering-focused approach ensures optimized steel usage, quicker project completion,
                                 and cost-effective building systems tailored to client requirements.
                             </p>
-                            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                            <button className={styles.btnOutline} onClick={() => {
+                                navigate("/contact");
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                });
+                            }}>
                                 <span>Get Contact</span>
 
                                 <span className={styles.iconWrap}>
@@ -437,7 +443,7 @@ function PreBuild() {
                 </section>
 
 
-                
+
 
                 {/* FAQ */}
                 <section className={styles.faqSec}>
@@ -499,7 +505,13 @@ function PreBuild() {
                         Connect with our team to design and deliver compact, durable, and
                         fully Pre-engineered building solutions tailored to your site needs.
                     </p>
-                    <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+                    <button className={styles.contactBtn} onClick={() => {
+                        navigate("/contact");
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth",
+                        });
+                    }}>
                         <span className={styles.contactText}>Contact Us</span>
 
                         <span className={styles.iconBox}>

@@ -12,6 +12,7 @@ import card4 from '../assets/conatiners/pufContainer/card4.jpg';
 import faq from '../assets/conatiners/pufContainer/faq.png';
 import design from '../assets/conatiners/pufContainer/design1.png';
 import design1 from '../assets/conatiners/pufContainer/design2.png';
+import { useNavigate } from "react-router-dom";
 
 
 const cards = [
@@ -113,7 +114,7 @@ const cards = [
 ];
 const PUFContainer = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-
+  const navigate = useNavigate()
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -226,7 +227,13 @@ const PUFContainer = () => {
           </h1>
           <p className={styles.heroDesc}>Insulated PUF Containers by LRR Green PVT LTD offering energy-efficient, durable, and
             flexible modular solutions for offices, accommodation, and industrial site applications.</p>
-          <button className={styles.btnWhite}>
+          <button className={styles.btnWhite} onClick={() => {
+            navigate("/contact");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
@@ -262,7 +269,13 @@ const PUFContainer = () => {
               solutions that ensure operational efficiency, user comfort, and long-term
               performance.
             </p>
-            <button className={styles.btnOutline}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -389,7 +402,7 @@ const PUFContainer = () => {
       {/* ── Manufacturing Strength ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-      
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -529,10 +542,16 @@ const PUFContainer = () => {
         </p>
 
 
-        <button className={styles.contactBtn}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
-          <span className={styles.iconBox}>
+          <span className={styles.iconBox} >
             <ArrowRight className={styles.iconOne} size={18} />
             <ArrowRight className={styles.iconTwo} size={18} />
           </span>

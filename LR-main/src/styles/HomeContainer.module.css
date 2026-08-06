@@ -2,7 +2,7 @@
     width: 100%;
     background-color: #f7f7f753;
     color: #333;
-    font-family: 'Segoe UI', sans-serif;
+    
 }
 
 
@@ -893,7 +893,7 @@
     width: 100%;
     background: rgba(41, 63, 103, .92);
     padding: 20px;
-    height: 74px;
+    height: 87px;
     transition: height .45s ease;
     box-sizing: border-box;
 }
@@ -908,6 +908,7 @@
     color: #fff;
     font-size: 20px;
     font-weight: 500;
+    line-height: 1.3;
     margin: 0;
 }
 
@@ -2910,6 +2911,7 @@ Home container
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
     transition: all 0.35s ease;
     border-radius: 8px;
+    border-radius: 10px;
 }
 
 .faqItem:hover {

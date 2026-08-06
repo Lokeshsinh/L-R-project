@@ -2,7 +2,6 @@
 .wrapper {
   background-color: #ffffff;
   color: #333;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 /* ===== SECTION TITLE ===== */
@@ -341,7 +340,7 @@
   top: 15px;
 
   width: 640px;
-  height: 550px;
+  height: 580px;
 
   overflow: hidden;
   border-radius: 12px;
@@ -2387,13 +2386,13 @@
   width: 100%;
   background: rgba(41, 63, 103, .92);
   padding: 20px;
-  height: 72px;
+  height: 79px;
   transition: height .45s ease;
   box-sizing: border-box;
 }
 
 .expCard:hover .expLabel {
-  height: 180px;
+  height: 200px;
 }
 
 /* Title */
@@ -2832,6 +2831,7 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  border-radius: 10px;
 }
 
 .faqItem:hover {

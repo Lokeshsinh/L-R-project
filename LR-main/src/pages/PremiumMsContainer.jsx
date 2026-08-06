@@ -286,10 +286,16 @@ const PremiumMsContainer = () => {
               these containers provide a
               modern, portable solution that ensures safety, efficiency, and quick deployment across various project sites.
             </p>
-            <button className={styles.btnOutline}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
-              <span className={styles.iconWrap}>
+              <span className={styles.iconWrap} >
                 <ArrowUpRight className={styles.icon1} size={18} />
                 <ArrowUpRight className={styles.icon2} size={18} />
               </span>
@@ -356,7 +362,7 @@ const PremiumMsContainer = () => {
               <div className={styles.secHeadLine}></div>
             </div>
             <p>
-              Every Premium MS container is offered in five core footprints, each available in dozens of interior
+              Every Premium MS Premium container is offered in five core footprints, each available in dozens of interior
               layouts  from executive offices to dining halls, sanitary blocks, storage and accommodation.
             </p>
           </div>
@@ -453,7 +459,7 @@ const PremiumMsContainer = () => {
               <div className={styles.appsLine}></div>
             </div>
             <p>
-              High-quality MS container solutions designed for efficient, durable,
+              High-quality Premium MS container solutions designed for efficient, durable,
               and flexible use across industrial and commercial project
               environments.
             </p>
@@ -490,8 +496,8 @@ const PremiumMsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Find answers to common questions about our container solutions,
-            design process, and performance benefits.
+            Quick answers covering design, usage, durability, customization, and advantages
+             of Premium MS Containers for industrial and commercial applications.
           </p>
         </div>
 
@@ -548,7 +554,13 @@ const PremiumMsContainer = () => {
         </p>
 
 
-        <button className={styles.contactBtn}>
+        <button className={styles.contactBtn} nClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

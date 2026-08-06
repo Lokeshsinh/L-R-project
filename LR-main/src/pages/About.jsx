@@ -1146,7 +1146,7 @@ const About = () => {
             high-quality, and customized solutions for every project. Contact our team today and turn your vision into reality.
           </p>
           <button className={styles.contactBtn} onClick={() => {
-            navigate("/");
+            navigate("/contact");
             window.scrollTo({
               top: 0,
               behavior: "smooth",

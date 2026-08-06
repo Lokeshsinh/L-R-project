@@ -157,7 +157,13 @@ const ColdRoom = () => {
               applications, we deliver customized cold storage solutions tailored to meet specific operational and
               environmental requirements.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -181,7 +187,7 @@ const ColdRoom = () => {
             <h2>Industrial Shed<br /><span>Project Showcase</span></h2>
             <div className={styles.productsDivider}></div>
           </div>
-          <p className={styles.secDesc}>Strong, scalable, and customizable industrial sheds built for heavy-duty performance and long-term reliability.</p>
+          <p className={styles.secDesc}>Advanced modular cold storage solutions ensuring consistent temperature, energy efficiency, and durability.</p>
         </div>
         <div className={styles.expertiseGrid}>
           {industryProjects.map((item, index) => (
@@ -331,7 +337,7 @@ const ColdRoom = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about our warehouse solutions, design process, and performance benefits.</p>
+          <p>Find answers to common questions about our cold room, features, customization options, and performance benefits.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -385,7 +391,13 @@ const ColdRoom = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           cold room solutions tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

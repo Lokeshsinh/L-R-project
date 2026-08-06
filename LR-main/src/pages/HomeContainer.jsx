@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState} from 'react';
+import { useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer'
 import styles from '../styles/HomeContainer.module.css'
 import {
-    ArrowRight, ArrowUpRight,  Box, Plus, X, Home,
+    ArrowRight, ArrowUpRight, Box, Plus, X, Home,
     Building2,
     BriefcaseBusiness,
     BedDouble,
@@ -23,8 +23,8 @@ import card4 from '../assets/conatiners/HomeConatiner/card4.png';
 import design from '../assets/conatiners/HomeConatiner/design.png';
 import design1 from '../assets/conatiners/HomeConatiner/design1.png';
 import faq from '../assets/conatiners/HomeConatiner/read.png';
-import HomeContainers  from '../assets/conatiners/HomeConatiner/homecontainer.png'
-
+import HomeContainers from '../assets/conatiners/HomeConatiner/homecontainer.png'
+import {useNavigate} from 'react-router-dom'
 function HomeContainer() {
     const [activeIndex, setActiveIndex] = useState(1);
 
@@ -140,6 +140,7 @@ function HomeContainer() {
         },
     ];
 
+    const navigate = useNavigate()
     return (
         <>
             <div className={styles.wrapper}>
@@ -155,7 +156,13 @@ function HomeContainer() {
                         </h1>
                         <p className={styles.heroDesc}>Strong, durable, and ready-to-install Modular
                             MS Container Homes designed for residential, commercial, and industrial use.</p>
-                        <button className={styles.btnWhite}>
+                        <button className={styles.btnWhite} onClick={() => {
+                            navigate("/contact");
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            });
+                        }}>
                             <span>Contact Us</span>
                             <ArrowRight className={styles.arrow} size={18} />
                         </button>
@@ -196,7 +203,13 @@ function HomeContainer() {
                                 and strict quality standards, we ensure every project
                                 is completed efficiently and delivered on time.
                             </p>
-                            <button className={styles.btnOutline}>
+                            <button className={styles.btnOutline} onClick={() => {
+                                navigate("/contact");
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                });
+                            }}>
                                 <span>Get Contact</span>
 
                                 <span className={styles.iconWrap}>
@@ -281,7 +294,7 @@ function HomeContainer() {
                 {/* ── Manufacturing Strength ── */}
                 <section className={styles.mfgBand}>
                     <div className={styles.scrollWrap}>
-                       
+
                     </div>
 
                     <div className={styles.mfgContainer}>
@@ -422,8 +435,8 @@ function HomeContainer() {
                             <div className={styles.FaqsLine}></div>
                         </div>
                         <p>
-                            Find quick answers about PUF containers, their insulation, applications,
-                            durability, and customization options for industrial and commercial use.
+                            Quick answers to common queries about our Home MS containers, covering
+                            features, customization, durability, and deployment.
                         </p>
                     </div>
                     <div className={styles.faqBody}>
@@ -477,10 +490,16 @@ function HomeContainer() {
                     </p>
 
 
-                    <button className={styles.contactBtn}>
+                    <button className={styles.contactBtn} onClick={() => {
+                        navigate("/contact");
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth",
+                        });
+                    }}>
                         <span className={styles.contactText}>Contact Us</span>
 
-                        <span className={styles.iconBoxs}>
+                        <span className={styles.iconBox}>
                             <ArrowRight className={styles.iconOne} size={18} />
                             <ArrowRight className={styles.iconTwo} size={18} />
                         </span>

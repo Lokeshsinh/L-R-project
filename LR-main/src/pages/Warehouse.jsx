@@ -132,7 +132,13 @@ const Warehouse = () => {
             </div>
             <p>L&amp;R Green India Pvt Ltd specialises in designing and manufacturing high-performance pre-engineered warehouses that meet the evolving needs of modern industries. With advanced engineering practices and dedicated expertise, our warehouse solutions deliver durability, flexibility, and optimal space utilization.</p>
             <p>Our warehouses are built using high-grade steel structures and modular construction techniques, enabling reduced costs. From planning to installation, we provide end-to-end solutions tailored to your storage, logistics, and industrial space requirements.</p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -326,7 +332,13 @@ const Warehouse = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized prefabricated warehouse solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>
