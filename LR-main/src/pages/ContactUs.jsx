@@ -138,8 +138,8 @@ ${fileName}`;
             Get in touch with L&R Green India Pvt Ltd for reliable prefabricated and
             modular building solutions tailored to your project needs.
           </p>
-          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
-            <span>Contact Us</span>
+          <button onClick={() => navigate('/projects')} className={styles.btnWhite}>
+            <span>Our Projects</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
         </div>
@@ -460,12 +460,8 @@ ${fileName}`;
         <p>
           From MS Containers to PEB Structures and PUF Panels, we're ready to support your next project.
         </p>
-        <button className={styles.contactBtn} onClick={() => {
-          document.getElementById("contact")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}>
-          <span className={styles.contactText}>Send an Enquiry</span>
+        <button className={styles.contactBtn} onClick={() => navigate("/projects")}>
+          <span className={styles.contactText}>Our Projects</span>
 
           <span className={styles.iconBoxs}>
             <ArrowRight className={styles.iconOne} size={18} />

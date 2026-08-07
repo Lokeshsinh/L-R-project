@@ -73,6 +73,17 @@ const ContactCTA = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (
+      !formData.name.trim() ||
+      !formData.project.trim() ||
+      !formData.phone.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+
     const message = `*New Project Inquiry*
 
 👤 Name: ${formData.name}
@@ -126,7 +137,7 @@ ${formData.message}`;
               <label>Full Name</label>
               <input type="text" placeholder="John Doe"
                 name="name"
-               
+
                 value={formData.name}
                 onChange={handleChange} />
             </div>
@@ -178,7 +189,7 @@ ${formData.message}`;
 
             <div className={styles.formGroup}>
               <label>Phone Number</label>
-              <input type="text" 
+              <input type="text"
                 name="phone"
                 placeholder="+91 00000 00000"
                 value={formData.phone}

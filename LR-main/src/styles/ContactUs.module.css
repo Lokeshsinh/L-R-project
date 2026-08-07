@@ -1,5 +1,4 @@
 .wrapper {
-  font-family: 'Outfit', sans-serif;
   color: #1e293b;
   background: #ffffff;
   overflow-x: hidden;
@@ -39,7 +38,7 @@
 }
 
 .mainTitle {
-  font-size: 70px;
+  font-size: 75px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
