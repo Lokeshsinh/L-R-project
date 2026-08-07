@@ -193,33 +193,33 @@ const LRValueContainer = () => {
   ];
 
 
-  const faqs = [
-    {
-      id: 0,
-      q: "What are L&R Value Granted MS Containers used for?",
-      a: "L&R Value Granted MS Containers are ideal for site offices, staff accommodation, guard cabins, dining halls, storage units, coffee shops, play areas, and utility spaces.",
-    },
-    {
-      id: 1,
-      q: "What sizes are available for L&R MS Containers?",
-      a: "Our MS Containers are available in standard sizes including 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft, with custom sizes also available.",
-    },
-    {
-      id: 2,
-      q: "Are L&R MS Containers suitable for harsh environments?",
-      a: "Yes, they are built with high-quality MS steel and protective coatings for exceptional durability in demanding industrial and outdoor conditions.",
-    },
-    {
-      id: 3,
-      q: "Can L&R MS Containers be relocated?",
-      a: "Yes, they are designed for easy transportation and relocation using cranes or flatbed trucks, making them ideal for temporary and long-term projects.",
-    },
-    {
-      id: 4,
-      q: "Can L&R MS Containers be customized?",
-      a: "Yes, layouts, insulation, electrical systems, HVAC, flooring, partitions, and interior finishes can be fully customized to meet your project requirements.",
-    },
-  ];
+const faqs = [
+  {
+    id: 0,
+    q: "What are L&R Value Granted MS Containers used for?",
+    a: "They are ideal for site offices, staff accommodation, guard cabins, dining halls, storage units, coffee shops, play areas, and utility spaces.",
+  },
+  {
+    id: 1,
+    q: "What sizes are available for L&R MS Containers?",
+    a: "Standard sizes include 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft, with custom sizes also available.",
+  },
+  {
+    id: 2,
+    q: "Are L&R MS Containers suitable for harsh environments?",
+    a: "Yes. They are built with high-quality MS steel and protective coatings for reliable performance in demanding conditions.",
+  },
+  {
+    id: 3,
+    q: "Can L&R MS Containers be relocated?",
+    a: "Yes. They can be easily transported and relocated using cranes or flatbed trucks for temporary or long-term projects.",
+  },
+  {
+    id: 4,
+    q: "Can L&R MS Containers be customized?",
+    a: "Yes. Layouts, insulation, electrical systems, HVAC, flooring, partitions, and finishes can be customized to suit project requirements.",
+  },
+];
 
   return (
     <div className={styles.wrapper}>

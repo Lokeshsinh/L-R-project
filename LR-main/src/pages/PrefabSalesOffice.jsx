@@ -67,30 +67,29 @@ const PrefabSalesOffice = () => {
     {
       id: 0,
       q: "What is an LGSF sales office?",
-      a: "An LGSF sales office is a factory-built, modular commercial structure constructed using Light Gauge Steel Framing (LGSF) technology and insulated sandwich panels, offering speed, durability, and premium design features.",
+      a: "An LGSF sales office is a modular commercial structure built using Light Gauge Steel Framing and insulated panels for fast, durable, and modern construction.",
     },
     {
       id: 1,
-      q: "How fast can an LGSF office be constructed?",
-      a: "It can be installed much faster than conventional buildings due to prefabricated components and modular assembly.",
+      q: "How fast can an LGSF sales office be constructed?",
+      a: "LGSF offices can be constructed quickly using prefabricated components and efficient modular assembly methods.",
     },
     {
       id: 2,
-      q: "3. Is an LGSF office durable?",
-      a: "Yes, LGSF structures are highly durable, corrosion-resistant, and engineered to withstand extreme weather conditions, including high winds and seismic activity.",
+      q: "Are LGSF sales offices durable?",
+      a: "Yes. LGSF structures are durable, corrosion-resistant, and designed to withstand demanding weather and site conditions.",
     },
     {
       id: 3,
-      q: "Can LGSF offices be customized?",
-      a: "Yes, they can be fully customized in terms of layouts, interior finishes, glass facades, electrical fittings, and branding requirements.",
+      q: "Can LGSF sales offices be customized?",
+      a: "Yes. Layouts, interiors, glass facades, electrical fittings, finishes, and branding elements can be customized.",
     },
     {
       id: 4,
-      q: "Are LGSF offices suitable for temporary use?",
-      a: "Yes, they are highly suitable for temporary use as they can be easily dismantled, transported, and re-erected at a new site with minimal waste.",
+      q: "Are LGSF sales offices suitable for temporary use?",
+      a: "Yes. They can be dismantled, relocated, and reassembled at another site with minimal material waste.",
     },
   ];
-
 
   const processCards = [
     {
@@ -174,7 +173,13 @@ const PrefabSalesOffice = () => {
               improves project timelines and overall operational efficiency, ensuring quicker project delivery and
               improved workflow efficiency.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -471,7 +476,13 @@ const PrefabSalesOffice = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized insulated
           Prefab Sales Offices solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

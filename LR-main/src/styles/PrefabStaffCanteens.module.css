@@ -30,7 +30,7 @@
 }
 
 .mainTitle {
-  font-size: 70px;
+  font-size: 75px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -338,7 +338,7 @@
 
 
 .introGrid {
-  margin-top: 60px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -1214,7 +1214,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .structTitleArea h2 {
@@ -2089,7 +2089,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .siteText {
@@ -2566,7 +2566,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: start;
 }
 
@@ -2664,6 +2664,7 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  border-radius: 10px;
 }
 
 .faqItem:hover {

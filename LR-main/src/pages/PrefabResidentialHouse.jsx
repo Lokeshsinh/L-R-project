@@ -29,31 +29,32 @@ const PrefabResidentialHouse = () => {
     window.scrollTo(0, 0);
   }, []);
 
+
   const faqs = [
     {
       id: 0,
-      q: "What is LGSF construction?",
-      a: "Light Gauge Steel Framing (LGSF) is a modern construction method using high-strength galvanized steel sections to build strong, lightweight, and fast multi-story buildings.",
+      q: "What are LGSF prefab residential houses?",
+      a: "LGSF prefab houses are lightweight residential structures built using precision-engineered galvanized steel frames for fast, durable, and efficient construction.",
     },
     {
       id: 1,
-      q: "Is it suitable for G+2 houses?",
-      a: "Yes, LGSF is engineered for multi-story buildings like G+1 and G+2 with excellent structural stability. It provides safety and flexibility for modern residential designs.",
+      q: "Can LGSF houses be built as G+1 or G+2?",
+      a: "Yes. LGSF technology can be designed for G+1 and G+2 residential buildings based on structural design and project requirements.",
     },
     {
       id: 2,
-      q: "How fast is construction?",
-      a: "LGSF construction is 50-60% faster than traditional concrete builds, as framing and panels are manufactured off-site and quickly assembled on-site.",
+      q: "Are LGSF houses durable and safe?",
+      a: "Yes. High-strength galvanized steel frames provide structural stability, durability, and resistance to corrosion and varying weather conditions.",
     },
     {
       id: 3,
-      q: "Is it durable?",
-      a: "Yes, LGSF structures are highly durable, resistant to moisture, corrosion, termites, and earthquakes, ensuring a lifespan of over 50 years.",
+      q: "How quickly can an LGSF house be constructed?",
+      a: "LGSF construction is faster than conventional methods, with timelines depending on the building size, design, and site conditions.",
     },
     {
       id: 4,
-      q: "Is it eco-friendly?",
-      a: "Yes, LGSF uses over 90% recyclable steel and generates minimal construction waste, making it a highly sustainable and green building solution.",
+      q: "Can LGSF residential houses be customized?",
+      a: "Yes. Floor plans, room layouts, elevations, finishes, doors, windows, and interior requirements can be customized to suit your needs.",
     },
   ];
 
@@ -152,7 +153,13 @@ const PrefabResidentialHouse = () => {
               structure with excellent durability. LGSF prefab houses are designed for faster project completion while maintaining
               structural integrity, making them ideal for urban homes, villas, and other residential applications.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -413,7 +420,13 @@ const PrefabResidentialHouse = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized insulated
           Prefab Residential Houses (G+1 / G+2) solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

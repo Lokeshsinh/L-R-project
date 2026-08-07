@@ -55,28 +55,28 @@ const PrefabRailwayShelters = () => {
   const faqs = [
     {
       id: 0,
-      q: "What are prefab railway & telecom shelters used for",
-      a: "These modular shelters are used to house critical telecom equipment, signaling systems, power generators, or act as passenger waiting shelters on railway platforms.",
+      q: "What are prefab railway & telecom shelters used for?",
+      a: "They are used for telecom equipment, signaling systems, power control units, technical rooms, and passenger waiting shelters.",
     },
     {
       id: 1,
-      q: "How durable are these shelters?",
-      a: "They are built with heavy-duty steel structures and corrosion-resistant materials, ensuring long-term durability in harsh weather conditions.",
+      q: "Are railway & telecom shelters durable?",
+      a: "Yes, they are built with high-quality steel and corrosion-resistant materials for reliable performance in harsh environments.",
     },
     {
       id: 2,
       q: "Can the shelters be customized?",
-      a: "Absolutely. We manufacture shelters in standard sizes and offer fully custom dimensions. Interior fit-outs for cable management, air conditioning, and battery racks can be specified.",
+      a: "Yes, dimensions, layouts, insulation, electrical systems, HVAC, and interior fittings can be fully customized to project requirements.",
     },
     {
       id: 3,
       q: "How long does installation take?",
-      a: "Because all components are pre-fabricated and pre-drilled at our facility, a standard telecom shelter cabin can be installed in as little as 1-2 days, while larger railway platform shelters typically take 3-7 days.",
+      a: "Most prefab railway and telecom shelters are installed within a few days, depending on the project size and site conditions.",
     },
     {
       id: 4,
       q: "Are these shelters suitable for remote locations?",
-      a: "Yes. Their prefabricated, lightweight components are easily transported and assembled on-site with minimal equipment, making them ideal for remote or difficult terrains.",
+      a: "Yes, their modular design allows easy transportation, quick installation, and reliable performance in remote and challenging locations.",
     },
   ];
 
@@ -142,7 +142,13 @@ const PrefabRailwayShelters = () => {
               site disruption. Their long-lasting performance, low maintenance requirements, and adaptable design
               make them an ideal solution for projects that require both speed and reliability in challenging conditions.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -206,7 +212,7 @@ const PrefabRailwayShelters = () => {
       {/* ── Core Benefits Banner ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
-  
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -358,8 +364,8 @@ const PrefabRailwayShelters = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Quick answers to common queries about modular
-            staff canteen design, installation, and usage.</p>
+          <p>Find answers to common questions about our prefabricated railway and telecom shelters, including 
+            applications, customization, durability, installation, and performance.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -413,7 +419,13 @@ const PrefabRailwayShelters = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive Clean Room tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

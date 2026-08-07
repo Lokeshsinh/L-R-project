@@ -99,25 +99,30 @@ const deliveryFeatures = [
 
 const faqs = [
   {
-    q: "What industries can MS modular containers be used in?",
-    a: "MS modular containers are widely used in construction, oil & gas, power, mining, railways, infrastructure, renewable energy, and industrial projects."
+    id: 0,
+    q: "What is prefab drywall?",
+    a: "Prefab drywall is a lightweight partition system made from gypsum boards and steel framing for fast, clean, and efficient interior construction.",
   },
   {
-    q: "What is a skid-mounted container system?",
-    a: "A skid-mounted container system is designed for easy transportation, relocation, and quick installation without requiring a permanent foundation."
+    id: 1,
+    q: "Where is it used?",
+    a: "It is widely used in offices, homes, hospitals, hotels, schools, and commercial buildings to create modern interior spaces.",
   },
   {
-    q: "How fast can MS container projects be delivered?",
-    a: "Most MS container projects are completed within a few weeks, depending on the design, size, and project requirements."
+    id: 2,
+    q: "Is it better than traditional walls?",
+    a: "Yes, prefab drywall offers faster installation, reduced construction waste, better finishing, and greater design flexibility than conventional masonry walls.",
   },
   {
-    q: "Are MS containers suitable for harsh environments?",
-    a: "Yes, they are built with high-quality steel and protective coatings to withstand extreme weather, corrosion, and demanding industrial conditions."
+    id: 3,
+    q: "Does it reduce construction time?",
+    a: "Yes, its prefabricated design enables quick installation, significantly reducing overall construction time and labor costs.",
   },
   {
-    q: "Can MS containers be customized for different uses?",
-    a: "Yes, MS containers can be fully customized with interiors, insulation, electrical systems, plumbing, HVAC, and layouts to suit specific applications."
-  }
+    id: 4,
+    q: "Is prefab drywall durable?",
+    a: "Yes, it is built with high-quality materials that provide excellent strength, durability, and long-lasting performance for interior applications.",
+  },
 ];
 
 const MsContainer = () => {
@@ -453,8 +458,8 @@ const MsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Find answers to common questions about our container solutions,
-            design process, and performance benefits.
+            Quick answers from L&R Green Pvt Ltd about prefabricated dry wall systems,
+            covering key benefits, usage, and performance in modern interior construction.
           </p>
         </div>
 

@@ -151,7 +151,13 @@ const LgsfShowroom = () => {
               when required. These showrooms are ideal for modern commercial display spaces, offering open, customizable
               layouts that support branding, product showcasing, and contemporary design requirements.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -210,7 +216,7 @@ const LgsfShowroom = () => {
       {/* ── SECTION 4: DURABILITY & SUSTAINABILITY OF LGSF SHOWROOMS ── */}
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
- 
+
         </div>
 
         <div className={styles.mfgContainer}>
@@ -364,7 +370,13 @@ const LgsfShowroom = () => {
           Connect with our team to design and deliver durable, efficient, and
           fully customized insulated  LGSF Showroom  solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

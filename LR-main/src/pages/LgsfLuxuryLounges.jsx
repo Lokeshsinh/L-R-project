@@ -34,29 +34,30 @@ const LgsfLuxuryLounges = () => {
     {
       id: 0,
       q: "What is an LGSF Luxury Lounge?",
-      a: "An LGSF Luxury Lounge is a high-end modular structure built using lightweight steel framing technology, enabling sophisticated architectural designs with faster construction than traditional methods.",
+      a: "An LGSF Luxury Lounge is a premium modular structure built with lightweight steel framing for modern design, fast construction, and lasting performance.",
     },
     {
       id: 1,
       q: "How long does it take to construct an LGSF lounge?",
-      a: "Most LGSF luxury lounges can be completed within 3–4 weeks, depending on size, design complexity, and site conditions.",
+      a: "Construction typically takes 3–4 weeks, depending on the size, design complexity, and site conditions.",
     },
     {
       id: 2,
       q: "Is LGSF construction durable and safe?",
-      a: "Yes, our light-gauge steel frames are engineered to withstand extreme winds, seismic forces, and adverse weather conditions, ensuring long-term safety and structural durability.",
+      a: "Yes. LGSF structures provide excellent strength, stability, weather resistance, and long-term durability.",
     },
     {
       id: 3,
-      q: "Can the design be customized?",
-      a: "Absolutely. We offer complete architectural flexibility, allowing you to customize layout plans, finishes, cladding materials, and lighting to match your aesthetic requirements.",
+      q: "Can the LGSF lounge be customized?",
+      a: "Yes. Layouts, finishes, cladding, lighting, interiors, and architectural designs can be customized to your requirements.",
     },
     {
       id: 4,
       q: "Where can LGSF luxury lounges be used?",
-      a: "They are perfect for VIP meeting rooms, airport lounges, exclusive hotel recreation zones, executive cabins, private villas, and high-end residential rooftop additions.",
+      a: "They are ideal for VIP lounges, executive spaces, hotels, resorts, private villas, offices, and premium rooftop spaces.",
     },
   ];
+
 
   const galleryCards = [
     {
@@ -138,7 +139,13 @@ const LgsfLuxuryLounges = () => {
               They offer a perfect blend of modern design, efficient construction, and reliable solutions for residential
               and commercial spaces. Their versatility makes them suitable for a wide range of luxury applications.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -456,7 +463,13 @@ const LgsfLuxuryLounges = () => {
         </p>
 
 
-        <button className={styles.contactBtn}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

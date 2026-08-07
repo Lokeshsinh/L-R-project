@@ -203,15 +203,15 @@ const ExecutiveMsContainer = () => {
     },
     {
       q: "Are Executive MS Containers durable?",
-      a: "Yes, they are built with high-quality MS steel to provide exceptional strength, durability, and long-term performance in harsh environments.",
+      a: "Yes. They are built with high-quality MS steel to provide excellent strength, durability, and long-term performance in demanding environments.",
     },
     {
       q: "Can Executive MS Containers be customized?",
-      a: "Yes, layouts, interiors, insulation, electrical systems, HVAC, and finishes can be fully customized to meet your project requirements.",
+      a: "Yes. Layouts, interiors, insulation, electrical systems, HVAC, and finishes can be customized to meet specific project requirements.",
     },
     {
       q: "Where are Executive MS Containers commonly used?",
-      a: "They are widely used in construction, infrastructure, oil & gas, mining, power, railway, and industrial projects across various sectors.",
+      a: "They are widely used in construction, infrastructure, oil & gas, mining, power, railway, and other industrial projects.",
     },
   ];
 

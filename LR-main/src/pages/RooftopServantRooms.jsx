@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopServantRooms.module.css";
 import {
-  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X, 
+  ArrowRight, ArrowUpRight, CheckCircle2, Plus, X,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import servent1 from '../assets/rooftop/servent/servent1.png'
@@ -36,30 +36,29 @@ const RooftopServantRooms = () => {
     {
       id: 0,
       q: "What is a rooftop servant room?",
-      a: "It is a highly durable, lightweight room built on the roof of an existing building to house domestic help or security staff.",
+      a: "A rooftop servant room is a lightweight prefabricated space designed to accommodate domestic help or security staff.",
     },
     {
       id: 1,
-      q: "Is a rooftop servant room safe for my building structure?",
-      a: "Yes, these rooms are designed using lightweight steel and engineered materials, ensuring minimal load impact on the existing building after proper structural assessment.",
+      q: "Is a rooftop servant room safe for an existing building?",
+      a: "Yes. Lightweight steel structures minimize additional load, subject to proper structural assessment of the existing building.",
     },
     {
       id: 2,
-      q: "How long does it take to install a rooftop servant room?",
-      a: "The off-site prefabrication and on-site assembly can be completed in just 2 to 3 weeks.",
+      q: "How long does installation take?",
+      a: "Prefabrication and on-site installation can typically be completed within 2–3 weeks, depending on the project.",
     },
     {
       id: 3,
-      q: "What facilities are included in a rooftop servant room?",
-      a: "All our servant room layouts can be configured with compact bedrooms, ventilation openings, and attached modern washrooms and toilets.",
+      q: "What facilities can be included?",
+      a: "The room can include a bedroom, ventilation, electrical fittings, and an attached washroom based on your requirements.",
     },
     {
       id: 4,
-      q: "Can the design of servant rooms be customized?",
-      a: "Yes, the design, dimensions, interior partitions, and finishes can be customized to match your building space and requirements.",
+      q: "Can rooftop servant rooms be customized?",
+      a: "Yes. Layouts, dimensions, partitions, doors, windows, finishes, and other features can be customized to suit your space.",
     },
   ];
-
 
   const galleryCards = [
     {
@@ -159,7 +158,13 @@ const RooftopServantRooms = () => {
               efficient space utilization, ensuring a practical and reliable living solution for staff accommodation.
               They are built with precision to ensure safety, strength, and long-lasting usability in all conditions.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -427,7 +432,13 @@ const RooftopServantRooms = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized insulated
           Prefab Servant Room solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

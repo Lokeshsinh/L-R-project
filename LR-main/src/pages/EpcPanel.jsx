@@ -15,7 +15,7 @@ import epc6 from '../assets/panel/EPC/epc6.png'
 import user1 from '../assets/panel/EPC/card1.jpg'
 import user2 from '../assets/panel/EPC/card2.jpg'
 import user3 from '../assets/panel/EPC/card3.jpg'
-import user4 from '../assets/panel/EPC/card4.webp'
+import user4 from '../assets/panel/EPC/card4.jpg'
 import design from '../assets/panel/EPC/design.png'
 import design1 from '../assets/panel/EPC/design1.png'
 
@@ -150,7 +150,13 @@ function EpcPanel() {
                             Pvt Ltd offer strong structural stability, easy installation, and cost efficiency, making them a reliable choice for
                             residential, commercial, and industrial projects.
                         </p>
-                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                        <button className={styles.btnOutline} onClick={() => {
+                            navigate("/contact");
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            });
+                        }}>
                             <span>Get Contact</span>
 
                             <span className={styles.iconWrap}>
@@ -257,7 +263,7 @@ function EpcPanel() {
             {/* ── SECTION 4: ENGINEERED FOR SAFE URBAN LIVING ── */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-                
+
                 </div>
 
                 <div className={styles.mfgContainer}>
@@ -373,7 +379,7 @@ function EpcPanel() {
             <section className={styles.epsSection}>
                 <div className={styles.epsHeading}>
                     <h2>
-                       Applications of <br />
+                        Applications of <br />
                         <span>EPS Panels?</span>
                     </h2>
                     <div className={styles.headingDivider}></div>
@@ -505,7 +511,13 @@ function EpcPanel() {
                     Connect with our team to design and deliver durable, efficient, and fully
                     customized insulated EPS panels solutions tailored to your site needs.
                 </p>
-                <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+                <button className={styles.contactBtn} onClick={() => {
+                    navigate("/contact");
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }}>
                     <span className={styles.contactText}>Contact Us</span>
 
                     <span className={styles.iconBox}>

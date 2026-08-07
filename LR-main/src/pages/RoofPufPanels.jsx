@@ -117,30 +117,29 @@ const RoofPufPanels = () => {
     {
       id: 0,
       q: "What are Roof PUF panels used for?",
-      a: "Roof PUF panels are widely used for industrial manufacturing units, warehouses, cold storages, food processing facilities, PEBs, and commercial buildings to provide high-performance insulated roofing.",
+      a: "Roof PUF panels are used for warehouses, industrial units, cold storage, food processing facilities, PEBs, and commercial buildings.",
     },
     {
       id: 1,
       q: "How do Roof PUF panels save energy?",
-      a: "Roof PUF panels provide excellent thermal insulation, which prevents external heat from entering the building. This reduces the load on air conditioning systems, saving up to 40% on energy costs.",
+      a: "Their thermal insulation reduces heat transfer, lowering cooling requirements and improving energy efficiency.",
     },
     {
       id: 2,
       q: "Are Roof PUF panels fire-retardant?",
-      a: "Yes, we offer fire-retardant PUF panels that comply with industry safety and fire protection standards, providing a secure roofing solution for your infrastructure.",
+      a: "Yes, fire-retardant options are available to provide enhanced safety and protection.",
     },
     {
       id: 3,
-      q: "What thickness options do you offer?",
-      a: "We offer various panel thickness options such as 30+30mm, 40+30mm, 50+30mm, and 100+30mm depending on your specific thermal insulation and project requirements.",
+      q: "What thickness options are available?",
+      a: "Panels are available in various thicknesses based on thermal insulation and project requirements.",
     },
     {
       id: 4,
       q: "Do you provide customized lengths?",
-      a: "Yes, we manufacture Roof PUF Panels in customized lengths tailored precisely to your building's architectural design and project specifications.",
+      a: "Yes, Roof PUF panels can be manufactured in customized lengths to suit specific project requirements.",
     },
   ];
-
 
 
   return (
@@ -207,7 +206,13 @@ const RoofPufPanels = () => {
               GI—combined with a high-performance polyurethane foam core. A tongue-and-groove interlocking system
               ensures tight panel joints, allowing quick installation, improved airtightness, and a seamless finished appearance.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -548,8 +553,8 @@ const RoofPufPanels = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about prefabricated rooftop residential flats, including
-            installation, safety, customization, and suitability for different building types.</p>
+          <p>Get quick answers to common questions about Roof PUF Panels, including their
+            applications, insulation, durability, customization, and performance.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
@@ -602,7 +607,13 @@ const RoofPufPanels = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized insulated Roof PUF Panels solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

@@ -323,7 +323,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .secTitle h2 {
@@ -1236,7 +1236,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
   align-items: start;
 }
 
@@ -1619,7 +1619,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .solarEpicTitle h2 {
@@ -1922,7 +1922,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .roofPanelHeading h2 {
@@ -2608,7 +2608,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .roofPufText h2 {
@@ -2929,7 +2929,7 @@ table
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 
@@ -3790,7 +3790,7 @@ Why choose
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: start;
 }
 
@@ -3887,6 +3887,7 @@ Why choose
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  border-radius: 10px;
 }
 
 .faqItem:hover {
@@ -3972,7 +3973,7 @@ Why choose
 
   .faqImg {
     width: 46%;
-    height: 500px;
+    height: 480px;
   }
 
   .containers {

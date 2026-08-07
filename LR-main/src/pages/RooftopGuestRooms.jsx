@@ -146,7 +146,13 @@ const RooftopGuestRooms = () => {
               buildings while requiring minimal structural modifications. With lightweight construction and precision
               engineering, they ensure stable performance, modern aesthetics, and comfortable residential spaces built for urban living.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -485,7 +491,13 @@ const RooftopGuestRooms = () => {
           Connect with our team to design and deliver durable, efficient, and
           fully customized insulated  Prefab Guest Rooms solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

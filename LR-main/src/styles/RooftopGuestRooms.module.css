@@ -49,7 +49,7 @@
 }
 
 .mainTitle {
-  font-size: 70px;
+  font-size: 75px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -334,7 +334,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .secTitle h2 {
@@ -1091,7 +1091,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: start;
 }
 
@@ -2323,7 +2323,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .siteText {

@@ -104,7 +104,13 @@ const FarmhouseCottage = () => {
             We build modern LGSF farmhouses that deliver fast construction, high
             durability, and superior comfort—ideal for weekend retreats, agricultural
             homes, and luxury countryside living.</p>
-          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+          <button onClick={() => {
+            navigate("/contact");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }} className={styles.btnWhite}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
@@ -136,7 +142,13 @@ const FarmhouseCottage = () => {
               methods. Our solutions provide excellent thermal insulation, flexible design options, and long-lasting performance,
               making them suitable for both personal living spaces and commercial hospitality projects.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -444,7 +456,13 @@ const FarmhouseCottage = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized insulated  PrefabFarm Houses & Cottages solutions tailored to your site needs..
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

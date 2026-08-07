@@ -8,9 +8,9 @@ import {
 import { useNavigate } from 'react-router-dom'
 import glass1 from '../assets/panel/glasswall/glass1.png'
 import glass2 from '../assets/panel/glasswall/glass2.png'
-import glass3 from '../assets/panel/glasswall/glass3.png'
 import glass4 from '../assets/panel/glasswall/glass4.png'
 import glass5 from '../assets/panel/glasswall/glass5.png'
+import glass6 from '../assets/panel/glasswall/glass6.png'
 import design from '../assets/panel/glasswall/design.png'
 import design1 from '../assets/panel/glasswall/design1.png'
 
@@ -30,27 +30,27 @@ const GlasswoolPanels = () => {
     {
       id: 0,
       q: "Are glass wool panels fire-resistant?",
-      a: "Yes, glass wool is naturally non-combustible and holds Class A/Class 0 fire ratings, preventing the spread of flames.",
+      a: "Yes, glass wool is naturally non-combustible and provides excellent fire resistance.",
     },
     {
       id: 1,
       q: "How does glass wool compare with rock wool?",
-      a: "Glass wool is lighter and has slightly better thermal efficiency at lower thicknesses, while rock wool is denser and offers higher fire rating duration.",
+      a: "Glass wool is lighter with good thermal efficiency, while rock wool offers higher density and fire resistance.",
     },
     {
       id: 2,
-      q: "What thicknesses do you offer?",
-      a: "We offer Glass Wool panels in thickness options from 50mm up to 150mm depending on thermal and insulation specifications.",
+      q: "What thicknesses are available?",
+      a: "Glass wool panels are available in various thicknesses based on thermal and insulation requirements.",
     },
     {
       id: 3,
       q: "Do glass wool panels sag over time?",
-      a: "No, our advanced thermosetting resin bonding ensures that glass fibers remain stiff and do not sag, maintaining uniform insulation.",
+      a: "No, quality glass wool panels maintain their shape and consistent insulation performance over time.",
     },
     {
       id: 4,
       q: "Is glass wool safe and eco-friendly?",
-      a: "Yes, glass wool is made from natural silica sand and recycled glass. It is completely non-toxic, eco-friendly, and fully recyclable.",
+      a: "Yes, glass wool is made using silica and recycled glass, making it a recyclable insulation solution.",
     },
   ];
 
@@ -225,7 +225,7 @@ const GlasswoolPanels = () => {
       {/* ── SECTION 3: TECHNICAL SPECIFICATIONS ── */}
       <section className={styles.TechUser}>
         <div className={styles.TechText}>
-          <h2>EPS Panels <br /><span>Technical Specifications</span></h2>
+          <h2>Glass Wool Panel <br /><span>Technical Specifications</span></h2>
           <div className={styles.TechLine}></div>
         </div>
         <div className={styles.TechFlex}>
@@ -344,13 +344,13 @@ const GlasswoolPanels = () => {
               and environmental stress. They help maintain consistent indoor temperatures, reduce noise levels,
               and lower energy consumption, ensuring cost-effective and durable solutions for modern construction projects.</p>
           </div>
-            <div className={styles.GlassConatinerImage}>
-              <img
-                src={glass3}
-                alt="Solar Structure"
-                
-              />
-            </div>
+          <div className={styles.GlassConatinerImage}>
+            <img
+              src={glass6}
+              alt="Solar Structure"
+
+            />
+          </div>
         </div>
       </section>
 

@@ -163,7 +163,13 @@ function LgsfModular() {
                             schools, hospitals, and institutional projects. The lightweight steel framework enhances structural stability
                             while delivering exceptional comfort and long-term reliability.
                         </p>
-                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                        <button className={styles.btnOutline} onClick={() => {
+                            navigate("/contact");
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            });
+                        }}>
                             <span>Get Contact</span>
 
                             <span className={styles.iconWrap}>
@@ -292,7 +298,7 @@ function LgsfModular() {
             {/* STRENGTH BAND */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-                   
+
                 </div>
 
                 <div className={styles.mfgContainer}>
@@ -443,7 +449,13 @@ function LgsfModular() {
                     Build smarter with our advanced LGSF solutions, delivering strong, lightweight,
                     and energy-efficient structures with fast construction and lasting quality.
                 </p>
-                <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+                <button className={styles.contactBtn} onClick={() => {
+                    navigate("/contact");
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }}>
                     <span className={styles.contactText}>Contact Us</span>
 
                     <span className={styles.iconBox}>

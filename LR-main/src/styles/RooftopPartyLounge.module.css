@@ -781,7 +781,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .secTitle h2 {
@@ -1234,7 +1234,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .siteText {
@@ -1960,7 +1960,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .solarEpicTitle h2 {
@@ -2376,7 +2376,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: start;
 }
 
@@ -2919,6 +2919,33 @@
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+@media (max-width:1280px) {
+
+  .cta {
+    padding: 65px 40px;
+  }
+
+  .cta h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .cta p {
+    max-width: 820px;
+    margin: 0 auto 24px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .contactBtn {
+    width: 250px;
+    height: 54px;
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width:1200px) {

@@ -13,8 +13,8 @@ import resident4 from '../assets/rooftop/resident/resident4.png'
 import resident5 from '../assets/rooftop/resident/resident5.png'
 import resident6 from '../assets/rooftop/resident/resident6.png'
 import resident7 from '../assets/rooftop/resident/resident7.png'
-import resident8 from '../assets/rooftop/resident/resident8.png'
 import resident9 from '../assets/rooftop/resident/resident9.png'
+import resident10 from '../assets/rooftop/resident/roof.png'
 import user1 from '../assets/rooftop/resident/user1.png'
 import user2 from '../assets/rooftop/resident/user2.png'
 import user3 from '../assets/rooftop/resident/user3.png'
@@ -152,7 +152,13 @@ const RooftopResidential = () => {
               buildings while requiring minimal structural modifications. With lightweight construction and precision
               engineering, they ensure stable performance, modern aesthetics, and comfortable residential spaces built for urban living.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -416,7 +422,7 @@ const RooftopResidential = () => {
           </div>
           <div className={styles.stackedImageLayout}>
             <div className={styles.heroImageFrame}>
-              <img src={resident8} alt="Main Building" />
+              <img src={resident10} alt="Main Building" />
             </div>
 
             <div className={styles.overlayImageFrame}>
@@ -490,7 +496,13 @@ const RooftopResidential = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized insulated
           Prefab Servant Room solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

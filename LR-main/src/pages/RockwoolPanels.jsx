@@ -60,27 +60,27 @@ const RockwoolPanels = () => {
     {
       id: 0,
       q: "What makes Rockwool panels highly fire-resistant?",
-      a: "Rockwool is made from natural volcanic rock (basalt) that has a melting point above 1000°C, making it non-combustible and excellent for fire barriers.",
+      a: "Rockwool panels are made from basalt-based mineral wool, providing excellent fire resistance and non-combustible insulation.",
     },
     {
       id: 1,
       q: "Are Rockwool panels good for soundproofing?",
-      a: "Yes, due to their high density and fibrous structure, they absorb sound waves and are widely used in acoustic rooms and noisy industrial zones.",
+      a: "Yes, their dense fibrous structure provides excellent sound absorption for acoustic and industrial applications.",
     },
     {
       id: 2,
-      q: "What thicknesses do you offer?",
-      a: "We manufacture Rockwool panels in thicknesses ranging from 50mm up to 200mm, depending on fire rating and thermal specifications.",
+      q: "What thicknesses are available?",
+      a: "Rockwool panels are available in various thicknesses based on the required thermal and fire insulation performance.",
     },
     {
       id: 3,
-      q: "Do rock wool panels absorb moisture?",
-      a: "No, the rock wool core is specially treated to be hydrophobic, meaning it repels water and prevents dampness or moisture buildup.",
+      q: "Do Rockwool panels absorb moisture?",
+      a: "No, treated Rockwool cores are water-repellent and help prevent moisture buildup and dampness.",
     },
     {
       id: 4,
-      q: "Are these panels environmentally friendly?",
-      a: "Yes, rock wool is a natural material derived from basalt rock, which is highly sustainable, fully recyclable, and free from toxic emissions.",
+      q: "Are Rockwool panels environmentally friendly?",
+      a: "Yes, Rockwool is made from natural mineral materials and offers a durable, recyclable insulation solution.",
     },
   ];
 
@@ -166,7 +166,13 @@ const RockwoolPanels = () => {
               durability and moisture resistance. The fibrous structure effectively absorbs sound, making them ideal for
               walls, roofs, and cleanroom applications across industrial and commercial environments.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -445,8 +451,8 @@ const RockwoolPanels = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about prefabricated rooftop residential flats, including
-            installation, safety, customization, and suitability for different building types.</p>
+          <p>Get quick answers to common questions about Rockwool Panels, including fire
+            resistance, sound insulation, moisture protection, durability, and sustainability.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
@@ -515,7 +521,13 @@ const RockwoolPanels = () => {
         </p>
 
 
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

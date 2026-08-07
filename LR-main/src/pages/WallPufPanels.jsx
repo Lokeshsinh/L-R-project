@@ -66,28 +66,28 @@ export const WallPufPanels = () => {
   const faqs = [
     {
       id: 0,
-      q: "What are PUF panels used for?",
-      a: "Wall PUF panels are widely used for vertical wall cladding, partitions, clean rooms, cold storages, telecom shelters, and modular cabins to offer high durability and insulation.",
+      q: "What are Wall PUF panels used for?",
+      a: "Wall PUF panels are used for industrial buildings, cold storage, clean rooms, warehouses, modular offices, and prefabricated structures requiring thermal insulation.",
     },
     {
       id: 1,
-      q: "Are Wall PUF panels energy-efficient?",
-      a: "Yes, due to their excellent thermal insulation properties, they minimize heat transfer and can reduce heating or cooling costs by up to 40%.",
+      q: "How do Wall PUF panels provide insulation?",
+      a: "A high-density polyurethane foam core minimizes heat transfer, helping maintain stable indoor temperatures and improve energy efficiency.",
     },
     {
       id: 2,
-      q: "Are Wall PUF panels fire-retardant?",
-      a: "Yes, we manufacture fire-retardant Wall PUF panels that comply with industry safety standards to protect your buildings and assets.",
+      q: "Are Wall PUF panels fire-resistant?",
+      a: "Yes. Fire-rated PUF panels provide enhanced fire resistance and meet industry safety standards for various commercial and industrial applications.",
     },
     {
       id: 3,
-      q: "Can they be used as partitions?",
-      a: "Yes, they are ideal for internal partition walls in warehouses, factories, clean rooms, and commercial offices, offering quick installation and clean aesthetics.",
+      q: "Can Wall PUF panels be customized?",
+      a: "Yes. Panels can be customized in thickness, length, color, and profile to meet specific project and insulation requirements.",
     },
     {
       id: 4,
-      q: "What is the life of Wall PUF panels?",
-      a: "Wall PUF panels are highly durable, rust-proof, and designed to last for several decades with minimal maintenance.",
+      q: "How long do Wall PUF panels last?",
+      a: "With proper installation and maintenance, Wall PUF panels offer long-lasting durability, corrosion resistance, and reliable performance for decades.",
     },
   ];
   const features = [
@@ -164,7 +164,13 @@ export const WallPufPanels = () => {
               GI—combined with a high-performance polyurethane foam core. A tongue-and-groove interlocking system
               ensures tight panel joints, allowing quick installation, improved airtightness, and a seamless finished appearance.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -507,8 +513,8 @@ export const WallPufPanels = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find answers to common questions about prefabricated rooftop residential flats, including
-            installation, safety, customization, and suitability for different building types.</p>
+          <p>Find answers to the most common questions about Wall PUF Panels, including their applications,
+            insulation performance, durability, customization, and installation.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -558,7 +564,13 @@ export const WallPufPanels = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized sandwich wall puf panel solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

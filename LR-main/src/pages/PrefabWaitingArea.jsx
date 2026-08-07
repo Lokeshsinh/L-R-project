@@ -177,7 +177,13 @@ const PrefabWaitingArea = () => {
               user comfort. Flexible design options make them suitable for different space requirements.
               This makes them a smart choice for future-ready infrastructure development.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }} >
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -416,7 +422,13 @@ const PrefabWaitingArea = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized insulated  Prefab Waiting Area solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

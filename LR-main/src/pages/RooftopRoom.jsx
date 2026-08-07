@@ -162,7 +162,13 @@ function RooftopRoom() {
                             waterproof roofing, thermal insulation, earthquake-resistant construction, and modern
                             interior finishes, they provide reliable, energy-efficient spaces tailored to your needs.
                         </p>
-                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                        <button className={styles.btnOutline} onClick={() => {
+                            navigate("/contact");
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            });
+                        }}>
                             <span>Get Contact</span>
 
                             <span className={styles.iconWrap}>
@@ -289,10 +295,7 @@ function RooftopRoom() {
             {/* STRENGTH BAND */}
             <section className={styles.mfgBand}>
                 <div className={styles.scrollWrap}>
-                    <div className={styles.scrollTrack}>
-                        <h1>Built for Rooftop Living</h1>
 
-                    </div>
                 </div>
 
                 <div className={styles.mfgContainer}>
@@ -393,7 +396,8 @@ function RooftopRoom() {
                         <h2>Frequently Asked<br /><span>Questions</span></h2>
                         <div className={styles.FaqsLine}></div>
                     </div>
-                    <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
+                    <p>GFind quick answers to common questions about rooftop houses, including customization, durability,
+                        applications, installation, and turnkey solutions.</p>
                 </div>
                 <div className={styles.faqBody}>
                     <div className={styles.faqImg}>
@@ -443,7 +447,13 @@ function RooftopRoom() {
                     From rooftop flats to guest rooms and party halls, we deliver premium
                     modular rooftop solutions with quality, speed, and reliability.
                 </p>
-                <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+                <button className={styles.contactBtn} onClick={() => {
+                    navigate("/contact");
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }}>
                     <span className={styles.contactText}>Contact Us</span>
 
                     <span className={styles.iconBox}>

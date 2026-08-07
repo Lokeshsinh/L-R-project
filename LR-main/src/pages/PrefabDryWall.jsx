@@ -146,7 +146,13 @@ const PrefabDryWall = () => {
                 They are widely used for creating flexible, lightweight, and efficient interior partitions in commercial,
                 residential, and industrial spaces.
               </p>
-              <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+              <button className={styles.btnOutline} onClick={() => {
+                navigate("/contact");
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}>
                 <span>Get Contact</span>
 
                 <span className={styles.iconWrap}>
@@ -401,7 +407,7 @@ const PrefabDryWall = () => {
       </section>
 
 
-      
+
 
       {/* ── CTA Banner ── */}
       <section className={styles.cta}>
@@ -410,7 +416,13 @@ const PrefabDryWall = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive Prefabricated Dry Wall tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

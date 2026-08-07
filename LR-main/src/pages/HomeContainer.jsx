@@ -24,7 +24,7 @@ import design from '../assets/conatiners/HomeConatiner/design.png';
 import design1 from '../assets/conatiners/HomeConatiner/design1.png';
 import faq from '../assets/conatiners/HomeConatiner/read.png';
 import HomeContainers from '../assets/conatiners/HomeConatiner/homecontainer.png'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 function HomeContainer() {
     const [activeIndex, setActiveIndex] = useState(1);
 
@@ -60,30 +60,29 @@ function HomeContainer() {
         {
             id: 0,
             q: "What are Modular MS Container Homes?",
-            a: "Modular MS Container Homes are prefabricated steel structures designed for residential, commercial, and industrial use. They offer durability, quick installation, and cost-effective construction.",
+            a: "Modular MS Container Homes are prefabricated steel structures designed for residential, commercial, and industrial applications, offering durability, fast installation, and cost-effective construction.",
         },
         {
             id: 1,
             q: "Do you provide installation services?",
-            a: "Yes. We provide complete transportation, on-site installation, and commissioning services to ensure a smooth and hassle-free setup.",
+            a: "Yes. We provide transportation, on-site installation, and commissioning for a smooth and hassle-free setup.",
         },
         {
             id: 2,
-            q: "Can the container structures be customized?",
-            a: "Yes. We customize layouts, interiors, insulation, doors, windows, electrical systems, plumbing, and finishes to meet your project requirements.",
+            q: "Can Modular MS Container Homes be customized?",
+            a: "Yes. Layouts, interiors, insulation, doors, windows, electrical systems, plumbing, and finishes can be customized to meet project requirements.",
         },
         {
             id: 3,
-            q: "Are the structures weather resistant?",
-            a: "Yes. Our container structures are manufactured using high-quality steel and protective coatings to withstand harsh weather conditions and ensure long-term durability.",
+            q: "Are Modular MS Container Homes weather-resistant?",
+            a: "Yes. High-quality steel and protective coatings provide reliable performance in harsh weather conditions and ensure long-term durability.",
         },
         {
             id: 4,
-            q: "Do you offer maintenance services?",
-            a: "Yes. We provide maintenance, repair, and after-sales support to keep your modular container structures in excellent condition throughout their lifespan.",
+            q: "Do you provide maintenance and after-sales support?",
+            a: "Yes. We offer maintenance, repair, and after-sales support to ensure long-lasting performance of your modular container structure.",
         },
     ];
-
     const industryProjects = [
         {
             title: "Modular Living Solutions",

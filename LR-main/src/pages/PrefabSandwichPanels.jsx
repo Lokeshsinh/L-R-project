@@ -78,32 +78,31 @@ const PrefabSandwichPanels = () => {
     },
   ];
 
-
   const faqs = [
     {
       id: 0,
       q: "What are sandwich panels used for?",
-      a: "Sandwich panels are used for roofing, wall cladding, cold storage, clean rooms, and prefabricated buildings, providing excellent thermal and acoustic insulation.",
+      a: "Sandwich panels are used for roofing, wall cladding, cold storage, clean rooms, and prefabricated buildings.",
     },
     {
       id: 1,
       q: "Which insulation core materials are available?",
-      a: "We offer PUF/PIR, EPS, Rockwool, and Glasswool insulated sandwich panels based on project requirements.",
+      a: "We offer PUF/PIR, EPS, Rockwool, and Glasswool core panels for different applications.",
     },
     {
       id: 2,
       q: "Are sandwich panels energy efficient?",
-      a: "Yes, their high thermal resistance reduces heat transfer, which significantly lowers heating and cooling costs.",
+      a: "Yes, they provide excellent thermal insulation, reducing energy consumption and operating costs.",
     },
     {
       id: 3,
       q: "Are sandwich panels fire resistant?",
-      a: "Yes, panels with Rockwool or specialized PUF cores offer excellent fire resistance and safety.",
+      a: "Yes, Rockwool and fire-rated PUF panels offer excellent fire resistance and enhanced safety.",
     },
     {
       id: 4,
       q: "Can sandwich panels be customized?",
-      a: "Yes, sandwich panels can be customized in terms of thickness, length, profile design, and core material to meet specific project guidelines.",
+      a: "Yes, panel thickness, length, profile, color, and insulation core can be customized to suit project requirements.",
     },
   ];
   const galleryCards = [
@@ -175,8 +174,8 @@ const PrefabSandwichPanels = () => {
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Energy-efficient insulated panels engineered for thermal performance, durability, fire resistance,
-            and rapid installation across industrial, commercial, and prefabricated construction projects.
+            Premium sandwich panels engineered for superior thermal insulation, durability, and fast installation—ideal for industrial,
+            commercial, cold storage, and modular building applications.
 
 
           </p>
@@ -216,7 +215,13 @@ const PrefabSandwichPanels = () => {
               efficiency. Their low maintenance, long service life, and versatile applications make them a preferred
               alternative for fast-track infrastructure development.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -256,7 +261,8 @@ const PrefabSandwichPanels = () => {
               <div className={styles.productsDivider}></div>
             </div>
             <p className={styles.productsSubtext}>
-              High-performance insulated panels for durable, energy-efficient, and modern construction applications.
+              Advanced sandwich panels designed for superior insulation, durability,
+              fire resistance, and energy-efficient construction performance.
             </p>
           </div>
           <div className={styles.expertiseGrid}>
@@ -506,7 +512,13 @@ const PrefabSandwichPanels = () => {
           L&R Green Private Limited provides durable, energy-efficient, and cost-effective sandwich panel
           solutions for industrial, commercial, and prefabricated construction projects across India.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

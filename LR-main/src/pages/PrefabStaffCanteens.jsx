@@ -97,27 +97,27 @@ const PrefabStaffCanteens = () => {
     {
       id: 0,
       q: "What is a prefabricated staff canteen?",
-      a: "A prefabricated staff canteen is a factory-built modular structure designed to serve as a dining and recreation area for workers and employees.",
+      a: "A prefabricated staff canteen is a modular dining facility designed to provide comfortable, hygienic, and efficient meal spaces for employees and workers.",
     },
     {
       id: 1,
       q: "How long does installation take?",
-      a: "Installation is fast and typically completed within a few days, depending on size and site conditions.",
+      a: "Most prefabricated staff canteens are installed within a few days, depending on the project size and site conditions.",
     },
     {
       id: 2,
-      q: "Are these canteens suitable for industrial sites?",
-      a: "Yes, our canteens are built with durable materials that can withstand harsh industrial environments while maintaining comfort and hygiene.",
+      q: "Are prefab staff canteens suitable for industrial sites?",
+      a: "Yes, they are built with durable materials to withstand demanding industrial environments while ensuring comfort, safety, and hygiene.",
     },
     {
       id: 3,
-      q: "Can the canteen size be customized?",
-      a: "Absolutely! We offer flexible, modular designs to accommodate any capacity, from small teams to massive worker halls.",
+      q: "Can the staff canteen be customized?",
+      a: "Yes, layouts, seating capacity, kitchen areas, insulation, and interior finishes can be fully customized to suit your requirements.",
     },
     {
       id: 4,
-      q: "Is maintenance difficult?",
-      a: "No, they are built with wipe-clean surfaces and durable finishes that simplify daily upkeep and ensure long-term usability.",
+      q: "Are prefab staff canteens easy to maintain?",
+      a: "Yes, they feature durable, easy-to-clean materials that require minimal maintenance and provide long-lasting performance.",
     },
   ];
 
@@ -173,7 +173,13 @@ const PrefabStaffCanteens = () => {
               organized dining, proper ventilation, and easy maintenance. Whether for temporary projects
               or long-term operations, they create a comfortable and scalable environment for workforce meal management.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -208,14 +214,14 @@ const PrefabStaffCanteens = () => {
         <div className={styles.siteHeader}>
           <div className={styles.siteText}>
             <h2>
-              Built for every  <br />
-              <span>site, every shift</span>
+              Dining & Catering   <br />
+              <span>Solutions</span>
             </h2>
             <div className={styles.FaqsLine}></div>
           </div>
           <p >
-            Versatile modular canteens engineered for the diverse needs
-            of industrial and construction projects.
+            Modern, hygienic, and fully equipped dining facilities designed to provide comfortable meal spaces
+            for workforce camps, industrial sites, and commercial projects.
           </p>
         </div>
 
@@ -243,7 +249,7 @@ const PrefabStaffCanteens = () => {
           ))}
         </div>
       </section>
-      
+
 
 
 
@@ -459,7 +465,13 @@ const PrefabStaffCanteens = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive Clean Room tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

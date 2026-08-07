@@ -143,7 +143,13 @@ const RooftopPartyLounge = () => {
               structural changes, your rooftop can be converted into a lively destination that enhances both lifestyle value
               and property potential.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -404,7 +410,13 @@ const RooftopPartyLounge = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           insulated  Prefab Party Lounge solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>
