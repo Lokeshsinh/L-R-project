@@ -16,32 +16,28 @@ import cold3 from '../assets/Pre-Build/ColdRoom/cold3.png'
 import cold4 from '../assets/Pre-Build/ColdRoom/cold4.png'
 
 
-
 const faqs = [
   {
     q: "What is a prefabricated cold room?",
-    a: "A prefabricated cold room is a factory-built insulated structure with integrated refrigeration systems, designed for rapid on-site assembly and precise temperature-controlled storage.",
+    a: "A prefabricated cold room is an insulated modular structure designed for reliable temperature-controlled storage and quick installation.",
   },
   {
     q: "What temperature range can your cold rooms maintain?",
-    a: "Our cold rooms can be engineered to maintain temperatures from +18°C down to -40°C, covering everything from fresh produce storage to deep freeze applications.",
+    a: "Our cold rooms can maintain temperatures from +18°C to -40°C, suitable for chilled and frozen storage applications.",
   },
   {
-    q: "Is cold storage always affected?",
-    a: "No. Our systems are designed with redundant refrigeration and high-performance insulation panels to ensure consistent temperatures even in extreme ambient conditions.",
+    q: "Are your cold rooms energy efficient?",
+    a: "Yes, they use high-performance insulated panels and efficient refrigeration systems to minimize energy consumption while maintaining consistent temperatures.",
   },
   {
-    q: "Can the cold room size be customised?",
-    a: "Absolutely. Every dimension, layout, panel thickness, and refrigeration capacity can be fully customised to your storage volume and temperature requirements.",
+    q: "Can the cold room size be customized?",
+    a: "Yes, the dimensions, layout, insulation, and refrigeration capacity can be fully customized to your storage requirements.",
   },
   {
     q: "How long does installation take?",
-    a: "Typically 2–5 weeks from design approval depending on room size, site conditions, and complexity of the refrigeration system.",
+    a: "Most cold room installations are completed within a few weeks, depending on the project size and site conditions.",
   },
 ];
-
-
-
 
 
 const ColdRoom = () => {

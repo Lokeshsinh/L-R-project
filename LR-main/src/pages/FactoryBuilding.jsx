@@ -36,19 +36,19 @@ const FactoryBuilding = () => {
     },
     {
       q: "Can factory buildings be customized?",
-      a: "Yes, layouts, dimensions, crane systems, insulation, and utilities can be fully customized to meet your specific production and operational needs.",
+      a: "Yes, our factory buildings can be fully customized with flexible layouts, dimensions, insulation, crane systems, and utilities to meet your specific operational requirements.",
     },
     {
       q: "Are prefab factory buildings durable?",
-      a: "Yes. Built with high-grade steel and engineered to IS/BIS standards, they are designed for long-term structural performance in demanding industrial environments.",
+      a: "Yes, they are built with high-quality steel and engineered for long-lasting strength, stability, and reliable industrial performance.",
     },
     {
       q: "How long does it take to construct a factory building?",
-      a: "Typically 4–10 weeks from design approval to handover, depending on the size and complexity of the project.",
+      a: "Most factory buildings are completed within a few weeks, depending on the project size, design, and site requirements.",
     },
     {
       q: "Can the building be expanded in the future?",
-      a: "Yes. Our modular design approach allows for easy horizontal or vertical expansion as your production needs grow.",
+      a: "Yes, our modular factory buildings can be easily expanded or modified as your business and production requirements grow.",
     },
   ];
 

@@ -96,27 +96,28 @@ const deliveryFeatures = [
   },
 ];
 
+
 const faqs = [
   {
-    q: "What are Pre-Engineered Buildings (PEB)?",
-    a: "Pre-Engineered Buildings (PEB) are steel structures designed and fabricated at the factory, then shipped and assembled on-site. They offer superior speed, durability, and cost-effectiveness compared to traditional construction.",
+    q: "What industries can MS modular containers be used in?",
+    a: "MS modular containers are widely used in construction, oil & gas, power, mining, railways, infrastructure, renewable energy, and industrial projects."
   },
   {
-    q: "What are Pre-Engineered Buildings (PEB)?",
-    a: "Light Gauge Steel Framing is a sustainable, earthquake-resistant construction method for modern infra, utilizing cold-formed steel profiles to build lightweight yet incredibly strong structures.",
+    q: "What is a skid-mounted container system?",
+    a: "A skid-mounted container system is designed for easy transportation, relocation, and quick installation without requiring a permanent foundation."
   },
   {
-    q: "What container sizes are available?",
-    a: "We provide containers in standard 20ft and 40ft sizes, as well as customized dimensions designed and manufactured to meet specific site office, storage, or accommodation requirements.",
+    q: "How fast can MS container projects be delivered?",
+    a: "Most MS container projects are completed within a few weeks, depending on the design, size, and project requirements."
   },
   {
-    q: "Do you provide installation in New Delhi?",
-    a: "Yes, we provide end-to-end installation, shipping, and fabrication support throughout New Delhi, the NCR region, and across major industrial zones in India.",
+    q: "Are MS containers suitable for harsh environments?",
+    a: "Yes, they are built with high-quality steel and protective coatings to withstand extreme weather, corrosion, and demanding industrial conditions."
   },
   {
-    q: "Does L&R Green India provide solutions for solar projects?",
-    a: "Yes, we design and manufacture high-performance solar mounting structures, fasteners, and specialized components for residential, commercial, and utility-scale solar installations.",
-  },
+    q: "Can MS containers be customized for different uses?",
+    a: "Yes, MS containers can be fully customized with interiors, insulation, electrical systems, plumbing, HVAC, and layouts to suit specific applications."
+  }
 ];
 
 const MsContainer = () => {
@@ -506,7 +507,13 @@ const MsContainer = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           ms containers tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

@@ -324,7 +324,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .secTitle h2 {
@@ -907,7 +907,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .epsHeading h2 {
@@ -2053,7 +2053,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 
@@ -3163,7 +3163,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: start;
 }
 
@@ -3346,7 +3346,7 @@
 
   .faqImg {
     width: 46%;
-    height: 470px;
+    height: 480px;
   }
 
   .container {

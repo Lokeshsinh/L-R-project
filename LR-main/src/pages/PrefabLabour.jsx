@@ -297,7 +297,13 @@ const PrefabLabour = () => {
               reused across multiple project sites. They help improve workforce management, reduce setup time,
               and support smooth project execution.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -324,8 +330,9 @@ const PrefabLabour = () => {
             <div className={styles.featuresDivider} />
           </div>
           <p>
-            Every L&R Labour Camp is engineered with structural strength, rapid
-            deployment, and worker comfort as core priorities.
+            Every unit combines structural engineering with on-site practicality
+            for fast install, long service life and easy relocation.
+
           </p>
         </div>
 
@@ -586,7 +593,8 @@ const PrefabLabour = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+          <p>Quick answers covering design, usage, durability, customization, and
+            advantages of Prefab Labour Accommodation and commercial applications.</p>
         </div>
         <div className={styles.faqBody}>
 
@@ -644,7 +652,13 @@ const PrefabLabour = () => {
           to your project — safe, cost-efficient and aligned with modern construction standards.
 
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

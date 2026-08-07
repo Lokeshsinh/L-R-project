@@ -201,30 +201,29 @@ const PremiumMsContainer = () => {
     {
       id: 0,
       q: "What are Premium Containers used for?",
-      a: "They are premium modular solutions designed for corporate site offices, high-end staff housing, dining halls, gyms, and specialized technical control rooms across industrial and commercial projects.",
+      a: "Premium Containers are ideal for site offices, staff accommodation, dining halls, control rooms, and other industrial and commercial applications.",
     },
     {
       id: 1,
       q: "Are Premium Containers durable?",
-      a: "Yes, they are built with strong MS-steel and designed to handle harsh industrial and weather conditions. Industrial-grade coatings ensure long-lasting performance.",
+      a: "Yes, they are built with high-quality MS steel to provide exceptional strength, durability, and long-term performance in harsh environments.",
     },
     {
       id: 2,
       q: "Can Premium Containers be customized?",
-      a: "Absolutely. Interior layouts, electrical points, HVAC systems, flooring, and partition designs can all be tailored to your specific project requirements.",
+      a: "Yes, layouts, interiors, electrical systems, insulation, HVAC, and finishes can be fully customized to meet your project requirements.",
     },
     {
       id: 3,
-      q: "How fast can Premium Containers be installed?",
-      a: "Most units can be delivered and installed within 7–15 working days depending on size, customization level, and site location.",
+      q: "How long does installation take?",
+      a: "Most Premium Containers are delivered and installed within a few weeks, depending on the project size and customization.",
     },
     {
       id: 4,
-      q: "Are Premium Containers movable?",
-      a: "Yes. Our containers are designed for easy relocation using standard cranes or flatbed trucks, making them ideal for projects that require phased deployment.",
+      q: "Can Premium Containers be relocated?",
+      a: "Yes, they are designed for easy transportation and relocation, making them suitable for temporary and long-term project sites.",
     },
   ];
-
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -497,7 +496,7 @@ const PremiumMsContainer = () => {
           </div>
           <p>
             Quick answers covering design, usage, durability, customization, and advantages
-             of Premium MS Containers for industrial and commercial applications.
+            of Premium MS Containers for industrial and commercial applications.
           </p>
         </div>
 

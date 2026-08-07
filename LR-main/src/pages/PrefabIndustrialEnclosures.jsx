@@ -34,27 +34,27 @@ const PrefabIndustrialEnclosures = () => {
     {
       id: 0,
       q: "Are prefab enclosures suitable for harsh environments?",
-      a: "Yes, our enclosures are built with high-grade insulated panels and robust frames designed to withstand extreme industrial environments, dust, weather, and heavy wear.",
+      a: "Yes, our prefab enclosures use insulated panels and durable steel structures to withstand harsh weather, moisture, corrosion, and demanding industrial environments."
     },
     {
       id: 1,
       q: "Can enclosures be relocated?",
-      a: "Yes, modular design allows easy relocation and future expansion with minimal effort.",
+      a: "Yes, their modular design allows easy dismantling, transportation, and reinstallation, making them ideal for temporary or changing project locations.",
     },
     {
       id: 2,
       q: "Do they provide sound insulation?",
-      a: "Absolutely. We use specialized acoustic panels (like Rockwool or Glasswool) to significantly reduce noise levels from heavy machinery and compressors.",
+      a: "Yes, insulated wall and roof panels help reduce external noise, creating a quieter and more comfortable working environment.",
     },
     {
       id: 3,
       q: "What materials are used?",
-      a: "Our enclosures are constructed using premium insulated panels including PUF, Rockwool, and Glasswool, combined with heavy-duty structural steel frames.",
+      a: "Our prefab enclosures are manufactured using galvanized steel frames, insulated PUF/EPS panels, premium roofing sheets, and high-quality doors, windows, and flooring materials.",
     },
     {
       id: 4,
       q: "How long does installation take?",
-      a: "Modular construction allows for rapid on-site assembly, typically completed within a few days to minimize any operational downtime for your facility.",
+      a: "Most prefab enclosures can be installed within a few days, depending on the project size, design, and site conditions, ensuring minimal disruption.",
     },
   ];
 
@@ -154,7 +154,13 @@ const PrefabIndustrialEnclosures = () => {
               they offer long-lasting strength, minimal maintenance, and flexibility for various applications
               across multiple industries.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -324,8 +330,8 @@ const PrefabIndustrialEnclosures = () => {
             <div className={styles.divider} ></div>
           </div>
           <p className={styles.whyDesc}>
-            Get quick answers to common queries about L&R Green Pvt Ltd prefab
-            industrial enclosures, including durability, installation, materials, and applications.
+            L&R Green Pvt Ltd offers reliable, customized enclosure solutions with strong
+            engineering support, ensuring fast installation and easy scalability.
           </p>
         </div>
         <div className={styles.enclosureGrid}>
@@ -361,8 +367,8 @@ const PrefabIndustrialEnclosures = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Prefabricated rooftop servant rooms are compact, safe living units built on existing
-            buildings for domestic staff. Below are common FAQs about their features and benefits.</p>
+          <p>Get quick answers to common queries about L&R Green Pvt Ltd prefab industrial enclosures,
+            including durability, installation, materials, and applications.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -414,7 +420,13 @@ const PrefabIndustrialEnclosures = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive Industrial Enclosures tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

@@ -189,7 +189,13 @@ const PrefabMushroom = () => {
               consumption, and superior crop quality, making prefab mushroom farms a cost-effective and efficient solution for
               modern agriculture.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -343,9 +349,9 @@ const PrefabMushroom = () => {
 
 
       {/* ── Advantages ── */}
- 
 
-     <section className={styles.advSec}>
+
+      <section className={styles.advSec}>
         <div className={styles.secTitle}>
           <h2>
             Advantages of Prefab<br />
@@ -502,7 +508,13 @@ const PrefabMushroom = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive prefab Mashroom tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

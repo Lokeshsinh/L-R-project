@@ -197,27 +197,27 @@ const LRValueContainer = () => {
     {
       id: 0,
       q: "What are L&R Value Granted MS Containers used for?",
-      a: "They are used for staff offices, worker accommodation, guard cabins, dining spaces, storage units, pump farms, coffee shops, play areas, and various site utility applications.",
+      a: "L&R Value Granted MS Containers are ideal for site offices, staff accommodation, guard cabins, dining halls, storage units, coffee shops, play areas, and utility spaces.",
     },
     {
       id: 1,
-      q: "What sizes are available in L&R MS Containers?",
-      a: "They are available in multiple sizes such as 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft.",
+      q: "What sizes are available for L&R MS Containers?",
+      a: "Our MS Containers are available in standard sizes including 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft, with custom sizes also available.",
     },
     {
       id: 2,
-      q: "Are these containers suitable for harsh environments?",
-      a: "Yes. L&R MS Containers are built with high-grade steel and protective coatings, making them durable and reliable even in extreme weather and demanding site conditions.",
+      q: "Are L&R MS Containers suitable for harsh environments?",
+      a: "Yes, they are built with high-quality MS steel and protective coatings for exceptional durability in demanding industrial and outdoor conditions.",
     },
     {
       id: 3,
       q: "Can L&R MS Containers be relocated?",
-      a: "Absolutely. These containers are designed for easy relocation using standard lifting equipment or flatbed trucks, making them ideal for phased or temporary deployments.",
+      a: "Yes, they are designed for easy transportation and relocation using cranes or flatbed trucks, making them ideal for temporary and long-term projects.",
     },
     {
       id: 4,
-      q: "Do these containers support custom layouts?",
-      a: "Yes. Interior partitions, electrical fittings, HVAC, flooring, and finishes can all be customized to meet your specific project or operational requirements.",
+      q: "Can L&R MS Containers be customized?",
+      a: "Yes, layouts, insulation, electrical systems, HVAC, flooring, partitions, and interior finishes can be fully customized to meet your project requirements.",
     },
   ];
 

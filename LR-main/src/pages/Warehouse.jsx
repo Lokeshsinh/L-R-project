@@ -24,13 +24,27 @@ import design1 from '../assets/Pre-Build/warehouse/design1.png'
 
 
 const faqs = [
-  { q: "What are pre-engineered warehouses?", a: "Pre-engineered warehouses are factory-fabricated steel structures designed for rapid on-site assembly, offering significant cost and time savings over conventional construction." },
-  { q: "Can warehouse size and layout be customized?", a: "Yes, every dimension, layout, height, span, and feature including mezzanines, loading docks, and ventilation can be fully customized to your operational needs." },
-  { q: "Are prefab warehouses durable in harsh conditions?", a: "Yes. Built with high-grade steel and engineered to IS standards, our warehouses withstand wind, seismic, and heavy load conditions reliably." },
-  { q: "How long does warehouse construction take?", a: "Typically 4–8 weeks from design approval depending on scale, site conditions, and complexity of the structure." },
-  { q: "Can the warehouse be expanded later?", a: "Absolutely. Our modular pre-engineered systems are designed for easy future expansion both horizontally and vertically." },
+  {
+    q: "What are pre-engineered warehouses?",
+    a: "Pre-engineered warehouses are steel structures designed for fast construction, superior durability, and cost-effective storage solutions.",
+  },
+  {
+    q: "Can warehouse size and layout be customized?",
+    a: "Yes, warehouse dimensions, layouts, height, loading docks, mezzanines, ventilation, and other features can be fully customized to your requirements.",
+  },
+  {
+    q: "Are prefab warehouses durable in harsh conditions?",
+    a: "Yes, they are built with high-quality steel to withstand harsh weather, heavy loads, and demanding industrial environments.",
+  },
+  {
+    q: "How long does warehouse construction take?",
+    a: "Most warehouse projects are completed within a few weeks, depending on the design, size, and site conditions.",
+  },
+  {
+    q: "Can the warehouse be expanded later?",
+    a: "Yes, our modular warehouse systems can be easily expanded or modified as your storage and business needs grow.",
+  },
 ];
-
 const Warehouse = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const navigate = useNavigate()

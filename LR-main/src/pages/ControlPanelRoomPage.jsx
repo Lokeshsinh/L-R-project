@@ -11,8 +11,8 @@ import {
 import { useNavigate } from 'react-router-dom'
 import control1 from '../assets/PREFAB/controllRoom/control1.png'
 import control2 from '../assets/PREFAB/controllRoom/control2.png'
-import control3 from '../assets/PREFAB/controllRoom/control3.png'
 import control4 from '../assets/PREFAB/controllRoom/control4.png'
+import control5 from '../assets/Gallary/Control/control1.jpg'
 import design from '../assets/PREFAB/controllRoom/design.png'
 import design1 from '../assets/PREFAB/controllRoom/design1.png'
 // ─── DATA ────────────────────────────────────────────────────────────────────
@@ -134,7 +134,13 @@ const ControlPanelRoomPage = () => {
             electrical systems.
 
           </p>
-          <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
+          <button onClick={() => {
+            navigate("/contact");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }} className={styles.btnWhite}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>
@@ -164,7 +170,13 @@ const ControlPanelRoomPage = () => {
               and temperature changes. With quick installation, easy maintenance, and flexible design, they provide
               a durable and efficient solution for modern projects.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -230,8 +242,8 @@ const ControlPanelRoomPage = () => {
       <section className={styles.epsSection}>
         <div className={styles.epsHeading}>
           <h2>
-            Applications of<br />
-            <span>Rockwool Panels</span>
+            Control Panel Room <br />
+            <span>Key Features</span>
           </h2>
           <div className={styles.headingDivider}></div>
         </div>
@@ -240,7 +252,7 @@ const ControlPanelRoomPage = () => {
           <div className={styles.prefabCard}>
             <div className={styles.prefabWrapper}>
               <img
-                src={control3}
+                src={control4}
                 alt="Prefab Building"
                 className={styles.prefabImage}
               />
@@ -311,11 +323,11 @@ const ControlPanelRoomPage = () => {
       <section className={styles.SolarEpic}>
         <div className={styles.BenfitControlFlex}>
           <div className={styles.solarEpicTitle}>
-            <h2>Why Choose Solar <br /><span>EPC Services</span></h2>
+            <h2>Benefits of <br /><span>Control Panel</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Built with advanced engineering elements to deliver high safety, optimized performance,
-            and dependable protection for critical electrical systems in demanding environments.</p>
+          <p>Built with advanced engineering elements to deliver high safety, optimized performance, and
+            dependable protection for critical electrical systems in demanding environments.</p>
         </div>
         <div className={styles.SolarEpicFLex}>
 
@@ -338,7 +350,7 @@ const ControlPanelRoomPage = () => {
           <div className={styles.applicationsCard}>
             <div className={styles.applicationsFrame}>
               <img
-                src={control4}
+                src={control5}
                 alt="Prefab Building"
                 className={styles.applicationsMedia}
               />
@@ -363,7 +375,7 @@ const ControlPanelRoomPage = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+          <p>Description: Quick answers to common questions about modular control panel room solutions.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>
@@ -414,7 +426,13 @@ const ControlPanelRoomPage = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive Control Panel Room tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

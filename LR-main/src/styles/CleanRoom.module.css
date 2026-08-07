@@ -824,7 +824,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .solarEpicTitle h2 {
@@ -1595,7 +1595,7 @@ mobility
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .headerGroup h2 {
@@ -2461,7 +2461,7 @@ mobility
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: start;
 }
 

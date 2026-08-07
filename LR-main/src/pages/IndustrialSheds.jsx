@@ -25,23 +25,23 @@ import design1 from '../assets/Pre-Build/industrylSheld/design1.png'
 const faqs = [
   {
     q: "What are industrial sheds used for?",
-    a: "Industrial sheds are used for manufacturing units, warehouses, workshops, and large-scale storage facilities.",
+    a: "Industrial sheds are ideal for manufacturing units, warehouses, workshops, production facilities, and large-scale storage.",
   },
   {
-    q: "Are industrial sheds customizable?",
-    a: "Yes, they can be designed based on size, load requirements, insulation, and specific operational needs.",
+    q: "Can industrial sheds be customized?",
+    a: "Yes, industrial sheds can be fully customized based on size, layout, insulation, load capacity, and operational requirements.",
   },
   {
-    q: "How durable are prefab industrial sheds?",
-    a: "Our sheds are engineered with high-grade steel to withstand extreme weather and long-term industrial wear.",
+    q: "Are prefab industrial sheds durable?",
+    a: "Yes, they are built with high-quality steel to provide exceptional strength, durability, and long-term performance in harsh environments.",
   },
   {
     q: "How long does installation take?",
-    a: "Depending on complexity, installation can take anywhere from a few weeks to a couple of months.",
+    a: "Most industrial sheds are installed within a few weeks, depending on the project size, design, and site conditions.",
   },
   {
     q: "Can the shed be expanded in the future?",
-    a: "Yes, our PEB designs allow for easy expansion in length or adding mezzanine floors later.",
+    a: "Yes, our modular industrial sheds can be easily expanded or modified as your business and production needs grow.",
   },
 ];
 

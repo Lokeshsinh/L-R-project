@@ -112,7 +112,7 @@ const PrefabSiteOffice = () => {
           <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             Smart Prefabricated Site <br />
-            <span>Office 
+            <span>Office
             </span>
           </h1>
           <p className={styles.heroDesc}>
@@ -156,7 +156,13 @@ const PrefabSiteOffice = () => {
               and are widely used across infrastructure and industrial projects where flexibility, speed, and
               organized workspace solutions are essential.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -281,7 +287,7 @@ const PrefabSiteOffice = () => {
       <section className={styles.mfgBand}>
         <div className={styles.scrollWrap}>
           <div className={styles.scrollTrack}>
-            
+
           </div>
         </div>
 
@@ -322,8 +328,8 @@ const PrefabSiteOffice = () => {
             <div className={styles.applicationsDivider} />
           </div>
           <p>
-            Our prefabricated cabins serve a wide range of industries and sectors —
-            delivering real value wherever a professional workspace is needed on the ground.
+            The Prefab Site Office Process ensures efficient workspace delivery through
+            smart design, precision panel manufacturing, quality assembly, and quick on-site installation.
           </p>
         </div>
         <div className={styles.featureGrid}>
@@ -477,7 +483,8 @@ const PrefabSiteOffice = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
+          <p>Prefab site office cabins are modern modular workspace solutions designed for quick installation,
+            flexibility, and efficient on-site project management across industries.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -533,7 +540,13 @@ const PrefabSiteOffice = () => {
           Connect with our team to design and deliver durable, efficient, and fully
           customized Prefab Site office solutions tailored to your site needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

@@ -195,25 +195,24 @@ const ExecutiveMsContainer = () => {
   const faqs = [
     {
       q: "What is an Executive MS Container?",
-      a: "An Executive MS Container is a premium modular structure made from mild steel, designed to serve as offices, accommodation, storage, or any functional space on construction and industrial sites.",
+      a: "An Executive MS Container is a premium modular steel structure designed for offices, accommodation, storage, and other industrial applications.",
     },
     {
       q: "What are Executive MS Containers used for?",
-      a: "They are used for staff offices, worker accommodation, guard cabins, dining spaces, storage units, washrooms, and site utility rooms.",
+      a: "They are ideal for site offices, staff accommodation, guard cabins, dining areas, storage units, washrooms, and utility rooms.",
     },
     {
       q: "Are Executive MS Containers durable?",
-      a: "Yes, Executive MS Containers are built with high-grade mild steel and industrial coatings to withstand harsh weather, heavy use, and demanding site conditions for years.",
+      a: "Yes, they are built with high-quality MS steel to provide exceptional strength, durability, and long-term performance in harsh environments.",
     },
     {
       q: "Can Executive MS Containers be customized?",
-      a: "Absolutely. Layouts, partitions, electrical fittings, HVAC, insulation, and finishes can all be tailored to match your project's specific requirements.",
+      a: "Yes, layouts, interiors, insulation, electrical systems, HVAC, and finishes can be fully customized to meet your project requirements.",
     },
     {
       q: "Where are Executive MS Containers commonly used?",
-      a: "They are widely used on construction sites, industrial plants, mining operations, remote project locations, and anywhere a durable, rapidly deployable modular space is needed.",
+      a: "They are widely used in construction, infrastructure, oil & gas, mining, power, railway, and industrial projects across various sectors.",
     },
-
   ];
 
   return (
@@ -503,8 +502,8 @@ const ExecutiveMsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-           Common questions and answers about Executive MS Containers, covering 
-           their usage, features, and benefits for better understanding.
+            Common questions and answers about Executive MS Containers, covering
+            their usage, features, and benefits for better understanding.
           </p>
         </div>
 

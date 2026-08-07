@@ -154,7 +154,13 @@ const CleanRoomPage = () => {
               we ensure that every clean room meets industry regulations while providing a safe, controlled,
               and productive working environment.
             </p>
-            <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+            <button className={styles.btnOutline} onClick={() => {
+              navigate("/contact");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}>
               <span>Get Contact</span>
 
               <span className={styles.iconWrap}>
@@ -339,7 +345,7 @@ const CleanRoomPage = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Get answers to common questions about L&R industrial sheds, including design, durability, and installation.</p>
+          <p>Essential answers to common questions about clean room design, functionality, and benefits.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}
@@ -394,7 +400,13 @@ const CleanRoomPage = () => {
           Connect with our team to design and deliver durable, efficient, and fully customized
           Executive Clean Room tailored to your storage needs.
         </p>
-        <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
+        <button className={styles.contactBtn} onClick={() => {
+          navigate("/contact");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}>
           <span className={styles.contactText}>Contact Us</span>
 
           <span className={styles.iconBox}>

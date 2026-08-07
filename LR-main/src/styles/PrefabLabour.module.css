@@ -2400,7 +2400,7 @@
   align-items: start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 
@@ -3391,7 +3391,7 @@
 
   .faqImg {
     width: 46%;
-    height: 505px;
+    height: 503px;
   }
 
   .container {

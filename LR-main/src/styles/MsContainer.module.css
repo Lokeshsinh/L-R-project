@@ -2978,6 +2978,7 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  border-radius: 10px;
 }
 
 .faqItem:hover {
@@ -3052,7 +3053,7 @@
 
 .faqImg {
   width: 640px;
-  height: 502px;
+  height:480px;
   overflow: hidden;
   position: relative;
   border-radius: 12px;
