@@ -15,13 +15,13 @@ function HeroBanner() {
 
   const totalSlides = 4;
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCurrent((prev) => (prev + 1) % totalSlides);
-  //   }, 5000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % totalSlides);
+    }, 5000);
 
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   // Next Slide
   const nextSlide = () => {
