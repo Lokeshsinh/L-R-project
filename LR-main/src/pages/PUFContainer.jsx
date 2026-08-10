@@ -225,7 +225,7 @@ const PUFContainer = () => {
             PUF Container <br />
             <span>Solutions</span>
           </h1>
-          <p className={styles.heroDesc}>Insulated PUF Containers by LRR Green PVT LTD offering energy-efficient, durable, and
+          <p className={styles.heroDesc}>Insulated PUF Containers by LRR Prefab Solar India PVT LTD offering energy-efficient, durable, and
             flexible modular solutions for offices, accommodation, and industrial site applications.</p>
           <button className={styles.btnWhite} onClick={() => {
             navigate("/contact");
@@ -306,7 +306,7 @@ const PUFContainer = () => {
               <div className={styles.secHeadLine}></div>
             </div>
             <p className={styles.sizesDesc}>
-              Every L&R Value Container is offered in multiple core sizes, with
+              Every Puf Container is offered in multiple core sizes, with
               flexible interior layouts ranging from offices and accommodation to
               dining, sanitary, and storage spaces.
             </p>
@@ -379,7 +379,7 @@ const PUFContainer = () => {
 
           <div className={styles.whyContent}>
             <p>
-              L&R PUF MS Containers are engineered with advanced insulated panel technology combined with
+              L&R Prefab Solar India Pvt Ldt  PUF MS Containers are engineered with advanced insulated panel technology combined with
               strong MS steel structure, ensuring excellent thermal efficiency, durability, and long service life.
               These containers are specially designed to maintain comfortable internal conditions in extreme hot and
               cold environments, making them highly reliable for industrial,

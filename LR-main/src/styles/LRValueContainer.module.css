@@ -115,21 +115,32 @@
 }
 
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
+
 
 @media (max-width:1200px) {
 
@@ -340,7 +351,7 @@
   top: 15px;
 
   width: 640px;
-  height: 580px;
+  height: 620px;
 
   overflow: hidden;
   border-radius: 12px;
@@ -619,7 +630,7 @@
 }
 
 .introContent p {
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -682,7 +693,7 @@
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .intro {
     padding: 70px 50px;
@@ -690,12 +701,12 @@
 
   .frameWrap {
     width: 450px;
-    height: 480px;
+    height: 540px;
   }
 
   .photoFrame {
     width: 520px;
-    height: 585px;
+    height: 650px;
   }
 
   .introContent {
@@ -1093,7 +1104,7 @@
   background: #0d2244;
 }
 
-.secHeadTextt span {
+.secHeadText span {
   color: #293F67;
 }
 
@@ -1264,30 +1275,34 @@
   transform: translateY(-3px);
 }
 
-@media (max-width:1400px) {
+
+@media(max-width:1440px) {
 
   .sizesSec {
-    padding: 70px 40px;
+    padding: 70px 45px;
+  }
+
+  .sizesSec p {
+    font-size: 14px;
   }
 
   .secHeadText h2 {
     font-size: 48px;
   }
 
-  .secHeaderCenter p {
-    max-width: 430px;
-  }
-
   .card {
     min-height: 560px;
   }
 
-  .card h2 {
-    font-size: 22px;
+  .sizesInner p {
+    font-size: 15px;
   }
 
   .card li {
     font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+    transition: .35s;
   }
 
 }
@@ -1614,7 +1629,7 @@
 }
 
 .whyContent p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   margin-bottom: 10px;
 }
@@ -1695,7 +1710,7 @@
   transition: .35s ease;
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .whySec {
     padding: 70px 40px;
@@ -2022,7 +2037,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -2075,24 +2090,14 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
-  .scrollTrack h1 {
-    font-size: 75px;
-  }
 
   .mfgText h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
-
-  .mfgText p {
-    max-width: 650px;
-    font-size: 16px;
-  }
-
 
   .mfgImgWrapper {
-    bottom: 30px;
     width: 40%;
     height: 320px;
   }
@@ -2100,6 +2105,25 @@
   .LastImage img {
     width: 260px;
     height: 210px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 600px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -5%;
+    bottom: 30%;
   }
 
 }
@@ -2401,6 +2425,7 @@
   color: #fff;
   font-size: 20px;
   font-weight: 500;
+  line-height: 1.3;
   margin: 0;
 }
 
@@ -2426,30 +2451,45 @@
 }
 
 
-
-
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .productsSec {
-    padding: 70px 40px;
+    padding: 70px 45px;
   }
 
-  .ProductFlex h2 {
+  .productText h2 {
     font-size: 48px;
   }
 
   .expertiseGrid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 20px;
   }
+
+  .productsSubtext {
+    font-size: 14px;
+  }
+
 
   .expCard {
-    height: 380px;
+    height: 360px;
   }
 
+  .expCard:hover .expLabel {
+    height: 243px;
+  }
+
+  .expLabel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(41, 63, 103, .92);
+  padding: 20px;
+  height: 82px;
+  transition: height .45s ease;
+  box-sizing: border-box;
 }
-
-
+}
 
 @media (max-width:1200px) {
 
@@ -2928,29 +2968,75 @@
 
 }
 
-@media (max-width:1400px) {
+
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 490px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px !important;
+    min-width: 520px !important;
+    max-width: 520px !important;
+
+    height: 450px !important;
+    min-height: 450px !important;
+    max-height: 450px !important;
+
+    flex: 0 0 520px !important;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -3276,6 +3362,43 @@
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+
+@media (max-width: 1440px) {
+
+  .cta {
+    padding: 55px 50px;
+    gap: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
 }
 
 @media (max-width:1200px) {

@@ -116,19 +116,29 @@
 }
 
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -390,7 +400,7 @@
 }
 
 .introContent p {
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -461,7 +471,7 @@
   }
 
   .introText h2 {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
   .introContent {
@@ -955,18 +965,33 @@
 }
 
 
-@media (max-width:1440px) {
+@media(max-width:1440px) {
 
   .sizesSec {
-    padding: 65px 5%;
+    padding: 70px 45px;
   }
 
-  .sizesLeft h2 {
-    font-size: 3rem;
+  .sizesSec p {
+    font-size: 14px;
+  }
+
+  .secHeadText h2 {
+    font-size: 48px;
   }
 
   .card {
     min-height: 560px;
+  }
+
+  .sizesInner p {
+    font-size: 15px;
+  }
+
+  .card li {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+    transition: .35s;
   }
 
 }
@@ -1341,7 +1366,7 @@
 }
 
 .whyContent p {
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -1350,7 +1375,7 @@
 
 .whyImgWrapper {
   width: 650px;
-  height: 300px;
+  height: 350px;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -1702,7 +1727,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -1755,6 +1780,45 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
+
+@media (max-width:1440px) {
+
+
+  .mfgText h2 {
+    font-size: 48px;
+  }
+
+  .mfgImgWrapper {
+    width: 40%;
+    height: 355px;
+    bottom: 33px;
+  }
+
+  .LastImage img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 600px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -5%;
+    bottom: 30%;
+  }
+
+}
 
 
 @media (max-width:1200px) {
@@ -2075,16 +2139,49 @@
 }
 
 
+
 @media (max-width:1440px) {
 
   .productsSec {
-    padding: 65px 5%;
+    padding: 70px 45px;
   }
 
   .productText h2 {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
+  .expertiseGrid {
+    gap: 20px;
+  }
+
+  .productsSubtext {
+    font-size: 14px;
+  }
+
+  .expLabel h4 {
+    font-size: 18px;
+  }
+
+
+  .expCard {
+    height: 360px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 243px;
+  }
+
+  .expLabel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(41, 63, 103, .92);
+    padding: 20px;
+    height: 82px;
+    transition: height .45s ease;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width:1200px) {
@@ -2547,29 +2644,64 @@
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 490px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 460px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -2894,6 +3026,42 @@
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+@media (max-width: 1440px) {
+
+  .cta {
+    padding: 55px 50px;
+    gap: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
 }
 
 @media (max-width:1200px) {

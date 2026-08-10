@@ -148,7 +148,7 @@ function HomeContainer() {
                 {/* ── Hero ── */}
                 <section className={styles.hero}>
                     <div className={styles.heroContent}>
-                        <span className={styles.topLabel}>L&R Green PVT LDT</span>
+                        <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
                         <h1 className={styles.mainTitle}>
                             Home  MS <br />
                             <span>Conatiners</span>
@@ -186,7 +186,7 @@ function HomeContainer() {
                         </div>
                         <div className={styles.introContent}>
                             <p>
-                                L&R Green Private Limited is a trusted manufacturer of Modular MS
+                                L&R Prefab Solar Pvt Ldt is a trusted manufacturer of Modular MS
                                 Container Homes in India. We provide complete modular
                                 construction solutions including design, manufacturing, transportation,
                                 installation, construction, and maintenance services.
@@ -304,7 +304,7 @@ function HomeContainer() {
                             </h2>
 
                             <p>
-                                At L&R Green Private Limited, we manufacture high-quality Modular MS
+                                At L&R Prefab Solar Pvt Ldt, we manufacture high-quality Modular MS
                                 Container Homes using premium mild steel for strength, safety, durability,
                                 and long-lasting performance. Every container home undergoes strict quality checks
                                 to ensure reliable construction, quality finishing, and customer satisfaction
@@ -336,7 +336,7 @@ function HomeContainer() {
 
                     <div className={styles.HomeConatinerFlex}>
                         <div className={styles.HomeContainerPara}>
-                            <p>At L&R Green Private Limited, our Modular MS Container Homes are built with premium mild steel for
+                            <p>At L&R Prefab Solar Pvt Ldt, our Modular MS Container Homes are built with premium mild steel for
                                 durability, safety, and long-lasting performance. Designed with modern interiors, insulation, and weather-resistant
                                 construction, they provide comfortable and low-maintenance living solutions for all applications.</p>
                             <div className={styles.featureListWrap}>
@@ -395,7 +395,7 @@ function HomeContainer() {
                                 <span>Home MS Container</span></h1>
                             <div className={styles.WhyHomeLine}></div>
                         </div>
-                        <p>L&R Green Private Limited delivers durable Modular MS Container
+                        <p>L&R Prefab Solar Pvt Ldt delivers durable Modular MS Container
                             Homes with complete installation and maintenance support.</p>
                     </div>
 

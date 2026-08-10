@@ -222,7 +222,7 @@ const ExecutiveMsContainer = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Executive MS <br />
             <span>Containers
@@ -268,7 +268,7 @@ const ExecutiveMsContainer = () => {
               <div className={styles.introLine}></div>
             </div>
             <p>
-              L&R Green India Pvt Ltd&amp;R Containers are durable modular
+              L&R Prefab Solar India Pvt Ltd&amp;R Containers are durable modular
               structures made using mild steel (MS), designed to deliver strong,
               reliable, and ready-to-use spaces. They are built for quick
               installation, easy relocation, and long service life, making them
@@ -457,7 +457,7 @@ const ExecutiveMsContainer = () => {
         <div className={styles.productsInner}>
           <div className={styles.productsHeader}>
             <div className={styles.productText}>
-              <h2 className={styles.secTitle}>
+              <h2 >
                 Executive MS <br />
                 <span>Container Products</span>
               </h2>

@@ -114,22 +114,32 @@
   transform: translateX(8px);
 }
 
-
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
+
 
 @media (max-width:1200px) {
 
@@ -895,27 +905,35 @@
 }
 
 
-@media (max-width:1400px) {
+@media(max-width:1440px) {
 
-  .sizesLeft h2 {
+  .sizesSec {
+    padding: 70px 45px;
+  }
+
+  .sizesSec p {
+    font-size: 14px;
+  }
+
+  .secHeadText h2 {
     font-size: 48px;
   }
 
-  .sizesDesc {
-    max-width: 430px;
-  }
-
   .card {
-    min-height: 520px;
+    min-height: 560px;
   }
 
-  .card h2 {
-    font-size: 21px;
+  .sizesInner p {
+    font-size: 15px;
   }
 
   .card li {
     font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+    transition: .35s;
   }
+
 }
 
 
@@ -1193,7 +1211,7 @@
 }
 
 .whyContent p {
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -1202,7 +1220,7 @@
 
 .whyImgWrapper {
   width: 640px;
-  height: 355px;
+  height: 410px;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -1261,7 +1279,11 @@
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
+  .whySec {
+    padding: 70px 50px;
+  }
+
   .whyGrid {
     gap: 40px;
   }
@@ -1548,8 +1570,8 @@
 }
 
 .mfgText p {
-  font-size: 16px;
-  line-height: 1.3;
+  font-size: 17px;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -1604,33 +1626,42 @@
 
 
 
-@media (max-width:1400px) {
 
-  .scrollTrack h1 {
-    font-size: 60px;
-  }
+@media (max-width:1440px) {
+
 
   .mfgText h2 {
-    font-size: 50px;
-  }
-
-  .mfgText {
-    max-width: 640px
-  }
-
-  .mfgText p {
-    font-size: 16px;
+    font-size: 48px;
   }
 
   .mfgImgWrapper {
-    width: 45%;
-    height: 390px;
+    width: 40%;
+    height: 355px;
+    bottom: 33px;
   }
 
   .LastImage img {
-    bottom: 0;
-    width: 230px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 600px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -5%;
+    bottom: 30%;
   }
 
 }
@@ -1956,6 +1987,614 @@
   margin: 0;
 }
 
+
+@media (max-width:1440px) {
+
+  .productsSec {
+    padding: 70px 45px;
+  }
+
+  .productText h2 {
+    font-size: 48px;
+  }
+
+  .expertiseGrid {
+    gap: 20px;
+  }
+
+  .productsSubtext {
+    font-size: 14px;
+  }
+
+  .expLabel h4 {
+    font-size: 18px;
+  }
+
+
+  .expCard {
+    height: 360px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 243px;
+  }
+
+  .expLabel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(41, 63, 103, .92);
+    padding: 20px;
+    height: 82px;
+    transition: height .45s ease;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width:1200px) {
+
+  .productsSec {
+    padding: 65px 35px;
+  }
+
+  .productsHeader {
+    gap: 35px;
+    align-items: flex-start;
+  }
+
+  .ProductFlex h2 {
+    font-size: 42px;
+  }
+
+  .productsSubtext {
+    max-width: 400px;
+    font-size: 15px;
+  }
+
+  .expertiseGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .expCard {
+    height: 400px;
+  }
+
+}
+
+
+
+@media (max-width:992px) {
+
+  .productsSec {
+    padding: 60px 28px;
+  }
+
+  .productsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .ProductFlex h2 {
+    font-size: 38px;
+  }
+
+  .productsDivider {
+    width: 90px;
+  }
+
+  .productsSubtext {
+    max-width: 100%;
+    font-size: 15px;
+    margin-top: 0;
+  }
+
+  .expertiseGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .expCard {
+    height: 360px;
+  }
+
+  .expLabel {
+    height: 70px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 170px;
+  }
+
+}
+
+
+
+@media (max-width:768px) {
+
+  .productsSec {
+    padding: 55px 24px;
+  }
+
+  .productsHeader {
+    margin-bottom: 35px;
+  }
+
+  .ProductFlex h2 {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  .productsDivider {
+    width: 80px;
+  }
+
+  .productsSubtext {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .expertiseGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .expCard {
+    height: 420px;
+  }
+
+  .expImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .expLabel {
+    height: 72px;
+    padding: 18px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 170px;
+  }
+
+  .expLabel h4 {
+    font-size: 19px;
+  }
+
+  .desc p {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .productsSec {
+    padding: 50px 18px;
+  }
+
+  .productsHeader {
+    margin-bottom: 30px;
+  }
+
+  .ProductFlex h2 {
+    font-size: 29px;
+    line-height: 1.3;
+  }
+
+  .productsDivider {
+    width: 75px;
+  }
+
+  .productsSubtext {
+    font-size: 14px;
+  }
+
+  .expertiseGrid {
+    gap: 18px;
+  }
+
+  .expCard {
+    height: 340px;
+    border-radius: 8px;
+  }
+
+  .expImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .expLabel {
+    height: 68px;
+    padding: 16px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 160px;
+  }
+
+  .expLabel h4 {
+    font-size: 18px;
+  }
+
+  .desc {
+    margin-top: 14px;
+  }
+
+  .desc p {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+}
+
+
+
+@media (max-width:480px) {
+
+  .productsSec {
+    padding: 45px 15px;
+  }
+
+  .ProductFlex h2 {
+    font-size: 26px;
+  }
+
+  .productsDivider {
+    width: 65px;
+  }
+
+  .productsSubtext {
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+  .expertiseGrid {
+    gap: 16px;
+  }
+
+  .expCard {
+    height: 300px;
+  }
+
+  .expImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .expLabel {
+    height: 65px;
+    padding: 15px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 150px;
+  }
+
+  .expLabel h4 {
+    font-size: 17px;
+  }
+
+  .desc {
+    margin-top: 12px;
+  }
+
+  .desc p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+}
+
+@media (max-width: 1280px) {
+
+  .productsHeader {
+    gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  .productText h2 {
+    font-size: 43px;
+  }
+
+  .productsSubtext {
+    max-width: 390px;
+    font-size: 14px;
+  }
+
+  .productsDivider {
+    width: 95px;
+  }
+}
+
+
+/* ================================
+   1200px
+================================ */
+
+@media (max-width: 1200px) {
+
+  .productsHeader {
+    gap: 30px;
+  }
+
+  .productText h2 {
+    font-size: 40px;
+  }
+
+  .productsSubtext {
+    max-width: 360px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .productsDivider {
+    width: 90px;
+  }
+}
+
+
+/* ================================
+   1024px
+================================ */
+
+@media (max-width: 1024px) {
+
+  .productsHeader {
+    gap: 25px;
+    margin-bottom: 42px;
+  }
+
+  .productText h2 {
+    font-size: 37px;
+  }
+
+  .productsSubtext {
+    max-width: 330px;
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .productsDivider {
+    width: 85px;
+  }
+}
+
+
+/* ================================
+   992px
+================================ */
+
+@media (max-width: 992px) {
+
+  .productsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .productText {
+    width: 100%;
+  }
+
+  .productText h2 {
+    font-size: 38px;
+  }
+
+  .productsSubtext {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 0;
+  }
+
+  .productsDivider {
+    width: 90px;
+  }
+}
+
+
+/* ================================
+   768px
+================================ */
+
+@media (max-width: 768px) {
+
+  .productsHeader {
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .productText h2 {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .productsSubtext {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .productsDivider {
+    width: 80px;
+  }
+}
+
+
+/* ================================
+   600px
+================================ */
+
+@media (max-width: 600px) {
+
+  .productsHeader {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .productText h2 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .productsSubtext {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .productsDivider {
+    width: 75px;
+    height: 3px;
+  }
+}
+
+
+/* ================================
+   480px
+================================ */
+
+@media (max-width: 480px) {
+
+  .productsHeader {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .productText h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .productsSubtext {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .productsDivider {
+    width: 65px;
+  }
+}
+
+
+/* ================================
+   430px
+================================ */
+
+@media (max-width: 430px) {
+
+  .productsHeader {
+    gap: 13px;
+    margin-bottom: 25px;
+  }
+
+  .productText h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .productsSubtext {
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+
+  .productsDivider {
+    width: 60px;
+  }
+}
+
+
+/* ================================
+   390px
+================================ */
+
+@media (max-width: 390px) {
+
+  .productsHeader {
+    gap: 12px;
+    margin-bottom: 23px;
+  }
+
+  .productText h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .productsSubtext {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .productsDivider {
+    width: 55px;
+  }
+}
+
+
+/* ================================
+   360px
+================================ */
+
+@media (max-width: 360px) {
+
+  .productsHeader {
+    gap: 11px;
+    margin-bottom: 20px;
+  }
+
+  .productText h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .productsSubtext {
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+
+  .productsDivider {
+    width: 50px;
+  }
+}
+
+
+/* ================================
+   320px
+================================ */
+
+@media (max-width: 320px) {
+
+  .productsHeader {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .productText h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .productsSubtext {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .productsDivider {
+    width: 45px;
+    height: 2px;
+  }
+}
+
 /* ===========================
    FAQ
 =========================== */
@@ -2169,29 +2808,64 @@
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 485px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 460px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -2518,7 +3192,41 @@
 .btnBlue:hover {
   background: #2550a0;
 }
+@media (max-width: 1440px) {
 
+  .cta {
+    padding: 55px 50px;
+    gap: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
+}
 @media (max-width:1200px) {
 
   .cta {

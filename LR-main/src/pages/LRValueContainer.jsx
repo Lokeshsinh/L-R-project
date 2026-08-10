@@ -302,7 +302,7 @@ const faqs = [
             <div className={styles.secHeadText}>
               <h2 >
                 The Types of L&R  <br />
-                <span styles={{ color: "#293F67" }}>Value Granted Sizes</span>
+                <span>Value Granted Sizes</span>
               </h2>
               <div className={styles.secHeadLine}></div>
             </div>
@@ -437,7 +437,7 @@ const faqs = [
         <div className={styles.productsInner}>
           <div className={styles.productsHeader}>
             <div className={styles.ProductFlex}>
-              <h2 className={styles.secTitle}>
+              <h2>
                 L&R Value Granted MS <br />
                 <span>Containers Products</span>
               </h2>

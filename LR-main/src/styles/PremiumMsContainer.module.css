@@ -1438,10 +1438,14 @@
 }
 
 
-@media(max-width:1400px) {
+@media(max-width:1440px) {
 
   .sizesSec {
     padding: 70px 45px;
+  }
+
+  .sizesSec p{
+    font-size: 14px;
   }
 
   .secHeadText h2 {

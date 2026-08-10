@@ -260,7 +260,7 @@ const HingeMsContainer = () => {
               to harsh environmental conditions.
             </p>
             <p>
-              Manufactured by L&R Green Pvt Ltd, these containers are engineered for easy transportation,
+              Manufactured by L&R Prefab Solar India  Pvt Ltd, these containers are engineered for easy transportation,
               quick installation, and multiple usage options such as site offices, accommodation units,
               storage spaces, and utility cabins.
               Their robust construction and customizable design make them a reliable solution for modern
@@ -299,7 +299,7 @@ const HingeMsContainer = () => {
               <div className={styles.secHeadLine}></div>
             </div>
             <p className={styles.sizesDesc}>
-              Every Hinge MS Container from L&R Green Pvt Ltd is available in multiple core sizes, with flexible
+              Every Hinge MS Container from L&R Prefab Solar India  Pvt Ltd is available in multiple core sizes, with flexible
               interior layouts designed for offices, accommodation, dining, sanitary, and storage applications.
             </p>
           </div>
@@ -376,7 +376,7 @@ const HingeMsContainer = () => {
               and resistance to harsh environmental conditions.
             </p>
             <p>
-              At L&R Green Pvt Ltd, we focus on delivering fully customizable and ready-to-use
+              At L&R Prefab Solar India  Pvt Ltd, we focus on delivering fully customizable and ready-to-use
               container solutions that are easy to transport, install, and relocate. With flexible designs for offices, accommodation,
               storage, and utility spaces, our Hinge MS Containers provide a cost-effective and
               efficient solution for modern infrastructure needs.
@@ -399,7 +399,7 @@ const HingeMsContainer = () => {
             </h2>
 
             <p>
-              At L&R Green Pvt Ltd, we deliver high-quality Hinge MS Containers built with
+              At L&R Prefab Solar India  Pvt Ltd, we deliver high-quality Hinge MS Containers built with
               strong engineering standards, precision
               fabrication, and durable mild steel construction, ensuring reliable performance
               and long service life for every project.
@@ -426,7 +426,7 @@ const HingeMsContainer = () => {
         <div className={styles.productsInner}>
           <div className={styles.productsHeader}>
             <div className={styles.productText}>
-              <h2 className={styles.secTitle}>
+              <h2>
                 L&R Value Granted MS <br />
                 <span>Containers Products</span>
               </h2>
