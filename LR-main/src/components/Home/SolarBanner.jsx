@@ -17,7 +17,7 @@ const SolarBanner = ({
         <div className={styles.SolarBannerText}>
           <h1>High-Performance Solar
             <br />Fasteners and Component supplier</h1>
-          <p>L&R Green India Pvt Ltd manufactures high-quality solar fasteners and components for residential, commercial, and utility-scale projects, including roof-mounted and ground-mounted systems, using durable stainless steel and coated alloy steel for long-lasting performance and reliability.</p>
+          <p>L&R PREFAB SOLAR INDIA PVT LDT manufactures high-quality solar fasteners and components for residential, commercial, and utility-scale projects, including roof-mounted and ground-mounted systems, using durable stainless steel and coated alloy steel for long-lasting performance and reliability.</p>
 
           <div className={styles.bannerSloarBottom}>
             <img src={solar3} alt='error' />

@@ -47,7 +47,7 @@ const AboutPreview = () => {
         </p>
 
         <p>
-          L&R Green India Pvt Ltd, based in New Delhi, has been a trusted
+          L&R PREFAB SOLAR INDIA PVT LDT, based in New Delhi, has been a trusted
           manufacturer of prefabricated structures and mild steel containers
           since 2015. With strong expertise in design, engineering, and turnkey
           project execution, the company delivers high-quality site offices,
@@ -56,8 +56,8 @@ const AboutPreview = () => {
         </p>
 
         <p>
-          In addition to its core manufacturing capabilities, L&R Green India
-          Pvt Ltd is also engaged in solar fasteners manufacturing plant
+          In addition to its core manufacturing capabilities, L&R PREFAB SOLAR INDIA PVT LDT
+          is also engaged in solar fasteners manufacturing plant
           operations, contributing to durable and high-performance solar
           infrastructure. By integrating advanced engineering practices with
           precision fastening solutions, the company supports modern, reliable,

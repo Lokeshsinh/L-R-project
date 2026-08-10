@@ -51,7 +51,7 @@ const WhyPartner = () => {
         <span className={styles.tag}>• Why   <label style={{ color: "#293F67" }}>Choose us</label></span>
         <div className={styles.center}>
           <h2>
-            Why Partner with <span>L & R GREEN INDIA?</span>
+            Why Partner with <span> L&R PREFAB SOLAR INDIA</span>
           </h2>
           <p className={styles.subtitle}>
             Since its inception and till date – metalsquare has a 100% success

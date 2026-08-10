@@ -1,5 +1,5 @@
 import "../../styles/Footer.css";
-import logo1 from '../../assets/logos.png'
+import logo1 from '../../assets/Footer/logo.png'
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -9,6 +9,18 @@ import {
 import { useNavigate } from 'react-router-dom'
 const Footer = () => {
   const navigate = useNavigate()
+
+
+  const handleProductsClick = () => {
+    window.dispatchEvent(
+      new Event("open-products-menu")
+    );
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="footer">
       {/* Top Header Section */}
@@ -35,7 +47,7 @@ const Footer = () => {
             <img src={logo1} alt="logo" />
           </div>
           <p className="footer-desc">
-            L &amp; R Enterprises - Manufacturer of prefabricated structure, mild steel container &amp; prefabricated cabin since 2015 in New Delhi, Delhi.
+            L &amp; R PREFAB SOLAR INDIA - Manufacturer of prefabricated structure, mild steel container &amp; prefabricated cabin since 2015 in New Delhi, Delhi.
           </p>
           <div className="footer-social">
             <a href="#facebook" aria-label="Facebook">
@@ -73,7 +85,7 @@ const Footer = () => {
               behavior: "smooth",
             });
           }}>About Us</p>
-          <p>Our Products</p>
+          <p onClick={handleProductsClick}>Our Products</p>
           <p onClick={() => {
             navigate("/projects");
             window.scrollTo({
@@ -115,7 +127,7 @@ const Footer = () => {
         {/* Col 4: Contact Info */}
         <div className="footer-col contact-col">
           <h4>Contact Info</h4>
-          <p className="contact-text">L &amp; R Enterprises</p>
+          <p className="contact-text">L &amp; R PREFAB SOLAR INDIA</p>
           <p className="contact-text">+91 8595351363 ; 9758813668</p>
           <p className="contact-text">Info.Lr1995@gmail.Com</p>
           <p className="contact-text">07CLKPG8942A1Z5</p>

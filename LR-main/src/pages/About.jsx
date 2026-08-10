@@ -177,22 +177,55 @@ const About = () => {
     },
   ];
 
-  const sliderItems = [...chooseData, ...chooseData];
+  const sliderItems = chooseData;
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [pauseSlider, setPauseSlider] = useState(false);
   const [transition, setTransition] = useState(true);
 
+
+  const nextSlideBtn = () => {
+    setTransition(true);
+
+    setCurrentSlide((prev) => {
+      if (prev >= chooseData.length - 1) {
+        return 0;
+      }
+
+      return prev + 1;
+    });
+  };
+
+  const prevSlideBtn = () => {
+    setTransition(true);
+
+    setCurrentSlide((prev) => {
+      if (prev <= 0) {
+        return chooseData.length - 1;
+      }
+
+      return prev - 1;
+    });
+  };
+
   useEffect(() => {
     if (pauseSlider) return;
 
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => prev + 1);
+    const interval = setInterval(() => {
       setTransition(true);
-    }, 4000);
 
-    return () => clearInterval(timer);
-  }, [pauseSlider]);
+      setCurrentSlide((prev) => {
+        if (prev === chooseData.length - 1) {
+          return 0;
+        }
+
+        return prev + 1;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [pauseSlider, chooseData.length]);
+
 
   useEffect(() => {
     if (currentSlide === chooseData.length) {
@@ -240,6 +273,7 @@ const About = () => {
       title: "Prefabricated Site Office",
       description:
         "Modern site offices designed for efficient workspaces and quick installation. Built with durable materials for lasting performance.",
+      path: "/site-office",
     },
     {
       id: 2,
@@ -247,6 +281,7 @@ const About = () => {
       title: "Labour Accommodation",
       description:
         "Comfortable accommodation units for workers at project sites. Designed for safety, durability, and convenient living.",
+      path: "/labour-accommodation",
     },
     {
       id: 3,
@@ -254,6 +289,7 @@ const About = () => {
       title: "Modular MS Containers",
       description:
         "Versatile modular containers for commercial and industrial applications. Engineered for strength, portability, and flexible use.",
+      path: "/ms-containers",
     },
     {
       id: 4,
@@ -261,9 +297,9 @@ const About = () => {
       title: "Sandwich Panels",
       description:
         "High-performance insulated sandwich panels for modern construction. Provide excellent thermal efficiency, durability, and energy savings.",
+      path: "/prefab-sandwich-panels",
     },
   ];
-
   const features = [
     {
       id: 1,
@@ -324,7 +360,7 @@ const About = () => {
   const faqs = [
     {
       id: 1,
-      q: "What products does L & R Enterprises manufacture?",
+      q: "What products does L & R Prefab Solar manufacture?",
       a:
         "We manufacture prefabricated buildings, PEB structures, MS containers, sandwich panels, warehouses, industrial sheds, and modular construction solutions.",
     },
@@ -400,7 +436,7 @@ const About = () => {
 
             <h1 className={styles.mainTitle}>
               Building the Future with  <br />
-              <span>L&R Green India Pvt Ltd</span>
+              <span>L&R PREFAB SOLAR PVT LTD</span>
             </h1>
 
             <p className={styles.heroDesc}>
@@ -456,7 +492,7 @@ const About = () => {
                 </h2>
                 <div class={styles.introLine}></div>
               </div>
-              <p>With over 10 years of industry experience, L&R Enterprises is a trusted manufacturer
+              <p>With over 10 years of industry experience, L&R Prefab Solar is a trusted manufacturer
                 of prefabricated buildings, modular structures, pre-engineered buildings (PEBs), sandwich
                 panels, and steel fabrication solutions. We are committed to delivering innovative, durable,
                 and cost-effective infrastructure for commercial, industrial, and infrastructure projects.</p>
@@ -531,7 +567,7 @@ const About = () => {
                 <h2>Visionary Leadership, <span>Lasting Impact</span></h2>
                 <div className={styles.founderLine}></div>
               </div>
-              <p>L&R Enterprises was founded with a vision to transform the prefabricated construction
+              <p>L&R Prefab Solar was founded with a vision to transform the prefabricated construction
                 industry by delivering innovative, high-quality, and cost-effective building solutions.
                 Guided by a passion for excellence and customer satisfaction, the company has grown into
                 a trusted name known for reliability, precision, and timely project execution.</p>
@@ -610,7 +646,7 @@ const About = () => {
                 Prefabricated Structures
               </h2>
               <p>
-                L&R Green India Pvt Ltd specializes in manufacturing high-quality prefabricated
+                L&R Prefab Solar Pvt Ltd specializes in manufacturing high-quality prefabricated
                 structures and mild steel containers in New Delhi. From site offices to warehouse
                 sheds and portable containers, our solutions are built for durability, flexibility,
                 and modern industrial use.
@@ -665,7 +701,7 @@ const About = () => {
 
 
               <p className={styles.designation}>
-                Founder & CEO, L&R Enterprises
+                Founder & CEO, L&R Prefab Solar India
               </p>
 
               <h2 className={styles.personName}>
@@ -676,14 +712,14 @@ const About = () => {
 
               <p className={styles.infoText}>
                 With years of expertise in the prefab, PEB, and modular construction industry, Lalit Gautam
-                founded L&R Green India   with a vision to deliver innovative, high-quality, and sustainable
+                founded L&R Prefab Solar India   with a vision to deliver innovative, high-quality, and sustainable
                 infrastructure solutions. His commitment to excellence has helped the company build a
                 reputation for engineering precision, premium craftsmanship, and customer satisfaction.
               </p>
 
               <p className={styles.infoText}>
                 Driven by innovation and quality, he leads every project with a focus on modern construction technologies,
-                timely execution, and long-term value. Under his leadership, L&R Green India  continues to provide customized
+                timely execution, and long-term value. Under his leadership, L&R Prefab Solar India  continues to provide customized
                 prefab buildings, portable cabins, PEB structures, LGSF buildings, rooftop houses, and turnkey infrastructure
                 solutions across India.
               </p>
@@ -817,34 +853,57 @@ const About = () => {
           </div>
 
           <div
-            className={styles.chooseSlider}
+            className={styles.chooseSliderWrapper}
             onMouseEnter={() => setPauseSlider(true)}
             onMouseLeave={() => setPauseSlider(false)}
           >
-            <div
-              className={styles.chooseTrack}
-              style={{
-                transform: `translateX(calc(-${currentSlide} * 25%))`,
-                transition: transition ? "transform .8s ease" : "none",
-              }}
+            {/* Left Arrow */}
+            <button
+              className={`${styles.chooseArrow} ${styles.chooseArrowLeft}`}
+              onClick={prevSlideBtn}
+              aria-label="Previous"
             >
-              {sliderItems.map((feature, index) => (
-                <div className={styles.chooseItem} key={index}>
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className={styles.chooseImage}
-                  />
+              <ChevronLeft size={22} strokeWidth={1.8} />
+            </button>
 
-                  <div className={styles.chooseOverlay}>
+            <div className={styles.chooseSlider}>
+              <div
+                className={styles.chooseTrack}
+                style={{
+                  transform: `translateX(-${currentSlide * 364}px)`,
+                  transition: transition ? "transform .8s ease" : "none",
+
+                }}
+              >
+                {sliderItems.map((feature, index) => (
+                  <div className={styles.chooseItem} key={index}>
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className={styles.chooseImage}
+                    />
+
+                    <div className={styles.chooseOverlay}></div>
+
                     <div className={styles.chooseInfo}>
                       <h3>{feature.title}</h3>
                       <p>{feature.description}</p>
                     </div>
+
+                    {/* Small arrow icon */}
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            {/* Right Arrow */}
+            <button
+              className={`${styles.chooseArrow} ${styles.chooseArrowRight}`}
+              onClick={nextSlideBtn}
+              aria-label="Next"
+            >
+              <ChevronRight size={22} strokeWidth={1.8} />
+            </button>
           </div>
 
 
@@ -867,7 +926,7 @@ const About = () => {
               <div className={styles.smartLine}></div>
             </div>
             <p>
-              L & R Enterprises delivers durable prefabricated structures and
+              L & R Prefab Solar delivers durable prefabricated structures and
               steel containers designed for modern industrial and commercial
               needs.
             </p>
@@ -911,7 +970,7 @@ const About = () => {
               </h2>
 
               <p>
-                At L & R Enterprises, we are committed to delivering high-quality prefabricated
+                At L & R Prefab Solar India, we are committed to delivering high-quality prefabricated
                 structures and steel containers built with precision and care. Our focus on durability,
                 timely execution, and customer satisfaction makes us a trusted choice for modern construction needs.
               </p>
@@ -995,7 +1054,7 @@ const About = () => {
 
           <div className={styles.qualityGrid}>
             {qualityData.map((item) => (
-              <div className={styles.qualityCard} key={item.id}>
+              <div onClick={() => navigate(item.path)} className={styles.qualityCard} key={item.id}>
                 <div className={styles.iconWrapper}>
                   {item.icon}
                 </div>
@@ -1142,7 +1201,7 @@ const About = () => {
         <section className={styles.cta}>
           <h2>Let's Build Your Next Project Together</h2>
           <p>
-            From prefabricated buildings to steel structures, L&R Enterprises delivers reliable,
+            From prefabricated buildings to steel structures, L&R Prefab Solar India delivers reliable,
             high-quality, and customized solutions for every project. Contact our team today and turn your vision into reality.
           </p>
           <button className={styles.contactBtn} onClick={() => {

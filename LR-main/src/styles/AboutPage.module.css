@@ -4085,84 +4085,134 @@ why choose
   max-width: 470px;
 }
 
-.chooseSlider {
-  width: 1400px;
+.chooseSliderWrapper {
+  width: 100%;
+  max-width: 1400px;
   margin: auto;
+  position: relative;
   display: flex;
-  gap: 24px;
+  align-items: center;
+}
+
+.chooseSlider {
+  width: 100%;
   overflow: hidden;
 }
 
 .chooseTrack {
   display: flex;
   width: max-content;
-  transition: transform 0.8s ease-in-out;
   will-change: transform;
 }
 
-/* Item */
-
 .chooseItem {
-  flex: 0 0 calc((100% - 72px) / 4);
-  max-width: calc((100% - 72px) / 4);
+  flex: 0 0 340px;
+  width: 340px;
+  height: 380px;
   margin-right: 24px;
-  height: 400px;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  cursor: pointer;
+  transform: translateY(0);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 }
+
 
 .chooseImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .7s ease;
+  display: block;
+  transition:
+    transform 0.8s cubic-bezier(.2, .8, .2, 1),
+    filter 0.6s ease;
 }
 
-/* Overlay */
+/* ================================
+   OVERLAY
+================================ */
 
 .chooseOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, .88),
-      rgba(0, 0, 0, .35),
-      transparent);
-  opacity: 0;
-  transition: .45s;
+
+  background:
+    linear-gradient(to top,
+      rgba(5, 12, 25, 0.95) 0%,
+      rgba(5, 12, 25, 0.65) 35%,
+      rgba(5, 12, 25, 0.15) 70%,
+      transparent 100%);
+  opacity: 0.45;
+  transition:
+    opacity 0.6s ease;
 }
 
-/* Content */
+
 
 .chooseInfo {
   position: absolute;
   left: 25px;
   right: 25px;
-  bottom: -120px;
+  bottom: 25px;
   color: #fff;
-  transition: .55s ease;
+  transform: translateY(65px);
+  opacity: 0;
+  transition:
+    transform 0.6s cubic-bezier(.2, .8, .2, 1),
+    opacity 0.5s ease;
 }
 
 .chooseInfo h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
-  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  font-weight: 600;
 }
 
 .chooseInfo p {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
 }
 
-/* Hover */
+
+
+.chooseCardIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(-10px) rotate(-20deg);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    background 0.3s ease;
+}
+
 
 .chooseItem:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, .22);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.22);
 }
 
 .chooseItem:hover .chooseImage {
   transform: scale(1.12);
+  filter: brightness(0.8);
 }
 
 .chooseItem:hover .chooseOverlay {
@@ -4170,264 +4220,220 @@ why choose
 }
 
 .chooseItem:hover .chooseInfo {
-  bottom: 25px;
+  transform: translateY(0);
+  opacity: 1;
 }
 
+.chooseItem:hover .chooseCardIcon {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
 
-@media (max-width:1440px) {
+.chooseCardIcon:hover {
+  background: #233e70;
+}
+
+.chooseArrow {
+  position: absolute;
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  background: #fff;
+  color: #233e70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.chooseArrow:hover {
+  background: #233e70;
+  color: #fff;
+  box-shadow:
+    0 12px 30px rgba(35, 62, 112, 0.3);
+  transform: scale(1.08);
+}
+
+.chooseArrowLeft {
+  left: -26px;
+}
+
+.chooseArrowRight {
+  right: -26px;
+}
+
+@media (max-width: 1440px) {
 
   .whyChoose {
-    padding: 72px 4%;
+    padding: 70px 50px;
   }
 
   .WhyChoseText h2 {
-    font-size: 50px;
+    font-size: 52px;
   }
 
   .chooseItem {
-    height: 380px;
+    height: 370px;
   }
-
 }
 
 
-@media (max-width:1366px) {
+@media (max-width: 1200px) {
+
+  .whyChoose {
+    padding: 65px 45px;
+
+    --choose-card-width: 310px;
+    --choose-card-gap: 22px;
+  }
+
+  .headings {
+    margin-bottom: 55px;
+    gap: 30px;
+  }
 
   .WhyChoseText h2 {
-    font-size: 46px;
+    font-size: 45px;
+  }
+
+  .headings p {
+    max-width: 400px;
+    font-size: 14px;
   }
 
   .chooseItem {
     height: 360px;
+    border-radius: 18px;
   }
 
-}
-
-
-
-@media (max-width:1280px) {
-
-  .chooseItem {
-    height: 340px;
+  .chooseInfo {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
   }
 
   .chooseInfo h3 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
+  .chooseInfo p {
+    font-size: 13px;
+  }
 }
 
 
-@media (max-width:1200px) {
+
+
+@media (max-width: 992px) {
 
   .whyChoose {
-    padding: 68px 4%;
+    padding: 55px 35px;
+
+    --choose-card-width: 285px;
+    --choose-card-gap: 20px;
   }
 
   .headings {
-    gap: 40px;
-  }
-
-  .WhyChoseText h2 {
-    font-size: 42px;
-  }
-
-  .chooseItem {
-    height: 330px;
-  }
-
-}
-
-
-@media (max-width:1024px) {
-
-  .headings {
-    gap: 35px;
-  }
-
-  .WhyChoseText h2 {
-    font-size: 38px;
-  }
-
-  .headings p {
-    max-width: 420px;
-  }
-
-  .chooseItem {
-    flex: 0 0 calc((100% - 24px)/2);
-    max-width: calc((100% - 24px)/2);
-    height: 350px;
-  }
-
-  .chooseTrack {
-    gap: 0;
-  }
-
-}
-
-
-@media (max-width:992px) {
-
-  .headings {
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 45px;
     gap: 20px;
-    margin-bottom: 50px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 40px;
   }
 
   .headings p {
-    max-width: 100%;
+    max-width: 600px;
     padding-top: 0;
   }
 
   .chooseItem {
-    flex: 0 0 calc((100% - 24px)/2);
-    max-width: calc((100% - 24px)/2);
-    height: 330px;
+    height: 350px;
+    border-radius: 17px;
   }
 
-}
-
-
-@media (max-width:768px) {
-
-  .whyChoose {
-    padding: 60px 5%;
+  .chooseArrow {
+    width: 48px;
+    height: 48px;
   }
 
-  .WhyChoose {
-    text-align: center;
+  .chooseArrowLeft {
+    left: -20px;
   }
 
-  .headings {
-    align-items: center;
-    text-align: center;
-  }
-
-  .WhyChoseText {
-    align-items: center;
-  }
-
-  .WhyChoseText h2 {
-    font-size: 34px;
-  }
-
-  .WhyChooseLine {
-    width: 90px;
-  }
-
-  .chooseItem {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-right: 0;
-    height: 360px;
+  .chooseArrowRight {
+    right: -20px;
   }
 
   .chooseInfo {
     left: 20px;
     right: 20px;
+    bottom: 20px;
   }
-
 }
 
-@media (max-width:576px) {
+@media (max-width: 768px) {
 
   .whyChoose {
-    padding: 50px 5%;
+    padding: 50px 25px;
+
+    --choose-card-width: 260px;
+    --choose-card-gap: 18px;
+  }
+
+  .WhyChoose {
+    margin-bottom: 15px;
   }
 
   .WhooseBoder {
-    font-size: 13px;
-    padding: 6px 20px;
+    padding: 5px 18px;
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 
   .WhyChoseText h2 {
-    font-size: 28px;
-  }
-
-  .chooseItem {
-    min-width: 200px;
-    max-width: 250px;
-    height: 400px;
-    margin-right: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .chooseInfo h3 {
-    font-size: 20px;
-  }
-
-  .chooseInfo p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-}
-
-@media (max-width:480px) {
-
-  .WhyChoseText h2 {
-    font-size: 24px;
+    font-size: 34px;
+    line-height: 1.25;
   }
 
   .WhyChooseLine {
-    width: 70px;
+    width: 90px;
+    height: 2px;
+  }
+
+  .headings {
+    margin-bottom: 35px;
+  }
+
+  .headings p {
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .chooseItem {
-    height: 270px;
+    height: 330px;
     border-radius: 16px;
   }
 
   .chooseInfo {
-    left: 16px;
-    right: 16px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
   }
 
   .chooseInfo h3 {
-    font-size: 18px;
-  }
-
-  .chooseInfo p {
-    font-size: 13px;
-  }
-
-}
-
-@media (max-width:375px) {
-
-  .whyChoose {
-    padding: 45px 4%;
-  }
-
-  .WhyChoseText h2 {
-    font-size: 22px;
-  }
-
-  .chooseItem {
-    height: 240px;
-  }
-
-}
-
-@media (max-width:320px) {
-
-  .WhyChoseText h2 {
-    font-size: 20px;
-  }
-
-  .WhooseBoder {
-    font-size: 12px;
-    padding: 5px 16px;
-  }
-
-  .chooseItem {
-    height: 220px;
-  }
-
-  .chooseInfo h3 {
-    font-size: 16px;
+    font-size: 19px;
+    margin-bottom: 8px;
   }
 
   .chooseInfo p {
@@ -4435,6 +4441,423 @@ why choose
     line-height: 1.5;
   }
 
+  .chooseArrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .chooseArrowLeft {
+    left: -18px;
+  }
+
+  .chooseArrowRight {
+    right: -18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .whyChoose {
+    padding: 50px 25px;
+
+    --choose-card-width: 260px;
+    --choose-card-gap: 18px;
+  }
+
+  .WhyChoose {
+    margin-bottom: 15px;
+  }
+
+  .WhooseBoder {
+    padding: 5px 18px;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .WhyChooseLine {
+    width: 90px;
+    height: 2px;
+  }
+
+  .headings {
+    margin-bottom: 35px;
+  }
+
+  .headings p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .chooseItem {
+    height: 330px;
+    border-radius: 16px;
+  }
+
+  .chooseInfo {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .chooseInfo h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+
+  .chooseInfo p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .chooseArrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .chooseArrowLeft {
+    left: -18px;
+  }
+
+  .chooseArrowRight {
+    right: -18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .whyChoose {
+    width: 100%;
+    padding: 40px 15px;
+
+    --choose-card-width: calc(100vw - 50px);
+    --choose-card-gap: 14px;
+  }
+
+  .headings {
+    width: 100%;
+    margin-bottom: 28px;
+    gap: 15px;
+  }
+
+  .WhooseBoder {
+    padding: 5px 16px;
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 27px;
+    line-height: 1.25;
+  }
+
+  .WhyChooseLine {
+    width: 75px;
+    height: 2px;
+  }
+
+  .headings p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+
+  /* SLIDER */
+
+  .chooseSliderWrapper {
+    width: 100%;
+  }
+
+  .chooseSlider {
+    width: 100%;
+  }
+
+  .chooseItem {
+    flex: 0 0 var(--choose-card-width);
+    width: var(--choose-card-width);
+
+    height: 340px;
+
+    border-radius: 16px;
+  }
+
+
+  /* INFO */
+
+  .chooseInfo {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .chooseInfo h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+
+  .chooseInfo p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+
+  /* Keep image animation */
+  .chooseItem:hover .chooseImage {
+    transform: scale(1.05);
+  }
+
+
+  /* ARROWS */
+
+  .chooseArrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chooseArrow svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .chooseArrowLeft {
+    left: -8px;
+  }
+
+  .chooseArrowRight {
+    right: -8px;
+  }
+}
+
+
+@media (max-width: 430px) {
+
+  .whyChoose {
+    padding: 38px 12px;
+
+    --choose-card-width: calc(100vw - 42px);
+    --choose-card-gap: 12px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 25px;
+  }
+
+  .headings p {
+    font-size: 10.5px;
+  }
+
+  .chooseItem {
+    height: 325px;
+  }
+
+  .chooseInfo {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .chooseInfo h3 {
+    font-size: 18px;
+  }
+
+  .chooseInfo p {
+    font-size: 10.5px;
+  }
+
+  .chooseArrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .chooseArrowLeft {
+    left: -6px;
+  }
+
+  .chooseArrowRight {
+    right: -6px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  .whyChoose {
+    padding: 38px 12px;
+
+    --choose-card-width: calc(100vw - 42px);
+    --choose-card-gap: 12px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 25px;
+  }
+
+  .headings p {
+    font-size: 10.5px;
+  }
+
+  .chooseItem {
+    height: 325px;
+  }
+
+  .chooseInfo {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .chooseInfo h3 {
+    font-size: 18px;
+  }
+
+  .chooseInfo p {
+    font-size: 10.5px;
+  }
+
+  .chooseArrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .chooseArrowLeft {
+    left: -6px;
+  }
+
+  .chooseArrowRight {
+    right: -6px;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .whyChoose {
+    padding: 32px 8px;
+
+    --choose-card-width: calc(100vw - 34px);
+    --choose-card-gap: 9px;
+  }
+
+  .WhooseBoder {
+    padding: 4px 12px;
+    font-size: 9px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 21px;
+  }
+
+  .headings p {
+    font-size: 9.5px;
+    line-height: 1.5;
+  }
+
+  .chooseItem {
+    height: 295px;
+    border-radius: 13px;
+  }
+
+  .chooseInfo {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .chooseInfo h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .chooseInfo p {
+    font-size: 9.5px;
+    line-height: 1.45;
+  }
+
+  .chooseArrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .chooseArrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .chooseArrowLeft {
+    left: -4px;
+  }
+
+  .chooseArrowRight {
+    right: -4px;
+  }
+}
+
+
+@media (max-width: 320px) {
+
+  .whyChoose {
+    padding: 28px 6px;
+
+    --choose-card-width: calc(100vw - 28px);
+    --choose-card-gap: 8px;
+  }
+
+  .WhyChoseText h2 {
+    font-size: 19px;
+  }
+
+  .WhooseBoder {
+    padding: 3px 10px;
+    font-size: 8px;
+  }
+
+  .headings p {
+    font-size: 9px;
+  }
+
+  .chooseItem {
+    height: 280px;
+    border-radius: 12px;
+  }
+
+  .chooseInfo {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .chooseInfo h3 {
+    font-size: 15px;
+  }
+
+  .chooseInfo p {
+    font-size: 9px;
+  }
+
+  .chooseArrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .chooseArrow svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .chooseArrowLeft {
+    left: -3px;
+  }
+
+  .chooseArrowRight {
+    right: -3px;
+  }
 }
 
 /* ================================================== */
@@ -5076,167 +5499,167 @@ why choose
 
 
 
-.qualityCard{
-    position:relative;
-    overflow:hidden;
-    background:#fff;
-    border:1px solid #ececec;
-    border-radius:16px;
-    padding:28px;
-    cursor:pointer;
-    transition:.55s ease;
-    z-index:1;
-    box-shadow:0 12px 30px rgba(0,0,0,.06);
+.qualityCard {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 28px;
+  cursor: pointer;
+  transition: .55s ease;
+  z-index: 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .06);
 }
 
 /* Top Line */
 
-.qualityCard::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:0%;
-    height:4px;
-    background:#4d73b8;
-    transition:.45s;
-    z-index:3;
+.qualityCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 4px;
+  background: #4d73b8;
+  transition: .45s;
+  z-index: 3;
 }
 
 /* Blue Circle */
 
-.qualityCard::after{
-    content:"";
-    position:absolute;
-    width:0;
-    height:0;
-    right:-120px;
-    bottom:-120px;
-    background:#293F67;
-    border-radius:50%;
-    transition:.75s ease;
-    z-index:-1;
+.qualityCard::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -120px;
+  bottom: -120px;
+  background: #293F67;
+  border-radius: 50%;
+  transition: .75s ease;
+  z-index: -1;
 }
 
 /* Shine */
 
-.qualityCard .shine{
-    position:absolute;
-    top:-120%;
-    left:-50%;
-    width:45%;
-    height:260%;
-    background:rgba(255,255,255,.25);
-    transform:rotate(25deg);
-    transition:1s;
+.qualityCard .shine {
+  position: absolute;
+  top: -120%;
+  left: -50%;
+  width: 45%;
+  height: 260%;
+  background: rgba(255, 255, 255, .25);
+  transform: rotate(25deg);
+  transition: 1s;
 }
 
-.qualityCard:hover .shine{
-    left:150%;
+.qualityCard:hover .shine {
+  left: 150%;
 }
 
-.qualityCard:hover::before{
-    width:100%;
+.qualityCard:hover::before {
+  width: 100%;
 }
 
-.qualityCard:hover::after{
-    width:600px;
-    height:600px;
+.qualityCard:hover::after {
+  width: 600px;
+  height: 600px;
 }
 
-.qualityCard:hover{
-    transform:translateY(-15px);
-    border-color:#293F67;
-    box-shadow:0 30px 70px rgba(41,63,103,.28);
-}
-
-
-.iconWrapper{
-    width:72px;
-    height:72px;
-    border-radius:50%;
-    background:#edf3fb;
-    color:#293F67;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:28px;
-    transition:.55s;
-}
-
-.iconWrapper svg{
-    transition:.55s;
-}
-
-.qualityCard:hover .iconWrapper{
-    background:#fff;
-    animation:iconBounce .8s ease;
-}
-
-.qualityCard:hover .iconWrapper svg{
-    color:#293F67;
-    transform:scale(1.18);
-}
-
-.qualityCard h3{
-    font-size:24px;
-    font-weight:500;
-    margin-bottom:18px;
-    color:#111;
-    transition:.45s;
-}
-
-.qualityCard:hover h3{
-    color:#fff;
-    transform:translateY(-6px);
-}
-
-.qualityCard p{
-    font-size:15px;
-    line-height:1.8;
-    color:#666;
-    transition:.45s;
-}
-
-.qualityCard:hover p{
-    color:#fff;
-    transform:translateY(-3px);
-}
-
-.qualityCard:nth-child(1):hover .iconWrapper{
-    transform:rotate(-12deg) scale(1.15);
-}
-
-.qualityCard:nth-child(2):hover .iconWrapper{
-    transform:translateY(-10px) scale(1.18);
-}
-
-.qualityCard:nth-child(3):hover .iconWrapper{
-    transform:rotate(15deg) scale(1.18);
-}
-
-.qualityCard:nth-child(4):hover .iconWrapper{
-    transform:rotate(-15deg) translateY(-8px) scale(1.15);
+.qualityCard:hover {
+  transform: translateY(-15px);
+  border-color: #293F67;
+  box-shadow: 0 30px 70px rgba(41, 63, 103, .28);
 }
 
 
-@keyframes iconBounce{
+.iconWrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #edf3fb;
+  color: #293F67;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  transition: .55s;
+}
 
-    0%{
-        transform:translateY(0) scale(1);
-    }
+.iconWrapper svg {
+  transition: .55s;
+}
 
-    30%{
-        transform:translateY(-14px) scale(1.15);
-    }
+.qualityCard:hover .iconWrapper {
+  background: #fff;
+  animation: iconBounce .8s ease;
+}
 
-    60%{
-        transform:translateY(5px) scale(1.08);
-    }
+.qualityCard:hover .iconWrapper svg {
+  color: #293F67;
+  transform: scale(1.18);
+}
 
-    100%{
-        transform:translateY(0) scale(1.15);
-    }
+.qualityCard h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #111;
+  transition: .45s;
+}
+
+.qualityCard:hover h3 {
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+.qualityCard p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  transition: .45s;
+}
+
+.qualityCard:hover p {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.qualityCard:nth-child(1):hover .iconWrapper {
+  transform: rotate(-12deg) scale(1.15);
+}
+
+.qualityCard:nth-child(2):hover .iconWrapper {
+  transform: translateY(-10px) scale(1.18);
+}
+
+.qualityCard:nth-child(3):hover .iconWrapper {
+  transform: rotate(15deg) scale(1.18);
+}
+
+.qualityCard:nth-child(4):hover .iconWrapper {
+  transform: rotate(-15deg) translateY(-8px) scale(1.15);
+}
+
+
+@keyframes iconBounce {
+
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  30% {
+    transform: translateY(-14px) scale(1.15);
+  }
+
+  60% {
+    transform: translateY(5px) scale(1.08);
+  }
+
+  100% {
+    transform: translateY(0) scale(1.15);
+  }
 
 }
 

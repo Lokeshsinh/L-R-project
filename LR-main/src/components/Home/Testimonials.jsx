@@ -13,7 +13,7 @@ const testimonials = [
     id: 2,
     name: "RAJESH GUPTA",
     designation: "PEB Structure - Customer",
-    text: "Building a multi-span PEB structure requires technical mastery. L&R Enterprises delivered exactly that. Their reputation for a 100% success rate is well-earned.",
+    text: "Building a multi-span PEB structure requires technical mastery. L&R PREFAB SOLAR INDIA delivered exactly that. Their reputation for a 100% success rate is well-earned.",
   },
   {
     id: 3,
