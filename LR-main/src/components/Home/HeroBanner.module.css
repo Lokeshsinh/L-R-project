@@ -407,7 +407,7 @@
 
 @media (max-width:992px) {
   .hero {
-    min-height: 110vh;
+    min-height: 100vh;
   }
 
   .container {
@@ -511,268 +511,291 @@
 
 }
 
+@media (max-width: 768px) {
 
-@media (max-width:768px) {
+  .container {
+    width: 94%;
+    padding-top: 28px;
+    padding-bottom: 15px;
+  }
 
+  /* COMPANY */
+  .company {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* TITLE */
   .title {
-    font-size: 34px;
-    line-height: 1.2;
+    font-size: 40px;
+    line-height: 1.08;
   }
 
+  /* DESCRIPTION */
   .description {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 560px;
+    margin-top: 13px;
+    margin-bottom: 10px;
   }
 
+  /* BUTTON */
   .heroBtn {
-    width: 170px;
-    height: 46px;
+    width: 150px;
+    height: 42px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
+  /* BUILDING IMAGE */
   .centerImage {
-    width: 430px;
+    width: 480px;
+    max-width: 92vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
+
 
   .statsCard {
-    position: static;
-    width: 100%;
+    width: 94%;
     height: auto;
-    margin: 30px auto 0;
 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
-    border-radius: 10px;
+    margin-top: 2rem;
+
+    border-radius: 12px;
     overflow: hidden;
   }
 
   .statBox {
-    flex: 1;
-    padding: 14px 8px;
+    width: auto;
+    min-height: 80px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    padding: 14px 10px;
+
     text-align: center;
 
-    border-right: 1px solid rgba(255, 255, 255, .18);
-    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   }
 
-  .statBox:last-child {
-    border-right: none;
-  }
-
-  .statBox h2 {
-    font-size: 18px;
-    margin-bottom: 6px;
-  }
-
-  .statBox p {
-    font-size: 11px;
-    line-height: 1.3;
-  }
-
-  .watermark {
-    display: none;
-  }
-
-  .left {
-    left: 12px;
-  }
-
-  .right {
-    right: 12px;
-  }
-
-}
-
-@media (max-width:576px) {
-
-  .container {
-    width: 94%;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .title {
-    font-size: 28px;
-    line-height: 1.25;
-  }
-
-  .description {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .centerImage {
-    width: 320px;
-    margin: 20px auto;
-  }
-
-  .statsCard {
-    position: static;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-  }
-
-  .statBox {
-    min-height: 95px;
-    padding: 16px;
-    border-right: 1px solid rgba(255, 255, 255, .15);
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
-  }
-
+  /* Remove right border from 2nd and 4th */
   .statBox:nth-child(2),
   .statBox:nth-child(4) {
     border-right: none;
   }
 
+  /* Remove bottom border from 3rd and 4th */
   .statBox:nth-child(3),
   .statBox:nth-child(4) {
     border-bottom: none;
   }
 
-}
-
-@media (max-width:480px) {
-
-  .title {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 13px;
-  }
-
-  .centerImage {
-    width: 280px;
-  }
-
-  .statBox {
-    min-height: 90px;
-    padding: 14px 10px;
-  }
-
   .statBox h2 {
-    font-size: 17px;
+    font-size: 20px;
+    margin: 0 0 6px;
   }
 
   .statBox p {
     font-size: 11px;
+    margin: 0;
   }
-
 }
 
-@media (max-width:430px) {
+
+@media (max-width: 567px) {
+
+  .container {
+    margin-top: 2rem;
+    width: 94%;
+    padding-top: 30px;
+    padding-bottom: 18px;
+  }
+
+  .company {
+    font-size: 20px;
+  }
 
   .title {
-    font-size: 22px;
+    font-size: 33px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .heroBtn {
+    width: 165px;
+    height: 44px;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 15px;
   }
 
   .centerImage {
-    width: 250px;
+    width: 430px;
+    max-width: 96vw;
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+
+  .statsCard {
+    height: auto;
+    margin-top: 2rem;
   }
 
   .statBox {
-    min-height: 85px;
-    padding: 12px 8px;
+    padding: 16px 6px;
   }
 
+  .statBox h2 {
+    font-size: 20px;
+  }
+
+  .statBox p {
+    font-size: 12px;
+  }
+
+  .arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .left {
+    left: 8px;
+  }
+
+  .right {
+    right: 8px;
+  }
 }
 
-@media (max-width:390px) {
+
+
+@media (max-width: 480px) {
+
+  .container {
+    margin-top: 2rem;
+    width: 94%;
+    padding-top: 30px;
+    padding-bottom: 22px;
+  }
+
+  .company {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
 
   .title {
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 1.12;
   }
 
   .description {
     font-size: 12px;
+    line-height: 1.45;
+
+    margin-top: 15px;
+
+    max-width: 380px;
+  }
+
+  .heroBtn {
+    width: 150px;
+    height: 42px;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+    gap: 12px;
   }
 
   .centerImage {
-    width: 230px;
+    width: 390px;
+    max-width: 100%;
+
+    margin-top: 22px;
   }
 
-  .statBox {
-    min-height: 80px;
-    padding: 10px 6px;
-  }
+  .statsCard {
+    margin-top: 20px;
 
-  .statBox h2 {
-    font-size: 15px;
-  }
-
-  .statBox p {
-    font-size: 10px;
-  }
-
-}
-
-@media (max-width:360px) {
-
-  .title {
-    font-size: 18px;
-  }
-
-  .description {
-    font-size: 11px;
-  }
-
-  .centerImage {
-    width: 210px;
-  }
-
-  .statBox {
-    min-height: 75px;
-    padding: 8px 5px;
-  }
-
-  .statBox h2 {
-    font-size: 14px;
-  }
-
-  .statBox p {
-    font-size: 9px;
-  }
-
-}
-
-@media (max-width:320px) {
-
-  .title {
-    font-size: 16px;
-  }
-
-  .description {
-    font-size: 10px;
-  }
-
-  .centerImage {
-    width: 190px;
+    border-radius: 9px;
   }
 
   .statBox {
     min-height: 70px;
-    padding: 6px 4px;
+    padding: 12px 5px;
   }
 
   .statBox h2 {
-    font-size: 13px;
+    font-size: 17px;
+    margin-bottom: 5px;
   }
 
   .statBox p {
-    font-size: 8px;
+    font-size: 10px;
+    line-height: 1.3;
   }
 
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .left {
+    left: 5px;
+  }
+
+  .right {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    /* Spans full width so bottom card touches screen edges */
+    padding-top: 20px;
+  }
+
+  .leftContent,
+  .centerImage {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .statsCard {
+    margin-top: 15px;
+    border-radius: 12px 12px 0 0;
+    /* Rounded top corners, flat bottom edge */
+  }
+
+  .statBox {
+    padding: 12px 4px;
+  }
+}
+
+
+@media (max-width: 430px){
+  .statsCard{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+  } 
 }
 
 /* ======================================================================== */
@@ -1236,97 +1259,71 @@
 
 
 
-@media (max-width:480px) {
+@media (max-width: 430px) {
+
+  /* --- Top Headings --- */
+  .heroHeading {
+    top: 20px;
+  }
 
   .heroHeading h3 {
     font-size: 16px;
+    margin-bottom: 4px;
   }
 
   .heroHeading h1 {
-    font-size: 16px;
+    font-size: 22px;
+    /* Set to 22px as requested */
+    line-height: 1.25;
+    padding: 0 10px;
   }
 
+  /* --- Left/Center Text Content --- */
   .heroContent {
-    top: 135px;
+    top: 130px;
+    width: 94%;
   }
 
   .heroContent p {
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 1.4;
+    margin-bottom: 12px;
   }
 
   .heroBtn {
-    width: 155px;
-    height: 44px;
+    width: 150px;
+    height: 40px;
     font-size: 13px;
+    gap: 8px;
   }
 
+  /* --- Center Product Image --- */
   .productImage {
-    width: 300px;
-    bottom: 180px;
+    margin-left: 20px;
+    width: 340px;
+    bottom: 155px;
   }
 
-  .heroStatsCard {
-    overflow-x: auto;
-  }
-
-  .heroStatItem {
-    min-width: 110px;
-  }
-
-}
-
-
-@media (max-width:430px) {
-
-  .heroHeading h3 {
-    font-size: 15px;
-  }
-
-  .heroHeading h1 {
-    font-size: 15px;
-  }
-
-  .heroContent {
-    top: 125px;
-  }
-
-  .heroContent p {
-    font-size: 11px;
-  }
-
-  .productImage {
-    width: 280px;
-    bottom: 185px;
-  }
-
-
-
-}
-
-
-@media (max-width:430px) {
-
+  /* --- Bottom Right Stats Card (2x2 Grid) --- */
   .heroStatsCard {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 15px;
+    bottom: 10px;
 
     width: 92%;
-    height: auto;
+    height: 130px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    overflow: visible;
+    border-radius: 10px;
   }
 
   .heroStatItem {
-    min-width: unset;
-    padding: 14px 10px;
-    text-align: center;
+    padding: 6px 12px;
+    text-align: left;
 
     border-right: 1px solid rgba(255, 255, 255, .18);
     border-bottom: 1px solid rgba(255, 255, 255, .18);
@@ -1343,178 +1340,237 @@
   }
 
   .heroStatItem h2 {
-    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 2px;
   }
 
   .heroStatItem p {
-    font-size: 11px;
-    line-height: 1.4;
+    font-size: 10px;
+    line-height: 1.2;
   }
 
 }
 
+@media (max-width: 390px) {
 
-@media (max-width:490px) {
-
+  /* --- Top Headings --- */
   .heroHeading {
-    top: 20px;
+    top: 18px;
   }
 
   .heroHeading h3 {
     font-size: 14px;
+    margin-bottom: 4px;
   }
 
   .heroHeading h1 {
-    font-size: 14px;
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 0 8px;
   }
 
+  /* --- Hero Content / CTA --- */
   .heroContent {
-    top: 120px;
+    top: 125px;
+    width: 95%;
   }
 
   .heroContent p {
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 1.35;
+    margin-bottom: 10px;
   }
 
   .heroBtn {
     width: 145px;
-    height: 42px;
+    height: 38px;
+    font-size: 12px;
+    gap: 6px;
   }
 
+  /* --- Product Image --- */
   .productImage {
-    width: 250px;
-    bottom: 190px;
+    width: 310px;
+    bottom: 200px;
   }
 
-}
-
-/* ================= 390px ================= */
-
-@media (max-width:390px) {
-
+  /* --- Stats Card (2x2 Grid) --- */
   .heroStatsCard {
-    width: 94%;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 12px;
+    bottom: 10px;
+
+    width: 94%;
+    height: 125px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    grid-template-rows: repeat(2, 1fr);
+
+    border-radius: 8px;
   }
 
   .heroStatItem {
-    padding: 12px 8px;
+    padding: 5px 10px;
+    text-align: left;
+
+    border-right: 1px solid rgba(255, 255, 255, .18);
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
+  }
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+  .heroStatItem:nth-child(3),
+  .heroStatItem:nth-child(4) {
+    border-bottom: none;
   }
 
   .heroStatItem h2 {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 2px;
   }
 
   .heroStatItem p {
-    font-size: 10px;
-    line-height: 1.4;
+    font-size: 9.5px;
+    line-height: 1.15;
   }
 
 }
 
-
-@media (max-width:360px) {
+@media (max-width: 360px) {
 
   .heroHeading h3 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .heroHeading h1 {
-    font-size: 14px;
+    font-size: 19px;
+    line-height: 1.3;
   }
 
   .heroContent {
-    bottom: 115px;
+    top: 120px;
+    padding: 0 15px;
   }
 
   .heroContent p {
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.5;
   }
 
   .heroBtn {
-    width: 135px;
+    width: 140px;
     height: 40px;
     font-size: 12px;
   }
 
+  /* =========================
+     PRODUCT IMAGE
+  ========================= */
+
   .productImage {
-    width: 400px;
+    width: 270px;
+    max-width: none;
+    bottom: 165px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
+
+
+
   .heroStatsCard {
-    width: 95%;
-    bottom: 10px;
+    width: 90vw;
+    max-width: none;
+
+    padding: 12px;
+
+    border-radius: 12px 12px 12px 12px;
+
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .heroStatItem {
-    padding: 10px 6px;
+    min-width: 0;
+    flex: 1;
+    padding: 10px 4px;
   }
 
-  .heroStatItem h2 {
-    font-size: 14px;
-  }
-
-  .heroStatItem p {
-    font-size: 9px;
-    line-height: 1.4;
-  }
-
-}
-
-
-@media (max-width:320px) {
-
-  .heroHeading h3 {
-    font-size: 13px;
-  }
-
-  .heroHeading h1 {
-    font-size: 13px;
-  }
-
-  .heroContent {
-    bottom: 110px;
-  }
-
-  .heroContent p {
-    font-size: 9px;
-  }
-
-  .heroBtn {
-    width: 125px;
-    height: 38px;
-    font-size: 11px;
-  }
-
-  .productImage {
-    width: 180px;
-  }
-
-  .heroStatsCard {
-    width: 96%;
-    bottom: 8px;
-  }
-
-  .heroStatItem {
-    padding: 8px 5px;
-  }
-
-  .heroStatItem h2 {
-    font-size: 13px;
+  .heroStatItem h3 {
+    font-size: 16px;
   }
 
   .heroStatItem p {
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.3;
   }
 }
 
+@media (max-width: 320px) {
+  .heroHeading {
+    top: 10px;
+  }
+
+  .heroHeading h3 {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .heroHeading h1 {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 0 5px;
+  }
+
+  .heroContent {
+    top: 105px;
+    width: 98%;
+  }
+
+  .heroContent p {
+    font-size: 11px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .heroBtn {
+    width: 135px;
+    height: 36px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .productImage {
+    margin-left: 10px;
+    width: 220px;
+    bottom: 170px;
+  }
+
+  .heroStatsCard {
+    width: 98%;
+    bottom: 6px;
+    border-radius: 6px;
+  }
+
+  .heroStatItem {
+    padding: 6px 2px;
+  }
+
+  .heroStatItem h2 {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .heroStatItem p {
+    font-size: 9px;
+    line-height: 1.15;
+  }
+}
 
 /* =========slider3========================= */
 
@@ -1932,7 +1988,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20%;
+    bottom: 27%;
 
     width: 600px;
     right: auto;
@@ -2077,7 +2133,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 13%;
+    bottom: 20%;
 
     width: 500px;
     right: auto;
@@ -2096,9 +2152,12 @@
 
 
 @media (max-width:480px) {
+  .hero {
+    min-height: 95vh;
+  }
 
   .HomeSlider {
-    min-height: 780px;
+    min-height: 200px;
   }
 
   .heroShape {
@@ -2111,7 +2170,7 @@
   .heroContainer {
     position: relative;
     width: 94%;
-    min-height: 780px;
+    min-height: 280px;
     padding-top: 30px;
 
     display: flex;
@@ -2191,10 +2250,10 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 8%;
+    bottom: -5px;
     right: auto;
 
-    width: 430px;
+    width: 450px;
     z-index: 2;
   }
 
@@ -2210,15 +2269,16 @@
 
 @media (max-width:430px) {
 
+
   .HomeSlider {
-    min-height: 740px;
+    min-height: 300px;
   }
 
   .heroContainer {
     position: relative;
     width: 94%;
     margin: auto;
-    min-height: 740px;
+    min-height: 340px;
 
     display: flex;
     flex-direction: column;
@@ -2301,8 +2361,8 @@
     left: 50%;
     bottom: 30px;
     transform: translateX(-50%);
-    bottom: 2%;
-    width: 380px;
+    bottom: -3px;
+    width: 410px;
     z-index: 2;
   }
 
@@ -2315,16 +2375,19 @@
 }
 
 @media (max-width:390px) {
+  /* .hero {
+    min-height: 100vh;
+  } */
 
   .HomeSlider {
-    min-height: 700px;
+    min-height: 300px;
   }
 
   .heroContainer {
     position: relative;
     width: 95%;
     margin: auto;
-    min-height: 700px;
+    min-height: 300px;
     padding-top: 20px;
 
     display: flex;
@@ -2405,10 +2468,10 @@
   .heroImage {
     position: absolute;
     left: 50%;
-    bottom: -20px;
+    bottom: -3px;
     transform: translateX(-50%);
 
-    width: 360px;
+    width: 400px;
     z-index: 2;
   }
 
@@ -2421,16 +2484,19 @@
 }
 
 @media (max-width:360px) {
+  .hero {
+    min-height: 90vh;
+  }
 
   .HomeSlider {
-    min-height: 660px;
+    min-height: 200px;
   }
 
   .heroContainer {
     position: relative;
     width: 94%;
     margin: auto;
-    min-height: 660px;
+    min-height: 360px;
     padding-top: 18px;
 
     display: flex;
@@ -2478,11 +2544,9 @@
     position: relative;
     width: 100%;
     max-width: 270px;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-
     margin: 18px auto 145px;
     z-index: 5;
   }
@@ -2527,106 +2591,107 @@
 }
 
 @media (max-width:320px) {
-
-  .HomeSlider{
-    min-height:620px;
+  .hero {
+    min-height: 80vh;
   }
 
-  .heroContainer{
-    position:relative;
-    width:94%;
-    margin:auto;
-    min-height:620px;
-    padding-top:15px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
+  .HomeSlider {
+    min-height: 200px;
   }
 
-  .heroContents{
-    margin-top: 3rem;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    z-index:5;
+  .heroContainer {
+    position: relative;
+    width: 94%;
+    margin: auto;
+    min-height: 220px;
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .heroTitle{
-    font-size:18px;
-    line-height:1.2;
+  .heroContents {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
   }
 
-  .heroSubTitle{
-    font-size:14px;
-    margin:8px 0;
+  .heroTitle {
+    font-size: 18px;
+    line-height: 1.2;
   }
 
-  .heroDescription{
-    max-width:250px;
-    font-size:9px;
-    line-height:1.6;
+  .heroSubTitle {
+    font-size: 14px;
+    margin: 8px 0;
   }
 
-  .heroButton{
-    width:130px;
-    height:36px;
-    font-size:11px;
-    margin-top:14px;
+  .heroDescription {
+    max-width: 250px;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .heroButton {
+    width: 130px;
+    height: 36px;
+    font-size: 11px;
+    margin-top: 14px;
   }
 
   /* ---------- Stats ---------- */
 
-  .heroStats{
-    position:relative;
-    width:100%;
-    max-width:240px;
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:6px;
-
-    margin:16px auto 125px;
-    z-index:5;
+  .heroStats {
+    position: relative;
+    width: 100%;
+    max-width: 240px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin: 16px auto 125px;
+    z-index: 5;
   }
 
-  .heroThumb{
-    display:none;
+  .heroThumb {
+    display: none;
   }
 
-  .heroStat{
-    padding:8px 5px;
-    text-align:center;
-    border-radius:6px;
+  .heroStat {
+    padding: 8px 5px;
+    text-align: center;
+    border-radius: 6px;
   }
 
-  .heroStat h3{
-    font-size:13px;
-    margin-bottom:2px;
+  .heroStat h3 {
+    font-size: 13px;
+    margin-bottom: 2px;
   }
 
-  .heroStat p{
-    font-size:7px;
-    line-height:1.2;
+  .heroStat p {
+    font-size: 7px;
+    line-height: 1.2;
   }
 
   /* ---------- Image ---------- */
 
-  .heroImage{
-    position:absolute;
-    left:50%;
-    bottom:0;
-    transform:translateX(-50%);
-    width:280px;
-    z-index:2;
+  .heroImage {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 2;
   }
 
-  .heroImage img{
-    width:100%;
-    height:auto;
-    display:block;
+  .heroImage img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
 }
@@ -2898,74 +2963,177 @@
 
 
 
-@media (max-width:992px) {
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .containerHeroPanel {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* =========================
+     HEADING
+  ========================= */
 
   .containerHeading {
-    top: 30px;
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    z-index: 5;
+    text-align: center;
   }
 
   .containerHeading h3 {
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 8px;
   }
 
   .containerHeading h1 {
-    font-size: 34px;
-    padding: 0 20px;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+    max-width: 900px;
+    padding: 0 10px;
   }
 
+
+
   .containerContent {
+    position: absolute;
 
     left: 50%;
+    top: 145px;
+
     transform: translateX(-50%);
-    top: 180px;
-    width: 90%;
+
+    width: 88%;
+    max-width: 700px;
+
     text-align: center;
+
+    z-index: 6;
   }
 
   .containerContent p {
-    margin: 0 auto 22px;
+    margin: 0 auto 20px;
+
     max-width: 650px;
+
+    font-size: 14px;
+    line-height: 1.55;
   }
+
+
+
 
   .containerBtn {
-    margin: auto;
+    width: 180px;
+    height: 48px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+    gap: 10px;
   }
+
+
 
   .containerProductImage {
+    position: absolute;
 
     left: 50%;
-    width: 580px;
-    top: 45%;
+    bottom: 100px;
+    top: auto;
+
+    transform: translateX(-50%);
+
+    width: min(49vw, 450px);
+
+    z-index: 4;
   }
+
+  .containerProductImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+
 
   .containerStatsCard {
-
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     right: auto;
-    bottom: 0;
-
-    width: 95%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    width: 94%;
     max-width: 720px;
-    height: auto;
-
+    height: 100px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    z-index: 10;
   }
 
-  .containerStatItem {
 
+
+
+  .containerStatItem {
     flex: 1;
-    border-bottom: none;
+    min-width: 0;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: none;
   }
 
   .containerStatItem:last-child {
     border-right: none;
   }
 
-}
+  .containerStatItem:nth-child(3),
+  .containerStatItem:nth-child(4) {
+    border-bottom: none;
+  }
 
+
+  .containerStatItem h2 {
+    font-size: 20px;
+    line-height: 1;
+    margin: 0 0 8px;
+  }
+
+  .containerStatItem p {
+    font-size: 11px;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+
+
+  .containerArrow {
+    width: 18px;
+    height: 18px;
+  }
+
+}
 
 @media (max-width:768px) {
 
@@ -3088,11 +3256,17 @@
   }
 
   .containerProductImage {
-    width: 350px;
+    width: 330px;
     top: 44%;
   }
 
+  .containerStatsCard {
+    bottom: 60px;
+    border-radius: 20px;
+  }
+
   .containerStatItem {
+
     padding: 12px;
   }
 
@@ -3176,8 +3350,12 @@
     top: 43%;
   }
 
+  .containerStatsCard {
+    bottom: 90px;
+  }
+
   .containerStatItem {
-    padding: 8px;
+    padding: 10px;
   }
 
 }
@@ -3203,6 +3381,10 @@
   .containerProductImage {
     width: 240px;
     top: 45%;
+  }
+
+  .containerStatsCard {
+    bottom: 140px;
   }
 
   .containerStatItem {
