@@ -231,7 +231,7 @@ const PremiumMsContainer = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Premium MS<br />
             <span>Containers
@@ -356,7 +356,7 @@ const PremiumMsContainer = () => {
             <div className={styles.secHeadText}>
               <h2 >
                 The Types of Premium <br />
-                <span styles={{ color: "#293F67" }}>MS Container Sizes</span>
+                <span>MS Container Sizes</span>
               </h2>
               <div className={styles.secHeadLine}></div>
             </div>

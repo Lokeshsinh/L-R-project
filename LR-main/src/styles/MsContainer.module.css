@@ -115,19 +115,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -494,7 +504,7 @@
 }
 
 
-@media (max-width:1440px) {
+/* @media (max-width:1480px) {
 
   .intro {
     padding: 60px 45px;
@@ -509,7 +519,7 @@
   }
 
   .introImg {
-    height: 390px;
+    height: 300px;
   }
 
   .introText {
@@ -521,6 +531,42 @@
 
   }
 
+} */
+
+@media (max-width: 1400px) {
+  .intro {
+    padding: 60px 50px;
+  }
+
+  .introBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .introImg {
+    width: 600px !important;
+    min-width: 600px !important;
+    max-width: 600px !important;
+    height: 410px !important;
+    flex: 0 0 500px !important;
+  }
+
+  .introText {
+    width: auto;
+    max-width: 580px;
+    flex: 1;
+  }
+
+  .introText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .introFlex h2 {
+    font-size: 48px;
+  }
 }
 
 @media (max-width:1280px) {
@@ -991,40 +1037,63 @@
 
 
 
-/* ==========================================================
-   1440px
-========================================================== */
-@media (max-width:1440px) {
+@media (max-width: 1400px) {
 
   .typesSec {
-    padding: 70px 45px;
+    padding: 65px 50px;
+  }
+
+  .typesHeader {
+    gap: 40px;
+    margin-bottom: 45px;
   }
 
   .typesText h2 {
     font-size: 48px;
   }
 
-  .typesHeader {
-    gap: 40px;
-  }
-
   .typesHeader p {
-    max-width: 460px;
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .typesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
   }
 
-  .imageBox {
-    height: 220px;
+  .typeCard {
+    min-width: 0;
   }
 
+  .imageBox {
+    width: 100%;
+    height: 200px;
+  }
+
+  .typeBody {
+    padding: 22px 22px 24px;
+  }
+
+  .typeBody h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .typeBody p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .btnKnow {
+    width: 150px;
+    height: 44px;
+    font-size: 15px;
+  }
 }
 
-/* ==========================================================
-   1280px
-========================================================== */
 @media (max-width:1280px) {
 
   .typesSec {
@@ -1431,7 +1500,7 @@
 }
 
 
-@media (max-width:1440px) {
+@media (max-width:1400px) {
 
   .mobilitySec {
     padding: 70px 45px;
@@ -1460,7 +1529,7 @@
   }
 
   .mobilityContent p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .containerImg {
@@ -1928,14 +1997,11 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
-  .scrollTrack h1 {
-    font-size: 75px;
-  }
 
   .mfgText h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
 
   .mfgImgWrapper {
@@ -1946,6 +2012,25 @@
   .LastImage img {
     width: 260px;
     height: 210px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 600px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -5%;
+    bottom: 30%;
   }
 
 }
@@ -2264,14 +2349,18 @@
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
 
   .expertise {
     padding: 70px 40px;
   }
 
+  .expertise p {
+    font-size: 15px;
+  }
+
   .expertiseText h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
 
   .expertiseGrid {
@@ -2283,8 +2372,17 @@
   }
 
   .expLabel h4 {
-    font-size: 18px;
+    font-size: 17px;
   }
+
+  .desc p {
+    font-size: 14px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 230px;
+  }
+
 
 }
 
@@ -2667,7 +2765,7 @@
 }
 
 /* 1440px */
-@media (max-width:1440px) {
+@media (max-width:1400px) {
   .delivery {
     padding: 70px 50px;
   }
@@ -2677,12 +2775,21 @@
   }
 
   .delivCard {
-    height: 300px;
+    height: 330px;
     padding: 24px;
   }
 
+  .deliveryHeader p {
+    max-width: 430px;
+    font-size: 15px;
+  }
+
   .deliverytext h2 {
-    font-size: 50px;
+    font-size: 48px;
+  }
+
+  .delivCard p {
+    font-size: 15px;
   }
 }
 
@@ -3053,7 +3160,7 @@
 
 .faqImg {
   width: 640px;
-  height:480px;
+  height: 480px;
   overflow: hidden;
   position: relative;
   border-radius: 12px;
@@ -3088,18 +3195,74 @@
 
 
 /* 1440px */
+@media (max-width:1440px) {
 
-@media screen and (max-width:1440px) {
+  .faqSec {
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
+  }
 
   .faqText h2 {
-    font-size: 50px;
+    font-size: 48px;
+  }
+
+  .FaqsLine {
+    width: 110px;
+  }
+
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
+  }
+
+  .container {
+    width: 55%;
+    max-width: 600px;
   }
 
   .faqImg {
-    width: 40%;
-    height: 470px;
+    width: 520px !important;
+    min-width: 520px !important;
+    max-width: 520px !important;
+
+    height: 460px !important;
+    min-height: 460px !important;
+    max-height: 460px !important;
+
+    flex: 0 0 520px !important;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
   }
 
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 /* 1366px */
@@ -3517,6 +3680,43 @@
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+
+@media (max-width: 1440px) {
+
+  .cta {
+    padding: 55px 50px;
+    gap: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
 }
 
 @media (max-width:1200px) {
