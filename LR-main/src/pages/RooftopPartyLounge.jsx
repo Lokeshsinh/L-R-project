@@ -93,7 +93,7 @@ const RooftopPartyLounge = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Rooftop Party Lounge<br />
             <span>Rooms for Residential Flats
@@ -335,7 +335,7 @@ const RooftopPartyLounge = () => {
           </div>
           {/*  */}
           <div className={styles.solartext}>
-            <p>L&R Green India Pvt Ltd specializes in advanced prefabricated rooftop solutions that combine
+            <p>L&R Prefab Solar India Pvt Ltd specializes in advanced prefabricated rooftop solutions that combine
               safety, durability, and modern design to create premium rooftop party lounges. With strong
               structural engineering expertise, high-quality materials, safe installation systems, quick
               execution, and fully customized architectural solutions, we deliver reliable and stylish

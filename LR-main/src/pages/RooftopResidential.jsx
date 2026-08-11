@@ -99,7 +99,7 @@ const RooftopResidential = () => {
       {/* ── HERO SECTION ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Rooftop Prefabricated<br />
             <span>Rooms for Residential Flats
@@ -147,7 +147,7 @@ const RooftopResidential = () => {
               space and convert it into fully functional living units, adding both value and usability to the building.
             </p>
             <p>
-              L&R Green India Pvt Ltd provides advanced prefabricated rooftop structures designed with a strong focus
+              L&R Prefab Solar India Pvt Ltd provides advanced prefabricated rooftop structures designed with a strong focus
               on safety, speed, and long-term durability. These systems are engineered to integrate smoothly with existing
               buildings while requiring minimal structural modifications. With lightweight construction and precision
               engineering, they ensure stable performance, modern aesthetics, and comfortable residential spaces built for urban living.
@@ -412,7 +412,7 @@ const RooftopResidential = () => {
         <div className={styles.SolarEpicFLex}>
           {/*  */}
           <div className={styles.solartext}>
-            <p>At L&R Green India Pvt Ltd, we specialize in delivering safe, durable, and high-performance
+            <p>At L&R Prefab Solar India Pvt Ltd, we specialize in delivering safe, durable, and high-performance
               rooftop residential structures using advanced steel engineering and modern prefabrication
               technology. Our focus is on creating reliable solutions that ensure strength, efficiency,
               and long-term value for urban living spaces.</p>

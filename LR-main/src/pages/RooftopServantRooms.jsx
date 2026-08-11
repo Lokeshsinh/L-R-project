@@ -98,14 +98,14 @@ const RooftopServantRooms = () => {
       {/* ── HERO SECTION (Image 1) ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Modern Rooftop  <br />
             <span>Servant Rooms
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green India Pvt Ltd designs and installs lightweight rooftop servant rooms that
+            L&R Prefab Solar India Pvt Ltd designs and installs lightweight rooftop servant rooms that
             transform unused terrace space into fully functional living units with privacy, comfort, and durability.
 
 
@@ -153,7 +153,7 @@ const RooftopServantRooms = () => {
               These units are designed to maximize space utility while ensuring everyday comfort and privacy.
             </p>
             <p>
-              L&R Green India Pvt Ltd provides expertly engineered solutions that require minimal structural modifications
+              L&R Prefab Solar India Pvt Ltd provides expertly engineered solutions that require minimal structural modifications
               to the existing building. These rooftop units are designed for durability, long-term performance, and
               efficient space utilization, ensuring a practical and reliable living solution for staff accommodation.
               They are built with precision to ensure safety, strength, and long-lasting usability in all conditions.
@@ -353,7 +353,7 @@ const RooftopServantRooms = () => {
 
           </div>
           <div className={styles.solartext}>
-            <p>L&R Green India Pvt Ltd is a trusted name in rooftop construction, delivering safe,
+            <p>L&R Prefab Solar India Pvt Ltd is a trusted name in rooftop construction, delivering safe,
               durable, and cost-effective servant room solutions designed for modern urban needs.
               With an expert engineering team, high-quality prefabrication materials, fast execution,
               safe rooftop installation practices, and end-to-end project management, we ensure every

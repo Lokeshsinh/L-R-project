@@ -104,19 +104,29 @@
     transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
     .hero {
-        padding: 4% 5%;
-        height: 75vh;
+        padding: 50px 60px;
+        height: 85vh;
+    }
+
+    .topLabel {
+        font-size: 20px;
+        margin-bottom: 10px;
     }
 
     .mainTitle {
-        font-size: clamp(56px, 4.2vw, 65px);
+        font-size: clamp(48px, 5vw, 58px);
     }
 
     .heroDesc {
-        max-width: 650px;
+        font-size: 16px;
+        max-width: 700px;
+    }
+
+    .btnWhite {
+        width: 240px;
+        height: 52px;
     }
 }
 
@@ -478,7 +488,7 @@
     }
 
     .splitText h2 {
-        font-size: 50px;
+        font-size: 48px;
     }
 
 }
@@ -834,13 +844,53 @@
 }
 
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
 
-    .secText h2 {
-        font-size: 3rem;
+    .showcase {
+        padding: 70px 50px;
     }
 
+    .secHeader {
+        gap: 50px;
+        margin-bottom: 65px;
+    }
+
+    .secText h2 {
+        font-size: 50px;
+    }
+
+    .secDesc {
+        max-width: 450px;
+        font-size: 15px;
+    }
+
+    .expertiseGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .expCard {
+        height: 360px;
+    }
+
+    .expLabel {
+        padding: 19px;
+        height: 70px;
+    }
+
+    .expLabel h4 {
+        font-size: 19px;
+    }
+
+    .expCard:hover .expLabel {
+        height: 175px;
+    }
+
+    .desc p {
+        font-size: 14px;
+    }
 }
+
 
 
 @media (max-width:1200px) {
@@ -1261,7 +1311,7 @@
     max-width: 700px;
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
     .PEBStructure {
         padding: 70px 40px;
@@ -1273,7 +1323,7 @@
 
     .mediaContainer {
         width: 560px;
-        height: 420px;
+        height: 430px;
     }
 
     .PEBStructurePara {
@@ -1482,7 +1532,7 @@
     }
 
     .PEBStructureTExt h2 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .productsDivider {
@@ -1613,7 +1663,7 @@
 
 .mfgText p {
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.6;
     color: rgba(255, 255, 255, .85);
 }
 
@@ -1667,24 +1717,44 @@
     background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
-
-    .scrollTrack h1 {
-        font-size: 75px;
+@media (max-width:1440px) {
+    .mfgBand {
+        width: 100%;
+        height: 370px;
     }
 
     .mfgText h2 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .mfgImgWrapper {
         width: 40%;
-        height: 320px;
+        height: 300px;
+        bottom: 33px;
     }
 
     .LastImage img {
         width: 260px;
-        height: 210px;
+        height: 260px;
+    }
+
+    .mfgText p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .mfgText {
+        max-width: 700px;
+    }
+
+    .mfgText p {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .LastImage {
+        left: -7%;
+        bottom: 40%;
     }
 
 }
@@ -2058,228 +2128,280 @@ process
 }
 
 
-@media (max-width:1400px) {
-  .processSec {
-    padding: 70px 40px;
-  }
+@media (max-width: 1440px) {
 
-  .grid {
-    gap: 24px;
-  }
+    .processSec {
+        width: 100%;
+        padding: 65px 45px;
+    }
 
-  .card {
-    min-height: 360px;
-    padding: 28px;
-  }
+    .secHeaders {
+        margin-bottom: 65px;
+        gap: 40px;
+    }
 
-  .secTexts h2 {
-    font-size: 48px;
-  }
+    .secTexts h2 {
+        font-size: 46px;
+        line-height: 1.18;
+    }
+
+    .productsDividers {
+        width: 105px;
+        height: 3px;
+    }
+
+    .secHeaders p {
+        max-width: 440px;
+        font-size: 14.5px;
+        line-height: 1.7;
+        padding-top: 5px;
+    }
+
+    .grid {
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        min-height: 350px;
+        padding: 26px 24px;
+        border-radius: 20px;
+    }
+
+
+    .step {
+        right: 15px;
+        top: 10px;
+        font-size: 70px;
+    }
+
+
+    .iconBoxs {
+        width: 70px;
+        height: 70px;
+        border-radius: 18px;
+        margin-bottom: 24px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        line-height: 1.35;
+        margin-bottom: 14px;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
 }
-
 
 @media (max-width:1200px) {
 
-  .processSec {
-    padding: 65px 35px;
-  }
+    .processSec {
+        padding: 65px 35px;
+    }
 
-  .secHeaders {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 60px;
-  }
+    .secHeaders {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
 
-  .secHeaders p {
-    max-width: 100%;
-    padding-top: 0;
-  }
+    .secHeaders p {
+        max-width: 100%;
+        padding-top: 0;
+    }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 
-  .secTexts h2 {
-    font-size: 42px;
-  }
+    .secTexts h2 {
+        font-size: 42px;
+    }
 
-  .card {
-    min-height: 340px;
-  }
+    .card {
+        min-height: 340px;
+    }
 }
 
 @media (max-width:992px) {
 
-  .processSec {
-    padding: 60px 28px;
-  }
+    .processSec {
+        padding: 60px 28px;
+    }
 
-  .grid {
-    gap: 22px;
-  }
+    .grid {
+        gap: 22px;
+    }
 
-  .card {
-    min-height: auto;
-    padding: 26px;
-  }
+    .card {
+        min-height: auto;
+        padding: 26px;
+    }
 
-  .iconBoxs {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 22px;
-  }
+    .iconBoxs {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 22px;
+    }
 
-  .card h3 {
-    font-size: 20px;
-  }
+    .card h3 {
+        font-size: 20px;
+    }
 
-  .card p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
+    .card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
 
-  .step {
-    font-size: 70px;
-  }
+    .step {
+        font-size: 70px;
+    }
 
-  .secTexts h2 {
-    font-size: 38px;
-  }
+    .secTexts h2 {
+        font-size: 38px;
+    }
 }
 
 
 @media (max-width:768px) {
 
-  .processSec {
-    padding: 55px 20px;
-  }
+    .processSec {
+        padding: 55px 20px;
+    }
 
-  .secHeaders {
-    gap: 22px;
-    margin-bottom: 45px;
-  }
+    .secHeaders {
+        gap: 22px;
+        margin-bottom: 45px;
+    }
 
-  .secTexts h2 {
-    font-size: 32px;
-  }
+    .secTexts h2 {
+        font-size: 32px;
+    }
 
-  .productsDividers {
-    width: 90px;
-  }
+    .productsDividers {
+        width: 90px;
+    }
 
-  .secHeaders p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
+    .secHeaders p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
 
-  .card {
-    padding: 24px;
-    border-radius: 18px;
-  }
+    .card {
+        padding: 24px;
+        border-radius: 18px;
+    }
 
-  .iconBoxs {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-  }
+    .iconBoxs {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+    }
 
-  .card h3 {
-    font-size: 20px;
-  }
+    .card h3 {
+        font-size: 20px;
+    }
 
-  .card p {
-    font-size: 15px;
-  }
+    .card p {
+        font-size: 15px;
+    }
 
-  .step {
-    font-size: 60px;
-  }
+    .step {
+        font-size: 60px;
+    }
 }
 
 @media (max-width:576px) {
 
-  .processSec {
-    padding: 50px 16px;
-  }
+    .processSec {
+        padding: 50px 16px;
+    }
 
-  .secTexts h2 {
-    font-size: 28px;
-  }
+    .secTexts h2 {
+        font-size: 28px;
+    }
 
-  .productsDividers {
-    width: 80px;
-    height: 2px;
-  }
+    .productsDividers {
+        width: 80px;
+        height: 2px;
+    }
 
-  .secHeaders p {
-    font-size: 14px;
-  }
+    .secHeaders p {
+        font-size: 14px;
+    }
 
-  .card {
-    padding: 22px 18px;
-    min-height: auto;
-  }
+    .card {
+        padding: 22px 18px;
+        min-height: auto;
+    }
 
-  .iconBoxs {
-    width: 58px;
-    height: 58px;
-    margin-bottom: 18px;
-  }
+    .iconBoxs {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 18px;
+    }
 
-  .card h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
 
-  .card p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
+    .card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
 
-  .step {
-    top: 10px;
-    right: 12px;
-    font-size: 48px;
-  }
+    .step {
+        top: 10px;
+        right: 12px;
+        font-size: 48px;
+    }
 }
 
 @media (max-width:420px) {
 
-  .processSec {
-    padding: 45px 14px;
-  }
+    .processSec {
+        padding: 45px 14px;
+    }
 
-  .secTexts h2 {
-    font-size: 24px;
-  }
+    .secTexts h2 {
+        font-size: 24px;
+    }
 
-  .card {
-    padding: 20px 16px;
-  }
+    .card {
+        padding: 20px 16px;
+    }
 
-  .iconBoxs {
-    width: 54px;
-    height: 54px;
-  }
+    .iconBoxs {
+        width: 54px;
+        height: 54px;
+    }
 
-  .card h3 {
-    font-size: 17px;
-  }
+    .card h3 {
+        font-size: 17px;
+    }
 
-  .card p {
-    font-size: 13.5px;
-  }
+    .card p {
+        font-size: 13.5px;
+    }
 
-  .step {
-    font-size: 42px;
-  }
+    .step {
+        font-size: 42px;
+    }
 }
 
 
@@ -2394,222 +2516,224 @@ process
     background: #1d3760;
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
-  .whyPEBEnginer {
-    padding: 70px 40px;
-  }
+    .whyPEBEnginer {
+        padding: 70px 40px;
+    }
 
-  .whyPEBEnginerTitle h2 {
-    font-size: 48px;
-  }
+    .whyPEBEnginerTitle h2 {
+        font-size: 48px;
+    }
 
-  .imageBox {
-    width: 560px;
-    height: 420px;
-  }
+    .imageBox {
+        width: 560px;
+        height: 420px;
+    }
 
-  .pebEnginerPara {
-    max-width: 550px;
-  }
-  .pebEnginerPara p{
-    font-size: 16px;
-  }
+    .pebEnginerPara {
+        max-width: 550px;
+    }
+
+    .pebEnginerPara p {
+        font-size: 16px;
+    }
 }
 
 @media (max-width:1200px) {
 
-  .whyPEBEnginer {
-    padding: 65px 35px;
-  }
+    .whyPEBEnginer {
+        padding: 65px 35px;
+    }
 
-  .whyPEBEnginerFlex {
-    gap: 45px;
-    align-items: flex-start;
-  }
+    .whyPEBEnginerFlex {
+        gap: 45px;
+        align-items: flex-start;
+    }
 
-  .whyPEBEnginerTitle h2 {
-    font-size: 42px;
-  }
+    .whyPEBEnginerTitle h2 {
+        font-size: 42px;
+    }
 
-  .imageBox {
-    width: 490px;
-    height: 450px;
-  }
+    .imageBox {
+        width: 490px;
+        height: 450px;
+    }
 
-  .featuredPhoto,
-  .imageBox::after {
-    border-radius: 24px;
-  }
+    .featuredPhoto,
+    .imageBox::after {
+        border-radius: 24px;
+    }
 
-  .badgeBar {
-    width: 34px;
-    left: -16px;
-  }
+    .badgeBar {
+        width: 34px;
+        left: -16px;
+    }
 
-  .pebEnginerPara {
-    max-width: 520px;
-  }
+    .pebEnginerPara {
+        max-width: 520px;
+    }
 }
+
 @media (max-width:992px) {
 
-  .whyPEBEnginer {
-    padding: 60px 28px;
-  }
+    .whyPEBEnginer {
+        padding: 60px 28px;
+    }
 
-  .whyPEBEnginerTitle {
-    margin-bottom: 45px;
-  }
+    .whyPEBEnginerTitle {
+        margin-bottom: 45px;
+    }
 
-  .whyPEBEnginerTitle h2 {
-    font-size: 38px;
-  }
+    .whyPEBEnginerTitle h2 {
+        font-size: 38px;
+    }
 
-  .whyPEBEnginerFlex {
-    flex-direction: column-reverse;
-    gap: 35px;
-  }
+    .whyPEBEnginerFlex {
+        flex-direction: column-reverse;
+        gap: 35px;
+    }
 
-  .imageBox {
-    width: 100%;
-    max-width: 650px;
-    height: 400px;
-    margin: 0 auto;
-  }
+    .imageBox {
+        width: 100%;
+        max-width: 650px;
+        height: 400px;
+        margin: 0 auto;
+    }
 
-  .pebEnginerPara {
-    max-width: 100%;
-  }
+    .pebEnginerPara {
+        max-width: 100%;
+    }
 
-  .pebEnginerPara p {
-    font-size: 16px;
-  }
+    .pebEnginerPara p {
+        font-size: 16px;
+    }
 }
 
 @media (max-width:768px) {
 
-  .whyPEBEnginer {
-    padding: 55px 20px;
-  }
+    .whyPEBEnginer {
+        padding: 55px 20px;
+    }
 
-  .whyPEBEnginerTitle {
-    margin-bottom: 35px;
-  }
+    .whyPEBEnginerTitle {
+        margin-bottom: 35px;
+    }
 
-  .whyPEBEnginerTitle h2 {
-    font-size: 32px;
-  }
+    .whyPEBEnginerTitle h2 {
+        font-size: 32px;
+    }
 
-  .productsDivider {
-    width: 90px;
-  }
+    .productsDivider {
+        width: 90px;
+    }
 
-  .imageBox {
-    height: 330px;
-  }
+    .imageBox {
+        height: 330px;
+    }
 
-  .featuredPhoto,
-  .imageBox::after {
-    border-radius: 18px;
-  }
+    .featuredPhoto,
+    .imageBox::after {
+        border-radius: 18px;
+    }
 
-  .badgeBar {
-    width: 30px;
-    left: -10px;
-    top: 18px;
-    border-radius: 18px;
-  }
+    .badgeBar {
+        width: 30px;
+        left: -10px;
+        top: 18px;
+        border-radius: 18px;
+    }
 
-  .imageBox:hover .badgeBar {
-    width: 36px;
-  }
+    .imageBox:hover .badgeBar {
+        width: 36px;
+    }
 
-  .pebEnginerPara {
-    gap: 16px;
-  }
+    .pebEnginerPara {
+        gap: 16px;
+    }
 
-  .pebEnginerPara p {
-    font-size: 15px;
-    line-height: 1.75;
-  }
+    .pebEnginerPara p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
 }
 
 @media (max-width:576px) {
 
-  .whyPEBEnginer {
-    padding: 50px 16px;
-  }
+    .whyPEBEnginer {
+        padding: 50px 16px;
+    }
 
-  .whyPEBEnginerTitle h2 {
-    font-size: 28px;
-  }
+    .whyPEBEnginerTitle h2 {
+        font-size: 28px;
+    }
 
-  .productsDivider {
-    width: 80px;
-    height: 2px;
-  }
+    .productsDivider {
+        width: 80px;
+        height: 2px;
+    }
 
-  .imageBox {
-    height: 260px;
-  }
+    .imageBox {
+        height: 260px;
+    }
 
-  .featuredPhoto,
-  .imageBox::after {
-    border-radius: 14px;
-  }
+    .featuredPhoto,
+    .imageBox::after {
+        border-radius: 14px;
+    }
 
-  .badgeBar {
-    width: 22px;
-    left: -6px;
-    top: 14px;
-    height: calc(100% - 28px);
-    border-radius: 14px;
-  }
+    .badgeBar {
+        width: 22px;
+        left: -6px;
+        top: 14px;
+        height: calc(100% - 28px);
+        border-radius: 14px;
+    }
 
-  .imageBox:hover .badgeBar {
-    width: 28px;
-  }
+    .imageBox:hover .badgeBar {
+        width: 28px;
+    }
 
-  .pebEnginerPara p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
+    .pebEnginerPara p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
 }
 
 @media (max-width:420px) {
 
-  .whyPEBEnginer {
-    padding: 45px 14px;
-  }
+    .whyPEBEnginer {
+        padding: 45px 14px;
+    }
 
-  .whyPEBEnginerTitle h2 {
-    font-size: 24px;
-  }
+    .whyPEBEnginerTitle h2 {
+        font-size: 24px;
+    }
 
-  .imageBox {
-    height: 220px;
-  }
+    .imageBox {
+        height: 220px;
+    }
 
-  .featuredPhoto,
-  .imageBox::after {
-    border-radius: 12px;
-  }
+    .featuredPhoto,
+    .imageBox::after {
+        border-radius: 12px;
+    }
 
-  .badgeBar {
-    width: 18px;
-    left: -4px;
-    top: 12px;
-    border-radius: 12px;
-  }
+    .badgeBar {
+        width: 18px;
+        left: -4px;
+        top: 12px;
+        border-radius: 12px;
+    }
 
-  .imageBox:hover .badgeBar {
-    width: 22px;
-  }
+    .imageBox:hover .badgeBar {
+        width: 22px;
+    }
 
-  .pebEnginerPara p {
-    font-size: 13.5px;
-    line-height: 1.65;
-  }
+    .pebEnginerPara p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
 }
 
 
@@ -2822,29 +2946,64 @@ FAQ SECtion
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
     .faqSec {
-        padding: 70px 4%;
+        padding: 65px 50px;
+    }
+
+    .faqHeader {
+        margin-top: 15px;
+        margin-bottom: 40px;
+        gap: 50px;
     }
 
     .faqText h2 {
         font-size: 48px;
     }
 
-    .faqBody {
-        gap: 40px;
+    .FaqsLine {
+        width: 110px;
     }
 
-    .faqImg {
-        width: 45%;
-        height: 500px;
+    .faqHeader p {
+        max-width: 450px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .faqBody {
+        gap: 35px;
     }
 
     .container {
-        width: 50%;
+        width: 55%;
+        max-width: 600px;
     }
 
+    .faqImg {
+        width: 520px;
+        height: 480px;
+        border-radius: 12px;
+    }
+
+    .question {
+        height: 66px;
+        padding: 0 25px;
+    }
+
+    .question h3 {
+        font-size: 17px;
+    }
+
+    .answer {
+        padding: 0 25px 24px;
+    }
+
+    .answer p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width:1200px) {
@@ -3170,6 +3329,43 @@ FAQ SECtion
 
 .btnBlue:hover {
     background: #2550a0;
+}
+
+
+@media (max-width: 1440px) {
+
+    .cta {
+        padding: 55px 50px;
+        gap: 10px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .cta h2 {
+        font-size: 46px;
+        line-height: 1.25;
+        text-align: center;
+        margin: 0;
+    }
+
+    .cta p {
+        max-width: 560px;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+
+    .contactBtn {
+        width: 240px;
+        height: 52px;
+        padding: 0 24px;
+        gap: 10px;
+    }
+
+    .contactText {
+        font-size: 15px;
+    }
 }
 
 @media (max-width:1200px) {
