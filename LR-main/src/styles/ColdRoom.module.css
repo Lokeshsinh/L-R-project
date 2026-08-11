@@ -112,21 +112,33 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
+
+
 
 @media (max-width:1200px) {
 
@@ -449,7 +461,7 @@
 
 .imageWrapper {
   width: 650px;
-  height: 565px;
+  height: 550px;
 
 }
 
@@ -481,11 +493,11 @@
 @media (max-width:1440px) {
 
   .splitText h2 {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
-  .imageWrapper {
-    width: 550px;
+  .textSide {
+    max-width: 580px;
   }
 
   .textSide p {
@@ -493,17 +505,11 @@
   }
 
   .imageWrapper {
-    height: 600px;
+    width: 530px;
+    height: 575px;
   }
 
 }
-
-@media (max-width: 1300px) {
-  .textSide {
-    max-width: 500px;
-  }
-}
-
 
 @media (max-width:1200px) {
 
@@ -863,12 +869,28 @@
 
 @media (max-width:1440px) {
 
+  .showcase {
+    padding: 70px 40px;
+  }
+
+  .showcase p {
+    font-size: 14px;
+  }
+
   .secText h2 {
-    font-size: 3rem;
+    font-size: 48px;
+  }
+
+  .expertiseGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .expCard {
+    height: 360px;
   }
 
 }
-
 
 @media (max-width:1200px) {
 
@@ -1230,15 +1252,20 @@
 @media (max-width:1440px) {
 
   .advantageText h2 {
-    font-size: 3rem;
+    font-size: 48px;
   }
 
   .advImg {
     width: 500px;
+    height: 460px;
   }
 
   .advText {
     max-width: 550px;
+  }
+
+  .advText p {
+    font-size: 16px;
   }
 
 }
@@ -1316,112 +1343,195 @@
 
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
   .advantage {
     padding: 50px 22px;
   }
 
+  .advantageFlex {
+    gap: 30px;
+  }
+
+  .advImg {
+    width: 100%;
+    height: 360px;
+    border-radius: 9px;
+  }
+
+  .advText {
+    width: 100%;
+    gap: 18px;
+  }
+
+  .advantageText {
+    gap: 8px;
+  }
+
   .advantageText h2 {
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.3;
+    margin-top: 0;
   }
 
   .introLine {
     width: 90px;
-  }
-
-  .advText {
-    gap: 18px;
+    height: 3px;
   }
 
   .advText p {
     font-size: 15px;
     line-height: 1.7;
   }
-
 }
 
+@media (max-width: 576px) {
 
-@media (max-width:600px) {
+    .advantage {
+        padding: 45px 18px;
+    }
 
-  .advantage {
-    padding: 45px 18px;
-  }
+    .advantageFlex {
+        gap: 25px;
+    }
 
-  .advantageText h2 {
-    font-size: 1.8rem;
-  }
+    .advImg {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+    }
 
-  .advText p {
-    font-size: 14px;
-  }
+    .advantageText h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
 
+    .introLine {
+        width: 80px;
+    }
+
+    .advText {
+        gap: 16px;
+    }
+
+    .advText p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
 }
-
 
 /* ==========================
    Mobile (480px)
 ========================== */
-@media (max-width:480px) {
 
-  .advantage {
-    padding: 40px 16px;
-  }
+@media (max-width: 480px) {
 
-  .advantageText h2 {
-    font-size: 1.6rem;
-    line-height: 1.3;
-  }
+    .advantage {
+        padding: 40px 16px;
+    }
 
-  .introLine {
-    width: 75px;
-  }
+    .advantageFlex {
+        gap: 22px;
+    }
 
-  .advText p {
-    font-size: 13px;
-    line-height: 1.7;
-  }
+    .advImg {
+        width: 100%;
+        height: 250px;
+        border-radius: 8px;
+    }
 
+    .advantageText {
+        gap: 8px;
+    }
+
+    .advantageText h2 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .introLine {
+        width: 75px;
+        height: 3px;
+    }
+
+    .advText {
+        gap: 14px;
+    }
+
+    .advText p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .advantage {
+        padding: 35px 14px;
+    }
+
+    .advantageFlex {
+        gap: 20px;
+    }
+
+    .advImg {
+        width: 100%;
+        height: 215px;
+    }
+
+    .advantageText h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .introLine {
+        width: 70px;
+    }
+
+    .advText {
+        gap: 12px;
+    }
+
+    .advText p {
+        font-size: 12.5px;
+        line-height: 1.65;
+    }
 }
 
 
-@media (max-width:375px) {
 
-  .advantage {
-    padding: 35px 14px;
-  }
+@media (max-width: 320px) {
 
-  .advantageText h2 {
-    font-size: 1.45rem;
-  }
+    .advantage {
+        padding: 30px 12px;
+    }
 
-  .advText p {
-    font-size: 12.5px;
-  }
+    .advantageFlex {
+        gap: 18px;
+    }
 
-}
+    .advImg {
+        width: 100%;
+        height: 185px;
+    }
 
+    .advantageText h2 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
 
-@media (max-width:320px) {
+    .introLine {
+        width: 60px;
+    }
 
-  .advantage {
-    padding: 30px 12px;
-  }
+    .advText {
+        gap: 10px;
+    }
 
-  .advantageText h2 {
-    font-size: 1.25rem;
-  }
-
-  .introLine {
-    width: 65px;
-  }
-
-  .advText p {
-    font-size: 12px;
-    line-height: 1.6;
-  }
-
+    .advText p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
 }
 
 /* ─── STRENGTH ───────────────────────────────────────────── */
@@ -1556,23 +1666,44 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-
-@media (max-width: 1400px) {
-  .mfgImgWrapper {
-    width: 470px;
-    height: 320px;
-    bottom: 30px;
-    flex-shrink: 0;
+@media (max-width:1440px) {
+  .mfgBand {
+    width: 100%;
+    height: 370px;
   }
 
   .mfgText h2 {
-    font-size: 42px;
+    font-size: 48px;
+  }
+
+  .mfgImgWrapper {
+    width: 40%;
+    height: 300px;
+    bottom: 33px;
   }
 
   .LastImage img {
-    position: absolute;
-    bottom: -220px;
-    height: auto;
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 600px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 30%;
   }
 
 }
@@ -2014,14 +2145,17 @@
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
+  .processSec {
+    padding: 70px 40px;
+  }
 
   .processText h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
 
   .leftSide {
-    height: 605px;
+    height: 596px;
   }
 
   .circle {
@@ -2031,6 +2165,15 @@
 
   .line {
     height: 82px;
+  }
+
+  .content h3 {
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 13px;
+    line-height: 24px;
   }
 
 }
@@ -2491,26 +2634,88 @@
 }
 
 
+@media (max-width:1600px) {
 
-
-@media (max-width: 1400px) {
   .faqSec {
-    padding: 70px 4%;
+    padding: 72px 4%;
+  }
+
+  .faqBody {
+    gap: 50px;
   }
 
   .faqImg {
     width: 46%;
-    height: 450px;
+    height: 480px;
   }
 
   .container {
-    max-width: 50%;
+    width: 50%;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width:1440px) {
+
+  .faqSec {
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
-    font-size: 50px;
+    font-size: 48px;
+  }
+
+  .FaqsLine {
+    width: 110px;
+  }
+
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
+  }
+
+  .container {
+    width: 55%;
+    max-width: 600px;
+  }
+
+  .faqImg {
+    width: 520px;
+    height: 460px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
   }
 }
+
 
 @media (max-width:1200px) {
 
@@ -2865,6 +3070,42 @@
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+@media (max-width: 1440px) {
+
+  .cta {
+    padding: 55px 50px;
+    gap: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
 }
 
 @media (max-width:1200px) {

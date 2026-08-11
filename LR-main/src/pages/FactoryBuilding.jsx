@@ -110,7 +110,7 @@ const FactoryBuilding = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Advanced Factory  <br />
             <span>Building Solutions</span>
@@ -134,7 +134,7 @@ const FactoryBuilding = () => {
         <div className={styles.introGrid}>
           <div className={styles.introContent}>
             <p>
-              L&R Green India Pvt Ltd specializes in designing and manufacturing prefabricated
+              L&R Prefab Solar India Pvt Ltd specializes in designing and manufacturing prefabricated
               factory buildings that support efficient production, streamlined operations, and
               long-term industrial performance. Our factory structures are built using high-grade steel
               frameworks and precision engineering to ensure durability, safety, and adaptability across various manufacturing sectors.
@@ -238,7 +238,7 @@ const FactoryBuilding = () => {
             </h2>
 
             <p>
-              L&R Enterprises utilizes advanced fabrication facilities
+              L&R Prefab Solar India utilizes advanced fabrication facilities
               equipped with CNC machinery, automated welding systems,
               and precision engineering processes to manufacture industrial
               sheds that meet high standards of strength, accuracy, and performance.
@@ -268,8 +268,8 @@ const FactoryBuilding = () => {
             <div className={styles.introLine}></div>
           </div>
           <p>
-            The Warehouse Process ensures efficient execution from design and
-            fabrication to quality assurance and final project handover.
+            The Warehouse Process ensures efficient execution from design and fabrication
+            to quality assurance and final project handover.
           </p>
         </div>
         <div className={styles.processBody}>

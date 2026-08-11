@@ -116,12 +116,12 @@ const IndustrialSheds = () => {
       {/* 1. HERO SECTION (image_bd3717_2.jpg top) */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Performance Industrial   <br />
             <span>Shed Solutions</span>
           </h1>
-          <p className={styles.heroDesc}>Engineered for strength, efficiency, and durability — L&R Enterprises delivers robust
+          <p className={styles.heroDesc}>Engineered for strength, efficiency, and durability — L&R Prefab Solar delivers robust
             prefabricated industrial sheds for modern manufacturing and industrial operations.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -145,7 +145,7 @@ const IndustrialSheds = () => {
               <div className={styles.introLine}></div>
             </div>
             <p>
-              L&R Green India Pvt Ltd is a trusted manufacturer of pre-engineered industrial sheds
+              L&R Prefab Solar India Pvt Ltd is a trusted manufacturer of pre-engineered industrial sheds
               designed to support diverse industrial and manufacturing operations. Our sheds are
               built using high-grade steel structures and advanced engineering techniques to ensure
               durability, structural stability, and long-term performance even in demanding environments.

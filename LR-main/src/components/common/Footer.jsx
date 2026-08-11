@@ -26,9 +26,9 @@ const Footer = () => {
       {/* Top Header Section */}
       <div className="footer-top-head">
         <div className="marquee">
-          <h1>LET'S CONNECT L&R GREEN INDIA</h1>
-          <h1>LET'S CONNECT L&R GREEN INDIA</h1>
-          <h1>LET'S CONNECT L&R GREEN INDIA</h1>
+          <h1>LET'S CONNECT L&R PREFAB SOLAR INDIA PRIVATE LIMITED</h1>
+          <h1>LET'S CONNECT L&R PREFAB SOLAR INDIA PRIVATE LIMITED</h1>
+          <h1>LET'S CONNECT L&R PREFAB SOLAR INDIA PRIVATE LIMITED</h1>
         </div>
         <div className="footer-divider" />
       </div>

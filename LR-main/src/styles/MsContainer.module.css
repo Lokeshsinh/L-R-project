@@ -3231,18 +3231,8 @@
   }
 
   .faqImg {
-    width: 520px !important;
-    min-width: 520px !important;
-    max-width: 520px !important;
-
-    height: 460px !important;
-    min-height: 460px !important;
-    max-height: 460px !important;
-
-    flex: 0 0 520px !important;
-
-    position: relative;
-    overflow: hidden;
+    width: 520px;
+    height: 460px;
     border-radius: 12px;
   }
 

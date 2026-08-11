@@ -232,7 +232,7 @@ function PreBuild() {
                             <h2>Industrial Shed<br /><span>Project Showcase</span></h2>
                             <div className={styles.productsDivider}></div>
                         </div>
-                        <p className={styles.secDesc}>Strong, scalable, and customizable industrial sheds built for heavy-duty performance and long-term reliability.</p>
+                        <p className={styles.secDesc}>Versatile steel building solutions designed for industrial, commercial, institutional, agricultural, and specialized infrastructure projects.</p>
                     </div>
                     <div className={styles.expertiseGrid}>
                         {industryProjects.map((item, index) => (
@@ -453,7 +453,7 @@ function PreBuild() {
                             <h2>Frequently Asked<br /><span>Questions</span></h2>
                             <div className={styles.FaqsLine}></div>
                         </div>
-                        <p>Find answers to common questions about our warehouse solutions, design process, and performance benefits.</p>
+                        <p>Find answers to common questions about our Pre-engineered Building solutions, design process, and performance benefits.</p>
                     </div>
                     <div className={styles.faqBody}>
                         <div className={styles.faqImg}>

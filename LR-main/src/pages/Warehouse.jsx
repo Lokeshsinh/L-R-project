@@ -114,13 +114,13 @@ const Warehouse = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Strong & Scalable  <br />
             <span>Warehousing Solutions</span>
           </h1>
           <p className={styles.heroDesc}>Accelerate your storage and logistics operations with
-            L&R Enterprises’ Pre-Engineered Warehouse Solutions, built for durability and rapid deployment.
+            L&R Prefab Solar India Pre-Engineered Warehouse Solutions, built for durability and rapid deployment.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
             <span>Contact Us</span>
@@ -144,7 +144,7 @@ const Warehouse = () => {
               <h2>L&amp;R<br /><span>Warehouse</span></h2>
               <div className={styles.introLine}></div>
             </div>
-            <p>L&amp;R Green India Pvt Ltd specialises in designing and manufacturing high-performance pre-engineered warehouses that meet the evolving needs of modern industries. With advanced engineering practices and dedicated expertise, our warehouse solutions deliver durability, flexibility, and optimal space utilization.</p>
+            <p>L&amp;R Prefab Solar India Pvt Ltd specialises in designing and manufacturing high-performance pre-engineered warehouses that meet the evolving needs of modern industries. With advanced engineering practices and dedicated expertise, our warehouse solutions deliver durability, flexibility, and optimal space utilization.</p>
             <p>Our warehouses are built using high-grade steel structures and modular construction techniques, enabling reduced costs. From planning to installation, we provide end-to-end solutions tailored to your storage, logistics, and industrial space requirements.</p>
             <button className={styles.btnOutline} onClick={() => {
               navigate("/contact");
@@ -207,7 +207,7 @@ const Warehouse = () => {
               <h2>L&amp;R Advantage<br /><span>Warehouse</span></h2>
               <div className={styles.introLine}></div>
             </div>
-            <p>L&R Green India Pvt Ltd   delivers warehouses that combine advanced engineering with practical functionality.
+            <p>L&R Prefab Solar India Pvt Ltd   delivers warehouses that combine advanced engineering with practical functionality.
               Our pre-engineered structures are designed to provide large column-free spaces, ensuring maximum storage
               capacity and operational flexibility. With precision manufacturing and modular components, we significantly
               reduce construction timelines.</p>

@@ -107,7 +107,7 @@ const ColdRoom = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R  PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             L&R Cold    <br />
             <span>Room Solutions</span>
@@ -142,7 +142,7 @@ const ColdRoom = () => {
               <div className={styles.introLine}></div>
             </div>
             <p>
-              L&R Green India Pvt Ltd specializes in manufacturing high-performance prefabricated cold rooms designed
+              L&R Prefab Solar India Pvt Ltd specializes in manufacturing high-performance prefabricated cold rooms designed
               for temperature-sensitive storage across industries such as food processing, pharmaceuticals, agriculture,
               and logistics. Our cold room solutions are engineered to maintain precise temperature control,
               product quality, safety, and extended shelf life.
@@ -244,7 +244,7 @@ const ColdRoom = () => {
               Manufacturing Excellence
             </h2>
             <p>
-              L&R Green India Pvt Ltd  operates modern manufacturing facilities equipped with precision engineering tools,
+              L&R Prefab Solar India Pvt Ltd  operates modern manufacturing facilities equipped with precision engineering tools,
               advanced panel fabrication systems, and strict quality control processes, ensuring every cold room delivers
               superior insulation performance, durability, and energy efficiency.
             </p>
