@@ -121,14 +121,14 @@ const RockwoolPanels = () => {
       {/* ── HERO SECTION ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Prefab Solar India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             Resistant Rock<br />
             <span>wool  Panels
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            At L&R Green Pvt Ltd, we deliver high-performance Rockwool panels designed for demanding
+            At L&R Prefab Solar India Pvt Ltd, we deliver high-performance Rockwool panels designed for demanding
             industrial, commercial, and specialized environments.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -162,7 +162,7 @@ const RockwoolPanels = () => {
               maintain stable indoor temperatures.
             </p>
             <p>
-              At L&R Green Pvt Ltd, our Rockwool panels are designed to deliver superior acoustic insulation along with
+              At L&R Prefab Solar India Pvt Ltd, our Rockwool panels are designed to deliver superior acoustic insulation along with
               durability and moisture resistance. The fibrous structure effectively absorbs sound, making them ideal for
               walls, roofs, and cleanroom applications across industrial and commercial environments.
             </p>
@@ -206,7 +206,7 @@ const RockwoolPanels = () => {
             Advanced Features &<br />
             <span>Performance Highlights</span>
           </h2>
-          <div className={styles.rockwoolDivider}></div>
+          <div className={styles.introLine} />
         </div>
 
         <div className={styles.rockwoolContentWrapper}>
@@ -288,7 +288,7 @@ const RockwoolPanels = () => {
               Excellence
             </h2>
             <p>
-              At L&R Green Pvt Ltd, Rockwool panels are manufactured under strict quality checks,
+              At L&R Prefab Solar Inida Pvt Ltd, Rockwool panels are manufactured under strict quality checks,
               including density testing, thickness accuracy, bonding strength, and coating inspection.
               This ensures consistent performance, durability, and safety in every panel delivered.
             </p>
@@ -332,7 +332,7 @@ const RockwoolPanels = () => {
 
           <div className={styles.epsContent}>
             <p>
-              Rockwool panels from L&R Green Pvt Ltd are used across industrial and commercial
+              Rockwool panels from L&R Prefab Solar India Pvt Ltd are used across industrial and commercial
               spaces for fire safety, insulation, and sound control.
             </p>
             <ul>
@@ -382,7 +382,7 @@ const RockwoolPanels = () => {
         <div className={styles.secTitle}>
           <h2>
             Why Choose<br />
-            <span>L&R Green Pvt Ltd</span>
+            <span>L&R Prefab Solar India Pvt Ltd</span>
           </h2>
           <div className={styles.introLine}></div>
         </div>
@@ -390,7 +390,7 @@ const RockwoolPanels = () => {
           <div className={styles.advContainer}>
             <div className={styles.advText}>
               <p>
-                At L&R Green Pvt Ltd, we focus on delivering high-quality Rockwool panel solutions with precision manufacturing,
+                At L&R Prefab Solar India Pvt Ltd, we focus on delivering high-quality Rockwool panel solutions with precision manufacturing,
                 reliable supply, and customer-focused support to meet diverse project requirements.
               </p>
               <div className={styles.featureListWrap}>

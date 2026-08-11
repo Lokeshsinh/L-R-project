@@ -106,21 +106,32 @@
     transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
     .hero {
-        padding: 4% 5%;
-        height: 75vh;
+        padding: 50px 60px;
+        height: 85vh;
+    }
+
+    .topLabel {
+        font-size: 20px;
+        margin-bottom: 10px;
     }
 
     .mainTitle {
-        font-size: clamp(56px, 4.2vw, 65px);
+        font-size: clamp(48px, 5vw, 58px);
     }
 
     .heroDesc {
-        max-width: 650px;
+        font-size: 16px;
+        max-width: 700px;
+    }
+
+    .btnWhite {
+        width: 240px;
+        height: 52px;
     }
 }
+
 
 @media (max-width:1200px) {
 
@@ -486,7 +497,7 @@
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
     .introSec {
         padding: 70px 45px;
@@ -504,9 +515,13 @@
         max-width: 600px;
     }
 
+    .introText p {
+        font-size: 16px;
+    }
+
     .structureCard {
         width: 560px;
-        height: 380px;
+        height: 400px;
         flex-shrink: 0;
     }
 
@@ -546,8 +561,8 @@
     }
 
     .structureCard {
-        width: 550px;
-        height: 450px;
+        width: 560px;
+        height: 480px;
     }
 
     .structureSidePanel {
@@ -557,7 +572,7 @@
 
     .structureImageWrapper {
         width: 500px;
-        height: 450px;
+        height: 460px;
         left: 30px;
     }
 
@@ -974,25 +989,62 @@
     background: #243B66;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
 
     .siteSec {
-        padding: 70px 5%;
+        padding: 70px 50px;
     }
 
-    .galleryGrid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
+    .siteHeader {
+        margin-bottom: 65px;
+        gap: 50px;
     }
 
     .siteText h2 {
         font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .FaqsLine {
+        width: 110px;
+        height: 3px;
+    }
+
+    .siteHeader p {
+        max-width: 440px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Cards */
+    .galleryGrid {
+        max-width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .galleryCard {
+        border-radius: 14px;
     }
 
     .galleryImageWrapper {
         height: 180px;
     }
 
+    .galleryContent {
+        padding: 22px 16px 24px;
+        min-height: 140px;
+    }
+
+    .galleryTitle {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .galleryDescription {
+        font-size: 14px;
+        line-height: 1.5;
+    }
 }
 
 @media (max-width:1200px) {
@@ -1297,7 +1349,7 @@ structure
 
 .mfgText p {
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.6;
     color: rgba(255, 255, 255, .85);
 }
 
@@ -1350,24 +1402,44 @@ structure
     background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
-
-    .scrollTrack h1 {
-        font-size: 75px;
+@media (max-width:1440px) {
+    .mfgBand {
+        width: 100%;
+        height: 370px;
     }
 
     .mfgText h2 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .mfgImgWrapper {
         width: 40%;
-        height: 320px;
+        height: 300px;
+        bottom: 33px;
     }
 
     .LastImage img {
         width: 260px;
-        height: 210px;
+        height: 260px;
+    }
+
+    .mfgText p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .mfgText {
+        max-width: 700px;
+    }
+
+    .mfgText p {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .LastImage {
+        left: -7%;
+        bottom: 40%;
     }
 
 }
@@ -2121,83 +2193,139 @@ Keep HAVm
     color: #293F67;
 }
 
-.solarFrameContainer {
+.imageDesign {
     position: relative;
-    width: 640px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     overflow: visible;
 }
 
-.solarSideAccent {
-    position: absolute;
-    left: 0;
-    top: 26px;
-    width: 72px;
-    height: 420px;
-    background: #29456F;
-    border-radius: 0 0 0 0;
-    z-index: 2;
-    transition: all 0.45s ease;
-}
+/* =========================
+   IMAGE
+========================= */
 
-.solarFrameImageBox {
-    position: absolute;
-    top: 0;
-    left: 36px;
-    width: 604px;
-    height: 480px;
-    overflow: hidden;
-    border-radius: 10px 10px 10px 10px;
-    z-index: 1;
-    cursor: pointer;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-}
-
-.solarFrameImage {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.8s ease, filter 0.8s ease;
-}
-
-/* Overlay */
-
-.solarFrameImageBox::after {
-    content: "";
+.mainImage {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.45s ease;
-    pointer-events: none;
-}
 
-.solarFrameContainer:hover .solarFrameImage {
-    transform: scale(1.08);
-    filter: brightness(0.82);
-}
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
 
-.solarFrameContainer:hover .solarFrameImageBox::after {
-    background: rgba(0, 0, 0, 0.15);
-}
+    z-index: 1;
 
-.solarFrameContainer:hover .solarSideAccent {
-    width: 84px;
-    background: #1F3760;
-}
-
-.solarFrameContainer:hover .solarFrameImageBox {
-    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 0.5s ease,
+        box-shadow 0.5s ease;
 }
 
 
+.imageBlueAccent {
+    position: absolute;
+    left: -20px;
+    top: 25px;
+    width: 72px;
+    height: 435px;
+    background: #29456f;
+    z-index: 3;
+    transition:
+        transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+        height 0.6s ease,
+        box-shadow 0.5s ease;
+}
 
 
-@media (max-width:1400px) {
+.imageBlackAccent {
+    position: absolute;
+    left: 36px;
+    top: 0;
+    width: 36px;
+    height: 25px;
+    background: #050505;
+    z-index: 4;
+    transition:
+        transform 0.5s ease,
+        width 0.5s ease;
+}
+
+
+
+.imageDesign:hover .mainImage {
+    transform: scale(1.035);
+    filter: brightness(0.96);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+.imageDesign:hover .imageBlueAccent {
+    transform: translateY(-10px);
+    height: 350px;
+    box-shadow: 8px 15px 30px rgba(41, 69, 111, 0.25);
+}
+
+.imageDesign:hover .imageBlackAccent {
+    transform: translateX(5px);
+    width: 40px;
+}
+
+@media (max-width: 1440px) {
 
     .hvacSection {
-        padding: 70px 45px;
+        padding: 70px 50px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 65px;
+    }
+
+    .hvacSectionTitle h2 {
+        font-size: 48px;
+    }
+
+    .hvacContentWrapper {
+        gap: 55px;
+    }
+
+    .hvacContent {
+        max-width: 600px;
+    }
+
+    .hvacContent>p {
+        font-size: 16px;
+    }
+
+    .hvacFeatureText {
+        font-size: 16px;
+    }
+
+    .imageDesign {
+        width: 500px;
+        height: 450px;
+    }
+
+    .imageBlueAccent {
+        left: -18px;
+        top: 23px;
+        width: 65px;
+        height: 390px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+    .hvacSection {
+        padding: 65px 40px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 55px;
+    }
+
+    .hvacSectionTitle h2 {
+        font-size: 44px;
     }
 
     .hvacContentWrapper {
@@ -2205,107 +2333,92 @@ Keep HAVm
     }
 
     .hvacContent {
-        max-width: 600px;
+        max-width: 540px;
     }
 
-    .solarFrameContainer {
-        width: 560px;
-        height: 360px;
-        flex-shrink: 0;
+    .hvacContent>p {
+        font-size: 15px;
+        line-height: 1.75;
     }
 
-    .solarSideAccent {
-        width: 62px;
-        height: 330px;
-        top: 24px;
+    .hvacFeatureList {
+        gap: 11px;
     }
 
-    .solarFrameImageBox {
-        width: 530px;
-        height: 380px;
-        left: 30px;
+    .hvacFeatureItem {
+        gap: 14px;
     }
 
+    .hvacFeatureText {
+        font-size: 15px;
+    }
+
+    .hvacFeatureIcon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+    }
+
+    .imageDesign {
+        width: 500px;
+        height: 420px;
+    }
+
+    .mainImage {
+        width: 500px;
+        height: 450px;
+    }
+
+    .imageBlueAccent {
+        left: -40px;
+        top: 22px;
+        width: 60px;
+        height: 370px;
+    }
 }
 
 
-
-@media (max-width:1280px) {
+@media (max-width: 1200px) {
 
     .hvacSection {
-        padding: 65px 35px;
+        padding: 60px 40px;
     }
 
     .hvacSectionTitle h2 {
-        font-size: 46px;
-    }
-
-    .hvacContent {
-        max-width: 600px;
-    }
-
-    .hvacContent p,
-    .hvacFeatureText {
-        font-size: 16px;
-    }
-
-    .solarFrameContainer {
-        width: 510px;
-        height: 330px;
-    }
-
-    .solarSideAccent {
-        width: 58px;
-        height: 300px;
-    }
-
-    .solarFrameImageBox {
-        width: 480px;
-        height: 350px;
-        left: 30px;
-    }
-
-}
-
-
-@media (max-width:1200px) {
-
-    .hvacSection {
-        padding: 60px 30px;
+        font-size: 42px;
     }
 
     .hvacContentWrapper {
-        gap: 30px;
+        gap: 35px;
     }
 
     .hvacContent {
-        max-width: 520px;
+        max-width: 540px;
     }
 
-    .solarFrameContainer {
-        width: 450px;
-        height: 300px;
+    .imageDesign {
+        width: 460px;
+        height: 450px;
     }
 
-    .solarSideAccent {
-        width: 50px;
-        height: 270px;
+    .mainImage {
+        width: 460px;
+        height: 450px;
     }
 
-    .solarFrameImageBox {
-        width: 425px;
-        height: 320px;
-        left: 25px;
+    .imageBlueAccent {
+        left: -15px;
+        top: 20px;
+        width: 55px;
+        height: 385px;
     }
-
 }
 
 
-
-@media (max-width:992px) {
+@media (max-width: 1100px) {
 
     .hvacSection {
-        padding: 55px 24px;
+        padding: 60px 35px;
     }
 
     .hvacSectionTitle {
@@ -2313,12 +2426,12 @@ Keep HAVm
     }
 
     .hvacSectionTitle h2 {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .hvacContentWrapper {
-        flex-direction: column-reverse;
-        gap: 40px;
+        flex-direction: column;
+        gap: 50px;
     }
 
     .hvacTextContainer {
@@ -2329,241 +2442,491 @@ Keep HAVm
         max-width: 100%;
     }
 
-    .solarFrameContainer {
+    .hvacContent>p {
+        max-width: 800px;
+    }
+
+    .hvacFeatureList {
         width: 100%;
-        max-width: 720px;
-        height: 420px;
-        margin: auto;
     }
 
-    .solarSideAccent {
+    .imageDesign {
+        width: min(100%, 650px);
+        height: 440px;
+        margin: 0 auto;
+    }
+
+    .mainImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imageBlueAccent {
+        left: -18px;
+        top: 22px;
         width: 65px;
-        height: 360px;
-        top: 25px;
+        height: 380px;
     }
-
-    .solarFrameImageBox {
-        width: calc(100% - 40px);
-        height: 420px;
-        left: 40px;
-    }
-
 }
 
 
-
-
-@media (max-width:768px) {
+@media (max-width: 992px) {
 
     .hvacSection {
-        padding: 50px 20px;
+        padding: 55px 30px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 40px;
     }
 
     .hvacSectionTitle h2 {
-        font-size: 32px;
+        font-size: 38px;
     }
 
     .hvacIntroLine {
-        width: 90px;
+        width: 100px;
     }
 
-    .solarFrameContainer {
-        height: 340px;
+    .hvacContentWrapper {
+        gap: 45px;
     }
 
-    .solarSideAccent {
-        width: 50px;
-        height: 290px;
-        top: 20px;
+    .hvacContent>p {
+        font-size: 15px;
     }
 
-    .solarFrameImageBox {
-        height: 340px;
-        left: 28px;
-    }
-
-    .hvacContent p,
     .hvacFeatureText {
         font-size: 15px;
     }
 
-    .hvacFeatureItem {
-        gap: 14px;
+    .imageDesign {
+        width: min(100%, 600px);
+        height: 400px;
     }
 
+    .imageBlueAccent {
+        left: -16px;
+        top: 20px;
+        width: 60px;
+        height: 350px;
+    }
 }
 
 
-
-@media (max-width:576px) {
+@media (max-width: 768px) {
 
     .hvacSection {
-        padding: 45px 16px;
+        padding: 50px 24px;
     }
 
     .hvacSectionTitle {
         margin-bottom: 35px;
+        gap: 8px;
     }
 
     .hvacSectionTitle h2 {
-        font-size: 28px;
+        font-size: 34px;
+        line-height: 1.25;
     }
 
-    .solarFrameContainer {
-        height: 270px;
+    .hvacIntroLine {
+        width: 90px;
+        height: 3px;
     }
 
-    .solarSideAccent {
-        width: 42px;
-        height: 220px;
-        top: 18px;
+    .hvacContentWrapper {
+        gap: 40px;
     }
 
-    .solarFrameImageBox {
-        width: calc(100% - 24px);
-        height: 270px;
-        left: 24px;
-        border-radius: 8px;
+    .hvacContent {
+        gap: 18px;
     }
 
-    .hvacContent p,
+    .hvacContent>p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hvacFeatureList {
+        gap: 12px;
+    }
+
+    .hvacFeatureItem {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .hvacFeatureIcon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        margin-top: 1px;
+    }
+
+    .hvacFeatureIcon svg {
+        width: 16px;
+        height: 16px;
+    }
+
     .hvacFeatureText {
         font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .imageDesign {
+        width: 100%;
+        max-width: 560px;
+        height: 370px;
+        margin: 0 auto;
+    }
+
+    .imageBlueAccent {
+        left: -14px;
+        top: 18px;
+        width: 52px;
+        height: 320px;
+    }
+
+    .imageBlackAccent {
+        left: 30px;
+        width: 30px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .hvacSection {
+        padding: 45px 18px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 30px;
+    }
+
+    .hvacSectionTitle h2 {
+        font-size: 29px;
+        line-height: 1.3;
+    }
+
+    .hvacIntroLine {
+        width: 80px;
+        height: 2px;
+    }
+
+    .hvacContentWrapper {
+        gap: 35px;
+    }
+
+    .hvacContent>p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hvacFeatureList {
+        gap: 11px;
+    }
+
+    .hvacFeatureItem {
+        gap: 10px;
     }
 
     .hvacFeatureIcon {
         width: 28px;
         height: 28px;
+        min-width: 28px;
     }
 
+    .hvacFeatureIcon svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .hvacFeatureText {
+        font-size: 13.5px;
+        line-height: 1.5;
+    }
+
+    .imageDesign {
+        width: 100%;
+        height: 300px;
+    }
+
+    .imageBlueAccent {
+        left: -11px;
+        top: 16px;
+        width: 42px;
+        height: 260px;
+    }
+
+    .imageBlackAccent {
+        left: 24px;
+        width: 25px;
+        height: 18px;
+    }
 }
 
 
 
-@media (max-width:420px) {
+@media (max-width: 480px) {
 
     .hvacSection {
-        padding: 40px 14px;
+        padding: 40px 15px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 28px;
+    }
+
+    .hvacSectionTitle h2 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .hvacIntroLine {
+        width: 70px;
+        height: 2px;
+    }
+
+    .hvacContentWrapper {
+        gap: 30px;
+    }
+
+    .hvacContent {
+        gap: 15px;
+    }
+
+    .hvacContent>p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .hvacFeatureList {
+        gap: 10px;
+    }
+
+    .hvacFeatureItem {
+        gap: 9px;
+    }
+
+    .hvacFeatureIcon {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+    }
+
+    .hvacFeatureIcon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .hvacFeatureText {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .imageDesign {
+        width: 100%;
+        height: 260px;
+    }
+
+    .imageBlueAccent {
+        left: -9px;
+        top: 14px;
+        width: 35px;
+        height: 225px;
+    }
+
+    .imageBlackAccent {
+        left: 20px;
+        width: 22px;
+        height: 16px;
+    }
+
+    .imageDesign:hover .imageBlueAccent {
+        height: 190px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hvacSection {
+        padding: 38px 14px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 25px;
     }
 
     .hvacSectionTitle h2 {
         font-size: 24px;
     }
 
-    .solarFrameContainer {
-        height: 220px;
-    }
-
-    .solarSideAccent {
-        width: 34px;
-        height: 180px;
-        top: 16px;
-    }
-
-    .solarFrameImageBox {
-        height: 220px;
-        left: 18px;
-    }
-
-    .hvacContent p,
-    .hvacFeatureText {
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .hvacFeatureItem {
-        gap: 12px;
-    }
-
-    .hvacFeatureIcon {
-        width: 26px;
-        height: 26px;
-    }
-
-}
-
-
-
-@media (max-width:360px) {
-
-    .hvacSection {
-        padding: 36px 12px;
-    }
-
-    .hvacSectionTitle h2 {
-        font-size: 22px;
-    }
-
-    .solarFrameContainer {
-        height: 190px;
-    }
-
-    .solarSideAccent {
-        width: 28px;
-        height: 155px;
-        top: 14px;
-    }
-
-    .solarFrameImageBox {
-        height: 190px;
-        left: 16px;
-    }
-
-    .hvacContent p,
-    .hvacFeatureText {
+    .hvacContent>p {
         font-size: 12.5px;
     }
 
-    .hvacFeatureIcon {
-        width: 24px;
-        height: 24px;
+    .hvacFeatureText {
+        font-size: 12px;
     }
 
+    .hvacFeatureIcon {
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+    }
+
+    .hvacFeatureIcon svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .imageDesign {
+        height: 235px;
+    }
+
+    .imageBlueAccent {
+        left: -8px;
+        top: 12px;
+        width: 31px;
+        height: 200px;
+    }
+
+    .imageBlackAccent {
+        left: 17px;
+        width: 20px;
+        height: 15px;
+    }
 }
 
 
+/* =========================================================
+   360px
+========================================================= */
 
-@media (max-width:320px) {
+@media (max-width: 360px) {
+
+    .hvacSection {
+        padding: 35px 12px;
+    }
+
+    .hvacSectionTitle {
+        margin-bottom: 23px;
+    }
+
+
+    .hvacIntroLine {
+        width: 60px;
+        height: 2px;
+    }
+
+    .hvacContentWrapper {
+        gap: 25px;
+    }
+
+    .hvacContent>p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .hvacFeatureList {
+        gap: 9px;
+    }
+
+    .hvacFeatureItem {
+        gap: 8px;
+    }
+
+    .hvacFeatureIcon {
+        width: 23px;
+        height: 23px;
+        min-width: 23px;
+    }
+
+    .hvacFeatureIcon svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hvacFeatureText {
+        font-size: 11.5px;
+        line-height: 1.45;
+    }
+
+    .imageDesign {
+        height: 210px;
+    }
+
+    .imageBlueAccent {
+        left: -7px;
+        top: 11px;
+        width: 28px;
+        height: 180px;
+    }
+
+    .imageBlackAccent {
+        left: 15px;
+        width: 18px;
+        height: 14px;
+    }
+}
+
+
+/* =========================================================
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
 
     .hvacSection {
         padding: 32px 10px;
     }
 
-    .hvacSectionTitle h2 {
-        font-size: 20px;
+    .hvacSectionTitle {
+        margin-bottom: 20px;
     }
+
 
     .hvacIntroLine {
-        width: 70px;
+        width: 55px;
     }
 
-    .solarFrameContainer {
-        height: 170px;
+    .hvacContent>p {
+        font-size: 11.5px;
     }
 
-    .solarSideAccent {
-        width: 24px;
-        height: 140px;
-        top: 12px;
-    }
-
-    .solarFrameImageBox {
-        height: 170px;
-        left: 14px;
-        border-radius: 6px;
-    }
-
-    .hvacContent p,
     .hvacFeatureText {
-        font-size: 12px;
-        line-height: 1.6;
+        font-size: 11px;
     }
 
     .hvacFeatureIcon {
         width: 22px;
         height: 22px;
+        min-width: 22px;
     }
 
+    .hvacFeatureIcon svg {
+        width: 11px;
+        height: 11px;
+    }
+
+    .imageDesign {
+        height: 190px;
+    }
+
+    .imageBlueAccent {
+        left: -6px;
+        top: 10px;
+        width: 25px;
+        height: 165px;
+    }
+
+    .imageBlackAccent {
+        left: 13px;
+        width: 16px;
+        height: 12px;
+    }
 }
 
 /* ===================benifite================================
@@ -3195,313 +3558,6 @@ Keep HAVm
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.28);
 }
 
-@media (max-width:1440px) {
-
-    .solarEpicTitle h2,
-    .secTitle h2,
-    .hvacSectionTitle h2 {
-        font-size: 48px;
-    }
-
-    .solartext,
-    .introText,
-    .hvacContent {
-        max-width: 50%;
-    }
-
-    .solartext p,
-    .introText p,
-    .hvacContent p,
-    .hvacFeatureText {
-        font-size: 16px;
-    }
-
-    .structureDisplayContainer {
-        width: 560px;
-        height: 380px;
-    }
-
-    .structureImageContainer {
-        width: 520px;
-        height: 340px;
-    }
-
-    .leftDecorPanel {
-        height: 295px;
-    }
-}
-
-@media (max-width:1280px) {
-
-    .SolarEpicFLex,
-    .introContainer,
-    .hvacContentWrapper {
-        gap: 40px;
-    }
-
-    .solartext,
-    .introText,
-    .hvacContent {
-        max-width: 48%;
-    }
-
-    .structureDisplayContainer {
-        width: 500px;
-        height: 360px;
-    }
-
-    .structureImageContainer {
-        width: 470px;
-        height: 320px;
-        left: 28px;
-    }
-
-
-    .leftDecorPanel {
-        width: 60px;
-        height: 280px;
-    }
-}
-
-@media (max-width:1200px) {
-
-    .solarEpicTitle h2,
-    .secTitle h2,
-    .hvacSectionTitle h2 {
-        font-size: 42px;
-    }
-
-    .SolarEpicFLex,
-    .introContainer,
-    .hvacContentWrapper {
-        gap: 35px;
-    }
-
-    .solartext,
-    .introText,
-    .hvacContent {
-        max-width: 48%;
-    }
-
-    .structureDisplayContainer {
-        width: 450px;
-        height: 340px;
-    }
-
-    .structureImageContainer {
-        width: 420px;
-        height: 420px;
-    }
-
-    .leftDecorPanel {
-        height: 370px;
-    }
-}
-
-
-@media (max-width:1024px) {
-
-    .SolarEpic,
-    .introSec,
-    .hvacSection {
-        padding: 60px 30px;
-    }
-
-    .SolarEpicFLex,
-    .introContainer,
-    .hvacContentWrapper {
-        flex-direction: column;
-        gap: 45px;
-    }
-
-    .solartext,
-    .introText,
-    .hvacContent {
-        max-width: 100%;
-        width: 100%;
-        order: 2;
-    }
-
-    .structureDisplayContainer {
-        width: 100%;
-        max-width: 650px;
-        height: 420px;
-        margin: auto;
-        order: 1;
-    }
-
-    .structureImageContainer {
-        width: 92%;
-        height: 360px;
-        left: 8%;
-    }
-
-    .leftDecorPanel {
-        width: 70px;
-        height: 320px;
-    }
-}
-
-@media (max-width:768px) {
-
-    .SolarEpic,
-    .introSec,
-    .hvacSection {
-        padding: 55px 20px;
-    }
-
-    .solarEpicTitle,
-    .secTitle,
-    .hvacSectionTitle {
-        margin-bottom: 40px;
-    }
-
-    .solarEpicTitle h2,
-    .secTitle h2,
-    .hvacSectionTitle h2 {
-        font-size: 34px;
-    }
-
-    .solartext p,
-    .introText p,
-    .hvacContent p,
-    .hvacFeatureText {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    .structureDisplayContainer {
-        width: 100%;
-        height: 340px;
-    }
-
-    .structureImageContainer {
-        width: 90%;
-        height: 280px;
-        left: 10%;
-    }
-
-    .leftDecorPanel {
-        width: 55px;
-        height: 250px;
-        top: 20px;
-    }
-
-    .hvacFeatureIcon {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-@media (max-width:600px) {
-
-    .solarEpicTitle h2,
-    .secTitle h2,
-    .hvacSectionTitle h2 {
-        font-size: 30px;
-    }
-
-    .introLine,
-    .FaqsLine,
-    .hvacIntroLine {
-        width: 90px;
-    }
-
-    .structureDisplayContainer {
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    .leftDecorPanel {
-        display: none;
-    }
-
-    .structureImageContainer {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 260px;
-        border-radius: 12px;
-    }
-
-    .structureDisplayImage {
-        width: 100%;
-        height: 100%;
-    }
-
-    .solartext p,
-    .introText p,
-    .hvacContent p {
-        font-size: 15px;
-    }
-}
-
-@media (max-width:480px) {
-
-    .SolarEpic,
-    .introSec,
-    .hvacSection {
-        padding: 45px 16px;
-    }
-
-    .solarEpicTitle h2,
-    .secTitle h2,
-    .hvacSectionTitle h2 {
-        font-size: 26px;
-        line-height: 1.3;
-    }
-
-    .solartext p,
-    .introText p,
-    .hvacContent p,
-    .hvacFeatureText {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .structureImageContainer {
-        height: 220px;
-    }
-
-    .hvacFeatureItem {
-        gap: 12px;
-    }
-
-    .hvacFeatureIcon {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-@media (max-width:375px) {
-
-    .SolarEpic,
-    .introSec,
-    .hvacSection {
-        padding: 40px 14px;
-    }
-
-    .solarEpicTitle h2,
-    .secTitle h2,
-    .hvacSectionTitle h2 {
-        font-size: 24px;
-    }
-
-    .structureImageContainer {
-        height: 190px;
-    }
-
-    .solartext p,
-    .introText p,
-    .hvacContent p {
-        font-size: 13.5px;
-    }
-
-    .hvacFeatureText {
-        font-size: 14px;
-    }
-}
 
 
 

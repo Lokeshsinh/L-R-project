@@ -103,14 +103,14 @@ const GlasswoolPanels = () => {
       {/* ── HERO SECTION ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Glass Wool<br />
             <span>Sandwich Panels
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Advanced insulation solutions by L&R Green Pvt Ltd for superior thermal
+            Advanced insulation solutions by L&R Prefab Solar Pvt Ltd for superior thermal
             efficiency, acoustic comfort, and fire safety.
 
           </p>
@@ -154,7 +154,7 @@ const GlasswoolPanels = () => {
               a variety of environments.
             </p>
             <p>
-              At L&R Green Pvt Ltd, our glass wool panels are designed to meet high industry standards for safety,
+              At L&R Prefab Solar Pvt Ltd, our glass wool panels are designed to meet high industry standards for safety,
               efficiency, and durability. They offer superior fire resistance, effective acoustic control, and long-lasting
               insulation performance, making them an ideal choice for industrial, commercial, and specialized applications
               where comfort and safety are essential.
@@ -272,7 +272,7 @@ const GlasswoolPanels = () => {
               & Durability
             </h2>
             <p>
-              Glass wool panels from L&R Green Pvt Ltd are made using up to 80% recycled glass,
+              Glass wool panels from L&R Prefab Solar India Pvt Ltd are made using up to 80% recycled glass,
               making them an eco-friendly solution that supports green building certifications
               like LEED and GRIHA. Along with sustainability, they offer excellent durability—resistant
               to moisture, mold, and corrosion—ensuring long-lasting structural integrity and reliable performance for years.
@@ -301,7 +301,7 @@ const GlasswoolPanels = () => {
             <h2>Applications of <br /><span>Glass Wool Panels</span></h2>
             <div className={styles.divider}></div>
           </div>
-          <p>Glass wool panels from L&R Green Pvt Ltd are designed for versatile use across industrial,
+          <p>Glass wool panels from L&R Prefab Solar India Pvt Ltd are designed for versatile use across industrial,
             commercial, and specialized environments, delivering insulation, safety, and acoustic performance.</p>
         </div>
         <div className={styles.hardwareFeatureGrid}>
@@ -336,7 +336,7 @@ const GlasswoolPanels = () => {
         <div className={styles.SolarEpicFLex}>
           {/*  */}
           <div className={styles.solartext}>
-            <p>Glass wool panels from L&R Green Pvt Ltd offer an ideal combination of thermal insulation,
+            <p>Glass wool panels from L&R Prefab Solar India Pvt Ltd offer an ideal combination of thermal insulation,
               fire safety, and acoustic performance, making them suitable for a wide range of industrial
               and commercial applications. Their lightweight structure allows for easy handling and faster
               installation, reducing construction time while maintaining high efficiency and performance standards.</p>

@@ -106,14 +106,14 @@ function EpcPanel() {
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+                    <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
                     <h1 className={styles.mainTitle}>
                         High-Performance<br />
                         <span>EPS  Panels
                         </span>
                     </h1>
                     <p className={styles.heroDesc}>
-                        At L&R Green Pvt Ltd, our EPS panels are engineered to deliver superior insulation,
+                        At L&R Prefab Solar India Pvt Ltd, our EPS panels are engineered to deliver superior insulation,
                         durability, and fast installation for residential, commercial, and industrial projects.
                     </p>
                     <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -139,15 +139,15 @@ function EpcPanel() {
                 <div className={styles.introContainer}>
                     <div className={styles.introText}>
                         <p>
-                            EPS (Expanded Polystyrene) sandwich panels by L&R Green Pvt Ltd are modern prefabricated building materials
+                            EPS (Expanded Polystyrene) sandwich panels by L&R Prefab Solar India Pvt Ltd are modern prefabricated building materials
                             designed with a rigid foam insulation core placed between two strong outer sheets such as steel, aluminium,
                             or cement board. This layered construction forms a single, unified structure that is lightweight yet highly
                             durable, making it ideal for fast and efficient construction across various applications.
                         </p>
                         <p>
                             These panels provide excellent thermal insulation due to their closed-cell foam structure, which helps maintain
-                            consistent indoor temperatures and reduce energy consumption. In addition to insulation, EPS panels from L&R Green
-                            Pvt Ltd offer strong structural stability, easy installation, and cost efficiency, making them a reliable choice for
+                            consistent indoor temperatures and reduce energy consumption. In addition to insulation, EPS panels from L&R Prefab Solar
+                            India Pvt Ltd offer strong structural stability, easy installation, and cost efficiency, making them a reliable choice for
                             residential, commercial, and industrial projects.
                         </p>
                         <button className={styles.btnOutline} onClick={() => {
@@ -192,7 +192,7 @@ function EpcPanel() {
                         <div className={styles.FaqsLine}></div>
                     </div>
                     <p >
-                        L&R Green Pvt Ltd provides a versatile range of EPS panels designed
+                        L&R Prefab Solar India Pvt Ltd provides a versatile range of EPS panels designed
                         to meet diverse construction and insulation requirements.
                     </p>
                 </div>
@@ -306,7 +306,7 @@ function EpcPanel() {
                     <div className={styles.hvacTextContainer}>
                         <div className={styles.hvacContent}>
                             <p>
-                                EPS panels from L&R Green Pvt Ltd combine lightweight construction with strong performance,
+                                EPS panels from L&R prefab Solar India Pvt Ltd combine lightweight construction with strong performance,
                                 offering reliable insulation, durability, and cost efficiency for modern building solutions.
                             </p>
 
@@ -359,16 +359,14 @@ function EpcPanel() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.solarFrameContainer}>
-                        <div className={styles.solarSideAccent}></div>
-                        <div className={styles.solarFrameImageBox}>
-                            <img
-                                src={epc2}
-                                alt="Solar Structure"
-                                className={styles.solarFrameImage}
-                            />
-                        </div>
 
+                    <div className={styles.imageDesign}>
+                        <div className={styles.imageBlueAccent}></div>
+                        <img
+                            src={epc2}
+                            alt="Prefab Structure"
+                            className={styles.mainImage}
+                        />
                     </div>
                 </div>
             </section>
@@ -382,7 +380,7 @@ function EpcPanel() {
                         Applications of <br />
                         <span>EPS Panels?</span>
                     </h2>
-                    <div className={styles.headingDivider}></div>
+                    <div className={styles.hvacIntroLine}></div>
                 </div>
 
                 <div className={styles.epsContentWrapper}>
@@ -400,7 +398,7 @@ function EpcPanel() {
 
                     <div className={styles.epsContent}>
                         <p>
-                            EPS panels from L&R Green Pvt Ltd are versatile and widely used across residential, commercial, and
+                            EPS panels from L&R Prefab Solar India Pvt Ltd are versatile and widely used across residential, commercial, and
                             industrial projects, offering efficient insulation, quick installation, and cost-effective construction
                             solutions.
                         </p>
@@ -428,7 +426,7 @@ function EpcPanel() {
                 <div className={styles.SolarEpicFLex}>
                     {/*  */}
                     <div className={styles.solartext}>
-                        <p>L&R Green Pvt Ltd stands out for its commitment to quality, innovation, and customer
+                        <p>L&R Prefab Solar India stands out for its commitment to quality, innovation, and customer
                             satisfaction. Our EPS panels are manufactured using advanced technology and strict
                             quality control processes to ensure consistent performance, durability, and reliability
                             across every project. We offer a wide range of customizable options in terms of sizes,
