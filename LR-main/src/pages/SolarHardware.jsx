@@ -171,14 +171,14 @@ const SolarHardware = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR  India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             Smart Hardware<br />
             <span>for Solar Systems
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            At L&R Green Pvt Ltd, we manufacture high-performance solar hardware that
+            At L&R Prefab Solar India Pvt Ltd, we manufacture high-performance solar hardware that
             supports efficient, durable, and cost-effective energy systems.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>

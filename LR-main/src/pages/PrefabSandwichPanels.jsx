@@ -167,7 +167,7 @@ const PrefabSandwichPanels = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INIDA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Advanced Sandwich<br />
             <span>Panel Solutions
@@ -298,7 +298,7 @@ const PrefabSandwichPanels = () => {
             <div className={styles.divider} ></div>
           </div>
           <p className={styles.rangeDesc}>
-            L&amp;R Green India Pvt Ltd engineered panels are built to
+            L&amp;R Prefab Solar India Pvt Ltd Sandwich panels are built to
             maximize durability, thermal efficiency, and long-term structural
             value.
           </p>
@@ -340,7 +340,7 @@ const PrefabSandwichPanels = () => {
               Panels For Modern Construction
             </h2>
             <p>
-              L&R Green Private Limited provides advanced sandwich panel solutions engineered
+              L&R Prefab Solar India Private Limited provides advanced sandwich panel solutions engineered
               for superior thermal insulation, structural durability, acoustic performance, energy efficiency,
               and fast installation. Our insulated panels are ideal for warehouses, cold storage units, clean rooms,
               prefab buildings, modular structures, industrial facilities, and commercial infrastructure projects.
@@ -509,7 +509,7 @@ const PrefabSandwichPanels = () => {
       <section className={styles.cta}>
         <h2>Build Smarter With High-Performance Sandwich Panels</h2>
         <p>
-          L&R Green Private Limited provides durable, energy-efficient, and cost-effective sandwich panel
+          L&R Prefab Solar IndiaLimited provides durable, energy-efficient, and cost-effective sandwich panel
           solutions for industrial, commercial, and prefabricated construction projects across India.
         </p>
         <button className={styles.contactBtn} onClick={() => {

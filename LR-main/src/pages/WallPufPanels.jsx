@@ -122,14 +122,14 @@ export const WallPufPanels = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PRAFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             High-Performance<br />
             <span>Wall PUF Panels
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Enterprises manufactures premium Wall PUF Panels designed for superior thermal
+            L&R Prefab Solar manufactures premium Wall PUF Panels designed for superior thermal
             insulation, structural strength, and long-lasting performance across industrial and modular construction.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -146,7 +146,7 @@ export const WallPufPanels = () => {
         <div className={styles.secTitle}>
           <h2>
             What Are Wall  <br />
-            <span>WALL PUF Panels</span>
+            <span> PUF Panels</span>
           </h2>
           <div className={styles.introLine} />
         </div>
@@ -494,7 +494,7 @@ export const WallPufPanels = () => {
                 </div>
               </div>
               <p>
-                L&R Green India delivers durable, efficient panels with
+                L&R Prefab Solar India delivers durable, efficient panels with
                 reliable quality and quick installation for modern construction.
               </p>
             </div>

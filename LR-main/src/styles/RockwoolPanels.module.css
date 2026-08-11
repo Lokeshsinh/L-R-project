@@ -116,19 +116,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 700px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -515,7 +525,7 @@
   background: rgba(0, 0, 0, .15);
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .introSec {
     padding: 65px 4%;
@@ -534,7 +544,7 @@
   }
 
   .mainImage {
-    height: 35vw;
+    height: 37vw;
   }
 
   .btnOutline {

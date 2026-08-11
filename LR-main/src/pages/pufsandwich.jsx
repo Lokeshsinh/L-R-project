@@ -65,28 +65,28 @@ const PufSandwich = () => {
   const faqs = [
     {
       id: 0,
-      q: "What are prefab railway & telecom shelters used for?",
-      a: "These modular shelters are used to house critical telecom equipment, signaling systems, power generators, or act as passenger waiting shelters on railway platforms.",
+      q: "What is a PUF Sandwich Panel?",
+      a: "A PUF Sandwich Panel is an insulated panel with a polyurethane foam core, designed to provide thermal insulation, strength, and durability.",
     },
     {
       id: 1,
-      q: "How durable are these shelters?",
-      a: "They are built with heavy-duty steel structures and corrosion-resistant materials, ensuring long-term durability in harsh weather conditions.",
+      q: "Where are PUF panels commonly used?",
+      a: "They are widely used in cold storage units, industrial sheds, factories, offices, and modular buildings.",
     },
     {
       id: 2,
-      q: "Can the shelters be customized?",
-      a: "Absolutely. We manufacture shelters in standard sizes and offer fully custom dimensions. Interior fit-outs for cable management, air conditioning, and battery racks can be specified.",
+      q: "Are PUF panels good for insulation?",
+      a: "Yes. PUF panels provide excellent thermal insulation, helping maintain stable indoor temperatures and improve energy efficiency.",
     },
     {
       id: 3,
-      q: "How long does installation take?",
-      a: "Because all components are pre-fabricated and pre-drilled at our facility, a standard telecom shelter cabin can be installed in as little as 1-2 days, while larger railway platform shelters typically take 3-7 days.",
+      q: "What is the lifespan of PUF panels?",
+      a: "With proper installation and maintenance, PUF panels can provide long-lasting performance and reliable insulation.",
     },
     {
       id: 4,
-      q: "Are these shelters suitable for remote locations?",
-      a: "Yes. Their prefabricated, lightweight components are easily transported and assembled on-site with minimal equipment, making them ideal for remote or difficult terrains.",
+      q: "Are PUF panels weather-resistant?",
+      a: "Yes. PUF panels are designed to withstand varying weather conditions while providing durable insulation and protection.",
     },
   ];
 
@@ -97,7 +97,7 @@ const PufSandwich = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             High-Performance   <br />
             <span>puf sandwich panel
@@ -126,8 +126,7 @@ const PufSandwich = () => {
       <section className={styles.introSec}>
         <div className={styles.secTitle}>
           <h2>
-            Reliable Prefabricated  <br />
-            <span>Canteen Infrastructure</span>
+            PUF Sandwich <span> Panels</span>
           </h2>
           <div className={styles.introLine} />
         </div>
@@ -148,7 +147,7 @@ const PufSandwich = () => {
           </div>
           <div className={styles.introText}>
             <p>
-              PUF (Polyurethane Foam) Sandwich Panels by L&amp;R Green Pvt Ltd
+              PUF (Polyurethane Foam) Sandwich Panels by L&amp;R  Prefab Solar India Pvt Ltd
               are prefabricated construction materials made with a rigid
               polyurethane foam core placed between durable metal facings such
               as pre-painted galvanized iron (PPGI), galvanized steel, or
@@ -192,7 +191,7 @@ const PufSandwich = () => {
         <div className={styles.specsContainer}>
           <div className={styles.specsText}>
             <p>
-              PUF Sandwich Panels by L&amp;R Green Pvt Ltd feature a rigid
+              PUF Sandwich Panels by L&amp;R Prefab Solar India Pvt Ltd feature a rigid
               polyurethane foam core between durable metal facings, ensuring
               strong insulation and structural performance.
             </p>
@@ -267,7 +266,7 @@ const PufSandwich = () => {
               Technology for PUF Sandwich Panels
             </h2>
             <p>
-              At L&R Green Pvt Ltd, PUF Sandwich Panels are manufactured using advanced continuous
+              At L&R Prefab Solar India Pvt Ltd, PUF Sandwich Panels are manufactured using advanced continuous
               production lines that ensure uniform foam expansion, precise density control, and strong
               bonding between metal facings and the polyurethane core, along with precision cutting, edge
               finishing, and strict quality testing for insulation and structural strength, resulting in
@@ -293,14 +292,14 @@ const PufSandwich = () => {
         <div className={styles.siteHeader}>
           <div className={styles.siteText}>
             <h2>
-              Built for every  <br />
-              <span>site, every shift</span>
+              Type of  Puf<br />
+              <span>Sandwich Panel</span>
             </h2>
             <div className={styles.FaqsLine}></div>
           </div>
           <p >
-            Versatile modular canteens engineered for the diverse needs
-            of industrial and construction projects.
+            At L&R Prefab Solar India Pvt Ltd, we offer a wide range of PUF Sandwich Panels for insulation, roofing, wall systems, and
+            cold storage, ensuring durability, performance, and energy efficiency for all applications.
           </p>
         </div>
 
@@ -338,8 +337,8 @@ const PufSandwich = () => {
       <section className={styles.advSec}>
         <div className={styles.secTitle}>
           <h2>
-            Advantages of Prefabricated <br />
-            <span>Railway &amp; Telecom Shelters</span>
+            Advantages of Puf<br />
+            <span>Sandwich Panel</span>
           </h2>
           <div className={styles.introLine}></div>
         </div>
@@ -357,7 +356,7 @@ const PufSandwich = () => {
           <div className={styles.advContainer}>
             <div className={styles.advText}>
               <p>
-                At L&R Green Pvt Ltd, we are committed to delivering high-quality PUF
+                At L&R Prefab Solar India Pvt Ltd, we are committed to delivering high-quality PUF
                 Sandwich Panel solutions that combine advanced technology, superior materials,
                 and reliable service to meet the evolving needs of modern construction projects.
               </p>
@@ -410,8 +409,9 @@ const PufSandwich = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Quick answers to common queries about modular
-            staff canteen design, installation, and usage.</p>
+          <p>Find quick answers to common questions about PUF Sandwich Panels by L&R Prefab Solar India Pvt Ltd, helping
+            you understand
+            usage, benefits, and performance in modern construction.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}

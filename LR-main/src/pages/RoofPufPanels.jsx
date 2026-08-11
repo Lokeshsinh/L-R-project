@@ -149,7 +149,7 @@ const RoofPufPanels = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             High-Performance<br />
             <span>Insulated Roofing Systems
@@ -440,7 +440,7 @@ const RoofPufPanels = () => {
             </p>
 
             <p>
-              L&R Enterprises also provides complete customization to meet different project needs, including
+              L&R Prefab Solar India also provides complete customization to meet different project needs, including
               thickness configuration (30+30, 50+30, 80+30, 100+30 mm), PPGI sheet thickness options ranging
               from 0.3 to 0.8 mm, color selection, panel length as per project requirements, roof profile design,
               and insulation density adjustments. Each roofing system is carefully tailored based on location,
@@ -498,7 +498,7 @@ const RoofPufPanels = () => {
           <div className={styles.hvacTextContainer}>
             <div className={styles.hvacContent}>
               <p>
-                At L&R Green, Roof PUF panels undergo strict quality checks including material inspection, density
+                At L&R Prefab Solar India, Roof PUF panels undergo strict quality checks including material inspection, density
                 testing, thickness verification, coating inspection, and dimensional accuracy, ensuring durable, reliable,
                 and consistent performance.
               </p>
@@ -532,7 +532,7 @@ const RoofPufPanels = () => {
                   <p className={styles.hvacFeatureText}>Pan-India supply with competitive pricing and timely delivery</p>
                 </div>
               </div>
-              <p>L&R Green India delivers durable, efficient panels with reliable
+              <p>L&R Prefab Solar India India delivers durable, efficient panels with reliable
                 quality and quick installation for modern construction.</p>
             </div>
           </div>

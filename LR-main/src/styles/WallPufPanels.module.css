@@ -3,7 +3,6 @@
 =========================== */
 .wrapper {
   color: #333;
-  line-height: 1.6;
   background-color: #f8fafc;
 }
 
@@ -118,21 +117,32 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 700px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
+
 
 @media (max-width:1200px) {
 
@@ -431,7 +441,7 @@
 .metalPanelWrapper {
   position: relative;
   width: 600px;
-  height: 430px;
+  height: 410px;
   overflow: visible;
 }
 
@@ -442,7 +452,7 @@
   top: -18px;
   left: 0;
   width: 440px;
-  height: 405px;
+  height: 390px;
   background: #293f67ab;
   border-radius: 12px;
   z-index: 1;
@@ -509,7 +519,7 @@
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .introSec {
     padding: 70px 40px;
@@ -523,15 +533,19 @@
     max-width: 55%;
   }
 
+  .introText p {
+    font-size: 16px;
+  }
+
   .metalPanelWrapper {
     width: 45%;
     max-width: 600px;
-    height: 420px;
+    height: 380px;
   }
 
   .metalPanelBackground {
-    width: 72%;
-    height: 380px;
+    width: 76%;
+    height: 350px;
   }
 
   .metalPanelImageBox {
@@ -954,7 +968,7 @@
 
 
 /* 1400px */
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .roofApplicationSection {
     padding: 70px 40px;
@@ -974,6 +988,10 @@
 
   .hvacContent {
     max-width: 48%;
+  }
+
+  .hvacContent p {
+    font-size: 16px;
   }
 
   .roofApplicationHeading h2 {
@@ -1440,21 +1458,17 @@
     font-size: 48px;
   }
 
+  .wallPufTectpara p {
+    font-size: 16px;
+  }
+
+  .specificationRow h4,
+  .specificationRow p {
+    font-size: 17px;
+  }
 }
 
 
-
-@media (max-width:1366px) {
-
-  .wallPufTechText h2 {
-    font-size: 44px;
-  }
-
-  .wallPufTechFlex {
-    gap: 40px;
-  }
-
-}
 
 
 
@@ -1873,6 +1887,7 @@
     height: 360px;
   }
 
+
 }
 
 
@@ -1891,6 +1906,10 @@
     height: 340px;
   }
 
+  .ApplicationWallPara p,
+  .applicationTag {
+    font-size: 16px;
+  }
 }
 
 
@@ -2241,7 +2260,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -2294,24 +2313,44 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
-
-  .scrollTrack h1 {
-    font-size: 75px;
+@media (max-width:1440px) {
+  .mfgBand {
+    width: 100%;
+    height: 370px;
   }
 
   .mfgText h2 {
-    font-size: 50px;
+    font-size: 33px;
   }
 
   .mfgImgWrapper {
     width: 40%;
-    height: 320px;
+    height: 300px;
+    bottom: 33px;
   }
 
   .LastImage img {
     width: 260px;
-    height: 210px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 700px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 40%;
   }
 
 }
@@ -2675,7 +2714,11 @@ Tharmal
 }
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
+  .ThermalWall {
+    padding: 70px 40px;
+  }
+
   .ThermalWallPara {
     max-width: 530px;
   }
@@ -2683,6 +2726,19 @@ Tharmal
   .applicationsCard {
     width: 550px;
     height: 500px;
+  }
+
+
+  .ThermalWallPara {
+    max-width: 550px;
+  }
+
+  .ThermalWallPara p {
+    font-size: 16px;
+  }
+
+  .ThermalWallText h2 {
+    font-size: 48px;
   }
 }
 
@@ -3027,7 +3083,7 @@ safety
 }
 
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .roofPanelSection {
     padding: 70px 40px;
@@ -3047,6 +3103,10 @@ safety
 
   .roofPanelText {
     max-width: 55%;
+  }
+
+  .roofPanelText p {
+    font-size: 16px;
   }
 
   .roofPanelImageCard {
@@ -3627,25 +3687,14 @@ safety
     height: 390px;
   }
 
-}
-
-
-@media (max-width:1366px) {
-
-  .wallFeatureHeading h2 {
-    font-size: 44px;
-  }
-
-  .wallFeatureWrapper {
-    gap: 40px;
-  }
-
-  .wallFeatureImageContainer {
-    width: 520px;
-    height: 500px;
+  .wallFeatureContent p,
+  .wallFeatureText {
+    font-size: 16px;
   }
 
 }
+
+
 
 
 
@@ -4149,29 +4198,63 @@ safety
 
 }
 
-@media (max-width:1400px) {
 
-  .faqSec {
-    padding: 70px 4%;
+@media (max-width: 1440px) {
+
+  .siteSec {
+    padding: 70px 50px;
   }
 
-  .faqText h2 {
+  .siteHeader {
+    margin-bottom: 65px;
+    gap: 50px;
+  }
+
+  .siteText h2 {
     font-size: 48px;
+    line-height: 1.2;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
+    height: 3px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 475px;
+  .siteHeader p {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.7;
   }
 
-  .containers {
-    width: 50%;
+  /* Cards */
+  .galleryGrid {
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 
+  .galleryCard {
+    border-radius: 14px;
+  }
+
+  .galleryImageWrapper {
+    height: 180px;
+  }
+
+  .galleryContent {
+    padding: 22px 16px 24px;
+    min-height: 140px;
+  }
+
+  .galleryTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .galleryDescription {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width:1200px) {
@@ -4497,6 +4580,43 @@ safety
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+
+@media (max-width: 1440px) {
+
+  .cta {
+    padding: 55px 50px;
+    gap: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta p {
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
 }
 
 @media (max-width:1200px) {
