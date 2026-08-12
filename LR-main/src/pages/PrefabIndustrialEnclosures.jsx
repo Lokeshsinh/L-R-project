@@ -94,14 +94,14 @@ const PrefabIndustrialEnclosures = () => {
       {/* ── Hero Section ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Prefab Industrial<br />
             <span>Enclosures
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green Pvt Ltd offers durable prefab industrial enclosures with insulated
+            L&R Prefab Solar India Pvt Ltd offers durable prefab industrial enclosures with insulated
             panels for quick installation and efficient protection.
 
 
@@ -148,7 +148,7 @@ const PrefabIndustrialEnclosures = () => {
               reliable protection from dust, weather, noise, and other external factors.
             </p>
             <p>
-              At L&R Green Pvt Ltd, we develop advanced enclosure solutions tailored to meet diverse industrial
+              At L&R Prefab Solar India Pvt Ltd, we develop advanced enclosure solutions tailored to meet diverse industrial
               requirements. Our enclosures are built using high-quality insulated panels that provide excellent
               thermal efficiency, acoustic control, and durability. Designed to perform in demanding environments,
               they offer long-lasting strength, minimal maintenance, and flexibility for various applications
@@ -186,7 +186,7 @@ const PrefabIndustrialEnclosures = () => {
         <div className={styles.typesGrid}>
           <div className={styles.typesContent}>
             <p >
-              L&R Green Pvt Ltd offers versatile prefab industrial enclosures designed forvarious
+              L&R Prefab Solar India Pvt Ltd offers versatile prefab industrial enclosures designed forvarious
               industrial needs. Each unit ensures durability, safety, and reliable performance for equipment and operations.
             </p>
             <ul>
@@ -227,7 +227,7 @@ const PrefabIndustrialEnclosures = () => {
               Strength
             </h2>
             <p>
-              At L&R Green Pvt Ltd, our prefab industrial enclosures are built in advanced facilities
+              At L&R Prefab Solar India Pvt Ltd, our prefab industrial enclosures are built in advanced facilities
               using precision engineering and strict quality control. We use high-quality insulated
               panels like PUF, Rockwool, and Glasswool to ensure excellent thermal insulation, fire
               resistance, and durability. Each unit is tested for strength, accuracy, and performance
@@ -330,7 +330,7 @@ const PrefabIndustrialEnclosures = () => {
             <div className={styles.divider} ></div>
           </div>
           <p className={styles.whyDesc}>
-            L&R Green Pvt Ltd offers reliable, customized enclosure solutions with strong
+            L&R Prefab Solar India Pvt Ltd offers reliable, customized enclosure solutions with strong
             engineering support, ensuring fast installation and easy scalability.
           </p>
         </div>

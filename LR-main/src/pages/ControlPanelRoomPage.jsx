@@ -123,15 +123,15 @@ const ControlPanelRoomPage = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Control Panel<br />
             <span>Rooms
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Secure & engineered modular enclosures for critical
-            electrical systems.
+            Prefab control panel rooms built to house electrical and automation systems, offering durable, 
+            insulated, and reliable protection for industrial applications.
 
           </p>
           <button onClick={() => {
@@ -161,7 +161,7 @@ const ControlPanelRoomPage = () => {
         <div className={styles.introContainer}>
           <div className={styles.introText}>
             <p>
-              L&R Enterprises manufactures prefabricated control panel rooms designed to safely house electrical
+              L&R Prefab Solar India manufactures prefabricated control panel rooms designed to safely house electrical
               panels, switchgear, and automation systems across industries like power, solar, and manufacturing.
               These modular units ensure reliable performance by protecting critical equipment in demanding environments.
             </p>

@@ -173,14 +173,14 @@ function PrefabModular() {
             {/*---------------------- Hero--------------- */}
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+                    <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
                     <h1 className={styles.mainTitle}>
                         Prefabricated Modular <br />
                         <span>Building Solutions
                         </span>
                     </h1>
                     <p className={styles.heroDesc}>
-                        L&R Green Private Limited delivers durable, cost-effective prefabricated modular
+                        L&R Prefab Solar India Private Limited delivers durable, cost-effective prefabricated modular
                         buildings with fast construction and long-term performance across India.
 
                     </p>

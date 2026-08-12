@@ -2849,7 +2849,7 @@
 
   .faqImg {
     width: 520px;
-    height: 460px;
+    height: 480px;
     border-radius: 12px;
   }
 
@@ -2871,6 +2871,7 @@
     line-height: 1.6;
   }
 }
+
 
 @media (max-width:1200px) {
 

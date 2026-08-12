@@ -128,13 +128,13 @@ const PrefabStaffCanteens = () => {
       {/* ── Hero Section ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Prefabricated Staff <br />
             <span>Canteens & REcreation Room</span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green India Pvt Ltd designs hygienic, expandable dining halls and industrial kitchens — engineered
+            L&R Prefab Solar India Pvt Ltd designs hygienic, expandable dining halls and industrial kitchens — engineered
             for fast deployment at construction and industrial locations.
 
           </p>
@@ -163,7 +163,7 @@ const PrefabStaffCanteens = () => {
         <div className={styles.introGrid}>
           <div className={styles.introContent}>
             <p>
-              L&R Green India Pvt Ltd designs prefabricated staff canteens that provide efficient
+              L&R Prefab Solar India Pvt Ltd designs prefabricated staff canteens that provide efficient
               and hygienic dining solutions for industrial facilities and project sites. Built
               using modular construction techniques, these canteens are quick to install and
               optimized for smooth meal service, helping maintain productivity and workforce satisfaction.
@@ -266,7 +266,7 @@ const PrefabStaffCanteens = () => {
               Prefabricated Staff Canteens
             </h2>
             <p>
-              At L&R Enterprises, we design and build prefabricated staff
+              At L&R Prefab Solar India, we design and build prefabricated staff
               tailored to site requirements, from planning efficient
               to manufacturing and on-site installation. Our process ensures
               fast delivery, quality construction, and ready-to-use dining spaces.
@@ -309,7 +309,7 @@ const PrefabStaffCanteens = () => {
           </div>
 
           <div className={styles.HomeContainerPara}>
-            <p>At L&R Green Private Limited, our Modular MS Container Homes are built with premium mild steel for
+            <p>At L&R Prefab Solar India Private Limited, our Modular MS Container Homes are built with premium mild steel for
               durability, safety, and long-lasting performance. Designed with modern interiors, insulation, and weather-resistant
               construction, they provide comfortable and low-maintenance living solutions for all applications.</p>
             <div className={styles.featureListWrap}>

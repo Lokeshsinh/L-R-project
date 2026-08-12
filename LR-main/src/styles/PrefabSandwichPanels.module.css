@@ -115,6 +115,34 @@
 @media (max-width: 1480px) {
   .hero {
     padding: 50px 60px;
+    height: 80vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .mainTitle {
+    font-size: clamp(48px, 5vw, 58px);
+  }
+
+  .heroDesc {
+    font-size: 16px;
+    max-width: 800px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
+  }
+}
+
+
+@media (max-width:1200px) {
+
+  .hero {
+    padding: 50px 60px;
     height: 85vh;
   }
 
@@ -129,42 +157,13 @@
 
   .heroDesc {
     font-size: 16px;
-    max-width: 600px;
+    max-width: 800px;
   }
 
   .btnWhite {
     width: 240px;
     height: 52px;
   }
-}
-
-
-@media (max-width:1200px) {
-
-  .hero {
-    padding: 5%;
-    height: 70vh;
-  }
-
-  .topLabel {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .mainTitle {
-    font-size: clamp(48px, 5vw, 58px);
-  }
-
-  .heroDesc {
-    font-size: 16px;
-    max-width: 600px;
-  }
-
-  .btnWhite {
-    width: 240px;
-    height: 52px;
-  }
-
 }
 
 @media (max-width:992px) {

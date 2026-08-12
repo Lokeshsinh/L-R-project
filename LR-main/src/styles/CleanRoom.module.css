@@ -60,7 +60,7 @@
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 30px;
-  max-width: 640px;
+  max-width: 750px;
 }
 
 .btnHero {
@@ -117,21 +117,32 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 700px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
+
 
 @media (max-width:1200px) {
 
@@ -471,7 +482,7 @@
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1280px) {
 
   .introSec {
     padding: 70px 45px;
@@ -491,7 +502,7 @@
 
   .cleanContainer {
     width: 520px;
-    height: 370px;
+    height: 390px;
   }
 
   .backgroundShape {
@@ -501,7 +512,7 @@
 
   .imageCard {
     width: 520px;
-    height: 410px;
+    height: 420px;
   }
 
 }
@@ -533,7 +544,7 @@
 
   .imageCard {
     width: 490px;
-    height: 430px;
+    height: 450px;
   }
 
   .introText {
@@ -542,7 +553,28 @@
 
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1150px) {
+  .introText {
+    max-width: 480px;
+  }
+
+  .introText p {
+    font-size: 15px;
+  }
+
+  .backgroundShape {
+    width: 290px;
+    height: 350px;
+  }
+
+  .imageCard {
+    width: 490px;
+    height: 460px;
+  }
+}
+
+
+@media (max-width: 1090px) {
   .introText {
     max-width: 400px;
   }
@@ -561,6 +593,7 @@
     height: 500px;
   }
 }
+
 
 @media (max-width:992px) {
 
@@ -918,7 +951,7 @@
 }
 
 
-@media (max-width:1400px) {
+@media (max-width:1280px) {
 
   .SolarEpic {
     padding: 70px 45px;
@@ -977,6 +1010,18 @@
     height: 340px;
   }
 
+  .solartext {
+    max-width: 500px;
+  }
+
+  .solartext p {
+    font-size: 15px;
+  }
+
+  .solartext ul li {
+    font-size: 15px;
+  }
+
   .backdrop {
     width: 280px;
     height: 210px;
@@ -989,6 +1034,93 @@
 
 }
 
+
+@media (max-width:1080px) {
+
+  .SolarEpic {
+    padding: 65px 40px;
+  }
+
+  .SolarEpicFLex {
+    gap: 45px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 44px;
+  }
+
+  .showcase {
+    width: 510px;
+    height: 340px;
+  }
+
+  .solartext {
+    max-width: 450px;
+  }
+
+  .solartext p {
+    font-size: 15px;
+  }
+
+  .solartext ul li {
+    font-size: 15px;
+  }
+
+  .backdrop {
+    width: 280px;
+    height: 210px;
+  }
+
+  .frame {
+    width: 450px;
+    height: 370px;
+  }
+
+}
+
+
+@media (max-width:1030px) {
+
+  .SolarEpic {
+    padding: 65px 40px;
+  }
+
+  .SolarEpicFLex {
+    gap: 45px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 44px;
+  }
+
+  .showcase {
+    width: 510px;
+    height: 340px;
+  }
+
+  .solartext {
+    max-width: 400px;
+  }
+
+  .solartext p {
+    font-size: 15px;
+  }
+
+  .solartext ul li {
+    font-size: 15px;
+  }
+
+  .backdrop {
+    width: 280px;
+    height: 210px;
+  }
+
+  .frame {
+    width: 450px;
+    height: 420px;
+  }
+
+}
 
 @media (max-width:992px) {
 
@@ -1307,7 +1439,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -1360,24 +1492,44 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1400px) {
-
-  .scrollTrack h1 {
-    font-size: 75px;
+@media (max-width:1440px) {
+  .mfgBand {
+    width: 100%;
+    height: 370px;
   }
 
   .mfgText h2 {
-    font-size: 50px;
+    font-size: 33px;
   }
 
   .mfgImgWrapper {
     width: 40%;
-    height: 320px;
+    height: 300px;
+    bottom: 33px;
   }
 
   .LastImage img {
     width: 260px;
-    height: 210px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 700px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 40%;
   }
 
 }
@@ -1695,7 +1847,7 @@ mobility
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1280px) {
 
   .cleanroomSection {
     padding: 70px 50px;
@@ -1710,17 +1862,17 @@ mobility
   }
 
   .imageContainer {
-    width: 560px;
-    height: 420px;
-  }
-
-  .imageFrame {
     width: 540px;
     height: 420px;
   }
 
+  .imageFrame {
+    width: 530px;
+    height: 420px;
+  }
+
   .textContent {
-    max-width: 550px;
+    max-width: 540px;
   }
 
   .textContent p {
@@ -1758,7 +1910,7 @@ mobility
 
   .imageFrame {
     width: 500px;
-    height: 430px;
+    height: 420px;
   }
 
   .accentBackdrop {
@@ -1767,12 +1919,98 @@ mobility
   }
 
   .textContent {
-    max-width: 520px;
+    max-width: 500px;
   }
 
   .textContent p,
   .featureList li {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+}
+
+
+@media (max-width:1130px) {
+
+  .cleanroomSection {
+    padding: 65px 40px;
+  }
+
+  .headerGroup {
+    margin-bottom: 50px;
+  }
+
+  .headerGroup h2 {
+    font-size: 44px;
+  }
+
+  .contentLayout {
+    gap: 40px;
+  }
+
+  .imageContainer {
+    width: 540px;
+    height: 460px;
+  }
+
+  .imageFrame {
+    width: 490px;
+    height: 420px;
+  }
+
+  .accentBackdrop {
+    width: 300px;
+    height: 280px;
+  }
+
+  .textContent {
+    max-width: 450px;
+  }
+
+  .textContent p,
+  .featureList li {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:1080px) {
+
+  .cleanroomSection {
+    padding: 60px 30px;
+  }
+
+  .headerGroup {
+    margin-bottom: 45px;
+  }
+
+  .headerGroup h2 {
+    font-size: 38px;
+  }
+
+  .contentLayout {
+    flex-direction: column;
+    gap: 45px;
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 430px;
+  }
+
+  .imageFrame {
+    width: 95%;
+    height: 410px;
+  }
+
+  .accentBackdrop {
+    width: 340px;
+    height: 240px;
+  }
+
+  .textContent {
+    max-width: 100%;
   }
 
 }
@@ -2174,24 +2412,62 @@ mobility
   background: #243B66;
 }
 
-/* =========================
-   1400px
-========================= */
-@media (max-width:1400px) {
+@media (max-width: 1440px) {
 
   .siteSec {
     padding: 70px 50px;
   }
 
-  .siteText h2 {
-    font-size: 50px;
+  .siteHeader {
+    margin-bottom: 65px;
+    gap: 50px;
   }
 
+  .siteText h2 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .FaqsLine {
+    width: 110px;
+    height: 3px;
+  }
+
+  .siteHeader p {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Cards */
   .galleryGrid {
+    max-width: 100%;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
 
+  .galleryCard {
+    border-radius: 14px;
+  }
+
+  .galleryImageWrapper {
+    height: 180px;
+  }
+
+  .galleryContent {
+    padding: 22px 16px 24px;
+    min-height: 140px;
+  }
+
+  .galleryTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .galleryDescription {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 /* =========================
@@ -2654,29 +2930,64 @@ mobility
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 500px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 480px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -3002,6 +3313,35 @@ mobility
 
 .btnBlue:hover {
   background: #2550a0;
+}
+
+
+
+@media (max-width:1280px) {
+
+  .cta {
+    padding: 50px 40px;
+  }
+
+  .cta h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .cta p {
+    max-width: 820px;
+    margin: 0 auto 24px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .contactBtn {
+    width: 250px;
+    height: 54px;
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width:1200px) {

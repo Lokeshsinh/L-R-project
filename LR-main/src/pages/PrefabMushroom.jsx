@@ -143,7 +143,7 @@ const PrefabMushroom = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R Prefab Solar India PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Prefabricated<br />
             <span>Mushroom Farms
@@ -178,13 +178,13 @@ const PrefabMushroom = () => {
         <div className={styles.introContainer}>
           <div className={styles.introText}>
             <p>
-              Prefabricated mushroom farms by L&R Green Pvt Ltd are designed to deliver precise environmental control, ensuring
+              Prefabricated mushroom farms by L&R Prefab Solar India Pvt Ltd are designed to deliver precise environmental control, ensuring
               optimal temperature, humidity, and airflow required for healthy mushroom growth. Built with high-quality insulated
               panels, these structures maintain stable internal conditions regardless of external weather, allowing farmers to
               achieve consistent and reliable yields throughout the year.
             </p>
             <p>
-              These advanced systems from L&R Green Pvt Ltd also reduce manual effort through automation, managing key parameters
+              These advanced systems from L&R Prefab Solar India Pvt Ltd also reduce manual effort through automation, managing key parameters
               like humidity, CO₂ levels, and ventilation. As a result, farmers benefit from improved productivity, lower energy
               consumption, and superior crop quality, making prefab mushroom farms a cost-effective and efficient solution for
               modern agriculture.
@@ -423,7 +423,7 @@ const PrefabMushroom = () => {
         <div className={styles.SolarEpicFLex}>
           {/*  */}
           <div className={styles.solartext}>
-            <p>L&R Green Pvt Ltd delivers high-quality prefabricated mushroom farms built with advanced
+            <p>L&R Prefab Solar India Pvt Ltd delivers high-quality prefabricated mushroom farms built with advanced
               technology and precision engineering to ensure durability, energy efficiency, and maximum
               yield. Our solutions are designed to provide consistent production through controlled environments,
               helping farmers achieve reliable and profitable results. From planning to installation, we offer

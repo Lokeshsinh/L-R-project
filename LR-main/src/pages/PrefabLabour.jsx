@@ -247,7 +247,7 @@ const PrefabLabour = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Prefab labour accommodation<br />
             <span>& Worker Accommodation
@@ -283,7 +283,7 @@ const PrefabLabour = () => {
           </div>
           <div className={styles.introText}>
             <p>
-              Prefab Labour Accommodation by L&R Green India Pvt Ltd provides fast, modular, and ready-to-install
+              Prefab Labour Accommodation by L&R Prefab Solar India Pvt Ltd provides fast, modular, and ready-to-install
               housing solutions for project workers. These units are designed for quick setup, making them ideal
               for construction, industrial, and remote-site projects where speed and efficiency are important.
             </p>
@@ -566,15 +566,17 @@ const PrefabLabour = () => {
           </div>
           <div className={styles.housingOverviewContent}>
             <p>
-              L&R Enterprises’ Prefabricated Labour Camps are designed to support diverse industries by offering
-              reliable, scalable, and efficient workforce accommodation solutions across various project environments.
-              They ensure quick deployment and adaptability for both short-term and long-term project needs.
+              Prefab labour accommodation provides comfortable, durable, and cost-effective housing
+              solutions for workers at construction, industrial, infrastructure, and remote project sites.
+              These modular units are designed for quick installation with essential facilities and efficient
+              space utilization.
             </p>
             <p>
 
-              L&R Enterprises’ Prefabricated Labour Camps are designed to support diverse industries by offering reliable,
-              scalable, and efficient workforce accommodation solutions across various project environments. They ensure quick
-              deployment and adaptability for both short-term and long-term project needs.
+              Built with strong steel structures and insulated panels, prefab workforce
+              housing offers reliable protection, ventilation, and thermal comfort in
+              demanding environments. The layouts can be customized with bedrooms, washrooms,
+              dining areas, kitchens, and other facilities based on project requirements.
             </p>
 
           </div>

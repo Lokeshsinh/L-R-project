@@ -92,12 +92,12 @@ const PrefabDryWall = () => {
       {/* ── Hero Section ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Prefab Drywall Solutions <br />
             <span>for Fast & Efficient Construction</span>
           </h1>
-          <p className={styles.heroDesc}>At L&R Green Pvt Ltd, we provide advanced prefabricated drywall systems designed for
+          <p className={styles.heroDesc}>At L&R Prefab Solar India Pvt Ltd, we provide advanced prefabricated drywall systems designed for
             quick installation, clean finishing, and modern construction needs, replacing traditional slow and messy building methods.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -136,7 +136,7 @@ const PrefabDryWall = () => {
             </div>
             <div className={styles.introText}>
               <p>
-                Prefabricated dry wall systems by L&R Green Pvt Ltd are factory-made wall panels designed for fast
+                Prefabricated dry wall systems by L&R Prefab Solar India Pvt Ltd are factory-made wall panels designed for fast
                 and precise interior space division. These panels are engineered under controlled conditions to ensure
                 uniform quality, accurate dimensions, and a smooth finish, making them ideal for modern interior construction.
               </p>
@@ -180,7 +180,7 @@ const PrefabDryWall = () => {
             <div className={styles.FaqsLine} />
           </div>
           <p className={styles.featuresDesc}>
-            Prefabricated dry wall systems by L&R Green Pvt Ltd <br />
+            Prefabricated dry wall systems by L&R Prefab Solar Pvt Ltd <br />
             enable fast, clean, and precise interior wall construction <br />
             with strong durability and modern performance.
           </p>
@@ -225,7 +225,7 @@ const PrefabDryWall = () => {
               Manufacturing Technology
             </h2>
             <p>
-              Prefab drywall systems by L&R Green Pvt Ltd improve construction efficiency through faster installation,
+              Prefab drywall systems by L&R Prefab Solar India Pvt Ltd improve construction efficiency through faster installation,
               consistent factory-controlled quality, reduced labor dependency, and lower overall project costs, while
               ensuring high design accuracy and premium finish; these panels are manufactured using precision engineering
               in controlled environments to achieve uniform quality, accurate dimensions, and strong structural performance
@@ -260,7 +260,7 @@ const PrefabDryWall = () => {
         <div className={styles.appsGrid}>
           <div className={styles.appsLeft}>
             <p className={styles.appsDesc}>
-              Prefabricated dry wall systems by L&R Green Pvt Ltd are widely used across various sectors for
+              Prefabricated dry wall systems by L&R Prefab Solar India  Pvt Ltd are widely used across various sectors for
               fast, clean, and efficient interior space division and modern construction needs. They provide a
               flexible and reliable solution for creating high-quality interior environments with minimal construction time.
             </p>
@@ -343,7 +343,7 @@ const PrefabDryWall = () => {
           </div>
           <div className={styles.whyText}>
             <p>
-              At L&R Green Pvt Ltd, we specialize in delivering advanced prefabricated dry wall solutions designed to meet modern construction demands with speed, precision, and reliability. Our systems are engineered using high-quality materials and controlled manufacturing processes to ensure consistent performance and superior finishing in every project.
+              At L&R Prefab Solar India Pvt Ltd, we specialize in delivering advanced prefabricated dry wall solutions designed to meet modern construction demands with speed, precision, and reliability. Our systems are engineered using high-quality materials and controlled manufacturing processes to ensure consistent performance and superior finishing in every project.
             </p>
             <p>
               We focus on providing efficient and cost-effective construction solutions that reduce project timelines while maintaining high structural quality. With our expertise in prefab technology, we ensure faster installation, accurate panel design, and dependable results, making us a trusted partner for modern interior building requirements.
@@ -362,7 +362,7 @@ const PrefabDryWall = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Quick answers from L&R Green Pvt Ltd about prefabricated dry wall systems,
+          <p>Quick answers from L&R Prefab Solar India Pvt Ltd about prefabricated dry wall systems,
             covering key benefits, usage, and performance in modern interior construction.</p>
         </div>
         <div className={styles.faqBody}>

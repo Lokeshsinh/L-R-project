@@ -88,7 +88,7 @@ const PrefabRailwayShelters = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Prefab Railway &  <br />
             <span>Telecom Shelters
@@ -222,7 +222,7 @@ const PrefabRailwayShelters = () => {
               Prefabricated Staff Canteens
             </h2>
             <p>
-              At L&R Enterprises, we design and build prefabricated staff canteens tailored to
+              At L&R Prefab Solar India, we design and build prefabricated staff canteens tailored to
               site requirements, from planning efficient layouts to manufacturing and on-site
               installation. Our process ensures fast delivery, quality construction, and ready-to-use dining spaces.
             </p>

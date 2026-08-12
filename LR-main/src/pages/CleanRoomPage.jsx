@@ -102,14 +102,14 @@ const CleanRoomPage = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Precision-Controlled Prefabricated<br />
             <span>Clean Room Solutions
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green India Pvt Ltd delivers advanced prefabricated clean rooms designed for
+            L&R Prefab Solar India Pvt Ltd delivers advanced prefabricated clean rooms designed for
             industries that demand controlled, contamination-free environments.
 
           </p>
@@ -143,7 +143,7 @@ const CleanRoomPage = () => {
           </div>
           <div className={styles.introText}>
             <p>
-              L&R Green India Pvt Ltd delivers high-performance prefabricated clean rooms designed for industries
+              L&R Prefab Solar India Pvt Ltd delivers high-performance prefabricated clean rooms designed for industries
               that demand precise environmental control and contamination-free conditions. Built using advanced modular
               construction techniques, our clean rooms are engineered to maintain strict standards of air quality,
               temperature, and hygiene, making them ideal for critical applications across various sectors.
