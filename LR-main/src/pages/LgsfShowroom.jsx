@@ -95,7 +95,7 @@ const LgsfShowroom = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR PVT LDT</span>
           <h1 className={styles.mainTitle}>
             LGSF Showroom<br />
             <span>Solutions
@@ -297,7 +297,7 @@ const LgsfShowroom = () => {
           </div>
           {/*  */}
           <div className={styles.solartext}>
-            <p>L&R Green Pvt Ltd delivers advanced LGSF showroom solutions through a precise and systematic
+            <p>L&R Prefab Solar India Pvt Ltd delivers advanced LGSF showroom solutions through a precise and systematic
               manufacturing process, ensuring high-quality results from design to final assembly. Every
               project begins with custom design engineering, followed by high-precision steel fabrication,
               off-site panel preparation, strict quality inspections, and efficient on-site dispatch and

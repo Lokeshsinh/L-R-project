@@ -125,7 +125,7 @@ function LgsfModular() {
             {/* -----------hero--------------- */}
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+                    <span className={styles.topLabel}>L&R PREFAB SOLAR PVT LTD</span>
                     <h1 className={styles.mainTitle}>
                         Light Gauge Steel<br />
                         <span>Frame (LGSF) Buildings
@@ -458,7 +458,7 @@ function LgsfModular() {
                 }}>
                     <span className={styles.contactText}>Contact Us</span>
 
-                    <span className={styles.iconBox}>
+                    <span className={styles.iconBoxss}>
                         <ArrowRight className={styles.iconOne} size={18} />
                         <ArrowRight className={styles.iconTwo} size={18} />
                     </span>

@@ -97,14 +97,14 @@ const LgsfLuxuryLounges = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             LGSF Luxury<br />
             <span>Lounges
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Experience modern luxury with L&R Green Pvt Ltd’s LGSF prefab lounges offering elegant
+            Experience modern luxury with L&R Prefab Solar India Pvt Ltd’s LGSF prefab lounges offering elegant
             design, fast construction, and lasting durability for residential and commercial spaces.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -265,7 +265,7 @@ const LgsfLuxuryLounges = () => {
               of Luxury Spaces
             </h2>
             <p>
-              From concept to completion, L&R Green Pvt Ltd delivers premium prefabricated lounge
+              From concept to completion, L&R Prefab Solar PVT LTD delivers premium prefabricated lounge
               solutions that redefine comfort, durability, and modern architecture. We focus on
               innovative engineering and precision craftsmanship to ensure every structure meets
               global quality standards, combining speed, sustainability, and long-lasting
@@ -298,7 +298,7 @@ const LgsfLuxuryLounges = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p >
-            At L&R Green Pvt Ltd, we combine advanced engineering with premium architectural
+            At L&R Prefab Solar India Pvt Ltd, we combine advanced engineering with premium architectural
             design to create luxury lounge spaces that deliver comfort, performance, and long-lasting value.
           </p>
         </div>
@@ -339,7 +339,7 @@ const LgsfLuxuryLounges = () => {
         <div className={styles.SolarEpicFLex}>
           {/*  */}
           <div className={styles.solartext}>
-            <p>At L&R Green Pvt Ltd, we specialize in delivering next-generation LGSF luxury lounge
+            <p>At L&R Prefab Solar India Pvt Ltd, we specialize in delivering next-generation LGSF luxury lounge
               solutions that combine precision engineering with modern architectural design. Our approach
               focuses on creating innovative, durable, and visually refined structures that meet the evolving
               demands of premium infrastructure.</p>
@@ -377,7 +377,7 @@ const LgsfLuxuryLounges = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>Find quick answers to common questions about LGSF luxury lounges and
-            L&R Green Pvt Ltd’s prefabricated construction solutions.</p>
+            L&R Prefab Solar India Pvt Ltd’s prefabricated construction solutions.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>

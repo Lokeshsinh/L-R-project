@@ -94,7 +94,7 @@ const FarmhouseCottage = () => {
 
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Modern Prefab<br />
             <span>Farmhouses & Cottages
@@ -131,7 +131,7 @@ const FarmhouseCottage = () => {
         <div className={styles.introContainer}>
           <div className={styles.introText}>
             <p>
-              At L&R Enterprises, we specialize in designing and manufacturing high-quality prefabricated cottages and
+              At L&R Prefab Solar, we specialize in designing and manufacturing high-quality prefabricated cottages and
               farm houses that blend modern aesthetics with strong structural durability and advanced rapid construction
               techniques. Our modular living solutions are crafted to deliver maximum comfort, practical functionality,
               and refined architectural elegance while significantly reducing overall construction time and project costs.
@@ -384,7 +384,7 @@ const FarmhouseCottage = () => {
 
           </div>
           <div className={styles.solartext}>
-            <p>At L&R Enterprises, we bring strong expertise in modular and PEB construction,
+            <p>At L&R Prefab Solar, we bring strong expertise in modular and PEB construction,
               ensuring every project is executed with precision, durability, and modern engineering
               standards. We use only high-quality materials and follow strict engineering practices
               to deliver reliable and long-lasting structures.</p>
@@ -404,7 +404,7 @@ const FarmhouseCottage = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find quick answers about LGSF prefab waiting areas by L&R Green Pvt Ltd, covering design, durability, installation,
+          <p>Find quick answers about LGSF prefab waiting areas by L&R Prefab Solar India Pvt Ltd, covering design, durability, installation,
             and usage to help you understand our modern construction solutions better.</p>
         </div>
         <div className={styles.faqBody}>

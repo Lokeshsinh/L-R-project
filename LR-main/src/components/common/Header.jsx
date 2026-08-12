@@ -154,7 +154,7 @@ const Header = () => {
       <div className="top-bar">
         {/* names */}
         <div className="top-header">
-          <div className="top-label">L&amp;R GREEN INDIA PVT LTD</div>
+          <div className="top-label">L&amp;R PREFAB SOLAR INDIA PVT LTD</div>
           <div className="top-info">
             <span className="info-item">
               <i className="ti ti-mail" aria-hidden="true"></i>

@@ -69,7 +69,7 @@ const SolarEPC = () => {
     },
     {
       id: 1,
-      q: "Why choose L&R Green India for Solar EPC?",
+      q: "Why choose L&R Prefab Solar India for Solar EPC?",
       a: "We bring over a decade of experience in renewable energy, delivering high-performance solar installations for industrial, commercial, and residential clients across India.",
     },
     {
@@ -96,14 +96,14 @@ const SolarEPC = () => {
       {/* ── HERO SECTION ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             Solar EPC  <br />
             <span>work Solutions
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green Pvt Ltd offers complete Solar EPC services, managing design, procurement, construction,
+            L&R Prefab Solar India Pvt Ltd offers complete Solar EPC services, managing design, procurement, construction,
             and commissioning for efficient, hassle-free solar project delivery under one roof.
 
 
@@ -139,7 +139,7 @@ const SolarEPC = () => {
               coordinated manner without involving multiple contractors.
             </p>
             <p>
-              With L&R Green Pvt Ltd, the Solar EPC process becomes simple and seamless
+              With L&R Prefab Solar India Pvt Ltd, the Solar EPC process becomes simple and seamless
               for project owners and investors. We manage every stage of the project—from
               initial planning and technical design to procurement of high-quality components
               and final grid connection. This eliminates coordination challenges, reduces project
@@ -236,7 +236,7 @@ const SolarEPC = () => {
               & Commissioning
             </h2>
             <p>
-              At L&R Green Pvt Ltd, the final EPC stage ensures complete testing, validation,
+              At L&R Prefab Solar India Pvt Ltd, the final EPC stage ensures complete testing, validation,
               and safety checks before commissioning. It includes string-level and inverter testing,
               system inspections, and verification of performance and compliance. All required approvals
               and clearances are secured, along with DISCOM coordination for final synchronization,
@@ -328,13 +328,13 @@ const SolarEPC = () => {
         </div>
         <div className={styles.SolarEpicFLex}>
           <div className={styles.solartext}>
-            <p>Choosing a Solar EPC service from L&R Green Pvt Ltd ensures a complete,
+            <p>Choosing a Solar EPC service from L&R Prefab Solar Pvt Ltd ensures a complete,
               hassle-free execution of your solar project under a single responsibility
               model. From design and engineering to procurement, construction, and commissioning,
               everything is managed by one expert team, eliminating coordination issues between
               multiple vendors. This integrated approach improves project efficiency, reduces delays,
               and ensures consistent quality throughout the execution process.</p>
-            <p>With strong technical expertise and industry experience, L&R Green Pvt Ltd
+            <p>With strong technical expertise and industry experience, L&R Prefab Solar India Pvt Ltd
               delivers solar plants that are optimized for long-term performance and reliability.
               Our EPC approach focuses on maximizing energy output, ensuring safety compliance,
               and providing end-to-end accountability, making solar investment more secure, predictable,
@@ -364,7 +364,7 @@ const SolarEPC = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>A Solar EPC company like L&R Green Pvt Ltd manages the full solar project lifecycle,
+          <p>A Solar EPC company like L&R  Prefab Solar India Pvt Ltd manages the full solar project lifecycle,
             including design, procurement, construction, testing, and commissioning of the plant.</p>
         </div>
         <div className={styles.faqBody}>

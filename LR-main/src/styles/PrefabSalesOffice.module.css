@@ -110,19 +110,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 700px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -521,16 +531,16 @@
   }
 
   .introText {
-    max-width: 52%;
+    max-width: 540px;
   }
 
   .interiorCard {
-    width: 500px;
-    height: 360px;
+    width: 530px;
+    height: 470px;
   }
 
   .secTitle h2 {
-    font-size: 46px;
+    font-size: 48px;
   }
 
   .introText p {
@@ -539,7 +549,7 @@
 
 }
 
-@media (max-width:1100px) {
+@media (max-width:1150px) {
 
   .introContainer {
     gap: 30px;
@@ -550,8 +560,8 @@
   }
 
   .interiorCard {
-    width: 430px;
-    height: 320px;
+    width: 470px;
+    height: 500px;
   }
 
   .secTitle h2 {
@@ -560,6 +570,41 @@
 
   .leftAccent {
     width: 34px;
+  }
+
+}
+
+@media (max-width: 1050px) {
+  .introSec {
+    padding: 60px 30px;
+  }
+
+  .introContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .introText,
+  .interiorCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .interiorCard {
+    height: 500px;
+  }
+
+  .secTitle {
+    margin-bottom: 45px;
+  }
+
+  .secTitle h2 {
+    font-size: 40px;
+  }
+
+  .introText p {
+    font-size: 16px;
   }
 
 }
@@ -706,7 +751,7 @@
 
 }
 
-@media (max-width:380px) {
+@media (max-width:390px) {
 
   .introSec {
     padding: 40px 12px;
@@ -714,6 +759,33 @@
 
   .secTitle h2 {
     font-size: 24px;
+  }
+
+  .introText p {
+    font-size: 13px;
+  }
+
+  .interiorCard {
+    height: 240px;
+  }
+
+  .btnOutline {
+    width: 150px;
+    height: 44px;
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .introSec {
+    padding: 40px 12px;
+  }
+
+  .secTitle h2 {
+    font-size: 22px;
   }
 
   .introText p {
@@ -811,7 +883,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -864,49 +936,44 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1280px) {
-
+@media (max-width:1440px) {
   .mfgBand {
-    padding: 45px 40px;
-  }
-
-  .mfgContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
-    align-items: center;
-  }
-
-  .mfgText {
-    flex: 1;
-    max-width: 600px;
+    width: 100%;
+    height: 370px;
   }
 
   .mfgText h2 {
-    font-size: 46px;
-  }
-
-  .mfgText p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 40px;
   }
 
   .mfgImgWrapper {
-    width: 500px;
-    height: 350px;
-    flex-shrink: 0;
-    bottom: 0;
-  }
-
-  .scrollTrack h1 {
-    font-size: 70px;
-    letter-spacing: 3px;
+    width: 40%;
+    height: 310px;
+    bottom: 40px;
   }
 
   .LastImage img {
-    width: 270px;
-    bottom: -210px;
-    height: auto;
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 650px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 40%;
   }
 
 }
@@ -1357,26 +1424,64 @@
   background: #243B66;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
 
   .siteSec {
-    padding: 70px 5%;
+    padding: 70px 50px;
   }
 
-  .galleryGrid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+  .siteHeader {
+    margin-bottom: 65px;
+    gap: 50px;
   }
 
   .siteText h2 {
     font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .FaqsLine {
+    width: 110px;
+    height: 3px;
+  }
+
+  .siteHeader p {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Cards */
+  .galleryGrid {
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .galleryCard {
+    border-radius: 14px;
   }
 
   .galleryImageWrapper {
     height: 180px;
   }
 
+  .galleryContent {
+    padding: 22px 16px 24px;
+    min-height: 140px;
+  }
+
+  .galleryTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .galleryDescription {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
+
 
 @media (max-width:1200px) {
 
@@ -1828,8 +1933,8 @@
   }
 
   .interiorImageWrapper {
-    width: 500px;
-    height: 370px;
+    width: 530px;
+    height: 380px;
   }
 
   .advText {
@@ -1843,15 +1948,15 @@
 
 }
 
-@media (max-width:1100px) {
+@media (max-width:1200px) {
 
   .advFlex {
     gap: 30px;
   }
 
   .interiorImageWrapper {
-    width: 430px;
-    height: 400px;
+    width: 490px;
+    height: 410px;
   }
 
   .advText {
@@ -1860,6 +1965,35 @@
 
   .interiorSideStrip {
     width: 34px;
+  }
+
+}
+
+@media (max-width:1050px) {
+
+  .advSec {
+    padding: 60px 30px;
+  }
+
+  .advFlex {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .advContainer,
+  .advText,
+  .interiorImageWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .interiorImageWrapper {
+    height: 500px;
+  }
+
+  .advText p {
+    font-size: 16px;
   }
 
 }
@@ -2157,24 +2291,32 @@
   }
 
   .solartext {
-    max-width: 560px;
+    max-width: 550px;
   }
 
   .solartext p {
     font-size: 16px;
   }
 
+  .solarEpicTitle h2 {
+    font-size: 48px;
+  }
+
   .showcaseFrame {
-    width: 500px;
-    height: 350px;
+    width: 530px;
+    height: 370px;
   }
 
 }
 
-@media (max-width:1100px) {
+@media (max-width:1200px) {
 
   .SolarEpicFLex {
     gap: 30px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 46px;
   }
 
   .solartext {
@@ -2182,8 +2324,8 @@
   }
 
   .showcaseFrame {
-    width: 430px;
-    height: 390px;
+    width: 500px;
+    height: 400px;
   }
 
   .showcaseRibbon {
@@ -2192,11 +2334,16 @@
 
 }
 
-@media (max-width:992px) {
+@media (max-width:1050px) {
 
   .SolarEpic {
     padding: 60px 30px;
   }
+
+  .solarEpicTitle {
+    margin-bottom: 30px;
+  }
+
 
   .SolarEpicFLex {
     flex-direction: column;
@@ -2216,6 +2363,51 @@
 
   .solartext {
     max-width: 100%;
+  }
+
+  .solartext p {
+    font-size: 16px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .SolarEpic {
+    padding: 60px 30px;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 30px;
+  }
+
+
+  .SolarEpicFLex {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .solartext,
+  .showcaseFrame {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .showcaseFrame {
+    height: 450px;
+  }
+
+  .solartext {
+    max-width: 100%;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 38px;
   }
 
   .solartext p {
@@ -2244,6 +2436,15 @@
     line-height: 1.7;
   }
 
+  .solarEpicTitle h2 {
+    font-size: 36px;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 30px;
+  }
+
+
 }
 
 @media (max-width:576px) {
@@ -2266,6 +2467,10 @@
     line-height: 1.7;
   }
 
+  .solarEpicTitle h2 {
+    font-size: 30px;
+  }
+
 }
 
 @media (max-width:480px) {
@@ -2273,6 +2478,11 @@
   .SolarEpic {
     padding: 45px 15px;
   }
+
+  .solarEpicTitle {
+    margin-bottom: 30px;
+  }
+
 
   .showcaseFrame {
     height: 260px;
@@ -2287,9 +2497,13 @@
     line-height: 1.6;
   }
 
+  .solarEpicTitle h2 {
+    font-size: 28px;
+  }
+
 }
 
-@media (max-width:380px) {
+@media (max-width:390px) {
 
   .SolarEpic {
     padding: 40px 12px;
@@ -2308,7 +2522,45 @@
     line-height: 1.6;
   }
 
+  .solarEpicTitle {
+    margin-bottom: 30px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 27px;
+  }
+
 }
+
+@media (max-width:360px) {
+
+  .SolarEpic {
+    padding: 40px 12px;
+  }
+
+  .showcaseFrame {
+    height: 220px;
+  }
+
+  .showcaseRibbon {
+    width: 18px;
+  }
+
+  .solartext p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 25px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 22px;
+  }
+
+}
+
 
 
 /* ============work flow===================
@@ -2904,6 +3156,7 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  border-radius: 10px;
 }
 
 .faqItem:hover {
@@ -2998,30 +3251,66 @@
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 480px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 460px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
+
 
 @media (max-width:1200px) {
 
@@ -3250,7 +3539,7 @@
 
 .cta {
   width: 100%;
-  background:  url('../assets/LGFS/prefabsite/cta.png');
+  background: url('../assets/LGFS/prefabsite/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3348,15 +3637,14 @@
   background: #2550a0;
 }
 
-
 @media (max-width:1280px) {
 
   .cta {
-    padding: 65px 40px;
+    padding: 50px 40px;
   }
 
   .cta h2 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.2;
     text-align: center;
   }

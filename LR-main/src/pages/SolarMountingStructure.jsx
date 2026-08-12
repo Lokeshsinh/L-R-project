@@ -96,14 +96,14 @@ const SolarMountingStructure = () => {
       {/* ════ SECTION 1 · HERO ════ */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             solar Module   <br />
             <span>mounting structure
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green Pvt Ltd delivers advanced mounting solutions
+            L&R Prefab Solar India Pvt Ltd delivers advanced mounting solutions
             designed for maximum efficiency, safety, and long-term performance.
 
 
@@ -156,7 +156,7 @@ const SolarMountingStructure = () => {
               and other external conditions, making the entire solar installation safe and long-lasting.
             </p>
             <p>
-              At L&R Green Pvt Ltd, we design strong and reliable solar mounting structures for all
+              At L&R Prefab Solar India Pvt Ltd, we design strong and reliable solar mounting structures for all
               types of installations including rooftop, ground, and large-scale solar projects.
               Our solutions are built with high-quality materials and smart engineering to
               ensure durability, safety, and maximum performance in every project.
@@ -189,7 +189,7 @@ const SolarMountingStructure = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p >
-            At L&R Green Pvt Ltd, we provide high-quality solar mounting components designed
+            At L&R Prefab Solar India Pvt Ltd, we provide high-quality solar mounting components designed
             for strength, accuracy, and long-term reliability in all installation conditions.
           </p>
         </div>
@@ -239,7 +239,7 @@ const SolarMountingStructure = () => {
             <p>
               Solar mounting structures are designed for long-lasting reliability,
               maximum energy output, and safe installation across all solar projects.
-              At L&R Green Pvt Ltd, every system is custom-designed for efficiency and
+              At L&R Prefab Solar India Pvt Ltd, every system is custom-designed for efficiency and
               durability using premium materials like lightweight, corrosion-resistant
               aluminum for rooftops and high-strength galvanized steel for large-scale
               installations, ensuring a perfect balance of strength, safety, and long-term performance.
@@ -276,7 +276,7 @@ const SolarMountingStructure = () => {
             <div className={styles.advText}>
               <p>
                 Solar module mounting structures provide strong support, stability, and proper
-                alignment for maximum solar efficiency. At L&R Green Pvt Ltd, we offer durable
+                alignment for maximum solar efficiency. At L&R Prefab Solar India Pvt Ltd, we offer durable
                 solutions for all types of solar projects.
               </p>
               <div className={styles.featureListWrap}>
@@ -353,13 +353,13 @@ const SolarMountingStructure = () => {
             </div>
           </div>
           <div className={styles.solartext}>
-            <p>Choosing a Solar EPC service from L&R Green Pvt Ltd ensures a complete,
+            <p>Choosing a Solar EPC service from L&R Prefab Solar India Pvt Ltd ensures a complete,
               hassle-free execution of your solar project under a single responsibility
               model. From design and engineering to procurement, construction, and commissioning,
               everything is managed by one expert team, eliminating coordination issues between
               multiple vendors. This integrated approach improves project efficiency, reduces delays,
               and ensures consistent quality throughout the execution process.</p>
-            <p>With strong technical expertise and industry experience, L&R Green Pvt Ltd
+            <p>With strong technical expertise and industry experience, L&R Prefab SOlar India Pvt Ltd
               delivers solar plants that are optimized for long-term performance and reliability.
               Our EPC approach focuses on maximizing energy output, ensuring safety compliance,
               and providing end-to-end accountability, making solar investment more secure, predictable,
@@ -390,7 +390,7 @@ const SolarMountingStructure = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>Solar module mounting structures ensure strong support, safety, and efficient solar energy
-            generation. At L&R Green Pvt Ltd, we provide durable and weather-resistant mounting solutions for all installations.</p>
+            generation. At L&R Prefab Solar India Pvt Ltd, we provide durable and weather-resistant mounting solutions for all installations.</p>
         </div>
         <div className={styles.faqBody}>
           <div className={styles.faqImg}>

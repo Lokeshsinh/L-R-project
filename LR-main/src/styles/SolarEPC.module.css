@@ -54,7 +54,7 @@
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 30px;
-  max-width: 730px;
+  max-width: 800px;
 }
 
 .btnHero {
@@ -111,19 +111,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 850px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -497,7 +507,7 @@
   }
 
   .introText {
-    max-width: 620px;
+    max-width: 600px;
   }
 
   .solarImageCard {
@@ -536,7 +546,7 @@
   }
 
   .introText {
-    max-width: 560px;
+    max-width: 550px;
   }
 
   .introText p {
@@ -574,19 +584,23 @@
     max-width: 520px;
   }
 
+  .introText p {
+    font-size: 16px;
+  }
+
   .solarImageCard {
     width: 460px;
-    height: 480px;
+    height: 520px;
   }
 
   .solarBackground {
     width: 420px;
-    height: 380px;
+    height: 450px;
   }
 
   .solarImageWrapper {
     width: 435px;
-    height: 455px;
+    height: 530px;
     left: 20px;
     top: 20px;
   }
@@ -595,51 +609,34 @@
 
 
 
-@media (max-width:1060px) {
-
-  .introSec {
-    padding: 60px 35px;
-  }
-
-  .secTitle {
-    margin-bottom: 45px;
-  }
-
-  .secTitle h2 {
-    font-size: 42px;
-  }
+@media (max-width:1050px) {
 
   .introContainer {
-    gap: 30px;
+    flex-direction: column;
     align-items: center;
+    gap: 60px;
   }
 
   .introText {
-    max-width: 470px;
-  }
-
-  .introText p {
-    font-size: 15px;
-    line-height: 1.75;
+    max-width: 100%;
   }
 
   .solarImageCard {
-    width: 410px;
-    height: 500x;
+    width: 90%;
+    height: 450px;
   }
 
   .solarBackground {
-    width: 375px;
-    height: 390px;
+    width: 80%;
+    height: 340px;
   }
 
   .solarImageWrapper {
-    width: 390px;
-    height: 470px;
-    left: 18px;
-    top: 18px;
+    width: 100%;
+    height: 405px;
+    left: 25px;
+    top: 25px;
   }
-
 }
 
 
@@ -657,17 +654,17 @@
   }
 
   .solarImageCard {
-    width: 540px;
+    width: 90%;
     height: 450px;
   }
 
   .solarBackground {
-    width: 490px;
+    width: 80%;
     height: 340px;
   }
 
   .solarImageWrapper {
-    width: 515px;
+    width: 100%;
     height: 405px;
     left: 25px;
     top: 25px;
@@ -699,17 +696,17 @@
   }
 
   .solarImageCard {
-    width: 450px;
+    width: 90%;
     height: 380px;
   }
 
   .solarBackground {
-    width: 410px;
+    width: 80%;
     height: 285px;
   }
 
   .solarImageWrapper {
-    width: 425px;
+    width: 100%;
     height: 340px;
     left: 20px;
     top: 20px;
@@ -739,18 +736,17 @@
   }
 
   .solarImageCard {
-    width: 100%;
-    max-width: 390px;
+    width: 90%;
     height: 330px;
   }
 
   .solarBackground {
-    width: 88%;
+    width: 80%;
     height: 240px;
   }
 
   .solarImageWrapper {
-    width: 92%;
+    width: 100%;
     height: 295px;
     left: 15px;
     top: 15px;
@@ -776,17 +772,17 @@
   }
 
   .solarImageCard {
-    max-width: 340px;
+    max-width: 100%;
     height: 295px;
   }
 
   .solarBackground {
-    width: 87%;
+    width: 80%;
     height: 210px;
   }
 
   .solarImageWrapper {
-    width: 91%;
+    width: 100%;
     height: 260px;
     left: 13px;
     top: 13px;
@@ -811,23 +807,23 @@
   }
 
   .btnOutline {
-    width: 170px;
+    width: 100%;
     height: 48px;
     font-size: 14px;
   }
 
   .solarImageCard {
-    max-width: 300px;
+    max-width: 80%;
     height: 260px;
   }
 
   .solarBackground {
-    width: 86%;
+    width: 80%;
     height: 185px;
   }
 
   .solarImageWrapper {
-    width: 90%;
+    width: 100%;
     height: 228px;
     left: 11px;
     top: 11px;
@@ -852,17 +848,17 @@
   }
 
   .btnOutline {
-    width: 160px;
+    width: 100%;
     height: 46px;
   }
 
   .solarImageCard {
-    max-width: 270px;
+    max-width: 80%;
     height: 235px;
   }
 
   .solarBackground {
-    width: 85%;
+    width: 100%;
     height: 168px;
   }
 
@@ -1147,47 +1143,39 @@
 
 
 
-@media (max-width:1024px) {
-
-  .advSec {
-    padding: 60px 35px;
-  }
+@media (max-width:1050px) {
 
   .advFlex {
-    gap: 30px;
+    flex-direction: column;
     align-items: center;
+    gap: 60px;
+  }
+
+  .advContainer {
+    width: 100%;
   }
 
   .advText {
-    max-width: 470px;
-  }
-
-  .advText p,
-  .featureText {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .featureRow {
-    gap: 15px;
+    max-width: 80%;
   }
 
   .energyImageContainer {
-    width: 410px;
-    height: 295px;
+    width: 100%;
+    height: 430px;
   }
 
   .energyBackdrop {
-    width: 375px;
-    height: 255px;
+    width: 65%;
+    height: 340px;
   }
 
   .energyImageFrame {
-    width: 390px;
-    height: 270px;
-    left: 18px;
-    top: 18px;
+    width: 100%;
+    height: 385px;
+    left: 25px;
+    top: 25px;
   }
+
 
 }
 
@@ -1210,21 +1198,23 @@
   }
 
   .energyImageContainer {
-    width: 540px;
-    height: 390px;
+    width: 100%;
+    height: 430px;
   }
 
   .energyBackdrop {
-    width: 490px;
+    width: 80%;
     height: 340px;
   }
 
   .energyImageFrame {
-    width: 515px;
-    height: 365px;
+    width: 100%;
+    height: 385px;
     left: 25px;
     top: 25px;
   }
+
+
 
 }
 
@@ -1249,17 +1239,17 @@
   }
 
   .energyImageContainer {
-    width: 450px;
+    width: 90%;
     height: 330px;
   }
 
   .energyBackdrop {
-    width: 410px;
+    width: 70%;
     height: 285px;
   }
 
   .energyImageFrame {
-    width: 425px;
+    width: 100%;
     height: 305px;
     left: 20px;
     top: 20px;
@@ -1287,7 +1277,6 @@
 
   .energyImageContainer {
     width: 100%;
-    max-width: 390px;
     height: 290px;
   }
 
@@ -1297,7 +1286,7 @@
   }
 
   .energyImageFrame {
-    width: 92%;
+    width: 96%;
     height: 265px;
     left: 15px;
     top: 15px;
@@ -1329,7 +1318,7 @@
   }
 
   .energyImageContainer {
-    max-width: 340px;
+    width: 100%;
     height: 255px;
   }
 
@@ -1581,25 +1570,62 @@
   background: #243B66;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1280px) {
 
   .siteSec {
-    padding: 70px 5%;
+    padding: 70px 50px;
   }
 
-  .galleryGrid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+  .siteHeader {
+    margin-bottom: 65px;
+    gap: 50px;
   }
 
   .siteText h2 {
     font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .FaqsLine {
+    width: 110px;
+    height: 3px;
+  }
+
+  .siteHeader p {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Cards */
+  .galleryGrid {
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .galleryCard {
+    border-radius: 14px;
   }
 
   .galleryImageWrapper {
     height: 180px;
   }
 
+  .galleryContent {
+    padding: 22px 16px 24px;
+    min-height: 140px;
+  }
+
+  .galleryTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .galleryDescription {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width:1200px) {
@@ -1957,51 +1983,48 @@
 }
 
 @media (max-width:1280px) {
-
   .mfgBand {
-    padding: 45px 40px;
-  }
-
-  .mfgContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
-    align-items: center;
-  }
-
-  .mfgText {
-    flex: 1;
-    max-width: 600px;
+    width: 100%;
+    height: 370px;
+    padding: 60px 50px;
   }
 
   .mfgText h2 {
-    font-size: 46px;
-  }
-
-  .mfgText p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 45px;
   }
 
   .mfgImgWrapper {
-    width: 500px;
-    height: 350px;
-    flex-shrink: 0;
-    bottom: 20px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 70px;
-    letter-spacing: 3px;
+    width: 44%;
+    height: 320px;
+    bottom: 45px;
   }
 
   .LastImage img {
-    width: 270px;
-    bottom: -210px;
-    height: auto;
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 700px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 40%;
   }
 
 }
+
 
 @media (max-width:1200px) {
 
@@ -2430,8 +2453,8 @@
   }
 
   .solarDisplayContainer {
-    width: 500px;
-    height: 400px;
+    width: 520px;
+    height: 410px;
   }
 
   .solarBackgroundShape {
@@ -2440,8 +2463,8 @@
   }
 
   .solarImageHolder {
-    width: 475px;
-    height: 380px;
+    width: 490px;
+    height: 390px;
     left: 22px;
     top: 22px;
   }
@@ -2460,8 +2483,8 @@
   }
 
   .solarDisplayContainer {
-    width: 460px;
-    height: 450px;
+    width: 470px;
+    height: 460px;
   }
 
   .solarBackgroundShape {
@@ -2470,7 +2493,7 @@
   }
 
   .solarImageHolder {
-    width: 435px;
+    width: 455px;
     height: 430px;
     left: 20px;
     top: 20px;
@@ -2480,48 +2503,33 @@
 
 
 
-@media (max-width:1060px) {
-
-  .SolarEpic {
-    padding: 60px 35px;
-  }
-
-  .solarEpicTitle {
-    margin-bottom: 45px;
-  }
-
-  .solarEpicTitle h2 {
-    font-size: 42px;
-  }
+@media (max-width:1050px) {
 
   .SolarEpicFLex {
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
   }
 
   .solartext {
-    max-width: 470px;
-  }
-
-  .solartext p {
-    font-size: 15px;
-    line-height: 1.75;
+    max-width: 100%;
   }
 
   .solarDisplayContainer {
-    width: 410px;
-    height: 405px;
+    width: 90%;
+    height: 410px;
   }
 
   .solarBackgroundShape {
-    width: 375px;
-    height: 330px;
+    width: 80%;
+    height: 340px;
   }
 
   .solarImageHolder {
-    width: 390px;
-    height: 380px;
-    left: 18px;
-    top: 18px;
+    width: 100%;
+    height: 390px;
+    left: 25px;
+    top: 25px;
   }
 
 }
@@ -2540,18 +2548,18 @@
   }
 
   .solarDisplayContainer {
-    width: 540px;
-    height: 390px;
+    width: 90%;
+    height: 410px;
   }
 
   .solarBackgroundShape {
-    width: 490px;
+    width: 80%;
     height: 340px;
   }
 
   .solarImageHolder {
-    width: 515px;
-    height: 365px;
+    width: 100%;
+    height: 390px;
     left: 25px;
     top: 25px;
   }
@@ -2581,17 +2589,17 @@
   }
 
   .solarDisplayContainer {
-    width: 450px;
+    width: 90%;
     height: 330px;
   }
 
   .solarBackgroundShape {
-    width: 410px;
+    width: 80%;
     height: 285px;
   }
 
   .solarImageHolder {
-    width: 425px;
+    width: 100%;
     height: 305px;
     left: 20px;
     top: 20px;
@@ -2616,8 +2624,7 @@
   }
 
   .solarDisplayContainer {
-    width: 100%;
-    max-width: 390px;
+    width: 90%;
     height: 290px;
   }
 
@@ -2627,7 +2634,7 @@
   }
 
   .solarImageHolder {
-    width: 92%;
+    width: 100%;
     height: 265px;
     left: 15px;
     top: 15px;
@@ -2652,17 +2659,17 @@
   }
 
   .solarDisplayContainer {
-    max-width: 340px;
+    max-width: 100%;
     height: 255px;
   }
 
   .solarBackgroundShape {
-    width: 87%;
+    width: 80%;
     height: 215px;
   }
 
   .solarImageHolder {
-    width: 91%;
+    width: 100%;
     height: 232px;
     left: 13px;
     top: 13px;
@@ -2687,17 +2694,17 @@
   }
 
   .solarDisplayContainer {
-    max-width: 300px;
+    max-width: 100%;
     height: 225px;
   }
 
   .solarBackgroundShape {
-    width: 86%;
+    width: 80%;
     height: 188px;
   }
 
   .solarImageHolder {
-    width: 90%;
+    width: 100%;
     height: 203px;
     left: 11px;
     top: 11px;
@@ -2721,17 +2728,17 @@
   }
 
   .solarDisplayContainer {
-    max-width: 270px;
+    max-width: 90%;
     height: 205px;
   }
 
   .solarBackgroundShape {
-    width: 85%;
+    width: 80%;
     height: 170px;
   }
 
   .solarImageHolder {
-    width: 89%;
+    width: 100%;
     height: 185px;
     left: 10px;
     top: 10px;
@@ -2852,6 +2859,7 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  border-radius: 10px;
 }
 
 .faqItem:hover {
@@ -2946,29 +2954,64 @@
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 505px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 480px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -3198,7 +3241,7 @@
 
 .cta {
   width: 100%;
-  background:  url('../assets/solar/solarepic/cta.png');
+  background: url('../assets/solar/solarepic/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3301,29 +3344,30 @@
 @media (max-width:1280px) {
 
   .cta {
-    padding: 65px 40px;
+    padding: 60px 40px;
   }
 
   .cta h2 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.2;
     text-align: center;
   }
 
   .cta p {
-    max-width: 820px;
+    max-width: 700px;
     margin: 0 auto 24px;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.8;
   }
 
   .contactBtn {
     width: 250px;
-    height: 54px;
+    height: 50px;
     font-size: 16px;
   }
 
 }
+
 
 @media (max-width:1200px) {
 

@@ -103,19 +103,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 700px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -280,7 +290,7 @@
   }
 
   .mainTitle {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .heroDesc {
@@ -377,176 +387,142 @@
   align-items: center;
 }
 
-.cardWrapper {
+
+.mediaContainer {
   position: relative;
-  width: 620px;
-  height: 260px;
+  width: 600px;
+  height: 250px;
+  overflow: visible;
 }
 
-/* Bottom Blue Block */
-
-.bottomAccent {
+.accentBar {
   position: absolute;
-  left: 30px;
-  bottom: 0;
-  width: 590px;
-  height: 48px;
-  background: #2F4775;
-  border-radius: 0 0 18px 18px;
-  transition: .45s ease;
+  left: 23px;
+  bottom: -80px;
+  width: 580px;
+  height: 60px;
+  background: #29456f;
+  border-radius: 0;
   z-index: 2;
+  transition: all 0.45s ease;
 }
 
-/* Image */
-
-.imageFrame {
+.imageWrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 620px;
-  height: 310px;
-  overflow: hidden;
-  border-radius: 18px;
+  width: 630px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
   z-index: 1;
-  box-shadow: 0 22px 45px rgba(0, 0, 0, .18);
 }
 
 .cardImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
-  transition:
-    transform .8s ease,
-    filter .5s ease;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: transform 0.8s ease, filter 0.8s ease;
 }
 
 /* Overlay */
-
-.imageFrame::before {
+.imageWrapper::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: .45s;
-  z-index: 2;
+  transition: 0.45s ease;
 }
 
-/* Shine */
-
-.imageFrame::after {
-  content: "";
-  position: absolute;
-  top: -150%;
-  left: -60%;
-  width: 45%;
-  height: 300%;
-  background: rgba(255, 255, 255, .28);
-  transform: rotate(25deg);
-  transition: left .9s ease;
-  z-index: 3;
-}
-
-/* Hover */
-
-.cardWrapper:hover .cardImage {
+/* Hover States */
+.mediaContainer:hover .cardImage {
   transform: scale(1.08);
+  filter: brightness(0.82);
 }
 
-.cardWrapper:hover .imageFrame::before {
-  background: rgba(0, 0, 0, .12);
+.mediaContainer:hover .accentBar {
+  height: 58px;
+  background: #1f3760;
 }
 
-.cardWrapper:hover .imageFrame::after {
-  left: 150%;
+.mediaContainer:hover .imageWrapper {
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
 }
 
-.cardWrapper:hover .imageFrame {
-  box-shadow: 0 35px 70px rgba(0, 0, 0, .28);
-}
 
-.cardWrapper:hover .bottomAccent {
-  left: 45px;
-  background: #20365c;
-}
-
-@media (max-width:1400px) {
-
+@media (max-width: 1440px) {
   .SolarEpic {
     padding: 70px 50px;
   }
 
-  .SolarEpicFLex {
-    gap: 50px;
+  .solarEpicTitle {
+    margin-bottom: 70px;
   }
 
-  .cardWrapper {
-    max-width: 580px;
+  .SolarEpicFLex {
+    gap: 55px;
+  }
+
+  .mediaContainer {
+    width: 550px;
+    height: 280px;
+  }
+
+  .imageWrapper {
+    width: 580px;
+    height: 280px;
+  }
+
+  .accentBar {
+    left: 22px;
+    bottom: -75px;
+    width: 530px;
+    height: 56px;
   }
 
   .solartext {
     max-width: 620px;
   }
 
+  .solartext p {
+    font-size: 16px;
+  }
 }
 
 
-
-@media screen and (max-width: 1280px) {
-
+@media (max-width: 1280px) {
   .SolarEpic {
     padding: 65px 40px;
   }
 
   .solarEpicTitle {
-    margin-bottom: 55px;
-  }
-
-  .solarEpicTitle h2 {
-    font-size: 48px;
-    line-height: 1.2;
+    margin-bottom: 60px;
   }
 
   .SolarEpicFLex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+    gap: 45px;
   }
 
-  .cardWrapper {
-    position: relative;
-    width: 560px;
-    height: 260px;
-    flex-shrink: 0;
+  .mediaContainer {
+    width: 500px;
+    height: 230px;
   }
 
-  .imageFrame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 560px;
+  .imageWrapper {
+    width: 530px;
     height: 280px;
-    border-radius: 18px;
-    overflow: hidden;
   }
 
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .bottomAccent {
-    left: 28px;
-    bottom: 20px;
-    width: 542px;
-    height: 45px;
-    border-radius: 0 0 18px 18px;
+  .accentBar {
+    left: 20px;
+    bottom: -70px;
+    width: 485px;
+    height: 52px;
   }
 
   .solartext {
-    flex: 1;
     max-width: 560px;
   }
 
@@ -554,269 +530,268 @@
     font-size: 16px;
     line-height: 1.75;
   }
-
 }
+
+
 
 @media (max-width: 1200px) {
-
   .SolarEpic {
-    padding: 45px 24px;
+    padding: 60px 35px;
   }
 
   .solarEpicTitle {
-    margin-bottom: 35px;
-    align-items: center;
-    text-align: center;
+    margin-bottom: 50px;
   }
 
   .solarEpicTitle h2 {
-    font-size: 34px;
+    font-size: 43px;
   }
 
   .SolarEpicFLex {
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    gap: 35px;
   }
 
-  .cardWrapper {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 2 / 1;
-    height: auto;
+  .mediaContainer {
+    width: 500px;
+    height: 250px;
   }
 
-  .imageFrame {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
+  .imageWrapper {
+    width: 500px;
+    height: 300px;
   }
 
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .bottomAccent {
-    left: 5%;
-    bottom: -14px;
-    width: 95%;
-    height: 42px;
-    border-radius: 0 0 16px 16px;
+  .accentBar {
+    left: 18px;
+    bottom: -65px;
+    width: 450px;
+    height: 48px;
   }
 
   .solartext {
-    width: 100%;
-    max-width: 100%;
-    gap: 18px;
+    max-width: 530px;
   }
 
-  .solartext p {
-    font-size: 16px;
-    line-height: 1.8;
+}
+
+@media (max-width: 1080px) {
+  .solartext {
+    max-width: 500px;
   }
 
+  .mediaContainer {
+    width: 500px;
+    height: 280px;
+  }
+
+  .imageWrapper {
+    width: 500px;
+    height: 330px;
+  }
+
+  .accentBar {
+    left: 18px;
+    bottom: -65px;
+    width: 450px;
+    height: 48px;
+  }
 }
 
 
 
 
-@media screen and (max-width: 1024px) {
+
+@media (max-width: 1050px) {
 
   .SolarEpic {
-    padding: 45px 24px;
+    padding: 50px 28px;
   }
 
   .solarEpicTitle {
-    margin-bottom: 35px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .solarEpicTitle h2 {
-    font-size: 34px;
+    margin-bottom: 45px;
   }
 
   .SolarEpicFLex {
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 80px;
   }
 
-  .cardWrapper {
-    position: relative;
+  .mediaContainer {
     width: 100%;
-    max-width: 600px;
-    aspect-ratio: 2 / 1;
-    height: auto;
+    height: 370px;
   }
 
-  .imageFrame {
-    position: absolute;
-    inset: 0;
+  .imageWrapper {
     width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
+    height: 400px;
   }
 
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .bottomAccent {
-    left: 5%;
-    bottom: -14px;
-    width: 95%;
-    height: 42px;
-    border-radius: 0 0 16px 16px;
+  .accentBar {
+    left: 4%;
+    bottom: -55px;
+    width: 92%;
+    height: 50px;
   }
 
   .solartext {
     width: 100%;
     max-width: 100%;
-    gap: 18px;
   }
 
   .solartext p {
     font-size: 16px;
-    line-height: 1.8;
   }
 
 }
 
-
-
-
-@media screen and (max-width: 768px) {
-
+@media (max-width: 900px) {
   .SolarEpic {
-    padding: 45px 24px;
+    padding: 50px 28px;
   }
 
   .solarEpicTitle {
-    margin-bottom: 35px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .solarEpicTitle h2 {
-    font-size: 34px;
+    margin-bottom: 45px;
   }
 
   .SolarEpicFLex {
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 80px;
   }
 
-  .cardWrapper {
-    position: relative;
+  .mediaContainer {
     width: 100%;
-    max-width: 600px;
-    aspect-ratio: 2 / 1;
-    height: auto;
+    height: 310px;
   }
 
-  .imageFrame {
-    position: absolute;
-    inset: 0;
+  .imageWrapper {
     width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
+    height: 340px;
   }
 
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .bottomAccent {
-    left: 5%;
-    bottom: -14px;
-    width: 95%;
-    height: 42px;
-    border-radius: 0 0 16px 16px;
+  .accentBar {
+    left: 4%;
+    bottom: -55px;
+    width: 92%;
+    height: 50px;
   }
 
   .solartext {
     width: 100%;
     max-width: 100%;
-    gap: 18px;
   }
 
   .solartext p {
     font-size: 16px;
-    line-height: 1.8;
   }
-
 }
 
-@media screen and (max-width: 560px) {
 
+
+@media (max-width: 768px) {
   .SolarEpic {
-    padding: 40px 18px;
+    padding: 50px 25px;
   }
 
   .solarEpicTitle {
-    margin-bottom: 30px;
-    text-align: center;
-    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
   }
 
   .solarEpicTitle h2 {
-    font-size: 28px;
-    line-height: 1.25;
+    font-size: 35px;
   }
 
   .SolarEpicFLex {
-    flex-direction: column;
-    gap: 40px;
+    gap: 70px;
   }
 
-  .cardWrapper {
-    position: relative;
+  .mediaContainer {
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: 2 / 1;
-    height: auto;
+    height: 270px;
   }
 
-  .imageFrame {
-    position: absolute;
-    inset: 0;
+  .imageWrapper {
     width: 100%;
-    height: 100%;
-    border-radius: 14px;
-    overflow: hidden;
+    height: 300px;
+  }
+
+  .imageWrapper {
+    border-radius: 8px;
   }
 
   .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 8px;
   }
 
-  .bottomAccent {
-    left: 5%;
-    bottom: -12px;
-    width: 95%;
-    height: 36px;
-    border-radius: 0 0 14px 14px;
+  .accentBar {
+    bottom: -48px;
+    height: 45px;
+    left: 4%;
+    width: 92%;
   }
 
   .solartext {
+    gap: 18px;
+  }
+
+  .solartext p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mediaContainer:hover .cardImage {
+    transform: scale(1.05);
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .SolarEpic {
+    padding: 45px 20px;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 35px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 30px;
+    line-height: 1.18;
+  }
+
+  .SolarEpicFLex {
+    gap: 62px;
+  }
+
+  .mediaContainer {
     width: 100%;
-    max-width: 100%;
+    height: 240px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 270px;
+  }
+
+  .imageWrapper {
+    border-radius: 7px;
+  }
+
+  .cardImage {
+    border-radius: 7px;
+  }
+
+  .accentBar {
+    bottom: -42px;
+    height: 40px;
+    left: 4%;
+    width: 92%;
+  }
+
+  .solartext {
     gap: 16px;
   }
 
@@ -825,225 +800,192 @@
     line-height: 1.7;
   }
 
+  .mediaContainer:hover .accentBar {
+    height: 42px;
+  }
 }
 
 
 
-@media screen and (max-width: 480px) {
-
+@media (max-width: 480px) {
   .SolarEpic {
-    padding: 35px 16px;
+    padding: 40px 16px;
   }
 
   .solarEpicTitle {
-    margin-bottom: 28px;
-    text-align: center;
-    align-items: center;
+    gap: 7px;
+    margin-bottom: 30px;
   }
 
   .solarEpicTitle h2 {
-    font-size: 26px;
-    line-height: 1.25;
+    font-size: 27px;
+    line-height: 1.18;
   }
 
   .SolarEpicFLex {
-    flex-direction: column;
-    gap: 35px;
+    gap: 55px;
   }
 
-  .cardWrapper {
-    position: relative;
+  .mediaContainer {
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: 2 / 1;
-    height: auto;
+    aspect-ratio: 1.8 / 1;
   }
 
-  .imageFrame {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
+  .imageWrapper {
+    border-radius: 6px;
   }
 
   .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 6px;
   }
 
-  .bottomAccent {
-    left: 5%;
-    bottom: -10px;
-    width: 95%;
-    height: 32px;
-    border-radius: 0 0 12px 12px;
+  .accentBar {
+    left: 4%;
+    width: 92%;
+    bottom: -36px;
+    height: 35px;
   }
 
   .solartext {
-    width: 100%;
-    max-width: 100%;
     gap: 14px;
   }
 
   .solartext p {
     font-size: 14px;
-    line-height: 1.7;
-  }
-
-}
-
-
-@media screen and (max-width: 360px) {
-
-  .SolarEpic {
-    padding: 30px 14px;
-  }
-
-  .solarEpicTitle {
-    margin-bottom: 24px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .solarEpicTitle h2 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  .FaqsLine {
-    width: 70px;
-  }
-
-  .SolarEpicFLex {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .cardWrapper {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 2 / 1;
-    height: auto;
-  }
-
-  .imageFrame {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .bottomAccent {
-    left: 5%;
-    bottom: -8px;
-    width: 95%;
-    height: 28px;
-    border-radius: 0 0 10px 10px;
-  }
-
-  .solartext {
-    width: 100%;
-    max-width: 100%;
-    gap: 12px;
-  }
-
-  .solartext p {
-    font-size: 14px;
     line-height: 1.65;
-    margin: 0;
   }
 
+  .mediaContainer:hover .accentBar {
+    height: 37px;
+  }
 }
 
 
-
-/* ===================== 320px ===================== */
-
-@media screen and (max-width: 320px) {
-
+@media (max-width: 390px) {
   .SolarEpic {
-    padding: 28px 12px;
+    padding: 35px 14px;
   }
 
   .solarEpicTitle {
     margin-bottom: 22px;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
   }
 
   .solarEpicTitle h2 {
-    font-size: 22px;
-    line-height: 1.3;
-  }
-
-  .FaqsLine {
-    width: 60px;
+    font-size: 25px;
   }
 
   .SolarEpicFLex {
-    flex-direction: column;
-    gap: 28px;
+    gap: 48px;
   }
 
-  .cardWrapper {
-    position: relative;
+  .mediaContainer {
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: 2 / 1;
-    height: auto;
+    height: 200px;
   }
 
-  .imageFrame {
-    position: absolute;
-    inset: 0;
+  .imageWrapper {
     width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
+    height: 220px;
   }
 
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .bottomAccent {
-    left: 5%;
-    bottom: -8px;
-    width: 95%;
-    height: 24px;
-    border-radius: 0 0 8px 8px;
+  .accentBar {
+    bottom: -32px;
+    height: 32px;
   }
 
   .solartext {
-    width: 100%;
-    max-width: 100%;
-    gap: 10px;
+    gap: 13px;
   }
 
   .solartext p {
     font-size: 13px;
-    line-height: 1.6;
-    margin: 0;
+    line-height: 1.8;
+  }
+}
+
+
+
+@media (max-width: 360px) {
+  .SolarEpic {
+    padding: 32px 12px;
   }
 
+  .solarEpicTitle {
+    margin-bottom: 25px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 22px;
+  }
+
+  .SolarEpicFLex {
+    gap: 44px;
+  }
+
+  .mediaContainer {
+    aspect-ratio: 1.7 / 1;
+  }
+
+  .imageWrapper {
+    border-radius: 5px;
+  }
+
+  .cardImage {
+    border-radius: 5px;
+  }
+
+  .accentBar {
+    bottom: -29px;
+    height: 29px;
+  }
+
+  .solartext {
+    gap: 12px;
+  }
+
+  .solartext p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
 }
+
+
+@media (max-width: 320px) {
+  .SolarEpic {
+    padding: 30px 10px;
+  }
+
+  .solarEpicTitle {
+    margin-bottom: 23px;
+  }
+
+  .solarEpicTitle h2 {
+    font-size: 22px;
+  }
+
+  .SolarEpicFLex {
+    gap: 40px;
+  }
+
+  .mediaContainer {
+    aspect-ratio: 1.65 / 1;
+  }
+
+  .accentBar {
+    bottom: -26px;
+    height: 26px;
+  }
+
+  .solartext {
+    gap: 11px;
+  }
+
+  .solartext p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
 
 
 /* ==============Advantages=======================
@@ -1096,7 +1038,7 @@
   border-radius: 20px;
 }
 
-.featureGrid {
+/* .featureGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 9px;
@@ -1187,10 +1129,192 @@
   color: #fff;
 }
 
-/* Slight icon movement */
+
 
 .featureCard:hover .iconWrapper {
   transform: translateY(-3px);
+} */
+
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+}
+
+.featureCard {
+  position: relative;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-right: none;
+  border-radius: 10px;
+  min-height: 300px;
+  padding: 15px 20px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.featureCard:last-child {
+  border-right: 1px solid #d9d9d9;
+}
+
+/* =========================================
+   NEW HOVER BACKGROUND
+   ========================================= */
+
+.cardBg {
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  left: -100%;
+  bottom: -100%;
+
+  background: #304875;
+  border-radius: 50%;
+
+  z-index: -1;
+
+  transform: scale(0);
+  transform-origin: bottom left;
+
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    left 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    bottom 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover */
+
+.featureCard:hover .cardBg {
+  transform: scale(1);
+  left: -40%;
+  bottom: -40%;
+}
+
+/* =========================================
+   CARD HOVER
+   ========================================= */
+
+.featureCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(48, 72, 117, 0.16);
+}
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.iconWrapper {
+  width: 74px;
+  height: 74px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 34px;
+
+  color: #304875;
+
+  transition:
+    color 0.4s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.iconWrapper svg {
+  width: 42px;
+  height: 42px;
+  stroke-width: 1.7;
+
+  transition:
+    transform 0.5s ease,
+    stroke-width 0.4s ease;
+}
+
+/* Icon hover animation */
+
+.featureCard:hover .iconWrapper {
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+.featureCard:hover .iconWrapper svg {
+  transform: rotate(-8deg) scale(1.12);
+  stroke-width: 2;
+}
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.cardContent h3 {
+  margin: 0 0 22px;
+
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  color: #202020;
+
+  transition:
+    color 0.4s ease,
+    transform 0.45s ease;
+}
+
+.cardContent p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.45;
+
+  color: #555;
+
+  transition:
+    color 0.4s ease,
+    transform 0.45s ease;
+}
+
+/* Content moves slightly */
+
+.featureCard:hover .cardContent h3 {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.featureCard:hover .cardContent p {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   ACTIVE CARD
+   ========================================= */
+
+.activeCard {
+  color: #fff;
+}
+
+.activeCard .cardBg {
+  transform: scale(1);
+  left: -40%;
+  bottom: -40%;
+}
+
+.activeCard .iconWrapper,
+.activeCard .cardContent h3,
+.activeCard .cardContent p {
+  color: #fff;
 }
 
 
@@ -1454,7 +1578,7 @@
   align-items: start;
   flex-direction: column;
   gap: 22px;
-  max-width: 680px;
+  max-width: 700px;
 }
 
 .introText p {
@@ -1521,7 +1645,7 @@
 .hospitalImageContainer {
   position: relative;
   width: 600px;
-  height: 400px;
+  height: 420px;
   overflow: visible;
 }
 
@@ -1542,7 +1666,7 @@
   top: 0;
   left: 0;
   width: 600px;
-  height: 470px;
+  height: 490px;
   border-radius: 10px 10px 10px 10px;
   cursor: pointer;
   z-index: 1;
@@ -1641,12 +1765,12 @@
   }
 
   .hospitalImageContainer {
-    width: 500px;
+    width: 530px;
     height: 450px;
   }
 
   .hospitalImageWrapper {
-    width: 500px;
+    width: 530px;
     height: 480px;
   }
 
@@ -2021,7 +2145,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -2074,52 +2198,49 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1280px) {
-
+@media (max-width:1440px) {
   .mfgBand {
-    padding: 45px 40px;
-  }
-
-  .mfgContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
-    align-items: center;
-  }
-
-  .mfgText {
-    flex: 1;
-    max-width: 600px;
+    width: 100%;
+    height: 370px;
   }
 
   .mfgText h2 {
-    font-size: 46px;
-  }
-
-  .mfgText p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size:45px;
   }
 
   .mfgImgWrapper {
-    width: 500px;
-    height: 350px;
-    flex-shrink: 0;
-    bottom: 20px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 70px;
-    letter-spacing: 3px;
+    width: 35%;
+    height: 320px;
+    bottom: 60px;
   }
 
   .LastImage img {
-    width: 270px;
-    bottom: -210px;
-    height: auto;
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 700px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 40%;
   }
 
 }
+
+
 
 @media (max-width:1200px) {
 
@@ -2535,7 +2656,7 @@
   }
 
   .siteText h2 {
-    font-size: 42px;
+    font-size: 48px;
   }
 
   .galleryGrid {
@@ -2545,6 +2666,10 @@
 
   .galleryImageWrapper {
     height: 220px;
+  }
+
+  .siteHeader p {
+    font-size: 14px;
   }
 
 }
@@ -2950,29 +3075,65 @@
 
 }
 
-@media (max-width:1400px) {
+
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 505px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 460px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -3302,14 +3463,15 @@
 
 
 
+
 @media (max-width:1280px) {
 
   .cta {
-    padding: 65px 40px;
+    padding: 50px 40px;
   }
 
   .cta h2 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.2;
     text-align: center;
   }

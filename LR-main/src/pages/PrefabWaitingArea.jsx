@@ -126,7 +126,7 @@ const PrefabWaitingArea = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             LGSF Prefabricated   <br />
             <span>Waiting Areas
@@ -164,7 +164,7 @@ const PrefabWaitingArea = () => {
         <div className={styles.introContainer}>
           <div className={styles.introText}>
             <p>
-              LGSF prefabricated waiting areas by L&R Green Pvt Ltd are built using cold-formed galvanized
+              LGSF prefabricated waiting areas by L&R Prefab Solar India Pvt Ltd are built using cold-formed galvanized
               steel for strong structural stability and long-lasting durability. These modern units are
               designed to handle continuous public usage in busy environments. They offer high resistance
               to corrosion, termites, and weather impact. The lightweight steel framing ensures faster construction
@@ -217,7 +217,7 @@ const PrefabWaitingArea = () => {
             <div className={styles.advLine}></div>
           </div>
           <p>Our prefabricated waiting areas offer speed, strength, and sustainability.
-            Built by L&R Green Pvt Ltd, they ensure fast construction, lasting durability, and modern design.</p>
+            Built by L&R Prefab Solar India Pvt Ltd, they ensure fast construction, lasting durability, and modern design.</p>
         </div>
         <div className={styles.featureGrid}>
           {featureData.map((item, index) => (
@@ -253,7 +253,7 @@ const PrefabWaitingArea = () => {
               Solutions
             </h2>
             <p>
-              L&R Green Pvt Ltd delivers eco-friendly, high-strength, and fully customizable
+              L&R Prefab Solar India Pvt Ltd delivers eco-friendly, high-strength, and fully customizable
               prefabricated waiting areas built with advanced LGSF technology. Our solutions
               ensure sustainable construction with reduced waste and energy usage, while providing
               strong structural performance and modern architectural appeal. Each design is
@@ -286,7 +286,7 @@ const PrefabWaitingArea = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p >
-            L&R Green Pvt Ltd prefabricated waiting areas are designed for versatile use across
+            L&R Prefab Solar India Pvt Ltd prefabricated waiting areas are designed for versatile use across
             high-traffic public and commercial spaces, ensuring comfort, durability, and modern functionality.
           </p>
         </div>
@@ -323,24 +323,20 @@ const PrefabWaitingArea = () => {
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>
-
-
-
-
-          <div className={styles.cardWrapper}>
-            <div className={styles.bottomAccent}></div>
-            <div className={styles.imageFrame}>
+          <div className={styles.mediaContainer}>
+            <div className={styles.accentBar}></div>
+            <div className={styles.imageWrapper}>
               <img
                 src={wating3}
-                alt="Interior"
+                alt="Hospital Interior"
                 className={styles.cardImage}
               />
             </div>
-
           </div>
+
           {/*  */}
           <div className={styles.solartext}>
-            <p>Prefabricated waiting areas by L&R Green Pvt Ltd are designed using advanced LGSF
+            <p>Prefabricated waiting areas by L&R Prefab Solar Pvt Ltd are designed using advanced LGSF
               (Light Gauge Steel Framing) technology to deliver speed, strength, and modern
               architectural design. They are ideal for fast-moving infrastructure projects
               where quick execution and long-term durability are essential.</p>
@@ -362,7 +358,7 @@ const PrefabWaitingArea = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find quick answers about LGSF prefab waiting areas by L&R Green Pvt Ltd,
+          <p>Find quick answers about LGSF prefab waiting areas by L&R Prefab Solar India Pvt Ltd,
             covering design, durability, installation, and usage to help you
             understand our modern construction solutions better.</p>
         </div>
