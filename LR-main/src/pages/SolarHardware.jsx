@@ -147,7 +147,7 @@ const SolarHardware = () => {
     );
   }, [visibleCards, industryProjects.length]);
 
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
@@ -340,9 +340,8 @@ const SolarHardware = () => {
             <h2>Fastening Solutions <br /> <span>for Solar Construction</span></h2>
             <div className={styles.divider}></div>
           </div>
-          <p>Solar installations require strong, reliable fastening solutions to ensure stability
-            and long-term performance. Our systems are designed to withstand harsh outdoor conditions
-            while delivering consistent durability and structural integrity.</p>
+          <p>Our solar fastening systems deliver reliable strength, durability, and structural
+            integrity, even in harsh outdoor conditions.</p>
         </div>
         <div className={styles.controls}>
           <button className={styles.Btn} onClick={prevSlide}>
@@ -415,9 +414,8 @@ const SolarHardware = () => {
             <h2>Advantages of Our <br /><span>Solar Hardware Fasteners</span></h2>
             <div className={styles.divider} ></div>
           </div>
-          <p>Our solar fasteners are designed to deliver long-lasting strength, reliability,
-            and performance in demanding environments. They ensure secure connections while
-            improving efficiency and reducing overall project costs.</p>
+          <p>Our solar fasteners provide durable strength, reliable performance, and secure
+            connections—boosting efficiency while reducing project costs.</p>
         </div>
 
         <div className={styles.hardwareFeatureGrid}>
@@ -541,7 +539,7 @@ const SolarHardware = () => {
           </div>
           {/*  */}
           <div className={styles.solartext}>
-            <p>L&R Green Pvt Ltd provides specialized solar fastening solutions engineered to withstand
+            <p>L&R Prefab Solar India Pvt Ltd provides specialized solar fastening solutions engineered to withstand
               demanding environmental conditions. By combining industry-focused expertise with rigorous
               quality standards, we deliver hardware that ensures long-term structural integrity and consistent
               performance. Our focus on Reliable Performance minimizes maintenance risks, making us a trusted
@@ -549,7 +547,7 @@ const SolarHardware = () => {
             <p>We differentiate ourselves through Customization Capabilities and comprehensive End-to-End Support,
               tailoring every system to meet specific project requirements. From the initial design consultation to
               final delivery, our team provides the technical guidance and high-quality components necessary for seamless
-              installation. Choosing L&R Green means investing in precision-engineered solutions backed by dedicated professional service.</p>
+              installation. Choosing L&R Prefab Solar means investing in precision-engineered solutions backed by dedicated professional service.</p>
           </div>
         </div>
       </section>
