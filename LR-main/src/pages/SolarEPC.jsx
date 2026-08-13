@@ -118,6 +118,7 @@ const SolarEPC = () => {
 
 
       {/* ── SECTION 2: WHAT IS SOLAR EPC WORK? ── */}
+
       <section className={styles.introSec}>
         <div className={styles.secTitle}>
           <h2>
@@ -169,7 +170,6 @@ const SolarEPC = () => {
           </div>
         </div>
       </section>
-
 
 
 

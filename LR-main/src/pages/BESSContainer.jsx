@@ -4,10 +4,11 @@ import styles from '../styles/BESSContainer.module.css'
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import {
-    ArrowRight,  Plus, X,
+    ArrowRight, Plus, X, ArrowUpRight,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import bess1 from '../assets/BESS/bess1.png'
+import bess2 from '../assets/BESS/bess2.png'
 
 function BESSContainer() {
     const navigate = useNavigate();
@@ -62,6 +63,52 @@ function BESSContainer() {
                 </div>
             </section>
 
+
+            <section className={styles.introSec}>
+                <div className={styles.secTitle}>
+                    <h2>
+                        What Is a   <br />
+                        <span>BESS Container?</span>
+                    </h2>
+                    <div className={styles.introLine} />
+                </div>
+
+                <div className={styles.introContainer}>
+                    <div className={styles.introText}>
+                        <p>
+                            A BESS container is a specially engineered enclosure designed to safely house battery-storage equipment
+                            and its associated systems. Unlike a standard shipping container, a purpose-built BESS enclosure is
+                            designed around the specific requirements of the energy storage system, including equipment dimensions,
+                            structural loads, HVAC performance, cable routing, fire safety, ventilation, transportation, lifting,
+                            and maintenance access.
+                        </p>
+                        <p>
+                            Every BESS container is designed around the complete system and site requirements. This includes battery
+                            rack configuration, equipment dimensions and weight, HVAC and thermal management, electrical systems and
+                            cable routing, fire and safety provisions, transportation and lifting requirements, site and environmental
+                            conditions, and convenient maintenance and service access. The result is a reliable, efficient, and
+                            purpose-built enclosure ready for demanding energy storage applications.
+                        </p>
+                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                            <span>Get Contact</span>
+
+                            <span className={styles.iconWrap}>
+                                <ArrowUpRight className={styles.icon1} size={18} />
+                                <ArrowUpRight className={styles.icon2} size={18} />
+                            </span>
+                        </button>
+                    </div>
+
+                    <div className={styles.heroCard}>
+                        <div className={styles.dotPattern}></div>
+                        <div className={styles.accentBar}></div>
+
+                        <div className={styles.mediaContainer}>
+                            <img src={bess2} alt="Worker" className={styles.mediaImage} />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
             <section className={styles.faqSec}>

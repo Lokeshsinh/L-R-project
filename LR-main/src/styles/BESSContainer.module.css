@@ -310,6 +310,927 @@
 
 
 
+/* ===========================
+   SPLIT SECTION & GRIDS
+=========================== */
+
+.introSec {
+    width: 100%;
+    padding: 71px 60px;
+    background-color: #f7f7f753;
+}
+
+
+.secTitle {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.secTitle h2 {
+    margin-top: 10px;
+    font-size: 55px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.2;
+}
+
+.secTitle h2 span {
+    color: #1a3c6e;
+}
+
+.introLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #0d2244;
+}
+
+
+.introContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+.introText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 700px;
+}
+
+.introText p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.btnOutline {
+    width: 190px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #1a3c6e;
+    color: #fff;
+    border: 2px solid #1a3c6e;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s ease;
+}
+
+.btnOutline:hover {
+    background: #fff;
+    color: #1a3c6e;
+}
+
+.iconWrap {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.icon1,
+.icon2 {
+    position: absolute;
+    top: 0;
+    transition: transform .35s ease;
+}
+
+
+.icon1 {
+    left: 0;
+}
+
+.icon2 {
+    left: -22px;
+}
+
+.btnOutline:hover .icon1 {
+    transform: translateX(24px);
+}
+
+.btnOutline:hover .icon2 {
+    transform: translateX(24px);
+}
+
+
+.heroCard {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 490px;
+    margin: 0 auto;
+}
+
+/* Background Decorative Bar (Left Accent) */
+.accentBar {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 65px;
+    height: 410px;
+    background: #1a3c6e;
+    border-radius: 12px;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Main Image Container */
+.mediaContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 30px);
+    max-width: 580px;
+    height: 490px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+    transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mediaImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), filter 0.7s ease;
+}
+
+/* Background Pattern (Top-Right Grid Dots) */
+.dotPattern {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(#1a3c6e 1.6px, transparent 1.6px);
+    background-size: 14px 14px;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+/* Hover Dynamics */
+.heroCard:hover .mediaContainer {
+    transform: translate(-8px, -8px);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.25);
+}
+
+.heroCard:hover .mediaImage {
+    transform: scale(1.08);
+    filter: brightness(0.95);
+}
+
+.heroCard:hover .accentBar {
+    height: 340px;
+    background: #1a3c6e;
+}
+
+.heroCard:hover .dotPattern {
+    transform: translate(10px, -10px);
+    opacity: 0.9;
+}
+
+@media (max-width: 1400px) {
+
+    .introSec {
+        padding: 65px 50px;
+    }
+
+    .secTitle h2 {
+        font-size: 52px;
+    }
+
+    .introContainer {
+        gap: 40px;
+    }
+
+    .introText {
+        max-width: 620px;
+    }
+
+    .heroCard {
+        max-width: 560px;
+        height: 470px;
+    }
+
+    .mediaContainer {
+        height: 470px;
+        max-width: 540px;
+    }
+
+    .accentBar {
+        height: 390px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+    .introSec {
+        padding: 65px 50px;
+    }
+
+    .secTitle {
+        margin-bottom: 65px;
+    }
+
+    .secTitle h2 {
+        font-size: 48px;
+    }
+
+    .introContainer {
+        gap: 45px;
+    }
+
+    .introText {
+        max-width: 550px;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .heroCard {
+        max-width: 540px;
+        height: 520px;
+    }
+
+    .mediaContainer {
+        height: 540px;
+        width: 510px;
+    }
+
+    .accentBar {
+        width: 62px;
+        height: 430px;
+        bottom: 38px;
+    }
+
+    .dotPattern {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .introSec {
+        padding: 60px 40px;
+    }
+
+    .secTitle {
+        margin-bottom: 60px;
+    }
+
+    .secTitle h2 {
+        font-size: 46px;
+    }
+
+    .introContainer {
+        gap: 30px;
+    }
+
+    .introText {
+        max-width: 540px;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .heroCard {
+        max-width: 500px;
+        height: 526px;
+    }
+
+    .mediaContainer {
+        height: 526px;
+        max-width: 470px;
+    }
+
+    .accentBar {
+        width: 58px;
+        height: 440px;
+    }
+
+    .dotPattern {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+
+@media (max-width: 1130px) {
+
+    .introSec {
+        padding: 55px 35px;
+    }
+
+    .secTitle {
+        margin-bottom: 50px;
+    }
+
+    .secTitle h2 {
+        font-size: 42px;
+    }
+
+    .introContainer {
+        gap: 25px;
+    }
+
+    .introText {
+        max-width: 500px;
+    }
+
+    .introText p {
+        font-size: 15.5px;
+    }
+
+    .heroCard {
+        max-width: 470px;
+        height: 514px;
+    }
+
+    .mediaContainer {
+        height: 514px;
+        max-width: 450px;
+    }
+
+    .accentBar {
+        width: 52px;
+        height: 440px;
+    }
+
+    .dotPattern {
+        width: 95px;
+        height: 95px;
+    }
+}
+
+
+@media (max-width: 1050px) {
+
+    .introSec {
+        padding: 50px 28px;
+    }
+
+    .secTitle h2 {
+        font-size: 38px;
+    }
+
+    .introContainer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 45px;
+    }
+
+    .introText {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .heroCard {
+        width: 100%;
+        max-width: 650px;
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    .mediaContainer {
+        width: calc(100% - 30px);
+        max-width: 620px;
+        height: 450px;
+    }
+
+    .accentBar {
+        width: 60px;
+        height: 370px;
+        bottom: 35px;
+    }
+}
+
+
+@media (max-width: 996px) {
+
+    .introSec {
+        padding: 50px 28px;
+    }
+
+    .secTitle h2 {
+        font-size: 38px;
+    }
+
+    .introContainer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 45px;
+    }
+
+    .introText {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .heroCard {
+        width: 100%;
+        max-width: 650px;
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    .mediaContainer {
+        width: calc(100% - 30px);
+        max-width: 620px;
+        height: 450px;
+    }
+
+    .accentBar {
+        width: 60px;
+        height: 370px;
+        bottom: 35px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .introSec {
+        padding: 50px 25px;
+    }
+
+    .secTitle {
+        margin-bottom: 40px;
+    }
+
+    .secTitle h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .introLine {
+        width: 100px;
+    }
+
+    .introContainer {
+        gap: 40px;
+    }
+
+    .introText {
+        gap: 18px;
+    }
+
+    .introText p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 5px;
+    }
+
+    .btnOutline {
+        width: 175px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .heroCard {
+        max-width: 600px;
+        height: 400px;
+    }
+
+    .mediaContainer {
+        height: 400px;
+        width: calc(100% - 25px);
+    }
+
+    .accentBar {
+        width: 52px;
+        height: 330px;
+        bottom: 30px;
+    }
+
+    .dotPattern {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+
+    .introSec {
+        padding: 45px 22px;
+    }
+
+    .secTitle {
+        margin-bottom: 35px;
+    }
+
+    .secTitle h2 {
+        font-size: 34px;
+    }
+
+    .introText p {
+        font-size: 15px;
+    }
+
+    .heroCard {
+        height: 370px;
+    }
+
+    .mediaContainer {
+        height: 370px;
+        width: calc(100% - 22px);
+    }
+
+    .accentBar {
+        width: 46px;
+        height: 305px;
+        bottom: 28px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .introSec {
+        padding: 42px 20px;
+    }
+
+    .secTitle {
+        gap: 8px;
+        margin-bottom: 32px;
+    }
+
+    .secTitle h2 {
+        font-size: 31px;
+        line-height: 1.15;
+    }
+
+    .introLine {
+        width: 85px;
+        height: 3px;
+    }
+
+    .introContainer {
+        gap: 35px;
+    }
+
+    .introText {
+        gap: 14px;
+    }
+
+    .introText p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .btnOutline {
+        width: 165px;
+        height: 48px;
+        font-size: 13.5px;
+    }
+
+    .heroCard {
+        height: 340px;
+    }
+
+    .mediaContainer {
+        height: 340px;
+        width: calc(100% - 20px);
+        border-radius: 10px;
+    }
+
+    .accentBar {
+        width: 42px;
+        height: 280px;
+        bottom: 25px;
+        border-radius: 9px;
+    }
+
+    .dotPattern {
+        top: -14px;
+        right: -14px;
+        width: 78px;
+        height: 78px;
+        background-size: 10px 10px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .introSec {
+        padding: 38px 17px;
+    }
+
+    .secTitle {
+        margin-bottom: 28px;
+    }
+
+    .secTitle h2 {
+        font-size: 28px;
+    }
+
+    .introLine {
+        width: 75px;
+        height: 2px;
+    }
+
+    .introContainer {
+        gap: 30px;
+    }
+
+    .introText {
+        gap: 12px;
+    }
+
+    .introText p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+
+    .btnOutline {
+        width: 158px;
+        height: 46px;
+        font-size: 13px;
+    }
+
+    .heroCard {
+        height: 300px;
+    }
+
+    .mediaContainer {
+        height: 300px;
+        width: calc(100% - 17px);
+        border-radius: 9px;
+    }
+
+    .accentBar {
+        width: 36px;
+        height: 245px;
+        bottom: 22px;
+        border-radius: 8px;
+    }
+
+    .dotPattern {
+        top: -11px;
+        right: -11px;
+        width: 65px;
+        height: 65px;
+        background-size: 9px 9px;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+
+    .introSec {
+        padding: 35px 15px;
+    }
+
+    .secTitle {
+        margin-bottom: 25px;
+    }
+
+    .secTitle h2 {
+        font-size: 26px;
+    }
+
+    .introContainer {
+        gap: 28px;
+    }
+
+    .introText p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .btnOutline {
+        width: 150px;
+        height: 45px;
+        font-size: 12.5px;
+    }
+
+    .heroCard {
+        height: 275px;
+    }
+
+    .mediaContainer {
+        height: 275px;
+        width: calc(100% - 14px);
+    }
+
+    .accentBar {
+        width: 32px;
+        height: 225px;
+        bottom: 20px;
+    }
+
+    .dotPattern {
+        width: 58px;
+        height: 58px;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .introSec {
+        padding: 32px 13px;
+    }
+
+    .secTitle {
+        margin-bottom: 23px;
+    }
+
+    .secTitle h2 {
+        font-size: 24px;
+    }
+
+    .introLine {
+        width: 68px;
+    }
+
+    .introText {
+        gap: 10px;
+    }
+
+    .introText p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .btnOutline {
+        width: 145px;
+        height: 43px;
+        font-size: 12px;
+    }
+
+    .heroCard {
+        height: 250px;
+    }
+
+    .mediaContainer {
+        height: 250px;
+        width: calc(100% - 12px);
+    }
+
+    .accentBar {
+        width: 29px;
+        height: 205px;
+        bottom: 18px;
+    }
+
+    .dotPattern {
+        width: 52px;
+        height: 52px;
+        background-size: 8px 8px;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+
+    .introSec {
+        padding: 30px 11px;
+    }
+
+    .secTitle {
+        margin-bottom: 21px;
+    }
+
+    .secTitle h2 {
+        font-size: 22px;
+    }
+
+    .introLine {
+        width: 60px;
+        height: 2px;
+    }
+
+    .introText p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .btnOutline {
+        width: 140px;
+        height: 42px;
+        font-size: 11.5px;
+    }
+
+    .heroCard {
+        height: 225px;
+    }
+
+    .mediaContainer {
+        height: 225px;
+        width: calc(100% - 10px);
+    }
+
+    .accentBar {
+        width: 26px;
+        height: 185px;
+        bottom: 16px;
+        border-radius: 6px;
+    }
+
+    .dotPattern {
+        top: -9px;
+        right: -9px;
+        width: 47px;
+        height: 47px;
+        background-size: 7px 7px;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    .introSec {
+        padding: 27px 9px;
+    }
+
+    .secTitle {
+        margin-bottom: 19px;
+    }
+
+    .secTitle h2 {
+        font-size: 22px;
+    }
+
+    .introLine {
+        width: 55px;
+    }
+
+    .introText p {
+        font-size: 11.5px;
+        line-height: 1.5;
+    }
+
+    .btnOutline {
+        width: 135px;
+        height: 40px;
+        font-size: 11px;
+    }
+
+    .heroCard {
+        height: 205px;
+    }
+
+    .mediaContainer {
+        height: 205px;
+        width: calc(100% - 8px);
+    }
+
+    .accentBar {
+        width: 23px;
+        height: 168px;
+        bottom: 15px;
+    }
+
+    .dotPattern {
+        top: -8px;
+        right: -8px;
+        width: 42px;
+        height: 42px;
+        background-size: 6px 6px;
+    }
+}
 
 
 /* ===========================
@@ -557,7 +1478,7 @@
 
     .faqImg {
         width: 520px;
-        height: 480px;
+        height: 460px;
         border-radius: 12px;
     }
 
@@ -769,6 +1690,11 @@
         font-size: 13px;
     }
 
+    .faqHeader p {
+        font-size: 12px;
+    }
+
+
 }
 
 @media (max-width:360px) {
@@ -780,6 +1706,10 @@
     .introLabel {
         font-size: 12px;
         padding: 5px 16px;
+    }
+
+    .faqHeader p {
+        font-size: 12px;
     }
 
     .faqImg {
