@@ -107,14 +107,14 @@ const HVACSolutions = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             HVAC Solutions<br />
             <span>by Application
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green Pvt Ltd provides application-specific HVAC solutions for optimal comfort, efficient
+            L&R Prefab Solar India Pvt Ltd provides application-specific HVAC solutions for optimal comfort, efficient
             airflow, and reliable, energy-efficient performance across all sectors.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -143,11 +143,11 @@ const HVACSolutions = () => {
             <p>
               HVAC (Heating, Ventilation, and Air Conditioning) systems play a critical role in creating comfortable,
               healthy, and controlled indoor environments across residential, commercial, and industrial spaces.
-              At L&R Green Pvt Ltd, we deliver comprehensive HVAC solutions covering every stage—from design and
+              At L&R Prefab Solar India Pvt Ltd, we deliver comprehensive HVAC solutions covering every stage from design and
               engineering to installation and maintenance—ensuring consistent performance, durability, and long-term reliability.
             </p>
             <p>
-              Our HVAC solutions are built using advanced, energy-efficient technologies that optimize airflow, maintain precise
+              Our HVAC solutions are built using advanced, energy efficient technologies that optimize airflow, maintain precise
               temperature control, and regulate humidity for enhanced indoor comfort. We integrate smart designs and high-quality
               components to improve air quality while reducing energy consumption and supporting sustainable, cost-effective environments.
             </p>
@@ -244,7 +244,7 @@ const HVACSolutions = () => {
             <div className={styles.advText}>
               <p>
                 Solar module mounting structures provide strong support, stability, and proper
-                alignment for maximum solar efficiency. At L&R Green Pvt Ltd, we offer durable
+                alignment for maximum solar efficiency. At L&R Prefab SOlar India Pvt Ltd, we offer durable
                 solutions for all types of solar projects.
               </p>
               <div className={styles.featureListWrap}>
@@ -304,7 +304,7 @@ const HVACSolutions = () => {
             <p>
               HVAC systems play a vital role in maintaining comfortable indoor temperatures, improving air
               quality, controlling humidity, and reducing energy consumption through efficient operation.
-              At L&R Green Pvt Ltd, we integrate advanced components such as VRV/VRF systems for precise
+              At L&R Prefab Solar Pvt Ltd, we integrate advanced components such as VRV/VRF systems for precise
               multi-zone temperature control and high-quality copper piping for durability and efficient
               heat transfer. Together, these technologies ensure reliable performance and long-lasting comfort
               across residential, commercial, and industrial spaces.
@@ -334,9 +334,7 @@ const HVACSolutions = () => {
             <h2>Our Core <br /><span>HVAC Services</span></h2>
             <div className={styles.divider}></div>
           </div>
-          <p>Our solar fasteners are designed to deliver long-lasting strength, reliability, and performance in
-            demanding environments. They ensure secure connections while improving efficiency and reducing
-            overall project costs.</p>
+          <p>Our solar fasteners provide durable strength, secure connections, reliable performance, and cost-efficient installation.</p>
         </div>
         <div className={styles.hardwareFeatureGrid}>
           {hardwareFeatures.map((item, index) => (

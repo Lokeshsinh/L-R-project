@@ -51,6 +51,7 @@ import EpcPanel from "./pages/EpcPanel";
 import PrefabModular from "./pages/PrefabModular";
 import RooftopRoom from "./pages/RooftopRoom"
 import LgsfModular from './pages/LgsfModular'
+import BESSContainer from "./pages/BESSContainer";
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
         />
         <Route path="/lr-value-containers" element={<LRValueContainer />} />
         <Route path="/warehouse" element={<Warehouse />} />
+        <Route path="/bess-container" element={<BESSContainer />} />
         <Route path="/puf-containers" element={<PUFContainer />} />
         <Route path="/home-containers" element={<HomeContainer />} />
         <Route path="/hinge-containers" element={<HingeMsContainer />} />

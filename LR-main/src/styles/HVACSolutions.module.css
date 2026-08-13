@@ -110,19 +110,29 @@ Hero
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 850px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -355,7 +365,7 @@ Intro
   align-items: start;
   flex-direction: column;
   gap: 22px;
-  max-width: 730px;
+  max-width: 700px;
 }
 
 .introText p {
@@ -427,7 +437,7 @@ Intro
 
 .mainImage {
   width: 610px;
-  height: 450px;
+  height: 460px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
@@ -561,7 +571,7 @@ Intro
   }
 
   .introText {
-    max-width: 560px;
+    max-width: 550px;
   }
 
   .introText p {
@@ -569,11 +579,11 @@ Intro
   }
 
   .imageWrapper {
-    width: 500px;
+    width: 520px;
   }
 
   .mainImage {
-    width: 500px;
+    width: 520px;
     height: 470px;
   }
 
@@ -619,7 +629,7 @@ Intro
 
 
 
-@media (max-width:1024px) {
+@media (max-width:1050px) {
 
   .introSec {
     padding: 60px 35px;
@@ -974,38 +984,62 @@ cards
 
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1280px) {
 
   .siteSec {
-    padding: 65px 5%;
+    padding: 70px 50px;
   }
 
   .siteHeader {
-    gap: 40px;
-  }
-
-  .siteText {
-    width: 55%;
-  }
-
-  .siteHeader p {
-    width: 45%;
-    max-width: 100%;
+    margin-bottom: 65px;
+    gap: 50px;
   }
 
   .siteText h2 {
-    font-size: 42px;
+    font-size: 48px;
+    line-height: 1.2;
   }
 
+  .FaqsLine {
+    width: 110px;
+    height: 3px;
+  }
+
+  .siteHeader p {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Cards */
   .galleryGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .galleryCard {
+    border-radius: 14px;
   }
 
   .galleryImageWrapper {
-    height: 220px;
+    height: 180px;
   }
 
+  .galleryContent {
+    padding: 22px 16px 24px;
+    min-height: 140px;
+  }
+
+  .galleryTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .galleryDescription {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width:992px) {
@@ -1298,7 +1332,7 @@ cards
 /* Main Image */
 .residentialMainImage {
   width: 630px;
-  height: 400px;
+  height: 365px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
@@ -1442,7 +1476,7 @@ cards
 
   .residentialMainImage {
     width: 540px;
-    height: 370px;
+    height: 355px;
   }
 
   .residentialFloatingImage {
@@ -1869,7 +1903,7 @@ Dark Banner
   border-radius: 12px;
   cursor: pointer;
   position: relative;
-  bottom: 50px;
+  bottom: 40px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -1907,52 +1941,49 @@ Dark Banner
 }
 
 @media (max-width:1280px) {
-
   .mfgBand {
-    padding: 45px 40px;
-    height: auto;
-  }
-
-  .mfgContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
-    align-items: center;
-  }
-
-  .mfgText {
-    flex: 1;
-    max-width: 600px;
+    width: 100%;
+    height: 370px;
+    padding: 60px 50px;
   }
 
   .mfgText h2 {
-    font-size: 46px;
-  }
-
-  .mfgText p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 45px;
   }
 
   .mfgImgWrapper {
-    width: 500px;
-    height: 350px;
-    flex-shrink: 0;
-    bottom: 20px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 70px;
-    letter-spacing: 3px;
+    width: 44%;
+    height: 320px;
+    bottom: 28px;
   }
 
   .LastImage img {
-    width: 270px;
-    bottom: -210px;
-    height: auto;
+    width: 260px;
+    height: 260px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 700px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 40%;
   }
 
 }
+
+
 
 @media (max-width:1200px) {
 
@@ -2398,7 +2429,7 @@ our core
 
 
 
-@media (max-width:1400px) {
+@media (max-width:1280px) {
 
   .CoreService {
     padding: 70px 50px;
@@ -2410,11 +2441,12 @@ our core
   }
 
   .coreServiceText h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
 
   .CoreServiceFlex p {
     max-width: 430px;
+    font-size: 14px;
   }
 
   .hardwareFeatureGrid {
@@ -2422,7 +2454,7 @@ our core
   }
 
   .hardwareFeatureCard {
-    min-height: 320px;
+    min-height: 300px;
     padding: 24px;
   }
 
@@ -2432,11 +2464,11 @@ our core
   }
 
   .hardwareContent h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .hardwareContent p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
 }
@@ -2857,7 +2889,7 @@ Keep HAVm
 /* Main Image */
 .hvacMainImage {
   width: 630px;
-  height: 400px;
+  height: 370px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
@@ -3060,7 +3092,7 @@ Keep HAVm
 
   .hvacMainImage {
     width: 520px;
-    height: 100%;
+    height: 300px;
   }
 
   .hvacFloatingImage {
@@ -3102,24 +3134,24 @@ Keep HAVm
 
   .hvacImageWrapper {
     width: 500px;
-    height: 360px;
+    height: 370px;
   }
 
   .hvacMainImage {
     width: 480px;
-    height: 320px;
+    height: 340px;
   }
 
   .hvacFloatingImage {
     width: 220px;
-    height: 135px;
+    height: 120px;
     left: -15px;
-    bottom: -8px;
+    bottom: 10px;
   }
 }
 
 
-@media (max-width:1024px) {
+@media (max-width:1050px) {
 
   .hvacSection {
     padding: 60px 30px;
@@ -3178,6 +3210,12 @@ Keep HAVm
   .hvacImageWrapper {
     max-width: 600px;
     height: 430px;
+  }
+
+  .hvacFeatureItem {
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
 
   .hvacMainImage {
@@ -3533,7 +3571,7 @@ Why HVM
 /* Main Image */
 .heroImageFrame {
   width: 600px;
-  height: 340px;
+  height: 330px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
@@ -3685,7 +3723,7 @@ Why HVM
 
   .stackedImageLayout {
     width: 520px;
-    height: 370px;
+    height: 360px;
     margin-left: 0;
   }
 
@@ -3743,7 +3781,7 @@ Why HVM
 
 
 
-@media (max-width:1024px) {
+@media (max-width:1050px) {
 
   .SolarEpic {
     padding: 60px 30px;
@@ -4180,29 +4218,64 @@ Why HVM
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
   .faqSec {
-    padding: 70px 4%;
+    padding: 65px 50px;
+  }
+
+  .faqHeader {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 50px;
   }
 
   .faqText h2 {
     font-size: 48px;
   }
 
-  .faqBody {
-    gap: 40px;
+  .FaqsLine {
+    width: 110px;
   }
 
-  .faqImg {
-    width: 45%;
-    height: 475px;
+  .faqHeader p {
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqBody {
+    gap: 35px;
   }
 
   .container {
-    width: 50%;
+    width: 55%;
+    max-width: 600px;
   }
 
+  .faqImg {
+    width: 520px;
+    height: 480px;
+    border-radius: 12px;
+  }
+
+  .question {
+    height: 66px;
+    padding: 0 25px;
+  }
+
+  .question h3 {
+    font-size: 17px;
+  }
+
+  .answer {
+    padding: 0 25px 24px;
+  }
+
+  .answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width:1200px) {
@@ -4538,25 +4611,25 @@ cta
 @media (max-width:1280px) {
 
   .cta {
-    padding: 65px 40px;
+    padding: 60px 40px;
   }
 
   .cta h2 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.2;
     text-align: center;
   }
 
   .cta p {
-    max-width: 820px;
+    max-width: 700px;
     margin: 0 auto 24px;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.8;
   }
 
   .contactBtn {
     width: 250px;
-    height: 54px;
+    height: 50px;
     font-size: 16px;
   }
 

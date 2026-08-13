@@ -230,7 +230,18 @@ const Header = () => {
                     aria-hidden="true"
                   ></i>
                 </button>
+
                 <ul className="submenu-list">
+                  <li>
+                    <Link
+                      to="/bess-container"
+                      onClick={closeMenu}
+                      className="nested-section-heading"
+                      style={{ cursor: "pointer", textDecoration: "none" }}
+                    >
+                      BESS Container
+                    </Link>
+                  </li>
                   {/* MS Containers → opens nested with Premium label + links */}
                   <li
                     className={`nested-submenu${openNested === "ms-containers" ? " mobile-nested-open" : ""}`}
