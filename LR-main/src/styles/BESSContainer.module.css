@@ -431,9 +431,8 @@
 .heroCard {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 610px;
     height: 490px;
-    margin: 0 auto;
 }
 
 /* Background Decorative Bar (Left Accent) */
@@ -455,7 +454,7 @@
     right: 0;
     top: 0;
     width: calc(100% - 30px);
-    max-width: 580px;
+    max-width: 590px;
     height: 490px;
     background: #ffffff;
     border-radius: 12px;
@@ -1232,6 +1231,3059 @@
     }
 }
 
+/* ===========================
+   IMAGE DECOR ACCENT BOX (OFFSET TOP-LEFT)
+=========================== */
+
+.advSec {
+    width: 100%;
+    padding: 71px 60px;
+    background-color: #f7f7f753;
+}
+
+.advContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+
+.advText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 680px;
+}
+
+
+.advText p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.advFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.advList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.featureListWrap {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.featureRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    min-height: 32px;
+}
+
+.featureIconBox {
+    width: 32px;
+    height: 32px;
+    background: #293F67;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 0.35s ease;
+}
+
+.featureIconBox svg {
+    color: #fff;
+}
+
+.featureRow:hover .featureIconBox {
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(41, 63, 103, 0.35);
+}
+
+.featureText {
+    font-size: 17px;
+    font-weight: 400;
+    color: #222;
+    line-height: 32px;
+    padding: 0;
+    transition: 0.35s ease;
+    position: relative;
+    top: 3px;
+}
+
+.featureRow:hover .featureText {
+    color: #293F67;
+}
+
+
+.frameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 610px;
+    height: 440px;
+}
+
+/* Accent Strip */
+.accentBackdrop {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 65px;
+    height: 350px;
+    background: #1a3c6e;
+    border-radius: 12px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+/* Image Card Box */
+.imageCard {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 30px);
+    max-width: 590px;
+    height: 440px;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+    transition: all 0.55s ease;
+}
+
+.cardPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+/* Background Pattern */
+.dotGrid {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(#1a3c6e 1.6px, transparent 1.6px);
+    background-size: 14px 14px;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+/* Hover Interactions */
+.frameContainer:hover .imageCard {
+    transform: translate(-8px, -8px);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.25);
+}
+
+.frameContainer:hover .cardPhoto {
+    transform: scale(1.08);
+    filter: brightness(0.92);
+}
+
+.frameContainer:hover .accentBackdrop {
+    height: 340px;
+    background: #1a3c6e;
+}
+
+.frameContainer:hover .dotGrid {
+    transform: translate(10px, -10px);
+    opacity: 0.8;
+}
+
+
+
+/* =========================================================
+   PURPOSE-BUILT BESS CONTAINERS
+   RESPONSIVE CSS
+   Add this BELOW your existing CSS
+========================================================= */
+
+
+/* =========================
+   1440px
+========================= */
+@media (max-width: 1440px) {
+
+    .advSec {
+        padding: 70px 55px;
+    }
+
+    .advFlex {
+        gap: 55px;
+    }
+
+    .frameContainer {
+        max-width: 570px;
+        height: 420px;
+    }
+
+    .imageCard {
+        width: calc(100% - 28px);
+        height: 420px;
+    }
+
+    .accentBackdrop {
+        width: 62px;
+        height: 335px;
+    }
+
+    .advText {
+        max-width: 620px;
+    }
+
+    .advText p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .featureListWrap {
+        gap: 14px;
+    }
+
+    .featureText {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+
+    .advSec {
+        padding: 65px 50px;
+    }
+
+    .advFlex {
+        gap: 45px;
+    }
+
+    .frameContainer {
+        max-width: 530px;
+        height: 426px;
+    }
+
+    .imageCard {
+        width: calc(100% - 27px);
+        height: 425px;
+    }
+
+    .accentBackdrop {
+        width: 58px;
+        height: 350px;
+        bottom: 35px;
+    }
+
+    .dotGrid {
+        width: 105px;
+        height: 105px;
+        background-size: 13px 13px;
+    }
+
+    .advText {
+        max-width: 550px;
+    }
+
+    .advText p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .featureListWrap {
+        gap: 13px;
+    }
+
+    .featureRow {
+        gap: 15px;
+    }
+
+    .featureIconBox {
+        width: 30px;
+        height: 30px;
+    }
+
+    .featureText {
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .advSec {
+        padding: 60px 40px;
+    }
+
+    .advFlex {
+        gap: 35px;
+    }
+
+    .frameContainer {
+        max-width: 490px;
+        height: 387px;
+    }
+
+    .imageCard {
+        width: calc(100% - 25px);
+        height: 387px;
+    }
+
+    .accentBackdrop {
+        width: 55px;
+        height: 300px;
+        bottom: 32px;
+    }
+
+    .dotGrid {
+        width: 95px;
+        height: 95px;
+        top: -15px;
+        right: -15px;
+        background-size: 12px 12px;
+    }
+
+    .advText {
+        max-width: 500px;
+    }
+
+    .advText p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .featureListWrap {
+        gap: 12px;
+    }
+
+    .featureRow {
+        gap: 13px;
+    }
+
+    .featureIconBox {
+        width: 29px;
+        height: 29px;
+    }
+
+    .featureText {
+        font-size: 14px;
+        line-height: 29px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .advSec {
+        padding: 55px 35px;
+    }
+
+    .advFlex {
+        gap: 28px;
+    }
+
+    .frameContainer {
+        max-width: 500px;
+        height: 386px;
+    }
+
+    .imageCard {
+        width: calc(100% - 23px);
+        height: 386px;
+    }
+
+    .accentBackdrop {
+        width: 50px;
+        height: 320px;
+        bottom: 30px;
+    }
+
+    .dotGrid {
+        width: 85px;
+        height: 85px;
+        background-size: 11px 11px;
+    }
+
+    .advText {
+        max-width: 450px;
+    }
+
+    .advText p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .featureListWrap {
+        gap: 11px;
+    }
+
+    .featureRow {
+        gap: 12px;
+    }
+
+    .featureIconBox {
+        width: 28px;
+        height: 28px;
+    }
+
+    .featureIconBox svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .featureText {
+        font-size: 13.5px;
+        line-height: 28px;
+    }
+}
+
+
+
+@media (max-width: 1050px) {
+
+    .advSec {
+        padding: 50px 28px;
+    }
+
+    .advFlex {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .frameContainer {
+        width: 100%;
+        max-width: 650px;
+        height: 430px;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .imageCard {
+        width: calc(100% - 30px);
+        max-width: 620px;
+        height: 430px;
+    }
+
+    .accentBackdrop {
+        width: 62px;
+        height: 350px;
+        bottom: 35px;
+    }
+
+    .dotGrid {
+        width: 110px;
+        height: 110px;
+    }
+
+    .advContainer {
+        width: 100%;
+        order: 2;
+    }
+
+    .advText {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .advText p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .featureListWrap {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .featureRow {
+        gap: 15px;
+    }
+
+    .featureIconBox {
+        width: 32px;
+        height: 32px;
+    }
+
+    .featureText {
+        position: relative;
+        top: 5px;
+        font-size: 15px;
+        line-height: 32px;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+
+    .advSec {
+        padding: 50px 28px;
+    }
+
+    .advFlex {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .frameContainer {
+        width: 100%;
+        max-width: 650px;
+        height: 430px;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .imageCard {
+        width: calc(100% - 30px);
+        max-width: 620px;
+        height: 430px;
+    }
+
+    .accentBackdrop {
+        width: 62px;
+        height: 350px;
+        bottom: 35px;
+    }
+
+    .dotGrid {
+        width: 110px;
+        height: 110px;
+    }
+
+    .advContainer {
+        width: 100%;
+        order: 2;
+    }
+
+    .advText {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .advText p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .featureListWrap {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .featureRow {
+        gap: 15px;
+    }
+
+    .featureIconBox {
+        width: 32px;
+        height: 32px;
+    }
+
+    .featureText {
+        font-size: 15px;
+        line-height: 32px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .advSec {
+        padding: 50px 25px;
+    }
+
+    .advFlex {
+        gap: 40px;
+    }
+
+    .frameContainer {
+        max-width: 580px;
+        height: 390px;
+    }
+
+    .imageCard {
+        width: calc(100% - 28px);
+        height: 390px;
+    }
+
+    .accentBackdrop {
+        width: 58px;
+        height: 320px;
+        bottom: 32px;
+    }
+
+    .dotGrid {
+        width: 100px;
+        height: 100px;
+        background-size: 12px 12px;
+    }
+
+    .advText p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .featureListWrap {
+        gap: 13px;
+    }
+
+    .featureRow {
+        gap: 14px;
+    }
+
+    .featureIconBox {
+        width: 31px;
+        height: 31px;
+    }
+
+    .featureText {
+        font-size: 14px;
+        line-height: 31px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .advSec {
+        padding: 45px 22px;
+    }
+
+    .advFlex {
+        gap: 35px;
+    }
+
+    .frameContainer {
+        max-width: 100%;
+        height: 350px;
+    }
+
+    .imageCard {
+        width: calc(100% - 24px);
+        height: 350px;
+    }
+
+    .accentBackdrop {
+        width: 52px;
+        height: 285px;
+        bottom: 28px;
+    }
+
+    .dotGrid {
+        width: 90px;
+        height: 90px;
+        top: -13px;
+        right: -13px;
+        background-size: 11px 11px;
+    }
+
+    .advText p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+
+    .featureListWrap {
+        gap: 12px;
+    }
+
+    .featureRow {
+        gap: 13px;
+    }
+
+    .featureIconBox {
+        width: 30px;
+        height: 30px;
+    }
+
+    .featureText {
+        font-size: 13.5px;
+        line-height: 30px;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .advSec {
+        padding: 42px 20px;
+    }
+
+    .advFlex {
+        gap: 32px;
+    }
+
+    .frameContainer {
+        height: 320px;
+    }
+
+    .imageCard {
+        width: calc(100% - 21px);
+        height: 320px;
+        border-radius: 7px;
+    }
+
+    .accentBackdrop {
+        width: 46px;
+        height: 260px;
+        bottom: 25px;
+        border-radius: 9px;
+    }
+
+    .dotGrid {
+        width: 80px;
+        height: 80px;
+        top: -11px;
+        right: -11px;
+        background-size: 10px 10px;
+    }
+
+    .advText p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .featureListWrap {
+        gap: 11px;
+    }
+
+    .featureRow {
+        gap: 11px;
+        min-height: 30px;
+    }
+
+    .featureIconBox {
+        width: 29px;
+        height: 29px;
+    }
+
+    .featureIconBox svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .featureText {
+        font-size: 13px;
+        line-height: 29px;
+        top: 2px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .advSec {
+        padding: 38px 17px;
+    }
+
+    .advFlex {
+        gap: 28px;
+    }
+
+    .frameContainer {
+        height: 285px;
+    }
+
+    .imageCard {
+        width: calc(100% - 18px);
+        height: 285px;
+        border-radius: 6px;
+    }
+
+    .accentBackdrop {
+        width: 40px;
+        height: 230px;
+        bottom: 22px;
+        border-radius: 8px;
+    }
+
+    .dotGrid {
+        width: 70px;
+        height: 70px;
+        top: -10px;
+        right: -10px;
+        background-size: 9px 9px;
+    }
+
+    .advText p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .featureListWrap {
+        gap: 10px;
+    }
+
+    .featureRow {
+        gap: 10px;
+        min-height: 28px;
+    }
+
+    .featureIconBox {
+        width: 28px;
+        height: 28px;
+    }
+
+    .featureIconBox svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .featureText {
+        position: relative;
+        top: 5px;
+        font-size: 13px;
+        line-height: 28px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .advSec {
+        padding: 35px 15px;
+    }
+
+    .advFlex {
+        gap: 25px;
+    }
+
+    .frameContainer {
+        height: 260px;
+    }
+
+    .imageCard {
+        width: calc(100% - 16px);
+        height: 260px;
+    }
+
+    .accentBackdrop {
+        width: 36px;
+        height: 210px;
+        bottom: 20px;
+    }
+
+    .dotGrid {
+        width: 62px;
+        height: 62px;
+        top: -9px;
+        right: -9px;
+        background-size: 8px 8px;
+    }
+
+    .advText p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .featureListWrap {
+        gap: 9px;
+    }
+
+    .featureRow {
+        gap: 9px;
+        min-height: 27px;
+    }
+
+    .featureIconBox {
+        width: 27px;
+        height: 27px;
+    }
+
+    .featureText {
+        font-size: 12px;
+        line-height: 27px;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .advSec {
+        padding: 32px 13px;
+    }
+
+    .advFlex {
+        gap: 23px;
+    }
+
+    .frameContainer {
+        height: 235px;
+    }
+
+    .imageCard {
+        width: calc(100% - 14px);
+        height: 235px;
+    }
+
+    .accentBackdrop {
+        width: 33px;
+        height: 190px;
+        bottom: 18px;
+    }
+
+    .dotGrid {
+        width: 56px;
+        height: 56px;
+        top: -8px;
+        right: -8px;
+        background-size: 7px 7px;
+    }
+
+    .advText p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .featureListWrap {
+        gap: 8px;
+    }
+
+    .featureRow {
+        gap: 8px;
+        min-height: 26px;
+    }
+
+    .featureIconBox {
+        width: 26px;
+        height: 26px;
+    }
+
+    .featureIconBox svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .featureText {
+        font-size: 11.5px;
+        line-height: 26px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .advSec {
+        padding: 30px 11px;
+    }
+
+    .advFlex {
+        gap: 20px;
+    }
+
+    .frameContainer {
+        height: 215px;
+    }
+
+    .imageCard {
+        width: calc(100% - 12px);
+        height: 215px;
+    }
+
+    .accentBackdrop {
+        width: 30px;
+        height: 175px;
+        bottom: 16px;
+        border-radius: 6px;
+    }
+
+    .dotGrid {
+        width: 50px;
+        height: 50px;
+        top: -7px;
+        right: -7px;
+        background-size: 6px 6px;
+    }
+
+    .advText p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .featureListWrap {
+        gap: 7px;
+    }
+
+    .featureRow {
+        gap: 7px;
+        min-height: 25px;
+    }
+
+    .featureIconBox {
+        width: 25px;
+        height: 25px;
+    }
+
+    .featureIconBox svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .featureText {
+        font-size: 11px;
+        line-height: 25px;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+
+    .advSec {
+        padding: 28px 9px;
+    }
+
+    .advFlex {
+        gap: 18px;
+    }
+
+    .frameContainer {
+        height: 195px;
+    }
+
+    .imageCard {
+        width: calc(100% - 10px);
+        height: 195px;
+    }
+
+    .accentBackdrop {
+        width: 27px;
+        height: 155px;
+        bottom: 14px;
+        border-radius: 5px;
+    }
+
+    .dotGrid {
+        width: 44px;
+        height: 44px;
+        top: -6px;
+        right: -6px;
+        background-size: 5px 5px;
+    }
+
+    .advText p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .featureListWrap {
+        gap: 6px;
+    }
+
+    .featureRow {
+        gap: 6px;
+        min-height: 24px;
+    }
+
+    .featureIconBox {
+        width: 24px;
+        height: 24px;
+    }
+
+    .featureIconBox svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .featureText {
+        font-size: 10.5px;
+        line-height: 24px;
+        top: 1px;
+    }
+}
+
+
+
+/* ===========================
+Applications
+============================== */
+.bessContainer {
+    width: 100%;
+    padding: 72px 60px;
+    background-color: #f7f7f753;
+}
+
+.bessContainerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.bessContainerText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bessContainerText h2 {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+}
+
+.bessContainerText h2 span {
+    color: #233E70;
+}
+
+
+.bessContainerLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background: #0d2244;
+}
+
+
+.bessContainerFlex p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    padding-top: 8px;
+    max-width: 470px;
+}
+
+.applicationGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+
+.applicationCard {
+    position: relative;
+    min-height: 300px;
+    padding: 32px 28px;
+    background: #ffffff;
+    border: 1px solid #e3e7ed;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+}
+
+
+
+.cardNumber {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #b8c0cc;
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.iconWrapper {
+    position: relative;
+    z-index: 2;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    color: #2d4574;
+    background: #eef2f7;
+    border-radius: 12px;
+    transition:
+        transform 0.45s ease,
+        background 0.45s ease,
+        color 0.45s ease;
+}
+
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+}
+
+.cardContent h3 {
+    margin: 0 0 5px;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #1b2940;
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.cardContent p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #697586;
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+
+
+.hoverShape {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    background: #2d4574;
+    border-radius: 0 100% 0 0;
+    transition:
+        width 0.55s ease,
+        height 0.55s ease;
+}
+
+
+
+.applicationCard:hover {
+    transform: translateY(-8px);
+    border-color: #2d4574;
+    box-shadow: 0 18px 40px rgba(31, 50, 82, 0.14);
+}
+
+
+
+.applicationCard:hover .hoverShape {
+    width: 150%;
+    height: 150%;
+}
+
+.applicationCard:hover .iconWrapper {
+    transform: translateY(-5px) rotate(-6deg);
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+
+
+.applicationCard:hover .cardContent h3 {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.applicationCard:hover .cardContent p {
+    color: rgba(255, 255, 255, 0.78);
+    transform: translateX(3px);
+}
+
+
+
+.applicationCard:hover .cardNumber {
+    color: rgba(255, 255, 255, 0.55);
+    background-color: #0d2244;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 1440px) {
+
+    .bessContainer {
+        padding: 70px 55px;
+    }
+
+    .bessContainerFlex {
+        margin-bottom: 70px;
+        gap: 40px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 52px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 440px;
+        font-size: 15px;
+    }
+
+    .applicationGrid {
+        gap: 20px;
+    }
+
+    .applicationCard {
+        min-height: 290px;
+        padding: 30px 26px;
+    }
+
+    .iconWrapper {
+        width: 64px;
+        height: 64px;
+    }
+
+    .cardContent h3 {
+        font-size: 21px;
+    }
+
+    .cardContent p {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+    .bessContainer {
+        padding: 65px 50px;
+    }
+
+    .bessContainerFlex {
+        margin-bottom: 65px;
+        gap: 40px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 48px;
+    }
+
+    .bessContainerLine {
+        width: 110px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 410px;
+        font-size: 14px;
+    }
+
+    .applicationGrid {
+        gap: 18px;
+    }
+
+    .applicationCard {
+        min-height: 285px;
+        padding: 28px 24px;
+    }
+
+    .iconWrapper {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 18px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+        margin-bottom: 11px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    .bessContainer {
+        padding: 60px 40px;
+    }
+
+    .bessContainerFlex {
+        margin-top: 15px;
+        margin-bottom: 55px;
+        gap: 35px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 44px;
+    }
+
+    .bessContainerLine {
+        width: 100px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 380px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .applicationGrid {
+        gap: 16px;
+    }
+
+    .applicationCard {
+        min-height: 275px;
+        padding: 25px 22px;
+        border-radius: 12px;
+    }
+
+    .iconWrapper {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 17px;
+        border-radius: 10px;
+    }
+
+    .iconWrapper svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .cardContent h3 {
+        font-size: 19px;
+    }
+
+    .cardContent p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+}
+
+
+
+@media (max-width: 1100px) {
+
+    .bessContainer {
+        padding: 55px 35px;
+    }
+
+    .bessContainerFlex {
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 40px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 340px;
+        font-size: 13.5px;
+    }
+
+    .applicationGrid {
+        gap: 14px;
+    }
+
+    .applicationCard {
+        min-height: 265px;
+        padding: 23px 20px;
+    }
+
+    .iconWrapper {
+        width: 55px;
+        height: 55px;
+    }
+
+    .iconWrapper svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .bessContainer {
+        padding: 55px 30px;
+    }
+
+    .bessContainerFlex {
+        margin-bottom: 45px;
+        align-items: flex-start;
+    }
+
+    .bessContainerText h2 {
+        font-size: 37px;
+    }
+
+    .bessContainerLine {
+        width: 90px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 320px;
+        font-size: 13px;
+    }
+
+    .applicationGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .applicationCard {
+        min-height: 285px;
+        padding: 25px;
+    }
+
+    .iconWrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .iconWrapper svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+
+    .bessContainer {
+        padding: 50px 28px;
+    }
+
+    .bessContainerFlex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 36px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 650px;
+        padding-top: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .bessContainer {
+        padding: 50px 25px;
+    }
+
+    .bessContainerFlex {
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .bessContainerLine {
+        width: 85px;
+    }
+
+    .bessContainerFlex p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .applicationGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .applicationCard {
+        min-height: 280px;
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .iconWrapper {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 18px;
+    }
+
+    .iconWrapper svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cardContent h3 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .cardContent p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+
+    .bessContainer {
+        padding: 45px 22px;
+    }
+
+    .bessContainerFlex {
+        margin-bottom: 32px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 31px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 13px;
+    }
+
+    .applicationGrid {
+        gap: 14px;
+    }
+
+    .applicationCard {
+        min-height: 270px;
+        padding: 20px;
+    }
+
+    .iconWrapper {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 16px;
+    }
+
+    .iconWrapper svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .bessContainer {
+        padding: 42px 20px;
+    }
+
+    .bessContainerFlex {
+        margin-bottom: 30px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 29px;
+    }
+
+    .bessContainerLine {
+        width: 75px;
+        height: 2px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .applicationGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .applicationCard {
+        min-height: 250px;
+        padding: 22px;
+        border-radius: 11px;
+    }
+
+    .iconWrapper {
+        width: 58px;
+        height: 58px;
+    }
+
+    .iconWrapper svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .bessContainer {
+        padding: 38px 17px;
+    }
+
+    .bessContainerFlex {
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 27px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .applicationGrid {
+        gap: 14px;
+    }
+
+    .applicationCard {
+        min-height: 235px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .iconWrapper {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 15px;
+        border-radius: 9px;
+    }
+
+    .iconWrapper svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+
+    .bessContainer {
+        padding: 35px 15px;
+    }
+
+    .bessContainerFlex {
+        margin-bottom: 25px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 25px;
+    }
+
+    .bessContainerLine {
+        width: 65px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .applicationGrid {
+        gap: 12px;
+    }
+
+    .applicationCard {
+        min-height: 220px;
+        padding: 18px;
+    }
+
+    .iconWrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .iconWrapper svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cardContent h3 {
+        font-size: 17px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .bessContainer {
+        padding: 32px 13px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 23px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 11.5px;
+    }
+
+    .applicationCard {
+        min-height: 210px;
+        padding: 17px;
+    }
+
+    .iconWrapper {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 13px;
+    }
+
+    .iconWrapper svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .cardContent h3 {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+
+    .bessContainer {
+        padding: 30px 11px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 22px;
+    }
+
+    .bessContainerLine {
+        width: 58px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 12px;
+    }
+
+    .applicationGrid {
+        gap: 10px;
+    }
+
+    .applicationCard {
+        min-height: 200px;
+        padding: 16px;
+    }
+
+    .iconWrapper {
+        width: 42px;
+        height: 42px;
+    }
+
+    .iconWrapper svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .cardContent h3 {
+        font-size: 16px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    .bessContainer {
+        padding: 28px 9px;
+    }
+
+    .bessContainerText h2 {
+        font-size: 22px;
+    }
+
+    .bessContainerLine {
+        width: 52px;
+        height: 2px;
+    }
+
+    .bessContainerFlex p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .applicationGrid {
+        gap: 9px;
+    }
+
+    .applicationCard {
+        min-height: 190px;
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .iconWrapper {
+        width: 39px;
+        height: 39px;
+        margin-bottom: 11px;
+        border-radius: 7px;
+    }
+
+    .iconWrapper svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .cardContent h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+}
+
+
+
+
+/* ===========================
+Process
+============================= */
+
+.besApplications {
+    width: 100%;
+    padding: 72px 60px;
+    background-color: #f7f7f753;
+}
+
+.besApplicationsFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.besAplicationText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.besAplicationText h2 {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+}
+
+.besAplicationText h2 span {
+    color: #233E70;
+}
+
+.bssLines {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background: #0d2244;
+}
+
+
+.besApplicationsFlex p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    padding-top: 8px;
+    max-width: 470px;
+}
+
+
+.processGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.processCard {
+    position: relative;
+    height: 350px;
+    padding: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    cursor: pointer;
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.processCard:hover {
+    background: #2d4574;
+    border-color: #2d4574;
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(45, 69, 116, 0.18);
+}
+
+
+
+.cardTop {
+    height: 58px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.stepNumber {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #2d4574;
+    transition: color 0.3s ease;
+}
+
+.processCard:hover .stepNumber {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.iconBoxs {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d4574;
+    background: #eef2f7;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.processCard:hover .iconBoxs {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-4px) rotate(4deg);
+}
+
+
+.cardContent {
+    margin-top: 50px;
+    flex: none;
+}
+
+.cardContent h3 {
+    height: 55px;
+    margin: 0 0 2px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #172238;
+    transition: color 0.3s ease;
+}
+
+.cardContent p {
+    height: 78px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #707b8c;
+    transition: color 0.3s ease;
+}
+
+.processCard:hover .cardContent h3 {
+    color: #ffffff;
+}
+
+.processCard:hover .cardContent p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+
+.cardLine {
+    position: absolute;
+    left: 28px;
+    bottom: 28px;
+    width: 42px;
+    height: 3px;
+    background: #2d4574;
+    border-radius: 10px;
+    transition:
+        width 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.processCard:hover .cardLine {
+    width: 100%;
+    background: #ffffff;
+}
+
+
+
+.cardLine {
+    width: 42px;
+    height: 3px;
+
+    margin-top: 24px;
+
+    background: #2d4574;
+    border-radius: 10px;
+
+    transition:
+        width 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.processCard:hover .cardLine {
+    width: 75px;
+    background: #ffffff;
+}
+
+
+@media (max-width: 1440px) {
+
+    .besApplications {
+        padding: 70px 55px;
+    }
+
+    .besApplicationsFlex {
+        margin-bottom: 70px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 52px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 430px;
+    }
+
+    .processGrid {
+        gap: 20px;
+    }
+
+    .processCard {
+        height: 340px;
+        padding: 26px;
+    }
+
+    .cardContent {
+        margin-top: 45px;
+    }
+
+    .cardContent h3 {
+        font-size: 21px;
+    }
+
+    .cardContent p {
+        font-size: 15px;
+    }
+
+    .cardLine {
+        left: 26px;
+        bottom: 26px;
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+
+    .besApplications {
+        padding: 65px 50px;
+    }
+
+    .besApplicationsFlex {
+        margin-bottom: 65px;
+        gap: 40px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 48px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 400px;
+        font-size: 14.5px;
+    }
+
+    .processGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+    .processCard {
+        height: 330px;
+        padding: 24px;
+    }
+
+    .cardTop {
+        height: 55px;
+    }
+
+    .stepNumber {
+        font-size: 18px;
+    }
+
+    .iconBoxs {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cardContent {
+        margin-top: 42px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+        height: 52px;
+    }
+
+    .cardContent p {
+        height: auto;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cardLine {
+        left: 24px;
+        bottom: 24px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    .besApplications {
+        padding: 60px 40px;
+    }
+
+    .besApplicationsFlex {
+        margin-top: 15px;
+        margin-bottom: 55px;
+        gap: 35px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 44px;
+    }
+
+    .bssLines {
+        width: 105px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 370px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .processGrid {
+        gap: 16px;
+    }
+
+    .processCard {
+        height: 315px;
+        padding: 22px;
+    }
+
+    .cardTop {
+        height: 52px;
+    }
+
+    .stepNumber {
+        font-size: 17px;
+    }
+
+    .iconBoxs {
+        width: 56px;
+        height: 56px;
+    }
+
+    .iconBoxs svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cardContent {
+        margin-top: 38px;
+    }
+
+    .cardContent h3 {
+        font-size: 19px;
+        height: 50px;
+    }
+
+    .cardContent p {
+        font-size: 13.5px;
+        line-height: 1.55;
+    }
+
+    .cardLine {
+        left: 22px;
+        bottom: 22px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .besApplications {
+        padding: 55px 35px;
+    }
+
+    .besApplicationsFlex {
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 40px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 340px;
+        font-size: 13.5px;
+    }
+
+    .processGrid {
+        gap: 14px;
+    }
+
+    .processCard {
+        height: 310px;
+        padding: 20px;
+    }
+
+    .iconBoxs {
+        width: 52px;
+        height: 52px;
+    }
+
+    .cardContent {
+        margin-top: 35px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+    }
+
+    .cardLine {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .besApplications {
+        padding: 55px 30px;
+    }
+
+    .besApplicationsFlex {
+        align-items: flex-start;
+        margin-bottom: 45px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 37px;
+    }
+
+    .bssLines {
+        width: 90px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 320px;
+        font-size: 13px;
+    }
+
+    .processGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .processCard {
+        height: 320px;
+        padding: 24px;
+    }
+
+    .cardTop {
+        height: 58px;
+    }
+
+    .stepNumber {
+        font-size: 18px;
+    }
+
+    .iconBoxs {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cardContent {
+        margin-top: 42px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cardLine {
+        left: 24px;
+        bottom: 24px;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+
+    .besApplications {
+        padding: 50px 28px;
+    }
+
+    .besApplicationsFlex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 36px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 600px;
+        padding-top: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .besApplications {
+        padding: 50px 25px;
+    }
+
+    .besApplicationsFlex {
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .bssLines {
+        width: 85px;
+        height: 3px;
+    }
+
+    .besApplicationsFlex p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .processGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .processCard {
+        height: 310px;
+        padding: 22px;
+    }
+
+    .cardTop {
+        height: 55px;
+    }
+
+    .stepNumber {
+        font-size: 17px;
+    }
+
+    .iconBoxs {
+        width: 56px;
+        height: 56px;
+    }
+
+    .iconBoxs svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .cardContent {
+        margin-top: 38px;
+    }
+
+    .cardContent h3 {
+        font-size: 19px;
+        height: 50px;
+    }
+
+    .cardContent p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+
+    .cardLine {
+        left: 22px;
+        bottom: 22px;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+
+    .besApplications {
+        padding: 45px 22px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 31px;
+    }
+
+    .besApplicationsFlex {
+        margin-bottom: 32px;
+    }
+
+    .processGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .processCard {
+        height: 300px;
+        padding: 20px;
+    }
+
+    .iconBoxs {
+        width: 52px;
+        height: 52px;
+    }
+
+    .iconBoxs svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .cardContent {
+        margin-top: 34px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+        height: 48px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+    }
+
+    .cardLine {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .besApplications {
+        padding: 42px 20px;
+    }
+
+    .besApplicationsFlex {
+        margin-bottom: 30px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 29px;
+    }
+
+    .bssLines {
+        width: 75px;
+        height: 2px;
+    }
+
+    .besApplicationsFlex p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .processGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .processCard {
+        width: 100%;
+        height: 265px;
+        padding: 22px;
+    }
+
+    .cardTop {
+        height: 55px;
+    }
+
+    .stepNumber {
+        font-size: 17px;
+    }
+
+    .iconBoxs {
+        width: 55px;
+        height: 55px;
+    }
+
+    .cardContent {
+        margin-top: 35px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    .cardContent p {
+        height: auto;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cardLine {
+        left: 22px;
+        bottom: 22px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .besApplications {
+        padding: 38px 17px;
+    }
+
+    .besApplicationsFlex {
+        gap: 13px;
+        margin-bottom: 28px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 27px;
+    }
+
+    .besApplicationsFlex p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .processGrid {
+        gap: 14px;
+    }
+
+    .processCard {
+        height: 245px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .cardTop {
+        height: 52px;
+    }
+
+    .stepNumber {
+        font-size: 16px;
+    }
+
+    .iconBoxs {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    .iconBoxs svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cardContent {
+        margin-top: 32px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .cardLine {
+        left: 20px;
+        bottom: 20px;
+        width: 38px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .besApplications {
+        padding: 35px 15px;
+    }
+
+    .besApplicationsFlex {
+        margin-bottom: 25px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 25px;
+    }
+
+    .bssLines {
+        width: 65px;
+    }
+
+    .besApplicationsFlex p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .processGrid {
+        gap: 12px;
+    }
+
+    .processCard {
+        height: 230px;
+        padding: 18px;
+    }
+
+    .cardTop {
+        height: 50px;
+    }
+
+    .stepNumber {
+        font-size: 15px;
+    }
+
+    .iconBoxs {
+        width: 47px;
+        height: 47px;
+    }
+
+    .iconBoxs svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .cardContent {
+        margin-top: 30px;
+    }
+
+    .cardContent h3 {
+        font-size: 17px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .cardLine {
+        left: 18px;
+        bottom: 18px;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .besApplications {
+        padding: 32px 13px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 23px;
+    }
+
+    .besApplicationsFlex p {
+        font-size: 14px;
+    }
+
+    .processCard {
+        height: 230px;
+        padding: 17px;
+    }
+
+    .iconBoxs {
+        width: 44px;
+        height: 44px;
+    }
+
+    .iconBoxs svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .cardContent {
+        margin-top: 27px;
+    }
+
+    .cardContent h3 {
+        font-size: 16px;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+    }
+
+    .cardLine {
+        left: 17px;
+        bottom: 17px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .besApplications {
+        padding: 30px 11px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 22px;
+    }
+
+    .bssLines {
+        width: 58px;
+        height: 2px;
+    }
+
+    .besApplicationsFlex p {
+        font-size: 13px;
+    }
+
+    .processGrid {
+        gap: 10px;
+    }
+
+    .processCard {
+        height: 215px;
+        padding: 16px;
+    }
+
+    .cardTop {
+        height: 46px;
+    }
+
+    .stepNumber {
+        font-size: 14px;
+    }
+
+    .iconBoxs {
+        width: 42px;
+        height: 42px;
+    }
+
+    .iconBoxs svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cardContent {
+        margin-top: 25px;
+    }
+
+    .cardContent h3 {
+        font-size: 15px;
+    }
+
+    .cardContent p {
+        font-size: 11.5px;
+        line-height: 1.5;
+    }
+
+    .cardLine {
+        left: 16px;
+        bottom: 16px;
+        width: 35px;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    .besApplications {
+        padding: 28px 9px;
+    }
+
+    .besAplicationText h2 {
+        font-size: 22px;
+    }
+
+    .bssLines {
+        width: 52px;
+    }
+
+    .besApplicationsFlex p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .processCard {
+        height: 200px;
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .cardTop {
+        height: 43px;
+    }
+
+    .stepNumber {
+        font-size: 13px;
+    }
+
+    .iconBoxs {
+        width: 39px;
+        height: 39px;
+        border-radius: 7px;
+    }
+
+    .iconBoxs svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .cardContent {
+        margin-top: 22px;
+    }
+
+    .cardContent h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .cardContent p {
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .cardLine {
+        left: 14px;
+        bottom: 14px;
+        width: 32px;
+    }
+}
+
 
 /* ===========================
    FAQ SECTION
@@ -1248,8 +4300,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 60px;
-    align-items: start;
+    margin-bottom: 80px;
 }
 
 .faqText {

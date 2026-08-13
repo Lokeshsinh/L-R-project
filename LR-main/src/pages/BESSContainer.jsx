@@ -4,11 +4,19 @@ import styles from '../styles/BESSContainer.module.css'
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import {
-    ArrowRight, Plus, X, ArrowUpRight,
+    ArrowRight, Plus, X, ArrowUpRight, CheckCircle2, ClipboardList,
+    LayoutDashboard,
+    Factory,
+    Truck,
+    Sun,
+    Wind,
+    Building2,
+    Network,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import bess1 from '../assets/BESS/bess1.png'
 import bess2 from '../assets/BESS/bess2.png'
+import bess3 from '../assets/BESS/bess3.png'
 
 function BESSContainer() {
     const navigate = useNavigate();
@@ -16,6 +24,37 @@ function BESSContainer() {
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+
+    const processSteps = [
+        {
+            number: "01",
+            title: "Requirement & Planning",
+            description:
+                "Understand project capacity, battery technology, site conditions, equipment requirements and system data.",
+            icon: ClipboardList,
+        },
+        {
+            number: "02",
+            title: "Engineering & Design",
+            description:
+                "Develop equipment layouts, access, cable routing, HVAC, safety arrangements and structural engineering.",
+            icon: LayoutDashboard,
+        },
+        {
+            number: "03",
+            title: "Fabrication & Integration",
+            description:
+                "Complete steel fabrication, welding, panels, supports, doors, coating, equipment mounting and system integration.",
+            icon: Factory,
+        },
+        {
+            number: "04",
+            title: "Inspection & Delivery",
+            description:
+                "Inspect the completed enclosure and prepare it for transportation, site installation and final deployment.",
+            icon: Truck,
+        },
+    ];
 
     const faqs = [
         {
@@ -39,6 +78,39 @@ function BESSContainer() {
             a: "Design can account for rain, dust, humidity, heat, wind, corrosion, solar exposure, and other site conditions."
         }
     ];
+
+
+    const applications = [
+        {
+            id: "01",
+            title: "Solar + BESS",
+            description:
+                "Store solar generation and make energy available when required.",
+            icon: Sun,
+        },
+        {
+            id: "02",
+            title: "Wind + BESS",
+            description:
+                "Improve flexibility and energy management for wind-generation projects.",
+            icon: Wind,
+        },
+        {
+            id: "03",
+            title: "Commercial & Industrial",
+            description:
+                "Support peak-demand management, backup, energy shifting and renewable integration.",
+            icon: Building2,
+        },
+        {
+            id: "04",
+            title: "Utility-Scale BESS",
+            description:
+                "Support large-scale grid and energy-storage applications.",
+            icon: Network,
+        },
+    ];
+
     return (
         <>
             <Header />
@@ -108,6 +180,146 @@ function BESSContainer() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+
+
+
+            <section className={styles.advSec}>
+                <div className={styles.secTitle}>
+                    <h2>
+                        Purpose-Built <br />
+                        <span>BESS Containers</span>
+                    </h2>
+                    <div className={styles.introLine}></div>
+                </div>
+                <div className={styles.advFlex}>
+                    <div className={styles.frameContainer}>
+                        <div className={styles.dotGrid}></div>
+                        <div className={styles.accentBackdrop}></div>
+
+                        <div className={styles.imageCard}>
+                            <img src={bess3} alt="Worker" className={styles.cardPhoto} />
+                        </div>
+                    </div>
+
+                    <div className={styles.advContainer}>
+                        <div className={styles.advText}>
+                            <p>
+                                A BESS container is more than a standard shipping container. It is a specially engineered enclosure designed around
+                                battery racks, electrical equipment, thermal management, fire-safety systems, controls and project-specific requirements.
+                            </p>
+                            <div className={styles.featureListWrap}>
+                                <div className={styles.featureRow}>
+
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Battery Rack Integration</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>HVAC & Thermal Management</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Fire & Safety Systems</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Electrical & Cable Integration</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Maintenance & Service Access</p>
+                                </div>
+                                <div className={styles.featureRow}>
+                                    <div className={styles.featureIconBox}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureText}>Transportation & Environmental Protection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section className={styles.bessContainer}>
+                <div className={styles.bessContainerFlex}>
+                    <div className={styles.bessContainerText}>
+                        <h2>Energy Storage for <br /> <span>Multiple Applications</span></h2>
+                        <div className={styles.bessContainerLine}></div>
+                    </div>
+                    <p>Our containerized BESS infrastructure can support a wide range of
+                        renewable-energy and power-management applications.</p>
+                </div>
+                <div className={styles.applicationGrid}>
+                    {applications.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                            <article className={styles.applicationCard} key={item.id}>
+                                <div className={styles.iconWrapper}>
+                                    <Icon size={32} strokeWidth={1.5} />
+                                </div>
+                                <div className={styles.cardContent}>
+                                    <h3>{item.title}</h3>
+
+                                    <p>{item.description}</p>
+                                </div>
+                                <div className={styles.hoverShape}></div>
+                            </article>
+                        );
+                    })}
+                </div>
+
+            </section>
+
+
+            <section className={styles.besApplications}>
+                <div className={styles.besApplicationsFlex}>
+                    <div className={styles.besAplicationText}>
+                        <h2>Our BESS Container<br /> <span>Manufacturing Process</span></h2>
+                        <div className={styles.bssLines}></div>
+                    </div>
+                    <p>L&R follows a structured process from project requirement analysis through engineering, manufacturing, inspection and delivery.</p>
+                </div>
+
+                <div className={styles.processGrid}>
+                    {processSteps.map((step) => {
+                        const Icon = step.icon;
+
+                        return (
+                            <div className={styles.processCard} key={step.number}>
+                                <div className={styles.cardTop}>
+                                    <span className={styles.stepNumber}>{step.number}</span>
+
+                                    <div className={styles.iconBoxs}>
+                                        <Icon size={32} strokeWidth={1.8} />
+                                    </div>
+                                </div>
+
+                                <div className={styles.cardContent}>
+                                    <h3>{step.title}</h3>
+                                    <p>{step.description}</p>
+                                </div>
+
+                                <div className={styles.cardLine}></div>
+                            </div>
+                        );
+                    })}
+                </div>
+
             </section>
 
 
