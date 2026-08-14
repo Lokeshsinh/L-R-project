@@ -17,6 +17,11 @@ import { useNavigate } from 'react-router-dom'
 import bess1 from '../assets/BESS/bess1.png'
 import bess2 from '../assets/BESS/bess2.png'
 import bess3 from '../assets/BESS/bess3.png'
+import bess4 from '../assets/BESS/bess4.png'
+import card1 from '../assets/conatiners/HomeConatiner/card1.png';
+import card2 from '../assets/conatiners/HomeConatiner/card2.png';
+import card3 from '../assets/conatiners/HomeConatiner/card3.png';
+import card4 from '../assets/conatiners/HomeConatiner/card4.png';
 
 function BESSContainer() {
     const navigate = useNavigate();
@@ -111,6 +116,30 @@ function BESSContainer() {
         },
     ];
 
+
+    const industryProjects = [
+        {
+            title: "BESS Enclosures",
+            desc: "Purpose-built steel enclosures for battery energy-storage equipment.",
+            img: card1,
+        },
+        {
+            title: "Battery Rack Containers",
+            desc: "Containers configured for battery racks and associated systems.",
+            img: card2,
+        },
+        {
+            title: "Electrical Equipment Containers",
+            desc: " Solutions for PCS, switchgear, control panels and auxiliary equipment.",
+            img: card3,
+        },
+        {
+            title: "Integrated BESS Containers",
+            desc: "Containerized solutions accommodating multiple BESS subsystems.",
+            img: card4,
+        },
+    ];
+
     return (
         <>
             <Header />
@@ -136,6 +165,7 @@ function BESSContainer() {
             </section>
 
 
+            {/* -------------Intro------------- */}
             <section className={styles.introSec}>
                 <div className={styles.secTitle}>
                     <h2>
@@ -183,8 +213,41 @@ function BESSContainer() {
             </section>
 
 
+            {/* ── Products ── */}
+            <section className={styles.productsSec}>
+                <div className={styles.productsInner}>
+                    <div className={styles.productsHeader}>
+                        <div className={styles.productText}>
+                            <h2>
+                                Engineered for Your <br />
+                                <span>BESS Architecture</span>
+                            </h2>
+                            <div className={styles.productsDivider}></div>
+                        </div>
+                        <p className={styles.productsSubtext}>
+                            Every energy-storage project is unique. L&R develops customized BESS containers around
+                            your battery configuration, equipment and project requirements.
+                        </p>
+                    </div>
+                    <div className={styles.expertiseGrid}>
+                        {industryProjects.map((item, index) => (
+                            <div className={styles.expCard} key={index}>
+                                <img src={item.img} alt={item.title} className={styles.expImg} />
+                                <div className={styles.expLabel}>
+                                    <h4>{item.title}</h4>
+                                    <div className={styles.desc}>
+                                        <p>{item.desc}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
 
+
+            {/* ------------Serviceability-------------- */}
             <section className={styles.advSec}>
                 <div className={styles.secTitle}>
                     <h2>
@@ -254,7 +317,7 @@ function BESSContainer() {
             </section>
 
 
-
+            {/* -------------Applications--------------- */}
             <section className={styles.bessContainer}>
                 <div className={styles.bessContainerFlex}>
                     <div className={styles.bessContainerText}>
@@ -286,6 +349,80 @@ function BESSContainer() {
             </section>
 
 
+
+            {/* ------------------BESS Conatiner------------- */}
+            <section className={styles.section}>
+                <div className={styles.header}>
+                    <h2>
+                        Engineered for Safety, <br />
+                        <span>Performance & Serviceability</span>
+                    </h2>
+                    <div className={styles.divider}></div>
+                </div>
+                <div className={styles.contentWrapper}>
+
+                    <div className={styles.textContainer}>
+                        <div className={styles.descriptionBlock}>
+                            <p>
+                                Our BESS container design considers the operating environment of the energy-storage system.
+                                From structural strength and layout to HVAC, cable routing and safety interfaces, every
+                                element is developed around project requirements.
+                            </p>
+                            <div className={styles.featureList}>
+                                <div className={styles.featureItem}>
+                                    <div className={styles.iconContainer}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureTitle}>Structural Engineering</p>
+                                </div>
+                                <div className={styles.featureItem}>
+                                    <div className={styles.iconContainer}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureTitle}>Equipment Layout</p>
+                                </div>
+                                <div className={styles.featureItem}>
+                                    <div className={styles.iconContainer}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureTitle}>Thermal Management</p>
+                                </div>
+                                <div className={styles.featureItem}>
+                                    <div className={styles.iconContainer}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureTitle}>Cable Management</p>
+                                </div>
+                                <div className={styles.featureItem}>
+                                    <div className={styles.iconContainer}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureTitle}>Fire & Safety Systems</p>
+                                </div>
+                                <div className={styles.featureItem}>
+                                    <div className={styles.iconContainer}>
+                                        <CheckCircle2 size={17} strokeWidth={2.2} />
+                                    </div>
+                                    <p className={styles.featureTitle}>Ventilation & Environmental Protection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.visualContainer}>
+                        <div className={styles.patternBackground}></div>
+                        <div className={styles.accentBar}></div>
+
+                        <div className={styles.imageWrapper}>
+                            <img src={bess4} alt="Worker" className={styles.image} />
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            {/* -----------------Process--------------------- */}
             <section className={styles.besApplications}>
                 <div className={styles.besApplicationsFlex}>
                     <div className={styles.besAplicationText}>
@@ -322,7 +459,7 @@ function BESSContainer() {
 
             </section>
 
-
+            {/* -------------FAQS--------------- */}
             <section className={styles.faqSec}>
                 <span className={styles.introLabel}>• FAQS</span>
                 <div className={styles.faqHeader}>
@@ -376,6 +513,7 @@ function BESSContainer() {
 
 
 
+            {/* -------------CTA------------------- */}
             <section className={styles.cta}>
                 <h2>Ready to Engineer Your Energy Storage Infrastructure?</h2>
                 <p>
