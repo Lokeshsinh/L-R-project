@@ -111,19 +111,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 850px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -734,15 +744,15 @@
   }
 
   .ProjectText h2 {
-    font-size: 44px;
+    font-size: 48px;
   }
 
   .projectCard {
-    height: 360px;
+    height: 330px;
   }
 
   .projectTitle {
-    font-size: 24px;
+    font-size: 22px;
   }
 
 }
@@ -905,7 +915,7 @@
   }
 
   .projectCard {
-    height: 360px;
+    height: 330px;
   }
 
   .projectContent {
@@ -927,7 +937,7 @@
   }
 
   .ProjectText h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .headingRow p {
@@ -964,6 +974,11 @@
     font-size: 14px;
   }
 
+  .dropdownItem,
+  .dropdownSubItems {
+    margin-top: 10px;
+  }
+
 }
 
 
@@ -980,6 +995,17 @@
   .projectCard {
     height: 310px;
   }
+
+  .projectDesc {
+    font-size: 13px;
+  }
+
+  .dropdownItem,
+  .dropdownSubItems {
+    font-size: 14px;
+  }
+
+
 
 }
 
@@ -1004,7 +1030,7 @@
   }
 
   .projectCard {
-    height: 340px;
+    height: 330px;
   }
 
   .projectTitle {
@@ -1015,6 +1041,12 @@
     font-size: 13px;
   }
 
+  .dropdownItem,
+  .dropdownSubItems {
+    font-size: 14px;
+  }
+
+
 }
 
 @media (max-width:320px) {
@@ -1024,7 +1056,7 @@
   }
 
   .ProjectText h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .headingRow p {
@@ -1038,7 +1070,7 @@
 
   .dropdownItem,
   .dropdownSubItems {
-    font-size: 14px;
+    font-size: 13px;
     height: 44px;
   }
 
@@ -1220,96 +1252,93 @@
 }
 
 
-/* ================== 1440px ================== */
-
-@media (max-width:1440px) {
-
-  .cta {
-    padding: 70px 4%;
-  }
-
-  .cta h2 {
-    font-size: 46px;
-  }
-
-}
-
-/* ================== 1280px ================== */
-
 @media (max-width:1280px) {
 
+  .cta {
+    padding: 60px 40px;
+  }
+
   .cta h2 {
-    font-size: 42px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
   }
 
   .cta p {
-    max-width: 700px;
+    max-width: 800px;
+    margin: 0 auto 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .contactBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
   }
 
 }
 
-/* ================== 1200px ================== */
 
 @media (max-width:1200px) {
 
   .cta {
-    padding: 65px 5%;
+    padding: 60px 40px;
+  }
+
+  .cta h2 {
+    font-size: 44px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .cta {
+    padding: 55px 30px;
     background-attachment: scroll;
   }
 
   .cta h2 {
     font-size: 38px;
-  }
-
-  .cta p {
-    font-size: 15px;
-    max-width: 650px;
-  }
-
-}
-
-/* ================== 1024px ================== */
-
-@media (max-width:1024px) {
-
-  .cta h2 {
-    font-size: 34px;
-    text-align: center;
-  }
-
-  .cta p {
-    max-width: 620px;
-  }
-
-}
-
-/* ================== 992px ================== */
-
-@media (max-width:992px) {
-
-  .cta {
-    padding: 60px 5%;
-    text-align: center;
-  }
-
-  .cta h2 {
-    font-size: 32px;
     line-height: 1.3;
   }
 
   .cta p {
-    font-size: 15px;
-    line-height: 1.8;
+    max-width: 700px;
+    font-size: 16px;
   }
 
 }
 
-/* ================== 768px ================== */
-
 @media (max-width:768px) {
 
   .cta {
-    padding: 55px 5%;
+    padding: 50px 22px;
+  }
+
+  .cta h2 {
+    font-size: 32px;
+  }
+
+  .cta p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .cta {
+    padding: 45px 18px;
   }
 
   .cta h2 {
@@ -1318,36 +1347,38 @@
 
   .cta p {
     font-size: 14px;
-    max-width: 100%;
+    margin-bottom: 18px;
   }
 
   .contactBtn {
     width: 220px;
     height: 50px;
+    font-size: 15px;
   }
 
 }
 
-/* ================== 576px ================== */
-
-@media (max-width:576px) {
+@media (max-width:425px) {
 
   .cta {
-    padding: 50px 20px;
+    padding: 40px 16px;
+    gap: 14px;
   }
 
   .cta h2 {
     font-size: 24px;
+    line-height: 1.35;
   }
 
   .cta p {
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .contactBtn {
     width: 200px;
     height: 48px;
+    padding: 0 20px;
   }
 
   .contactText {
@@ -1356,12 +1387,10 @@
 
 }
 
-/* ================== 480px ================== */
-
-@media (max-width:480px) {
+@media (max-width:375px) {
 
   .cta {
-    padding: 45px 18px;
+    padding: 35px 14px;
   }
 
   .cta h2 {
@@ -1369,88 +1398,51 @@
   }
 
   .cta p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .contactBtn {
-    width: 185px;
+    width: 190px;
     height: 46px;
-    gap: 10px;
   }
 
 }
 
-/* ================== 390px ================== */
+@media (max-width:325px) {
 
-@media (max-width:390px) {
+  .cta {
+    padding: 30px 12px;
+  }
 
   .cta h2 {
     font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 16px;
   }
 
   .contactBtn {
     width: 175px;
     height: 44px;
-  }
-
-}
-
-/* ================== 360px ================== */
-
-@media (max-width:360px) {
-
-  .cta {
-    padding: 40px 15px;
-  }
-
-  .cta h2 {
-    font-size: 18px;
-  }
-
-  .cta p {
-    font-size: 11px;
-  }
-
-  .contactBtn {
-    width: 165px;
-    height: 42px;
+    gap: 8px;
+    padding: 0 16px;
   }
 
   .contactText {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-}
-
-/* ================== 320px ================== */
-
-@media (max-width:320px) {
-
-  .cta {
-    padding: 35px 12px;
+  .iconBox {
+    width: 16px;
+    height: 16px;
   }
 
-  .cta h2 {
-    font-size: 17px;
-    line-height: 1.4;
-  }
-
-  .cta p {
-    font-size: 10px;
-    line-height: 1.6;
-  }
-
-  .contactBtn {
-    width: 150px;
-    height: 40px;
-    padding: 0 18px;
-  }
-
-  .contactText {
-    font-size: 11px;
-  }
-
-  .iconBoxs {
+  .iconOne,
+  .iconTwo {
     width: 16px;
     height: 16px;
   }

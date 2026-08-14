@@ -219,14 +219,14 @@ const Projects = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
             L&r green <br />
             <span>Projects
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            At L&R Green Pvt Ltd, we deliver high-performance Rockwool panels designed for demanding
+            At L&R Prefab Solar India Pvt Ltd, we deliver high-performance Rockwool panels designed for demanding
             industrial, commercial, and specialized environments.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -237,15 +237,6 @@ const Projects = () => {
       </section>
 
 
-
-
-
-
-
-
-
-
-
       {/* PROJECTS GRID */}
       <section className={styles.projectsSec}>
         <div className={styles.projectsContainer}>
@@ -253,7 +244,7 @@ const Projects = () => {
           {/* Heading row */}
           <div className={styles.headingRow}>
             <div className={styles.ProjectText}>
-              <h2>Discover Our <br /> Projects</h2>
+              <h2>Discover Our <br /> <span> Projects</span></h2>
               <div className={styles.discoverDivider} />
             </div>
             <p className={styles.discoverDesc}>Advanced modular solar energy solutions bringing circular innovation and eco-skills.</p>
@@ -358,11 +349,14 @@ const Projects = () => {
         </div>
       </section>
 
+
+
+
       {/* CONNECT BANNER */}
       <section className={styles.cta}>
         <h2>Let's Build Your Next Project Together</h2>
         <p>
-          From prefabricated buildings to steel structures, L&R Enterprises delivers reliable,
+          From prefabricated buildings to steel structures, L&R Prefab Solar delivers reliable,
           high-quality, and customized solutions for every project. Contact our team today and turn your vision into reality.
         </p>
         <button className={styles.contactBtn} onClick={() => navigate('/contact')}>
