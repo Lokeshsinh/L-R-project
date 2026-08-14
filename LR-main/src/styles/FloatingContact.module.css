@@ -1,0 +1,494 @@
+.floatingContact {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    min-height: 250px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 9999;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+    border-radius: 0 0 0 2px;
+    overflow: visible;
+}
+
+
+
+.contactItem {
+    position: relative;
+    width: 100px;
+    height: 82px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+
+.iconWrapper {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.contactItem:hover .iconWrapper {
+    color: #233e70;
+    transform: scale(1.12);
+}
+
+.contactItem:hover {
+    transform: translateX(-5px);
+}
+
+
+
+.tooltip {
+    position: absolute;
+    right: 82px;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    background: #233e70;
+    color: #ffffff;
+    padding: 9px 14px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contactItem:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+.contactItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 25px;
+    width: 50px;
+    height: 1px;
+
+    background: #eeeeee;
+}
+
+
+
+@media (max-width: 1440px) {
+
+    .floatingContact {
+        width: 68px;
+        min-height: 245px;
+    }
+
+    .contactItem {
+        width: 68px;
+        height: 80px;
+    }
+
+    .iconWrapper svg {
+        width: 37px;
+        height: 37px;
+    }
+
+    .tooltip {
+        right: 78px;
+    }
+}
+
+
+
+
+@media (max-width: 1280px) {
+
+    .floatingContact {
+        width: 66px;
+        min-height: 235px;
+    }
+
+    .contactItem {
+        width: 66px;
+        height: 77px;
+    }
+
+    .iconWrapper {
+        width: 22px;
+        height: 22px;
+    }
+
+    .iconWrapper svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        left: 9px;
+        width: 48px;
+    }
+
+    .tooltip {
+        right: 76px;
+        font-size: 12.5px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .floatingContact {
+        width: 64px;
+        min-height: 230px;
+    }
+
+    .contactItem {
+        width: 64px;
+        height: 75px;
+    }
+
+    .iconWrapper {
+        width: 22px;
+        height: 22px;
+    }
+
+    .iconWrapper svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        left: 8px;
+        width: 48px;
+    }
+
+    .tooltip {
+        right: 73px;
+    }
+}
+
+
+
+@media (max-width: 1130px) {
+
+    .floatingContact {
+        width: 62px;
+        min-height: 220px;
+    }
+
+    .contactItem {
+        width: 62px;
+        height: 72px;
+    }
+
+    .iconWrapper {
+        width: 38px;
+        height: 38px;
+    }
+
+    .iconWrapper svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        left: 8px;
+        width: 46px;
+    }
+
+    .tooltip {
+        right: 70px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+
+    .floatingContact {
+        width: 60px;
+        min-height: 215px;
+    }
+
+    .contactItem {
+        width: 60px;
+        height: 70px;
+    }
+
+    .iconWrapper {
+        width: 37px;
+        height: 37px;
+    }
+
+    .iconWrapper svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        left: 7px;
+        width: 46px;
+    }
+
+    .tooltip {
+        right: 68px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .floatingContact {
+        width: 58px;
+        min-height: 205px;
+        box-shadow:
+            -5px 0 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .contactItem {
+        width: 58px;
+        height: 68px;
+    }
+
+    .iconWrapper {
+        width: 21px;
+        height: 21px;
+    }
+
+    .iconWrapper svg {
+        width: 31px;
+        height: 31px;
+    }
+
+
+    .tooltip {
+        display: none;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -7px;
+        left: 9px;
+        width: 40px;
+    }
+
+    .contactItem:hover {
+        transform: none;
+    }
+
+    .contactItem:hover .iconWrapper {
+        transform: scale(1.08);
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .floatingContact {
+        width: 54px;
+        min-height: 190px;
+    }
+
+    .contactItem {
+        width: 54px;
+        height: 63px;
+    }
+
+    .iconWrapper {
+        width: 21px;
+        height: 21px;
+    }
+
+    .iconWrapper svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -6px;
+        left: 8px;
+        width: 38px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .floatingContact {
+        width: 52px;
+        min-height: 178px;
+        box-shadow:
+            -4px 0 18px rgba(0, 0, 0, 0.11);
+    }
+
+    .contactItem {
+        width: 52px;
+        height: 59px;
+    }
+
+    .iconWrapper {
+        width: 21px;
+        height: 21px;
+    }
+
+    .iconWrapper svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -5px;
+        left: 7px;
+        width: 38px;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+
+    .floatingContact {
+        width: 49px;
+        min-height: 168px;
+    }
+
+    .contactItem {
+        width: 49px;
+        height: 56px;
+    }
+
+    .iconWrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .iconWrapper svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -5px;
+        left: 6px;
+        width: 37px;
+    }
+}
+
+
+
+@media (max-width: 390px) {
+
+    .floatingContact {
+        width: 47px;
+        min-height: 158px;
+    }
+
+    .contactItem {
+        width: 47px;
+        height: 53px;
+    }
+
+    .iconWrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .iconWrapper svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -4px;
+        left: 6px;
+        width: 35px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .floatingContact {
+        width: 44px;
+        min-height: 148px;
+    }
+
+    .contactItem {
+        width: 44px;
+        height: 50px;
+    }
+
+    .iconWrapper {
+        width: 19px;
+        height: 19px;
+    }
+
+    .iconWrapper svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -4px;
+        left: 5px;
+        width: 34px;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    .floatingContact {
+        width: 42px;
+        min-height: 138px;
+    }
+
+    .contactItem {
+        width: 42px;
+        height: 47px;
+    }
+
+    .iconWrapper {
+        width: 19px;
+        height: 19px;
+    }
+
+    .iconWrapper svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        bottom: -3px;
+        left: 5px;
+        width: 32px;
+    }
+}

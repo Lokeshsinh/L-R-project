@@ -8,11 +8,17 @@ import {
     ClipboardList,
     PenTool,
     Settings,
-    SunMedium
+    SunMedium,
+    Maximize2,
+    Layers3,
+    Building2,
+    Leaf,
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import power1 from '../assets/solar/PowerRoof/power1.png'
 import power2 from '../assets/solar/PowerRoof/power2.png'
+import power3 from '../assets/solar/PowerRoof/power3.png'
+import power4 from '../assets/solar/PowerRoof/power4.png'
 function PowerRoof() {
     const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(1);
@@ -75,6 +81,32 @@ function PowerRoof() {
             description:
                 "We deliver a coordinated roofing solution designed to support solar installation and future energy needs while meeting your project expectations."
         }
+    ];
+    const whyChooseItems = [
+        {
+            icon: Maximize2,
+            title: "Smart Use of Space",
+            description:
+                "Make better use of available roof areas by turning unused space into an opportunity for clean solar energy generation and efficient power use.",
+        },
+        {
+            icon: Layers3,
+            title: "Integrated Roof & Solar Design",
+            description:
+                "Roofing and solar requirements are considered together from the beginning, creating a more coordinated and practical solution for your project needs.",
+        },
+        {
+            icon: Building2,
+            title: "Built for Diverse Applications",
+            description:
+                "Designed for industrial, commercial, and infrastructure projects, including sheds, warehouses, PEB buildings, containers, and parking structures across various applications.",
+        },
+        {
+            icon: Leaf,
+            title: "Future-Ready Energy Solution",
+            description:
+                "Create infrastructure prepared for renewable energy integration and the growing demand for smarter, more sustainable power solutions in the years ahead.",
+        },
     ];
 
     return (
@@ -151,6 +183,116 @@ function PowerRoof() {
 
 
 
+
+            {/* ---------------Our Partner---------- */}
+            <section className={styles.SolarEpic}>
+                <div className={styles.solarEpicTitle}>
+                    <h2>One Partner<br /><span>Multiple Solutions.</span></h2>
+                    <div className={styles.FaqsLine}></div>
+                </div>
+                <div className={styles.SolarEpicFLex}>
+                    <div className={styles.solartext}>
+                        <p>With L&R Prefab Solar, multiple capabilities come together under one roof. From prefabricated
+                            structures, MS containers, industrial sheds, and PEB buildings to roofing systems and solar-ready
+                            solutions, we provide practical solutions across diverse project requirements. Our expertise
+                            allows every element to be considered with performance, functionality, and long-term value in mind.</p>
+                        <p>Our integrated approach brings structural planning and renewable energy considerations together
+                            from the beginning. By connecting these capabilities, we help create coordinated, efficient,
+                            and future-ready infrastructure designed around your project needs. One partner, multiple
+                            capabilities, and a smarter approach to modern infrastructure, built for evolving energy
+                            demands and sustainable growth. Our solutions are designed to deliver lasting value
+                            across every stage of your project.</p>
+                    </div>
+
+                    <div className={styles.photoCard}>
+                        <div className={styles.dotPattern}></div>
+                        <img
+                            src={power3}
+                            alt="PEB Building"
+                            className={styles.mediaImage}
+                        />
+                        <div className={styles.accentPillar}></div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* ----------------Why Choose---------------- */}
+
+            <section className={styles.ourProcess}>
+                <div className={styles.ourProcessFLex}>
+                    <div class={styles.ourProcessText}>
+                        <h2>Why Choose <br /> <span>L&R PowerRoof™?</span></h2>
+                        <div className={styles.ourProcessLine}></div>
+                    </div>
+                    <p>Smart, solar-ready roofing solutions designed for efficient, sustainable, and future-ready infrastructure.</p>
+                </div>
+                <div className={styles.chooseRoofCards}>
+                    {whyChooseItems.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                            <article
+                                className={styles.chooseRoofCard}
+                                key={item.title}
+                            >
+                                <div className={styles.chooseRoofShape}></div>
+                                <div className={styles.chooseRoofIcon}>
+                                    <Icon strokeWidth={1.5} />
+                                </div>
+                                <div className={styles.chooseRoofContent}>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.description}</p>
+                                </div>
+                                <div className={styles.chooseRoofLine}></div>
+                            </article>
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* --------------Our PowerRoof----------------- */}
+            <section className={styles.section}>
+                <div className={styles.headerGroup}>
+                    <h2 className={styles.heading}>
+                        More Than a Roof.<br />
+                        <span className={styles.highlightText}>A Power Solution.</span>
+                    </h2>
+                    <div className={styles.dividerLine}></div>
+                </div>
+
+                <div className={styles.contentLayout}>
+                    <div className={styles.mediaWrapper}>
+                        <div className={styles.patternGrid}></div>
+                        <img
+                            src={power4}
+                            alt="PEB Building"
+                            className={styles.heroImage}
+                        />
+                        <div className={styles.sideBar}></div>
+                    </div>
+                    <div className={styles.descriptionColumn}>
+                        <p>
+                            The future of infrastructure is about making every suitable space work smarter. L&R PowerRoof™
+                            brings together our expertise in prefabrication, PEB structures, industrial roofing, and solar
+                            applications to create practical, solar-ready solutions for modern businesses. Our approach
+                            focuses on combining structural performance with renewable energy opportunities from the initial design stage.
+                        </p>
+                        <p>
+                            Whether you are planning a warehouse, industrial shed, PEB building, parking shed, container,
+                            or site office, our team can explore a roofing solution designed around your project requirements.
+                            By integrating roofing and solar considerations, we help create smarter infrastructure that supports
+                            efficiency, sustainability, and long-term energy goals. These solutions are designed to adapt to the
+                            evolving needs of modern businesses. Every project is planned with practicality, performance, and
+                            future energy possibilities in mind.
+                        </p>
+                    </div>
+
+
+                </div>
+            </section>
+
+
             {/* -------------Process ---------------- */}
             <section className={styles.whyPowerRoof}>
                 <div className={styles.whyPowerRoofFlex}>
@@ -158,7 +300,7 @@ function PowerRoof() {
                         <h2>Designed for Energy<br /> <span>Built for Performance.</span></h2>
                         <div className={styles.whyPowerRoofLine}></div>
                     </div>
-                    <p>A smarter approach to roofing and solar integration, creating practical, 
+                    <p>A smarter approach to roofing and solar integration, creating practical,
                         reliable, and future-ready solutions for modern infrastructure.</p>
                 </div>
 
@@ -207,8 +349,6 @@ function PowerRoof() {
                         );
                     })}
                 </div>
-
-
             </section>
 
             {/* -------------FAQS--------------- */}

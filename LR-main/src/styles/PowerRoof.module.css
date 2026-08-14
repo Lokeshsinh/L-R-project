@@ -1121,8 +1121,1914 @@
     }
 }
 
+/* =============================
+Partner
+=============================== */
+
+.SolarEpic {
+    width: 100%;
+    padding: 72px 60px;
+    background-color: #f7f7f753;
+}
+
+.solarEpicTitle {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.solarEpicTitle h2 {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+}
+
+.solarEpicTitle h2 span {
+    color: #233E70;
+}
+
+.SolarEpicFLex {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+.solartext {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 680px;
+}
+
+.solartext p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+
+.photoCard {
+    position: relative;
+    width: 620px;
+    height: 400px;
+    overflow: visible;
+}
+
+
+.dotPattern {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(#29456F 1.6px, transparent 1.6px);
+    background-size: 14px 14px;
+    z-index: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.mediaImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 2;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+.accentPillar {
+    position: absolute;
+    top: 22px;
+    left: -18px;
+    width: 38px;
+    height: calc(100% - 44px);
+    background: #29456F;
+    border-radius: 22px;
+    z-index: 3;
+    transition: all 0.45s ease;
+}
+
+
+.photoCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    z-index: 4;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+/* Hover Interactions */
+.photoCard:hover .mediaImage {
+    transform: scale(1.02);
+}
+
+.photoCard:hover .accentPillar {
+    width: 48px;
+    background: #1d3760;
+}
+
+.photoCard:hover .dotPattern {
+    transform: translate(10px, -10px);
+    opacity: 0.9;
+}
+
+.photoCard:hover::after {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+
+
+@media (max-width: 1440px) {
+
+    .SolarEpic {
+        padding: 70px 50px;
+    }
+
+    .SolarEpicFLex {
+        gap: 45px;
+    }
+
+    .solartext {
+        max-width: 600px;
+    }
+
+    .solartext p {
+        font-size: 16px;
+    }
+
+    .photoCard {
+        flex-basis: 560px;
+        width: 560px;
+        height: 380px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .SolarEpic {
+        padding: 65px 45px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 48px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 50px;
+    }
+
+    .SolarEpicFLex {
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .solartext {
+        max-width: 540px;
+    }
+
+    .solartext p {
+        font-size: 15.5px;
+        line-height: 1.75;
+    }
+
+    .photoCard {
+        flex: 0 0 520px;
+        width: 520px;
+        height: 380px;
+    }
+
+    .dotPattern {
+        width: 125px;
+        height: 125px;
+        top: -17px;
+        right: -17px;
+        background-size: 12px 12px;
+    }
+
+    .accentPillar {
+        top: 20px;
+        left: -16px;
+        width: 34px;
+        height: calc(100% - 40px);
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    .SolarEpic {
+        padding: 65px 40px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 50px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 48px;
+    }
+
+    .SolarEpicFLex {
+        gap: 35px;
+    }
+
+    .solartext {
+        max-width: 510px;
+    }
+
+    .solartext p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .photoCard {
+        flex-basis: 500px;
+        width: 500px;
+        height: 420px;
+    }
+
+    .dotPattern {
+        width: 120px;
+        height: 120px;
+        background-size: 12px 12px;
+    }
+
+    .accentPillar {
+        width: 32px;
+        left: -15px;
+    }
+}
+
+
+
+@media (max-width: 1130px) {
+
+    .SolarEpic {
+        padding: 60px 35px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 45px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 46px;
+    }
+
+    .SolarEpicFLex {
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .solartext {
+        max-width: 490px;
+    }
+
+    .solartext p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .photoCard {
+        flex: 0 0 480px;
+        width: 480px;
+        height: 380px;
+    }
+
+    .dotPattern {
+        width: 110px;
+        height: 110px;
+
+        top: -15px;
+        right: -15px;
+
+        background-size: 11px 11px;
+    }
+
+    .accentPillar {
+        top: 19px;
+        left: -14px;
+
+        width: 31px;
+        height: calc(100% - 38px);
+
+        border-radius: 18px;
+    }
+
+    .mediaImage {
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .SolarEpic {
+        padding: 60px 35px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 45px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 44px;
+    }
+
+    .SolarEpicFLex {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .solartext {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .solartext p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .photoCard {
+        width: 100%;
+        max-width: 720px;
+        height: 400px;
+        flex-basis: auto;
+        align-self: center;
+    }
+
+    .mediaImage {
+        border-radius: 26px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .SolarEpic {
+        padding: 60px 35px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 45px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 44px;
+    }
+
+    .SolarEpicFLex {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .solartext {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .solartext p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .photoCard {
+        width: 100%;
+        max-width: 720px;
+        height: 400px;
+        flex-basis: auto;
+        align-self: center;
+    }
+
+    .mediaImage {
+        border-radius: 26px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .SolarEpic {
+        padding: 55px 28px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 38px;
+        gap: 8px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 38px;
+        line-height: 1.18;
+    }
+
+    .FaqsLine {
+        width: 60px;
+        height: 3px;
+    }
+
+    .SolarEpicFLex {
+        gap: 35px;
+    }
+
+    .solartext {
+        gap: 15px;
+    }
+
+    .solartext p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .photoCard {
+        width: 100%;
+        height: 360px;
+    }
+
+    .dotPattern {
+        width: 110px;
+        height: 110px;
+
+        top: -15px;
+        right: -15px;
+
+        background-size: 11px 11px;
+    }
+
+    .accentPillar {
+        top: 20px;
+        left: -13px;
+
+        width: 30px;
+        height: calc(100% - 40px);
+
+        border-radius: 18px;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .SolarEpic {
+        padding: 48px 22px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 32px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 34px;
+        line-height: 1.18;
+    }
+
+    .FaqsLine {
+        width: 55px;
+    }
+
+    .SolarEpicFLex {
+        gap: 30px;
+    }
+
+    .solartext {
+        gap: 12px;
+    }
+
+    .solartext p {
+        font-size: 14.5px;
+        line-height: 1.7;
+    }
+
+    .photoCard {
+        width: calc(100% - 8px);
+        height: 320px;
+        margin-left: 8px;
+    }
+
+    .mediaImage {
+        border-radius: 22px;
+    }
+
+    .dotPattern {
+        width: 95px;
+        height: 95px;
+
+        top: -13px;
+        right: -13px;
+
+        background-size: 10px 10px;
+    }
+
+    .accentPillar {
+        top: 18px;
+        left: -11px;
+
+        width: 26px;
+        height: calc(100% - 36px);
+
+        border-radius: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .SolarEpic {
+        padding: 42px 18px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 28px;
+        gap: 7px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .FaqsLine {
+        width: 48px;
+        height: 2px;
+    }
+
+    .SolarEpicFLex {
+        gap: 26px;
+    }
+
+    .solartext {
+        gap: 10px;
+    }
+
+    .solartext p {
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 6px;
+    }
+
+    .photoCard {
+        width: calc(100% - 6px);
+        height: 285px;
+        margin-left: 6px;
+    }
+
+    .mediaImage {
+        border-radius: 20px;
+    }
+
+    .dotPattern {
+        width: 82px;
+        height: 82px;
+
+        top: -10px;
+        right: -10px;
+
+        background-size: 9px 9px;
+    }
+
+    .accentPillar {
+        top: 16px;
+        left: -9px;
+
+        width: 23px;
+        height: calc(100% - 32px);
+
+        border-radius: 14px;
+    }
+}
+
+
+
+
+@media (max-width: 430px) {
+
+    .SolarEpic {
+        padding: 38px 16px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 25px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 22px;
+    }
+
+    .FaqsLine {
+        width: 45px;
+    }
+
+    .solartext p {
+        font-size: 12.5px;
+        line-height: 1.65;
+    }
+
+    .SolarEpicFLex {
+        gap: 24px;
+    }
+
+    .photoCard {
+        width: calc(100% - 5px);
+        height: 260px;
+        margin-left: 5px;
+    }
+
+    .mediaImage {
+        border-radius: 18px;
+    }
+
+    .dotPattern {
+        width: 72px;
+        height: 72px;
+
+        top: -9px;
+        right: -9px;
+
+        background-size: 8px 8px;
+    }
+
+    .accentPillar {
+        top: 15px;
+        left: -8px;
+
+        width: 21px;
+        height: calc(100% - 30px);
+
+        border-radius: 13px;
+    }
+}
+
+
+
+
+@media (max-width: 390px) {
+
+    .SolarEpic {
+        padding: 34px 14px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 23px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 22px;
+    }
+
+    .solartext p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .SolarEpicFLex {
+        gap: 22px;
+    }
+
+    .photoCard {
+        height: 235px;
+    }
+
+    .dotPattern {
+        width: 65px;
+        height: 65px;
+
+        background-size: 7px 7px;
+    }
+
+    .accentPillar {
+        top: 14px;
+        left: -7px;
+
+        width: 19px;
+        height: calc(100% - 28px);
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .SolarEpic {
+        padding: 30px 12px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 20px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 22px;
+    }
+
+    .FaqsLine {
+        width: 40px;
+        height: 2px;
+    }
+
+    .solartext p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .SolarEpicFLex {
+        gap: 20px;
+    }
+
+    .photoCard {
+        width: calc(100% - 4px);
+        height: 215px;
+        margin-left: 4px;
+    }
+
+    .mediaImage {
+        border-radius: 16px;
+    }
+
+    .dotPattern {
+        width: 58px;
+        height: 58px;
+
+        top: -8px;
+        right: -8px;
+
+        background-size: 6px 6px;
+    }
+
+    .accentPillar {
+        top: 12px;
+        left: -6px;
+
+        width: 17px;
+        height: calc(100% - 24px);
+
+        border-radius: 11px;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+
+    .SolarEpic {
+        padding: 28px 10px;
+    }
+
+    .solarEpicTitle {
+        margin-bottom: 18px;
+    }
+
+    .solarEpicTitle h2 {
+        font-size: 22px;
+        line-height: 1.18;
+    }
+
+    .FaqsLine {
+        width: 36px;
+    }
+
+    .solartext {
+        gap: 8px;
+    }
+
+    .solartext p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .SolarEpicFLex {
+        gap: 18px;
+    }
+
+    .photoCard {
+        width: calc(100% - 3px);
+        height: 195px;
+        margin-left: 3px;
+    }
+
+    .mediaImage {
+        border-radius: 14px;
+    }
+
+    .dotPattern {
+        width: 52px;
+        height: 52px;
+
+        top: -7px;
+        right: -7px;
+
+        background-size: 5.5px 5.5px;
+    }
+
+    .accentPillar {
+        top: 11px;
+        left: -5px;
+
+        width: 15px;
+        height: calc(100% - 22px);
+
+        border-radius: 10px;
+    }
+}
+
+/* ============================
+Why Choose
+=============================== */
+.ourProcess {
+    width: 100%;
+    padding: 72px 60px;
+    background-color: #f7f7f753;
+}
+
+.ourProcessFLex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.ourProcessText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ourProcessText h2 {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+}
+
+.ourProcessText h2 span {
+    color: #233E70;
+}
+
+.ourProcessLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background: #0d2244;
+}
+
+.ourProcessFLex p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    padding-top: 8px;
+    max-width: 470px;
+}
+
+
+
+.chooseRoofCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+
+.chooseRoofCard {
+    position: relative;
+    min-height: 360px;
+    padding: 34px 32px 30px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid rgba(35, 62, 112, 0.12);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition:
+        background-color 0.5s ease,
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.4s ease,
+        box-shadow 0.5s ease;
+}
+
+
+
+.chooseRoofCard:hover {
+    background: #233e70;
+    border-color: #233e70;
+    transform: translateY(-10px);
+    box-shadow:
+        0 25px 55px rgba(35, 62, 112, 0.20);
+}
+
+
+.chooseRoofShape {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    right: -105px;
+    top: -105px;
+    border: 1px solid rgba(35, 62, 112, 0.10);
+    border-radius: 50%;
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.5s ease;
+}
+
+.chooseRoofCard:hover .chooseRoofShape {
+    transform: scale(1.8);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+.chooseRoofIcon {
+    position: relative;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 65px;
+    border: 1px solid rgba(35, 62, 112, 0.18);
+    color: white;
+    background: #233e70;
+    transition:
+        background-color 0.45s ease,
+        border-color 0.45s ease,
+        color 0.45s ease,
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chooseRoofIcon svg {
+    width: 29px;
+    height: 29px;
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chooseRoofCard:hover .chooseRoofIcon {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #233e70;
+    transform: translateX(5px);
+}
+
+.chooseRoofCard:hover .chooseRoofIcon svg {
+    transform: rotate(-8deg) scale(1.12);
+}
+
+
+.chooseRoofContent {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.chooseRoofContent h3 {
+    margin: 0 0 18px;
+    min-height: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #233e70;
+    transition:
+        color 0.4s ease,
+        transform 0.45s ease;
+}
+
+.chooseRoofContent p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #707784;
+    transition:
+        color 0.4s ease,
+        transform 0.45s ease;
+}
+
+
+.chooseRoofCard:hover .chooseRoofContent h3 {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.chooseRoofCard:hover .chooseRoofContent p {
+    color: rgba(255, 255, 255, 0.72);
+    transform: translateX(5px);
+}
+
+
+.chooseRoofAction {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(35, 62, 112, 0.12);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #233e70;
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.chooseRoofCard:hover .chooseRoofAction {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.chooseRoofArrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    font-size: 16px;
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.4s ease;
+}
+
+.chooseRoofCard:hover .chooseRoofArrow {
+    transform: rotate(45deg);
+    background: #ffffff;
+    color: #233e70;
+}
+
+
+
+
+.chooseRoofLine {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chooseRoofCard:hover .chooseRoofLine {
+    transform: scaleX(1);
+}
+
+
+/* =============================
+Our PowerRoof
+================================ */
+.section {
+    width: 100%;
+    padding: 72px 60px;
+    background-color: #f7f7f753;
+}
+
+.headerGroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.heading {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+}
+
+.highlightText {
+    color: #233E70;
+}
+
+.dividerLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background: #0d2244;
+}
+
+.contentLayout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.descriptionColumn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 680px;
+}
+
+.descriptionColumn p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.mediaWrapper {
+    position: relative;
+    width: 630px;
+    height: 400px;
+    overflow: visible;
+}
+
+.patternGrid {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(#29456F 1.6px, transparent 1.6px);
+    background-size: 14px 14px;
+    z-index: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.heroImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 2;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.sideBar {
+    position: absolute;
+    top: 22px;
+    right: -18px;
+    width: 38px;
+    height: calc(100% - 44px);
+    background: #29456F;
+    border-radius: 22px;
+    z-index: 3;
+    transition: all 0.45s ease;
+}
+
+.mediaWrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    z-index: 4;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+/* Hover Interactions */
+.mediaWrapper:hover .heroImage {
+    transform: scale(1.02);
+}
+
+.mediaWrapper:hover .sideBar {
+    width: 48px;
+    background: #1d3760;
+}
+
+.mediaWrapper:hover .patternGrid {
+    transform: translate(10px, -10px);
+    opacity: 0.9;
+}
+
+.mediaWrapper:hover::after {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+
+
+
+@media (max-width: 1440px) {
+
+    .section {
+        padding: 70px 50px;
+    }
+
+    .contentLayout {
+        gap: 45px;
+    }
+
+    .heading {
+        font-size: 52px;
+    }
+
+    .descriptionColumn {
+        max-width: 600px;
+    }
+
+    .descriptionColumn p {
+        font-size: 16px;
+    }
+
+    .mediaWrapper {
+        flex-basis: 560px;
+        width: 560px;
+        height: 380px;
+    }
+}
+
+
+
+
+@media (max-width: 1280px) {
+
+    .section {
+        padding: 65px 45px;
+    }
+
+    .headerGroup {
+        margin-bottom: 70px;
+    }
+
+    .heading {
+        font-size: 50px;
+    }
+
+    .contentLayout {
+        gap: 40px;
+    }
+
+    .descriptionColumn {
+        max-width: 550px;
+    }
+
+    .descriptionColumn p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .mediaWrapper {
+        flex-basis: 540px;
+        width: 540px;
+        height: 420px;
+    }
+
+    .patternGrid {
+        width: 125px;
+        height: 125px;
+        top: -18px;
+        left: -18px;
+        background-size: 12px 12px;
+    }
+
+    .sideBar {
+        top: 20px;
+        right: -16px;
+
+        width: 34px;
+        height: calc(100% - 40px);
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .section {
+        padding: 60px 40px;
+    }
+
+    .headerGroup {
+        margin-bottom: 65px;
+    }
+
+    .heading {
+        font-size: 47px;
+    }
+
+    .contentLayout {
+        gap: 35px;
+    }
+
+    .descriptionColumn {
+        max-width: 530px;
+    }
+
+    .descriptionColumn p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .mediaWrapper {
+        flex-basis: 510px;
+        width: 510px;
+        height: 450px;
+    }
+
+    .patternGrid {
+        width: 115px;
+        height: 115px;
+        top: -16px;
+        left: -16px;
+        background-size: 11px 11px;
+    }
+
+    .sideBar {
+        top: 19px;
+        right: -15px;
+        width: 32px;
+        height: calc(100% - 38px);
+    }
+}
+
+
+
+
+@media (max-width: 1130px) {
+
+    .section {
+        padding: 58px 35px;
+    }
+
+    .headerGroup {
+        margin-bottom: 54px;
+    }
+
+    .heading {
+        font-size: 44px;
+    }
+
+    .contentLayout {
+        gap: 30px;
+    }
+
+    .descriptionColumn {
+        max-width: 490px;
+    }
+
+    .descriptionColumn p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .mediaWrapper {
+        flex-basis: 480px;
+        width: 480px;
+        height: 410px;
+    }
+
+    .patternGrid {
+        width: 105px;
+        height: 105px;
+        top: -15px;
+        left: -15px;
+        background-size: 10px 10px;
+    }
+
+    .sideBar {
+        top: 18px;
+        right: -14px;
+        width: 30px;
+        height: calc(100% - 36px);
+    }
+}
+
+@media (max-width:1050px) {
+
+    .section {
+        padding: 55px 35px;
+    }
+
+    .headerGroup {
+        margin-bottom: 48px;
+    }
+
+    .heading {
+        font-size: 42px;
+    }
+
+    .contentLayout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mediaWrapper {
+        order: 1;
+        width: 100%;
+        max-width: 720px;
+        height: 390px;
+        flex-basis: auto;
+        align-self: center;
+    }
+
+    .descriptionColumn {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .descriptionColumn p {
+        font-size: 15.5px;
+        line-height: 1.75;
+    }
+
+    .patternGrid {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sideBar {
+        right: -16px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .section {
+        padding: 55px 35px;
+    }
+
+    .headerGroup {
+        margin-bottom: 48px;
+    }
+
+    .heading {
+        font-size: 42px;
+    }
+
+    .contentLayout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mediaWrapper {
+        order: 1;
+        width: 100%;
+        max-width: 720px;
+        height: 390px;
+        flex-basis: auto;
+        align-self: center;
+    }
+
+    .descriptionColumn {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .descriptionColumn p {
+        font-size: 15.5px;
+        line-height: 1.75;
+    }
+
+    .patternGrid {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sideBar {
+        right: -16px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 50px 28px;
+    }
+
+    .headerGroup {
+        gap: 8px;
+        margin-bottom: 42px;
+    }
+
+    .heading {
+        font-size: 37px;
+        line-height: 1.18;
+    }
+
+    .dividerLine {
+        width: 90px;
+        height: 3px;
+    }
+
+    .contentLayout {
+        gap: 32px;
+    }
+
+    .mediaWrapper {
+        width: 100%;
+        height: 350px;
+    }
+
+    .descriptionColumn {
+        gap: 15px;
+    }
+
+    .descriptionColumn p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .heroImage {
+        border-radius: 25px;
+    }
+
+    .patternGrid {
+        width: 105px;
+        height: 105px;
+        top: -15px;
+        left: -15px;
+        background-size: 11px 11px;
+    }
+
+    .sideBar {
+        top: 20px;
+        right: -13px;
+        width: 29px;
+        height: calc(100% - 40px);
+        border-radius: 18px;
+    }
+}
+
+
+
+
+@media (max-width: 576px) {
+
+    .section {
+        padding: 45px 22px;
+    }
+
+    .headerGroup {
+        margin-bottom: 38;
+    }
+
+    .heading {
+        font-size: 33px;
+        line-height: 1.18;
+    }
+
+    .dividerLine {
+        width: 75px;
+        height: 2px;
+    }
+
+    .contentLayout {
+        gap: 28px;
+    }
+
+    .mediaWrapper {
+        width: calc(100% - 8px);
+        height: 315px;
+        margin-left: 8px;
+    }
+
+    .descriptionColumn {
+        gap: 12px;
+    }
+
+    .descriptionColumn p {
+        font-size: 14px;
+        line-height: 1.68;
+        margin-bottom: 6px;
+    }
+
+    .heroImage {
+        border-radius: 22px;
+    }
+
+    .patternGrid {
+        width: 90px;
+        height: 90px;
+        top: -12px;
+        left: -12px;
+        background-size: 9px 9px;
+    }
+
+    .sideBar {
+        top: 17px;
+        right: -11px;
+        width: 25px;
+        height: calc(100% - 34px);
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section {
+        padding: 40px 18px;
+    }
+
+    .headerGroup {
+        margin-bottom: 35px;
+    }
+
+    .heading {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    .dividerLine {
+        width: 65px;
+    }
+
+    .contentLayout {
+        gap: 24px;
+    }
+
+    .mediaWrapper {
+        width: calc(100% - 6px);
+        height: 280px;
+        margin-left: 6px;
+    }
+
+    .descriptionColumn {
+        gap: 10px;
+    }
+
+    .descriptionColumn p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+
+    .heroImage {
+        border-radius: 20px;
+    }
+
+    .patternGrid {
+        width: 78px;
+        height: 78px;
+        top: -10px;
+        left: -10px;
+        background-size: 8px 8px;
+    }
+
+    .sideBar {
+        top: 15px;
+        right: -9px;
+        width: 22px;
+        height: calc(100% - 30px);
+        border-radius: 14px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .section {
+        padding: 36px 16px;
+    }
+
+    .headerGroup {
+        margin-bottom: 33px;
+    }
+
+    .heading {
+        font-size: 22px;
+        line-height: 1.18;
+    }
+
+    .dividerLine {
+        width: 58px;
+        height: 2px;
+    }
+
+    .contentLayout {
+        gap: 22px;
+    }
+
+    .mediaWrapper {
+        width: calc(100% - 5px);
+        height: 255px;
+        margin-left: 5px;
+    }
+
+    .descriptionColumn p {
+        font-size: 12.5px;
+        line-height: 1.65;
+    }
+
+    .heroImage {
+        border-radius: 18px;
+    }
+
+    .patternGrid {
+        width: 70px;
+        height: 70px;
+        top: -9px;
+        left: -9px;
+        background-size: 7px 7px;
+    }
+
+    .sideBar {
+        top: 14px;
+        right: -8px;
+        width: 20px;
+        height: calc(100% - 28px);
+        border-radius: 12px;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .section {
+        padding: 33px 14px;
+    }
+
+    .headerGroup {
+        margin-bottom: 31px;
+    }
+
+    .heading {
+        font-size: 22px;
+    }
+
+    .contentLayout {
+        gap: 20px;
+    }
+
+    .descriptionColumn p {
+        font-size: 12.5px;
+        line-height: 1.62;
+    }
+
+    .mediaWrapper {
+        height: 235px;
+    }
+
+    .patternGrid {
+        width: 64px;
+        height: 64px;
+        top: -8px;
+        left: -8px;
+        background-size: 6.5px 6.5px;
+    }
+
+    .sideBar {
+        top: 13px;
+        right: -7px;
+        width: 18px;
+        height: calc(100% - 26px);
+    }
+
+    .heroImage {
+        border-radius: 17px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .section {
+        padding: 30px 12px;
+    }
+
+    .headerGroup {
+        margin-bottom: 29px;
+    }
+
+    .heading {
+        font-size: 22px;
+    }
+
+    .dividerLine {
+        width: 48px;
+        height: 2px;
+    }
+
+    .contentLayout {
+        gap: 18px;
+    }
+
+    .descriptionColumn {
+        gap: 8px;
+    }
+
+    .descriptionColumn p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .mediaWrapper {
+        width: calc(100% - 4px);
+        height: 215px;
+        margin-left: 4px;
+    }
+
+    .heroImage {
+        border-radius: 15px;
+    }
+
+    .patternGrid {
+        width: 57px;
+        height: 57px;
+        top: -7px;
+        left: -7px;
+        background-size: 6px 6px;
+    }
+
+    .sideBar {
+        top: 12px;
+        right: -6px;
+        width: 16px;
+        height: calc(100% - 24px);
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .section {
+        padding: 27px 10px;
+    }
+
+    .headerGroup {
+        margin-bottom: 27px;
+    }
+
+    .heading {
+        font-size: 22px;
+        line-height: 1.18;
+    }
+
+    .dividerLine {
+        width: 42px;
+        height: 2px;
+    }
+
+    .contentLayout {
+        gap: 16px;
+    }
+
+    .descriptionColumn {
+        gap: 7px;
+    }
+
+    .descriptionColumn p {
+        font-size: 12px;
+        line-height: 1.58;
+    }
+
+    .mediaWrapper {
+        width: calc(100% - 3px);
+        height: 195px;
+        margin-left: 3px;
+    }
+
+    .heroImage {
+        border-radius: 14px;
+    }
+
+    .patternGrid {
+        width: 50px;
+        height: 50px;
+        top: -6px;
+        left: -6px;
+        background-size: 5.5px 5.5px;
+    }
+
+    .sideBar {
+        top: 10px;
+        right: -5px;
+        width: 14px;
+        height: calc(100% - 20px);
+        border-radius: 9px;
+    }
+}
+
 /* ===========================
-Why choose 
+Process
 ============================== */
 .whyPowerRoof {
     width: 100%;
@@ -1176,6 +3082,7 @@ Why choose
     display: flex;
     gap: 22px;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 
@@ -1405,6 +3312,672 @@ Why choose
 .chooseCard:hover .hoverCircle {
     transform: scale(2.5);
     opacity: 1;
+}
+
+
+
+@media (max-width: 1440px) {
+    .whyPowerRoof {
+        padding: 70px 55px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 70px;
+        gap: 50px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 48px;
+    }
+
+    .whyPowerRoofFlex p {
+        max-width: 440px;
+        font-size: 15px;
+    }
+
+    .cardGrid {
+        gap: 18px;
+    }
+
+    .chooseCard {
+        min-height: 360px;
+        padding: 27px;
+    }
+
+    .bgNumber {
+        font-size: 140px;
+    }
+
+    .iconCircle {
+        width: 58px;
+        height: 58px;
+    }
+
+    .cardContent h3 {
+        font-size: 22px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .whyPowerRoof {
+        padding: 65px 50px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 60px;
+        gap: 40px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 48px;
+    }
+
+    .whyPowerRoofFlex p {
+        max-width: 400px;
+        font-size: 14px;
+    }
+
+    .cardGrid {
+        gap: 16px;
+    }
+
+    .chooseCard {
+        min-height: 350px;
+        padding: 24px;
+    }
+
+    .bgNumber {
+        font-size: 125px;
+        top: 20px;
+    }
+
+    .cardNumber {
+        font-size: 11px;
+    }
+
+    .iconCircle {
+        width: 54px;
+        height: 54px;
+    }
+
+    .iconCircle svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cardContent {
+        margin-top: 18px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+        height: 54px;
+        min-height: 54px;
+    }
+
+    .divider {
+        margin: 15px 0;
+    }
+
+    .cardContent p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .whyPowerRoof {
+        padding: 60px 45px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 55px;
+        gap: 30px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 44px;
+    }
+
+    .whyPowerRoofLine {
+        width: 105px;
+    }
+
+    .whyPowerRoofFlex p {
+        max-width: 370px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .cardGrid {
+        gap: 14px;
+    }
+
+    .chooseCard {
+        min-height: 335px;
+        padding: 22px;
+    }
+
+    .bgNumber {
+        font-size: 110px;
+    }
+
+    .iconCircle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .iconCircle svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .cardContent {
+        margin-top: 16px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+        height: 50px;
+        min-height: 50px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .divider {
+        margin: 13px 0;
+    }
+}
+
+
+
+@media (max-width: 1130px) {
+    .whyPowerRoof {
+        padding: 55px 35px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 50px;
+        gap: 25px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 40px;
+    }
+
+    .whyPowerRoofFlex p {
+        max-width: 340px;
+        font-size: 13px;
+    }
+
+    .cardGrid {
+        gap: 12px;
+    }
+
+    .chooseCard {
+        min-height: 315px;
+        padding: 20px;
+    }
+
+    .bgNumber {
+        font-size: 95px;
+        right: -8px;
+    }
+
+    .cardNumber {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .iconCircle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .iconCircle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cardContent {
+        margin-top: 14px;
+    }
+
+    .cardContent h3 {
+        font-size: 17px;
+        height: 46px;
+        min-height: 46px;
+    }
+
+    .divider {
+        width: 30px;
+        margin: 12px 0;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .cornerShape {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .whyPowerRoof {
+        padding: 50px 30px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 45px;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    .whyPowerRoofText {
+        width: 55%;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 36px;
+    }
+
+    .whyPowerRoofFlex p {
+        width: 45%;
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .cardGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .chooseCard {
+        min-height: 330px;
+        padding: 24px;
+    }
+
+    .bgNumber {
+        font-size: 120px;
+    }
+
+    .iconCircle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .cardContent h3 {
+        font-size: 20px;
+    }
+
+    .cardContent p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .whyPowerRoof {
+        padding: 45px 25px;
+    }
+
+    .whyPowerRoofFlex {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .whyPowerRoofText {
+        width: 100%;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 32px;
+    }
+
+    .whyPowerRoofLine {
+        width: 95px;
+    }
+
+    .whyPowerRoofFlex p {
+        width: 100%;
+        max-width: 600px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .chooseCard {
+        min-height: 310px;
+        padding: 22px;
+    }
+
+    .bgNumber {
+        font-size: 105px;
+    }
+
+    .iconCircle {
+        width: 48px;
+        height: 48px;
+    }
+
+    .iconCircle svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .cardContent h3 {
+        font-size: 19px;
+        height: auto;
+        min-height: 48px;
+    }
+
+    .divider {
+        margin: 14px 0;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .whyPowerRoof {
+        padding: 42px 20px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 35px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 29px;
+    }
+
+    .whyPowerRoofFlex p {
+        font-size: 13px;
+    }
+
+    .cardGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .chooseCard {
+        min-height: 300px;
+        padding: 24px;
+    }
+
+    .bgNumber {
+        font-size: 125px;
+    }
+
+    .iconCircle {
+        width: 54px;
+        height: 54px;
+    }
+
+    .cardContent h3 {
+        font-size: 21px;
+        min-height: auto;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .divider {
+        margin: 15px 0;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+    .whyPowerRoof {
+        padding: 38px 16px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 22px;
+    }
+
+    .whyPowerRoofLine {
+        width: 85px;
+        height: 3px;
+    }
+
+    .whyPowerRoofFlex {
+        margin-bottom: 30px;
+    }
+
+    .whyPowerRoofFlex p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .cardGrid {
+        gap: 13px;
+    }
+
+    .chooseCard {
+        min-height: 285px;
+        padding: 21px;
+        border-radius: 9px;
+    }
+
+    .bgNumber {
+        font-size: 110px;
+    }
+
+    .iconCircle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .iconCircle svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .cardContent {
+        margin-top: 16px;
+    }
+
+    .cardContent h3 {
+        font-size: 19px;
+        line-height: 1.3;
+    }
+
+    .divider {
+        margin: 13px 0;
+    }
+
+    .cardContent p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .cornerShape {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .whyPowerRoof {
+        padding: 35px 14px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 22px;
+    }
+
+    .whyPowerRoofFlex p {
+        font-size: 12px;
+    }
+
+    .chooseCard {
+        min-height: 275px;
+        padding: 19px;
+    }
+
+    .bgNumber {
+        font-size: 100px;
+    }
+
+    .iconCircle {
+        width: 47px;
+        height: 47px;
+    }
+
+    .cardContent h3 {
+        font-size: 18px;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+    .whyPowerRoof {
+        padding: 32px 12px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 22px;
+    }
+
+    .whyPowerRoofFlex p {
+        font-size: 12px;
+    }
+
+    .cardGrid {
+        gap: 12px;
+    }
+
+    .chooseCard {
+        min-height: 260px;
+        padding: 18px;
+    }
+
+    .bgNumber {
+        font-size: 90px;
+    }
+
+    .cardNumber {
+        font-size: 9px;
+    }
+
+    .iconCircle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .iconCircle svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .cardContent {
+        margin-top: 13px;
+    }
+
+    .cardContent h3 {
+        font-size: 17px;
+    }
+
+    .divider {
+        margin: 11px 0;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    .whyPowerRoof {
+        padding: 30px 10px;
+    }
+
+    .whyPowerRoofText h2 {
+        font-size: 22px;
+    }
+
+    .whyPowerRoofLine {
+        width: 75px;
+    }
+
+    .whyPowerRoofFlex p {
+        font-size: 12px;
+    }
+
+    .chooseCard {
+        min-height: 250px;
+        padding: 16px;
+    }
+
+    .bgNumber {
+        font-size: 80px;
+    }
+
+    .iconCircle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .iconCircle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cardContent h3 {
+        font-size: 16px;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .divider {
+        margin: 10px 0;
+    }
 }
 
 /* ===========================
