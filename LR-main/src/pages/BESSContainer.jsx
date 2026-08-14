@@ -18,10 +18,13 @@ import bess1 from '../assets/BESS/bess1.png'
 import bess2 from '../assets/BESS/bess2.png'
 import bess3 from '../assets/BESS/bess3.png'
 import bess4 from '../assets/BESS/bess4.png'
-import card1 from '../assets/conatiners/HomeConatiner/card1.png';
-import card2 from '../assets/conatiners/HomeConatiner/card2.png';
-import card3 from '../assets/conatiners/HomeConatiner/card3.png';
-import card4 from '../assets/conatiners/HomeConatiner/card4.png';
+import bess5 from '../assets/BESS/bess5.png'
+import card1 from '../assets/BESS/card1.png';
+import card2 from '../assets/BESS/card2.png';
+import card3 from '../assets/BESS/card3.png';
+import card4 from '../assets/BESS/card4.png';
+import design from '../assets/BESS/design.png';
+import design1 from '../assets/BESS/design1.png';
 
 function BESSContainer() {
     const navigate = useNavigate();
@@ -349,6 +352,38 @@ function BESSContainer() {
             </section>
 
 
+            {/* ── SECTION 4: FINAL TESTING & COMMISSIONING ── */}
+            <section className={styles.mfgBand}>
+                <div className={styles.scrollWrap}>
+                </div>
+
+                <div className={styles.mfgContainer}>
+                    <div className={styles.mfgText}>
+                        <h2>
+                            Precision Manufacturing for  <br />
+                            Reliable Energy Storage
+                        </h2>
+                        <p>
+                            L&R Prefab Solar India Private Limited combines engineering expertise with controlled
+                            prefab manufacturing to deliver robust, customized BESS containers. From steel fabrication
+                            and structural assembly to equipment integration, HVAC provisions, cable management and
+                            protective finishing, every enclosure is manufactured with a focus on strength, accuracy,
+                            quality and long-term performance.
+                        </p>
+                        <div className={styles.LastImage}>
+                            <img src={design1} alt="png" />
+                        </div>
+                    </div>
+                    <div className={styles.mfgImgWrapper}>
+                        <img
+                            src={design}
+                            alt="Manufacturing"
+                        />
+                    </div>
+                </div>
+            </section>
+
+
 
             {/* ------------------BESS Conatiner------------- */}
             <section className={styles.section}>
@@ -459,6 +494,41 @@ function BESSContainer() {
 
             </section>
 
+
+
+            {/* ------------Why L&R BESS CONtainer----------- */}
+            <section className={styles.SolarEpic}>
+                <div className={styles.solarEpicTitle}>
+                    <h2>Why Choose L&R <br /><span>BESS Containers?</span></h2>
+                    <div className={styles.FaqsLine}></div>
+                </div>
+                <div className={styles.SolarEpicFLex}>
+                    <div className={styles.mediaBox}>
+                        <div className={styles.dotGrid}></div>
+                        <div className={styles.sideAccent}></div>
+
+                        <div className={styles.frameHolder}>
+                            <img src={bess5} alt="Worker" className={styles.featurePhoto} />
+                        </div>
+                    </div>
+                    <div className={styles.solartext}>
+                        <p>As renewable energy continues to expand, reliable energy-storage infrastructure is becoming
+                            increasingly important. L&R Prefab Solar India Private Limited delivers professionally
+                            engineered and customizable BESS container solutions designed around actual equipment,
+                            project requirements and site conditions. Our solutions combine robust construction,
+                            practical design and integration-ready infrastructure to support dependable energy-storage projects.</p>
+                        <p>With prefab manufacturing expertise, flexible configurations and integration-ready solutions
+                            for battery, electrical, HVAC and safety systems, L&R focuses on structural accuracy, quality
+                            workmanship, reliable finishing and project-specific engineering. From solar and C&I applications
+                            to microgrids and utility-scale projects, we provide robust infrastructure built to support the
+                            evolving energy-storage industry.</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+
             {/* -------------FAQS--------------- */}
             <section className={styles.faqSec}>
                 <span className={styles.introLabel}>• FAQS</span>
@@ -471,9 +541,7 @@ function BESSContainer() {
                         customization, safety and applications.</p>
                 </div>
                 <div className={styles.faqBody}>
-                    <div className={styles.faqImg}>
-                        <img src={bess1} alt="warehouse" />
-                    </div>
+
                     {/*  */}
                     <div className={styles.container}>
                         {faqs.map((item, index) => (
@@ -507,6 +575,9 @@ function BESSContainer() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div className={styles.faqImg}>
+                        <img src={bess1} alt="warehouse" />
                     </div>
                 </div>
             </section>
