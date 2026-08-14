@@ -311,9 +311,1101 @@
 
 
 
+/* ===========================
+   SPLIT SECTION & GRIDS
+=========================== */
+
+.introSec {
+    width: 100%;
+    padding: 71px 60px;
+    background-color: #f7f7f753;
+}
+
+
+.secTitle {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.secTitle h2 {
+    margin-top: 10px;
+    font-size: 55px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.2;
+}
+
+.secTitle h2 span {
+    color: #1a3c6e;
+}
+
+.introLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #0d2244;
+}
+
+
+.introContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+.introText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 700px;
+}
+
+.introText p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.btnOutline {
+    width: 190px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #1a3c6e;
+    color: #fff;
+    border: 2px solid #1a3c6e;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s ease;
+}
+
+.btnOutline:hover {
+    background: #fff;
+    color: #1a3c6e;
+}
+
+.iconWrap {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.icon1,
+.icon2 {
+    position: absolute;
+    top: 0;
+    transition: transform .35s ease;
+}
+
+
+.icon1 {
+    left: 0;
+}
+
+.icon2 {
+    left: -22px;
+}
+
+.btnOutline:hover .icon1 {
+    transform: translateX(24px);
+}
+
+.btnOutline:hover .icon2 {
+    transform: translateX(24px);
+}
+
+
+.mediaContainer {
+    position: relative;
+    width: 620px;
+    height: 458px;
+    overflow: visible;
+}
+
+.dotGrid {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(#29456F 1.6px, transparent 1.6px);
+    background-size: 14px 14px;
+    z-index: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.primaryPhoto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 2;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.verticalPill {
+    position: absolute;
+    top: 22px;
+    right: -18px;
+    width: 38px;
+    height: calc(100% - 44px);
+    background: #29456F;
+    border-radius: 22px;
+    z-index: 3;
+    transition: all 0.45s ease;
+}
+
+.mediaContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .05);
+    border-radius: 30px;
+    z-index: 4;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.mediaContainer:hover .primaryPhoto {
+    transform: scale(1.02);
+}
+
+.mediaContainer:hover .verticalPill {
+    width: 48px;
+    background: #1d3760;
+}
+
+.mediaContainer:hover .dotGrid {
+    transform: translate(-10px, -10px);
+    opacity: 0.9;
+}
+
+.mediaContainer:hover::after {
+    background: rgba(0, 0, 0, .18);
+}
 
 
 
+
+@media (max-width: 1440px) {
+    .introSec {
+        padding: 70px 55px;
+    }
+
+    .secTitle {
+        margin-bottom: 70px;
+    }
+
+    .secTitle h2 {
+        font-size: 52px;
+    }
+
+    .introContainer {
+        gap: 50px;
+    }
+
+    .mediaContainer {
+        width: 570px;
+        height: 430px;
+    }
+
+    .introText {
+        max-width: 650px;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .dotGrid {
+        width: 125px;
+        height: 125px;
+        background-size: 13px 13px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .introSec {
+        padding: 65px 50px;
+    }
+
+    .secTitle {
+        margin-bottom: 65px;
+    }
+
+    .secTitle h2 {
+        font-size: 48px;
+    }
+
+    .introContainer {
+        gap: 40px;
+    }
+
+    .mediaContainer {
+        width: 520px;
+        height: 482px;
+    }
+
+    .introText {
+        max-width: 550px;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .verticalPill {
+        right: -16px;
+        width: 35px;
+        top: 20px;
+        height: calc(100% - 40px);
+    }
+
+    .dotGrid {
+        width: 115px;
+        height: 115px;
+        top: -18px;
+        left: -18px;
+        background-size: 12px 12px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .introSec {
+        padding: 60px 45px;
+    }
+
+    .secTitle {
+        margin-bottom: 55px;
+    }
+
+    .secTitle h2 {
+        font-size: 46px;
+    }
+
+    .introContainer {
+        gap: 35px;
+    }
+
+    .mediaContainer {
+        width: 480px;
+        height: 462px;
+    }
+
+    .introText {
+        max-width: 540px;
+        gap: 18px;
+    }
+
+    .introText p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .btnOutline {
+        width: 180px;
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .verticalPill {
+        right: -15px;
+        width: 32px;
+    }
+
+    .dotGrid {
+        width: 105px;
+        height: 105px;
+        top: -16px;
+        left: -16px;
+    }
+}
+
+
+
+@media (max-width: 1130px) {
+    .introSec {
+        padding: 55px 35px;
+    }
+
+    .secTitle {
+        margin-bottom: 50px;
+    }
+
+    .secTitle h2 {
+        font-size: 42px;
+    }
+
+    .introContainer {
+        gap: 30px;
+    }
+
+    .mediaContainer {
+        width: 470px;
+        height: 432px;
+    }
+
+    .introText {
+        max-width: 500px;
+        gap: 16px;
+    }
+
+    .introText p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .btnOutline {
+        width: 175px;
+        height: 50px;
+    }
+
+    .verticalPill {
+        top: 18px;
+        right: -13px;
+        width: 30px;
+        height: calc(100% - 36px);
+    }
+
+    .dotGrid {
+        width: 95px;
+        height: 95px;
+        top: -15px;
+        left: -15px;
+        background-size: 11px 11px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .introSec {
+        padding: 55px 35px;
+    }
+
+    .secTitle {
+        margin-bottom: 45px;
+    }
+
+    .secTitle h2 {
+        font-size: 40px;
+    }
+
+    .introContainer {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .mediaContainer {
+        width: 100%;
+        max-width: 650px;
+        height: 420px;
+        margin: 0 auto;
+    }
+
+    .introText {
+        width: 100%;
+        max-width: 100%;
+        gap: 18px;
+    }
+
+    .introText p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .btnOutline {
+        width: 185px;
+        height: 52px;
+    }
+
+    .verticalPill {
+        right: -16px;
+        width: 35px;
+    }
+
+    .dotGrid {
+        width: 120px;
+        height: 120px;
+        top: -18px;
+        left: -18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .introSec {
+        padding: 55px 35px;
+    }
+
+    .secTitle {
+        margin-bottom: 45px;
+    }
+
+    .secTitle h2 {
+        font-size: 40px;
+    }
+
+    .introContainer {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .mediaContainer {
+        width: 100%;
+        max-width: 650px;
+        height: 420px;
+        margin: 0 auto;
+    }
+
+    .introText {
+        width: 100%;
+        max-width: 100%;
+        gap: 18px;
+    }
+
+    .introText p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .btnOutline {
+        width: 185px;
+        height: 52px;
+    }
+
+    .verticalPill {
+        right: -16px;
+        width: 35px;
+    }
+
+    .dotGrid {
+        width: 120px;
+        height: 120px;
+        top: -18px;
+        left: -18px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .introSec {
+        padding: 50px 28px;
+    }
+
+    .secTitle {
+        margin-bottom: 40px;
+        gap: 8px;
+    }
+
+    .secTitle h2 {
+        font-size: 35px;
+        line-height: 1.25;
+    }
+
+    .introContainer {
+        gap: 40px;
+    }
+
+    .mediaContainer {
+        width: 100%;
+        height: 370px;
+    }
+
+    .introText {
+        gap: 15px;
+    }
+
+    .introText p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 5px;
+    }
+
+    .btnOutline {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .verticalPill {
+        top: 18px;
+        right: -14px;
+        width: 32px;
+        height: calc(100% - 36px);
+    }
+
+    .dotGrid {
+        width: 105px;
+        height: 105px;
+        top: -16px;
+        left: -16px;
+        background-size: 11px 11px;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .introSec {
+        padding: 45px 20px;
+    }
+
+    .secTitle {
+        margin-bottom: 35px;
+    }
+
+    .secTitle h2 {
+        font-size: 30px;
+    }
+
+    .introContainer {
+        gap: 35px;
+    }
+
+    .mediaContainer {
+        width: 100%;
+        height: 320px;
+    }
+
+    .primaryPhoto {
+        border-radius: 22px;
+    }
+
+    .introText {
+        gap: 14px;
+    }
+
+    .introText p {
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+
+    .btnOutline {
+        width: 175px;
+        height: 50px;
+        font-size: 13.5px;
+    }
+
+    .verticalPill {
+        top: 16px;
+        right: -11px;
+        width: 28px;
+        height: calc(100% - 32px);
+        border-radius: 18px;
+    }
+
+    .dotGrid {
+        width: 80px;
+        height: 80px;
+        top: -13px;
+        left: -13px;
+        background-size: 10px 10px;
+    }
+
+    .mediaContainer::after {
+        border-radius: 22px;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+    .introSec {
+        padding: 40px 16px;
+    }
+
+    .secTitle {
+        margin-bottom: 30px;
+    }
+
+    .secTitle h2 {
+        font-size: 22px;
+    }
+
+    .introContainer {
+        gap: 30px;
+    }
+
+    .mediaContainer {
+        height: 285px;
+    }
+
+    .primaryPhoto {
+        border-radius: 20px;
+    }
+
+    .introText p {
+        font-size: 12.5px;
+        line-height: 1.65;
+    }
+
+    .btnOutline {
+        width: 170px;
+        height: 48px;
+        font-size: 13px;
+    }
+
+    .verticalPill {
+        top: 14px;
+        right: -9px;
+        width: 25px;
+        height: calc(100% - 28px);
+    }
+
+    .dotGrid {
+        width: 68px;
+        height: 68px;
+        top: -11px;
+        left: -11px;
+        background-size: 9px 9px;
+    }
+
+    .mediaContainer::after {
+        border-radius: 20px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .introSec {
+        padding: 35px 14px;
+    }
+
+    .secTitle {
+        margin-bottom: 28px;
+    }
+
+    .secTitle h2 {
+        font-size: 22px;
+    }
+
+    .mediaContainer {
+        height: 265px;
+    }
+
+    .introText p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+    .btnOutline {
+        width: 165px;
+        height: 47px;
+        font-size: 12.5px;
+    }
+
+    .verticalPill {
+        top: 13px;
+        right: -8px;
+        width: 23px;
+        height: calc(100% - 26px);
+    }
+
+    .dotGrid {
+        width: 60px;
+        height: 60px;
+        top: -10px;
+        left: -10px;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+    .introSec {
+        padding: 32px 12px;
+    }
+
+    .secTitle {
+        margin-bottom: 25px;
+    }
+
+    .secTitle h2 {
+        font-size: 22px;
+    }
+
+    .mediaContainer {
+        height: 245px;
+    }
+
+    .introText p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .btnOutline {
+        width: 160px;
+        height: 46px;
+        font-size: 12px;
+    }
+
+    .verticalPill {
+        top: 12px;
+        right: -7px;
+        width: 21px;
+        height: calc(100% - 24px);
+    }
+
+    .dotGrid {
+        width: 54px;
+        height: 54px;
+        top: -9px;
+        left: -9px;
+        background-size: 9px 9px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .introSec {
+        padding: 30px 10px;
+    }
+
+    .secTitle {
+        margin-bottom: 22px;
+    }
+
+    .secTitle h2 {
+        font-size: 22px;
+    }
+
+    .mediaContainer {
+        height: 225px;
+    }
+
+    .introText p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .btnOutline {
+        width: 155px;
+        height: 44px;
+        font-size: 11.5px;
+    }
+
+    .verticalPill {
+        top: 11px;
+        right: -6px;
+        width: 19px;
+        height: calc(100% - 22px);
+    }
+
+    .dotGrid {
+        width: 48px;
+        height: 48px;
+        top: -8px;
+        left: -8px;
+        background-size: 8px 8px;
+    }
+}
+
+/* ===========================
+Why choose 
+============================== */
+.whyPowerRoof {
+    width: 100%;
+    padding: 72px 60px;
+    background-color: #f7f7f753;
+}
+
+.whyPowerRoofFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.whyPowerRoofText {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.whyPowerRoofText h2 {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+}
+
+.whyPowerRoofText h2 span {
+    color: #233E70;
+}
+
+.whyPowerRoofLine {
+    width: 120px;
+    height: 3px;
+    border-radius: 20px;
+    background: #0d2244;
+}
+
+.whyPowerRoofFlex p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    padding-top: 8px;
+    max-width: 470px;
+}
+
+.cardGrid {
+    display: flex;
+    gap: 22px;
+    align-items: stretch;
+}
+
+
+.chooseCard {
+    position: relative;
+    flex: 1;
+    min-height: 370px;
+    padding: 30px;
+    background: #233e70;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.65s ease,
+        border-radius 0.65s ease;
+}
+
+
+.bgNumber {
+    position: absolute;
+    right: -12px;
+    top: 25px;
+    font-size: 150px;
+    line-height: 1;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.045);
+    pointer-events: none;
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        color 0.5s ease;
+}
+
+
+
+.topLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #ffffff;
+    transition:
+        width 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.cardTop {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cardNumber {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    transition:
+        color 0.4s ease,
+        transform 0.5s ease;
+}
+
+.iconCircle {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+.cardContent {
+    position: relative;
+    margin-top: 20px;
+    z-index: 3;
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cardContent h3 {
+    max-width: 280px;
+    margin: 0;
+    height: 58px;
+    min-height: 58px;
+    font-size: 23px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #ffffff;
+    transition:
+        transform 0.5s ease,
+        color 0.4s ease;
+}
+
+.divider {
+    width: 35px;
+    height: 2px;
+    margin: 18px 0;
+    background: rgba(255, 255, 255, 0.65);
+    transition:
+        width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.4s ease;
+}
+
+.cardContent p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.72);
+    transition:
+        color 0.4s ease,
+        transform 0.5s ease;
+}
+
+
+.cornerShape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 75px;
+    height: 75px;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    transform: translate(35px, 35px) rotate(45deg);
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.5s ease;
+}
+
+.hoverCircle {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -180px;
+    bottom: -180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.5s ease;
+}
+
+
+.chooseCard:hover {
+    transform: translateY(-15px);
+    border-radius: 18px;
+    box-shadow:
+        0 28px 55px rgba(35, 62, 112, 0.24),
+        0 8px 20px rgba(35, 62, 112, 0.12);
+}
+
+
+
+.chooseCard:hover .topLine {
+    width: 100%;
+}
+
+
+
+.chooseCard:hover .bgNumber {
+    transform: translate(-18px, -12px) scale(1.08);
+    color: rgba(255, 255, 255, 0.075);
+}
+
+
+
+.chooseCard:hover .cardNumber {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+.chooseCard:hover .iconCircle {
+    transform: rotate(12deg) scale(1.14);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 0 0 7px rgba(255, 255, 255, 0.04),
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.chooseCard:hover .cardContent {
+    transform: translateY(-8px);
+}
+
+.chooseCard:hover .cardContent h3 {
+    transform: translateX(4px);
+}
+
+.chooseCard:hover .divider {
+    width: 85px;
+    background: #ffffff;
+}
+
+
+.chooseCard:hover .cardContent p {
+    color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+
+
+.chooseCard:hover .cornerShape {
+    transform:
+        translate(12px, 12px) rotate(45deg) scale(1.15);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.chooseCard:hover .hoverCircle {
+    transform: scale(2.5);
+    opacity: 1;
+}
 
 /* ===========================
    FAQ SECTION

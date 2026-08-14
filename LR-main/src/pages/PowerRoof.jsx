@@ -4,10 +4,15 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import { useState } from 'react';
 import {
-    ArrowRight, Plus, X,
+    ArrowRight, Plus, X, ArrowUpRight,
+    ClipboardList,
+    PenTool,
+    Settings,
+    SunMedium
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import power1 from '../assets/solar/PowerRoof/power1.png'
+import power2 from '../assets/solar/PowerRoof/power2.png'
 function PowerRoof() {
     const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(1);
@@ -39,6 +44,39 @@ function PowerRoof() {
             a: "Yes. Solutions can be customized based on the structure, application, space, and solar installation requirements."
         }
     ];
+
+
+    const processData = [
+        {
+            number: "01",
+            icon: ClipboardList,
+            title: "Understand Your Requirements",
+            description:
+                "We begin by understanding your structure, application, available space, and solar energy requirements to define the right project approach."
+        },
+        {
+            number: "02",
+            icon: PenTool,
+            title: "Design & Planning",
+            description:
+                "Our team develops the roofing concept while considering structural requirements and solar integration for a practical, coordinated design."
+        },
+        {
+            number: "03",
+            icon: Settings,
+            title: "Engineering & Execution",
+            description:
+                "The solution is engineered and prepared for practical implementation, with attention to quality and project requirements at every stage of execution."
+        },
+        {
+            number: "04",
+            icon: SunMedium,
+            title: "Solar-Ready Delivery",
+            description:
+                "We deliver a coordinated roofing solution designed to support solar installation and future energy needs while meeting your project expectations."
+        }
+    ];
+
     return (
         <>
             <Header />
@@ -65,6 +103,113 @@ function PowerRoof() {
             </section>
 
 
+            {/* -------------Intro------------- */}
+            <section className={styles.introSec}>
+                <div className={styles.secTitle}>
+                    <h2>
+                        Roofing Designed With<br />
+                        <span>Solar in Mind</span>
+                    </h2>
+                    <div className={styles.introLine} />
+                </div>
+
+                <div className={styles.introContainer}>
+                    <div className={styles.mediaContainer}>
+                        <div className={styles.dotGrid}></div>
+                        <img
+                            src={power2}
+                            alt="PEB Building"
+                            className={styles.primaryPhoto}
+                        />
+                        <div className={styles.verticalPill}></div>
+                    </div>
+                    <div className={styles.introText}>
+                        <p>
+                            Traditionally, roofing and solar installations are planned as separate projects, often requiring
+                            separate design and installation considerations. L&R PowerRoof™ brings these elements together
+                            from the beginning, combining structural design, roofing requirements, and solar integration
+                            into one coordinated approach.
+                        </p>
+                        <p>
+                            Our concept makes better use of available roof space while preparing suitable structures for renewable
+                            energy generation. By considering roofing and solar requirements together, we create practical solutions
+                            tailored to warehouses, industrial sheds, PEB buildings, containers, parking sheds, site offices, and
+                            other applications. This integrated approach supports smarter planning and more efficient use of
+                            infrastructure. It also helps create future-ready structures designed around evolving energy needs.
+                        </p>
+                        <button className={styles.btnOutline} onClick={() => navigate('/contact')}>
+                            <span>Get Contact</span>
+
+                            <span className={styles.iconWrap}>
+                                <ArrowUpRight className={styles.icon1} size={18} />
+                                <ArrowUpRight className={styles.icon2} size={18} />
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* -------------Process ---------------- */}
+            <section className={styles.whyPowerRoof}>
+                <div className={styles.whyPowerRoofFlex}>
+                    <div className={styles.whyPowerRoofText}>
+                        <h2>Designed for Energy<br /> <span>Built for Performance.</span></h2>
+                        <div className={styles.whyPowerRoofLine}></div>
+                    </div>
+                    <p>A smarter approach to roofing and solar integration, creating practical, 
+                        reliable, and future-ready solutions for modern infrastructure.</p>
+                </div>
+
+                <div className={styles.cardGrid}>
+                    {processData.map((item) => {
+                        const Icon = item.icon;
+
+                        return (
+                            <article
+                                className={styles.chooseCard}
+                                key={item.number}
+                            >
+                                <span className={styles.bgNumber}>
+                                    {item.number}
+                                </span>
+
+                                <div className={styles.topLine}></div>
+                                <div className={styles.cardTop}>
+                                    <span className={styles.cardNumber}>
+                                        {item.number}
+                                    </span>
+                                    <div className={styles.iconCircle}>
+                                        <Icon
+                                            size={27}
+                                            strokeWidth={1.7}
+                                        />
+                                    </div>
+                                </div>
+                                <div className={styles.cardContent}>
+                                    <h3>
+                                        {item.title}
+                                    </h3>
+
+                                    <div className={styles.divider}></div>
+
+                                    <p>
+                                        {item.description}
+                                    </p>
+                                </div>
+                                {/* Decorative Corner */}
+                                <div className={styles.cornerShape}></div>
+                                {/* Hover Circle */}
+                                <div className={styles.hoverCircle}></div>
+
+                            </article>
+                        );
+                    })}
+                </div>
+
+
+            </section>
 
             {/* -------------FAQS--------------- */}
             <section className={styles.faqSec}>
