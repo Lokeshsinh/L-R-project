@@ -52,6 +52,7 @@ import PrefabModular from "./pages/PrefabModular";
 import RooftopRoom from "./pages/RooftopRoom"
 import LgsfModular from './pages/LgsfModular'
 import BESSContainer from "./pages/BESSContainer";
+import PowerRoof from "./pages/PowerRoof";
 
 function App() {
   return (
@@ -106,6 +107,7 @@ function App() {
         <Route path="/prefab-sales-office" element={<PrefabSalesOffice />} />
         <Route path="/prefab-waiting-area" element={<PrefabWaitingArea />} />
         <Route path="/farmhouse-cottage" element={<FarmhouseCottage />} />
+        <Route path="/power-roof" element={<PowerRoof />} />
         <Route path="/solar-epc" element={<SolarEPC />} />
         <Route path="/solar-mounting-structure" element={<SolarMountingStructure />} />
         <Route path="/hardware-solutions" element={<SolarHardware />} />

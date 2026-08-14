@@ -588,6 +588,11 @@ const Header = () => {
                 </button>
                 <ul className="submenu-list">
                   <li>
+                    <Link to="/power-roof" onClick={closeMenu}>
+                      L&R PowerRoof™
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/solar-epc" onClick={closeMenu}>
                       Solar EPC Work
                     </Link>
