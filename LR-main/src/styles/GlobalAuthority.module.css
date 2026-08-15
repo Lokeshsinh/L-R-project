@@ -1,5 +1,5 @@
 .bannerSection {
-  background-color: #1e3a6e;
+  background-color: #293F67;
   position: relative;
   overflow: hidden;
   height: 50vh;
@@ -44,7 +44,7 @@
   position: relative;
   z-index: 2;
   padding-right: 40px;
-  padding-top: 10px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -149,7 +149,7 @@
 @media (max-width:1280px) {
 
   .bannerSection {
-    padding: 45px 0 45px 40px;
+    padding: 45px 40px 45px 40px;
   }
 
   .leftContent {
@@ -158,11 +158,12 @@
   }
 
   .leftContent h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .leftContent p {
-    max-width: 470px;
+    max-width: 550px;
+    font-size: 15px;
   }
 
   .buildingImg {
@@ -183,7 +184,7 @@
 @media (max-width:1200px) {
 
   .bannerSection {
-    padding: 40px 30px;
+    padding: 45px 30px;
     gap: 30px;
   }
 
@@ -218,9 +219,6 @@
 
 
 @media (max-width:1070px) {
-  .bannerSection {
-    height: auto;
-  }
 
   .LetImage {
     position: absolute;
@@ -235,31 +233,44 @@
    1024px
 =========================== */
 
-@media (max-width:1024px) {
+@media (max-width:1050px) {
 
   .bannerSection {
-    padding: 40px 25px;
+    flex-direction: column;
+    height: auto;
+    padding: 50px 30px;
+    text-align: center;
   }
 
   .leftContent {
     max-width: 100%;
-    flex: 1;
-    padding-bottom: 20px;
-  }
-
-  .leftContent h2 {
-    font-size: 34px;
+    padding: 0;
   }
 
   .leftContent p {
-    font-size: 14px;
+    margin: auto;
+  }
+
+  .rightPadding {
+    width: 100%;
+  }
+
+  .rightContent {
+    justify-content: center;
   }
 
   .buildingImg {
-    max-width: 450px;
+    width: 100%;
+    max-width: 650px;
   }
 
+  .LetImage {
+    display: none;
+  }
 
+  .watermark {
+    font-size: 70px;
+  }
 
 }
 
@@ -373,7 +384,7 @@
   }
 
   .leftContent h2 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .leftContent p {
@@ -396,7 +407,7 @@
   }
 
   .leftContent h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .leftContent p {

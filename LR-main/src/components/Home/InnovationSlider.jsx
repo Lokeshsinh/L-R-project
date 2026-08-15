@@ -92,7 +92,7 @@ const InnovationSlider = () => {
       {/* Header */}
       <div className={styles["section-head"]}>
         <div className={styles["head-left"]}>
-          <span className={styles.tag}>• Why Choose us</span>
+          <span className={styles.tag}>• Our Works</span>
           <h2>
             Powering Sustainable<br />
             <span>Innovation</span>

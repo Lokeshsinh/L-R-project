@@ -142,7 +142,7 @@ function PowerRoof() {
 
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.topLabel}>Your Roof. Your Energy. Your Power.</span>
+                    <span className={styles.topLabel}>YOUR ROOF. YOUR ENERGY. YOUR POWER.</span>
                     <h1 className={styles.mainTitle}>
                         Solar-Ready Roofing  <br />
                         <span>for Smarter Infrastructure

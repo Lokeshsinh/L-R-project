@@ -490,7 +490,7 @@
   }
 
   .section-head h2{
-    font-size:26px;
+    font-size:22px;
   }
 
   .divider{
@@ -538,7 +538,7 @@
 @media (max-width:390px){
 
   .section-head h2{
-    font-size:23px;
+    font-size:22px;
   }
 
   .card{
@@ -575,7 +575,7 @@
   }
 
   .section-head h2{
-    font-size:21px;
+    font-size:22px;
   }
 
   .tag{

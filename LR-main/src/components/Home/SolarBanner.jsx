@@ -10,25 +10,32 @@ const SolarBanner = ({
   watermark,
 }) => {
   return (
-    <section className={styles.bannerSection}>
+    <section className={styles.mfgBand}>
+      <div className={styles.scrollWrap}>
+      </div>
 
-      <div className={styles.solarBannerFlex}>
-        {/* Text */}
-        <div className={styles.SolarBannerText}>
-          <h1>High-Performance Solar
-            <br />Fasteners and Component supplier</h1>
-          <p>L&R PREFAB SOLAR INDIA PVT LDT manufactures high-quality solar fasteners and components for residential, commercial, and utility-scale projects, including roof-mounted and ground-mounted systems, using durable stainless steel and coated alloy steel for long-lasting performance and reliability.</p>
+      <div className={styles.mfgContainer}>
+        <div className={styles.mfgText}>
+          <h2>
+           High-Performance Solar<br />
+           Fasteners and Component supplier
 
-          <div className={styles.bannerSloarBottom}>
-            <img src={solar3} alt='error' />
+          </h2>
+          <p>
+          L&R PREFAB SOLAR INDIA PVT LDT manufactures high-quality solar fasteners and components 
+          for residential, commercial, and utility-scale projects, including roof-mounted and ground-mounted 
+          systems, using durable stainless steel and coated alloy steel for long-lasting performance and reliability.
+
+          </p>
+          <div className={styles.LastImage}>
+            <img src={solar3} alt="png" />
           </div>
         </div>
-
-        {/* image */}
-        <div className={styles.SolarBannerImage}>
-          <div className={styles.SolarBannerImg}>
-            <img src={solar1} alt='solar' />
-          </div>
+        <div className={styles.mfgImgWrapper}>
+          <img
+            src={solar1}
+            alt="Manufacturing"
+          />
         </div>
       </div>
     </section>

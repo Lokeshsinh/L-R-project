@@ -1,5 +1,5 @@
 .why-section {
-  padding: 80px  60px;
+  padding: 80px 60px;
   background-color: #f7f7f753;
   background: url('../assets/Home/back2.png');
   background-position: center;
@@ -50,7 +50,7 @@
   font-size: 55px;
   font-weight: 500;
   color: #111;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 .section-head h2 span {
@@ -71,6 +71,7 @@
   margin: 0 auto;
   border-radius: 1px;
 }
+
 /* cards */
 .whyGrid {
   margin-top: 1rem;
@@ -163,7 +164,7 @@
 
 .whyCard:hover .number,
 .active .number {
-  color: rgba(255,255,255,.45);
+  color: rgba(255, 255, 255, .45);
 }
 
 /* ========================= */
@@ -214,7 +215,7 @@
 .whyCard:hover,
 .active {
   transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(38,63,105,.18);
+  box-shadow: 0 20px 45px rgba(38, 63, 105, .18);
 }
 
 /* Icon Animation */
@@ -309,7 +310,7 @@
 .iconCircle {
   width: 88px;
   height: 88px;
-  border: 2px solid rgba(255,255,255,.4);
+  border: 2px solid rgba(255, 255, 255, .4);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -325,7 +326,7 @@
 
 .blueCard:hover .iconCircle {
   transform: rotate(12deg) scale(1.08);
-  background: rgba(255,255,255,.12);
+  background: rgba(255, 255, 255, .12);
 }
 
 .blueCard h2 {
@@ -343,12 +344,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.15);
+  background: rgba(0, 0, 0, .15);
   transition: .4s;
 }
 
 .imageCard:hover::after {
-  background: rgba(0,0,0,.35);
+  background: rgba(0, 0, 0, .35);
 }
 
 /* ========================= */
@@ -370,29 +371,30 @@
   font-weight: 500;
   line-height: 1.3;
   color: white;
-  margin-bottom: 20px; /* Space between title and image */
+  margin-bottom: 20px;
+  /* Space between title and image */
 }
 
 .whiteCard img {
   width: 100%;
   object-fit: contain;
-  margin-top: -70px; /* Move image upward */
+  margin-top: -70px;
+  /* Move image upward */
   transition: 0.4s ease;
 }
 
 .whiteCard:hover img {
   transform: translateY(-10px) scale(1.08);
 }
+
 /* ========================= */
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-      to top,
-      rgba(0,0,0,.45),
-      transparent 55%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, .45),
+      transparent 55%);
   opacity: 0;
   transition: .45s;
 }
@@ -404,7 +406,7 @@
 /* ========================= */
 
 .buildBox {
-  border: 2px solid rgba(255,255,255,.8);
+  border: 2px solid rgba(255, 255, 255, .8);
   padding: 22px 42px;
   text-align: center;
   font-size: 54px;
@@ -416,7 +418,7 @@
 
 .blueCard:hover .buildBox {
   transform: scale(1.08);
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
 }
 
 /* ========================= */
@@ -439,423 +441,505 @@
 
 
 /* 1440px */
-@media (max-width:1440px){
+@media (max-width:1440px) {
 
-  .section-head h2{
-    font-size:48px;
+  .section-head h2 {
+    font-size: 48px;
   }
 
-  .whyGrid{
-    gap:18px;
+  .whyGrid {
+    gap: 18px;
   }
 
-  .whyCard{
-    min-height:290px;
-    padding:24px;
+  .whyCard {
+    min-height: 290px;
+    padding: 24px;
   }
 
-  .whyCard h3{
-    font-size:20px;
+  .whyCard h3 {
+    font-size: 20px;
   }
 
-  .blueCard h2{
-    font-size:30px;
+  .blueCard h2 {
+    font-size: 30px;
   }
 
-  .buildBox{
-    font-size:48px;
+  .buildBox {
+    font-size: 48px;
   }
 
-  .whiteCard h3{
-    font-size:30px;
+  .whiteCard h3 {
+    font-size: 30px;
   }
 
 }
 
 /* 1366px */
-@media (max-width:1366px){
+@media (max-width:1366px) {
 
-  .why-section{
-    padding:70px 45px;
+  .why-section {
+    padding: 70px 45px;
   }
 
-  .grid{
-    grid-auto-rows:300px;
+  .grid {
+    grid-auto-rows: 300px;
   }
 
-  .iconCircle{
-    width:78px;
-    height:78px;
+  .iconCircle {
+    width: 78px;
+    height: 78px;
   }
 
 }
 
 /* 1280px */
-@media (max-width:1280px){
+@media (max-width:1280px) {
 
-  .section-head h2{
-    font-size:44px;
+  .section-head h2 {
+    font-size: 48px;
   }
 
-  .subtitle{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:18px;
+  .subtitle {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 18px;
   }
 
-  .whyGrid{
-    grid-template-columns:repeat(2,1fr);
+  .whyGrid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:300px;
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
   }
 
-  .whiteCard img{
-    margin-top:-40px;
+  .whiteCard img {
+    margin-top: -40px;
   }
 
 }
 
-/* 1199px */
-@media (max-width:1199px){
 
-  .why-section{
-    padding:65px 40px;
+
+@media (max-width:1200px) {
+
+  .about-section {
+    width: 100%;
+    padding: 60px 30px;
+    gap: 30px;
+    align-items: center;
+    box-sizing: border-box;
   }
 
-  .whyCard{
-    min-height:270px;
+  .about-left {
+    flex: 0 0 48%;
+    width: 48%;
   }
 
-  .blueCard h2{
-    font-size:28px;
+  .aboutImage {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
   }
 
-  .buildBox{
-    font-size:42px;
+
+  .experience-card {
+    width: 125px;
+    right: 12px;
+    top: 28%;
+    padding: 15px 8px;
   }
 
+  .profiles {
+    margin-bottom: 10px;
+  }
+
+  .profiles img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .exp-text {
+    font-size: 12px;
+  }
+
+  .exp-title {
+    font-size: 14px;
+  }
+
+
+
+  .about-right {
+    flex: 0 0 52%;
+    width: 52%;
+    max-width: none;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 6px 17px;
+    margin-bottom: 12px;
+  }
+
+  .about-right h2 {
+    font-size: 31px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  .AboutPrevLine {
+    width: 120px;
+    height: 3px;
+  }
+
+  .sub {
+    font-size: 18px;
+    line-height: 1.45;
+    margin-top: 22px;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+
+  .about-right p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+
+  .primaryBtn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .whyCard p {
+    font-size: 16px;
+  }
 }
 
 /* 1024px */
-@media (max-width:1024px){
+@media (max-width:1130px) {
 
-  .why-section{
-    padding:60px 35px;
+  .why-section {
+    padding: 60px 35px;
   }
 
-  .section-head h2{
-    font-size:40px;
+  .section-head h2 {
+    font-size: 40px;
   }
 
-  .subtitle{
-    font-size:15px;
+  .subtitle {
+    font-size: 15px;
   }
 
-  .whyCard{
-    padding:22px;
+  .whyCard {
+    padding: 22px;
   }
 
-  .iconBox{
-    width:64px;
-    height:64px;
+  .iconBox {
+    width: 64px;
+    height: 64px;
   }
 
-  .number{
-    font-size:40px;
+  .number {
+    font-size: 40px;
   }
 
-  .grid{
-    gap:0;
-    grid-template-columns:repeat(2,1fr);
-    grid-auto-rows:280px;
-    padding:10px;
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .whiteCard h3{
-    font-size:28px;
+
+  .grid {
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 280px;
+    padding: 10px;
+  }
+
+  .whiteCard h3 {
+    font-size: 28px;
   }
 
 }
 
 /* 991px */
-@media (max-width:991px){
+@media (max-width:991px) {
 
-  .whyGrid{
-    grid-template-columns:repeat(2,1fr);
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid{
-    grid-template-columns:1fr;
-    grid-auto-rows:320px;
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 320px;
   }
 
-  .blueCard h2{
-    font-size:30px;
+  .blueCard h2 {
+    font-size: 30px;
   }
 
-  .buildBox{
-    font-size:46px;
+  .buildBox {
+    font-size: 46px;
   }
 
-  .whiteCard img{
-    width:80%;
-    margin-top:-20px;
+  .whiteCard img {
+    width: 80%;
+    margin-top: -20px;
   }
 
 }
 
 /* 768px */
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .why-section{
-    padding:55px 25px;
+  .why-section {
+    padding: 55px 25px;
   }
 
-  .section-head{
-    margin-bottom:30px;
+  .section-head {
+    margin-bottom: 30px;
   }
 
-  .section-head h2{
-    font-size:34px;
-    line-height:1.3;
+  .section-head h2 {
+    font-size: 34px;
+    line-height: 1.3;
   }
 
-  .subtitle{
-    font-size:14px;
-    line-height:1.7;
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.7;
   }
 
-  .tag{
-    font-size:14px;
-    padding:7px 18px;
+  .tag {
+    font-size: 14px;
+    padding: 7px 18px;
   }
 
-  .divider{
-    margin-top:12px;
+  .divider {
+    margin-top: 12px;
   }
 
-  .whyGrid{
-    grid-template-columns:1fr;
-    gap:18px;
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .whyCard{
-    min-height:auto;
-    padding:24px;
+  .whyCard {
+    min-height: auto;
+    padding: 24px;
   }
 
-  .topArea{
-    margin-bottom:20px;
+  .topArea {
+    margin-bottom: 20px;
   }
 
-  .number{
-    font-size:36px;
+  .number {
+    font-size: 36px;
   }
 
-  .whyCard h3{
-    font-size:22px;
+  .whyCard h3 {
+    font-size: 22px;
   }
 
-  .whyCard p{
-    font-size:15px;
+  .whyCard p {
+    font-size: 15px;
   }
 
-  .grid{
-    margin-top:40px;
-    grid-template-columns:1fr;
-    grid-auto-rows:280px;
+  .grid {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
   }
 
-  .whiteCard h3{
-    font-size:26px;
+  .whiteCard h3 {
+    font-size: 26px;
   }
 
-  .blueCard h2{
-    font-size:28px;
+  .blueCard h2 {
+    font-size: 28px;
   }
 
-  .buildBox{
-    font-size:40px;
+  .buildBox {
+    font-size: 40px;
   }
 
 }
 
 /* 600px */
-@media (max-width:600px){
+@media (max-width:600px) {
 
-  .why-section{
-    padding:50px 20px;
+  .why-section {
+    padding: 50px 20px;
   }
 
-  .section-head h2{
-    font-size:30px;
+  .section-head h2 {
+    font-size: 30px;
   }
 
-  .subtitle{
-    font-size:14px;
+  .subtitle {
+    font-size: 14px;
   }
 
-  .iconCircle{
-    width:72px;
-    height:72px;
+  .iconCircle {
+    width: 72px;
+    height: 72px;
   }
 
-  .iconCircle svg{
-    width:32px;
-    height:32px;
+  .iconCircle svg {
+    width: 32px;
+    height: 32px;
   }
 
-  .grid{
-    grid-auto-rows:260px;
+  .grid {
+    grid-auto-rows: 260px;
   }
 
-  .whiteCard{
-    padding:24px;
+  .whiteCard {
+    padding: 24px;
   }
 
-  .whiteCard h3{
-    font-size:24px;
+  .whiteCard h3 {
+    font-size: 24px;
   }
 
 }
 
 /* 480px */
-@media (max-width:480px){
+@media (max-width:480px) {
 
-  .why-section{
-    padding:45px 16px;
+  .why-section {
+    padding: 45px 16px;
   }
 
-  .tag{
-    font-size:13px;
-    padding:6px 16px;
+  .tag {
+    font-size: 13px;
+    padding: 6px 16px;
   }
 
-  .section-head h2{
-    font-size:27px;
+  .section-head h2 {
+    font-size: 27px;
   }
 
-  .subtitle{
-    font-size:13px;
+  .subtitle {
+    font-size: 13px;
   }
 
-  .whyCard{
-    padding:20px;
-    border-radius:14px;
+  .whyCard {
+    padding: 20px;
+    border-radius: 14px;
   }
 
-  .iconBox{
-    width:58px;
-    height:58px;
+  .iconBox {
+    width: 58px;
+    height: 58px;
   }
 
-  .iconBox svg{
-    width:26px;
-    height:26px;
+  .iconBox svg {
+    width: 26px;
+    height: 26px;
   }
 
-  .number{
-    font-size:32px;
+  .number {
+    font-size: 32px;
   }
 
-  .whyCard h3{
-    font-size:20px;
+  .whyCard h3 {
+    font-size: 20px;
   }
 
-  .whyCard p{
-    font-size:14px;
-    line-height:1.6;
+  .whyCard p {
+    font-size: 14px;
+    line-height: 1.6;
   }
 
-  .grid{
-    grid-auto-rows:240px;
+  .grid {
+    grid-auto-rows: 240px;
   }
 
-  .blueCard h2{
-    font-size:24px;
+  .blueCard h2 {
+    font-size: 24px;
   }
 
-  .whiteCard h3{
-    font-size:22px;
+  .whiteCard h3 {
+    font-size: 22px;
   }
 
-  .buildBox{
-    font-size:34px;
-    padding:18px 28px;
+  .buildBox {
+    font-size: 34px;
+    padding: 18px 28px;
   }
 
 }
 
 /* 390px */
-@media (max-width:390px){
+@media (max-width:390px) {
 
-  .section-head h2{
-    font-size:24px;
+  .section-head h2 {
+    font-size: 242x;
   }
 
-  .whyCard{
-    padding:18px;
+  .whyCard {
+    padding: 18px;
   }
 
-  .blueCard h2{
-    font-size:22px;
+  .blueCard h2 {
+    font-size: 22px;
   }
 
-  .whiteCard h3{
-    font-size:20px;
+  .whiteCard h3 {
+    font-size: 20px;
   }
 
-  .buildBox{
-    font-size:30px;
-    padding:16px 22px;
+  .buildBox {
+    font-size: 30px;
+    padding: 16px 22px;
   }
 
-  .grid{
-    grid-auto-rows:220px;
+  .grid {
+    grid-auto-rows: 220px;
   }
 
 }
 
 /* 360px */
-@media (max-width:360px){
+@media (max-width:360px) {
 
-  .why-section{
-    padding:40px 14px;
+  .why-section {
+    padding: 40px 14px;
   }
 
-  .section-head h2{
-    font-size:22px;
+  .section-head h2 {
+    font-size: 22px;
   }
 
-  .subtitle{
-    font-size:12px;
+  .subtitle {
+    font-size: 12px;
   }
 
-  .tag{
-    font-size:12px;
+  .tag {
+    font-size: 12px;
   }
 
-  .whyCard h3{
-    font-size:18px;
+  .whyCard h3 {
+    font-size: 18px;
   }
 
-  .whyCard p{
-    font-size:13px;
+  .whyCard p {
+    font-size: 13px;
   }
 
-  .blueCard h2{
-    font-size:20px;
+  .blueCard h2 {
+    font-size: 20px;
   }
 
-  .whiteCard h3{
-    font-size:18px;
+  .whiteCard h3 {
+    font-size: 18px;
   }
 
-  .buildBox{
-    font-size:26px;
+  .buildBox {
+    font-size: 26px;
   }
 
 }

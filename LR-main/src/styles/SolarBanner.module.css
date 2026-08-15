@@ -1,452 +1,423 @@
-.bannerSection {
-  background-color: #1e3a6e;
+.mfgBand {
+  width: 100%;
+  height: 410px;
+  background: #293F67;
+  color: #fff;
+  padding: 70px 60px;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 45vh;
-  padding: 0 60px 0 30px;
-  box-sizing: border-box;
 }
 
-.bannerSectionHidden {
-  position: absolute;
-  inset: 0;
+.scrollWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 120px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
 }
 
-.bannerSectionHidden h1 {
-  font-size: 120px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.06);
+.scrollTrack {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.scrollTrack h1 {
+  margin: 0;
   white-space: nowrap;
+  font-size: 85px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.211);
+  letter-spacing: 4px;
   flex-shrink: 0;
-  animation: marquee 18s linear infinite;
+  z-index: 2;
+}
+
+.LastImage {
+  position: absolute;
+  bottom: 35%;
+  left: -6%;
+}
+
+.LastImage img {
+  width: 300px;
+  height: 240px;
 }
 
 
 
-.solarBannerFlex {
+.mfgContainer {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: start;
-
 }
 
-.SolarBannerText {
-  padding: 50px 30px 0 30px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  gap: 10px;
-
+.mfgText {
+  max-width: 800px;
 }
 
-.SolarBannerText h1 {
-  line-height: 1.2;
-  color: white;
-  font-size: 53px;
+.mfgText h2 {
+  font-size: 48px;
   font-weight: 400;
+  line-height: 1.3;
+  color: #ffffffc3;
+  margin-bottom: 15px;
 }
 
-.SolarBannerText p {
-  max-width: 840px;
-  color: rgba(255, 255, 255, 0.725);
-  font-size: 14px;
-  z-index: 2;
+.mfgText p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, .85);
 }
 
-/* img */
-
-.SolarBannerImage {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  padding-left: 40px;
+.LastImage {
+  left: -60px;
+  bottom: 100px;
+  width: 150px;
+  height: 130px;
 }
 
-.SolarBannerImg {
-  width: 450px;
-  height: 400px;
-  z-index: 2;
+.mfgImgWrapper {
+  width: 400px;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  bottom: 35px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.SolarBannerImg img {
+.mfgImgWrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.bannerSloarBottom {
+/* Dark Overlay */
+.mfgImgWrapper::after {
+  content: "";
   position: absolute;
-  bottom: -10px;
-  left: -30px;
-}
-
-.bannerSloarBottom img {
-  width: 330px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
 }
 
 
+.mfgImgWrapper:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
 
+.mfgImgWrapper:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
 
-/* 1440px */
+.mfgImgWrapper:hover::after {
+  background: rgba(0, 0, 0, 0.15);
+}
 
-@media screen and (max-width:1440px) {
-
-  .bannerSection {
-    padding: 0 4%;
-  }
-
-  .SolarBannerText {
-    width: 60%;
-    padding: 50px 2% 0;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 46px;
-  }
-
-  .SolarBannerText p {
-    max-width: 100%;
-  }
-
-  .SolarBannerImage {
-    width: 40%;
-    justify-content: center;
-    padding-left: 2%;
-  }
-
-  .SolarBannerImg {
+@media (max-width:1280px) {
+  .mfgBand {
     width: 100%;
-    max-width: 420px;
-    height: 360px;
+    height: 370px;
+    padding: 60px 50px;
   }
 
-  .bannerSectionHidden h1 {
-    font-size: 150px;
+  .mfgText h2 {
+    font-size: 40px;
   }
 
-}
-
-/* 1366px */
-
-@media screen and (max-width:1366px) {
-
-  .SolarBannerText h1 {
-    font-size: 42px;
+  .mfgImgWrapper {
+    width: 31%;
+    height: 300px;
+    bottom: 30px;
   }
 
-  .SolarBannerImg {
-    max-width: 390px;
-    height: 340px;
-  }
 
-}
 
-/* 1280px */
-
-@media screen and (max-width:1280px) {
-
-  .SolarBannerText {
-    width: 58%;
-  }
-
-  .SolarBannerImage {
-    width: 42%;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 34px;
-  }
-
-  .SolarBannerText p{
-    font-size:16px;
-    line-height: 1.8;
-  }
-  .bannerSectionHidden h1 {
-    font-size: 135px;
-  }
-
-}
-
-/* 1200px */
-
-@media screen and (max-width:1200px) {
-
-  .bannerSection {
-    min-height: 50vh;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 36px;
-  }
-
-  .SolarBannerText p {
-    font-size: 15px;
-  }
-
-  .SolarBannerImg {
-    max-width: 350px;
-    height: 310px;
-  }
-
-  .bannerSloarBottom img {
-    width: 270px;
-  }
-
-}
-
-/* 1024px */
-
-@media screen and (max-width: 1055px){
-    .bannerSection {
-    min-height: 54vh;
-  }
-}
-
-@media screen and (max-width:1024px) {
-
-  .bannerSection {
-    padding: 30px 4%;
-  }
-
-  .solarBannerFlex {
-    align-items: center;
-  }
-
-  .SolarBannerText {
-    width: 58%;
-    padding: 20px 0;
-  }
-
-  .SolarBannerImage {
-    width: 42%;
-    padding-left: 15px;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 32px;
-  }
-
-  .SolarBannerText p {
-    font-size: 14px;
-  }
-
-  .SolarBannerImg {
-    max-width: 320px;
-    height: 280px;
-  }
-
-  .bannerSectionHidden h1 {
-    font-size: 120px;
-  }
-
-}
-
-/* 992px */
-
-@media screen and (max-width:992px) {
-
-  .bannerSection {
-    min-height: auto;
-    padding: 50px 5%;
-  }
-
-  .solarBannerFlex {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .SolarBannerText {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-  }
-
-  .SolarBannerImage {
-    width: 100%;
-    justify-content: center;
-    padding-left: 0;
-  }
-
-  .SolarBannerImg {
-    width: 65%;
-    max-width: 450px;
-    height: auto;
-  }
-
-  .bannerSloarBottom {
-    display: none;
-  }
-
-  .bannerSloarBottom img {
+  .LastImage img {
     width: 260px;
+    height: 180px;
   }
 
-}
 
-/* 768px */
 
-@media screen and (max-width:768px) {
-
-  .bannerSection {
-    padding: 45px 5%;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 30px;
-    line-height: 1.3;
-  }
-
-  .SolarBannerText p {
+  .mfgText p {
     font-size: 14px;
-    line-height: 1.8;
-  }
-
-  .SolarBannerImg {
-    width: 75%;
-  }
-
-  .bannerSectionHidden {
-    gap: 80px;
-  }
-
-  .bannerSectionHidden h1 {
-    font-size: 90px;
-  }
-
-}
-
-/* 576px */
-
-@media screen and (max-width:576px) {
-
-  .bannerSection {
-    padding: 40px 5%;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 25px;
-  }
-
-  .SolarBannerText p {
-    font-size: 13px;
-  }
-
-  .SolarBannerImg {
-    width: 85%;
-  }
-
-  .bannerSloarBottom img {
-    width: 210px;
-  }
-
-  .bannerSectionHidden h1 {
-    font-size: 70px;
-  }
-
-}
-
-/* 480px */
-
-@media screen and (max-width:480px) {
-
-  .bannerSection {
-    padding: 35px 4%;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 22px;
-  }
-
-  .SolarBannerText p {
-    font-size: 12px;
-  }
-
-
-  .SolarBannerImg {
-    width: 95%;
-  }
-
-  .bannerSloarBottom img {
-    display: none;
-  }
-
-  .bannerSectionHidden {
-    gap: 50px;
-  }
-
-  .bannerSectionHidden h1 {
-    font-size: 55px;
-  }
-
-}
-
-/* 375px */
-
-@media screen and (max-width:375px) {
-
-  .SolarBannerText h1 {
-    font-size: 20px;
-  }
-
-  .SolarBannerText p {
-    font-size: 11px;
-  }
-
-  .SolarBannerImg {
-    width: 100%;
-  }
-
-  .bannerSloarBottom img {
-    width: 160px;
-  }
-
-  .bannerSectionHidden h1 {
-    font-size: 45px;
-  }
-
-}
-
-/* 320px */
-
-@media screen and (max-width:320px) {
-
-  .bannerSection {
-    padding: 30px 4%;
-  }
-
-  .SolarBannerText h1 {
-    font-size: 18px;
-  }
-
-  .SolarBannerText p {
-    font-size: 10px;
     line-height: 1.7;
   }
 
-  .SolarBannerImg {
+  .mfgText {
+    max-width: 680px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: 30px;
+  }
+
+}
+
+
+@media (max-width:1200px) {
+
+  .mfgBand {
+    padding: 35px 35px;
+  }
+
+  .mfgContainer {
+    gap: 40px;
+    align-items: center;
+  }
+
+  .mfgText {
+    max-width: 100%;
+  }
+
+  .mfgText h2 {
+    font-size: 37px;
+  }
+
+  .mfgImgWrapper {
+    width: 350px;
+    height: 280px;
+    bottom: -20px;
+    flex-shrink: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 60px;
+  }
+
+  .LastImage img {
+    position: absolute;
+    bottom: -220px;
+    width: 240px;
+    height: auto;
+  }
+
+}
+
+
+@media (max-width:1050px) {
+
+  .mfgBand {
+    padding: 30px 30px;
+    height: auto
+  }
+
+  .mfgContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .mfgText {
+    max-width: 100%;
+  }
+
+  .mfgText h2 {
+    font-size: 35px;
+  }
+
+  .mfgText p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
     width: 100%;
+    max-width: 500px;
+    height: 420px;
+    bottom: 0;
   }
 
-  .bannerSloarBottom img {
-    width: 140px;
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
   }
 
-  .bannerSectionHidden h1 {
-    font-size: 38px;
+  .LastImage {
+    display: none;
+  }
+
+
+}
+
+@media (max-width:992px) {
+
+  .mfgBand {
+    padding: 30px 30px;
+    height: auto
+  }
+
+  .mfgContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .mfgText {
+    max-width: 100%;
+  }
+
+  .mfgText h2 {
+    font-size: 35px;
+  }
+
+  .mfgText p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    max-width: 500px;
+    height: 420px;
+    bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .LastImage {
+    display: none;
+  }
+
+}
+
+
+@media (max-width:768px) {
+
+  .mfgBand {
+    padding: 55px 22px;
+  }
+
+  .mfgContainer {
+    gap: 30px;
+  }
+
+  .mfgText h2 {
+    font-size: 32px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .mfgImgWrapper {
+    width: 400px;
+    height: 340px;
+    border-radius: 8px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+  }
+
+}
+
+
+@media (max-width:576px) {
+
+  .mfgBand {
+    padding: 50px 18px;
+  }
+
+  .mfgText h2 {
+    font-size: 28px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+  }
+
+  .mfgImgWrapper {
+    width: 340px;
+    height: 280px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 34px;
+  }
+
+}
+
+
+
+@media (max-width:480px) {
+
+  .mfgBand {
+    padding: 45px 15px;
+  }
+
+  .mfgText h2 {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .mfgText p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
+    width: 280px;
+    height: 220px;
+    border-radius: 6px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+@media (max-width:360px) {
+
+  .mfgBand {
+    padding: 40px 12px;
+  }
+
+  .mfgText h2 {
+    font-size: 22px;
+  }
+
+  .mfgText p {
+    font-size: 12.5px;
+  }
+
+  .mfgImgWrapper {
+    width: 220px;
+    height: 190px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 22px;
   }
 
 }
