@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./HeroBanner.module.css";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import homeBanner1 from '../../assets/Home/homeBanner1.png'
 import buildingImg from '../../assets/Home/buildImg.png'
 import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
@@ -101,24 +100,22 @@ function HeroBanner() {
 
 
       {/* ================= Slide 2 ================= */}
-      <div
+      {/* <div
         className={`${styles.slide} ${current === 1 ? styles.active : ""
           }`}
       >
         <img src={homeBanner1} alt="Hero" className={styles.bgImage} />
 
-        {/* Dark Overlay */}
+    
         <div className={styles.overlay}></div>
 
-        {/* Watermark Text */}
         <div className={styles.watermark}>
           <h1>PRE-ENGINEERED BUILD AND SOLAR</h1>
         </div>
 
-        {/* Hero Content */}
         <div className={styles.container}>
 
-          {/* Left Content */}
+  
           <div className={styles.leftContent}>
 
 
@@ -139,12 +136,10 @@ function HeroBanner() {
 
           </div>
 
-          {/* Building Image */}
           <div className={styles.centerImage}>
             <img src={buildingImg} alt="Building" />
           </div>
 
-          {/* Right Statistics */}
           <div className={styles.statsCard}>
             <div className={styles.statBox}>
               <h2>500+</h2>
@@ -165,6 +160,103 @@ function HeroBanner() {
               <h2>150+</h2>
               <p>Team Workers</p>
             </div>
+          </div>
+
+        </div>
+      </div> */}
+
+
+      <div
+        className={`${styles.slide} ${current === 1 ? styles.active : ""}`}
+      >
+        {/* <img
+          src={homeBanner1}
+          alt="L&R Green India"
+          className={styles.bgImage}
+        /> */}
+
+        {/* Light overlay */}
+        <div className={styles.overlay}></div>
+
+        {/* Top Brand Area */}
+        <div className={styles.topBrand}>
+          <h1>L&R PREFAB SOLAR INDIA PVT LTD</h1>
+          <div className={styles.brandLine}>
+            <span></span>
+            <p>PRECISION FABRICATION</p>
+            <span></span>
+          </div>
+        </div>
+
+        {/* Main Banner Content */}
+        <div className={styles.container}>
+
+          {/* Left Description */}
+          <div className={styles.leftContent}>
+            <h2>Smart Structures. Precision Fabrication.</h2>
+            <p className={styles.description}>
+              Manufacturer of prefabricated structures,
+              mild steel containers & prefabricated
+              cabins and solar.
+              <br />
+              Established in 2015,
+              <br />
+              New Delhi.
+            </p>
+
+            <button className={styles.heroBtn}>
+              <span>All Category</span>
+              <ArrowRight className={styles.heroArrow} size={20} />
+            </button>
+          </div>
+
+          {/* Center Building */}
+          <div className={styles.centerImage}>
+            <img
+              src={buildingImg}
+              alt="Prefabricated Structure"
+            />
+          </div>
+
+          {/* Right Statistics */}
+          <div className={styles.statsCard}>
+
+            <div className={styles.statBox}>
+              <h2>500+</h2>
+              <p>
+                Completed
+                <br />
+                Projects
+              </p>
+            </div>
+
+            <div className={styles.statBox}>
+              <h2>25+</h2>
+              <p>
+                Years Of
+                <br />
+                Experience
+              </p>
+            </div>
+
+            <div className={styles.statBox}>
+              <h2>900+</h2>
+              <p>
+                Happy
+                <br />
+                Clients
+              </p>
+            </div>
+
+            <div className={styles.statBox}>
+              <h2>150+</h2>
+              <p>
+                Team
+                <br />
+                Workers
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -271,9 +363,9 @@ function HeroBanner() {
         {/* Left Content */}
         <div className={styles.containerContent}>
           <p>
-           High-quality modular steel containers for construction, oil & gas, 
-           renewable energy, industrial projects, railways, and infrastructure. <br/>
-           Built for durability, rapid deployment, and performance across India.
+            High-quality modular steel containers for construction, oil & gas,
+            renewable energy, industrial projects, railways, and infrastructure. <br />
+            Built for durability, rapid deployment, and performance across India.
           </p>
 
           <button className={styles.containerBtn}>
@@ -317,7 +409,7 @@ function HeroBanner() {
         </div>
       </div>
 
-      
+
       {/* ================= Arrows ================= */}
 
       <button

@@ -112,9 +112,14 @@
         height: 80px;
     }
 
+    .iconWrapper {
+        width: 22px;
+        height: 22px;
+    }
+
     .iconWrapper svg {
-        width: 37px;
-        height: 37px;
+        width: 22px;
+        height: 22px;
     }
 
     .tooltip {
@@ -125,7 +130,7 @@
 
 
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
 
     .floatingContact {
         width: 66px;
@@ -143,8 +148,8 @@
     }
 
     .iconWrapper svg {
-        width: 30px;
-        height: 30px;
+        width: 22px;
+        height: 22px;
     }
 
     .contactItem:not(:last-child)::after {
@@ -157,8 +162,45 @@
         font-size: 12.5px;
     }
 }
+ */
 
+@media (max-width: 1280px) {
 
+    .floatingContact {
+        width: 66px;
+        min-height: 235px;
+    }
+
+    .contactItem {
+        width: 66px;
+        height: 77px;
+    }
+
+    .iconWrapper {
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .iconWrapper svg {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        min-height: 22px;
+    }
+
+    .contactItem:not(:last-child)::after {
+        left: 9px;
+        width: 48px;
+    }
+
+    .tooltip {
+        right: 76px;
+        font-size: 12.5px;
+    }
+}
 
 @media (max-width: 1200px) {
 
@@ -391,8 +433,8 @@
     }
 
     .iconWrapper svg {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 
     .contactItem:not(:last-child)::after {
@@ -417,13 +459,13 @@
     }
 
     .iconWrapper {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     .iconWrapper svg {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
     }
 
     .contactItem:not(:last-child)::after {
@@ -447,13 +489,13 @@
     }
 
     .iconWrapper {
-        width: 19px;
-        height: 19px;
+        width: 18px;
+        height: 18px;
     }
 
     .iconWrapper svg {
-        width: 22px;
-        height: 22px;
+        width: 18px;
+        height: 18px;
     }
 
     .contactItem:not(:last-child)::after {
@@ -477,13 +519,13 @@
     }
 
     .iconWrapper {
-        width: 19px;
-        height: 19px;
+        width: 18px;
+        height: 18px;
     }
 
     .iconWrapper svg {
-        width: 20px;
-        height: 20px;
+        width:18px;
+        height: 18px;
     }
 
     .contactItem:not(:last-child)::after {

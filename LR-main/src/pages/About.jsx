@@ -430,20 +430,16 @@ const About = () => {
 
         <section className={styles.hero}>
           <div className={styles.heroOverlay}></div>
-
           <div className={styles.heroContent}>
-            <span className={styles.topLabel}>About Our Company</span>
-
+            <span className={styles.topLabel}>ABOUT OUR COMPANY</span>
             <h1 className={styles.mainTitle}>
               Building the Future with  <br />
               <span>L&R PREFAB SOLAR PVT LTD</span>
             </h1>
-
             <p className={styles.heroDesc}>
               Leading manufacturer of prefabricated structures, mild steel
               containers & prefabricated cabins from New Delhi, India.
             </p>
-
             <button
               onClick={() => navigate("/contact")}
               className={styles.btnWhite}
@@ -452,8 +448,6 @@ const About = () => {
               <ArrowRight className={styles.arrow} size={18} />
             </button>
           </div>
-
-          {/* Floating Product Card */}
           <div className={styles.heroProductCard}>
             <div className={styles.cardHeader}>
               <h4>Modular Office</h4>

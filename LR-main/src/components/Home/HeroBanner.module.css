@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 
-.bgImage {
+/* .bgImage {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -26,9 +26,6 @@
       rgba(24, 24, 24, .78) 100%);
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
 
 .container {
   width: 1400px;
@@ -37,10 +34,6 @@
   position: relative;
   z-index: 5;
 }
-
-/* =========================
-   LEFT CONTENT
-========================= */
 
 .leftContent {
   position: absolute;
@@ -76,10 +69,6 @@
   max-width: 500px;
 }
 
-/* =========================
-   BUTTON
-========================= */
-
 .heroBtn {
   margin-top: 40px;
   width: 205px;
@@ -111,10 +100,6 @@
   transform: translateX(8px);
 }
 
-/* =========================
-   WATERMARK
-========================= */
-
 .watermark {
   position: absolute;
   left: 50%;
@@ -137,9 +122,6 @@
   letter-spacing: 3px;
 }
 
-/* =========================
-   BUILDING IMAGE
-========================= */
 
 .centerImage {
   position: absolute;
@@ -155,10 +137,6 @@
   display: block;
   object-fit: contain;
 }
-
-/* =========================
-   RIGHT STATS CARD
-========================= */
 
 .statsCard {
   position: absolute;
@@ -219,12 +197,6 @@
   font-weight: 400;
 }
 
-/* right down */
-
-
-/* ==========================
-   SLIDES
-========================== */
 
 .slide {
   position: absolute;
@@ -243,10 +215,6 @@
   z-index: 2;
 }
 
-
-/* ==========================
-   ARROWS
-========================== */
 
 .arrow {
   position: absolute;
@@ -289,9 +257,6 @@
   transform: translateY(-50%) scale(1.08);
 }
 
-/* ==========================
-   ANIMATIONS
-========================== */
 
 .active .subtitle {
   animation: fadeUp 0.8s ease forwards;
@@ -307,7 +272,453 @@
 
 .active .button {
   animation: fadeUp 1.4s ease forwards;
+} */
+
+
+/* =========================================================
+   BANNER SLIDE
+========================================================= */
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 1s ease,
+    transform 1.2s ease;
+  transform: scale(1.03);
+  overflow: hidden;
+  background: #ffffff;
+  z-index: 1;
 }
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 2;
+}
+
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.78) 28%,
+      rgba(255, 255, 255, 0.45) 55%,
+      rgba(255, 255, 255, 0.88) 100%);
+}
+
+
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+  z-index: 3;
+  background:
+    linear-gradient(135deg,
+      #172f58 0%,
+      #243f6c 45%,
+      #10284d 100%);
+  clip-path: ellipse(70% 100% at 50% 0%);
+}
+
+
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: -105px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1050px;
+  height: 300px;
+  background: #ffffff;
+  border-radius: 0 0 50% 50%;
+  z-index: 4;
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.03);
+}
+
+
+.topBrand {
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.topBrand h1 {
+  margin: 0;
+  color: #1d3964b6;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.brandLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.brandLine span {
+  width: 52px;
+  height: 2px;
+  background: #1d3964;
+}
+
+.brandLine p {
+  margin: 0;
+  color: #1d3964;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+
+
+.container {
+  position: relative;
+  width: min(1440px, 100%);
+  height: 100%;
+  margin: 0 auto;
+  z-index: 8;
+}
+
+
+
+.leftContent {
+  margin-top: 10px;
+  position: absolute;
+  left: 10px;
+  bottom: 35px;
+  width: 530px;
+  z-index: 15;
+}
+
+
+.leftContent h2 {
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-size: 22px;
+  color: #142642;
+  width: 530px;
+  margin-bottom: 10px;
+}
+
+.description {
+  max-width: 550px;
+  color: #142642;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+
+.heroBtn {
+  margin-top: 30px;
+  width: 285px;
+  height: 60px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 14px;
+  background: #1d3c6b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.heroBtn:hover {
+  background: #102b50;
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 25px rgba(29, 60, 107, 0.25);
+}
+
+.btnArrow {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 0.35s ease;
+}
+
+.heroBtn:hover .btnArrow {
+  transform: translateX(7px);
+}
+
+
+
+.centerImage {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 750px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.centerImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 12px 10px rgba(0, 0, 0, 0.14));
+}
+
+.statsCard {
+  position: absolute;
+  right: 10px;
+  bottom: 35px;
+  width: 290px;
+  height: 255px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  box-shadow:
+    0 20px 45px rgba(20, 50, 90, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  z-index: 20;
+}
+
+
+.statBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.statBox:nth-child(1)::after,
+.statBox:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 1px;
+  height: calc(100% - 36px);
+  background: rgba(29, 60, 107, 0.22);
+}
+
+.statBox:nth-child(1)::before,
+.statBox:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 1px;
+  background: rgba(29, 60, 107, 0.22);
+}
+
+
+.statBox h2 {
+  margin: 0 0 10px;
+  color: #193a68;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+
+
+.statBox p {
+  margin: 0;
+  color: #142642;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+
+
+.statBox:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.statBox:hover h2 {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.watermark {
+  display: none;
+}
+
+
+
+.company {
+  display: none;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(29, 60, 107, 0.75);
+  backdrop-filter: blur(10px);
+  transition: 0.35s ease;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero:hover .arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.left {
+  left: 30px;
+}
+
+.right {
+  right: 30px;
+}
+
+.arrow:hover {
+  background: #193a68;
+  color: #ffffff;
+  transform:
+    translateY(-50%) scale(1.08);
+}
+
+
+
+.active .topBrand {
+  animation: bannerFadeDown 0.8s ease forwards;
+}
+
+.active .leftContent {
+  animation: bannerFadeLeft 0.9s ease forwards;
+}
+
+.active .centerImage {
+  animation: bannerBuilding 1s ease forwards;
+}
+
+.active .statsCard {
+  animation: bannerFadeRight 0.9s ease forwards;
+}
+
+
+@keyframes bannerFadeDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+@keyframes bannerFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes bannerFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes bannerBuilding {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+
 
 @keyframes fadeUp {
   from {
@@ -321,357 +732,1012 @@
   }
 }
 
-@media (max-width:1400px) {
+@media (max-width: 1280px) {
 
-  .container {
-    width: 94%;
+  .slide::before {
+    height: 215px;
   }
 
-  .leftContent {
-    width: 650px;
-    top: 70px;
+  .slide::after {
+    width: 900px;
+    height: 280px;
+    top: -100px;
   }
 
-  .title {
-    font-size: 50px;
+  .topBrand {
+    top: 38px;
   }
 
-  .description {
-    font-size: 16px;
-    max-width: 470px;
+  .topBrand h1 {
+    font-size: 40px;
+  }
+
+  .brandLine {
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .brandLine span {
+    width: 42px;
+  }
+
+  .brandLine p {
+    font-size: 14px;
+    letter-spacing: 4.5px;
   }
 
   .centerImage {
-    width: 600px;
-  }
-
-  .statsCard {
-    width: 290px;
-    height: 235px;
-  }
-
-  .watermark h1 {
-    font-size: 68px;
-  }
-
-}
-
-@media (max-width:1200px) {
-
-  .container {
-    width: 95%;
+    width: 610px;
+    bottom: 0;
   }
 
   .leftContent {
-    width: 560px;
-    top: 65px;
+    left: 18px;
+    bottom: 28px;
+    width: 365px;
   }
 
-  .title {
-    font-size: 42px;
+  .leftContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
   }
 
   .description {
     font-size: 15px;
+    line-height: 1.65;
   }
 
   .heroBtn {
-    width: 180px;
-    height: 48px;
+    width: 235px;
+    height: 52px;
     font-size: 15px;
-  }
-
-  .centerImage {
-    width: 520px;
+    margin-top: 20px;
   }
 
   .statsCard {
-    width: 260px;
-    height: 210px;
+    right: 18px;
+    bottom: 28px;
+    width: 250px;
+    height: 220px;
   }
 
   .statBox h2 {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   .statBox p {
     font-size: 12px;
   }
-
-  .watermark h1 {
-    font-size: 58px;
-  }
-
 }
 
 
-@media (max-width:992px) {
-  .hero {
-    min-height: 100vh;
+@media (max-width: 1200px) {
+
+  .slide::before {
+    height: 195px;
   }
 
-  .container {
-    width: 92%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 60px;
+  .slide::after {
+    width: 820px;
+    height: 260px;
   }
 
-  .leftContent {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    text-align: center;
+  .topBrand {
+    top: 34px;
   }
 
-  .title {
-    font-size: 40px;
+  .topBrand h1 {
+    font-size: 35px;
   }
 
-  .description {
-    margin: 25px auto 0;
-    max-width: 600px;
+  .brandLine {
+    margin-top: 13px;
   }
 
-  .heroBtn {
-    margin: 30px auto;
+  .brandLine span {
+    width: 35px;
+  }
+
+  .brandLine p {
+    font-size: 12px;
+    letter-spacing: 3.5px;
   }
 
   .centerImage {
-    position: relative;
-    left: 0;
-    transform: none;
-    width: 520px;
-    margin-top: 30px;
+    width: 550px;
   }
 
-
-  .statsCard {
-    position: relative;
-    margin: 35px auto 50px;
+  .leftContent {
+    width: 320px;
+    left: 15px;
+    bottom: 22px;
   }
 
-  .watermark {
-    display: none;
+  .leftContent h2 {
+    font-size: 19px;
   }
 
-  .arrow {
-    width: 46px;
-    height: 46px;
-  }
-
-  .statsCard {
-    position: static;
-    margin: 35px auto 0;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-
-    background: rgba(255, 255, 255, .12);
-    backdrop-filter: blur(18px);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .statBox {
-    flex: 1;
-    padding: 18px 12px;
-    text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, .18);
-    border-bottom: none;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .statBox:last-child {
-    border-right: none;
-  }
-
-  .statBox h2 {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-
-  .statBox p {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-
-
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    width: 94%;
-    padding-top: 28px;
-    padding-bottom: 15px;
-  }
-
-  /* COMPANY */
-  .company {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  /* TITLE */
-  .title {
-    font-size: 40px;
-    line-height: 1.08;
-  }
-
-  /* DESCRIPTION */
   .description {
     font-size: 14px;
-    line-height: 1.4;
-    max-width: 560px;
-    margin-top: 13px;
-    margin-bottom: 10px;
+    line-height: 1.55;
   }
 
-  /* BUTTON */
   .heroBtn {
-    width: 150px;
-    height: 42px;
-    font-size: 12px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    width: 215px;
+    height: 49px;
+    font-size: 14px;
+    margin-top: 16px;
   }
-
-  /* BUILDING IMAGE */
-  .centerImage {
-    width: 480px;
-    max-width: 92vw;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
 
   .statsCard {
-    width: 94%;
-    height: auto;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    margin-top: 2rem;
-
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .statBox {
-    width: auto;
-    min-height: 80px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 14px 10px;
-
-    text-align: center;
-
-    border-right: 1px solid rgba(255, 255, 255, 0.18);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  /* Remove right border from 2nd and 4th */
-  .statBox:nth-child(2),
-  .statBox:nth-child(4) {
-    border-right: none;
-  }
-
-  /* Remove bottom border from 3rd and 4th */
-  .statBox:nth-child(3),
-  .statBox:nth-child(4) {
-    border-bottom: none;
+    width: 225px;
+    height: 200px;
+    right: 15px;
+    bottom: 22px;
   }
 
   .statBox h2 {
-    font-size: 20px;
-    margin: 0 0 6px;
+    font-size: 23px;
   }
 
   .statBox p {
     font-size: 11px;
-    margin: 0;
   }
 }
 
 
-@media (max-width: 567px) {
+@media (max-width: 996px) {
+
+  .slide::before {
+    height: 180px;
+    display: none;
+  }
+
+  .slide::after {
+
+    display: none;
+    width: 720px;
+    height: 235px;
+    top: -90px;
+  }
+
+
+  .topBrand {
+    top: 29px;
+  }
+
+  .topBrand h1 {
+    font-size: 30px;
+  }
+
+  .brandLine {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .brandLine span {
+    width: 28px;
+    height: 1px;
+  }
+
+  .brandLine p {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
 
   .container {
-    margin-top: 2rem;
-    width: 94%;
-    padding-top: 30px;
-    padding-bottom: 18px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
   }
 
-  .company {
-    font-size: 20px;
+  .leftContent {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 90%;
+    max-width: 600px;
+    order: 1;
+    text-align: center;
+    margin: 0 auto 10px;
   }
 
-  .title {
-    font-size: 33px;
+  .leftContent h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
   }
 
   .description {
-    font-size: 13px;
-    line-height: 1.45;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    max-width: 550px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .heroBtn {
-    width: 165px;
+    width: 190px;
     height: 44px;
-    font-size: 14px;
-    margin-top: 18px;
-    margin-bottom: 15px;
+    margin: 15px auto 0;
+    font-size: 13px;
+    border-radius: 10px;
   }
 
   .centerImage {
-    width: 430px;
-    max-width: 96vw;
-    margin-top: 18px;
-    margin-bottom: 20px;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: 500px;
+    order: 2;
+    margin: 0 auto;
+    z-index: 9;
+  }
+
+  .centerImage img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .statsCard {
-    height: auto;
-    margin-top: 2rem;
+    margin-top: 20px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 230px;
+    height: 180px;
+    order: 3;
+    border-radius: 15px;
   }
 
   .statBox {
-    padding: 16px 6px;
+    padding: 6px;
   }
 
   .statBox h2 {
     font-size: 20px;
+    margin-bottom: 5px;
   }
 
   .statBox p {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 996px) {
+
+  .centerImage {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    transform: none;
+
+    width: 500px;
+    max-width: 90vw;
+
+    order: 2;
+
+    margin: 0 auto;
+
+    z-index: 9;
+  }
+
+  .centerImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* IMPORTANT:
+     Remove desktop translateX(-50%) animation
+  */
+
+  .active .centerImage {
+    animation: bannerBuildingMobile 1s ease forwards;
+  }
+
+  @keyframes bannerBuildingMobile {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+@media (max-width: 766px) {
+
+
+  .topBrand {
+    top: 25px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .topBrand h1 {
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .brandLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 9px;
+  }
+
+  .brandLine span {
+    width: 25px;
+    height: 1px;
+  }
+
+  .brandLine p {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-align: center;
+  }
+
+
+  .container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  .leftContent {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    order: 1;
+    margin: 0 auto 15px;
+    text-align: center;
+  }
+
+  .leftContent h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+
+
+  .heroBtn {
+    width: 180px;
+    height: 42px;
+    margin: 13px auto 0;
     font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .heroArrow {
+    width: 17px;
+    height: 17px;
+  }
+
+
+
+  .centerImage {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: 600px;
+    max-width: 90vw;
+    order: 2;
+    margin: 0 auto;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .centerImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .statsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 175px;
+    order: 3;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+  }
+
+  .statBox {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .statBox h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .statBox p {
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+
+  .topBrand {
+    top: 22px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .topBrand h1 {
+    font-size: 21px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .brandLine {
+    gap: 7px;
+    margin-top: 8px;
+    justify-content: center;
+  }
+
+  .brandLine span {
+    width: 22px;
+    height: 1px;
+  }
+
+  .brandLine p {
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 105px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+
+  .leftContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 540px;
+    order: 1;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+
+  .leftContent h2 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+
+  .heroBtn {
+    width: 170px;
+    height: 40px;
+    margin: 11px auto 0;
+    font-size: 12px;
+    border-radius: 9px;
+  }
+
+  .heroArrow {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .centerImage {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    max-width: 550px;
+    order: 2;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+  }
+
+  .centerImage img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .statsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 190px;
+    order: 3;
+    /* margin: 16px auto 0; */
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+  }
+
+
+  .statBox {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .statBox h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .statBox p {
+    font-size: 10px;
+    line-height: 1.3;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .topBrand {
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .topBrand h1 {
+    font-size: 18px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .brandLine {
+    gap: 6px;
+    margin-top: 7px;
+    justify-content: center;
+  }
+
+  .brandLine span {
+    width: 18px;
+    height: 1px;
+  }
+
+  .brandLine p {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 18px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .leftContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 460px;
+    order: 1;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+
+  .leftContent h2 {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+
+  .heroBtn {
+    width: 160px;
+    height: 38px;
+    margin: 10px auto 0;
+    font-size: 11px;
+    border-radius: 8px;
+  }
+
+  .heroArrow {
+    width: 15px;
+    height: 15px;
+  }
+
+
+
+  .centerImage {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    max-width: 560px;
+    order: 2;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+  }
+
+  .centerImage img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+
+  .statsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 210px;
+    order: 3;
+    margin: 14px auto 0;
+    border-radius: 13px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+  }
+
+
+  .statBox {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .statBox h2 {
+    font-size: 21px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .statBox p {
+    font-size: 11px;
+    line-height: 1.25;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 430px) {
+
+
+  .slide {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+
+  .topBrand {
+    top: 18px;
+    left: 50%;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .topBrand h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    white-space: normal;
+  }
+
+  .brandLine {
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .brandLine span {
+    width: 16px;
+    height: 1px;
+    flex-shrink: 0;
+  }
+
+  .brandLine p {
+    font-size: 6.5px;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+  }
+
+
+  .container {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 82px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+
+  .leftContent {
+    position: relative;
+    width: 100%;
+    max-width: 410px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    order: 1;
+    margin: 0 auto 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .leftContent h2 {
+    width: 100%;
+    margin: 0 0 4px;
+    font-size: 15px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+
+  .heroBtn {
+    width: 145px;
+    height: 35px;
+    margin: 8px auto 0;
+    padding: 0 14px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .heroArrow {
+    width: 14px;
+    height: 14px;
+  }
+
+  .btnArrow {
+    font-size: 22px;
+  }
+
+
+  .centerImage {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    order: 2;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+  }
+
+  .centerImage img {
+    width: 100%;
+    max-width: 490px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .statsCard {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 245px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    order: 3;
+    margin: 8px auto 0;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+  }
+
+  .statBox {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .statBox h2 {
+    margin: 0 0 3px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.3px;
+  }
+
+  .statBox p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .statBox:nth-child(1)::after,
+  .statBox:nth-child(3)::after {
+    top: 12px;
+    height: calc(100% - 24px);
+  }
+
+  .statBox:nth-child(1)::before,
+  .statBox:nth-child(2)::before {
+    left: 10px;
+    width: calc(100% - 20px);
   }
 
   .arrow {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
 
   .left {
@@ -684,76 +1750,275 @@
 }
 
 
+@media (max-width: 390px) {
 
-@media (max-width: 480px) {
+ 
+  .topBrand {
+    margin-top: 10px;
+    top: 16px;
+    padding: 0 8px;
+  }
+
+  .topBrand h1 {
+    font-size: 18px;
+    line-height: 1.15;
+    letter-spacing: 0.4px;
+  }
+
+  .brandLine {
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  .brandLine span {
+    width: 14px;
+  }
+
+  .brandLine p {
+    font-size: 10px;
+    letter-spacing: 1.1px;
+  }
+
 
   .container {
-    margin-top: 2rem;
-    width: 94%;
-    padding-top: 30px;
-    padding-bottom: 22px;
+    padding-top: 76px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 12px;
   }
 
-  .company {
-    font-size: 14px;
-    margin-bottom: 8px;
+  .leftContent {
+    margin-top: 20px;
+    max-width: 375px;
+    margin-bottom: 6px;
   }
 
-  .title {
-    font-size: 25px;
-    line-height: 1.12;
+  .leftContent h2 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 4px;
   }
 
   .description {
-    font-size: 12px;
-    line-height: 1.45;
-
-    margin-top: 15px;
-
-    max-width: 380px;
+    max-width: 370px;
+    font-size: 10px;
+    line-height: 1.35;
   }
 
+
+
+
   .heroBtn {
-    width: 150px;
-    height: 42px;
-
     margin-top: 20px;
+    width: 138px;
+    height: 33px;
+    margin-top: 7px;
+    padding: 0 12px;
+    border-radius: 7px;
+    font-size: 9.5px;
+  }
 
-    font-size: 12px;
-    gap: 12px;
+  .heroArrow {
+    width: 13px;
+    height: 13px;
   }
 
   .centerImage {
-    width: 390px;
-    max-width: 100%;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 380px;
+    order: 2;
+  }
 
-    margin-top: 22px;
+  .centerImage img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
   }
 
   .statsCard {
-    margin-top: 20px;
-
-    border-radius: 9px;
+    width: 100%;
+    max-width: 374px;
+    height: 200px;
+    margin: 15px auto 0;
+    border-radius: 11px;
   }
 
+
+
   .statBox {
-    min-height: 70px;
-    padding: 12px 5px;
+    padding: 3px;
   }
 
   .statBox h2 {
-    font-size: 17px;
-    margin-bottom: 5px;
+    font-size: 19px;
+    margin-bottom: 3px;
   }
 
   .statBox p {
     font-size: 10px;
-    line-height: 1.3;
+    line-height: 1.15;
   }
 
+
+  .statBox:nth-child(1)::after,
+  .statBox:nth-child(3)::after {
+    top: 10px;
+    height: calc(100% - 20px);
+  }
+
+  .statBox:nth-child(1)::before,
+  .statBox:nth-child(2)::before {
+    left: 8px;
+    width: calc(100% - 16px);
+  }
+
+
   .arrow {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
+  }
+  .left {
+    left: 6px;
+  }
+
+  .right {
+    right: 6px;
+  }
+}
+
+
+@media (max-width: 360px) {
+
+  .topBrand {
+    margin-top: 8px;
+    top: 14px;
+    padding: 0 6px;
+  }
+
+  .topBrand h1 {
+    font-size: 18px;
+    line-height: 1.15;
+    letter-spacing: 0.3px;
+  }
+
+  .brandLine {
+    gap: 4px;
+    margin-top: 5px;
+  }
+
+  .brandLine span {
+    width: 12px;
+  }
+
+  .brandLine p {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .container {
+    width: 100%;
+    padding-top: 72px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  .leftContent {
+    width: 100%;
+    max-width: 346px;
+    margin-top: 16px;
+    margin-bottom: 5px;
+  }
+
+  .leftContent h2 {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 345px;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .heroBtn {
+    width: 132px;
+    height: 32px;
+    margin-top: 8px;
+    padding: 0 11px;
+    border-radius: 7px;
+    font-size: 9px;
+  }
+
+  .heroArrow {
+    width: 12px;
+    height: 12px;
+  }
+
+
+  .centerImage {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    order: 2;
+  }
+
+  .centerImage img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .statsCard {
+    width: 100%;
+    max-width: 346px;
+    height: 175px;
+    margin: 10px auto 0;
+    border-radius: 11px;
+  }
+
+  .statBox {
+    padding: 3px;
+  }
+
+  .statBox h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .statBox p {
+    font-size: 9px;
+    line-height: 1.15;
+  }
+
+
+  .statBox:nth-child(1)::after,
+  .statBox:nth-child(3)::after {
+    top: 10px;
+    height: calc(100% - 20px);
+  }
+
+  .statBox:nth-child(1)::before,
+  .statBox:nth-child(2)::before {
+    left: 7px;
+    width: calc(100% - 14px);
+  }
+
+
+  .arrow {
+    width: 32px;
+    height: 32px;
   }
 
   .left {
@@ -765,37 +2030,134 @@
   }
 }
 
-@media (max-width: 480px) {
-  .container {
-    width: 100%;
-    /* Spans full width so bottom card touches screen edges */
-    padding-top: 20px;
+@media (max-width: 320px) {
+
+
+  .topBrand {
+    margin-top: 6px;
+    top: 12px;
+    padding: 0 5px;
   }
 
-  .leftContent,
+  .topBrand h1 {
+    font-size: 16px;
+    line-height: 1.15;
+    letter-spacing: 0.2px;
+  }
+
+  .brandLine {
+    gap: 3px;
+    margin-top: 4px;
+  }
+
+  .brandLine span {
+    width: 10px;
+  }
+
+  .brandLine p {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .container {
+    width: 100%;
+    padding-top: 66px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  .leftContent {
+    width: 100%;
+    max-width: 308px;
+    margin-top: 13px;
+    margin-bottom: 4px;
+  }
+
+  .leftContent h2 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 305px;
+    font-size: 8.5px;
+    line-height: 1.3;
+  }
+
+
+  .heroBtn {
+    width: 125px;
+    height: 30px;
+    margin-top: 7px;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-size: 8.5px;
+  }
+
+  .heroArrow {
+    width: 11px;
+    height: 11px;
+  }
+
   .centerImage {
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    max-width: 310px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    order: 2;
+  }
+
+  .centerImage img {
+    width: 100%;
+    max-width: 310px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .statsCard {
-    margin-top: 15px;
-    border-radius: 12px 12px 0 0;
-    /* Rounded top corners, flat bottom edge */
+    width: 100%;
+    max-width: 315px;
+    height: 165px;
+    margin: 8px auto 0;
+    border-radius: 10px;
   }
 
   .statBox {
-    padding: 12px 4px;
+    padding: 2px;
   }
-}
+
+  .statBox h2 {
+    font-size: 16px;
+    line-height: 1;
+
+    margin-bottom: 2px;
+  }
+
+  .statBox p {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+
+  .statBox:nth-child(1)::after,
+  .statBox:nth-child(3)::after {
+    top: 8px;
+    height: calc(100% - 16px);
+  }
+
+  .statBox:nth-child(1)::before,
+  .statBox:nth-child(2)::before {
+    left: 6px;
+    width: calc(100% - 12px);
+  }
 
 
-@media (max-width: 430px){
-  .statsCard{
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 12px;
-  } 
 }
 
 /* ======================================================================== */
@@ -950,28 +2312,22 @@
   bottom: 60px;
   width: 320px;
   height: 230px;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   border-radius: 12px;
   overflow: hidden;
-
   z-index: 20;
 }
 
 .heroStatItem {
   padding: 10px 18px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   border-right: 1px solid rgba(255, 255, 255, .18);
   border-bottom: 1px solid rgba(255, 255, 255, .18);
 }
@@ -1683,20 +3039,15 @@
   left: 1px;
   bottom: -130px;
   color: white;
-
   width: 500px;
   height: 80px;
-
   display: flex;
   align-items: center;
   gap: 18px;
-
   padding: 10px 16px;
-
   background: rgba(95, 95, 95, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border-radius: 18px;
   z-index: 20;
 }
@@ -1864,9 +3215,12 @@
 }
 
 @media (max-width:992px) {
+  .hero {
+    min-height: 110vh;
+  }
 
   .heroContainer {
-    width: 92%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
@@ -1923,6 +3277,9 @@
 }
 
 @media (max-width:768px) {
+  .hero {
+    min-height: 102vh;
+  }
 
   .HomeSlider {
     min-height: 900px;
@@ -1988,9 +3345,8 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 27%;
-
-    width: 600px;
+    bottom: 26%;
+    width: 650px;
     right: auto;
     z-index: 2;
   }
@@ -2036,6 +3392,9 @@
 }
 
 @media (max-width:576px) {
+  .hero {
+    min-height: 100vh;
+  }
 
   .HomeSlider {
     min-height: 820px;
@@ -2268,7 +3627,9 @@
 
 
 @media (max-width:430px) {
-
+  .hero {
+    min-height: 92vh;
+  }
 
   .HomeSlider {
     min-height: 300px;
@@ -2380,7 +3741,7 @@
   } */
 
   .HomeSlider {
-    min-height: 300px;
+    min-height: 280px;
   }
 
   .heroContainer {
@@ -2485,7 +3846,7 @@
 
 @media (max-width:360px) {
   .hero {
-    min-height: 90vh;
+    min-height: 83vh;
   }
 
   .HomeSlider {
@@ -2592,7 +3953,7 @@
 
 @media (max-width:320px) {
   .hero {
-    min-height: 80vh;
+    min-height: 76vh;
   }
 
   .HomeSlider {
