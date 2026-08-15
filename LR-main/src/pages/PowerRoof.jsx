@@ -19,6 +19,12 @@ import power1 from '../assets/solar/PowerRoof/power1.png'
 import power2 from '../assets/solar/PowerRoof/power2.png'
 import power3 from '../assets/solar/PowerRoof/power3.png'
 import power4 from '../assets/solar/PowerRoof/power4.png'
+import design from '../assets/solar/PowerRoof/design.png'
+import design1 from '../assets/solar/PowerRoof/design1.png'
+import card1 from '../assets/solar/PowerRoof/card1.png';
+import card2 from '../assets/solar/PowerRoof/card2.png';
+import card3 from '../assets/solar/PowerRoof/card3.png';
+import card4 from '../assets/solar/PowerRoof/card4.png';
 function PowerRoof() {
     const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(1);
@@ -108,7 +114,28 @@ function PowerRoof() {
                 "Create infrastructure prepared for renewable energy integration and the growing demand for smarter, more sustainable power solutions in the years ahead.",
         },
     ];
-
+    const industryProjects = [
+        {
+            title: "Industrial Sheds & Factories",
+            desc: "Convert large roof areas into productive spaces for solar energy generation and efficient power use while supporting long-term energy requirements.",
+            img: card1,
+        },
+        {
+            title: "Warehouses & PEB Buildings",
+            desc: "Utilize expansive rooftops to support renewable energy generation while making better use of available space for modern industrial operations.",
+            img: card2,
+        },
+        {
+            title: "Prefabricated & MS Containers",
+            desc: "Create solar-ready containers for site offices, accommodation, stores, control rooms, and other applications with practical energy-ready infrastructure solutions.",
+            img: card3,
+        },
+        {
+            title: "Solar Parking & Custom Structures",
+            desc: "Combine vehicle protection with solar power generation across parking sheds and customized commercial or industrial structures for specific project needs.",
+            img: card4,
+        },
+    ];
     return (
         <>
             <Header />
@@ -182,7 +209,37 @@ function PowerRoof() {
             </section>
 
 
-
+            {/* ── Products ── */}
+            <section className={styles.productsSec}>
+                <div className={styles.productsInner}>
+                    <div className={styles.productsHeader}>
+                        <div className={styles.productText}>
+                            <h2>
+                                Solar-Ready Solutions<br />
+                                <span>for Multiple Structures</span>
+                            </h2>
+                            <div className={styles.productsDivider}></div>
+                        </div>
+                        <p className={styles.productsSubtext}>
+                            Flexible roofing solutions designed to integrate solar power across
+                            industrial, commercial, and prefabricated structures.
+                        </p>
+                    </div>
+                    <div className={styles.expertiseGrid}>
+                        {industryProjects.map((item, index) => (
+                            <div className={styles.expCard} key={index}>
+                                <img src={item.img} alt={item.title} className={styles.expImg} />
+                                <div className={styles.expLabel}>
+                                    <h4>{item.title}</h4>
+                                    <div className={styles.desc}>
+                                        <p>{item.desc}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* ---------------Our Partner---------- */}
             <section className={styles.SolarEpic}>
@@ -217,6 +274,37 @@ function PowerRoof() {
             </section>
 
 
+
+
+            {/* ── SECTION 4: FINAL TESTING & COMMISSIONING ── */}
+            <section className={styles.mfgBand}>
+                <div className={styles.scrollWrap}>
+                </div>
+
+                <div className={styles.mfgContainer}>
+                    <div className={styles.mfgText}>
+                        <h2>
+                            Manufacturing Smarter <br />
+                            Solar-Ready Infrastructure
+                        </h2>
+                        <p>
+                            L&R Prefab Solar combines advanced fabrication expertise with solar-ready roofing solutions
+                            to create durable structures for industrial and commercial applications, including prefabricated
+                            structures, MS containers, industrial sheds, PEB buildings, and solar-integrated roofing systems,
+                            with a focus on quality, reliability, and project-specific requirements.
+                        </p>
+                        <div className={styles.LastImage}>
+                            <img src={design1} alt="png" />
+                        </div>
+                    </div>
+                    <div className={styles.mfgImgWrapper}>
+                        <img
+                            src={design}
+                            alt="Manufacturing"
+                        />
+                    </div>
+                </div>
+            </section>
 
             {/* ----------------Why Choose---------------- */}
 
