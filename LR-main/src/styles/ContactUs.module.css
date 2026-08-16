@@ -112,19 +112,29 @@
   transform: translateX(8px);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width: 1480px) {
   .hero {
-    padding: 4% 5%;
-    height: 75vh;
+    padding: 50px 60px;
+    height: 85vh;
+  }
+
+  .topLabel {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .mainTitle {
-    font-size: clamp(56px, 4.2vw, 65px);
+    font-size: clamp(48px, 5vw, 58px);
   }
 
   .heroDesc {
-    max-width: 650px;
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .btnWhite {
+    width: 240px;
+    height: 52px;
   }
 }
 
@@ -669,70 +679,70 @@
   box-shadow: 0 8px 18px rgba(32, 55, 95, 0.25);
 }
 
-@media (max-width:1440px){
+@media (max-width:1440px) {
 
-  .touchSec{
-    padding:70px 4%;
+  .touchSec {
+    padding: 70px 4%;
   }
 
-  .touchText h2{
-    font-size:48px;
+  .touchText h2 {
+    font-size: 48px;
   }
 
 }
 
-@media (max-width:1280px){
+@media (max-width:1280px) {
 
-  .touchHeader{
-    gap:40px;
-    margin-bottom:70px;
+  .touchHeader {
+    gap: 40px;
+    margin-bottom: 70px;
   }
 
-  .touchText{
-    width:60%;
+  .touchText {
+    width: 60%;
   }
 
-  .touchHeader p{
-    width:40%;
+  .touchHeader p {
+    width: 40%;
   }
 
-  .touchText h2{
-    font-size:44px;
+  .touchText h2 {
+    font-size: 44px;
   }
 
-  .leftPanel{
-    width:500px;
+  .leftPanel {
+    width: 500px;
   }
 
-  .rightPanel{
+  .rightPanel {
     width: 600px;
   }
 
-  .contactBox{
-    padding:40px;
+  .contactBox {
+    padding: 40px;
   }
 
 }
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
-  .touchSec{
-    padding:65px 4%;
+  .touchSec {
+    padding: 65px 4%;
   }
 
-  .touchText h2{
-    font-size:40px;
+  .touchText h2 {
+    font-size: 40px;
   }
 
-  .container{
-    display:flex;
+  .container {
+    display: flex;
   }
 
-  .leftPanel{
+  .leftPanel {
     width: 480px;
   }
 
-  .rightPanel{
+  .rightPanel {
     padding-left: 10px;
     width: 600px;
   }
@@ -740,25 +750,25 @@
 }
 
 
-@media (max-width:1024px){
+@media (max-width:1024px) {
 
-  .touchText h2{
-    font-size:36px;
+  .touchText h2 {
+    font-size: 36px;
   }
 
-  .contactBox{
-    padding:30px;
+  .contactBox {
+    padding: 30px;
   }
 
-  .grid{
-    gap:20px;
+  .grid {
+    gap: 20px;
   }
 
-   .leftPanel{
+  .leftPanel {
     width: 400px;
   }
 
-  .rightPanel{
+  .rightPanel {
     padding-left: 10px;
     width: 500px;
   }
@@ -766,378 +776,378 @@
 }
 
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-  .touchSec{
-    padding:60px 5%;
+  .touchSec {
+    padding: 60px 5%;
   }
 
-  .touchHeader{
-    flex-direction:column;
-    text-align:center;
-    gap:25px;
-    margin-bottom:50px;
+  .touchHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    margin-bottom: 50px;
   }
 
-  .touchText{
-    width:100%;
-    align-items:center;
+  .touchText {
+    width: 100%;
+    align-items: center;
   }
 
-  .divider{
-    margin:auto;
+  .divider {
+    margin: auto;
   }
 
-  .touchHeader p{
-    width:100%;
-    max-width:700px;
+  .touchHeader p {
+    width: 100%;
+    max-width: 700px;
   }
 
-  .container{
-    flex-direction:column;
+  .container {
+    flex-direction: column;
   }
 
   .leftPanel,
-  .rightPanel{
-    width:100%;
+  .rightPanel {
+    width: 100%;
   }
 
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-
-@media (max-width:768px){
-
-  .touchSec{
-    padding:55px 5%;
-  }
-
-  .touchText h2{
-    font-size:32px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
-  .rightPanel{
-    padding:25px;
-  }
-
-  .contactBox{
-    padding:30px 25px;
-  }
-
-  .submitBtn{
-    width:100%;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
 
 
-@media (max-width:576px){
+@media (max-width:768px) {
 
-  .touchSec{
-    padding:50px 20px;
+  .touchSec {
+    padding: 55px 5%;
   }
 
-  .touchText h2{
-    font-size:28px;
+  .touchText h2 {
+    font-size: 32px;
   }
 
-  .divider{
-    width:90px;
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .contactBox{
-    padding:25px 20px;
+  .rightPanel {
+    padding: 25px;
   }
 
-  .contactBox span{
-    font-size:18px;
+  .contactBox {
+    padding: 30px 25px;
   }
 
-  .contactItem{
-    gap:18px;
-    margin-bottom:20px;
+  .submitBtn {
+    width: 100%;
   }
 
-  .contactItem h4{
-    font-size:15px;
+}
+
+
+@media (max-width:576px) {
+
+  .touchSec {
+    padding: 50px 20px;
   }
 
-  .contactItem svg{
-    width:26px;
-    height:26px;
+  .touchText h2 {
+    font-size: 28px;
   }
 
-  .bottomCounter{
-    flex-direction:column;
-    gap:18px;
-    text-align:center;
+  .divider {
+    width: 90px;
   }
 
-  .bottomText h2{
-    font-size:28px;
+  .contactBox {
+    padding: 25px 20px;
   }
 
-  .bottomText p{
-    font-size:15px;
+  .contactBox span {
+    font-size: 18px;
   }
 
-  .rightPanel{
-    padding:20px;
+  .contactItem {
+    gap: 18px;
+    margin-bottom: 20px;
   }
 
-  .rightPanel h2{
-    font-size:24px;
+  .contactItem h4 {
+    font-size: 15px;
   }
 
-  .line{
-    width:90px;
+  .contactItem svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .bottomCounter {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .bottomText h2 {
+    font-size: 28px;
+  }
+
+  .bottomText p {
+    font-size: 15px;
+  }
+
+  .rightPanel {
+    padding: 20px;
+  }
+
+  .rightPanel h2 {
+    font-size: 24px;
+  }
+
+  .line {
+    width: 90px;
   }
 
   .formGroup input,
-  .selectBox{
-    height:50px;
-    font-size:15px;
+  .selectBox {
+    height: 50px;
+    font-size: 15px;
   }
 
-  .formGroup textarea{
-    height:110px;
-    font-size:15px;
+  .formGroup textarea {
+    height: 110px;
+    font-size: 15px;
   }
 
-  .uploadBox{
-    flex-direction:column;
-    align-items:stretch;
-    height:auto;
-    border:none;
-    gap:10px;
+  .uploadBox {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    border: none;
+    gap: 10px;
   }
 
-  .chooseButton{
-    width:100%;
-    height:52px;
-    margin-top:0;
-    border-radius:50px;
-    font-size:17px;
+  .chooseButton {
+    width: 100%;
+    height: 52px;
+    margin-top: 0;
+    border-radius: 50px;
+    font-size: 17px;
   }
 
-  .uploadBox span{
-    padding:0;
-    text-align:center;
-    font-size:14px;
+  .uploadBox span {
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
   }
 
-  .submitBtn{
-    width:100%;
-    height:52px;
-    font-size:17px;
-  }
-
-}
-
-
-@media (max-width:480px){
-
-  .touchSec{
-    padding:45px 18px;
-  }
-
-  .touchText h2{
-    font-size:24px;
-  }
-
-  .touchHeader p{
-    font-size:14px;
-  }
-
-  .contactBox{
-    padding:20px 18px;
-  }
-
-  .contactBox span{
-    font-size:17px;
-  }
-
-  .contactItem h4{
-    font-size:14px;
-  }
-
-  .rightPanel{
-    padding:18px;
-  }
-
-  .rightPanel h2{
-    font-size:22px;
+  .submitBtn {
+    width: 100%;
+    height: 52px;
+    font-size: 17px;
   }
 
 }
 
 
-@media (max-width:390px){
+@media (max-width:480px) {
 
-  .touchText h2{
-    font-size:22px;
+  .touchSec {
+    padding: 45px 18px;
   }
 
-  .contactItem{
-    align-items:flex-start;
+  .touchText h2 {
+    font-size: 24px;
   }
 
-  .contactItem h4{
-    font-size:13px;
+  .touchHeader p {
+    font-size: 14px;
+  }
+
+  .contactBox {
+    padding: 20px 18px;
+  }
+
+  .contactBox span {
+    font-size: 17px;
+  }
+
+  .contactItem h4 {
+    font-size: 14px;
+  }
+
+  .rightPanel {
+    padding: 18px;
+  }
+
+  .rightPanel h2 {
+    font-size: 22px;
   }
 
 }
 
 
-@media (max-width:360px){
+@media (max-width:390px) {
 
-  .touchSec{
-    padding:40px 15px;
+  .touchText h2 {
+    font-size: 22px;
   }
 
-  .touchText h2{
-    font-size:20px;
+  .contactItem {
+    align-items: flex-start;
   }
 
-  .divider{
-    width:70px;
+  .contactItem h4 {
+    font-size: 13px;
   }
 
-  .contactBox{
-    padding:18px 15px;
+}
+
+
+@media (max-width:360px) {
+
+  .touchSec {
+    padding: 40px 15px;
   }
 
-  .contactBox span{
-    font-size:16px;
+  .touchText h2 {
+    font-size: 20px;
   }
 
-  .bottomText h2{
-    font-size:24px;
+  .divider {
+    width: 70px;
   }
 
-  .bottomText p{
-    font-size:13px;
+  .contactBox {
+    padding: 18px 15px;
   }
 
-  .rightPanel{
-    padding:15px;
+  .contactBox span {
+    font-size: 16px;
   }
 
-  .rightPanel h2{
-    font-size:20px;
+  .bottomText h2 {
+    font-size: 24px;
   }
 
-  .formGroup label{
-    font-size:14px;
+  .bottomText p {
+    font-size: 13px;
+  }
+
+  .rightPanel {
+    padding: 15px;
+  }
+
+  .rightPanel h2 {
+    font-size: 20px;
+  }
+
+  .formGroup label {
+    font-size: 14px;
   }
 
   .formGroup input,
-  .selectBox{
-    height:46px;
-    font-size:14px;
+  .selectBox {
+    height: 46px;
+    font-size: 14px;
   }
 
-  .formGroup textarea{
-    font-size:14px;
+  .formGroup textarea {
+    font-size: 14px;
   }
 
-  .submitBtn{
-    height:48px;
-    font-size:16px;
+  .submitBtn {
+    height: 48px;
+    font-size: 16px;
   }
 
 }
 
-@media (max-width:320px){
+@media (max-width:320px) {
 
-  .touchSec{
-    padding:35px 12px;
+  .touchSec {
+    padding: 35px 12px;
   }
 
-  .touchText h2{
-    font-size:18px;
+  .touchText h2 {
+    font-size: 18px;
   }
 
-  .touchHeader p{
-    font-size:12px;
+  .touchHeader p {
+    font-size: 12px;
   }
 
-  .divider{
-    width:60px;
+  .divider {
+    width: 60px;
   }
 
-  .contactBox{
-    padding:15px 12px;
+  .contactBox {
+    padding: 15px 12px;
   }
 
-  .contactBox span{
-    font-size:15px;
+  .contactBox span {
+    font-size: 15px;
   }
 
-  .contactItem{
-    gap:12px;
+  .contactItem {
+    gap: 12px;
   }
 
-  .contactItem svg{
-    width:22px;
-    height:22px;
+  .contactItem svg {
+    width: 22px;
+    height: 22px;
   }
 
-  .contactItem h4{
-    font-size:12px;
-    line-height:1.5;
+  .contactItem h4 {
+    font-size: 12px;
+    line-height: 1.5;
   }
 
-  .bottomText h2{
-    font-size:22px;
+  .bottomText h2 {
+    font-size: 22px;
   }
 
-  .bottomText p{
-    font-size:12px;
+  .bottomText p {
+    font-size: 12px;
   }
 
-  .rightPanel{
-    padding:12px;
+  .rightPanel {
+    padding: 12px;
   }
 
-  .rightPanel h2{
-    font-size:18px;
+  .rightPanel h2 {
+    font-size: 18px;
   }
 
-  .formGroup label{
-    font-size:13px;
+  .formGroup label {
+    font-size: 13px;
   }
 
   .formGroup input,
-  .selectBox{
-    height:44px;
-    padding:0 16px;
-    font-size:13px;
+  .selectBox {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 13px;
   }
 
-  .formGroup textarea{
-    height:100px;
-    padding:16px;
-    font-size:13px;
+  .formGroup textarea {
+    height: 100px;
+    padding: 16px;
+    font-size: 13px;
   }
 
-  .chooseButton{
-    height:46px;
-    font-size:15px;
+  .chooseButton {
+    height: 46px;
+    font-size: 15px;
   }
 
-  .submitBtn{
-    height:46px;
-    font-size:15px;
-    gap:10px;
+  .submitBtn {
+    height: 46px;
+    font-size: 15px;
+    gap: 10px;
   }
 
 }
@@ -1650,12 +1660,12 @@
 
 .cta {
   width: 100%;
-  background: url('../assets/Contact/cta.png');
-  background-attachment: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/Contact/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-blend-mode: darken;
+  background-attachment: fixed;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -1710,7 +1720,7 @@
 
 
 
-.iconBoxs {
+.iconBox {
   position: relative;
   width: 18px;
   height: 18px;
@@ -1725,13 +1735,9 @@
   transition: transform .35s ease;
 }
 
-
-
 .iconOne {
   transform: translateX(0);
 }
-
-
 
 .iconTwo {
   transform: translateX(-24px);
@@ -1754,27 +1760,30 @@
 }
 
 
-@media (max-width:1440px) {
-
-  .cta {
-    padding: 70px 4%;
-  }
-
-  .cta h2 {
-    font-size: 46px;
-  }
-
-}
-
 
 @media (max-width:1280px) {
 
+  .cta {
+    padding: 60px 40px;
+  }
+
   .cta h2 {
-    font-size: 42px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
   }
 
   .cta p {
     max-width: 700px;
+    margin: 0 auto 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .contactBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
   }
 
 }
@@ -1783,60 +1792,62 @@
 @media (max-width:1200px) {
 
   .cta {
-    padding: 65px 5%;
+    padding: 60px 40px;
+  }
+
+  .cta h2 {
+    font-size: 44px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:992px) {
+
+  .cta {
+    padding: 55px 30px;
     background-attachment: scroll;
   }
 
   .cta h2 {
     font-size: 38px;
-  }
-
-  .cta p {
-    font-size: 15px;
-    max-width: 650px;
-  }
-
-}
-
-
-@media (max-width:1024px) {
-
-  .cta h2 {
-    font-size: 34px;
-    text-align: center;
-  }
-
-  .cta p {
-    max-width: 620px;
-  }
-
-}
-
-
-@media (max-width:992px) {
-
-  .cta {
-    padding: 60px 5%;
-    text-align: center;
-  }
-
-  .cta h2 {
-    font-size: 32px;
     line-height: 1.3;
   }
 
   .cta p {
-    font-size: 15px;
-    line-height: 1.8;
+    max-width: 700px;
+    font-size: 16px;
   }
 
 }
 
-
 @media (max-width:768px) {
 
   .cta {
-    padding: 55px 5%;
+    padding: 50px 22px;
+  }
+
+  .cta h2 {
+    font-size: 32px;
+  }
+
+  .cta p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .contactBtn {
+    width: 240px;
+    height: 52px;
+  }
+
+}
+
+@media (max-width:576px) {
+
+  .cta {
+    padding: 45px 18px;
   }
 
   .cta h2 {
@@ -1845,35 +1856,38 @@
 
   .cta p {
     font-size: 14px;
-    max-width: 100%;
+    margin-bottom: 18px;
   }
 
   .contactBtn {
     width: 220px;
     height: 50px;
+    font-size: 15px;
   }
 
 }
 
-
-@media (max-width:576px) {
+@media (max-width:425px) {
 
   .cta {
-    padding: 50px 20px;
+    padding: 40px 16px;
+    gap: 14px;
   }
 
   .cta h2 {
     font-size: 24px;
+    line-height: 1.35;
   }
 
   .cta p {
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .contactBtn {
     width: 200px;
     height: 48px;
+    padding: 0 20px;
   }
 
   .contactText {
@@ -1882,11 +1896,10 @@
 
 }
 
-
-@media (max-width:480px) {
+@media (max-width:375px) {
 
   .cta {
-    padding: 45px 18px;
+    padding: 35px 14px;
   }
 
   .cta h2 {
@@ -1894,85 +1907,51 @@
   }
 
   .cta p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .contactBtn {
-    width: 185px;
+    width: 190px;
     height: 46px;
-    gap: 10px;
   }
 
 }
 
+@media (max-width:325px) {
 
-@media (max-width:390px) {
+  .cta {
+    padding: 30px 12px;
+  }
 
   .cta h2 {
     font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 16px;
   }
 
   .contactBtn {
     width: 175px;
     height: 44px;
-  }
-
-}
-
-
-@media (max-width:360px) {
-
-  .cta {
-    padding: 40px 15px;
-  }
-
-  .cta h2 {
-    font-size: 18px;
-  }
-
-  .cta p {
-    font-size: 11px;
-  }
-
-  .contactBtn {
-    width: 165px;
-    height: 42px;
+    gap: 8px;
+    padding: 0 16px;
   }
 
   .contactText {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-}
-
-
-@media (max-width:320px) {
-
-  .cta {
-    padding: 35px 12px;
+  .iconBox {
+    width: 16px;
+    height: 16px;
   }
 
-  .cta h2 {
-    font-size: 17px;
-    line-height: 1.4;
-  }
-
-  .cta p {
-    font-size: 10px;
-    line-height: 1.6;
-  }
-
-  .contactBtn {
-    width: 150px;
-    height: 40px;
-    padding: 0 18px;
-  }
-
-  .contactText {
-    font-size: 11px;
-  }
-
-  .iconBoxs {
+  .iconOne,
+  .iconTwo {
     width: 16px;
     height: 16px;
   }

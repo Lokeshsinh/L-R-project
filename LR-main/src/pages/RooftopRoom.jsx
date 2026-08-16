@@ -123,7 +123,7 @@ function RooftopRoom() {
             {/* -----------hero--------------- */}
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.topLabel}>Smart Prefabricated Rooftop Houses</span>
+                    <span className={styles.topLabel}> SMART PREFABRICATED ROOFTOP HOUSES</span>
                     <h1 className={styles.mainTitle}>
                         Expand Your Living Space<br />
                         <span>Without Expanding Your Land.

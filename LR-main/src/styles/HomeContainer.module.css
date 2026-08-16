@@ -10,7 +10,8 @@
    HERO
 =========================== */
 .hero {
-    background: url('../assets/conatiners/HomeConatiner/banner.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)), url('../assets/conatiners/HomeConatiner/banner.png') center/cover no-repeat;
     color: #fff;
     padding: 50px 60px;
     width: 100%;
@@ -3178,7 +3179,7 @@ Home container
     .faqImg {
         width: 520px;
 
-        height: 460px ;
+        height: 460px;
         border-radius: 12px;
     }
 
@@ -3430,7 +3431,8 @@ Home container
 =========================== */
 .cta {
     width: 100%;
-    background: url('../assets/conatiners/HomeConatiner/cta.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)), url('../assets/conatiners/HomeConatiner/cta.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3452,7 +3454,7 @@ Home container
 .cta p {
     font-size: 0.97rem;
     opacity: 0.85;
-    max-width: 600px;
+    max-width: 800px;
     line-height: 1.7;
     text-align: center;
     margin-bottom: 20px;
@@ -3528,41 +3530,35 @@ Home container
     background: #2550a0;
 }
 
-@media (max-width: 1440px) {
+
+
+@media (max-width:1280px) {
 
     .cta {
-        padding: 55px 50px;
-        gap: 10px;
-        background-position: center;
-        background-size: cover;
+        padding: 60px 40px;
     }
 
     .cta h2 {
-        font-size: 46px;
-        line-height: 1.25;
+        font-size: 40px;
+        line-height: 1.2;
         text-align: center;
-        margin: 0;
     }
 
     .cta p {
-        max-width: 560px;
+        max-width: 700px;
+        margin: 0 auto 24px;
         font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 18px;
-        text-align: center;
+        line-height: 1.8;
     }
 
     .contactBtn {
-        width: 240px;
-        height: 52px;
-        padding: 0 24px;
-        gap: 10px;
+        width: 250px;
+        height: 50px;
+        font-size: 16px;
     }
 
-    .contactText {
-        font-size: 15px;
-    }
 }
+
 
 @media (max-width:1200px) {
 

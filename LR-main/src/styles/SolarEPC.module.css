@@ -3241,7 +3241,8 @@
 
 .cta {
   width: 100%;
-  background: url('../assets/solar/solarepic/cta.png');
+  background: Linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/solar/solarepic/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

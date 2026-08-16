@@ -93,14 +93,14 @@ const PrefabResidentialHouse = () => {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             LGSF Prefab Residential<br />
             <span>Houses (G+1 / G+2)
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Green Pvt Ltd delivers high-quality prefab homes designed
+            L&R Prefab SOlar India Pvt Ltd delivers high-quality prefab homes designed
             for speed, durability, and flexibility—perfect for modern living.
 
 
@@ -125,12 +125,9 @@ const PrefabResidentialHouse = () => {
           </h2>
           <div className={styles.introLine} />
         </div>
-
         <div className={styles.introContainer}>
           <div className={styles.structureCard}>
-
             <div className={styles.structureSidePanel}></div>
-
             <div className={styles.structureImageWrapper}>
               <img
                 src={reshouse1}
@@ -138,9 +135,7 @@ const PrefabResidentialHouse = () => {
                 className={styles.structureImage}
               />
             </div>
-
           </div>
-
           <div className={styles.introText}>
             <p>
               Light Gauge Steel Framing (LGSF) prefab houses are modern residential structures built using cold-formed
@@ -342,7 +337,7 @@ const PrefabResidentialHouse = () => {
           </div>
           {/*  */}
           <div className={styles.solartext}>
-            <p>At L&R Green Pvt Ltd, we combine innovation, precision engineering, and sustainable practices
+            <p>At L&R Prefab Solar India Pvt Ltd, we combine innovation, precision engineering, and sustainable practices
               to deliver high-performance LGSF prefab homes tailored to your needs. With a skilled design team,
               premium galvanized steel materials, cost-effective solutions, and reliable on-time delivery, we
               ensure a seamless and efficient building experience from start to finish.</p>

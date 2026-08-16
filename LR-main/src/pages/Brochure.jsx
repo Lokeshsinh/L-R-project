@@ -17,7 +17,7 @@ const Brochure = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Company<br />
             <span>Brochure
@@ -45,9 +45,9 @@ const Brochure = () => {
             <div className={styles.divider} />
           </div>
           <div className={styles.aboutTextBlock}>
-            <p>L&amp;R Enterprises delivers high-quality prefabricated and pre-engineered building solutions across diverse industries, including solar infrastructure projects. Our expertise, innovative approach, and strong execution capabilities make us a trusted partner for modern infrastructure and solar power developments.</p>
+            <p>L&amp;R Prefab Solar delivers high-quality prefabricated and pre-engineered building solutions across diverse industries, including solar infrastructure projects. Our expertise, innovative approach, and strong execution capabilities make us a trusted partner for modern infrastructure and solar power developments.</p>
             <p>Our brochure provides detailed insights into our products, project experience, and industry-specific solutions. It highlights our work across infrastructure, industrial, solar, and modular construction projects along with our design, manufacturing, and turnkey capabilities.</p>
-            <p>Get a complete overview of our services, solutions, and project portfolio. Click below to download the PDF brochure and discover how L&amp;R Enterprises can support your next project.</p>
+            <p>Get a complete overview of our services, solutions, and project portfolio. Click below to download the PDF brochure and discover how L&amp;R Prefab Solar  can support your next project.</p>
           </div>
           <a
             href="/LR-Green-India-Brochure.pdf"

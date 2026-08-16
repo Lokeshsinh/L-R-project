@@ -1,19 +1,12 @@
 /* ===========================
-   BASE
-=========================== */
-.wrapper {
-  background-color: #ffffff;
-  color: #333;
-}
-
-/* ===========================
    SECTION TITLE
 =========================== */
 /* ===========================
    HERO
 =========================== */
 .hero {
-  background: url('../assets/PREFAB/controllRoom/banner.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/PREFAB/controllRoom/banner.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;
@@ -58,7 +51,7 @@
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 30px;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .btnHero {
@@ -132,7 +125,7 @@
 
   .heroDesc {
     font-size: 16px;
-    max-width: 700px;
+    max-width: 850px;
   }
 
   .btnWhite {
@@ -3163,7 +3156,8 @@
 =========================== */
 .cta {
   width: 100%;
-  background: url('../assets/PREFAB/controllRoom/cta.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/PREFAB/controllRoom/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

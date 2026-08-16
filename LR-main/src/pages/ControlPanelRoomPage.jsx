@@ -134,13 +134,7 @@ const ControlPanelRoomPage = () => {
             insulated, and reliable protection for industrial applications.
 
           </p>
-          <button onClick={() => {
-            navigate("/contact");
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }} className={styles.btnWhite}>
+          <button  className={styles.btnWhite}>
             <span>Contact Us</span>
             <ArrowRight className={styles.arrow} size={18} />
           </button>

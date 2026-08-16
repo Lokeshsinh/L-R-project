@@ -7,7 +7,8 @@
 ======================================= */
 
 .hero {
-  background: url('../assets/LGFS/FramHouse/banner.png') center/cover no-repeat;
+  background: Linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/LGFS/FramHouse/banner.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;

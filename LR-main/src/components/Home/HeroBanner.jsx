@@ -7,7 +7,6 @@ import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
 import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
 import user from '../../assets/conatiners/HomeConatiner/user.png'
-import banner1 from '../../assets/banner5.png'
 import container from '../../assets/banner3.png'
 function HeroBanner() {
   const [current, setCurrent] = useState(0);
@@ -338,11 +337,10 @@ function HeroBanner() {
 
       {/* ================= Slide 4 ================= */}
 
-      <div
+      {/* <div
         className={`${styles.containerHeroPanel} ${current === 3 ? styles.active : ""
           }`}
       >
-        {/* Background */}
         <img
           src={banner1}
           alt="Solar Fastener"
@@ -350,8 +348,6 @@ function HeroBanner() {
         />
 
         <div className={styles.containerOverlay}></div>
-
-        {/* Heading */}
         <div className={styles.containerHeading}>
           <h3>L&amp;R GREEN INDIA PVT LTD</h3>
 
@@ -359,15 +355,12 @@ function HeroBanner() {
             ENGINEERED FOR STRENGTH. BUILT FOR MOBILITY.
           </h1>
         </div>
-
-        {/* Left Content */}
         <div className={styles.containerContent}>
           <p>
             High-quality modular steel containers for construction, oil & gas,
             renewable energy, industrial projects, railways, and infrastructure. <br />
             Built for durability, rapid deployment, and performance across India.
           </p>
-
           <button className={styles.containerBtn}>
             <span>All Category</span>
             <ArrowRight
@@ -376,8 +369,6 @@ function HeroBanner() {
             />
           </button>
         </div>
-
-        {/* Product Image */}
         <div className={styles.containerProductImage}>
           <img
             src={container}
@@ -385,40 +376,114 @@ function HeroBanner() {
           />
         </div>
 
-        {/* Statistics */}
         <div className={styles.containerStatsCard}>
           <div className={styles.containerStatItem}>
             <h2>500+</h2>
             <p>Completed Projects</p>
           </div>
-
           <div className={styles.containerStatItem}>
             <h2>25+</h2>
             <p>Years Of Experience</p>
           </div>
-
           <div className={styles.containerStatItem}>
             <h2>900+</h2>
             <p>Happy Clients</p>
           </div>
-
           <div className={styles.containerStatItem}>
             <h2>150+</h2>
             <p>Team Workers</p>
           </div>
         </div>
+      </div> */}
+
+
+      <div
+        className={`${styles.containerHeroPanel} ${current === 3 ? styles.active : ""
+          }`}
+      >
+        {/* Existing background */}
+        {/* <img
+          src={banner1}
+          alt="L&R Green India"
+          className={styles.containerHeroBg}
+        /> */}
+        <div className={styles.containerOverlay}></div>
+        <div className={styles.containerCircle}></div>
+        <div className={styles.containerDots}></div>
+        <div className={styles.containerShape}></div>
+        <div className={styles.containerHeading}>
+          <h3>L&amp;R PREFAB SOLAR INDIA PVT LTD</h3>
+          <h1>
+            ENGINEERED FOR STRENGTH.
+            <br />
+            BUILT FOR MOBILITY.
+          </h1>
+        </div>
+        <div className={styles.containerContent}>
+          <p>
+            Durable modular steel containers built for strength,
+            mobility, and rapid deployment across India.
+          </p>
+          <button className={styles.containerBtn}>
+            <span>All Category</span>
+            <ArrowRight
+              className={styles.containerArrow}
+              size={21}
+            />
+          </button>
+        </div>
+        <div className={styles.containerProductImage}>
+          <img
+            src={container}
+            alt="Modular Steel Container"
+          />
+        </div>
+        <div className={styles.containerStatsCard}>
+          <div className={styles.containerStatItem}>
+            <h2>500+</h2>
+            <p>
+              Completed
+              <br />
+              Projects
+            </p>
+          </div>
+          <div className={styles.containerStatItem}>
+            <h2>25+</h2>
+            <p>
+              Years Of
+              <br />
+              Experience
+            </p>
+          </div>
+          <div className={styles.containerStatItem}>
+            <h2>900+</h2>
+            <p>
+              Happy
+              <br />
+              Clients
+            </p>
+          </div>
+          <div className={styles.containerStatItem}>
+            <h2>150+</h2>
+            <p>
+              Team
+              <br />
+              Workers
+            </p>
+          </div>
+        </div>
       </div>
 
 
-      {/* ================= Arrows ================= */}
 
+
+      {/* arrow */}
       <button
         className={`${styles.arrow} ${styles.left}`}
         onClick={prevSlide}
       >
         <ChevronLeft size={28} strokeWidth={2.5} />
       </button>
-
       <button
         className={`${styles.arrow} ${styles.right}`}
         onClick={nextSlide}

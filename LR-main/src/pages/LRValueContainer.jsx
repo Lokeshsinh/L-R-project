@@ -226,9 +226,9 @@ const faqs = [
       <Header />
 
       {/* ── Hero ── */}
-      <section className={styles.hero}>
+      <section className={styles.hero}> 
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Portable Modular Solutions</span>
+          <span className={styles.topLabel}>L&R PORTABLA MODULAR SOLUTIONS</span>
           <h1 className={styles.mainTitle}>
             L&R VALUE GRANTED <br />
             <span>MS CONTAINER</span>

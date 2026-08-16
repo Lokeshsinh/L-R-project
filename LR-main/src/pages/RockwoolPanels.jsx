@@ -121,7 +121,7 @@ const RockwoolPanels = () => {
       {/* ── HERO SECTION ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Prefab Solar India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             Resistant Rock<br />
             <span>wool  Panels

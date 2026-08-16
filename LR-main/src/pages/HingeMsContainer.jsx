@@ -218,7 +218,7 @@ const HingeMsContainer = () => {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}> Skid-Mounted Series</span>
+          <span className={styles.topLabel}>SKID-MOUNTED SERIES</span>
           <h1 className={styles.mainTitle}>
             HINGE MS <br />
             <span>CONTAINER</span>

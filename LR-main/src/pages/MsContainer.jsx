@@ -447,7 +447,7 @@ const MsContainer = () => {
 
 
       <section className={styles.faqSec}>
-        <span className={styles.introLabel}>• FAQ</span>
+        <span className={styles.introLabels}>• FAQ</span>
         <div className={styles.faqHeader}>
           <div className={styles.faqText}>
             <h2>
@@ -458,7 +458,7 @@ const MsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Quick answers from L&R Green Pvt Ltd about prefabricated dry wall systems,
+            Quick answers from L&R Prefab Solar India Pvt Ltd about prefabricated dry wall systems,
             covering key benefits, usage, and performance in modern interior construction.
           </p>
         </div>

@@ -9,7 +9,8 @@
 
 /* ─── HERO ───────────────────────────────────────────────── */
 .hero {
-  background: url('../assets/Pre-Build/ColdRoom/banner.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/Pre-Build/ColdRoom/banner.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;
@@ -1387,37 +1388,37 @@
 
 @media (max-width: 576px) {
 
-    .advantage {
-        padding: 45px 18px;
-    }
+  .advantage {
+    padding: 45px 18px;
+  }
 
-    .advantageFlex {
-        gap: 25px;
-    }
+  .advantageFlex {
+    gap: 25px;
+  }
 
-    .advImg {
-        width: 100%;
-        height: 300px;
-        border-radius: 8px;
-    }
+  .advImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+  }
 
-    .advantageText h2 {
-        font-size: 28px;
-        line-height: 1.3;
-    }
+  .advantageText h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
 
-    .introLine {
-        width: 80px;
-    }
+  .introLine {
+    width: 80px;
+  }
 
-    .advText {
-        gap: 16px;
-    }
+  .advText {
+    gap: 16px;
+  }
 
-    .advText p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
+  .advText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 /* ==========================
@@ -1426,112 +1427,112 @@
 
 @media (max-width: 480px) {
 
-    .advantage {
-        padding: 40px 16px;
-    }
+  .advantage {
+    padding: 40px 16px;
+  }
 
-    .advantageFlex {
-        gap: 22px;
-    }
+  .advantageFlex {
+    gap: 22px;
+  }
 
-    .advImg {
-        width: 100%;
-        height: 250px;
-        border-radius: 8px;
-    }
+  .advImg {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+  }
 
-    .advantageText {
-        gap: 8px;
-    }
+  .advantageText {
+    gap: 8px;
+  }
 
-    .advantageText h2 {
-        font-size: 25px;
-        line-height: 1.3;
-    }
+  .advantageText h2 {
+    font-size: 25px;
+    line-height: 1.3;
+  }
 
-    .introLine {
-        width: 75px;
-        height: 3px;
-    }
+  .introLine {
+    width: 75px;
+    height: 3px;
+  }
 
-    .advText {
-        gap: 14px;
-    }
+  .advText {
+    gap: 14px;
+  }
 
-    .advText p {
-        font-size: 13px;
-        line-height: 1.7;
-    }
+  .advText p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
 }
 
 @media (max-width: 375px) {
 
-    .advantage {
-        padding: 35px 14px;
-    }
+  .advantage {
+    padding: 35px 14px;
+  }
 
-    .advantageFlex {
-        gap: 20px;
-    }
+  .advantageFlex {
+    gap: 20px;
+  }
 
-    .advImg {
-        width: 100%;
-        height: 215px;
-    }
+  .advImg {
+    width: 100%;
+    height: 215px;
+  }
 
-    .advantageText h2 {
-        font-size: 22px;
-        line-height: 1.3;
-    }
+  .advantageText h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
 
-    .introLine {
-        width: 70px;
-    }
+  .introLine {
+    width: 70px;
+  }
 
-    .advText {
-        gap: 12px;
-    }
+  .advText {
+    gap: 12px;
+  }
 
-    .advText p {
-        font-size: 12.5px;
-        line-height: 1.65;
-    }
+  .advText p {
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
 }
 
 
 
 @media (max-width: 320px) {
 
-    .advantage {
-        padding: 30px 12px;
-    }
+  .advantage {
+    padding: 30px 12px;
+  }
 
-    .advantageFlex {
-        gap: 18px;
-    }
+  .advantageFlex {
+    gap: 18px;
+  }
 
-    .advImg {
-        width: 100%;
-        height: 185px;
-    }
+  .advImg {
+    width: 100%;
+    height: 185px;
+  }
 
-    .advantageText h2 {
-        font-size: 20px;
-        line-height: 1.3;
-    }
+  .advantageText h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
 
-    .introLine {
-        width: 60px;
-    }
+  .introLine {
+    width: 60px;
+  }
 
-    .advText {
-        gap: 10px;
-    }
+  .advText {
+    gap: 10px;
+  }
 
-    .advText p {
-        font-size: 12px;
-        line-height: 1.6;
-    }
+  .advText p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
 }
 
 /* ─── STRENGTH ───────────────────────────────────────────── */

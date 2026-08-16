@@ -148,7 +148,7 @@ function BESSContainer() {
             <Header />
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <span className={styles.topLabel}>BESS Container Solutions</span>
+                    <span className={styles.topLabel}>BESS CONTAINER SOLUTIONS</span>
                     <h1 className={styles.mainTitle}>
                         Advanced BESS Container  <br />
                         <span>for Reliable Energy

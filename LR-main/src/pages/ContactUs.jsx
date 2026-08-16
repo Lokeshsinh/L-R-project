@@ -128,14 +128,14 @@ ${fileName}`;
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&R Green India Pvt Ltd</span>
+          <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LDT</span>
           <h1 className={styles.mainTitle}>
             Contact L&R  <br />
             <span>Green India
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Get in touch with L&R Green India Pvt Ltd for reliable prefabricated and
+            Get in touch with L&R Prefab Solar India Pvt Ltd for reliable prefabricated and
             modular building solutions tailored to your project needs.
           </p>
           <button onClick={() => navigate('/projects')} className={styles.btnWhite}>

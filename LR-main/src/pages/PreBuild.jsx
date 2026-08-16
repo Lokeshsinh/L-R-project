@@ -163,7 +163,7 @@ function PreBuild() {
                 {/* HERO */}
                 <section className={styles.hero}>
                     <div className={styles.heroContent}>
-                        <span className={styles.topLabel}>L&R Pre-engineered</span>
+                        <span className={styles.topLabel}>L&R PRE-ENGINEERED</span>
                         <h1 className={styles.mainTitle}>
                             Pre-engineered<br />
                             <span>building</span>
