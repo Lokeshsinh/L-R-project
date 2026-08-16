@@ -2366,8 +2366,6 @@
 }
 
 
-/* ================= BACKGROUND ================= */
-
 .heroBg {
   position: absolute;
   inset: 0;
@@ -2377,7 +2375,7 @@
   z-index: 1;
 }
 
-/* No dark overlay */
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -2385,9 +2383,6 @@
   z-index: 2;
   pointer-events: none;
 }
-
-
-/* ================= HEADING ================= */
 
 .heroHeading {
   position: absolute;
@@ -2424,31 +2419,23 @@
 }
 
 
-/* Large background title */
-
 .backgroundTitle {
   position: absolute;
   top: 65px;
   left: 50%;
   transform: translateX(-50%);
-
   width: 100%;
-
   color: transparent;
   -webkit-text-stroke: 1px rgba(41, 67, 116, 0.16);
-
   font-size: 155px;
   line-height: 1;
   font-weight: 700;
-
   white-space: nowrap;
-
   z-index: -1;
   pointer-events: none;
 }
 
 
-/* ================= LEFT CONTENT ================= */
 .heroFlexUser {
   display: flex;
   justify-content: space-between;
@@ -2459,46 +2446,34 @@
   position: absolute;
   left: 44px;
   bottom: 32px;
-
   width: 310px;
-
   z-index: 20;
 }
 
 .heroContent p {
   margin: 0 0 18px;
-
   color: #404040;
-
   font-size: 19px;
   line-height: 1.3;
   font-weight: 400;
 }
 
 
-/* ================= BUTTON ================= */
 
 .heroBtn {
   width: 192px;
   height: 46px;
-
   border: none;
   border-radius: 3px;
-
   background: #294374;
   color: #fff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 15px;
-
   font-size: 17px;
   font-weight: 500;
-
   cursor: pointer;
-
   transition:
     background 0.3s ease,
     color 0.3s ease;
@@ -2619,572 +2594,1667 @@
 }
 
 
-@media (max-width:1400px) {
+
+@media (max-width: 1440px) {
+
+  .heroHeading {
+    top: 50px;
+  }
 
   .heroHeading h3 {
-    font-size: 36px;
+    font-size: 50px;
   }
 
-  .heroHeading h1 {
-    font-size: 36px;
-    max-width: 1100px;
+  .heroSubHeading {
+    font-size: 20px;
   }
 
-  .productImage {
-    width: 650px;
+  .backgroundTitle {
+    top: 60px;
+    font-size: 140px;
   }
 
   .heroContent {
-    left: 25px;
+    left: 38px;
+    bottom: 30px;
+    width: 300px;
+  }
+
+  .heroContent p {
+    font-size: 18px;
+  }
+
+  .productImage {
+    width: 720px;
+    bottom: 100px;
   }
 
   .heroStatsCard {
-    right: 40px;
+    right: 35px;
+    bottom: 25px;
+    width: 310px;
+    height: 220px;
   }
 
+  .heroStatItem h2 {
+    font-size: 25px;
+  }
+
+  .heroStatItem p {
+    font-size: 13px;
+  }
 }
 
 
 
 
-@media (max-width:1200px) {
+@media (max-width: 1280px) {
 
-  .heroHeading h3 {
-    font-size: 34px;
+  .heroHeading {
+    top: 45px;
   }
 
-  .heroHeading h1 {
-    font-size: 34px;
-    max-width: 900px;
+  .heroHeading h3 {
+    font-size: 50px;
+  }
+
+  .heroSubHeading {
+    font-size: 20px;
+  }
+
+  .backgroundTitle {
+    top: 55px;
+    font-size: 120px;
   }
 
   .heroContent {
-    width: 360px;
-    left: 15px;
-    bottom: 60px;
+    left: 30px;
+    bottom: 25px;
+    width: 280px;
   }
 
   .heroContent p {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .heroBtn {
+    width: 180px;
+    height: 44px;
     font-size: 15px;
   }
 
   .productImage {
-    width: 560px;
-    bottom: 15px;
+    width: 650px;
+    bottom: 95px;
   }
 
   .heroStatsCard {
-    width: 280px;
-    height: 210px;
-    right: 20px;
+    right: 28px;
+    bottom: 23px;
+    width: 260px;
+    height: 205px;
+  }
+
+  .heroStatItem {
+    padding: 12px 16px;
   }
 
   .heroStatItem h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .heroStatItem p {
     font-size: 12px;
   }
-
 }
 
 
 
 
-@media (max-width:992px) {
+@media (max-width: 1200px) {
+
+
+  .heroHeading {
+    top: 48px;
+  }
+
+  .heroHeading h3 {
+    font-size: 48px;
+    letter-spacing: 0.8px;
+  }
+
+  .heroSubHeading {
+    margin-top: 7px;
+    font-size: 19px;
+    letter-spacing: 0.2px;
+  }
+
+  .backgroundTitle {
+    top: 58px;
+    font-size: 130px;
+  }
+
+  .heroContent {
+    left: 35px;
+    bottom: 30px;
+    width: 290px;
+  }
+
+  .heroContent p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .heroBtn {
+    width: 180px;
+    height: 44px;
+    font-size: 16px;
+    gap: 11px;
+  }
+
+  .heroArrow {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .productImage {
+    left: 50%;
+    bottom: 98px;
+    width: 580px;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .heroStatsCard {
+    right: 30px;
+    bottom: 25px;
+    width: 280px;
+    height: 210px;
+    border-radius: 11px;
+  }
+
+  .heroStatItem {
+    padding: 12px 17px;
+  }
+
+  .heroStatItem h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  .heroStatItem p {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+}
+
+
+@media (max-width: 1150px) {
 
   .heroHeading {
     top: 40px;
   }
 
   .heroHeading h3 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
-  .heroHeading h1 {
-    font-size: 28px;
-    max-width: 760px;
+  .heroSubHeading {
+    font-size: 16px;
   }
 
-  .heroContent {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 210px;
-    width: 90%;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .heroContent p {
-    max-width: 600px;
-    margin: 0 auto 25px;
-  }
-
-  .heroBtn {
-    margin: auto;
-  }
-
-  .productImage {
-    width: 500px;
-    left: 50%;
-    bottom: 18%;
-  }
-
-  .heroStatsCard {
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
-    bottom: 15px;
-
-    width: 92%;
-    max-width: 720px;
-    height: auto;
-
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .heroStatItem {
-    flex: 1;
-    text-align: center;
-    border-bottom: none;
-  }
-
-  .heroStatItem:last-child {
-    border-right: none;
-  }
-
-}
-
-
-@media (max-width:768px) {
-
-  .heroHeading {
-    top: 30px;
-  }
-
-  .heroHeading h3 {
-    font-size: 22px;
-  }
-
-  .heroHeading h1 {
-    font-size: 22px;
-    line-height: 1.3;
-    padding: 0 20px;
+  .backgroundTitle {
+    top: 50px;
+    font-size: 120px;
   }
 
   .heroContent {
-    position: absolute;
-    top: 170px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    text-align: center;
-    padding-left: 0;
+    left: 25px;
+    bottom: 22px;
+    width: 250px;
   }
 
   .heroContent p {
     font-size: 14px;
-    margin: 18px auto 25px;
-    max-width: 520px;
+    line-height: 1.4;
+    margin-bottom: 14px;
   }
 
   .heroBtn {
-    margin: auto;
-    width: 180px;
-    height: 48px;
+    width: 165px;
+    height: 42px;
+    font-size: 14px;
   }
 
   .productImage {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 420px;
-    bottom: 150px;
+    width: 570px;
+    bottom: 90px;
   }
 
   .heroStatsCard {
-    width: 94%;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px;
     bottom: 20px;
-    display: flex;
+    width: 260px;
+    height: 190px;
   }
 
   .heroStatItem {
-    padding: 12px 6px;
-    text-align: center;
-  }
-
-}
-
-
-
-@media (max-width:576px) {
-
-  .heroHeading {
-    top: 25px;
-  }
-
-  .heroHeading h3 {
-    font-size: 18px;
-  }
-
-  .heroHeading h1 {
-    font-size: 18px;
-    padding: 0 15px;
-  }
-
-  .heroContent {
-    top: 145px;
-    width: 92%;
-  }
-
-  .heroContent p {
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
-
-  .heroBtn {
-    width: 170px;
-    height: 46px;
-    font-size: 14px;
-  }
-
-  .productImage {
-    width: 340px;
-    bottom: 170px;
-  }
-
-  .heroStatsCard {
-    width: 95%;
-    bottom: 15px;
+    padding: 10px 14px;
   }
 
   .heroStatItem h2 {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .heroStatItem p {
     font-size: 11px;
   }
-
 }
+
+
+@media (max-width: 1085px) {
+
+  .heroHeading {
+    top: 42px;
+  }
+
+  .heroHeading h3 {
+    font-size: 43px;
+    letter-spacing: 0.7px;
+  }
+
+  .heroSubHeading {
+    margin-top: 6px;
+    font-size: 17px;
+    letter-spacing: 0.15px;
+  }
+
+  .backgroundTitle {
+    top: 52px;
+    font-size: 115px;
+  }
+
+
+  .heroContent {
+    left: 25px;
+    bottom: 26px;
+    width: 260px;
+  }
+
+  .heroContent p {
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .heroBtn {
+    width: 170px;
+    height: 42px;
+    font-size: 14px;
+    gap: 9px;
+  }
+
+  .heroArrow {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .productImage {
+    left: 50%;
+    bottom: 90px;
+    width: 540px;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .heroStatsCard {
+    right: 20px;
+    bottom: 23px;
+    width: 240px;
+    height: 190px;
+    border-radius: 10px;
+  }
+
+  .heroStatItem {
+    padding: 10px 14px;
+  }
+
+  .heroStatItem h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+  }
+
+  .heroStatItem p {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+}
+
+
+@media (max-width: 1026px) {
+
+
+  .heroHeading {
+    top: 40px;
+  }
+
+  .heroHeading h3 {
+    font-size: 41px;
+    letter-spacing: 0.6px;
+  }
+
+  .heroSubHeading {
+    margin-top: 6px;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+  }
+
+  .backgroundTitle {
+    top: 50px;
+    font-size: 110px;
+  }
+
+  .heroContent {
+    left: 22px;
+    bottom: 25px;
+    width: 250px;
+  }
+
+  .heroContent p {
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .heroBtn {
+    width: 165px;
+    height: 41px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .heroArrow {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .productImage {
+    left: 50%;
+    bottom: 88px;
+    width: 520px;
+    transform: translateX(-50%);
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .heroStatsCard {
+    right: 18px;
+    bottom: 22px;
+    width: 225px;
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .heroStatItem {
+    padding: 9px 12px;
+  }
+
+  .heroStatItem h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .heroStatItem p {
+    font-size: 10px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 996px) {
+
+  .heroHeading {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding: 25px 15px 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .heroHeading h3 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .heroSubHeading {
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  .backgroundTitle {
+    top: 25px;
+    font-size: 80px;
+    opacity: 0.8;
+  }
+
+
+  .heroFlexUser {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    order: 1;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .heroContent p {
+    max-width: 580px;
+    margin: 0 auto 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .heroBtn {
+    margin: 0 auto;
+    width: 180px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 20px;
+    order: 2;
+    width: min(620px, 80vw);
+    margin: 10px auto 0;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .heroStatsCard {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    order: 3;
+    width: min(600px, 90%);
+    height: 100px;
+    margin: 15px auto 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .heroStatItem {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .heroStatItem h2 {
+    font-size: 24px;
+    margin: 0 0 5px;
+  }
+
+  .heroStatItem p {
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 766px) {
+
+  .heroHeading {
+    top: 30px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .heroHeading h3 {
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+
+  .heroSubHeading {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .backgroundTitle {
+    top: 40px;
+    font-size: 80px;
+  }
+
+
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: 45px;
+    order: 1;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroContent p {
+    width: 100%;
+    margin: 0 auto 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .heroBtn {
+    width: 170px;
+    height: 42px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 60px;
+    order: 2;
+    width: min(540px, 90%);
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  .heroStatsCard {
+    position: relative;
+    right: auto;
+    bottom: 50px;
+    order: 3;
+    width: min(620px, 94%);
+    height: 90px;
+    margin: 10px auto 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    box-sizing: border-box;
+  }
+
+
+  .heroStatItem {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: none;
+  }
+
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+  .heroStatItem:nth-child(3) {
+    border-bottom: none;
+  }
+
+
+  .heroStatItem h2 {
+    margin: 0 0 4px;
+    font-size: 21px;
+    line-height: 1;
+  }
+
+
+  .heroStatItem p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+
+
+
+@media (max-width: 576px) {
+
+  .heroHeading {
+    top: 24px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .heroHeading h3 {
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: 0.3px;
+  }
+
+  .heroSubHeading {
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  .backgroundTitle {
+    top: 32px;
+    font-size: 62px;
+  }
+
+
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: 50px;
+    order: 1;
+    width: 92%;
+    max-width: 480px;
+    margin: 0 auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+  }
+
+  .heroContent p {
+    position: relative;
+    z-index: 30;
+  }
+
+  .heroBtn {
+    position: relative;
+    z-index: 31;
+    width: 190px;
+    height: 38px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  .heroArrow {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 45px;
+    order: 2;
+    width: min(470px, 90%);
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+
+  .heroStatsCard {
+    position: relative;
+    right: auto;
+    bottom: 35px;
+    order: 3;
+    width: calc(100% - 24px);
+    max-width: 540px;
+    height: 78px;
+    margin: 8px auto 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    box-sizing: border-box;
+  }
+
+
+  .heroStatItem {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: none;
+  }
+
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+  .heroStatItem:nth-child(3) {
+    border-bottom: none;
+  }
+
+
+  .heroStatItem h2 {
+    margin: 0 0 3px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+
+  .heroStatItem p {
+    margin: 0;
+    font-size: 8px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .heroHeading {
+    top: 22px;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .heroHeading h3 {
+    font-size: 22px;
+    line-height: 1.1;
+    letter-spacing: 0.2px;
+  }
+
+  .heroSubHeading {
+    margin-top: 5px;
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+  .backgroundTitle {
+    top: 30px;
+    font-size: 52px;
+  }
+
+
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: 10px;
+    order: 1;
+    width: 92%;
+    max-width: 450px;
+    margin: 0 auto 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+  }
+
+  .heroContent p {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto 9px;
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .heroBtn {
+    position: relative;
+    width: 145px;
+    height: 37px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 11px;
+    z-index: 31;
+    pointer-events: auto;
+  }
+
+  .heroArrow {
+    width: 15px;
+    height: 15px;
+  }
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 60px;
+    order: 2;
+    width: min(430px, 92%);
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    z-index: 8;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  .heroStatsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: 35px;
+    order: 3;
+    width: calc(100% - 24px);
+    max-width: 466px;
+    height: 140px;
+    margin: 8px auto 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+    z-index: 25;
+  }
+
+
+  .heroStatItem {
+    min-width: 0;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: 1px solid #d5d9df;
+  }
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+
+  .heroStatItem:nth-child(3),
+  .heroStatItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .heroStatItem h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+
+  .heroStatItem p {
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: center;
+  }
+}
+
 
 
 
 @media (max-width: 430px) {
 
-  /* --- Top Headings --- */
   .heroHeading {
-    top: 20px;
-  }
-
-  .heroHeading h3 {
-    font-size: 16px;
-    margin-bottom: 4px;
-  }
-
-  .heroHeading h1 {
-    font-size: 22px;
-    /* Set to 22px as requested */
-    line-height: 1.25;
-    padding: 0 10px;
-  }
-
-  /* --- Left/Center Text Content --- */
-  .heroContent {
-    top: 130px;
-    width: 94%;
-  }
-
-  .heroContent p {
-    font-size: 12px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-  }
-
-  .heroBtn {
-    width: 150px;
-    height: 40px;
-    font-size: 13px;
-    gap: 8px;
-  }
-
-  /* --- Center Product Image --- */
-  .productImage {
-    margin-left: 20px;
-    width: 340px;
-    bottom: 155px;
-  }
-
-  /* --- Bottom Right Stats Card (2x2 Grid) --- */
-  .heroStatsCard {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10px;
-
-    width: 92%;
-    height: 130px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    border-radius: 10px;
-  }
-
-  .heroStatItem {
-    padding: 6px 12px;
-    text-align: left;
-
-    border-right: 1px solid rgba(255, 255, 255, .18);
-    border-bottom: 1px solid rgba(255, 255, 255, .18);
-  }
-
-  .heroStatItem:nth-child(2),
-  .heroStatItem:nth-child(4) {
-    border-right: none;
-  }
-
-  .heroStatItem:nth-child(3),
-  .heroStatItem:nth-child(4) {
-    border-bottom: none;
-  }
-
-  .heroStatItem h2 {
-    font-size: 15px;
-    margin-bottom: 2px;
-  }
-
-  .heroStatItem p {
-    font-size: 10px;
-    line-height: 1.2;
-  }
-
-}
-
-@media (max-width: 390px) {
-
-  /* --- Top Headings --- */
-  .heroHeading {
-    top: 18px;
-  }
-
-  .heroHeading h3 {
-    font-size: 14px;
-    margin-bottom: 4px;
-  }
-
-  .heroHeading h1 {
-    font-size: 22px;
-    line-height: 1.2;
+    top: 22px;
     padding: 0 8px;
-  }
-
-  /* --- Hero Content / CTA --- */
-  .heroContent {
-    top: 125px;
-    width: 95%;
-  }
-
-  .heroContent p {
-    font-size: 12px;
-    line-height: 1.35;
-    margin-bottom: 10px;
-  }
-
-  .heroBtn {
-    width: 145px;
-    height: 38px;
-    font-size: 12px;
-    gap: 6px;
-  }
-
-  /* --- Product Image --- */
-  .productImage {
-    width: 310px;
-    bottom: 200px;
-  }
-
-  /* --- Stats Card (2x2 Grid) --- */
-  .heroStatsCard {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10px;
-
-    width: 94%;
-    height: 125px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    border-radius: 8px;
-  }
-
-  .heroStatItem {
-    padding: 5px 10px;
-    text-align: left;
-
-    border-right: 1px solid rgba(255, 255, 255, .18);
-    border-bottom: 1px solid rgba(255, 255, 255, .18);
-  }
-
-  .heroStatItem:nth-child(2),
-  .heroStatItem:nth-child(4) {
-    border-right: none;
-  }
-
-  .heroStatItem:nth-child(3),
-  .heroStatItem:nth-child(4) {
-    border-bottom: none;
-  }
-
-  .heroStatItem h2 {
-    font-size: 14px;
-    margin-bottom: 2px;
-  }
-
-  .heroStatItem p {
-    font-size: 9.5px;
-    line-height: 1.15;
-  }
-
-}
-
-@media (max-width: 360px) {
-
-  .heroHeading h3 {
-    font-size: 17px;
-  }
-
-  .heroHeading h1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-
-  .heroContent {
-    top: 120px;
-    padding: 0 15px;
-  }
-
-  .heroContent p {
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .heroBtn {
-    width: 140px;
-    height: 40px;
-    font-size: 12px;
-  }
-
-  /* =========================
-     PRODUCT IMAGE
-  ========================= */
-
-  .productImage {
-    width: 270px;
-    max-width: none;
-    bottom: 165px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-
-
-
-  .heroStatsCard {
-    width: 90vw;
-    max-width: none;
-
-    padding: 12px;
-
-    border-radius: 12px 12px 12px 12px;
-
-    overflow-x: hidden;
     box-sizing: border-box;
   }
 
-  .heroStatItem {
-    min-width: 0;
-    flex: 1;
-    padding: 10px 4px;
+  .heroHeading h3 {
+    font-size: 21px;
+    line-height: 1.1;
+    letter-spacing: 0.2px;
   }
 
-  .heroStatItem h3 {
-    font-size: 16px;
-  }
-
-  .heroStatItem p {
-    font-size: 10px;
+  .heroSubHeading {
+    margin-top: 5px;
+    font-size: 9px;
     line-height: 1.3;
   }
-}
 
-@media (max-width: 320px) {
-  .heroHeading {
-    top: 10px;
+  .backgroundTitle {
+    top: 30px;
+    font-size: 48px;
   }
 
-  .heroHeading h3 {
-    font-size: 13px;
-    margin-bottom: 2px;
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
   }
 
-  .heroHeading h1 {
-    font-size: 14px;
-    line-height: 1.2;
-    padding: 0 5px;
-  }
 
   .heroContent {
-    top: 105px;
-    width: 98%;
+    position: relative;
+    left: auto;
+    bottom: 60px;
+    order: 1;
+    width: 92%;
+    max-width: 400px;
+    margin: 0 auto 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
   }
 
   .heroContent p {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 9px;
     font-size: 11px;
     line-height: 1.35;
-    margin-bottom: 10px;
+    text-align: center;
   }
 
   .heroBtn {
-    width: 135px;
+    position: relative;
+    width: 140px;
     height: 36px;
-    font-size: 12px;
-    gap: 8px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 11px;
+    z-index: 31;
+    pointer-events: auto;
+  }
+
+  .heroArrow {
+    width: 15px;
+    height: 15px;
+  }
+
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 70px;
+    order: 2;
+    width: min(400px, 92%);
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    z-index: 8;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  .heroStatsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: 35px;
+    order: 3;
+    width: calc(100% - 24px);
+    max-width: 406px;
+    height: 155px;
+    margin: 8px auto 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+    z-index: 25;
+  }
+
+
+  .heroStatItem {
+    min-width: 0;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: 1px solid #d5d9df;
+  }
+
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+  .heroStatItem:nth-child(3),
+  .heroStatItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .heroStatItem h2 {
+    margin: 0 0 4px;
+    font-size: 19px;
+    line-height: 1;
+  }
+
+
+  .heroStatItem p {
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: center;
+  }
+}
+
+
+
+
+
+@media (max-width: 390px) {
+
+  .heroHeading {
+    top: 20px;
+    padding: 0 7px;
+    box-sizing: border-box;
+  }
+
+  .heroHeading h3 {
+    font-size: 20px;
+    line-height: 1.1;
+    letter-spacing: 0.15px;
+  }
+
+  .heroSubHeading {
+    margin-top: 5px;
+    font-size: 8.5px;
+    line-height: 1.3;
+  }
+
+  .backgroundTitle {
+    top: 28px;
+    font-size: 44px;
+  }
+
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+
+
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: 10px;
+    order: 1;
+    width: 92%;
+    max-width: 360px;
+    margin: 0 auto 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+  }
+
+  .heroContent p {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 8px;
+    font-size: 10.5px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .heroBtn {
+    position: relative;
+    width: 135px;
+    height: 35px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 10.5px;
+    z-index: 31;
+    pointer-events: auto;
+  }
+
+  .heroArrow {
+    width: 14px;
+    height: 14px;
   }
 
   .productImage {
-    margin-left: 10px;
-    width: 220px;
-    bottom: 170px;
+    position: relative;
+    left: auto;
+    bottom: 65px;
+    order: 2;
+    width: min(365px, 92%);
+    margin: 0 auto 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    z-index: 8;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .heroStatsCard {
-    width: 98%;
-    bottom: 6px;
-    border-radius: 6px;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: 30px;
+    order: 3;
+    width: calc(100% - 20px);
+    max-width: 370px;
+    height: 150px;
+    margin: 7px auto 13px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+    z-index: 25;
   }
+
 
   .heroStatItem {
-    padding: 6px 2px;
+    min-width: 0;
+    padding: 7px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: 1px solid #d5d9df;
   }
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+  .heroStatItem:nth-child(3),
+  .heroStatItem:nth-child(4) {
+    border-bottom: none;
+  }
+
 
   .heroStatItem h2 {
-    font-size: 12px;
-    margin-bottom: 2px;
+    margin: 0 0 4px;
+    font-size: 18px;
+    line-height: 1;
   }
 
+
   .heroStatItem p {
+    margin: 0;
+    font-size: 8.5px;
+    line-height: 1.25;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 360px) {
+
+  .heroHeading {
+    top: 18px;
+    padding: 0 6px;
+    box-sizing: border-box;
+  }
+
+  .heroHeading h3 {
+    font-size: 17px;
+    line-height: 1.1;
+    letter-spacing: 0.1px;
+  }
+
+  .heroSubHeading {
+    margin-top: 4px;
+    font-size: 8px;
+    line-height: 1.3;
+  }
+
+  .backgroundTitle {
+    top: 26px;
+    font-size: 40px;
+  }
+
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+
+ 
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: 50px;
+    order: 1;
+    width: 92%;
+    max-width: 330px;
+    margin: 0 auto 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+  }
+
+  .heroContent p {
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto 7px;
+    font-size: 10px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .heroBtn {
+    position: relative;
+    width: 130px;
+    height: 34px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 10px;
+    z-index: 31;
+    pointer-events: auto;
+  }
+
+  .heroArrow {
+    width: 14px;
+    height: 14px;
+  }
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 60px;
+    order: 2;
+    width: min(335px, 92%);
+    margin: 0 auto 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    z-index: 8;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  .heroStatsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: 38px;
+    order: 3;
+    width: calc(100% - 18px);
+    max-width: 342px;
+    height: 145px;
+    margin: 6px auto 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+    z-index: 25;
+  }
+
+
+  .heroStatItem {
+    min-width: 0;
+    padding: 6px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: 1px solid #d5d9df;
+  }
+
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+  .heroStatItem:nth-child(3),
+  .heroStatItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .heroStatItem h2 {
+    margin: 0 0 3px;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+
+  .heroStatItem p {
+    margin: 0;
+    font-size: 8px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 320px) {
+
+  .heroHeading {
+    top: 16px;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  .heroHeading h3 {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .heroSubHeading {
+    margin-top: 4px;
+    font-size: 7.5px;
+    line-height: 1.25;
+  }
+
+  .backgroundTitle {
+    top: 24px;
+    font-size: 36px;
+  }
+
+
+
+  .heroFlexUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+
+
+  .heroContent {
+    position: relative;
+    left: auto;
+    bottom: 45px;
+    order: 1;
+    width: 94%;
+    max-width: 300px;
+    margin: 0 auto 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+  }
+
+  .heroContent p {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 6px;
     font-size: 9px;
-    line-height: 1.15;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .heroBtn {
+    position: relative;
+    width: 120px;
+    height: 32px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 9px;
+    z-index: 31;
+    pointer-events: auto;
+  }
+
+  .heroArrow {
+    width: 13px;
+    height: 13px;
+  }
+
+
+
+  .productImage {
+    position: relative;
+    left: auto;
+    bottom: 55px;
+    order: 2;
+    width: min(300px, 92%);
+    margin: 0 auto 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    z-index: 8;
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .heroStatsCard {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: 32px;
+    order: 3;
+    width: calc(100% - 16px);
+    max-width: 304px;
+    height: 135px;
+    margin: 5px auto 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+    z-index: 25;
+  }
+
+
+  .heroStatItem {
+    min-width: 0;
+    padding: 5px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #d5d9df;
+    border-bottom: 1px solid #d5d9df;
+  }
+
+
+  .heroStatItem:nth-child(2),
+  .heroStatItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+  .heroStatItem:nth-child(3),
+  .heroStatItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .heroStatItem h2 {
+    margin: 0 0 3px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+
+  .heroStatItem p {
+    margin: 0;
+    font-size: 7.5px;
+    line-height: 1.2;
+    text-align: center;
   }
 }
 
