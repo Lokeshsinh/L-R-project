@@ -144,7 +144,7 @@ const Footer = () => {
 
       {/* Bottom Copyright Section */}
       <div className="footer-bottom">
-        <p>© Copyright 2026 L &amp; R Enterprises All Rights Reserved.</p>
+        <p>© Copyright 2026 L &amp; R PREFAB SOLAR INDIA All Rights Reserved.</p>
         <p>Designed &amp; Developed By Yuvocreations.com</p>
       </div>
     </footer>

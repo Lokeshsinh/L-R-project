@@ -404,10 +404,6 @@ const quickQuestions = [
 ];
 
 
-/* =========================================================
-   LOCAL AI KNOWLEDGE
-   Used when no backend AI endpoint is configured.
-========================================================= */
 
 const knowledgeBase = [
     {
@@ -430,7 +426,7 @@ const knowledgeBase = [
             "services",
         ],
         answer:
-            "L&R Prefab Solar India can support projects across prefabricated structures, PEB buildings, industrial sheds, MS containers, roofing systems, sandwich panels and solar-ready structural solutions.",
+            "L&R Prefab Solar India can support projects across prefabricated structures, PEB buildings, industrial sheds, MS containers, roofing systems, sandwich panels, LGSF buildings, rooftop structures, clean rooms, HVAC solutions and solar-ready structural solutions.",
     },
 
     {
@@ -460,20 +456,461 @@ const knowledgeBase = [
             "peb",
             "pre engineered building",
             "pre engineered buildings",
+            "factory building",
         ],
         answer:
-            "Pre-Engineered Buildings, or PEBs, are factory-designed and fabricated structural systems assembled at the project site. They are commonly used for warehouses, industrial facilities and other large-span applications.",
+            "Pre-Engineered Buildings, or PEBs, are factory-designed and fabricated structural systems assembled at the project site. They are commonly used for warehouses, industrial facilities, factories and other large-span applications.",
     },
 
     {
         keywords: [
-            "container",
-            "ms container",
-            "modular container",
+            "bess container",
+            "bess containers",
+            "battery energy storage container",
+            "battery storage container",
         ],
         answer:
-            "MS containers can be engineered for applications such as site offices, storage, accommodation and equipment housing. Their configuration can be developed according to project dimensions and functional requirements.",
+            "BESS Containers are specialized containerized solutions designed to house Battery Energy Storage Systems. They can be engineered with appropriate layouts, ventilation, electrical provisions and safety considerations according to project requirements.",
     },
+
+    {
+        keywords: [
+            "ms container",
+            "ms containers",
+            "mild steel container",
+            "mild steel containers",
+        ],
+        answer:
+            "MS Containers are durable modular structures suitable for site offices, storage, accommodation, equipment housing and other project applications. They can be customized according to dimensions, layout and functional requirements.",
+    },
+
+    {
+        keywords: [
+            "premium container",
+            "premium containers",
+        ],
+        answer:
+            "Premium Containers are enhanced modular container solutions designed with improved finishes, layouts and features for projects requiring a more refined and comfortable environment.",
+    },
+
+    {
+        keywords: [
+            "executive ms container",
+            "executive ms containers",
+        ],
+        answer:
+            "Executive MS Containers are premium MS-based modular units designed for executive offices, accommodation and other applications where additional comfort, appearance and functionality are required.",
+    },
+
+    {
+        keywords: [
+            "l&r value container",
+            "lr value container",
+            "value container",
+        ],
+        answer:
+            "L&R Value Containers provide practical and economical modular space solutions for offices, storage, accommodation and project requirements while maintaining functional and durable construction.",
+    },
+
+    {
+        keywords: [
+            "home container",
+            "container home",
+            "container house",
+        ],
+        answer:
+            "Home Containers are modular residential units designed to provide practical living spaces using prefabricated construction. They can be configured according to space, layout and project requirements.",
+    },
+
+    {
+        keywords: [
+            "executive container",
+            "executive containers",
+        ],
+        answer:
+            "Executive Containers are premium modular units suitable for executive offices, accommodation, site facilities and other applications requiring enhanced comfort, aesthetics and functionality.",
+    },
+
+    {
+        keywords: [
+            "puf container",
+            "puf containers",
+            "puf container room",
+        ],
+        answer:
+            "PUF Containers use Polyurethane Foam insulated panels to provide improved thermal insulation. They are suitable for site offices, storage, accommodation and temperature-sensitive applications.",
+    },
+
+    {
+        keywords: [
+            "factory building",
+            "factory buildings",
+            "prefab factory",
+            "prefabricated factory",
+        ],
+        answer:
+            "Prefab Factory Buildings provide efficient structural solutions for manufacturing and industrial operations. They can be designed around production requirements, machinery, storage, ventilation and future expansion needs.",
+    },
+
+    {
+        keywords: [
+            "warehouse",
+            "warehouses",
+            "prefab warehouse",
+            "industrial warehouse",
+        ],
+        answer:
+            "Prefab Warehouses are designed for storage, logistics and industrial applications. They can provide large usable spaces with efficient structural systems and can be customized according to operational requirements.",
+    },
+
+    {
+        keywords: [
+            "industrial shed",
+            "industrial sheds",
+            "prefab industrial shed",
+        ],
+        answer:
+            "Industrial Sheds are large-span structures designed for manufacturing, storage, workshops and industrial operations. They can be engineered according to site conditions, dimensions, loading and operational requirements.",
+    },
+
+    {
+        keywords: [
+            "prefab modular building",
+            "prefab modular buildings",
+            "modular building",
+            "modular buildings",
+        ],
+        answer:
+            "Prefab Modular Buildings are factory-manufactured building systems that can be quickly assembled at the project site. They are suitable for offices, accommodation, commercial spaces, institutional facilities and specialized applications.",
+    },
+
+    {
+        keywords: [
+            "prefab labour accommodation",
+            "prefab labor accommodation",
+            "labour accommodation",
+            "labor accommodation",
+            "worker accommodation",
+        ],
+        answer:
+            "Prefab Labour Accommodation provides practical and scalable living facilities for workers and project teams. Units can include sleeping areas, common spaces, washrooms and other facilities based on project requirements.",
+    },
+
+    {
+        keywords: [
+            "prefab site office",
+            "prefab site offices",
+            "site office",
+            "site offices",
+        ],
+        answer:
+            "Prefab Site Offices are modular office units designed for construction sites, industrial projects and temporary or semi-permanent workplaces. They can be customized with office layouts, electrical systems, insulation and required facilities.",
+    },
+
+    {
+        keywords: [
+            "control room",
+            "control rooms",
+            "prefab control room",
+            "electrical control room",
+        ],
+        answer:
+            "Prefab Control Rooms are specialized modular structures designed for monitoring, electrical and operational control applications. They can be configured with appropriate insulation, electrical provisions and equipment layouts.",
+    },
+
+    {
+        keywords: [
+            "clean room",
+            "clean rooms",
+            "cleanroom",
+            "cleanrooms",
+            "prefab clean room",
+        ],
+        answer:
+            "Prefab Clean Rooms are controlled-environment spaces designed for applications where cleanliness, temperature, humidity and contamination control are important. They can be configured according to the required clean-room specifications.",
+    },
+
+    {
+        keywords: [
+            "prefab mushroom farm",
+            "prefab mushroom farms",
+            "mushroom farm",
+            "mushroom farming",
+        ],
+        answer:
+            "Prefab Mushroom Farms are specialized structures designed for controlled mushroom cultivation environments. They can incorporate insulated panels and suitable environmental provisions according to cultivation requirements.",
+    },
+
+    {
+        keywords: [
+            "prefab industrial enclosure",
+            "prefab industrial enclosures",
+            "industrial enclosure",
+            "industrial enclosures",
+        ],
+        answer:
+            "Prefab Industrial Enclosures provide protected spaces for machinery, equipment, processes and industrial operations. They can be customized according to equipment dimensions, access requirements and environmental conditions.",
+    },
+
+    {
+        keywords: [
+            "prefab railway shelter",
+            "railway shelters",
+            "railway shelter",
+            "prefab railway",
+        ],
+        answer:
+            "Prefab Railway Shelters are modular structures designed for railway infrastructure applications such as equipment protection, staff facilities and utility spaces. They can be engineered according to site and operational requirements.",
+    },
+
+    {
+        keywords: [
+            "telecom shelter",
+            "telecom shelters",
+            "prefab telecom shelter",
+            "telecommunication shelter",
+        ],
+        answer:
+            "Prefab Telecom Shelters provide protected modular spaces for telecommunications equipment and infrastructure. They can be designed with suitable insulation, ventilation, electrical provisions and equipment layouts.",
+    },
+
+    {
+        keywords: [
+            "prefab dry wall",
+            "dry wall",
+            "drywall",
+            "dry wall system",
+        ],
+        answer:
+            "Prefab Dry Wall systems provide lightweight and efficient internal or partition wall solutions. They can be used for offices, commercial spaces, residential buildings and other applications requiring fast interior construction.",
+    },
+
+
+
+    {
+        keywords: [
+            "sandwich panel",
+            "sandwich panels",
+        ],
+        answer:
+            "Sandwich Panels are insulated building panels consisting of an insulating core between protective outer layers. They are widely used for walls, roofs, cold rooms, industrial buildings and other applications requiring insulation and efficient installation.",
+    },
+
+    {
+        keywords: [
+            "puf sandwich panel",
+            "puf sandwich panels",
+            "puf panel",
+            "puf panels",
+        ],
+        answer:
+            "PUF Sandwich Panels use Polyurethane Foam as the insulation core. They provide effective thermal insulation and are commonly used for industrial buildings, cold rooms, site facilities, walls and roofing applications.",
+    },
+
+    {
+        keywords: [
+            "wall puf panel",
+            "wall puf panels",
+            "puf wall panel",
+            "puf wall panels",
+        ],
+        answer:
+            "Wall PUF Panels are insulated wall panels designed to provide thermal performance, protection and fast installation. They are suitable for industrial, commercial, cold-room and modular building applications.",
+    },
+
+    {
+        keywords: [
+            "roof puf panel",
+            "roof puf panels",
+            "puf roof panel",
+            "puf roof panels",
+        ],
+        answer:
+            "Roof PUF Panels are insulated roofing panels designed to provide thermal insulation and weather protection. They are suitable for industrial buildings, warehouses, prefab structures and other roofing applications.",
+    },
+
+    {
+        keywords: [
+            "rockwool panel",
+            "rock wool panel",
+            "rockwool panels",
+            "rock wool panels",
+        ],
+        answer:
+            "Rockwool Panels use mineral wool insulation and are commonly selected where thermal insulation and fire-performance considerations are important. They can be used for industrial, commercial and specialized building applications.",
+    },
+
+    {
+        keywords: [
+            "glasswool panel",
+            "glass wool panel",
+            "glasswool panels",
+            "glass wool panels",
+        ],
+        answer:
+            "Glasswool Panels use glass-fibre insulation to provide thermal and acoustic insulation. They are suitable for walls, roofs, industrial buildings and applications where lightweight insulation is required.",
+    },
+
+
+
+    {
+        keywords: [
+            "rooftop room",
+            "rooftop rooms",
+            "roof top room",
+            "roof top rooms",
+        ],
+        answer:
+            "Rooftop Rooms are lightweight modular spaces designed for additional usable space on existing buildings. They can be customized for residential, hospitality, office or recreational applications subject to structural feasibility.",
+    },
+
+    {
+        keywords: [
+            "rooftop residential flat",
+            "rooftop residential flats",
+            "rooftop flat",
+            "rooftop flats",
+        ],
+        answer:
+            "Rooftop Residential Flats provide additional living spaces constructed on suitable existing rooftops. Modular construction can help create efficient layouts while reducing conventional construction time.",
+    },
+
+    {
+        keywords: [
+            "rooftop party lounge",
+            "rooftop party lounges",
+            "rooftop lounge",
+            "rooftop lounges",
+        ],
+        answer:
+            "Rooftop Party Lounges are modular rooftop spaces designed for entertainment, gatherings and recreational use. They can be customized with suitable layouts, finishes and facilities.",
+    },
+
+    {
+        keywords: [
+            "rooftop guest room",
+            "rooftop guest rooms",
+            "rooftop guest room",
+        ],
+        answer:
+            "Rooftop Guest Rooms provide additional accommodation spaces on suitable rooftops. They can be designed as comfortable modular rooms with appropriate insulation, finishes and facilities.",
+    },
+
+    {
+        keywords: [
+            "rooftop servant room",
+            "rooftop servant rooms",
+            "servant room",
+            "servant rooms",
+        ],
+        answer:
+            "Rooftop Servant Rooms are compact modular accommodation spaces designed for residential properties where additional staff accommodation is required.",
+    },
+
+
+    {
+        keywords: [
+            "light gauge steel frame",
+            "light gauge steel framing",
+            "lgsf",
+            "lgsf buildings",
+            "lgsf building",
+        ],
+        answer:
+            "Light Gauge Steel Frame (LGSF) Buildings use lightweight cold-formed steel framing to create strong and efficient building structures. LGSF construction is suitable for residential, commercial and specialized modular applications.",
+    },
+
+    {
+        keywords: [
+            "lgsf prefab residential houses",
+            "lgsf residential houses",
+            "lgsf house",
+            "lgsf houses",
+            "g+1",
+            "g+2",
+        ],
+        answer:
+            "LGSF Prefab Residential Houses can be designed for multi-level residential applications such as G+1 and G+2 buildings. The system provides lightweight structural framing with flexible layouts and efficient construction.",
+    },
+
+    {
+        keywords: [
+            "lgsf luxury lounge",
+            "lgsf luxury lounges",
+            "luxury lgsf lounge",
+            "lgsf lounge",
+        ],
+        answer:
+            "LGSF Luxury Lounges combine lightweight steel framing with premium architectural finishes to create comfortable and visually refined spaces for residential, hospitality or recreational applications.",
+    },
+
+    {
+        keywords: [
+            "lgsf showroom",
+            "lgsf showrooms",
+            "steel frame showroom",
+        ],
+        answer:
+            "LGSF Showrooms provide lightweight and flexible structures for retail and product-display applications. Layouts and finishes can be customized according to branding and functional requirements.",
+    },
+
+    {
+        keywords: [
+            "lgsf prefab sales office",
+            "lgsf prefab sales offices",
+            "lgsf sales office",
+            "prefab sales office",
+        ],
+        answer:
+            "LGSF Prefab Sales Offices are lightweight modular structures designed for sales, customer interaction and project-site requirements. They can be configured with customized layouts and finishes.",
+    },
+
+    {
+        keywords: [
+            "lgsf prefab waiting area",
+            "lgsf prefab waiting areas",
+            "lgsf waiting area",
+            "prefab waiting area",
+        ],
+        answer:
+            "LGSF Prefab Waiting Areas provide lightweight, durable and customizable spaces for customers, visitors and staff. They can be designed for offices, commercial facilities, transport areas and other applications.",
+    },
+
+
+    {
+        keywords: [
+            "farmhouse",
+            "farmhouses",
+            "prefab farmhouse",
+            "prefab farmhouses",
+        ],
+        answer:
+            "Prefab Farmhouses provide comfortable modular living spaces suitable for agricultural properties, weekend homes and rural developments. Designs can be customized according to the site, lifestyle and functional requirements.",
+    },
+
+    {
+        keywords: [
+            "cottage",
+            "cottages",
+            "prefab cottage",
+            "prefab cottages",
+        ],
+        answer:
+            "Prefab Cottages are modular accommodation or residential structures designed for resorts, farmhouses, holiday properties and rural environments. They can be customized with different layouts, finishes and amenities.",
+    },
+
+    {
+        keywords: [
+            "hvac",
+            "hvac solutions",
+            "hvac system",
+            "hvac systems",
+            "heating ventilation air conditioning",
+        ],
+        answer:
+            "L&R HVAC Solutions can support heating, ventilation and air-conditioning requirements for modular, industrial, commercial and specialized buildings. HVAC planning can be coordinated with the building layout, insulation and operational requirements.",
+    },
+
 
     {
         keywords: [
@@ -485,6 +922,7 @@ const knowledgeBase = [
         answer:
             "Solar mounting structures provide the structural interface between the solar modules and the supporting roof or ground system. Proper design considers loads, module arrangement, installation requirements and long-term durability.",
     },
+
 
     {
         keywords: [
@@ -499,6 +937,8 @@ const knowledgeBase = [
             "For project-specific pricing or a quotation, please share your project requirements such as structure type, approximate dimensions, location and solar capacity. You can also contact the L&R Green team directly through WhatsApp.",
     },
 
+
+
     {
         keywords: [
             "hello",
@@ -509,7 +949,7 @@ const knowledgeBase = [
             "good evening",
         ],
         answer:
-            "Hello! 👋 I'm the L&R Green AI Assistant. I can help you understand Pre-Engineered Prefab Solar, PEB structures, roofing systems, containers, solar mounting solutions and project requirements.",
+            "Hello! 👋 I'm the L&R Green AI Assistant. I can help you understand Pre-Engineered Prefab Solar, PEB structures, containers, industrial buildings, prefab solutions, sandwich panels, rooftop solutions, LGSF buildings, HVAC solutions and project requirements.",
     },
 ];
 
