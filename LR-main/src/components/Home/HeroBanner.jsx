@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "./HeroBanner.module.css";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import buildingImg from '../../assets/Home/buildImg.png'
-import banner from '../../assets/Home/banner1.png'
 import product from '../../assets/Home/product.png'
 import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
 import user from '../../assets/conatiners/HomeConatiner/user.png'
@@ -264,11 +263,10 @@ function HeroBanner() {
 
 
       {/* ================= Slide 3 ================= */}
-      <div
+      {/* <div
         className={`${styles.heroPanel} ${current === 2 ? styles.active : ""
           }`}
       >
-        {/* Background */}
         <img
           src={banner}
           alt="Solar Fastener"
@@ -278,14 +276,11 @@ function HeroBanner() {
 
         <div className={styles.heroHeading}>
           <h3>L&amp;R GREEN INDIA PVT LTD</h3>
-
           <h1>
             SOLAR FASTENER AND COMPONENT
             MANUFACTURE AND SUPPLIER
           </h1>
         </div>
-
-        {/* down */}
         <div className={styles.heroContent}>
           <p>
             We manufacture high-quality solar fasteners and related
@@ -293,20 +288,17 @@ function HeroBanner() {
             Established in 2015 in New Delhi, delivering reliable
             solutions.
           </p>
-
           <button className={styles.heroBtn}>
             <span>All Category</span>
             <ArrowRight className={styles.heroArrow} size={20} />
           </button>
         </div>
-        {/* downImage */}
         <div className={styles.productImage}>
           <img
             src={product}
             alt="Solar Components"
           />
         </div>
-        {/* downRight */}
         <div className={styles.heroStatsCard}>
           <div className={styles.heroStatItem}>
             <h2>500+</h2>
@@ -330,6 +322,78 @@ function HeroBanner() {
         </div>
 
 
+      </div> */}
+
+
+      <div className={`${styles.heroPanel} ${current === 2 ? styles.active : ""
+        }`}>
+        {/* <img
+          src={banner}
+          alt="Solar Fastener"
+          className={styles.heroBg}
+        /> */}
+
+        {/* Do NOT use dark overlay */}
+        <div className={styles.overlay}></div>
+        <div className={styles.heroHeading}>
+          <h3>L&amp;R PREFAB SOLAR INDIA PVT LTD</h3>
+
+          <p className={styles.heroSubHeading}>
+            SOLAR FASTENER AND COMPONENT MANUFACTURE AND SUPPLIER
+          </p>
+
+          <div className={styles.backgroundTitle}>
+            L&amp;R FASTENER
+          </div>
+        </div>
+
+        <div className={styles.heroFlexUser}>
+          <div className={styles.heroContent}>
+            <p>
+              We manufacture high-quality solar fasteners and related
+              components for durable, efficient solar installations.
+              Established in 2015 in New Delhi, delivering reliable
+              solutions.
+            </p>
+            <button className={styles.heroBtn}>
+              <span>All Category</span>
+
+              <ArrowRight
+                className={styles.heroArrow}
+                size={20}
+              />
+            </button>
+          </div>
+          <div className={styles.productImage}>
+            <img
+              src={product}
+              alt="Solar Components"
+            />
+          </div>
+
+          <div className={styles.heroStatsCard}>
+
+            <div className={styles.heroStatItem}>
+              <h2>500+</h2>
+              <p>Completed Projects</p>
+            </div>
+
+            <div className={styles.heroStatItem}>
+              <h2>25+</h2>
+              <p>Years Of Experience</p>
+            </div>
+
+            <div className={styles.heroStatItem}>
+              <h2>900+</h2>
+              <p>Happy Clients</p>
+            </div>
+
+            <div className={styles.heroStatItem}>
+              <h2>150+</h2>
+              <p>Team Workers</p>
+            </div>
+          </div>
+        </div>
       </div>
 
 
