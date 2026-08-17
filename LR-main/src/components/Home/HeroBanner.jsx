@@ -7,7 +7,9 @@ import product from '../../assets/Home/product.png'
 import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
 import user from '../../assets/conatiners/HomeConatiner/user.png'
 import container from '../../assets/banner3.png'
+import { useNavigate } from "react-router-dom";
 function HeroBanner() {
+  const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
 
   const totalSlides = 4;
@@ -62,7 +64,7 @@ function HeroBanner() {
               prefabricated cabins and solar. Established in 2015, New Delhi.
             </p>
 
-            <button className={styles.heroButton}>
+            <button onClick={() => navigate('/about')} className={styles.heroButton}>
               <span>All Category</span>
               <ArrowRight size={20} />
             </button>
@@ -202,7 +204,7 @@ function HeroBanner() {
               New Delhi.
             </p>
 
-            <button className={styles.heroBtn}>
+            <button onClick={() => navigate('/about')} className={styles.heroBtn}>
               <span>All Category</span>
               <ArrowRight className={styles.heroArrow} size={20} />
             </button>
@@ -355,7 +357,7 @@ function HeroBanner() {
               Established in 2015 in New Delhi, delivering reliable
               solutions.
             </p>
-            <button className={styles.heroBtn}>
+            <button  onClick={() => navigate('/about')} className={styles.heroBtn}>
               <span>All Category</span>
 
               <ArrowRight
@@ -488,7 +490,7 @@ function HeroBanner() {
             Durable modular steel containers built for strength,
             mobility, and rapid deployment across India.
           </p>
-          <button className={styles.containerBtn}>
+          <button onClick={() => navigate('/about')} className={styles.containerBtn}>
             <span>All Category</span>
             <ArrowRight
               className={styles.containerArrow}

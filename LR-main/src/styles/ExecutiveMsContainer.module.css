@@ -1956,7 +1956,7 @@
   position: relative;
   bottom: SolarEpicpx;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  bottom: 65px;
+  bottom: 45px;
 }
 
 .mfgImgWrapper img {
@@ -2030,73 +2030,107 @@
 
 }
 
+@media (max-width:1280px) {
+  .mfgBand {
+    width: 100%;
+    height: 370px;
+    padding: 60px 50px;
+  }
+
+  .mfgText h2 {
+    font-size: 45px;
+  }
+
+  .mfgImgWrapper {
+    width: 43%;
+    height: 290px;
+    bottom: 20px;
+  }
+
+  .LastImage img {
+    position: absolute;
+    bottom: -10px;
+    width: 260px;
+    height: 170px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mfgText {
+    max-width: 630px;
+  }
+
+  .mfgText p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .LastImage {
+    left: -7%;
+    bottom: -20px;
+  }
+
+}
+
+
+
 @media (max-width:1200px) {
 
   .mfgBand {
-    height: auto;
-    padding: 70px 5%;
+    padding: 35px 35px;
   }
 
   .mfgContainer {
     gap: 40px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 65px;
+    align-items: center;
   }
 
   .mfgText {
-    max-width: 55%;
+    max-width: 100%;
   }
 
   .mfgText h2 {
     font-size: 42px;
   }
 
-  .mfgText p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
   .mfgImgWrapper {
-    width: 42%;
-    height: 290px;
-    bottom: 0;
+    width: 400px;
+    height: 260px;
+    bottom: -20px;
+    flex-shrink: 0;
   }
 
-  .LastImage {
-    left: -3%;
-    bottom: 30%;
+  .scrollTrack h1 {
+    font-size: 60px;
   }
 
   .LastImage img {
-    width: 220px;
-    height: 180px;
+    position: absolute;
+    bottom: -220px;
+    width: 240px;
+    height: auto;
   }
 
 }
 
-@media (max-width:992px) {
+
+@media (max-width:1050px) {
 
   .mfgBand {
-    height: auto;
-    padding: 60px 5%;
-  }
-
-  .scrollTrack h1 {
-    font-size: 55px;
-    letter-spacing: 2px;
+    padding: 30px 30px;
+    height: auto
   }
 
   .mfgContainer {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 45px;
+    flex-direction: column;
+    gap: 35px;
   }
 
   .mfgText {
     max-width: 100%;
-    text-align: center;
   }
 
   .mfgText h2 {
@@ -2104,16 +2138,64 @@
   }
 
   .mfgText p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .mfgImgWrapper {
     width: 100%;
-    max-width: 650px;
-    height: 360px;
+    max-width: 700px;
+    height: 420px;
     bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .LastImage {
+    display: none;
+  }
+
+
+}
+
+@media (max-width:992px) {
+
+  .mfgBand {
+    padding: 30px 30px;
+    height: auto
+  }
+
+  .mfgContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .mfgText {
+    max-width: 100%;
+  }
+
+  .mfgText h2 {
+    font-size: 38px;
+  }
+
+  .mfgText p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
   }
 
   .LastImage {
@@ -2122,103 +2204,121 @@
 
 }
 
+
 @media (max-width:768px) {
 
   .mfgBand {
-    padding: 55px 5%;
+    padding: 55px 22px;
   }
 
-  .scrollTrack h1 {
-    font-size: 45px;
+  .mfgContainer {
+    gap: 30px;
   }
 
   .mfgText h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .mfgText p {
     font-size: 15px;
-  }
-
-  .mfgImgWrapper {
-    width: 100%;
-    height: 300px;
-  }
-
-}
-
-@media (max-width:576px) {
-
-  .mfgBand {
-    padding: 50px 20px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 34px;
-    letter-spacing: 1px;
-  }
-
-  .mfgText h2 {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .mfgText p {
-    font-size: 14px;
     line-height: 1.8;
   }
 
   .mfgImgWrapper {
     width: 100%;
-    height: 240px;
-    border-radius: 10px;
+    height: 340px;
+    border-radius: 8px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
   }
 
 }
+
+
+@media (max-width:576px) {
+
+  .mfgBand {
+    padding: 50px 18px;
+  }
+
+  .mfgText h2 {
+    font-size: 28px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+  }
+
+  .mfgImgWrapper {
+    width: 100%;
+    height: 280px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 34px;
+  }
+
+}
+
+
 
 @media (max-width:480px) {
 
   .mfgBand {
-    padding: 45px 18px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 28px;
+    padding: 45px 15px;
   }
 
   .mfgText h2 {
     font-size: 24px;
+    line-height: 1.35;
   }
 
   .mfgText p {
-    font-size: 13.5px;
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .mfgImgWrapper {
-    height: 210px;
+    width: 100%;
+    height: 220px;
+    border-radius: 6px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
   }
 
 }
 
+
 @media (max-width:360px) {
+
+  .mfgBand {
+    padding: 40px 12px;
+  }
+
+  .mfgText h2 {
+    font-size: 22px;
+  }
+
+  .mfgText p {
+    font-size: 12.5px;
+  }
+
+  .mfgImgWrapper {
+    height: 190px;
+  }
 
   .scrollTrack h1 {
     font-size: 22px;
   }
 
-  .mfgText h2 {
-    font-size: 21px;
-  }
-
-  .mfgText p {
-    font-size: 13px;
-  }
-
-  .mfgImgWrapper {
-    height: 180px;
-  }
-
 }
+
 
 /* ===========================
    PRODUCTS
@@ -2374,6 +2474,64 @@
   }
 }
 
+@media (max-width:1280px) {
+
+  .productsSec {
+    padding: 65px 40px;
+  }
+
+  .productsHeader {
+    margin-bottom: 50px;
+    gap: 35px;
+  }
+
+  .productText h2 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .productsDivider {
+    width: 105px;
+  }
+
+  .productsSubtext {
+    max-width: 360px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .expertiseGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .expCard {
+    height: 350px;
+  }
+
+  .expLabel {
+    height: 80px;
+    padding: 18px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 210px;
+  }
+
+  .expLabel h4 {
+    font-size: 18px;
+  }
+
+  .desc {
+    margin-top: 14px;
+  }
+
+  .desc p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
 @media (max-width:1200px) {
 
   .productsSec {
@@ -2399,7 +2557,11 @@
   }
 
   .expCard {
-    height: 390px;
+    height: 360px;
+  }
+
+  .expCard:hover .expLabel {
+    height: 130px;
   }
 
 }
@@ -2431,7 +2593,7 @@
   }
 
   .expCard {
-    height: 360px;
+    height: 350px;
   }
 
   .expLabel {
@@ -2439,7 +2601,7 @@
   }
 
   .expCard:hover .expLabel {
-    height: 180px;
+    height: 155px;
   }
 
 }
@@ -2474,7 +2636,7 @@
   }
 
   .expCard {
-    height: 420px;
+    height: 330px;
   }
 
   .expImg {
@@ -2490,7 +2652,7 @@
   }
 
   .expCard:hover .expLabel {
-    height: 170px;
+    height: 140px;
   }
 
   .expLabel h4 {
@@ -2531,7 +2693,7 @@
   }
 
   .expCard {
-    height: 340px;
+    height: 320px;
     border-radius: 12px;
   }
 
@@ -2548,7 +2710,7 @@
   }
 
   .expCard:hover .expLabel {
-    height: 155px;
+    height: 135px;
   }
 
   .expLabel h4 {
@@ -2573,7 +2735,7 @@
   }
 
   .productText h2 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .productsDivider {
@@ -2581,7 +2743,7 @@
   }
 
   .productsSubtext {
-    font-size: 13.5px;
+    font-size: 12.5px;
   }
 
   .expertiseGrid {
@@ -2626,11 +2788,11 @@
   }
 
   .productText h2 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .productsSubtext {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .expCard {
@@ -2648,7 +2810,7 @@
   }
 
   .expCard:hover .expLabel {
-    height: 130px;
+    height: 140px;
   }
 
   .expLabel h4 {
@@ -3154,7 +3316,8 @@
 =========================== */
 .cta {
   width: 100%;
-  background: url('../assets/conatiners/ExecutiveContainer/cta.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/conatiners/ExecutiveContainer/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3176,7 +3339,7 @@
 .cta p {
   font-size: 0.97rem;
   opacity: 0.85;
-  max-width: 600px;
+  max-width: 800px;
   line-height: 1.7;
   text-align: center;
   margin-bottom: 20px;
@@ -3253,41 +3416,34 @@
 }
 
 
-@media (max-width: 1440px) {
+
+@media (max-width:1280px) {
 
   .cta {
-    padding: 55px 50px;
-    gap: 10px;
-    background-position: center;
-    background-size: cover;
+    padding: 60px 40px;
   }
 
   .cta h2 {
-    font-size: 46px;
-    line-height: 1.25;
+    font-size: 40px;
+    line-height: 1.2;
     text-align: center;
-    margin: 0;
   }
 
   .cta p {
-    max-width: 560px;
+    max-width: 700px;
+    margin: 0 auto 24px;
     font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    text-align: center;
+    line-height: 1.8;
   }
 
   .contactBtn {
-    width: 240px;
-    height: 52px;
-    padding: 0 24px;
-    gap: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
   }
 
-  .contactText {
-    font-size: 15px;
-  }
 }
+
 
 @media (max-width:1200px) {
 

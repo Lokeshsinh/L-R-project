@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import reshouse1 from '../assets/PREFAB/prefabresi/reshouse1.png'
-import reshouse2 from '../assets/PREFAB/prefabresi/reshouse2.jpg'
+import reshouse2 from '../assets/PREFAB/prefabresi/reshouse2.png'
 import reshouse3 from '../assets/PREFAB/prefabresi/reshouse3.png'
 import reshouse4 from '../assets/PREFAB/prefabresi/reshouse5.jpg'
 import design from '../assets/PREFAB/prefabresi/design.png'
@@ -361,8 +361,8 @@ const PrefabResidentialHouse = () => {
             <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>Find quick answers to common questions about LGSF prefab residential houses (G+1 / G+2),
-            including construction, durability, and benefits. Understand why they are a fast, reliable, and modern housing solution.</p>
+          <p>Quick answers to common LGSF prefab house questions—covering construction,
+            durability, and benefits of fast, reliable, modern G+1/G+2 housing.</p>
         </div>
         <div className={styles.faqBody}>
           {/*  */}

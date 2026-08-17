@@ -549,7 +549,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 64px;
+    width: 79px;
     padding: 16px 10px;
     display: flex;
     flex-direction: column;
@@ -565,11 +565,37 @@
 }
 
 
+.floatingContact {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    pointer-events: auto;
+}
+
+.contactButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    background: #fff;
+    color: #293f67;
+}
+
 
 .contactButton {
     position: relative;
-    width: 50px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;

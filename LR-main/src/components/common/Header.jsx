@@ -641,7 +641,7 @@ const Header = () => {
           </li>
         </ul>
 
-        <button className="dark-btn desktop-btn"><span>Get Started</span></button>
+        <button onClick={() => navigate('/contact')} className="dark-btn desktop-btn"><span>Get Started</span></button>
         <button
           className="menu-btn"
           onClick={toggleMenu}

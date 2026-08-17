@@ -132,7 +132,7 @@
 
   .heroDesc {
     font-size: 16px;
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .btnWhite {
@@ -588,9 +588,7 @@
 
   .introImg {
     width: 52%;
-    min-width: 0;
-    max-width: none;
-    height: 430px !important;
+    height: 468px !important;
     flex: 1 1 52%;
   }
 
@@ -633,9 +631,7 @@
   /* IMAGE */
   .introImg {
     width: 51%;
-    min-width: 0;
-    max-width: none;
-    height: 440px !important;
+    height: 450px !important;
     flex: 1 1 51%;
   }
 
@@ -653,7 +649,7 @@
   }
 
   .introText p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.65;
     margin-bottom: 12px;
   }

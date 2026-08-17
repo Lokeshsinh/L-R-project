@@ -2086,12 +2086,17 @@
     width: 48%;
   }
 
+  .content p {
+    font-size: 16px;
+  }
+
+
 }
 
 @media screen and (max-width:1366px) {
 
   .smartHead h2 {
-    font-size: 44px;
+    font-size: 48px;
   }
 
   .imageWrappers {
@@ -2113,6 +2118,11 @@
 
   .SmartFlex {
     gap: 40px;
+  }
+
+
+  .smartHead h2 {
+    font-size: 48px;
   }
 
   .smartHead {
@@ -2142,7 +2152,7 @@
   }
 
   .smartHead h2 {
-    font-size: 40px;
+    font-size: 48px;
   }
 
   .featuresSection {
@@ -2151,7 +2161,7 @@
 
   .imageWrappers {
     width: 430px;
-    height: 440px;
+    height: 470px;
   }
 
   .content h3 {
@@ -2164,45 +2174,112 @@
 
 }
 
-@media screen and (max-width:1024px) {
+
+@media screen and (max-width:1140px) {
 
   .smart {
-    padding: 65px 4%;
+    padding: 65px 35px;
   }
 
-  .smartHead h2 {
-    font-size: 36px;
+  /* TOP HEADER */
+  .SmartFlex {
+    gap: 35px;
+    margin-bottom: 55px;
   }
 
-  .featuresSection {
-    gap: 30px;
-  }
-
-  .leftSide {
+  .smartHead {
     width: 55%;
   }
 
-  .rightSide {
+  .smartHead h2 {
+    font-size: 42px;
+  }
+
+  .smartLine {
+    width: 105px;
+  }
+
+  .SmartFlex p {
     width: 45%;
+    max-width: 430px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .featuresSection {
+    gap: 35px;
+    align-items: flex-start;
+  }
+
+  .leftSide {
+    width: 52%;
+    gap: 40px;
+  }
+
+  .rightSide {
+    width: 48%;
+  }
+
+  .featureCard {
+    gap: 18px;
+  }
+
+  .iconBox {
+    width: 45px;
+    min-width: 45px;
+  }
+
+  .content h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .imageWrappers {
     width: 100%;
-    height: 350px;
+    max-width: 480px;
+    height: 430px;
+    margin-left: auto;
+  }
+}
+
+
+
+@media screen and (max-width:1050px) {
+
+  .SmartFlex {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
   }
 
-  .featureCard {
-    gap: 20px;
+  .smartHead {
+    align-items: center;
   }
 
-  .content h3 {
-    font-size: 20px;
+  .SmartFlex p {
+    max-width: 700px;
   }
 
-  .content p {
-    font-size: 14px;
+  .featuresSection {
+    flex-direction: column;
+    gap: 45px;
   }
 
+  .leftSide,
+  .rightSide {
+    width: 100%;
+  }
+
+  .imageWrappers {
+    max-width: 700px;
+    margin: auto;
+  }
 }
 
 
@@ -2244,6 +2321,10 @@
     gap: 18px;
   }
 
+  .SmartFlex p {
+    width: 100%;
+  }
+
   .leftSide {
     gap: 35px;
   }
@@ -2254,6 +2335,9 @@
 }
 
 @media (max-width:576px) {
+  .smartHead h2 {
+    font-size: 28px;
+  }
 
   .featureCard {
     flex-direction: column;
@@ -2282,7 +2366,7 @@
   }
 
   .smartHead h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .smartLine {
@@ -2319,6 +2403,7 @@
   }
 
   .smartHead h2 {
+    width: 100%;
     font-size: 22px;
   }
 
@@ -2348,7 +2433,8 @@
   }
 
   .smartHead h2 {
-    font-size: 20px;
+    width: 100%;
+    font-size: 22px;
   }
 
   .smartLine {
@@ -2927,17 +3013,16 @@
 
 /* ==================strangeth======================= */
 
-.prefabShowcaseSection {
+/* .prefabShowcaseSection {
   width: 100%;
   height: 410px;
   background: #293F67;
   color: #fff;
   padding: 75px 60px;
   position: relative;
-  overflow: hidden;
+  overflow: hiddn;
 }
 
-/* Watermark */
 .prefabWatermark {
   position: absolute;
   top: 50%;
@@ -2968,8 +3053,6 @@
   color: rgba(255, 255, 255, .15);
 }
 
-/* Content Layout */
-
 .prefabShowcaseContainer {
   position: relative;
   z-index: 2;
@@ -2996,7 +3079,6 @@
   color: rgba(255, 255, 255, .82);
 }
 
-/* Decorative Shape */
 
 .prefabShape {
   position: absolute;
@@ -3009,8 +3091,6 @@
   height: 240px;
   object-fit: contain;
 }
-
-/* Image Card */
 
 .prefabImageCard {
   width: 500px;
@@ -3082,7 +3162,9 @@
 @media (max-width:1280px) {
 
   .prefabShowcaseContainer {
-    gap: 45px;
+    width: 100%;
+    height: 370px;
+    padding: 60px 50px;
   }
 
   .prefabContent {
@@ -3350,8 +3432,471 @@
     height: 170px;
   }
 
+} */
+
+
+
+.prefabShowcaseSection {
+  width: 100%;
+  height: 410px;
+  background: #293F67;
+  color: #fff;
+  padding: 70px 60px;
+  position: relative;
+  overflow: hidden;
 }
 
+.prefabWatermark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.prefabWatermarkTrack {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.prefabWatermarkTrack h1 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 85px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.211);
+  letter-spacing: 4px;
+  flex-shrink: 0;
+}
+
+.prefabShowcaseContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.prefabContent {
+  max-width: 800px;
+}
+
+.prefabContent h2 {
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #ffffffc3;
+  margin-bottom: 15px;
+}
+
+.prefabContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, .85);
+}
+
+.prefabShape {
+  position: absolute;
+  left: -60px;
+  bottom: 20px;
+  width: 150px;
+  height: 130px;
+}
+
+.prefabShape img {
+  width: 300px;
+  height: 240px;
+  object-fit: contain;
+}
+
+.prefabImageCard {
+  width: 480px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  bottom: 50px;
+  transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.prefabImageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform .6s ease, filter .6s ease;
+}
+
+.prefabImageCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background .5s ease;
+}
+
+.prefabImageCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+}
+
+.prefabImageCard:hover img {
+  transform: scale(1.08);
+  filter: brightness(.8);
+}
+
+.prefabImageCard:hover::after {
+  background: rgba(0, 0, 0, .15);
+}
+
+
+
+@media (max-width: 1280px) {
+
+  .prefabShowcaseSection {
+    height: 370px;
+    padding: 60px 50px;
+  }
+
+  .prefabContent {
+    max-width: 650px;
+  }
+
+  .prefabContent h2 {
+    font-size: 45px;
+  }
+
+  .prefabContent p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .prefabImageCard {
+    width: 40%;
+    height: 250px;
+    bottom: 15px;
+  }
+
+  .prefabShape {
+    left: -7%;
+    bottom: -20px;
+  }
+
+  .prefabShape img {
+    width: 260px;
+    height: 170px;
+  }
+
+}
+
+
+@media (max-width: 1200px) {
+
+  .prefabShowcaseSection {
+    padding: 35px 35px;
+  }
+
+  .prefabShowcaseContainer {
+    gap: 40px;
+    align-items: center;
+  }
+
+  .prefabContent {
+    max-width: 100%;
+  }
+
+  .prefabContent h2 {
+    font-size: 42px;
+  }
+
+  .prefabImageCard {
+    width: 400px;
+    height: 260px;
+    bottom: -20px;
+    flex-shrink: 0;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 60px;
+  }
+
+  .prefabShape img {
+    position: absolute;
+    bottom: -220px;
+    width: 240px;
+    height: auto;
+  }
+
+}
+
+
+@media (max-width: 1050px) {
+
+  .prefabShowcaseSection {
+    height: auto;
+    padding: 30px;
+  }
+
+  .prefabShowcaseContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .prefabContent {
+    max-width: 100%;
+  }
+
+  .prefabContent h2 {
+    font-size: 38px;
+  }
+
+  .prefabContent p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .prefabImageCard {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    bottom: 0;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .prefabShape {
+    display: none;
+  }
+
+}
+
+
+
+@media (max-width: 992px) {
+
+  .prefabShowcaseSection {
+    padding: 30px;
+    height: auto;
+  }
+
+  .prefabShowcaseContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .prefabContent {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .prefabContent h2 {
+    font-size: 38px;
+  }
+
+  .prefabContent p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .prefabImageCard {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    bottom: 0;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .prefabShape {
+    display: none;
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .prefabShowcaseSection {
+    padding: 55px 22px;
+  }
+
+  .prefabShowcaseContainer {
+    gap: 30px;
+  }
+
+  .prefabContent h2 {
+    font-size: 32px;
+  }
+
+  .prefabContent p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .prefabImageCard {
+    width: 100%;
+    height: 340px;
+    border-radius: 8px;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+  }
+
+}
+
+
+
+@media (max-width: 576px) {
+
+  .prefabShowcaseSection {
+    padding: 50px 18px;
+  }
+
+  .prefabContent h2 {
+    font-size: 28px;
+  }
+
+  .prefabContent p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .prefabImageCard {
+    width: 100%;
+    height: 280px;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 34px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .prefabShowcaseSection {
+    padding: 45px 15px;
+  }
+
+  .prefabContent h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .prefabContent p {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .prefabImageCard {
+    height: 250px;
+    border-radius: 8px;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 390px) {
+
+  .prefabShowcaseSection {
+    padding: 40px 14px;
+  }
+
+  .prefabContent h2 {
+    font-size: 23px;
+  }
+
+  .prefabContent p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .prefabImageCard {
+    height: 220px;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 27px;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .prefabShowcaseSection {
+    padding: 38px 12px;
+  }
+
+  .prefabContent h2 {
+    font-size: 21px;
+  }
+
+  .prefabContent p {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .prefabImageCard {
+    height: 200px;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+@media (max-width: 320px) {
+
+  .prefabShowcaseSection {
+    padding: 35px 12px;
+  }
+
+  .prefabContent h2 {
+    font-size: 19px;
+  }
+
+  .prefabContent p {
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+
+  .prefabImageCard {
+    height: 180px;
+  }
+
+  .prefabWatermarkTrack h1 {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+
+}
 
 
 /* =================process========================== */
@@ -7476,7 +8021,7 @@ why choose
   }
 
   .qualityHeading h2 {
-    font-size: 46px;
+    font-size: 48px;
   }
 
   .qualityDescription {
@@ -7617,7 +8162,7 @@ why choose
   }
 
   .qualityHeading h2 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .qualityTag {
@@ -7630,7 +8175,7 @@ why choose
   }
 
   .qualityDescription {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.6;
   }
 
@@ -7661,11 +8206,11 @@ why choose
 @media (max-width:390px) {
 
   .qualityHeading h2 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .qualityTag {
-    font-size: 11px;
+    font-size: 12px;
     padding: 8px 14px;
   }
 
@@ -7697,7 +8242,7 @@ why choose
   }
 
   .qualityHeading h2 {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .qualityLine {
@@ -7705,7 +8250,7 @@ why choose
   }
 
   .qualityDescription {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .qualityCard {
@@ -7945,7 +8490,7 @@ why choose
 @media (max-width:1280px) {
 
   .galaryText h2 {
-    font-size: 46px;
+    font-size: 48px;
   }
 
   .gallerySlide {
@@ -8121,7 +8666,7 @@ why choose
 @media (max-width:480px) {
 
   .galaryText h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .gallerySlide {
@@ -8170,7 +8715,7 @@ why choose
 @media (max-width:320px) {
 
   .galaryText h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .galaryLine {
@@ -9002,7 +9547,7 @@ why choose
 .photoSection {
   position: relative;
   width: 600px;
-  height: 610px;
+  height: 580px;
   border-radius: 24px;
   overflow: hidden;
   cursor: pointer;
@@ -9310,7 +9855,7 @@ why choose
   }
 
   .FounderTitle h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
 
   .profileContainer {
@@ -9331,6 +9876,9 @@ why choose
     font-size: 150px;
   }
 
+  .infoText {
+    font-size: 16px;
+  }
 }
 
 @media (max-width:1280px) {
@@ -9344,8 +9892,8 @@ why choose
   }
 
   .photoSection {
-    width: 470px;
-    height: 560px;
+    width: 520px;
+    height: 610px;
   }
 
   .bottomContent h2 {
@@ -9364,6 +9912,11 @@ why choose
     font-size: 16px;
   }
 
+  .infoSection {
+    max-width: 540px;
+  }
+
+
 }
 
 @media (max-width:1200px) {
@@ -9373,9 +9926,14 @@ why choose
   }
 
   .photoSection {
-    width: 430px;
-    height: 650px;
+    width: 470px;
+    height: 610px;
   }
+
+  .infoSection {
+    max-width: 520px;
+  }
+
 
   .backgroundTitle {
     font-size: 120px;
@@ -9383,7 +9941,105 @@ why choose
 
 }
 
+@media (max-width:1140px) {
 
+  .profileFounder {
+    padding: 65px 30px;
+    box-sizing: border-box;
+  }
+
+  .FounderTitle {
+    margin-bottom: 35px;
+  }
+
+  .FounderTitle h2 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .foundeLine {
+    width: 105px;
+  }
+
+  .profileContainer {
+    width: 100%;
+    padding: 20px 10px;
+    gap: 35px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .photoSection {
+    width: 48%;
+    max-width: 480px;
+    height: 530px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+
+  .badges {
+    top: 18px;
+    left: 18px;
+    gap: 8px;
+  }
+
+  .badges span {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .bottomContent {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .bottomContent h2 {
+    font-size: 32px;
+  }
+
+  .infoSection {
+    width: 52%;
+    max-width: 520px;
+    min-width: 0;
+  }
+
+  .designation {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+
+  .personName {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .titleDivider {
+    width: 70px;
+    height: 3px;
+    margin-bottom: 22px;
+  }
+
+  .infoText {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .readButton {
+    width: 165px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .backgroundTitle {
+    font-size: 100px;
+    right: -20px;
+    bottom: -5px;
+  }
+}
 
 @media (max-width:1024px) {
 
@@ -9539,7 +10195,7 @@ why choose
   }
 
   .FounderTitle h2 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .foundeLine {
@@ -9582,7 +10238,7 @@ why choose
   }
 
   .infoText {
-    font-size: 13px;
+    font-size: 12.5px;
     line-height: 1.7;
     margin-bottom: 16px;
   }
@@ -9607,7 +10263,7 @@ why choose
   }
 
   .bottomContent h2 {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .personName {
@@ -9619,7 +10275,7 @@ why choose
   }
 
   .infoText {
-    font-size: 12px;
+    font-size: 12.5px;
   }
 
   .readButton {
@@ -9638,7 +10294,7 @@ why choose
   }
 
   .FounderTitle h2 {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .photoSection {
@@ -9674,7 +10330,7 @@ why choose
   }
 
   .infoText {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.6;
   }
 

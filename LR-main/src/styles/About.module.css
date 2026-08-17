@@ -203,9 +203,118 @@
 
 
 
-/* ===========================
-   Responsive - About Section
-=========================== */
+
+@media (max-width: 1600px) {
+
+  .about-section {
+    width: 100%;
+    padding: 80px 70px;
+    gap: 70px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .about-left {
+    flex: 0 0 48%;
+    width: 48%;
+  }
+
+  .aboutImage {
+    width: 100%;
+    max-width: 610px;
+    height: 810px;
+  }
+
+  .experience-card {
+    right: -10px;
+    top: 27%;
+    width: 140px;
+  }
+
+  .about-right {
+    flex: 0 0 48%;
+    width: 48%;
+    max-width: 720px;
+  }
+
+  .about-right h2 {
+    font-size: 42px;
+    line-height: 1.4;
+  }
+
+  .about-right p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .sub {
+    font-size: 21px;
+  }
+
+  .AboutPrevLine {
+    width: 140px;
+  }
+
+}
+
+
+
+
+@media (max-width: 1500px) {
+
+  .about-section {
+    padding: 75px 55px;
+    gap: 55px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .about-left {
+    flex: 0 0 48%;
+    width: 48%;
+  }
+
+  .aboutImage {
+    width: 100%;
+    max-width: 590px;
+    height: 700px;
+  }
+
+  .experience-card {
+    width: 135px;
+    right: 45px;
+    top: 27%;
+  }
+
+  .about-right {
+    flex: 0 0 48%;
+    width: 48%;
+    max-width: 700px;
+  }
+
+  .about-right h2 {
+    font-size: 40px;
+    line-height: 1.4;
+  }
+
+  .about-right p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .sub {
+    font-size: 20px;
+  }
+
+  .AboutPrevLine {
+    width: 135px;
+  }
+
+  .primaryBtn {
+    padding: 10px 26px;
+    font-size: 15px;
+  }
+}
 
 /* 1440px */
 @media (max-width:1440px) {
@@ -223,7 +332,7 @@
   .aboutImage {
     width: 100%;
     max-width: 540px;
-    height: 600px;
+   height: 721px;
   }
 
   .experience-card {
@@ -245,7 +354,7 @@
 
   .aboutImage {
     max-width: 530px;
-    height: 722px;
+    height: 721px;
   }
 
   .about-right h2 {
@@ -273,7 +382,7 @@
 
   .aboutImage {
     max-width: 505px;
-    height: 775px;
+    height: 785px;
   }
 
   .experience-card {
@@ -314,7 +423,7 @@
   .aboutImage {
     width: 100%;
     max-width: 480px;
-    height: 548px;
+    height: 544px;
   }
 
 

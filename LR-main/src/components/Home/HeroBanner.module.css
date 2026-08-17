@@ -2626,7 +2626,7 @@
 
   .productImage {
     width: 720px;
-    bottom: 100px;
+    bottom: 50px;
   }
 
   .heroStatsCard {
@@ -2686,7 +2686,7 @@
 
   .productImage {
     width: 650px;
-    bottom: 95px;
+    bottom: 55px;
   }
 
   .heroStatsCard {
@@ -3973,7 +3973,7 @@
   }
 
 
- 
+
   .heroContent {
     position: relative;
     left: auto;
@@ -4477,34 +4477,68 @@
 }
 
 
-@media (max-width:1366px) {
+@media (max-width:1280px) {
 
   .heroContainer {
-    width: 92%;
+    width: 94%;
+    padding-top: 70px;
   }
 
   .heroTitle {
-    font-size: 52px;
+    font-size: 50px;
   }
 
   .heroSubTitle {
     font-size: 26px;
-  }
-
-  .heroImage {
-    width: 700px;
+    margin-top: 24px;
+    margin-bottom: 20px;
   }
 
   .heroDescription {
-    width: 520px;
+    width: 500px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .heroButton {
+    width: 200px;
+    height: 52px;
+    margin-top: 35px;
+    font-size: 16px;
+  }
+
+  .heroShape {
+    width: 45%;
+  }
+
+  .heroImage {
+    width: 680px;
+    right: -10px;
+    bottom: 0;
   }
 
   .heroStats {
-    bottom: -120px;
+    width: 450px;
+    height: 76px;
+    left: 0;
+    bottom: -100px;
+    gap: 14px;
+    padding: 10px 14px;
   }
 
-}
+  .heroThumb {
+    width: 78px;
+    height: 58px;
+  }
 
+  .heroStatItem h3 {
+    font-size: 19px;
+  }
+
+  .heroStat p {
+    font-size: 12px;
+  }
+}
 
 @media (max-width:1200px) {
 
@@ -6072,14 +6106,14 @@
   }
 
   .containerHeading h1 {
-    font-size: 50px;
+    font-size: 46px;
     line-height: 1;
   }
 
 
   .containerContent {
     left: 46px;
-    bottom: 160px;
+    bottom: 140px;
     width: 430px;
   }
 

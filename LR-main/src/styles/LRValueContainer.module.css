@@ -1954,15 +1954,17 @@
   height: 410px;
   background: #293F67;
   color: #fff;
-  padding: 75px 60px;
+  padding: 70px 60px;
   position: relative;
   overflow: hidden;
 }
 
 .scrollWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
-  left: 0;
   width: 100%;
   transform: translateY(-50%);
   overflow: hidden;
@@ -1970,47 +1972,35 @@
   pointer-events: none;
 }
 
-.scrollWrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .scrollTrack {
   display: flex;
   align-items: center;
-  white-space: nowrap;
+  gap: 100px;
+  width: max-content;
   animation: marquee 20s linear infinite;
 }
 
 .scrollTrack h1 {
   margin: 0;
-  font-size: 80px;
+  white-space: nowrap;
+  font-size: 85px;
   font-weight: 500;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.211);
   letter-spacing: 4px;
-  color: rgba(255, 255, 255, 0.2);
-  text-align: center;
+  flex-shrink: 0;
+  z-index: 2;
 }
-
 
 .LastImage {
   position: absolute;
-  bottom: 55%;
-  left: -5%;
+  bottom: 35%;
+  left: -6%;
 }
 
 .LastImage img {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 240px;
 }
 
 
@@ -2024,14 +2014,14 @@
 }
 
 .mfgText {
-  max-width: 680px;
+  max-width: 800px;
 }
 
 .mfgText h2 {
   font-size: 55px;
   font-weight: 400;
   line-height: 1.3;
-  color: #fff;
+  color: #ffffffc3;
   margin-bottom: 15px;
 }
 
@@ -2042,18 +2032,20 @@
 }
 
 .LastImage {
-  width: 100px;
-  height: 100px;
+  left: -60px;
+  bottom: 20px;
+  width: 150px;
+  height: 130px;
 }
 
 .mfgImgWrapper {
-  width: 530px;
-  height: 400px;
+  width: 420px;
+  height: 330px;
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
   position: relative;
-  bottom: 60px;
+  bottom: 26px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -2075,7 +2067,7 @@
   transition: background 0.5s ease;
 }
 
-/* Hover Effect */
+
 .mfgImgWrapper:hover {
   transform: translateY(-12px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
@@ -2090,30 +2082,35 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width:1440px) {
-
+@media (max-width:1280px) {
+  .mfgBand {
+    width: 100%;
+    height: 370px;
+    padding: 60px 50px;
+  }
 
   .mfgText h2 {
-    font-size: 48px;
+    font-size: 45px;
   }
 
   .mfgImgWrapper {
-    width: 40%;
-    height: 320px;
+    width: 32%;
+    height: 290px;
+    bottom: 15px;
   }
 
   .LastImage img {
     width: 260px;
-    height: 210px;
+    height: 170px;
   }
 
   .mfgText p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
   }
 
   .mfgText {
-    max-width: 600px;
+    max-width: 680px;
   }
 
   .mfgText p {
@@ -2122,79 +2119,67 @@
   }
 
   .LastImage {
-    left: -5%;
-    bottom: 30%;
+    left: -7%;
+    bottom: -20px;
   }
 
 }
 
+
 @media (max-width:1200px) {
 
   .mfgBand {
-    height: auto;
-    padding: 70px 5%;
+    padding: 35px 35px;
   }
 
   .mfgContainer {
     gap: 40px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 65px;
+    align-items: center;
   }
 
   .mfgText {
-    max-width: 55%;
+    max-width: 100%;
   }
 
   .mfgText h2 {
     font-size: 42px;
   }
 
-  .mfgText p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
   .mfgImgWrapper {
-    width: 42%;
-    height: 290px;
-    bottom: 0;
+    width: 350px;
+    height: 230px;
+    bottom: -30px;
+    flex-shrink: 0;
   }
 
-  .LastImage {
-    left: -3%;
-    bottom: 30%;
+  .scrollTrack h1 {
+    font-size: 60px;
   }
 
   .LastImage img {
-    width: 220px;
-    height: 180px;
+    position: absolute;
+    bottom: -220px;
+    width: 240px;
+    height: auto;
   }
 
 }
 
-@media (max-width:992px) {
+
+@media (max-width:1050px) {
 
   .mfgBand {
-    height: auto;
-    padding: 60px 5%;
-  }
-
-  .scrollTrack h1 {
-    font-size: 55px;
-    letter-spacing: 2px;
+    padding: 30px 30px;
+    height: auto
   }
 
   .mfgContainer {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 45px;
+    flex-direction: column;
+    gap: 35px;
   }
 
   .mfgText {
     max-width: 100%;
-    text-align: center;
   }
 
   .mfgText h2 {
@@ -2202,16 +2187,64 @@
   }
 
   .mfgText p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .mfgImgWrapper {
+    width: 500px;
     max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
+    height: 420px;
+    bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .LastImage {
+    display: none;
+  }
+
+
+}
+
+@media (max-width:992px) {
+
+  .mfgBand {
+    padding: 30px 30px;
+    height: auto
+  }
+
+  .mfgContainer {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .mfgText {
+    max-width: 100%;
+  }
+
+  .mfgText h2 {
+    font-size: 38px;
+  }
+
+  .mfgText p {
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .mfgImgWrapper {
     width: 100%;
-    max-width: 550px;
-    height: 400px;
+    max-width: 500px;
+    height: 420px;
     bottom: 0;
+  }
+
+  .scrollTrack h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
   }
 
   .LastImage {
@@ -2220,105 +2253,122 @@
 
 }
 
+
 @media (max-width:768px) {
 
   .mfgBand {
-    padding: 55px 5%;
+    padding: 55px 22px;
   }
 
-  .scrollTrack h1 {
-    font-size: 45px;
+  .mfgContainer {
+    gap: 30px;
   }
 
   .mfgText h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .mfgText p {
     font-size: 15px;
-  }
-
-  .mfgImgWrapper {
-    width: 550px;
-    height: 430px;
-  }
-
-}
-
-@media (max-width:576px) {
-
-  .mfgBand {
-    padding: 50px 20px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 34px;
-    letter-spacing: 1px;
-  }
-
-  .mfgText h2 {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .mfgText p {
-    font-size: 14px;
     line-height: 1.8;
   }
 
   .mfgImgWrapper {
-    width: 400px;
-    height: 300px;
-    border-radius: 10px;
+    width: 450px;
+    height: 340px;
+    border-radius: 8px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
   }
 
 }
+
+
+@media (max-width:576px) {
+
+  .mfgBand {
+    padding: 50px 18px;
+  }
+
+  .mfgText h2 {
+    font-size: 28px;
+  }
+
+  .mfgText p {
+    font-size: 14px;
+  }
+
+  .mfgImgWrapper {
+    width: 380px;
+    height: 280px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 34px;
+  }
+
+}
+
+
 
 @media (max-width:480px) {
 
   .mfgBand {
-    padding: 45px 18px;
-  }
-
-  .scrollTrack h1 {
-    font-size: 28px;
+    padding: 45px 15px;
   }
 
   .mfgText h2 {
     font-size: 24px;
+    line-height: 1.35;
   }
 
   .mfgText p {
-    font-size: 13.5px;
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .mfgImgWrapper {
     width: 300px;
-    height: 210px;
+    height: 220px;
+    border-radius: 6px;
+  }
+
+  .scrollTrack h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
   }
 
 }
 
+
 @media (max-width:360px) {
+
+  .mfgBand {
+    padding: 40px 12px;
+  }
+
+  .mfgText h2 {
+    font-size: 22px;
+  }
+
+  .mfgText p {
+    font-size: 12.5px;
+  }
+
+  .mfgImgWrapper {
+    width: 260px;
+    height: 190px;
+  }
 
   .scrollTrack h1 {
     font-size: 22px;
   }
 
-  .mfgText h2 {
-    font-size: 21px;
-  }
-
-  .mfgText p {
-    font-size: 13px;
-  }
-
-  .mfgImgWrapper {
-    width: 200px;
-    height: 180px;
-  }
-
 }
+
 
 
 
@@ -2479,16 +2529,16 @@
   }
 
   .expLabel {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: rgba(41, 63, 103, .92);
-  padding: 20px;
-  height: 82px;
-  transition: height .45s ease;
-  box-sizing: border-box;
-}
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(41, 63, 103, .92);
+    padding: 20px;
+    height: 82px;
+    transition: height .45s ease;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width:1200px) {
@@ -3005,7 +3055,7 @@
   }
 
   .faqImg {
-    width: 520px ;
+    width: 520px;
     height: 450px;
     border-radius: 12px;
   }
@@ -3256,7 +3306,8 @@
 =========================== */
 .cta {
   width: 100%;
-  background: url('../assets/conatiners/L&RContainer/cta.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/conatiners/L&RContainer/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3355,41 +3406,33 @@
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width:1280px) {
 
   .cta {
-    padding: 55px 50px;
-    gap: 10px;
-    background-position: center;
-    background-size: cover;
+    padding: 60px 40px;
   }
 
   .cta h2 {
-    font-size: 46px;
-    line-height: 1.25;
+    font-size: 40px;
+    line-height: 1.2;
     text-align: center;
-    margin: 0;
   }
 
   .cta p {
-    max-width: 560px;
+    max-width: 700px;
+    margin: 0 auto 24px;
     font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    text-align: center;
+    line-height: 1.8;
   }
 
   .contactBtn {
-    width: 240px;
-    height: 52px;
-    padding: 0 24px;
-    gap: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
   }
 
-  .contactText {
-    font-size: 15px;
-  }
 }
+
 
 @media (max-width:1200px) {
 
