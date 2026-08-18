@@ -1,4 +1,4 @@
-/* .floatingContact {
+.floatingContact {
     position: fixed;
     right: 0;
     top: 50%;
@@ -97,9 +97,9 @@
 
     background: #eeeeee;
 }
- */
 
-/* 
+
+
 @media (max-width: 1440px) {
 
     .floatingContact {
@@ -128,7 +128,7 @@
 }
 
 
- */
+
 
 /* @media (max-width: 1280px) {
 
@@ -164,7 +164,7 @@
 }
  */
 
-/* @media (max-width: 1280px) {
+@media (max-width: 1280px) {
 
     .floatingContact {
         width: 66px;
@@ -200,9 +200,9 @@
         right: 76px;
         font-size: 12.5px;
     }
-} */
+}
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
 
     .floatingContact {
         width: 64px;
@@ -232,11 +232,11 @@
     .tooltip {
         right: 73px;
     }
-} */
+}
 
 
 
-/* @media (max-width: 1130px) {
+@media (max-width: 1130px) {
 
     .floatingContact {
         width: 62px;
@@ -268,10 +268,10 @@
         padding: 8px 12px;
         font-size: 12px;
     }
-} */
+}
 
 
-/* 
+
 @media (max-width: 992px) {
 
     .floatingContact {
@@ -302,11 +302,11 @@
     .tooltip {
         right: 68px;
     }
-} */
+}
 
 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     .floatingContact {
         width: 58px;
@@ -348,10 +348,10 @@
     .contactItem:hover .iconWrapper {
         transform: scale(1.08);
     }
-} */
+}
 
 
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
 
     .floatingContact {
         width: 54px;
@@ -378,11 +378,11 @@
         left: 8px;
         width: 38px;
     }
-} */
+}
 
 
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
 
     .floatingContact {
         width: 52px;
@@ -411,10 +411,10 @@
         left: 7px;
         width: 38px;
     }
-} */
+}
 
 
-/* 
+
 @media (max-width: 430px) {
 
     .floatingContact {
@@ -442,11 +442,11 @@
         left: 6px;
         width: 37px;
     }
-} */
+}
 
 
 
-/* @media (max-width: 390px) {
+@media (max-width: 390px) {
 
     .floatingContact {
         width: 47px;
@@ -473,10 +473,10 @@
         left: 6px;
         width: 35px;
     }
-} */
+}
 
 
-/* @media (max-width: 360px) {
+@media (max-width: 360px) {
 
     .floatingContact {
         width: 44px;
@@ -503,12 +503,10 @@
         left: 5px;
         width: 34px;
     }
-} */
+}
 
 
-/* @media (max-width: 320px) {
-
-
+@media (max-width: 320px) {
 
     .floatingContact {
         width: 42px;
@@ -526,7 +524,7 @@
     }
 
     .iconWrapper svg {
-        width:18px;
+        width: 18px;
         height: 18px;
     }
 
@@ -534,211 +532,5 @@
         bottom: -3px;
         left: 5px;
         width: 32px;
-    }
-} */
-
-
-
-
-
-
-
-
-.floatingContact {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 79px;
-    padding: 16px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    background: #ffffff;
-    border: 1px solid #e8e8e8;
-    border-right: none;
-    border-radius: 20px 0 0 20px;
-    box-shadow:
-        -8px 10px 30px rgba(0, 0, 0, 0.10);
-    z-index: 9999;
-}
-
-
-.floatingContact {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    z-index: 99999;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    pointer-events: auto;
-}
-
-.contactButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    pointer-events: auto;
-    background: #fff;
-    color: #293f67;
-}
-
-
-.contactButton {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #e4e7eb;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #233e70;
-    cursor: pointer;
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
-
-
-
-.contactButton::after {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    right: 2px;
-    top: 2px;
-    border-radius: 50%;
-    background: #233e70;
-    opacity: 0;
-    transform: scale(0);
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.contactButton:hover {
-    background: #233e70;
-    color: #ffffff;
-    border-color: #233e70;
-    transform: translateX(-5px);
-    box-shadow:
-        0 8px 20px rgba(35, 62, 112, 0.25);
-}
-
-.contactButton:hover::after {
-    opacity: 1;
-    transform: scale(1);
-}
-
-
-
-.contactButton:first-child {
-    margin-top: 2px;
-}
-
-
-@media (max-width: 768px) {
-
-    .floatingContact {
-        width: 56px;
-        padding: 11px 6px;
-        gap: 9px;
-        border-radius: 17px 0 0 17px;
-    }
-
-    .contactButton {
-        width: 40px;
-        height: 40px;
-    }
-
-    .contactButton svg {
-        width: 19px;
-        height: 19px;
-    }
-
-    .contactButton:hover {
-        transform: none;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .floatingContact {
-        width: 49px;
-        padding: 9px 5px;
-        gap: 8px;
-        border-radius: 15px 0 0 15px;
-    }
-
-    .contactButton {
-        width: 35px;
-        height: 35px;
-    }
-
-    .contactButton svg {
-        width: 17px;
-        height: 17px;
-    }
-
-    .contactButton::after {
-        width: 4px;
-        height: 4px;
-    }
-}
-
-
-
-@media (max-width: 390px) {
-
-    .floatingContact {
-        width: 45px;
-        padding: 8px 4px;
-        gap: 7px;
-    }
-
-    .contactButton {
-        width: 32px;
-        height: 32px;
-    }
-
-    .contactButton svg {
-        width: 15px;
-        height: 15px;
-    }
-}
-
-
-@media (max-width: 360px) {
-
-    .floatingContact {
-        width: 42px;
-        padding: 7px 4px;
-        gap: 6px;
-    }
-
-    .contactButton {
-        width: 29px;
-        height: 29px;
-    }
-
-    .contactButton svg {
-        width: 14px;
-        height: 14px;
     }
 }

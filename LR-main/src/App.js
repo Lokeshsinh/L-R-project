@@ -53,7 +53,6 @@ import RooftopRoom from "./pages/RooftopRoom"
 import LgsfModular from './pages/LgsfModular'
 import BESSContainer from "./pages/BESSContainer";
 import PowerRoof from "./pages/PowerRoof";
-import FloatingAssistant from "./pages/FloatingAssistant";
 import FloatingContact from "./pages/FloatingContact";
 
 function App() {
@@ -120,7 +119,6 @@ function App() {
         <Route path="/brochure" element={<Brochure />} />
       </Routes>
       <FloatingContact />
-      <FloatingAssistant />
     </BrowserRouter>
   );
 }

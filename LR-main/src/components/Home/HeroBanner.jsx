@@ -8,6 +8,7 @@ import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
 import user from '../../assets/conatiners/HomeConatiner/user.png'
 import container from '../../assets/banner3.png'
 import { useNavigate } from "react-router-dom";
+import hvacProduct from '../../assets/banner/hvacProduct.png'
 function HeroBanner() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
@@ -24,7 +25,7 @@ function HeroBanner() {
 
   // Next Slide
   const nextSlide = () => {
-    if (current === 3) {
+    if (current === 4) {
       setCurrent(0);
     } else {
       setCurrent(current + 1);
@@ -357,7 +358,7 @@ function HeroBanner() {
               Established in 2015 in New Delhi, delivering reliable
               solutions.
             </p>
-            <button  onClick={() => navigate('/about')} className={styles.heroBtn}>
+            <button onClick={() => navigate('/about')} className={styles.heroBtn}>
               <span>All Category</span>
 
               <ArrowRight
@@ -542,6 +543,91 @@ function HeroBanner() {
 
 
 
+      {/*------------------ HVAC---------------------- */}
+
+      <div className={`${styles.hvacBanner} ${current === 4 ? styles.active : ""
+        }`} >
+
+        {/* Large background HVAC text */}
+        <div className={styles.hvacWatermark}>
+         HVAC
+        </div>
+
+        {/* Heading */}
+        <div className={styles.hvacHeading}>
+          <div className={styles.hvacSmallTitle}>
+            L&R PREFAB SOLAR INDIA PVT LDT
+          </div>
+
+          <h1>
+            Advanced HVAC Solutions
+            <br />
+            for Modern Spaces
+          </h1>
+        </div>
+        {/* HVAC Product Image */}
+        <div className={styles.hvacBottomArea}>
+          {/* LEFT COLUMN */}
+          <div className={styles.hvacLeftColumn}>
+            <div className={styles.hvacDescription}>
+              Engineered HVAC solutions delivering efficient temperature control,
+              superior air quality, and reliable performance for commercial
+              and industrial environments.
+            </div>
+            <button className={styles.hvacButton}>
+              <span>Explore HVAC Solutions</span>
+              <ArrowRight
+                size={25}
+                strokeWidth={2}
+                className={styles.hvacArrow}
+              />
+            </button>
+          </div>
+          {/* MIDDLE COLUMN */}
+          <div className={styles.hvacCenterColumn}>
+
+            <div className={styles.hvacImageWrap}>
+              <img
+                src={hvacProduct}
+                alt="Advanced HVAC Solutions"
+                className={styles.hvacImage}
+              />
+            </div>
+          </div>
+
+
+          {/* RIGHT COLUMN */}
+          <div className={styles.hvacRightColumn}>
+
+            <div className={styles.hvacStatsGrid}>
+
+              <div className={styles.hvacStatsItem}>
+                <h2>500+</h2>
+                <p>Completed Projects</p>
+              </div>
+
+              <div className={styles.hvacStatsItem}>
+                <h2>25+</h2>
+                <p>Years Of Experience</p>
+              </div>
+
+              <div className={styles.hvacStatsItem}>
+                <h2>900+</h2>
+                <p>Happy Clients</p>
+              </div>
+
+              <div className={styles.hvacStatsItem}>
+                <h2>150+</h2>
+                <p>Team Workers</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
       {/* arrow */}
       <button

@@ -5100,7 +5100,7 @@
 
 @media (max-width:390px) {
   .hero {
-    min-height: 78vh;
+    min-height: 90vh;
   }
 
   .HomeSlider {
@@ -7532,5 +7532,1950 @@
     width: calc(100% - 12px);
     height: 1px;
     background: #a6b0bf;
+  }
+}
+
+
+/* -----------------------  HVAC BANNER ------------------------------------------ */
+
+
+.hvacBanner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  transition:
+    opacity 0.9s ease,
+    transform 1.1s ease;
+  overflow: hidden;
+  background: #f5f6f8;
+  z-index: 1;
+}
+
+
+
+
+.hvacBanner.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 2;
+}
+
+
+.hvacWatermark {
+  position: absolute;
+  top: 205px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: rgba(41, 63, 103, 0.075);
+  font-size: 300px;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -12px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
+.hvacHeading {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+
+/* HVAC */
+
+.hvacSmallTitle {
+  margin: 0 0 10px;
+  color: #19375f;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+/* Main Heading */
+
+.hvacHeading h1 {
+  margin: 0;
+  color: #19375f;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+
+
+
+/* =====================================================
+   BOTTOM 3 COLUMN AREA
+===================================================== */
+
+.hvacBottomArea {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  z-index: 20;
+}
+
+
+
+.hvacLeftColumn {
+  width: 100%;
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+/* Paragraph */
+
+.hvacDescription {
+  width: 390px;
+  margin: 0 0 20px;
+  color: #172b4c;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+}
+
+
+/* Button */
+.hvacButton {
+  position: relative;
+  width: 270px;
+  height: 52px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background: #193b70;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* Hover */
+
+.hvacButton:hover {
+  background: #294374;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(25, 59, 112, 0.28);
+}
+
+
+/* Arrow animation */
+
+.hvacArrow {
+  transition:
+    transform 0.4s ease;
+}
+
+.hvacButton:hover .hvacArrow {
+  transform: translateX(10px);
+}
+
+
+/* Text animation */
+
+.hvacButton span {
+  transition:
+    transform 0.4s ease;
+}
+
+.hvacButton:hover span {
+  transform: translateX(-3px);
+}
+
+
+/* Click effect */
+
+.hvacButton:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+
+.hvacCenterColumn {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.hvacImageWrap {
+  width: 100%;
+  max-width: 700px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.hvacImage {
+  width: 700px;
+  max-width: none;
+  height: 330px;
+  display: block;
+  object-fit: contain;
+}
+
+
+.hvacRightColumn {
+  width: 100%;
+  padding-right: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.hvacStatsGrid {
+  width: 315px;
+  height: 210px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d4d8df;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.hvacStatsItem {
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #b9bec7;
+  border-bottom: 1px solid #d4d8df;
+}
+
+
+.hvacStatsItem:nth-child(2),
+.hvacStatsItem:nth-child(4) {
+  border-right: none;
+}
+
+
+.hvacStatsItem:nth-child(3),
+.hvacStatsItem:nth-child(4) {
+  border-bottom: none;
+}
+
+
+.hvacStatsItem h2 {
+  margin: 0 0 7px;
+  color: #294374;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.hvacStatsItem p {
+  margin: 0;
+  color: #707070;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+
+
+
+@media (max-width: 1440px) {
+
+  .hvacBottomArea {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+    grid-template-columns: 1fr 1.15fr 1fr;
+    align-items: center;
+  }
+
+
+  .hvacLeftColumn {
+    padding-left: 40px;
+  }
+
+  .hvacDescription {
+    width: 360px;
+    font-size: 18px;
+    line-height: 1.45;
+    margin-bottom: 18px;
+  }
+
+  .hvacButton {
+    width: 260px;
+    height: 50px;
+    padding: 9px 18px;
+    font-size: 15px;
+    gap: 15px;
+  }
+
+  .hvacArrow {
+    width: 23px;
+    height: 23px;
+  }
+
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 680px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImage {
+    width: 680px;
+    max-width: none;
+    height: 320px;
+    display: block;
+    object-fit: contain;
+  }
+
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .hvacStatsGrid {
+    width: 305px;
+    height: 190px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .hvacStatsItem {
+    padding: 11px 16px;
+  }
+
+  .hvacStatsItem h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .hvacStatsItem p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
+
+
+
+@media (max-width: 1280px) {
+
+  .hvacBottomArea {
+    grid-template-columns: 0.9fr 1.2fr 0.9fr;
+  }
+
+  .hvacLeftColumn {
+    padding-left: 35px;
+  }
+
+  .hvacDescription {
+    width: 330px;
+    font-size: 16px;
+  }
+
+  .hvacButton {
+    width: 255px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .hvacWatermark {
+    top: 170px;
+  }
+
+  .hvacHeading h1 {
+    font-size: 48px;
+  }
+
+  .hvacCenterColumn {
+    bottom: -20px;
+  }
+
+  .hvacImageWrap {
+    max-width: 560px;
+    height: 270px;
+
+  }
+
+
+  .hvacImage {
+    width: 560px;
+    height: 270px;
+  }
+
+  .hvacRightColumn {
+    padding-right: 35px;
+  }
+
+  .hvacStatsGrid {
+    width: 290px;
+    height: 200px;
+  }
+
+  .hvacStatsItem h2 {
+    font-size: 23px;
+  }
+
+  .hvacStatsItem p {
+    font-size: 12px;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .hvacBottomArea {
+    grid-template-columns: 0.95fr 1.1fr 0.95fr;
+    align-items: center;
+  }
+
+
+
+
+  .hvacLeftColumn {
+    padding-left: 30px;
+  }
+
+  .hvacDescription {
+    width: 320px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .hvacButton {
+    width: 235px;
+    height: 48px;
+    padding: 8px 16px;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .hvacArrow {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .hvacCenterColumn {
+    bottom: 0;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 600px;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImage {
+    width: 600px;
+    max-width: none;
+    height: 295px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .hvacRightColumn {
+    width: 100%;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .hvacStatsGrid {
+    width: 275px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .hvacStatsItem {
+    padding: 9px 12px;
+  }
+
+  .hvacStatsItem h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .hvacStatsItem p {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+}
+
+
+
+@media (max-width: 1130px) {
+
+  .hvacBottomArea {
+    grid-template-columns: 0.85fr 1.3fr 0.85fr;
+  }
+
+  .hvacLeftColumn {
+    padding-left: 25px;
+  }
+
+  .hvacDescription {
+    width: 300px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .hvacButton {
+    width: 225px;
+    height: 48px;
+    padding: 8px 15px;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .hvacImageWrap {
+    height: 290px;
+  }
+
+  .hvacImage {
+    width: 560px;
+    height: 290px;
+  }
+
+  .hvacRightColumn {
+    padding-right: 25px;
+  }
+
+  .hvacStatsGrid {
+    width: 270px;
+    height: 200px;
+  }
+
+  .hvacStatsItem {
+    padding: 10px 14px;
+  }
+
+  .hvacStatsItem h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+  }
+
+  .hvacStatsItem p {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 1054px) {
+
+  .hvacBottomArea {
+    grid-template-columns: 1fr 1.2fr 1fr;
+  }
+
+  .hvacLeftColumn {
+    padding-left: 20px;
+  }
+
+  .hvacDescription {
+    width: 270px;
+    font-size: 14px;
+  }
+
+  .hvacButton {
+    width: 260px;
+    height: 46px;
+    font-size: 13px;
+  }
+
+  .hvacImageWrap {
+    height: 285px;
+  }
+
+  .hvacImage {
+    width: 500px;
+    height: 285px;
+  }
+
+  .hvacRightColumn {
+    padding-right: 20px;
+  }
+
+  .hvacStatsGrid {
+    width: 245px;
+    height: 180px;
+  }
+
+  .hvacStatsItem {
+    padding: 8px 10px;
+  }
+
+  .hvacStatsItem h2 {
+    font-size: 20px;
+  }
+
+  .hvacStatsItem p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 996px) {
+
+  .hvacBottomArea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .hvacLeftColumn {
+    width: 90%;
+    position: relative;
+    bottom: 70px;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+    order: 1;
+  }
+
+  .hvacDescription {
+    width: 90%;
+    max-width: 890px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .hvacButton {
+    width: 220px;
+    height: 48px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 450px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImage {
+    width: 450px;
+    max-width: 90vw;
+    height: auto;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+  }
+
+  .hvacStatsGrid {
+    width: min(500px, 90%);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hvacStatsItem {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hvacStatsItem h2 {
+    font-size: 22px;
+    margin: 0 0 5px;
+  }
+
+  .hvacStatsItem p {
+    font-size: 11px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .hvacHeading {
+    top: 28px;
+  }
+
+  .hvacSmallTitle {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .hvacHeading h1 {
+    font-size: 38px;
+    line-height: 1.12;
+    letter-spacing: -0.8px;
+  }
+
+
+
+  .hvacWatermark {
+    top: 155px;
+    font-size: 210px;
+    letter-spacing: -8px;
+  }
+
+
+  .hvacBottomArea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+
+
+  .hvacLeftColumn {
+    width: 88%;
+    padding-left: 0;
+    position: relative;
+    bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    order: 1;
+  }
+
+  .hvacDescription {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 12px;
+    font-size: 13px;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+
+
+  .hvacButton {
+    width: 210px;
+    height: 44px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+
+  .hvacArrow {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    position: relative;
+    bottom: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 430px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .hvacImage {
+    width: 430px;
+    max-width: 82vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+  }
+
+  .hvacStatsGrid {
+    width: calc(100% - 40px);
+    max-width: 620px;
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin: 3px auto 8px;
+    box-sizing: border-box;
+  }
+
+  .hvacStatsItem {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 5px;
+    text-align: center;
+  }
+
+  .hvacStatsItem h2 {
+    margin: 0 0 4px;
+    font-size: 19px;
+    line-height: 1;
+  }
+
+  .hvacStatsItem p {
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .hvacStatsItem:not(:last-child) {
+    border-right: 1px solid #b9bec7;
+  }
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 578px) {
+
+
+  .hvacWatermark {
+    font-size: 200px;
+  }
+
+  .hvacSmallTitle {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .hvacSmallTitle+h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hvacBottomArea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+
+  .hvacLeftColumn {
+    width: 94%;
+    position: relative;
+    bottom: 120px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    order: 1;
+  }
+
+  .hvacDescription {
+    width: 94%;
+    max-width: 500px;
+    margin: 0 auto 9px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .hvacButton {
+    width: 195px;
+    height: 41px;
+    margin: 0 auto;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+
+  .hvacArrow {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    position: relative;
+    bottom: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 380px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .hvacImage {
+    width: 350px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+  }
+
+  .hvacStatsGrid {
+    width: calc(100% - 24px);
+    max-width: 554px;
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin: 3px auto 8px;
+    box-sizing: border-box;
+  }
+
+  .hvacStatsItem {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 3px;
+    text-align: center;
+  }
+
+  .hvacStatsItem h2 {
+    margin: 0 0 3px;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  .hvacStatsItem p {
+    margin: 0;
+    font-size: 8px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+
+  .hvacStatsItem:not(:last-child) {
+    border-right: 1px solid #b9bec7;
+  }
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+
+
+  .hvacHeading {
+    top: 25px;
+  }
+
+  .hvacSmallTitle {
+    font-size: 11px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+  }
+
+  .hvacHeading h1 {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
+  }
+
+
+  .hvacWatermark {
+    top: 145px;
+    font-size: 170px;
+    letter-spacing: -7px;
+  }
+
+
+
+  .hvacBottomArea {
+    left: 0;
+    right: 0;
+    bottom: 7px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3px;
+  }
+
+  .hvacLeftColumn {
+    width: 94%;
+    position: relative;
+    bottom: 105px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    order: 1;
+  }
+
+  .hvacDescription {
+    width: 94%;
+    max-width: 440px;
+    margin: 0 auto 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+
+  .hvacButton {
+    width: 185px;
+    height: 39px;
+    margin: 0 auto;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+
+  .hvacArrow {
+    width: 16px;
+    height: 16px;
+  }
+
+
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    position: relative;
+    bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 360px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .hvacImage {
+    width: 330px;
+    max-width: 88vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+  }
+
+  .hvacStatsGrid {
+    width: calc(100% - 20px);
+    max-width: 460px;
+    height: 76px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin: 2px auto 5px;
+    box-sizing: border-box;
+  }
+
+  .hvacStatsItem {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 2px;
+    text-align: center;
+  }
+
+  .hvacStatsItem h2 {
+    margin: 0 0 3px;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  .hvacStatsItem p {
+    margin: 0;
+    font-size: 7px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+
+  .hvacStatsItem:not(:last-child) {
+    border-right: 1px solid #b9bec7;
+  }
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+
+
+
+@media (max-width: 430px) {
+
+  .hvacBottomArea {
+    bottom: 8px;
+    gap: 4px;
+  }
+
+
+  .hvacLeftColumn {
+    width: 92%;
+    bottom: 105px;
+  }
+
+  .hvacDescription {
+    width: 100%;
+    max-width: 390px;
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .hvacButton {
+    width: 190px;
+    height: 40px;
+    padding: 6px 10px;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .hvacArrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hvacCenterColumn {
+    bottom: 48px;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 360px;
+    height: 135px;
+  }
+
+  .hvacImage {
+    width: 340px;
+    max-width: 88vw;
+    height: auto;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hvacStatsGrid {
+    width: calc(100% - 30px);
+    max-width: 400px;
+    height: 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 2px auto 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+
+  .hvacStatsItem {
+    width: 100%;
+    min-width: 0;
+    padding: 5px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #b9bec7;
+    border-bottom: 1px solid #d4d8df;
+  }
+
+  .hvacStatsItem:nth-child(2),
+  .hvacStatsItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .hvacStatsItem h2 {
+    margin: 0 0 4px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .hvacStatsItem p {
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+  }
+
+
+  .hvacHeading {
+    top: 25px;
+  }
+
+  .hvacSmallTitle {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .hvacHeading h1 {
+    font-size: 31px;
+    line-height: 1.15;
+    letter-spacing: -0.6px;
+  }
+
+
+  .hvacWatermark {
+    top: 145px;
+    font-size: 180px;
+    letter-spacing: -7px;
+  }
+}
+
+
+@media (max-width: 390px) {
+
+
+  .hvacHeading {
+    top: 23px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .hvacSmallTitle {
+    margin: 0 0 6px;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .hvacHeading h1 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+
+  .hvacWatermark {
+    top: 140px;
+    font-size: 165px;
+    letter-spacing: -6px;
+  }
+
+  .hvacBottomArea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 3px;
+  }
+
+
+  .hvacLeftColumn {
+    width: 94%;
+    position: relative;
+    bottom: 130px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hvacDescription {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 7px;
+    color: #172b4c;
+    font-size: 10.5px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+
+  .hvacButton {
+    width: 180px;
+    height: 39px;
+    margin: 0 auto;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 10.5px;
+    border-radius: 4px;
+  }
+
+  .hvacArrow {
+    width: 15px;
+    height: 15px;
+  }
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    position: relative;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 350px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .hvacImage {
+    width: 350px;
+    max-width: 88vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .hvacStatsGrid {
+    width: calc(100% - 24px);
+    max-width: 366px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 2px auto 5px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d4d8df;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+
+
+  .hvacStatsItem {
+    width: 100%;
+    min-width: 0;
+    padding: 4px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 1px solid #b9bec7;
+    border-bottom: 1px solid #d4d8df;
+  }
+
+
+  .hvacStatsItem:nth-child(2),
+  .hvacStatsItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+  /* Remove bottom border from bottom row */
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .hvacStatsItem h2 {
+    margin: 0 0 3px;
+    color: #294374;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .hvacStatsItem p {
+    margin: 0;
+    color: #707070;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+
+
+@media (max-width: 360px) {
+
+  .hvacHeading {
+    top: 20px;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .hvacSmallTitle {
+    margin: 0 0 5px;
+    font-size: 9px;
+    line-height: 1.2;
+  }
+
+  .hvacHeading h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+  }
+
+
+  .hvacWatermark {
+    top: 135px;
+    font-size: 130px;
+    letter-spacing: -6px;
+  }
+
+
+
+  .hvacBottomArea {
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+  }
+
+
+
+  .hvacLeftColumn {
+    width: 94%;
+    position: relative;
+    bottom: 92px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hvacDescription {
+    width: 100%;
+    max-width: 335px;
+    margin: 0 auto 6px;
+    font-size: 10px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+
+
+  .hvacButton {
+    width: 170px;
+    height: 37px;
+    margin: 0 auto;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+
+  .hvacArrow {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  .hvacCenterColumn {
+    width: 100%;
+    position: relative;
+    bottom: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 280px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .hvacImage {
+    width: 270px;
+    max-width: 86vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .hvacStatsGrid {
+    width: calc(100% - 20px);
+    max-width: 340px;
+    height: 104px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 2px auto 4px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+  .hvacStatsItem {
+    width: 100%;
+    min-width: 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 1px solid #b9bec7;
+    border-bottom: 1px solid #d4d8df;
+  }
+
+
+
+  .hvacStatsItem:nth-child(2),
+  .hvacStatsItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .hvacStatsItem h2 {
+    margin: 0 0 3px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+
+  .hvacStatsItem p {
+    margin: 0;
+    font-size: 7.5px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 320px) {
+
+  .hvacHeading {
+    top: 18px;
+    padding: 0 6px;
+  }
+
+  .hvacSmallTitle {
+    margin-bottom: 4px;
+    font-size: 8px;
+    line-height: 1.15;
+  }
+
+  .hvacHeading h1 {
+    font-size: 22px;
+    line-height: 1.12;
+    letter-spacing: -0.3px;
+  }
+
+  .hvacWatermark {
+    top: 125px;
+    font-size: 135px;
+    letter-spacing: -5px;
+  }
+
+
+
+  .hvacBottomArea {
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+  }
+
+
+
+  .hvacLeftColumn {
+    width: 94%;
+    position: relative;
+    bottom:90px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hvacDescription {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 5px;
+    font-size: 9px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+
+  .hvacButton {
+    width: 155px;
+    height: 35px;
+    margin: 0 auto;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 9px;
+    border-radius: 4px;
+  }
+
+  .hvacArrow {
+    width: 13px;
+    height: 13px;
+  }
+
+  .hvacCenterColumn {
+    width: 100%;
+    position: relative;
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hvacImageWrap {
+    width: 100%;
+    max-width: 240px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .hvacImage {
+    width: 245px;
+    max-width: 84vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+
+
+  .hvacRightColumn {
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .hvacStatsGrid {
+    width: calc(100% - 16px);
+    max-width: 304px;
+    height: 96px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 1px auto 3px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .hvacStatsItem {
+    width: 100%;
+    min-width: 0;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 1px solid #b9bec7;
+    border-bottom: 1px solid #d4d8df;
+  }
+
+
+
+  .hvacStatsItem:nth-child(2),
+  .hvacStatsItem:nth-child(4) {
+    border-right: none;
+  }
+
+
+
+
+  .hvacStatsItem:nth-child(3),
+  .hvacStatsItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+
+  .hvacStatsItem h2 {
+    margin: 0 0 2px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+
+  .hvacStatsItem p {
+    margin: 0;
+    font-size: 7px;
+    line-height: 1.15;
+    text-align: center;
   }
 }

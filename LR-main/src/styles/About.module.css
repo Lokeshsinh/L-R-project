@@ -204,7 +204,7 @@
 
 
 
-@media (max-width: 1600px) {
+/* @media (max-width: 1600px) {
 
   .about-section {
     width: 100%;
@@ -289,7 +289,7 @@
   .about-right {
     flex: 0 0 48%;
     width: 48%;
-    max-width: 700px;
+    max-width: 750px;
   }
 
   .about-right h2 {
@@ -314,7 +314,7 @@
     padding: 10px 26px;
     font-size: 15px;
   }
-}
+} */
 
 /* 1440px */
 @media (max-width:1440px) {
