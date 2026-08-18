@@ -316,9 +316,6 @@
 .intro {
   width: 100%;
   padding: 80px 60px;
-  background: url('../assets/Pre-Build/Factory/back.png') no-repeat;
-  background-position: center;
-  background-size: contain;
   background-color: #f7f7f753;
 }
 
@@ -526,6 +523,58 @@
   }
 }
 
+@media (max-width: 1280px) {
+
+  .intro {
+    padding: 65px 45px;
+  }
+
+  .introText {
+    margin-bottom: 50px;
+  }
+
+  .introText h2 {
+    font-size: 48px;
+    line-height: 1.18;
+  }
+
+  .introLine {
+    width: 110px;
+  }
+
+  .introGrid {
+    width: 100%;
+    padding: 22px;
+    gap: 35px;
+    box-sizing: border-box;
+  }
+
+  .introContent {
+    width: 52%;
+    max-width: 600px;
+    gap: 18px;
+  }
+
+  .introContent p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 8px;
+  }
+
+  .introImgs {
+    width: 48%;
+    max-width: 560px;
+    height: 413px;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+
+  .btnOutline {
+    width: 180px;
+    height: 52px;
+    font-size: 14px;
+  }
+}
 
 @media (max-width:1200px) {
 
@@ -543,7 +592,7 @@
   }
 
   .introContent {
-    max-width: 520px;
+    max-width: 500px;
   }
 
   .introContent p {
@@ -551,44 +600,74 @@
   }
 
   .introImgs {
-    max-width: 500px;
-    height: 430px;
+    max-width: 490px;
+    height: 440px;
   }
 }
 
-@media (max-width:1140px) {
+
+@media (max-width: 1130px) {
+
+  .intro {
+    padding: 60px 35px;
+  }
+
+  .introText {
+    margin-bottom: 40px;
+  }
+
+  .introText h2 {
+    font-size: 40px;
+    line-height: 1.18;
+  }
+
+  .introLine {
+    width: 100px;
+  }
+
   .introGrid {
-    flex-direction: column-reverse;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 35px;
+    gap: 25px;
+    padding: 22px;
+    box-sizing: border-box;
   }
 
   .introContent {
-    max-width: 100%;
+    width: 52%;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .introContent p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 5px;
   }
 
   .introImgs {
-    width: 100%;
-    max-width: 900px;
+    width: 48%;
+    max-width: 480px;
+    height: 378px;
+    aspect-ratio: auto;
+    flex-shrink: 0;
   }
 
+  .btnOutline {
+    width: 175px;
+    height: 50px;
+    font-size: 14px;
+  }
 }
+@media (max-width: 1050px) {
 
-@media (max-width:1024px) {
-
-  .introGrid {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 35px;
-  }
-
-  .introContent {
-    max-width: 100%;
-  }
-
-  .introImgs {
-    width: 100%;
-    max-width: 900px;
+  .intro {
+    padding: 60px 35px;
   }
 
   .introText {
@@ -597,6 +676,104 @@
 
   .introText h2 {
     font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .introLine {
+    width: 95px;
+  }
+
+  .introGrid {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 35px;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+
+  .introContent {
+    width: 100%;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .introContent p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 5px;
+  }
+
+  .introImgs {
+    width: 100%;
+    max-width: 850px;
+    height: 360px;
+    aspect-ratio: auto;
+  }
+
+  .btnOutline {
+    width: 175px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 996px) {
+
+  .intro {
+    padding: 55px 30px;
+  }
+
+  .introText {
+    margin-bottom: 35px;
+  }
+
+  .introText h2 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .introLine {
+    width: 90px;
+  }
+
+  .introGrid {
+    width: 100%;
+    padding: 22px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .introContent {
+    width: 100%;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .introContent p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 5px;
+  }
+
+  .introImgs {
+    width: 100%;
+    max-width: 850px;
+    height: 360px;
+    aspect-ratio: auto;
+  }
+
+  .btnOutline {
+    width: 175px;
+    height: 50px;
+    font-size: 14px;
   }
 }
 
@@ -704,7 +881,7 @@
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:360px) {
 
   .introText h2 {
     font-size: 22px;
@@ -736,7 +913,7 @@
   }
 
   .introText h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .introLine {

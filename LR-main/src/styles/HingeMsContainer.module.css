@@ -2911,7 +2911,7 @@
   }
 
   .expCard:hover .expLabel {
-    height: 190px;
+    height: 200px;
   }
 
   .expLabel h4 {
@@ -3795,7 +3795,7 @@
 @media (max-width:1280px) {
 
   .cta {
-    padding: 60px 40px;
+    padding: 55px 40px;
   }
 
   .cta h2 {

@@ -9,23 +9,24 @@ import user from '../../assets/conatiners/HomeConatiner/user.png'
 import container from '../../assets/banner3.png'
 import { useNavigate } from "react-router-dom";
 import hvacProduct from '../../assets/banner/hvacProduct.png'
+import roofImage from '../../assets/banner/roofImage.png'
 function HeroBanner() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
 
   const totalSlides = 4;
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % totalSlides);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % totalSlides);
+  //   }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // Next Slide
   const nextSlide = () => {
-    if (current === 4) {
+    if (current === 5) {
       setCurrent(0);
     } else {
       setCurrent(current + 1);
@@ -550,7 +551,7 @@ function HeroBanner() {
 
         {/* Large background HVAC text */}
         <div className={styles.hvacWatermark}>
-         HVAC
+          HVAC
         </div>
 
         {/* Heading */}
@@ -628,6 +629,82 @@ function HeroBanner() {
         </div>
 
       </div>
+
+
+      {/*--------------Power Roof --------------------  */}
+
+      <div className={`${styles.powerRoofBanner} ${current === 5 ? styles.active : ""
+        }`} >
+        <div className={styles.powerRoofWatermark}>
+          PowerRoof
+          <sup>™</sup>
+        </div>
+        <div className={styles.powerRoofMain}>
+          {/* LEFT CONTENT */}
+          <div className={styles.powerRoofLeft}>
+            {/* Logo / Brand */}
+            <div className={styles.powerRoofBrand}>
+              <div className={styles.powerRoofLogo}>
+                L&amp;R
+              </div>
+
+              <div className={styles.powerRoofName}>
+                PowerRoof<sup>™</sup>
+              </div>
+            </div>
+
+            {/* Tagline */}
+            <h2 className={styles.powerRoofTagline}>
+              Solar-Ready Roofing for a Smarter Tomorrow
+            </h2>
+
+            <div className={styles.powerRoofLine}></div>
+            {/* Description */}
+            <p className={styles.powerRoofDescription}>
+              Transform your roof into a high-performance space
+              with an integrated roofing and solar-ready solution—
+              built for efficiency, durability, and sustainable energy.
+            </p>
+
+            <button className={styles.powerRoofButton}>
+              <span>Explore Roof Power</span>
+              <ArrowRight
+                size={28}
+                strokeWidth={2}
+                className={styles.powerRoofArrow}
+              />
+            </button>
+          </div>
+
+          <div className={styles.powerRoofVisual}>
+            <img
+              src={roofImage}
+              alt="PowerRoof solar-ready home"
+              className={styles.powerRoofImage}
+            />
+          </div>
+        </div>
+
+        <div className={styles.powerRoofStats}>
+          <div className={styles.powerRoofStat}>
+            <h3>500+</h3>
+            <p>Completed Projects</p>
+          </div>
+          <div className={styles.powerRoofStat}>
+            <h3>25+</h3>
+            <p>Years Of Experience</p>
+          </div>
+          <div className={styles.powerRoofStat}>
+            <h3>900+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div className={styles.powerRoofStat}>
+            <h3>150+</h3>
+            <p>Team Workers</p>
+          </div>
+        </div>
+      </div>
+
 
       {/* arrow */}
       <button
