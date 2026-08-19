@@ -47,6 +47,7 @@ const FloatingContact = () => {
 
         window.open(gmailUrl, "_blank", "noopener,noreferrer");
     };
+    
     const handleWhatsAppClick = () => {
         const whatsappNumber = "918595351363";
 

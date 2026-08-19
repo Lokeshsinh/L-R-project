@@ -9,8 +9,24 @@ import {
 import { useNavigate } from 'react-router-dom'
 const Footer = () => {
   const navigate = useNavigate()
+  const companyEmail = "Info.Lr1995@gmail.com";
+  const companyPhone = "+918595351363";
+  const companyPhone1 = "+919758813668"
 
 
+  const handleAddressClick = () => {
+    const address =
+      "216/2, Gautam Nagar, Gulmohar Enclave, New Delhi-110049, Delhi, India";
+
+    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      address
+    )}`;
+
+    window.open(mapUrl, "_blank");
+  };
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${companyPhone}`;
+  };
   const handleProductsClick = () => {
     window.dispatchEvent(
       new Event("open-products-menu")
@@ -21,6 +37,33 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
+  const handleProductButton = () => {
+    window.location.href = `tel:${companyPhone1}`;
+  }
+
+
+
+  const handleMailClick = (e) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent("Enquiry - L&R Prefab Solar India");
+    const body = encodeURIComponent(
+      `Hello L&R Team,\n\nI would like to know more about your products and solutions.\nPlease share more information with me.\nThank you.`
+    );
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(companyEmail)}&su=${subject}&body=${body}`;
+
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  };
+
+  const handleLinkedInClick = () => {
+    window.open(
+      "https://www.linkedin.com/company/rahul-sharma-ba1923254/",
+      "_blank"
+    );
+  };
+
   return (
     <footer className="footer">
       {/* Top Header Section */}
@@ -54,7 +97,7 @@ const Footer = () => {
               <FaFacebookF />
             </a>
 
-            <a href="#linkedin" aria-label="LinkedIn">
+            <a href="#linkedin" onClick={handleLinkedInClick} aria-label="LinkedIn">
               <FaLinkedinIn />
             </a>
 
@@ -127,11 +170,30 @@ const Footer = () => {
         {/* Col 4: Contact Info */}
         <div className="footer-col contact-col">
           <h4>Contact Info</h4>
-          <p className="contact-text">L &amp; R PREFAB SOLAR INDIA</p>
-          <p className="contact-text">+91 8595351363 ; 9758813668</p>
-          <p className="contact-text">Info.Lr1995@gmail.Com</p>
-          <p className="contact-text">07CLKPG8942A1Z5</p>
-          <p className="contact-text">216/2, Gautam Nagar, Gulmohar Enclave, <br /> New Delhi-110049, Delhi, India</p>
+          <p className="contact-text clickable-contact">
+            L &amp; R PREFAB SOLAR INDIA
+          </p>
+          <p className="contact-text">
+            +91{" "}
+            <span onClick={handlePhoneClick} className="clickable-contact">8595351363</span>
+            {" ; "}
+            <span onClick={handleProductButton} className="clickable-contact">9758813668</span>
+          </p>
+          <p
+            className="contact-text clickable-contact"
+            onClick={handleMailClick}
+          >
+            Info.Lr1995@gmail.com
+          </p>
+          <p className="contact-text clickable-contact">
+            07CLKPG8942A1Z5
+          </p>
+          <p onClick={handleAddressClick} className="contact-text clickable-contact">
+            216/2, Gautam Nagar, Gulmohar Enclave,
+
+            < br />
+            New Delhi-110049, Delhi, India
+          </p>
         </div>
 
         {/* Col 5: Help */}

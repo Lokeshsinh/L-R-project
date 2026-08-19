@@ -16,13 +16,13 @@ function HeroBanner() {
 
   const totalSlides = 4;
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCurrent((prev) => (prev + 1) % totalSlides);
-  //   }, 5000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % totalSlides);
+    }, 5000);
 
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   // Next Slide
   const nextSlide = () => {
@@ -575,7 +575,7 @@ function HeroBanner() {
               superior air quality, and reliable performance for commercial
               and industrial environments.
             </div>
-            <button className={styles.hvacButton}>
+            <button onClick={() => navigate('/hvac-solutions')} className={styles.hvacButton}>
               <span>Explore HVAC Solutions</span>
               <ArrowRight
                 size={25}
@@ -666,7 +666,7 @@ function HeroBanner() {
               built for efficiency, durability, and sustainable energy.
             </p>
 
-            <button className={styles.powerRoofButton}>
+            <button onClick={() => navigate('/solar-epc')} className={styles.powerRoofButton}>
               <span>Explore Roof Power</span>
               <ArrowRight
                 size={28}

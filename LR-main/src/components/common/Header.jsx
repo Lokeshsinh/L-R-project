@@ -118,6 +118,12 @@ const Header = () => {
     }
   };
 
+  const handleLinkedInClick = () => {
+    window.open(
+      "https://www.linkedin.com/company/rahul-sharma-ba1923254/",
+      "_blank"
+    );
+  };
 
   //   const handleNestedClick = (name, path) => (e) => {
   //   if (isMobile()) {
@@ -171,7 +177,7 @@ const Header = () => {
           <a href="#fb" aria-label="Facebook">
             <FaFacebookF className="ti" size={16} />
           </a>
-          <a href="#linkedin" aria-label="LinkedIn">
+          <a href="#linkedin" onClick={handleLinkedInClick} aria-label="LinkedIn">
             <FaLinkedinIn className="ti" size={16} />
           </a>
           <a href="#twitter" aria-label="Twitter / X">
