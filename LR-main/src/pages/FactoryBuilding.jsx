@@ -115,7 +115,7 @@ const FactoryBuilding = () => {
             Advanced Factory  <br />
             <span>Building Solutions</span>
           </h1>
-          <p className={styles.heroDesc}>Engineered for efficiency, strength, and scalability — L&R Enterprises
+          <p className={styles.heroDesc}>Engineered for efficiency, strength, and scalability — L&R Prefab Solar
             delivers high-performance factory buildings for modern manufacturing and industrial operations.</p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
             <span>Contact Us</span>
@@ -169,31 +169,34 @@ const FactoryBuilding = () => {
 
 
       {/* PROJECTS */}
-      <section className={styles.projectsSec}>
-        <div className={styles.secHeader}>
-          <div className={styles.productText}>
-            <h2>Factory Development<br /><span>Projects</span></h2>
-            <div className={styles.productsDivider}></div>
+      <section className={styles.productsSec}>
+        <div className={styles.productsInner}>
+          <div className={styles.productsHeader}>
+            <div className={styles.productText}>
+              <h2>
+                Our Modular Home MS  <br />
+                <span>Container Solutions</span>
+              </h2>
+              <div className={styles.productsDivider}></div>
+            </div>
+            <p className={styles.productsSubtext}>
+              High-quality modular container solutions designed for residential, commercial,
+              industrial, and site-based applications with durable mild steel construction.
+            </p>
           </div>
-          <p>
-            High-strength, customizable prefab factory buildings designed
-            for efficient manufacturing and industrial productivity.
-          </p>
-        </div>
-        <div className={styles.expertiseGrid}>
-          {industryProjects.map((item, index) => (
-            <div className={styles.expCard} key={index}>
-              <img src={item.img} alt={item.title} className={styles.expImg} />
-
-              <div className={styles.expLabel}>
-                <h4>{item.title}</h4>
-
-                <div className={styles.desc}>
-                  <p>{item.desc}</p>
+          <div className={styles.expertiseGrid}>
+            {industryProjects.map((item, index) => (
+              <div className={styles.expCard} key={index}>
+                <img src={item.img} alt={item.title} className={styles.expImg} />
+                <div className={styles.expLabel}>
+                  <h4>{item.title}</h4>
+                  <div className={styles.desc}>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

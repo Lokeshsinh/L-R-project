@@ -322,6 +322,29 @@
   background-size: cover;
 }
 
+.aboutSec {
+  width: 100%;
+  padding: 72px 60px;
+  background: url('../assets/Brochure/back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.aboutSec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 0;
+}
+
+.aboutSec>* {
+  position: relative;
+  z-index: 1;
+}
+
 .aboutFlex {
   display: flex;
   justify-content: center;
@@ -776,7 +799,7 @@
 @media (max-width:1280px) {
 
   .cta {
-    padding: 60px 40px;
+    padding: 50px 40px;
   }
 
   .cta h2 {

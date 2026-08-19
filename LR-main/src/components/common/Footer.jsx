@@ -64,6 +64,10 @@ const Footer = () => {
     );
   };
 
+
+  const hanlderClickCompany =() => {
+    window.open("https://www.yuvocreations.com/")
+  }
   return (
     <footer className="footer">
       {/* Top Header Section */}
@@ -207,7 +211,7 @@ const Footer = () => {
       {/* Bottom Copyright Section */}
       <div className="footer-bottom">
         <p>© Copyright 2026 L &amp; R PREFAB SOLAR INDIA All Rights Reserved.</p>
-        <p>Designed &amp; Developed By Yuvocreations.com</p>
+        <p onClick={hanlderClickCompany}>Designed &amp; Developed By Yuvocreations.com</p>
       </div>
     </footer>
   );

@@ -41,7 +41,7 @@ const Brochure = () => {
       <section className={styles.aboutSec}>
         <div className={styles.aboutFlex}>
           <div className={styles.aboutContainer}>
-            <h2 >About L&R <span>Enterprises</span></h2>
+            <h2 >About L&R <span>Prefab Solar India</span></h2>
             <div className={styles.divider} />
           </div>
           <div className={styles.aboutTextBlock}>
