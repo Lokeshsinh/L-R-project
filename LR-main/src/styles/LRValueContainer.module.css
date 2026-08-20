@@ -3727,26 +3727,25 @@
 
 .faqSec {
   width: 100%;
-  padding: 80px 60px;
+  padding: 72px 60px;
   background-color: #f7f7f753;
-}
-
-
-.introLabel {
-  background: #fff;
-  padding: 6px 20px;
-  border-radius: 40px;
-  font-size: 15px;
-  margin-bottom: 17px;
-  border: 1px solid #e5e7eb;
+  background: url('../assets/Pre-Build/warehouse/back1.png');
 }
 
 .faqHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 60px;
   align-items: start;
+}
+
+.introLabel {
+  padding: 6px 25px;
+  border: 1px solid lightgray;
+  border-radius: 34px;
+  font-size: 14px;
 }
 
 .faqText {
@@ -3765,7 +3764,7 @@
 }
 
 .faqText h2 span {
-  color: #1a3c6e;
+  color: #233E70;
 }
 
 .FaqsLine {
@@ -3792,11 +3791,12 @@
 }
 
 .faqImg {
-  width: 640px;
-  height: 490px;
+  width: 630px;
+  height: 478px;
+  background-color: gray;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
-  border-radius: 12px;
   cursor: pointer;
 }
 
@@ -3805,6 +3805,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
   transition: transform .6s ease;
 }
 
@@ -3816,12 +3817,9 @@
   transition: background .6s ease;
 }
 
+
 .faqImg:hover img {
   transform: scale(1.08);
-}
-
-.faqImg:hover::after {
-  background: rgba(0, 0, 0, .45);
 }
 
 
@@ -3848,9 +3846,8 @@
   height: 70px;
   padding: 0 30px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
   cursor: pointer;
   transition: 0.35s;
 }
@@ -3868,7 +3865,6 @@
   justify-content: center;
   color: #2F4673;
   transition: transform 0.35s ease;
-  margin-top: 20px;
 }
 
 .active .icon {
@@ -3909,7 +3905,7 @@
   color: #fff;
   font-size: 15px;
   line-height: 1.6;
-  max-width: 740px;
+  max-width: 739px;
 }
 
 @media (max-width:1600px) {
@@ -4160,7 +4156,7 @@
   }
 
   .faqText h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .faqImg {
@@ -4183,11 +4179,6 @@
     font-size: 13px;
   }
 
-  .faqHeader p {
-    font-size: 12px;
-  }
-
-
 }
 
 @media (max-width:360px) {
@@ -4199,10 +4190,6 @@
   .introLabel {
     font-size: 12px;
     padding: 5px 16px;
-  }
-
-  .faqHeader p {
-    font-size: 12px;
   }
 
   .faqImg {
@@ -4223,6 +4210,7 @@
   }
 
 }
+
 
 /* ===========================
    CTA BANNER

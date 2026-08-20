@@ -193,40 +193,40 @@ const LRValueContainer = () => {
   ];
 
 
-const faqs = [
-  {
-    id: 0,
-    q: "What are L&R Value Granted MS Containers used for?",
-    a: "They are ideal for site offices, staff accommodation, guard cabins, dining halls, storage units, coffee shops, play areas, and utility spaces.",
-  },
-  {
-    id: 1,
-    q: "What sizes are available for L&R MS Containers?",
-    a: "Standard sizes include 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft, with custom sizes also available.",
-  },
-  {
-    id: 2,
-    q: "Are L&R MS Containers suitable for harsh environments?",
-    a: "Yes. They are built with high-quality MS steel and protective coatings for reliable performance in demanding conditions.",
-  },
-  {
-    id: 3,
-    q: "Can L&R MS Containers be relocated?",
-    a: "Yes. They can be easily transported and relocated using cranes or flatbed trucks for temporary or long-term projects.",
-  },
-  {
-    id: 4,
-    q: "Can L&R MS Containers be customized?",
-    a: "Yes. Layouts, insulation, electrical systems, HVAC, flooring, partitions, and finishes can be customized to suit project requirements.",
-  },
-];
+  const faqs = [
+    {
+      id: 0,
+      q: "What are L&R Value Granted MS Containers used for?",
+      a: "They are ideal for site offices, staff accommodation, guard cabins, dining halls, storage units, coffee shops, play areas, and utility spaces.",
+    },
+    {
+      id: 1,
+      q: "What sizes are available for L&R MS Containers?",
+      a: "Standard sizes include 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft, with custom sizes also available.",
+    },
+    {
+      id: 2,
+      q: "Are L&R MS Containers suitable for harsh environments?",
+      a: "Yes. They are built with high-quality MS steel and protective coatings for reliable performance in demanding conditions.",
+    },
+    {
+      id: 3,
+      q: "Can L&R MS Containers be relocated?",
+      a: "Yes. They can be easily transported and relocated using cranes or flatbed trucks for temporary or long-term projects.",
+    },
+    {
+      id: 4,
+      q: "Can L&R MS Containers be customized?",
+      a: "Yes. Layouts, insulation, electrical systems, HVAC, flooring, partitions, and finishes can be customized to suit project requirements.",
+    },
+  ];
 
   return (
     <div className={styles.wrapper}>
       <Header />
 
       {/* ── Hero ── */}
-      <section className={styles.hero}> 
+      <section className={styles.hero}>
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&R PORTABLA MODULAR SOLUTIONS</span>
           <h1 className={styles.mainTitle}>
@@ -471,29 +471,22 @@ const faqs = [
 
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
-        <span className={styles.introLabel}>• FAQ</span>
+        <span className={styles.introLabel}>• FAQS</span>
         <div className={styles.faqHeader}>
           <div className={styles.faqText}>
-            <h2>
-              Frequently Asked
-              <br />
-              <span>Questions</span>
-            </h2>
+            <h2>Frequently Asked<br /><span>Questions</span></h2>
             <div className={styles.FaqsLine}></div>
           </div>
-          <p>
-            Quick answers to common queries about our L&R MS containers,
-            covering features, customization, durability, and deployment.
+          <p>Quick answers to common queries about our L&R MS containers, covering features, customization, durability, and deployment.
+
           </p>
         </div>
-
-        {/*  */}
         <div className={styles.faqBody}>
+
           <div className={styles.faqImg}>
-            <img src={container3} alt="container" />
+            <img src={container3} alt="warehouse" />
           </div>
           {/*  */}
-
           <div className={styles.container}>
             {faqs.map((item, index) => (
               <div
@@ -527,6 +520,8 @@ const faqs = [
               </div>
             ))}
           </div>
+
+
         </div>
       </section>
 

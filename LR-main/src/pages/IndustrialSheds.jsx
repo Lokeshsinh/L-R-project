@@ -259,7 +259,7 @@ const IndustrialSheds = () => {
               & Engineering Excellence
             </h2>
             <p>
-              L&R Enterprises utilizes advanced fabrication facilities equipped with
+              L&R Prefab Solar utilizes advanced fabrication facilities equipped with
               CNC machinery, automated welding systems,
               and precision engineering processes to manufacture industrial sheds that
               meet high standards of strength, accuracy, and performance.
