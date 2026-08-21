@@ -333,9 +333,6 @@
 .intro {
   width: 100%;
   padding: 80px 60px;
-  background: url('../assets/conatiners/premiumContainer/section2.png') no-repeat;
-  background-position: center;
-  background-size: contain;
   background-color: #f7f7f753;
 }
 
@@ -917,6 +914,7 @@
 .sizesDesc {
   font-size: 15px;
   line-height: 1.7;
+  color: #555;
   max-width: 480px;
   font-weight: 500;
 }
@@ -1956,7 +1954,7 @@
   position: relative;
   bottom: SolarEpicpx;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  bottom: 45px;
+  bottom: 75px;
 }
 
 .mfgImgWrapper img {

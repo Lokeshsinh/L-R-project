@@ -225,11 +225,10 @@ const PrefabDryWall = () => {
               Manufacturing Technology
             </h2>
             <p>
-              Prefab drywall systems by L&R Prefab Solar India Pvt Ltd improve construction efficiency through faster installation,
-              consistent factory-controlled quality, reduced labor dependency, and lower overall project costs, while
-              ensuring high design accuracy and premium finish; these panels are manufactured using precision engineering
-              in controlled environments to achieve uniform quality, accurate dimensions, and strong structural performance
-              for easy and reliable on-site assembly.
+             Prefab drywall systems by L&R Prefab Solar India Pvt. Ltd. enhance construction 
+             efficiency with faster installation, consistent quality, reduced labor, lower costs, 
+             and precise dimensions. Manufactured in controlled environments, they ensure reliable 
+             assembly, strong performance, and a premium finish.
             </p>
             <div className={styles.LastImage}>
               <img src={design1} alt="png" />

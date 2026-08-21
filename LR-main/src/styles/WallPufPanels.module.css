@@ -60,7 +60,7 @@
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 30px;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .btnHero {
@@ -1831,7 +1831,7 @@
 .applicationsContainer {
   position: relative;
   width: 630px;
-  height: 380px;
+  height: 300px;
   border-radius: 10px;
   background-color: #808080;
   overflow: hidden;
@@ -3041,7 +3041,7 @@ safety
 
 .roofPanelImageCard {
   width: 600px;
-  height: 320px;
+  height: 270px;
   background-color: gray;
   overflow: hidden;
   border-radius: 10px;
@@ -4583,207 +4583,199 @@ safety
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width:1280px) {
 
-  .cta {
-    padding: 55px 50px;
-    gap: 10px;
-    background-position: center;
-    background-size: cover;
-  }
+    .cta {
+        padding: 50px 40px;
+    }
 
-  .cta h2 {
-    font-size: 46px;
-    line-height: 1.25;
-    text-align: center;
-    margin: 0;
-  }
+    .cta h2 {
+        font-size: 40px;
+        line-height: 1.2;
+        text-align: center;
+    }
 
-  .cta p {
-    max-width: 560px;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    text-align: center;
-  }
+    .cta p {
+        max-width: 700px;
+        margin: 0 auto 24px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
 
-  .contactBtn {
-    width: 240px;
-    height: 52px;
-    padding: 0 24px;
-    gap: 10px;
-  }
+    .contactBtn {
+        width: 250px;
+        height: 50px;
+        font-size: 16px;
+    }
 
-  .contactText {
-    font-size: 15px;
-  }
 }
+
 
 @media (max-width:1200px) {
 
-  .cta {
-    padding: 60px 40px;
-  }
+    .cta {
+        padding: 60px 40px;
+    }
 
-  .cta h2 {
-    font-size: 44px;
-    text-align: center;
-  }
+    .cta h2 {
+        font-size: 44px;
+        text-align: center;
+    }
 
 }
 
 @media (max-width:992px) {
 
-  .cta {
-    padding: 55px 30px;
-    background-attachment: scroll;
-  }
+    .cta {
+        padding: 55px 30px;
+        background-attachment: scroll;
+    }
 
-  .cta h2 {
-    font-size: 38px;
-    line-height: 1.3;
-  }
+    .cta h2 {
+        font-size: 38px;
+        line-height: 1.3;
+    }
 
-  .cta p {
-    max-width: 700px;
-    font-size: 16px;
-  }
+    .cta p {
+        max-width: 700px;
+        font-size: 16px;
+    }
 
 }
 
 @media (max-width:768px) {
 
-  .cta {
-    padding: 50px 22px;
-  }
+    .cta {
+        padding: 50px 22px;
+    }
 
-  .cta h2 {
-    font-size: 32px;
-  }
+    .cta h2 {
+        font-size: 32px;
+    }
 
-  .cta p {
-    max-width: 100%;
-    font-size: 15px;
-    line-height: 1.7;
-  }
+    .cta p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.7;
+    }
 
-  .contactBtn {
-    width: 240px;
-    height: 52px;
-  }
+    .contactBtn {
+        width: 240px;
+        height: 52px;
+    }
 
 }
 
 @media (max-width:576px) {
 
-  .cta {
-    padding: 45px 18px;
-  }
+    .cta {
+        padding: 45px 18px;
+    }
 
-  .cta h2 {
-    font-size: 28px;
-  }
+    .cta h2 {
+        font-size: 28px;
+    }
 
-  .cta p {
-    font-size: 14px;
-    margin-bottom: 18px;
-  }
+    .cta p {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
 
-  .contactBtn {
-    width: 220px;
-    height: 50px;
-    font-size: 15px;
-  }
+    .contactBtn {
+        width: 220px;
+        height: 50px;
+        font-size: 15px;
+    }
 
 }
 
 @media (max-width:425px) {
 
-  .cta {
-    padding: 40px 16px;
-    gap: 14px;
-  }
+    .cta {
+        padding: 40px 16px;
+        gap: 14px;
+    }
 
-  .cta h2 {
-    font-size: 24px;
-    line-height: 1.35;
-  }
+    .cta h2 {
+        font-size: 24px;
+        line-height: 1.35;
+    }
 
-  .cta p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
+    .cta p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 
-  .contactBtn {
-    width: 200px;
-    height: 48px;
-    padding: 0 20px;
-  }
+    .contactBtn {
+        width: 200px;
+        height: 48px;
+        padding: 0 20px;
+    }
 
-  .contactText {
-    font-size: 14px;
-  }
+    .contactText {
+        font-size: 14px;
+    }
 
 }
 
 @media (max-width:375px) {
 
-  .cta {
-    padding: 35px 14px;
-  }
+    .cta {
+        padding: 35px 14px;
+    }
 
-  .cta h2 {
-    font-size: 22px;
-  }
+    .cta h2 {
+        font-size: 22px;
+    }
 
-  .cta p {
-    font-size: 13px;
-  }
+    .cta p {
+        font-size: 13px;
+    }
 
-  .contactBtn {
-    width: 190px;
-    height: 46px;
-  }
+    .contactBtn {
+        width: 190px;
+        height: 46px;
+    }
 
 }
 
 @media (max-width:325px) {
 
-  .cta {
-    padding: 30px 12px;
-  }
+    .cta {
+        padding: 30px 12px;
+    }
 
-  .cta h2 {
-    font-size: 20px;
-    line-height: 1.4;
-  }
+    .cta h2 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
 
-  .cta p {
-    font-size: 12px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
+    .cta p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
 
-  .contactBtn {
-    width: 175px;
-    height: 44px;
-    gap: 8px;
-    padding: 0 16px;
-  }
+    .contactBtn {
+        width: 175px;
+        height: 44px;
+        gap: 8px;
+        padding: 0 16px;
+    }
 
-  .contactText {
-    font-size: 13px;
-  }
+    .contactText {
+        font-size: 13px;
+    }
 
-  .iconBox {
-    width: 16px;
-    height: 16px;
-  }
+    .iconBox {
+        width: 16px;
+        height: 16px;
+    }
 
-  .iconOne,
-  .iconTwo {
-    width: 16px;
-    height: 16px;
-  }
+    .iconOne,
+    .iconTwo {
+        width: 16px;
+        height: 16px;
+    }
 
 }

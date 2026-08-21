@@ -328,9 +328,6 @@
 .intro {
     width: 100%;
     padding: 80px 60px;
-    background: url('../assets/conatiners/pufContainer/back.png') no-repeat;
-    background-position: center;
-    background-size: contain;
     background-color: #f7f7f753;
 }
 

@@ -212,7 +212,7 @@ const FactoryBuilding = () => {
               <div className={styles.introLine}></div>
             </div>
             <p>
-              L&amp;R Factory Buildings Are Engineered To Deliver Superior Structural
+              L&R Prefab Solar Inida Factory Buildings Are Engineered To Deliver Superior Structural
               Strength, Large Clear Spans, And Flexibility To Accommodate Modern
               Manufacturing Processes. Our Prefab Solutions Significantly Reduce
               Construction Time While Maintaining High Standards Of Quality And Safety.

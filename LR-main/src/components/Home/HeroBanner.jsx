@@ -14,7 +14,7 @@ function HeroBanner() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
 
-  const totalSlides = 4;
+  const totalSlides = 5;
 
   useEffect(() => {
     const timer = setInterval(() => {

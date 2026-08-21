@@ -427,6 +427,7 @@
 
 .sideLeft p {
     font-size: 17px;
+    color: #555
 }
 
 .btnOutline {
@@ -2794,7 +2795,6 @@
     width: 100%;
     padding: 72px 60px;
     background-color: #f7f7f753;
-    background: url('../assets/Pre-Build/warehouse/back1.png');
 }
 
 .faqHeader {
@@ -3382,7 +3382,7 @@
 @media (max-width:1280px) {
 
     .cta {
-        padding: 55px 40px;
+        padding: 50px 40px;
     }
 
     .cta h2 {

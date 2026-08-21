@@ -255,7 +255,7 @@ const PrefabLabour = () => {
           </h1>
           <p className={styles.heroDesc}>
             Modular labour colonies engineered for rapid deployment, structural stability,
-            and worker dignity — delivered and installed across India.
+            and worker dignity  delivered and installed across India.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
             <span>Contact Us</span>
@@ -275,9 +275,7 @@ const PrefabLabour = () => {
           </h2>
           <div className={styles.introLine} />
         </div>
-
         <div className={styles.introContainer}>
-
           <div className={styles.introImage}>
             <img src={labour2} alt="error" />
           </div>
@@ -648,7 +646,7 @@ const PrefabLabour = () => {
 
       {/* ── CTA ── */}
       <section className={styles.cta}>
-        <h2>Build smarter workforce facilities with L&R Green India Pvt Ltd</h2>
+        <h2>Smarter Workforce Facilities with L&R Prefab Solar India Pvt Ltd</h2>
         <p>
           Connect with us to explore scalable, durable workforce housing solutions tailored
           to your project — safe, cost-efficient and aligned with modern construction standards.

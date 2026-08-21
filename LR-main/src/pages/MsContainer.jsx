@@ -389,10 +389,8 @@ const MsContainer = () => {
             <div className={styles.expertiseLine}></div>
           </div>
           <p>
-            L&amp;R delivers advanced modular container solutions for oil &amp;
-            gas, energy, and construction sectors, combining strong engineering,
-            flexible design, and fast project execution for demanding
-            environments.
+        L&R Prefab Solar India delivers advanced modular container solutions for oil & gas, energy, and construction, combining strong 
+        engineering, flexible design, and fast execution.
           </p>
         </div>
         <div className={styles.expertiseGrid}>

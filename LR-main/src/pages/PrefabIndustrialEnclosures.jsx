@@ -275,7 +275,7 @@ const PrefabIndustrialEnclosures = () => {
           <div className={styles.advContainer}>
             <div className={styles.advText}>
               <p>
-                L&R Green Pvt Ltd offers high-performance prefab industrial enclosures built for
+                L&R Prefab Solar India Pvt Ltd offers high-performance prefab industrial enclosures built for
                 reliability, safety, and long-term efficiency. Our solutions use advanced insulation
                 and strong construction to meet demanding industrial needs.
               </p>

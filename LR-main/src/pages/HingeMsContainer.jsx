@@ -293,14 +293,14 @@ const HingeMsContainer = () => {
           <div className={styles.sizesTopRow}>
             <div className={styles.sizesLeft}>
               <h2 >
-                The Types of L&R <br />
-                <span>Value Granted Sizes</span>
+                The Types of Hinge <br />
+                <span>Ms Container Sizes</span>
               </h2>
               <div className={styles.secHeadLine}></div>
             </div>
             <p className={styles.sizesDesc}>
-              Every Hinge MS Container from L&R Prefab Solar India  Pvt Ltd is available in multiple core sizes, with flexible
-              interior layouts designed for offices, accommodation, dining, sanitary, and storage applications.
+              Every Hinge MS Container from L&R Prefab Solar India Pvt Ltd comes in multiple sizes with flexible
+              layouts for office, accommodation, dining, sanitary, and storage applications.
             </p>
           </div>
           <div className={styles.controls}>
@@ -471,8 +471,8 @@ const HingeMsContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-           Find quick answers about Hinge containers, their insulation, applications, durability, 
-           and customization options for industrial and commercial use.
+            Find quick answers about Hinge containers, their insulation, applications, durability,
+            and customization options for industrial and commercial use.
           </p>
         </div>
 

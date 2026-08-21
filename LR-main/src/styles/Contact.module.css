@@ -429,6 +429,7 @@
   color: #ffffff;
   margin: 0;
   letter-spacing: 0.3px;
+  cursor: pointer;
 }
 
 .infoLink {

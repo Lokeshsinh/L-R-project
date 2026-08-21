@@ -1,8 +1,8 @@
 /*================================= HERO =========================================
 =================================================================================*/
 .hero {
-  background: Linear-gradient(rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.65)), url('../assets/Pre-Build/Factory/background.png') center/cover no-repeat;
+  background: Linear-gradient(rgba(0, 0, 0, 0.41),
+      rgba(0, 0, 0, 0.414)), url('../assets/Pre-Build/Factory/background.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;
@@ -380,7 +380,7 @@
 .introContent p {
   font-size: 17px;
   line-height: 1.8;
-  color: #555;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -4039,7 +4039,8 @@
 =========================== */
 .cta {
   width: 100%;
-  background: url('../assets/Pre-Build/Factory/cta.png');
+  background:linear-gradient(rgba(0, 0, 0, 0.421),
+      rgba(0, 0, 0, 0.414)), url('../assets/Pre-Build/Factory/cta.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

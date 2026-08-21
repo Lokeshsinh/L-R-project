@@ -48,7 +48,7 @@
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 30px;
-  max-width: 1000px;
+  max-width: 980px;
 }
 
 .btnHero {
@@ -1730,7 +1730,7 @@
 .featureRow {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .featureIconBox {
@@ -1767,10 +1767,10 @@
   color: #293F67;
 }
 
-.interiorImageWrappe {
+.interiorImageWrapper {
   position: relative;
   width: 620px;
-  height: 370px;
+  height: 300px;
   overflow: hidden;
   border-radius: 30px 30px 30px 30px;
 }
@@ -1839,7 +1839,7 @@
 .interiorImageWrapper {
   position: relative;
   width: 620px;
-  height: 370px;
+  height: 340px;
   overflow: hidden;
   border-radius: 0 30px 30px 30px;
 }
@@ -2241,7 +2241,7 @@
 .showcaseFrame {
   position: relative;
   width: 620px;
-  height: 310px;
+  height: 290px;
   overflow: hidden;
   border-radius: 20px 30px 30px 30px;
 }

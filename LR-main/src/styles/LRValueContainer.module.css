@@ -326,9 +326,6 @@
 .intro {
   width: 100%;
   padding: 80px 60px;
-  background: url('../assets/conatiners/L&RContainer/backgroud.png') no-repeat;
-  background-position: center;
-  background-size: contain;
   background-color: #f7f7f753;
 }
 
@@ -1383,6 +1380,7 @@
 .secHeaderCenter p {
   font-size: 15px;
   line-height: 1.7;
+  color: #555;
   max-width: 480px;
   font-weight: 500;
 }
@@ -3179,6 +3177,7 @@
   font-size: 15px;
   line-height: 1.7;
   margin-top: 8px;
+  color: #555;
   font-weight: 500;
 }
 
@@ -3729,7 +3728,6 @@
   width: 100%;
   padding: 72px 60px;
   background-color: #f7f7f753;
-  background: url('../assets/Pre-Build/warehouse/back1.png');
 }
 
 .faqHeader {

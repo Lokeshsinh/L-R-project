@@ -305,11 +305,10 @@ function RooftopRoom() {
                             Rooftop Solutions
                         </h2>
                         <p>
-                            Built with premium steel structures and high-quality materials, our rooftop houses
-                            deliver exceptional strength, long-lasting durability, and reliable performance in
-                            all weather conditions. Engineered to withstand harsh environmental conditions, they
-                            offer superior structural stability and lasting protection. Every rooftop solution
-                            is designed for years of safe, low-maintenance performance.
+                            Built with premium steel and high-quality materials, our rooftop houses offer
+                            exceptional strength, durability, and weather resistance. Engineered for stability
+                            and long-lasting, low-maintenance performance. Designed for safe, comfortable, and
+                            reliable rooftop living. Ideal for modern homes, offices, and versatile rooftop spaces.
                         </p>
                         <div className={styles.LastImage}>
                             <img src={design1} alt="png" />
@@ -332,8 +331,8 @@ function RooftopRoom() {
                         <h2>Our Construction<br /><span>Process</span></h2>
                         <div className={styles.productsDividers}></div>
                     </div>
-                    <p >Our efficient construction process covers everything from site assessment and custom design to professional
-                        installation and final handover, ensuring a safe, durable, and ready-to-use rooftop solution.</p>
+                    <p >Our efficient process covers site assessment, custom design, professional installation,
+                        and final handover for a safe, durable, ready-to-use rooftop solution.</p>
                 </div>
 
                 <div className={styles.grid}>
@@ -396,7 +395,7 @@ function RooftopRoom() {
                         <h2>Frequently Asked<br /><span>Questions</span></h2>
                         <div className={styles.FaqsLine}></div>
                     </div>
-                    <p>GFind quick answers to common questions about rooftop houses, including customization, durability,
+                    <p>Find quick answers to common questions about rooftop houses, including customization, durability,
                         applications, installation, and turnkey solutions.</p>
                 </div>
                 <div className={styles.faqBody}>

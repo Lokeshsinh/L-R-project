@@ -1001,7 +1001,7 @@
   top: 26px;
   left: 0;
   width: 72px;
-  height: 305px;
+  height: 340px;
   background: #29456F;
   border-radius: 0 0 0 0;
   z-index: 2;
@@ -1013,8 +1013,8 @@
   position: absolute;
   top: 0;
   left: 36px;
-  width: 564px;
-  height: 356px;
+  width: 584px;
+  height: 390px;
   overflow: hidden;
   border-radius: 16px 16px 16px 16px;
   cursor: pointer;
@@ -3683,7 +3683,7 @@
 @media (max-width:1280px) {
 
   .cta {
-    padding: 60px 40px;
+    padding: 50px 40px;
   }
 
   .cta h2 {

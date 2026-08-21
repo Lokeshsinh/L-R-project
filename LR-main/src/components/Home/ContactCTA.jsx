@@ -9,6 +9,9 @@ import {
   SunMedium,
 } from "lucide-react";
 const ContactCTA = () => {
+  const companyEmail = "Info.Lr1995@gmail.com";
+  const companyPhone = "+918595351363";
+  const companyPhone1 = "+919758813668"
   const projects = [
     {
       value: "Pre-Engineered Building",
@@ -101,6 +104,41 @@ ${formData.message}`;
 
     window.open(whatsappURL, "_blank");
   };
+
+  const handleMailClick = (e) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent("Enquiry - L&R Prefab Solar India");
+    const body = encodeURIComponent(
+      `Hello L&R Team,\n\nI would like to know more about your products and solutions.\nPlease share more information with me.\nThank you.`
+    );
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(companyEmail)}&su=${subject}&body=${body}`;
+
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  };
+
+
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${companyPhone}`;
+  };
+
+  const handleProductButton = () => {
+    window.location.href = `tel:${companyPhone1}`;
+  }
+
+
+  const handleAddressClick = () => {
+    const address =
+      "216/2, Gautam Nagar, Gulmohar Enclave, New Delhi-110049, Delhi, India";
+
+    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      address
+    )}`;
+
+    window.open(mapUrl, "_blank");
+  };
+
   return (
     <section className={styles.contactSection}>
       {/* Background blueprint overlay */}
@@ -230,7 +268,7 @@ ${formData.message}`;
 
             <div className={styles.infoGroup}>
               <span className={styles.infoLabel}>Office Address</span>
-              <p className={styles.infoValue}>
+              <p onClick={handleAddressClick} className={styles.infoValue}>
                 216/2, Gautam Nagar,<br />
                 Gulmohar Enclave,<br />
                 New Delhi-110049
@@ -240,14 +278,14 @@ ${formData.message}`;
             <div className={styles.infoGroup}>
               <span className={styles.infoLabel}>Direct Contact</span>
               <p className={styles.infoValue}>
-                +91 8595351363<br />
-                9758813668
+                +91 <span onClick={handlePhoneClick}>8595351363</span><br />
+                <span onClick={handleProductButton}>9758813668</span>
               </p>
             </div>
 
             <div className={styles.infoGroup}>
               <span className={styles.infoLabel}>Technical Support</span>
-              <a href="mailto:Info.Lr1995@gmail.com" className={styles.infoLink}>
+              <a onClick={handleMailClick} href="mailto:Info.Lr1995@gmail.com" className={styles.infoLink}>
                 Info.Lr1995@gmail.com
               </a>
             </div>

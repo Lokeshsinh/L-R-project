@@ -360,7 +360,7 @@ const About = () => {
   const faqs = [
     {
       id: 1,
-      q: "What products does L & R Prefab Solar manufacture?",
+      q: "What products does L&R Prefab Solar India manufacture?",
       a:
         "We manufacture prefabricated buildings, PEB structures, MS containers, sandwich panels, warehouses, industrial sheds, and modular construction solutions.",
     },
@@ -396,36 +396,6 @@ const About = () => {
 
       <main>
 
-
-
-
-        {/* <section className={styles.hero}>
-          <div className={styles.heroContent}>
-            <p>About Our Company</p>
-            <h1>
-              BUILDING THE FUTURE WITH <br />
-              L&R GREEN INDIA PVT LTD
-            </h1>
-            <h4>
-              Leading Manufacturer Of Prefabricated Structures, Mild Steel
-              Containers & Prefabricated Cabins From New Delhi, India.
-            </h4>
-            <button>
-              Contact us <span>→</span>
-            </button>
-          </div>
-
-          <div className={styles.heroMiniCard}>
-            <div>
-              <p>Modular Office</p>
-              <span>→</span>
-            </div>
-            <img
-              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=80"
-              alt="Modular Office"
-            />
-          </div>
-        </section> */}
 
 
         <section className={styles.hero}>
@@ -486,7 +456,7 @@ const About = () => {
                 </h2>
                 <div class={styles.introLine}></div>
               </div>
-              <p>With over 10 years of industry experience, L&R Prefab Solar is a trusted manufacturer
+              <p>With over 10 years of industry experience, L&R Prefab Solar India is a trusted manufacturer
                 of prefabricated buildings, modular structures, pre-engineered buildings (PEBs), sandwich
                 panels, and steel fabrication solutions. We are committed to delivering innovative, durable,
                 and cost-effective infrastructure for commercial, industrial, and infrastructure projects.</p>
@@ -561,7 +531,7 @@ const About = () => {
                 <h2>Visionary Leadership, <span>Lasting Impact</span></h2>
                 <div className={styles.founderLine}></div>
               </div>
-              <p>L&R Prefab Solar was founded with a vision to transform the prefabricated construction
+              <p>L&R Prefab Solar Inida was founded with a vision to transform the prefabricated construction
                 industry by delivering innovative, high-quality, and cost-effective building solutions.
                 Guided by a passion for excellence and customer satisfaction, the company has grown into
                 a trusted name known for reliability, precision, and timely project execution.</p>
@@ -920,7 +890,7 @@ const About = () => {
               <div className={styles.smartLine}></div>
             </div>
             <p>
-              L & R Prefab Solar delivers durable prefabricated structures and
+              L&R Prefab Solar Inida delivers durable prefabricated structures and
               steel containers designed for modern industrial and commercial
               needs.
             </p>
@@ -964,7 +934,7 @@ const About = () => {
               </h2>
 
               <p>
-                At L & R Prefab Solar India, we are committed to delivering high-quality prefabricated
+                At L&R Prefab Solar India, we are committed to delivering high-quality prefabricated
                 structures and steel containers built with precision and care. Our focus on durability,
                 timely execution, and customer satisfaction makes us a trusted choice for modern construction needs.
               </p>

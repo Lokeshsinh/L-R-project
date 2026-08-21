@@ -12,7 +12,8 @@
    HERO
 =========================== */
 .hero {
-  background: url('../assets/conatiners/pufContainer/banner.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.484),
+      rgba(0, 0, 0, 0.422)), url('../assets/conatiners/pufContainer/banner.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;
@@ -739,6 +740,7 @@
 
 .sizesDesc {
   font-size: 15px;
+  color: #555;
   line-height: 1.7;
   max-width: 480px;
   font-weight: 500;
@@ -2602,7 +2604,7 @@
   width: 100%;
   padding: 72px 60px;
   background-color: #f7f7f753;
-  background: url('../assets/Pre-Build/warehouse/back1.png');
+
 }
 
 .faqHeader {

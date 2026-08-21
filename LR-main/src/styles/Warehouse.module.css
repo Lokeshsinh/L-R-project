@@ -2366,7 +2366,7 @@
 
 .mfgText p {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, .85);
 }
 
@@ -3265,7 +3265,6 @@
   width: 100%;
   padding: 72px 60px;
   background-color: #f7f7f753;
-  background: url('../assets/Pre-Build/warehouse/back1.png');
 }
 
 .faqHeader {

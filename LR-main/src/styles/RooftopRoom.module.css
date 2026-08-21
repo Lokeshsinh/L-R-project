@@ -1650,7 +1650,7 @@
 }
 
 .mfgText {
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .mfgText h2 {
@@ -3332,41 +3332,34 @@ FAQ SECtion
 }
 
 
-@media (max-width: 1440px) {
+
+@media (max-width:1280px) {
 
     .cta {
-        padding: 55px 50px;
-        gap: 10px;
-        background-position: center;
-        background-size: cover;
+        padding: 50px 40px;
     }
 
     .cta h2 {
-        font-size: 46px;
-        line-height: 1.25;
+        font-size: 40px;
+        line-height: 1.2;
         text-align: center;
-        margin: 0;
     }
 
     .cta p {
-        max-width: 560px;
+        max-width: 700px;
+        margin: 0 auto 24px;
         font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 18px;
-        text-align: center;
+        line-height: 1.8;
     }
 
     .contactBtn {
-        width: 240px;
-        height: 52px;
-        padding: 0 24px;
-        gap: 10px;
+        width: 250px;
+        height: 50px;
+        font-size: 16px;
     }
 
-    .contactText {
-        font-size: 15px;
-    }
 }
+
 
 @media (max-width:1200px) {
 

@@ -54,7 +54,7 @@
    line-height: 1.7;
    color: #e2e8f0;
    margin-bottom: 30px;
-   max-width: 800px;
+   max-width: 600px;
  }
 
  .btnHero {
@@ -661,10 +661,10 @@
  }
 
 
- @media (max-width: 1090px){
-    .mainImage {
+ @media (max-width: 1090px) {
+   .mainImage {
      width: 480px;
-     height:530px;
+     height: 530px;
    }
  }
 
@@ -1999,7 +1999,7 @@
    }
 
    .mfgText {
-     max-width:680px;
+     max-width: 680px;
    }
 
    .mfgText p {
@@ -3672,7 +3672,8 @@
 =========================== */
  .cta {
    width: 100%;
-   background: url('../assets/PREFAB/mashroom/cta.png');
+   background: linear-gradient(rgba(0, 0, 0, 0.65),
+       rgba(0, 0, 0, 0.65)), url('../assets/PREFAB/mashroom/cta.png');
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;

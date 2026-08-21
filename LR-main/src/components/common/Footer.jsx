@@ -94,7 +94,7 @@ const Footer = () => {
             <img src={logo1} alt="logo" />
           </div>
           <p className="footer-desc">
-            L &amp; R PREFAB SOLAR INDIA - Manufacturer of prefabricated structure, mild steel container &amp; prefabricated cabin since 2015 in New Delhi, Delhi.
+            L&R Prefab Solar India - Manufacturer of prefabricated structure, mild steel container &amp; prefabricated cabin since 2015 in New Delhi, Delhi.
           </p>
           <div className="footer-social">
             <a href="#facebook" aria-label="Facebook">
@@ -175,7 +175,7 @@ const Footer = () => {
         <div className="footer-col contact-col">
           <h4>Contact Info</h4>
           <p className="contact-text clickable-contact">
-            L &amp; R PREFAB SOLAR INDIA
+            L&R Prefab Solar India
           </p>
           <p className="contact-text">
             +91{" "}

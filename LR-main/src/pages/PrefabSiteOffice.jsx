@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     id: 4,
-    q: "Where are L&R cabins commonly used?",
+    q: "Where are L&R Prefab Solar India  cabins commonly used?",
     a: "Our cabins are deployed at construction sites, industrial facilities, mining operations, border areas, and remote infrastructure projects across India.",
   },
 ];
@@ -111,8 +111,8 @@ const PrefabSiteOffice = () => {
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&R PREFAB SOLAR INDIA PVT LTD</span>
           <h1 className={styles.mainTitle}>
-            Smart Prefabricated Site <br />
-            <span>Office
+            Smart Prefabricated  <br />
+            <span>Site Office
             </span>
           </h1>
           <p className={styles.heroDesc}>
@@ -247,13 +247,13 @@ const PrefabSiteOffice = () => {
       {/* ── Why Choose ── */}
       <section className={styles.SolarEpic}>
         <div className={styles.solarEpicTitle}>
-          <h2>Why Choose L&R  <br /><span>Green India Pvt Ltd</span></h2>
+          <h2>Why Choose L&R  Prefab <br /><span> Solar India Pvt Ltd</span></h2>
           <div className={styles.FaqsLine}></div>
         </div>
         <div className={styles.SolarEpicFLex}>
           {/*  */}
           <div className={styles.solartext}>
-            <p>L&R Green India Pvt Ltd is a trusted provider of high-quality prefabricated site office
+            <p>L&R Prefab Solar India Pvt Ltd is a trusted provider of high-quality prefabricated site office
               cabins built with premium materials and advanced engineering. We focus on strong structural
               design, safety, and long-lasting performance to ensure reliable use in demanding project
               environments, with consistent quality across all modular solutions.</p>
@@ -328,8 +328,8 @@ const PrefabSiteOffice = () => {
             <div className={styles.applicationsDivider} />
           </div>
           <p>
-            The Prefab Site Office Process ensures efficient workspace delivery through
-            smart design, precision panel manufacturing, quality assembly, and quick on-site installation.
+            The Prefab Site Office Process delivers efficient workspaces through smart
+            design, precision manufacturing, quality assembly, and quick installation.
           </p>
         </div>
         <div className={styles.featureGrid}>
@@ -377,7 +377,7 @@ const PrefabSiteOffice = () => {
             </div>
           </div>
           <div className={styles.containerText}>
-            <p>L&R Green India Pvt Ltd prefabricated site office cabins provide
+            <p>L&R Prefab Solar India Pvt Ltd prefabricated site office cabins provide
               fast and reliable workspace solutions for a wide range of industries at project sites.</p>
             <div className={styles.applicationFeatureList}>
               <div className={styles.applicationFeatureItem}>

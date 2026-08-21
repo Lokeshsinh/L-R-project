@@ -188,31 +188,30 @@ const PUFContainer = () => {
   const faqs = [
     {
       id: 0,
-      q: "What are L&R Value Granted MS Containers used for?",
-      a: "They are used for staff offices, worker accommodation, guard cabins, dining spaces, storage units, pump farms, coffee shops, play areas, and various site utility applications.",
+      q: "What are  PUF Containers used for?",
+      a: "L&R Prefab Solar India PUF Containers are used for site offices, worker accommodation, storage units, security cabins, and applications requiring insulated spaces.",
     },
     {
       id: 1,
-      q: "What sizes are available in L&R MS Containers?",
-      a: "They are available in multiple sizes such as 40×10×8.5 ft, 20×10×8.5 ft, 10×10×8.5 ft, 6×8 ft, and 4×4 ft.",
+      q: "What sizes are available in  PUF Containers?",
+      a: "PUF Containers are available in various standard sizes and can also be manufactured in customized dimensions based on specific project requirements.",
     },
     {
       id: 2,
-      q: "Are these containers suitable for harsh environments?",
-      a: "Yes. L&R MS Containers are built with high-grade steel and protective coatings, making them durable and reliable even in extreme weather and demanding site conditions.",
+      q: "Do PUF Containers provide good insulation?",
+      a: "Yes. PUF insulated panels provide excellent thermal insulation, helping maintain comfortable indoor temperatures and improving energy efficiency.",
     },
     {
       id: 3,
-      q: "Can L&R MS Containers be relocated?",
-      a: "Absolutely. These containers are designed for easy relocation using standard lifting equipment or flatbed trucks, making them ideal for phased or temporary deployments.",
+      q: "Are  PUF Containers suitable for harsh environments?",
+      a: "Yes. L&R Prefab Solar India PUF Containers feature durable materials and insulated panels for reliable performance in demanding weather and site conditions.",
     },
     {
       id: 4,
-      q: "Do these containers support custom layouts?",
-      a: "Yes. Interior partitions, electrical fittings, HVAC, flooring, and finishes can all be customized to meet your specific project or operational requirements.",
+      q: "Can  PUF Containers be customized?",
+      a: "Yes. Layouts, doors, windows, electrical fittings, flooring, insulation thickness, HVAC systems, and interior finishes can be customized according to project requirements.",
     },
   ];
-
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -225,7 +224,7 @@ const PUFContainer = () => {
             PUF Container <br />
             <span>Solutions</span>
           </h1>
-          <p className={styles.heroDesc}>Insulated PUF Containers by LRR Prefab Solar India PVT LTD offering energy-efficient, durable, and
+          <p className={styles.heroDesc}>Insulated PUF Containers by L&R Prefab Solar India Pvt Ldt offering energy-efficient, durable, and
             flexible modular solutions for offices, accommodation, and industrial site applications.</p>
           <button className={styles.btnWhite} onClick={() => {
             navigate("/contact");
@@ -413,7 +412,7 @@ const PUFContainer = () => {
             </h2>
 
             <p>
-              At L&R, we combine advanced engineering, high-quality materials,
+              At L&R Prefab Solar Inida, we combine advanced engineering, high-quality materials,
               and precision manufacturing processes
               to deliver durable and reliable MS and PUF container solutions
               that meet the highest industry standards.
@@ -448,10 +447,8 @@ const PUFContainer = () => {
               <div className={styles.productsDivider}></div>
             </div>
             <p className={styles.productsSubtext}>
-              A range of insulated PUF containers for offices,
-              accommodation, dining, storage, and recreational
-              spaces, designed for energy efficiency, comfort,
-              and quick on-site deployment with flexible usage options.
+              A range of insulated PUF containers for offices, accommodation, dining, storage,
+              and recreation, designed for comfort, efficiency, and quick deployment.
             </p>
           </div>
           <div className={styles.expertiseGrid}>
@@ -487,8 +484,7 @@ const PUFContainer = () => {
             <div className={styles.FaqsLine}></div>
           </div>
           <p>
-            Find quick answers about PUF containers, their insulation, applications,
-            durability, and customization options for industrial and commercial use.
+            Find quick answers about PUF containers, insulation, applications, durability, and customization.
           </p>
         </div>
 
@@ -532,6 +528,8 @@ const PUFContainer = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* ── CTA ── */}
       <section className={styles.cta}>

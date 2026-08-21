@@ -22,7 +22,7 @@ const SolarBanner = ({
 
           </h2>
           <p>
-          L&R PREFAB SOLAR INDIA PVT LDT manufactures high-quality solar fasteners and components 
+          L&R Prefab Solar India Pvt Ldt manufactures high-quality solar fasteners and components 
           for residential, commercial, and utility-scale projects, including roof-mounted and ground-mounted 
           systems, using durable stainless steel and coated alloy steel for long-lasting performance and reliability.
 

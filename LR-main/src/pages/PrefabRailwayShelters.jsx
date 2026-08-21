@@ -95,7 +95,7 @@ const PrefabRailwayShelters = () => {
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            Durable & weather-resistant railway infrastructure solutions — engineered for safety,
+            Durable & weather-resistant railway infrastructure solutions engineered for safety,
             longevity and rapid deployment across platforms, yards and operational zones.
 
           </p>

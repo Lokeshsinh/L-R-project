@@ -274,7 +274,7 @@ const PremiumMsContainer = () => {
           </div>
           <div className={styles.introContent}>
             <p>
-              L&R Premium Series containers are high-quality, durable modular structures built with strong
+              L&R Prefab Solar Inida Premium Series containers are high-quality, durable modular structures built with strong
               mild steel frameworks, designed to perform efficiently in demanding industrial and commercial
               environments. These containers are ideal for heavy-duty storage, secure site offices, and comfortable accommodation,
               offering a reliable and professional solution for both temporary and long-term applications.

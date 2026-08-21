@@ -340,7 +340,7 @@ const GlasswoolPanels = () => {
               fire safety, and acoustic performance, making them suitable for a wide range of industrial
               and commercial applications. Their lightweight structure allows for easy handling and faster
               installation, reducing construction time while maintaining high efficiency and performance standards.</p>
-            <p>Designed for long-term reliability, L&R Green Pvt Ltd panels are resistant to moisture, corrosion,
+            <p>Designed for long-term reliability, L&R Prefab Solar India Pvt Ltd panels are resistant to moisture, corrosion,
               and environmental stress. They help maintain consistent indoor temperatures, reduce noise levels,
               and lower energy consumption, ensuring cost-effective and durable solutions for modern construction projects.</p>
           </div>

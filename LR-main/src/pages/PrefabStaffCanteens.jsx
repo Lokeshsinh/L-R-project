@@ -134,7 +134,7 @@ const PrefabStaffCanteens = () => {
             <span>Canteens & REcreation Room</span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Prefab Solar India Pvt Ltd designs hygienic, expandable dining halls and industrial kitchens — engineered
+            L&R Prefab Solar India Pvt Ltd designs hygienic, expandable dining halls and industrial kitchens engineered
             for fast deployment at construction and industrial locations.
 
           </p>

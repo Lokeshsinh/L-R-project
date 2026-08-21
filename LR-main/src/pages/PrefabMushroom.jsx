@@ -315,8 +315,8 @@ const PrefabMushroom = () => {
         <div className={styles.mfgContainer}>
           <div className={styles.mfgText}>
             <h2>
-              Farm Layout <br />
-              & Sizes
+              Flexible Farm <br />
+              Designs & Configurations
             </h2>
             <p>
               Prefab mushroom farms are designed with dedicated functional areas such as substrate preparation, germination,

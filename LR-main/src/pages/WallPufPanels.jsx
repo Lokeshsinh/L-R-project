@@ -129,7 +129,7 @@ export const WallPufPanels = () => {
             </span>
           </h1>
           <p className={styles.heroDesc}>
-            L&R Prefab Solar manufactures premium Wall PUF Panels designed for superior thermal
+            L&R Prefab Solar Inida Pvt Ldt manufactures premium Wall PUF Panels designed for superior thermal
             insulation, structural strength, and long-lasting performance across industrial and modular construction.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>

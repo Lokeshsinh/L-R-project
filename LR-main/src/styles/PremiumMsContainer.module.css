@@ -10,7 +10,8 @@
    HERO
 =========================== */
 .hero {
-  background: url('../assets/conatiners/premiumContainer/banner.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)), url('../assets/conatiners/premiumContainer/banner.png') center/cover no-repeat;
   color: #fff;
   padding: 50px 60px;
   width: 100%;
@@ -323,9 +324,6 @@
 .intro {
   width: 100%;
   padding: 80px 60px;
-  background: url('../assets/conatiners/premiumContainer/section2.png') no-repeat;
-  background-position: center;
-  background-size: contain;
   background-color: #f7f7f753;
 }
 
@@ -1444,7 +1442,7 @@
     padding: 70px 45px;
   }
 
-  .sizesSec p{
+  .sizesSec p {
     font-size: 14px;
   }
 

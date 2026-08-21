@@ -268,7 +268,7 @@ const ExecutiveMsContainer = () => {
               <div className={styles.introLine}></div>
             </div>
             <p>
-              L&R Prefab Solar India Pvt Ltd&amp;R Containers are durable modular
+              L&R Prefab Solar India Containers are durable modular
               structures made using mild steel (MS), designed to deliver strong,
               reliable, and ready-to-use spaces. They are built for quick
               installation, easy relocation, and long service life, making them

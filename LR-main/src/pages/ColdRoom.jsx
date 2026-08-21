@@ -112,7 +112,7 @@ const ColdRoom = () => {
             L&R Cold    <br />
             <span>Room Solutions</span>
           </h1>
-          <p className={styles.heroDesc}>L&R Cold Room Solutions deliver efficient, energy-saving,
+          <p className={styles.heroDesc}>L&R Prefab Solar India Cold Room Solutions deliver efficient, energy-saving,
             and fully customizable cold storage systems for reliable temperature-controlled performance.
           </p>
           <button onClick={() => navigate('/contact')} className={styles.btnWhite}>
@@ -215,7 +215,7 @@ const ColdRoom = () => {
               <h2>L&amp;R Advantage<br /><span>Cold Room</span></h2>
               <div className={styles.introLine}></div>
             </div>
-            <p>At L&R, we combine advanced refrigeration technology with modular construction to deliver cold rooms that
+            <p>At L&R Prefab Solar India , we combine advanced refrigeration technology with modular construction to deliver cold rooms that
               ensure consistent temperature control and operational efficiency. Our solutions are designed to minimize
               energy consumption while maintaining optimal storage conditions.</p>
             <p>With complete in-house manufacturing and turnkey project execution, we ensure quality, reliability,

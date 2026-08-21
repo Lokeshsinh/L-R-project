@@ -430,8 +430,8 @@
 
 .structureCard {
     position: relative;
-    width: 640px;
-    height: 430px;
+    width: 630px;
+    height: 425px;
     overflow: visible;
 }
 
@@ -440,8 +440,8 @@
     position: absolute;
     left: 0;
     top: 26px;
-    width: 72px;
-    height: 370px;
+    width: 80px;
+    height: 360px;
     background: #2D4574;
     border-radius: 0 0 0 0;
     z-index: 2;
@@ -452,8 +452,8 @@
     position: absolute;
     top: 0;
     left: 36px;
-    width: 600px;
-    height: 430px;
+    width: 580px;
+    height: 425px;
     overflow: hidden;
     border-radius: 10px 10px 10px 10px;
     z-index: 1;
@@ -1739,7 +1739,7 @@ Aplications
 .epcImageWrapper {
     position: relative;
     width: 600px;
-    height: 400px;
+    height: 390px;
     overflow: visible;
 }
 
@@ -1760,7 +1760,7 @@ Aplications
     top: 0;
     left: 36px;
     width: 604px;
-    height: 315px;
+    height: 300px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
@@ -2196,7 +2196,7 @@ Keep HAVm
 .imageDesign {
     position: relative;
     width: 600px;
-    height: 500px;
+    height: 480px;
     overflow: visible;
 }
 
@@ -2209,7 +2209,7 @@ Keep HAVm
     inset: 0;
 
     width: 600px;
-    height: 500px;
+    height: 480px;
     border-radius: 10px;
     object-fit: cover;
     display: block;
@@ -2226,9 +2226,9 @@ Keep HAVm
 .imageBlueAccent {
     position: absolute;
     left: -20px;
-    top: 25px;
+    top: 34px;
     width: 72px;
-    height: 435px;
+    height: 400px;
     background: #29456f;
     z-index: 3;
     transition:
@@ -2994,8 +2994,8 @@ Keep HAVm
 
 .epsImageWrapper {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 550px;
+    height: 365px;
     overflow: visible;
 }
 
@@ -3015,8 +3015,8 @@ Keep HAVm
     position: absolute;
     top: 0;
     left: 36px;
-    width: 584px;
-    height: 376px;
+    width: 554px;
+    height: 365px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
@@ -3487,7 +3487,7 @@ Keep HAVm
 .structureDisplayContainer {
     position: relative;
     width: 600px;
-    height: 400px;
+    height: 240px;
     overflow: visible;
 }
 
@@ -3497,7 +3497,7 @@ Keep HAVm
     top: 26px;
     left: 0;
     width: 72px;
-    height: 305px;
+    height: 250px;
     background: #29456F;
     border-radius: 0 0 0 0;
     z-index: 2;
@@ -3510,7 +3510,7 @@ Keep HAVm
     top: 0;
     left: 36px;
     width: 564px;
-    height: 356px;
+    height: 310px;
     overflow: hidden;
     border-radius: 10px 10px 10px 10px;
     cursor: pointer;
@@ -3770,29 +3770,64 @@ Keep HAVm
 
 }
 
-@media (max-width:1400px) {
+@media (max-width:1440px) {
 
     .faqSec {
-        padding: 70px 4%;
+        padding: 65px 50px;
+    }
+
+    .faqHeader {
+        margin-top: 15px;
+        margin-bottom: 40px;
+        gap: 50px;
     }
 
     .faqText h2 {
         font-size: 48px;
     }
 
-    .faqBody {
-        gap: 40px;
+    .FaqsLine {
+        width: 110px;
     }
 
-    .faqImg {
-        width: 45%;
-        height: 475px;
+    .faqHeader p {
+        max-width: 450px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .faqBody {
+        gap: 35px;
     }
 
     .container {
-        width: 50%;
+        width: 55%;
+        max-width: 600px;
     }
 
+    .faqImg {
+        width: 520px;
+        height: 460px;
+        border-radius: 12px;
+    }
+
+    .question {
+        height: 66px;
+        padding: 0 25px;
+    }
+
+    .question h3 {
+        font-size: 17px;
+    }
+
+    .answer {
+        padding: 0 25px 24px;
+    }
+
+    .answer p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width:1200px) {
@@ -3984,6 +4019,11 @@ Keep HAVm
         font-size: 13px;
     }
 
+    .faqHeader p {
+        font-size: 12px;
+    }
+
+
 }
 
 @media (max-width:360px) {
@@ -3995,6 +4035,10 @@ Keep HAVm
     .introLabel {
         font-size: 12px;
         padding: 5px 16px;
+    }
+
+    .faqHeader p {
+        font-size: 12px;
     }
 
     .faqImg {
@@ -4015,6 +4059,7 @@ Keep HAVm
     }
 
 }
+
 
 
 
@@ -4126,11 +4171,10 @@ Keep HAVm
 }
 
 
-
 @media (max-width:1280px) {
 
     .cta {
-        padding: 60px 40px;
+        padding: 50px 40px;
     }
 
     .cta h2 {

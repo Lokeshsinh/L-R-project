@@ -364,7 +364,7 @@ function BESSContainer() {
                             Reliable Energy Storage
                         </h2>
                         <p>
-                            L&R Prefab Solar India Private Limited combines engineering expertise with controlled
+                            L&R Prefab Solar India combines engineering expertise with controlled
                             prefab manufacturing to deliver robust, customized BESS containers. From steel fabrication
                             and structural assembly to equipment integration, HVAC provisions, cable management and
                             protective finishing, every enclosure is manufactured with a focus on strength, accuracy,

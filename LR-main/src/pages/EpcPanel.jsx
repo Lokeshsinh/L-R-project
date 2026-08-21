@@ -135,7 +135,6 @@ function EpcPanel() {
                     </h2>
                     <div className={styles.introLine} />
                 </div>
-
                 <div className={styles.introContainer}>
                     <div className={styles.introText}>
                         <p>
@@ -309,7 +308,6 @@ function EpcPanel() {
                                 EPS panels from L&R prefab Solar India Pvt Ltd combine lightweight construction with strong performance,
                                 offering reliable insulation, durability, and cost efficiency for modern building solutions.
                             </p>
-
                             <div className={styles.hvacFeatureList}>
                                 <div className={styles.hvacFeatureItem}>
                                     <div className={styles.hvacFeatureIcon}>

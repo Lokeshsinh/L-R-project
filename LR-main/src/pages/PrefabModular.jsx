@@ -180,7 +180,7 @@ function PrefabModular() {
                         </span>
                     </h1>
                     <p className={styles.heroDesc}>
-                        L&R Prefab Solar India Private Limited delivers durable, cost-effective prefabricated modular
+                        L&R Prefab Solar India Pvt Ltd delivers durable, cost-effective prefabricated modular
                         buildings with fast construction and long-term performance across India.
 
                     </p>

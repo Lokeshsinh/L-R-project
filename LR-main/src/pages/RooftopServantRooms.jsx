@@ -239,12 +239,11 @@ const RooftopServantRooms = () => {
               Servant Room Solutions
             </h2>
             <p>
-              Our rooftop servant room solutions are fully customizable and designed to adapt to various
-              building layouts, space conditions, and comfort requirements, providing safe, functional,
-              and modern living spaces for domestic staff while efficiently utilizing available rooftop
-              areas; these designs combine smart planning, durable materials, and flexible configurations
-              to ensure maximum comfort, usability, and long-term performance in urban environments, delivering
-              a practical and reliable rooftop living solution.
+              Our rooftop servant rooms are customizable to suit different layouts and space needs,
+              offering safe, comfortable, and functional living spaces with durable materials and
+              efficient rooftop utilization. Designed for long-term performance and modern urban living,
+              with smart, space-saving configurations.
+
             </p>
             <div className={styles.LastImage}>
               <img src={design1} alt="png" />
