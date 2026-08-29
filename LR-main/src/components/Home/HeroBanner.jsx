@@ -10,23 +10,24 @@ import container from '../../assets/banner3.png'
 import { useNavigate } from "react-router-dom";
 import hvacProduct from '../../assets/banner/hvacProduct.png'
 import roofImage from '../../assets/banner/roofImage.png'
+import rooftopHouse from '../../assets/banner/rooftopHouse.png'
 function HeroBanner() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
 
-  const totalSlides = 5;
+  const totalSlides = 6;
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % totalSlides);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % totalSlides);
+  //   }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // Next Slide
   const nextSlide = () => {
-    if (current === 5) {
+    if (current === 6) {
       setCurrent(0);
     } else {
       setCurrent(current + 1);
@@ -712,6 +713,71 @@ function HeroBanner() {
             <h3>150+</h3>
             <p>Team Workers</p>
           </div>
+        </div>
+      </div>
+
+
+
+
+
+      {/* ----------------Roof Top------------------------- */}
+      <div
+        className={`${styles.roofTopRoomBanner} ${current === 6 ? styles.active : ""
+          }`}
+      >
+        <div className={styles.roofTopRoomInner}>
+          <div className={styles.topTitle}>
+            Turn Your Rooftop Into Usable Space
+          </div>
+          <div className={styles.mainTitle}>
+            <span>ROOFTOP ROOMS</span>
+          </div>
+          <div className={styles.leftsContent}>
+            <h2>
+              Smart Prefabricated Rooftop
+              Rooms for Modern Living
+            </h2>
+            <p>
+              Transform unused rooftops into
+              comfortable, functional spaces with
+              lightweight, durable prefab rooms.
+            </p>
+            <div className={styles.buttons}>
+              <button onClick={() => navigate("/rooftop-rooms")} className={styles.primaryBtn}>
+                Explore Rooftop Rooms
+              </button>
+            </div>
+          </div>
+          <div className={styles.houseWrapper}>
+            <img
+              src={rooftopHouse}
+              alt="Modern Prefabricated Rooftop Room"
+              className={styles.houseImage}
+            />
+          </div>
+
+          <div className={styles.roofStatistics}>
+            <div className={styles.roofStatCard}>
+              <h3>500+</h3>
+              <p>Completed Projects</p>
+            </div>
+
+            <div className={styles.roofStatCard}>
+              <h3>25+</h3>
+              <p>Years Of Experience</p>
+            </div>
+
+            <div className={styles.roofStatCard}>
+              <h3>900+</h3>
+              <p>Happy Clients</p>
+            </div>
+
+            <div className={styles.roofStatCard}>
+              <h3>150+</h3>
+              <p>Team Workers</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
