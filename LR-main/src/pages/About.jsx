@@ -47,8 +47,9 @@ import founded from "../assets/About/foundation.png";
 import manufacturing from "../assets/About/manufacturing.png";
 import expansion from "../assets/About/expansion.png";
 import projects from "../assets/About/projects.png";
-import found from '../assets/About/foun1.jpg'
+// import found from '../assets/About/foun1.jpg'
 import founder from '../assets/About/founder.png'
+import founder3 from '../assets/About/founder3.png'
 
 
 const About = () => {
@@ -542,7 +543,7 @@ const About = () => {
             </div>
             <div className={styles.founderContainer}>
               <img
-                src={found}
+                src={founder3}
                 alt="Engineers working in prefabricated solutions"
                 className={styles.founderPhoto}
               />
