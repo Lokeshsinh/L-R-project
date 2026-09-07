@@ -18,13 +18,13 @@ function HeroBanner() {
 
   const totalSlides = 6;
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCurrent((prev) => (prev + 1) % totalSlides);
-  //   }, 5000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % totalSlides);
+    }, 5000);
 
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   // Next Slide
   const nextSlide = () => {
@@ -492,7 +492,6 @@ function HeroBanner() {
           <span>ainer</span>
         </div>
         <div className={styles.ContainerFlex}>
-
           <div className={styles.containerContent}>
             <h1>
               ENGINEERED FOR STRENGTH. BUILT FOR MOBILITY.
@@ -505,7 +504,7 @@ function HeroBanner() {
               onClick={() => navigate("/about")}
               className={styles.containerBtn}
             >
-              <span>View All Products</span>
+              <span>View All Category</span>
               <ArrowRight
                 className={styles.containerArrow}
                 size={21}

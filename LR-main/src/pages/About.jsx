@@ -48,7 +48,8 @@ import manufacturing from "../assets/About/manufacturing.png";
 import expansion from "../assets/About/expansion.png";
 import projects from "../assets/About/projects.png";
 // import found from '../assets/About/foun1.jpg'
-import founder from '../assets/About/founder.png'
+import leader from '../assets/About/foun1.jpg'
+// import founder from '../assets/About/founder.png'
 import founder3 from '../assets/About/founder3.png'
 
 
@@ -543,7 +544,7 @@ const About = () => {
             </div>
             <div className={styles.founderContainer}>
               <img
-                src={founder3}
+                src={leader}
                 alt="Engineers working in prefabricated solutions"
                 className={styles.founderPhoto}
               />
@@ -639,7 +640,7 @@ const About = () => {
           <div className={styles.profileContainer}>
             <div className={styles.photoSection}>
               <img
-                src={founder}
+                src={founder3}
                 alt="Founder"
                 className={styles.mainPhoto}
               />

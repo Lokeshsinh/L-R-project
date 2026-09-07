@@ -1,30 +1,38 @@
 import React from "react";
 // import { ArrowUpRight,  } from "lucide-react";
 import styles from "../../styles/Products.module.css";
+import preEng from '../../assets/Home/preEng.jpg'
 import office from '../../assets/Home/office.jpg'
+import msContainer from '../../assets/Home/mscontainer.png'
 import labour from '../../assets/Home/labour.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const ProductCategory = () => {
+  const navigate = useNavigate()
   const products = [
     {
       title: "Pre-Engineered Buildings",
-      img: "/Images/preeng.jpg",
+      img: preEng,
       desc: "Pre-Engineered Buildings are durable, flexible, and cost-efficient steel structures built for faster construction.",
+      path: "/pre-building",
     },
     {
       title: "Pre-Fab site office",
       img: office,
       desc: "Prefabricated site offices for workspaces. Built for quick installation at construction and industrial sites.",
+      path: "/prefab-modular",
     },
     {
       title: "MS Container",
-      img: "/Images/mscontianer.jpg",
+      img: msContainer,
       desc: "Compact, secure storage and office solutions. Manufactured with Mild Steel for uncompromising security in the field.",
+      path: "/ms-containers",
     },
     {
       title: "Labour Accommodation",
       img: labour,
       desc: "Labour accommodation for safe living. Built with durable materials for construction and industrial sites.",
+      path: "/lgsf-modular",
     },
   ];
   return (
@@ -57,7 +65,13 @@ const ProductCategory = () => {
 
       <div className={styles.productGrid}>
         {products.map((item, i) => (
-          <div className={styles.productCard} key={i}>
+          <div className={styles.productCard} onClick={() => {
+            navigate(item.path);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }} key={i}>
             <div className={styles.cardHeader}>
               <h3>{item.title}</h3>
 
