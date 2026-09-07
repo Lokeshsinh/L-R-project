@@ -14,16 +14,17 @@ import rooftopHouse from '../../assets/banner/rooftopHouse.png'
 function HeroBanner() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
+  const [isOn, setIsOn] = useState(false);
 
   const totalSlides = 6;
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % totalSlides);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % totalSlides);
+  //   }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // Next Slide
   const nextSlide = () => {
@@ -479,8 +480,16 @@ function HeroBanner() {
         <div className={styles.containerOverlay}></div>
         {/* Large background text */}
         <div className={styles.containerWatermark}>
-          <span>conta</span>
-          <span>iner</span>
+          <span>cont</span>
+          <button
+            className={`${styles.toggleSwitch} ${isOn ? styles.toggleOn : ""
+              }`}
+            onClick={() => setIsOn(!isOn)}
+            aria-label="Toggle switch"
+          >
+            <span className={styles.toggleCircle}></span>
+          </button>
+          <span>ainer</span>
         </div>
         <div className={styles.ContainerFlex}>
 
