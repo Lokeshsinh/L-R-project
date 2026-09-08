@@ -18,10 +18,10 @@ import about2 from '../assets/About/about2.jpg'
 import about3 from '../assets/About/about3.jpg'
 import about4 from '../assets/About/about4.jpg'
 import officeImage from '../assets/About/officeImage.png'
-import officeImg from "../assets/About/user1.jpg";
-import labourImg from "../assets/About/user2.jpg";
-import containerImg from "../assets/About/user3.jpg";
-import panelImg from "../assets/About/user4.jpg";
+// import officeImg from "../assets/About/user1.jpg";
+// import labourImg from "../assets/About/user2.jpg";
+// import containerImg from "../assets/About/user3.jpg";
+// import panelImg from "../assets/About/user4.jpg";
 import design from '../assets/About/design.png'
 import design1 from '../assets/About/design1.png'
 import design3 from '../assets/About/design3.png'
@@ -268,40 +268,40 @@ const About = () => {
       desc: "Successfully executed numerous projects across commercial, industrial, and infrastructure sectors with trusted performance.",
     },
   ];
-  const cards = [
-    {
-      id: 1,
-      image: officeImg,
-      title: "Prefabricated Site Office",
-      description:
-        "Modern site offices designed for efficient workspaces and quick installation. Built with durable materials for lasting performance.",
-      path: "/site-office",
-    },
-    {
-      id: 2,
-      image: labourImg,
-      title: "Labour Accommodation",
-      description:
-        "Comfortable accommodation units for workers at project sites. Designed for safety, durability, and convenient living.",
-      path: "/labour-accommodation",
-    },
-    {
-      id: 3,
-      image: containerImg,
-      title: "Modular MS Containers",
-      description:
-        "Versatile modular containers for commercial and industrial applications. Engineered for strength, portability, and flexible use.",
-      path: "/ms-containers",
-    },
-    {
-      id: 4,
-      image: panelImg,
-      title: "Sandwich Panels",
-      description:
-        "High-performance insulated sandwich panels for modern construction. Provide excellent thermal efficiency, durability, and energy savings.",
-      path: "/prefab-sandwich-panels",
-    },
-  ];
+  // const cards = [
+  //   {
+  //     id: 1,
+  //     image: officeImg,
+  //     title: "Prefabricated Site Office",
+  //     description:
+  //       "Modern site offices designed for efficient workspaces and quick installation. Built with durable materials for lasting performance.",
+  //     path: "/site-office",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: labourImg,
+  //     title: "Labour Accommodation",
+  //     description:
+  //       "Comfortable accommodation units for workers at project sites. Designed for safety, durability, and convenient living.",
+  //     path: "/labour-accommodation",
+  //   },
+  //   {
+  //     id: 3,
+  //     image: containerImg,
+  //     title: "Modular MS Containers",
+  //     description:
+  //       "Versatile modular containers for commercial and industrial applications. Engineered for strength, portability, and flexible use.",
+  //     path: "/ms-containers",
+  //   },
+  //   {
+  //     id: 4,
+  //     image: panelImg,
+  //     title: "Sandwich Panels",
+  //     description:
+  //       "High-performance insulated sandwich panels for modern construction. Provide excellent thermal efficiency, durability, and energy savings.",
+  //     path: "/prefab-sandwich-panels",
+  //   },
+  // ];
   const features = [
     {
       id: 1,
@@ -959,7 +959,7 @@ const About = () => {
 
 
 
-        <section className={styles.productsImage} >
+        {/* <section className={styles.productsImage} >
           <div className={styles.ProductBox}>
             <span className={styles.introLabels}>• Our Product</span>
           </div>
@@ -993,7 +993,7 @@ const About = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
 
 

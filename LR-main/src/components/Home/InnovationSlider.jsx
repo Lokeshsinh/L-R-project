@@ -7,48 +7,53 @@ import img3 from '../../assets/Home/img3.png';
 import img4 from '../../assets/Home/img4.png';
 import img5 from '../../assets/Home/img5.jpg';
 import img6 from '../../assets/Home/img6.jpg'
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
     title: "Multi Storey Building",
     desc: "Our multi-storey pre-engineered buildings are designed to maximize vertical space while ensuring exceptional strength and stability. Built with high-quality steel structures, they are ideal for commercial complexes, office buildings, industrial facilities, educational institutions, and residential projects, offering faster construction, cost efficiency, and long-lasting performance.",
     img: img1,
+    path: "/lgsf-modular",
   },
   {
-    title: "Pre-Engineered Building",
-    desc: "Optimized steel structures are engineered to deliver superior strength, speed, and efficiency in modern construction. Designed for rapid assembly, these systems reduce build time while maintaining high precision and quality. Their clear-span capability maximizes usable space by eliminating unnecessary supports, allowing for flexible and open layouts.",
+    title: "Factory Building",
+    desc: "Our factory buildings are designed to provide strong, spacious, and efficient environments for modern manufacturing and industrial operations. Built with high-quality steel structures, they offer excellent durability, clear-span spaces, faster construction, and flexible layouts, making them ideal for manufacturing units, production facilities, warehouses, and various industrial applications.",
     img: img2,
+    path: "/factory-building",
   },
   {
-    label: "Multi-Storey Building",
-    title: "Multi-Storey Building",
-    desc: "Our multi-storey pre-engineered buildings are designed to maximize vertical space while ensuring exceptional strength and stability. Built with high-quality steel structures, they are ideal for commercial complexes, office buildings, industrial facilities, educational institutions, and residential projects, offering faster construction, cost efficiency, and long-lasting performance.",
+    label: "Railway Shelters",
+    title: "Railway Shelters",
+    desc: "Our railway shelters are designed to provide safe, durable, and weather-resistant spaces for passengers and railway personnel. Built with high-quality steel structures, they offer excellent strength, low maintenance, and long-lasting performance, making them ideal for railway platforms, waiting areas, passenger shelters, and other railway infrastructure requirements.",
     img: img3,
+    path: "/prefab-railway-shelters",
   },
 
-
   {
-    label: "Prefab Building",
-    title: "Prefab Building",
-    desc: "Our prefab buildings are engineered for fast installation, durability, and cost-effective construction. Designed using high-quality steel structures and insulated panels, they provide reliable solutions for offices, accommodations, commercial spaces, schools, healthcare facilities, and industrial projects while ensuring superior strength and long-term performance.",
+    label: "Industrial Enclosures",
+    title: "Industrial Enclosures",
+    desc: "Our prefab industrial enclosures are designed to provide durable, secure, and efficient spaces for industrial applications. Built with high-quality steel structures and insulated panels, they offer excellent strength, weather resistance, thermal insulation, and fast installation, making them ideal for machinery enclosures, equipment housing, utility areas, production spaces.",
     img: img4,
+    path: "/prefab-industrial-enclosures",
   },
   {
-    label: "MS Container",
-    title: "MS Container",
-    desc: "Our MS containers are manufactured using premium mild steel to deliver exceptional strength, security, and weather resistance. Ideal for storage, portable offices, site accommodation, equipment housing, and customized industrial applications, they offer a durable, low-maintenance solution with flexible design options to meet diverse project requirements.",
+    label: "Premium MS Container",
+    title: "Premium MS Container",
+    desc: "Our premium MS containers are manufactured using high-quality mild steel to deliver exceptional strength, security, durability, and weather resistance. Ideal for storage, portable offices, site accommodation, equipment housing, and customized industrial applications, they provide a reliable, low-maintenance solution with flexible design options to meet diverse project requirements.",
     img: img5,
+    path: "/premium-ms-containers",
   },
   {
     label: "Sandwich Panel",
     title: "Sandwich Panel",
     desc: "Our sandwich panels are manufactured with high-quality insulated cores and durable steel sheets to provide outstanding thermal insulation, fire resistance, and structural strength. Ideal for warehouses, cold storage facilities, clean rooms, industrial buildings, and prefab structures, they ensure energy efficiency, quick installation, and long-lasting performance in all weather conditions.",
     img: img6,
+    path: "/sandwich-panel",
   },
 ];
-
 const InnovationSlider = () => {
-
+  const navigate = useNavigate();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -121,7 +126,13 @@ const InnovationSlider = () => {
                 <div className={styles.line}></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
-                <button>Read More →</button>
+                <button onClick={() => {
+                  navigate(item.path);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}>Read More →</button>
               </div>
               <div className={styles.bottomTitle}>
                 <div className={styles.smallLine}></div>

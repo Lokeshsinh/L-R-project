@@ -7322,13 +7322,10 @@ why choose
   left: 0;
   right: 0;
   bottom: 0;
-
   padding: 0 18px 18px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   z-index: 5;
 }
 
@@ -7337,7 +7334,6 @@ why choose
   font-size: 22px;
   font-weight: 400;
   margin: 0;
-
   transform: translateY(0);
   transition: .45s ease;
 }

@@ -1,5 +1,6 @@
 import styles from "../../styles/About.module.css";
-import preBuild from '../../assets/Home/pre.png'
+// import preBuild from '../../assets/Home/pre.png'
+import preBuild from '../../assets/Home/preEngine.png'
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 

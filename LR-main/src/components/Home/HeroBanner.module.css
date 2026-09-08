@@ -6019,9 +6019,9 @@
 
 .containerWatermark {
   position: absolute;
-  top: 20px;
+  top: 9px;
   left: 52px;
-  right: 70px;
+  right: 74px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -6030,13 +6030,13 @@
   user-select: none;
 }
 
-.containerWatermark>span {
+.containerWatermark>span{
   color: #293f67;
   font-family:
     Arial,
     Helvetica,
     sans-serif;
-  font-size: clamp(150px, 18.5vw, 240px);
+  font-size: clamp(150px, 18.5vw, 280px);
   font-weight: 900;
   line-height: 0.72;
   letter-spacing: -10px;
@@ -6044,48 +6044,6 @@
 }
 
 
-.toggleSwitch {
-  position: relative;
-  top: 55px;
-  flex-shrink: 0;
-  width: 250px;
-  height: 125px;
-  margin: 0 15px;
-  padding: 0;
-  border: none;
-  border-radius: 100px;
-  background: #d0d0d0;
-  cursor: pointer;
-  pointer-events: auto;
-  box-shadow:
-    inset 0 2px 5px rgba(0, 0, 0, 0.04),
-    0 8px 15px rgba(0, 0, 0, 0.08);
-  transition: background 0.35s ease;
-}
-
-.toggleCircle {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow:
-    0 10px 12px rgba(0, 0, 0, 0.18),
-    0 3px 5px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.toggleOn {
-  background: #293f67;
-}
-
-.toggleOn .toggleCircle {
-  transform: translateX(120px);
-}
 
 /* .containerWatermark span:first-child {
   margin-left: 0;
@@ -6313,7 +6271,6 @@
   transition: color 0.3s ease;
 }
 
-
 .containerStatItem:hover h2,
 .containerStatItem:hover p {
   color: #ffffff;
@@ -6355,13 +6312,13 @@
 @media screen and (max-width: 1280px) {
 
   .containerWatermark {
-    top: 8px;
+    top: 0;
     left: 38px;
     right: 58px;
   }
 
   .containerWatermark span {
-    font-size: clamp(130px, 16vw, 190px);
+    font-size: clamp(130px, 16vw, 240px);
     letter-spacing: -8px;
   }
 
@@ -6430,11 +6387,11 @@
   .containerWatermark {
     top: 40px;
     left: 35px;
-    right: 35px;
+    right: 45px;
   }
 
   .containerWatermark span {
-    font-size: 175px;
+    font-size: 200px;
   }
 
   .containerContent {
@@ -6490,11 +6447,11 @@
   .containerWatermark {
     top: 38px;
     left: 32px;
-    right: 32px;
+    right: 42px;
   }
 
   .containerWatermark span {
-    font-size: 155px;
+    font-size: 200px;
     letter-spacing: -8px;
     line-height: 0.75;
   }
@@ -6580,7 +6537,7 @@
   }
 
   .containerWatermark span {
-    font-size: 155px;
+    font-size: 170px;
     letter-spacing: -7px;
   }
 
@@ -6677,35 +6634,19 @@
     text-align: center;
   }
 
-  .toggleSwitch {
-    top: 15px;
-    width: 190px;
-    height: 60px;
-  }
-
-  .toggleCircle {
-    top: 5px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .toggleOn .toggleCircle {
-    transform: translateX(115px);
-  }
 
 
   /* WATERMARK */
   .containerWatermark {
-    top: 35px;
+    top: 25px;
     left: 25px;
     right: 25px;
-
     justify-content: center;
     gap: 15px;
   }
 
   .containerWatermark span {
-    font-size: 90px;
+    font-size: 110px;
     letter-spacing: -6px;
   }
 
@@ -6722,7 +6663,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     z-index: 10;
   }
@@ -6825,7 +6765,7 @@
 
 
   .containerWatermark {
-    top: 30px;
+    top: 15px;
     left: 15px;
     right: 15px;
     justify-content: center;
@@ -6835,7 +6775,7 @@
 
 
   .containerWatermark span {
-    font-size: 70px;
+    font-size: 100px;
     letter-spacing: -4px;
     line-height: 0.8;
   }
@@ -6948,29 +6888,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-
-  .toggleSwitch {
-    position: relative;
-    top: 10px;
-    width: 190px;
-    height: 50px;
-    margin: 0 10px;
-    border-radius: 100px;
-  }
-
-  .toggleCircle {
-    top: 5px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .toggleOn .toggleCircle {
-    transform: translateX(140px);
-  }
-
-}
 
 @media screen and (max-width: 576px) {
 
@@ -6992,7 +6909,7 @@
 
 
   .containerWatermark {
-    top: 25px;
+    top: 15px;
     left: 10px;
     right: 10px;
     justify-content: center;
@@ -7000,7 +6917,7 @@
   }
 
   .containerWatermark span {
-    font-size: 58px;
+    font-size: 88px;
     letter-spacing: -3px;
     line-height: 0.82;
   }
@@ -7116,69 +7033,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
 
-  .containerWatermark {
-    top: 25px;
-    left: 10px;
-    right: 10px;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .containerWatermark span {
-    font-size: 58px;
-    letter-spacing: -3px;
-    line-height: 0.82;
-  }
-
-  .toggleSwitch {
-    position: relative;
-    top: 8px;
-    flex-shrink: 0;
-    width: 135px;
-    height: 42px;
-    margin: 0 5px;
-    padding: 0;
-    border: none;
-    border-radius: 100px;
-    background: #d0d0d0;
-    cursor: pointer;
-    pointer-events: auto;
-    box-shadow:
-      inset 0 2px 4px rgba(0, 0, 0, 0.04),
-      0 6px 12px rgba(0, 0, 0, 0.08);
-    transition: background 0.35s ease;
-  }
-
-
-  .toggleCircle {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow:
-      0 7px 9px rgba(0, 0, 0, 0.18),
-      0 2px 4px rgba(0, 0, 0, 0.08);
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-
-  .toggleOn {
-    background: #293f67;
-  }
-
-
-  .toggleOn .toggleCircle {
-    transform: translateX(93px);
-  }
-
-}
 
 @media screen and (max-width: 480px) {
 
@@ -7207,7 +7062,7 @@
   }
 
   .containerWatermark span {
-    font-size: 50px;
+    font-size: 70px;
     letter-spacing: -2.5px;
     line-height: 0.82;
   }
@@ -7323,212 +7178,6 @@
 }
 
 
-@media screen and (max-width: 480px) {
-
-  .containerWatermark {
-    top: 22px;
-    left: 8px;
-    right: 8px;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .containerWatermark span {
-    font-size: 48px;
-    letter-spacing: -2.5px;
-    line-height: 0.82;
-  }
-
-  .toggleSwitch {
-    position: relative;
-    top: 6px;
-    width: 105px;
-    height: 36px;
-    margin: 0 3px;
-    padding: 0;
-    border: none;
-    border-radius: 100px;
-    background: #d0d0d0;
-    cursor: pointer;
-    pointer-events: auto;
-    box-shadow:
-      inset 0 2px 4px rgba(0, 0, 0, 0.04),
-      0 5px 10px rgba(0, 0, 0, 0.08);
-    transition: background 0.35s ease;
-  }
-
-
-  .toggleCircle {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow:
-      0 6px 8px rgba(0, 0, 0, 0.18),
-      0 2px 4px rgba(0, 0, 0, 0.08);
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-
-  .toggleOn {
-    background: #293f67;
-  }
-
-
-  .toggleOn .toggleCircle {
-    transform: translateX(69px);
-  }
-
-}
-
-@media screen and (max-width: 430px) {
-
-  .containerHeroPanel {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 620px;
-  }
-
-  .ContainerFlex {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-
-  .containerWatermark {
-    top: 18px;
-    left: 6px;
-    right: 6px;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .containerWatermark span {
-    font-size: 45px;
-    letter-spacing: -2px;
-    line-height: 0.82;
-  }
-
-
-
-  .containerContent {
-    position: relative;
-    left: auto;
-    top: -20px;
-    width: 100%;
-    max-width: 420px;
-    margin: 115px auto 0;
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 10;
-  }
-
-  .containerContent h1 {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 7px;
-    font-size: 17px;
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  .containerContent p {
-    width: 100%;
-    max-width: 370px;
-    margin: 0 auto;
-    font-size: 9.5px;
-    line-height: 1.4;
-    text-align: center;
-  }
-
-
-  .containerBtn {
-    width: 155px;
-    height: 39px;
-    margin: 12px auto 0;
-    padding: 0 10px;
-    font-size: 9.5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .containerArrow {
-    width: 14px;
-    height: 14px;
-  }
-
-  .containerProductImage {
-    position: relative;
-    left: auto;
-    bottom: 35px;
-    width: min(86vw, 400px);
-    margin: 20px auto 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: none;
-    z-index: 7;
-  }
-
-  .containerProductImage img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-
-  .containerStatsCard {
-    position: relative;
-    right: auto;
-    top: -45px;
-    width: min(94%, 330px);
-    margin: 16px auto 22px;
-    padding: 4px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: stretch;
-    justify-content: center;
-    z-index: 12;
-  }
-
-  .containerStatItem {
-    min-height: 72px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .containerStatItem h2 {
-    margin: 0 0 2px;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .containerStatItem p {
-    margin: 0;
-    font-size: 9px;
-    line-height: 1.2;
-    text-align: center;
-  }
-}
 
 @media screen and (max-width: 430px) {
 
@@ -7541,7 +7190,7 @@
   }
 
   .containerWatermark span {
-    font-size: 43px;
+    font-size: 68px;
     letter-spacing: -2.2px;
     line-height: 0.82;
   }
@@ -7621,7 +7270,7 @@
   }
 
   .containerWatermark span {
-    font-size: 40px;
+    font-size: 60px;
     letter-spacing: -2px;
     line-height: 0.82;
   }
@@ -7735,69 +7384,6 @@
   }
 }
 
-@media screen and (max-width: 390px) {
-
-  .containerWatermark {
-    top: 18px;
-    left: 5px;
-    right: 5px;
-
-    justify-content: center;
-    gap: 3px;
-  }
-
-  .containerWatermark span {
-    font-size: 39px;
-    letter-spacing: -2px;
-    line-height: 0.82;
-  }
-
-  .toggleSwitch {
-    position: relative;
-    top: 4px;
-    flex-shrink: 0;
-    width: 82px;
-    height: 29px;
-    margin: 0 2px;
-    padding: 0;
-    border: none;
-    border-radius: 100px;
-    background: #d0d0d0;
-    cursor: pointer;
-    pointer-events: auto;
-    box-shadow:
-      inset 0 2px 3px rgba(0, 0, 0, 0.04),
-      0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: background 0.35s ease;
-  }
-
-
-  .toggleCircle {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.18),
-      0 2px 3px rgba(0, 0, 0, 0.08);
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-  .toggleOn {
-    background: #293f67;
-  }
-
-  .toggleOn .toggleCircle {
-    transform: translateX(56px);
-  }
-
-}
-
 @media screen and (max-width: 360px) {
 
   .containerHeroPanel {
@@ -7826,7 +7412,7 @@
   }
 
   .containerWatermark span {
-    font-size: 36px;
+    font-size: 56px;
     letter-spacing: -1.5px;
     line-height: 0.82;
   }
@@ -7942,69 +7528,7 @@
   }
 }
 
-@media screen and (max-width: 360px) {
 
-  .containerWatermark {
-    top: 17px;
-    left: 4px;
-    right: 4px;
-    justify-content: center;
-    gap: 2px;
-  }
-
-  .containerWatermark span {
-    font-size: 35px;
-    letter-spacing: -1.8px;
-    line-height: 0.82;
-  }
-
-  .toggleSwitch {
-    position: relative;
-    top: 3px;
-    flex-shrink: 0;
-    width: 74px;
-    height: 27px;
-    margin: 0 1px;
-    padding: 0;
-    border: none;
-    border-radius: 100px;
-    background: #d0d0d0;
-    cursor: pointer;
-    pointer-events: auto;
-    box-shadow:
-      inset 0 2px 3px rgba(0, 0, 0, 0.04),
-      0 4px 7px rgba(0, 0, 0, 0.08);
-    transition: background 0.35s ease;
-  }
-
-
-  .toggleCircle {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.18),
-      0 2px 3px rgba(0, 0, 0, 0.08);
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-
-  .toggleOn {
-    background: #293f67;
-  }
-
-
-  .toggleOn .toggleCircle {
-    transform: translateX(47px);
-  }
-
-}
 
 
 @media screen and (max-width: 320px) {
@@ -8034,7 +7558,7 @@
   }
 
   .containerWatermark span {
-    font-size: 31px;
+    font-size: 50px;
     letter-spacing: -1px;
     line-height: 0.82;
   }
@@ -8149,68 +7673,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
 
-  .containerWatermark {
-    top: 15px;
-    left: 3px;
-    right: 3px;
-    justify-content: center;
-    gap: 2px;
-  }
-
-  .containerWatermark span {
-    font-size: 31px;
-    letter-spacing: -1.5px;
-    line-height: 0.82;
-  }
-
-  .toggleSwitch {
-    position: relative;
-    top: 3px;
-    flex-shrink: 0;
-    width: 66px;
-    height: 25px;
-    margin: 0 1px;
-    padding: 0;
-    border: none;
-    border-radius: 100px;
-    background: #d0d0d0;
-    cursor: pointer;
-    pointer-events: auto;
-    box-shadow:
-      inset 0 2px 3px rgba(0, 0, 0, 0.04),
-      0 3px 7px rgba(0, 0, 0, 0.08);
-    transition: background 0.35s ease;
-  }
-
-
-  .toggleCircle {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 19px;
-    height: 19px;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow:
-      0 4px 5px rgba(0, 0, 0, 0.18),
-      0 2px 3px rgba(0, 0, 0, 0.08);
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-
-  .toggleOn {
-    background: #293f67;
-  }
-
-  .toggleOn .toggleCircle {
-    transform: translateX(41px);
-  }
-
-}
 
 /* -----------------------  HVAC BANNER ------------------------------------------ */
 

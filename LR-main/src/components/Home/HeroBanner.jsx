@@ -14,7 +14,6 @@ import rooftopHouse from '../../assets/banner/rooftopHouse.png'
 function HeroBanner() {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0);
-  const [isOn, setIsOn] = useState(false);
 
   const totalSlides = 6;
 
@@ -481,14 +480,6 @@ function HeroBanner() {
         {/* Large background text */}
         <div className={styles.containerWatermark}>
           <span>cont</span>
-          <button
-            className={`${styles.toggleSwitch} ${isOn ? styles.toggleOn : ""
-              }`}
-            onClick={() => setIsOn(!isOn)}
-            aria-label="Toggle switch"
-          >
-            <span className={styles.toggleCircle}></span>
-          </button>
           <span>ainer</span>
         </div>
         <div className={styles.ContainerFlex}>
