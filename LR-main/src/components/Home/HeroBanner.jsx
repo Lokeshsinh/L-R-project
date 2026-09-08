@@ -36,7 +36,7 @@ function HeroBanner() {
 
   // Previous Slide
   const prevSlide = () => {
-    if (current === 0) {
+    if (current === 6) {
       setCurrent(2);
     } else {
       setCurrent(current - 1);
