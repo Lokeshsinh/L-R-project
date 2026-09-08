@@ -200,12 +200,12 @@ const Header = () => {
         <ul className={`nav-links${menuOpen ? " show-menu" : ""}`}>
           <li>
             <NavLink to="/" onClick={closeMenu}>
-              Home
+              HOME
             </NavLink>
           </li>
           <li>
             <NavLink to="/about" onClick={closeMenu}>
-              About Us
+              ABOUT US
             </NavLink>
           </li>
 
@@ -220,7 +220,7 @@ const Header = () => {
               aria-expanded={openDropdown === "products"}
               aria-haspopup="true"
             >
-              <span>Our Products</span>
+              <span>OUR PRODUCTS</span>
               <i className="ti ti-chevron-down arrow" aria-hidden="true"></i>
             </button>
 
@@ -230,7 +230,7 @@ const Header = () => {
                 className={`dropdown-submenu${openSub === "modular" ? " mobile-sub-open" : ""}`}
               >
                 <button type="button" onClick={handleSubClick("modular")}>
-                  <span>Modular Solutions</span>
+                  <span>MODULAR SOLUTIONS</span>
                   <i
                     className="ti ti-chevron-right side-arrow"
                     aria-hidden="true"
@@ -259,7 +259,7 @@ const Header = () => {
                         "/ms-containers",
                       )}
                     >
-                      <span>MS Containers</span>
+                      <span>MS CONTAINERS</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
                         aria-hidden="true"
@@ -314,7 +314,7 @@ const Header = () => {
                 className={`dropdown-submenu${openSub === "steel" ? " mobile-sub-open" : ""}`}
               >
                 <button type="button" onClick={handleSubClick("steel")}>
-                  <span>Steel Structures Buildings</span>
+                  <span>STEEL STRUCTURES BUILDINGS</span>
                   <i
                     className="ti ti-chevron-right side-arrow"
                     aria-hidden="true"
@@ -326,7 +326,7 @@ const Header = () => {
                     className={`nested-submenu${openNested === "pre" ? " mobile-nested-open" : ""}`}
                   >
                     <button type="button" onClick={handleNestedClick("pre", "/pre-building")}>
-                      <span>Pre-engineered Building</span>
+                      <span>PRE-ENGINEERED BUILDING</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
                         aria-hidden="true"
@@ -361,7 +361,7 @@ const Header = () => {
                     className={`nested-submenu${openNested === "prefab" ? " mobile-nested-open" : ""}`}
                   >
                     <button type="button" onClick={handleNestedClick("prefab", "/prefab-modular")}>
-                      <span>Prefabricated Modular Building</span>
+                      <span>PREFABRICATED MODULAR BUILDING</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
                         aria-hidden="true"
@@ -430,7 +430,7 @@ const Header = () => {
                         "/prefab-sandwich-panels",
                       )}
                     >
-                      <span>Sandwich Panels</span>
+                      <span>SANDWICH PANELS</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
                         aria-hidden="true"
@@ -493,7 +493,7 @@ const Header = () => {
                       type="button"
                       onClick={handleNestedClick("rooftop", "/rooftop-rooms")}
                     >
-                      <span>Rooftop Room</span>
+                      <span>ROOFTOP ROOM</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
                         aria-hidden="true"
@@ -531,7 +531,7 @@ const Header = () => {
                     className={`nested-submenu${openNested === "lgsf" ? " mobile-nested-open" : ""}`}
                   >
                     <button type="button" onClick={handleNestedClick("lgsf", "/lgsf-modular")}>
-                      <span>LGSF Modular Solutions</span>
+                      <span>LGSF MODULAR SOLUTIONS</span>
                       <i
                         className="ti ti-chevron-right side-arrow"
                         aria-hidden="true"
@@ -586,7 +586,7 @@ const Header = () => {
                 className={`dropdown-submenu${openSub === "solar" ? " mobile-sub-open" : ""}`}
               >
                 <button type="button" onClick={handleSubClick("solar")}>
-                  <span>Solar Energy Solutions</span>
+                  <span>SOLAR ENERGY SOLUTIONS</span>
                   <i
                     className="ti ti-chevron-right side-arrow"
                     aria-hidden="true"

@@ -479,7 +479,7 @@ function HeroBanner() {
         <div className={styles.containerOverlay}></div>
         {/* Large background text */}
         <div className={styles.containerWatermark}>
-          <span>cont</span>
+          <span>Cont</span>
           <span>ainer</span>
         </div>
         <div className={styles.ContainerFlex}>
@@ -659,7 +659,7 @@ function HeroBanner() {
               </div>
 
               <div className={styles.powerRoofName}>
-                PowerRoof<sup>™</sup>
+                POWERROOF<sup>™</sup>
               </div>
             </div>
 
