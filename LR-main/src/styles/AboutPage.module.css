@@ -9501,8 +9501,8 @@ why choose
 
 .FounderTitle {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
@@ -9534,7 +9534,7 @@ why choose
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 80px;
   position: relative;
   z-index: 2;
@@ -9647,6 +9647,10 @@ why choose
 .infoSection {
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .designation {
@@ -9680,10 +9684,12 @@ why choose
 }
 
 .infoText {
+  text-align: center;
+  max-width: 1000px;
   font-size: 17px;
   color: #555;
   line-height: 1.8;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 
 
@@ -9909,7 +9915,7 @@ why choose
   }
 
   .infoSection {
-    max-width: 540px;
+    max-width: 950px;
   }
 
 
@@ -9927,7 +9933,7 @@ why choose
   }
 
   .infoSection {
-    max-width: 520px;
+    max-width: 900px;
   }
 
 
@@ -9995,8 +10001,7 @@ why choose
   }
 
   .infoSection {
-    width: 52%;
-    max-width: 520px;
+    max-width: 800px;
     min-width: 0;
   }
 

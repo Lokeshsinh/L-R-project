@@ -51,7 +51,7 @@ import projects from "../assets/About/projects.png";
 // import leader from '../assets/About/foun1.jpg'
 // import founder from '../assets/About/founder.png'
 import founder3 from '../assets/About/founder3.png'
-import founder4 from '../assets/About/founder4.png'
+// import founder4 from '../assets/About/founder4.png'
 
 
 const About = () => {
@@ -639,7 +639,7 @@ const About = () => {
             <div className={styles.foundeLine}></div>
           </div>
           <div className={styles.profileContainer}>
-            <div className={styles.photoSection}>
+            {/* <div className={styles.photoSection}>
               <img
                 src={founder4}
                 alt="Founder"
@@ -661,7 +661,7 @@ const About = () => {
 
 
               </div>
-            </div>
+            </div> */}
 
             {/* Right Content */}
             <div className={styles.infoSection}>
