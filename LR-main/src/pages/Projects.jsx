@@ -57,6 +57,7 @@ import hvac4 from '../assets/Projects/HVAC/hvac4.jpg'
 import module from '../assets/Projects/Container/module.jpg'
 import steel from '../assets/Projects/Pre-eng/steel.jpeg'
 import energe from '../assets/Projects/solar/energ.jpg'
+import powerroof from '../assets/Gallary/Solar/Powerroof/powerroof2.jpg'
 
 // ── Filter taxonomy (matches screenshots exactly) ──────────────────────────
 const FILTER_TREE = [
@@ -87,6 +88,7 @@ const FILTER_TREE = [
     label: "Solar Energy Solutions",
     key: "solar",
     children: [
+      { label: "L&R PowerRoof™", key: "power-roof" },
       { label: "Solar EPC Work", key: "solar-epc" },
       { label: "Module Mounting Structure", key: "solar-mounting" },
       { label: "Solar Hardware", key: "solar-hardware" },
@@ -158,6 +160,7 @@ const ALL_PROJECTS = [
   { id: 51, title: "Modular Solutions", category: "modular", tag: "Modular Solutions", img: module, desc: "Innovative modular solutions designed for fast construction and flexible space requirements. Built with durable materials, customizable designs, and quick installation for residential, commercial, and industrial applications." },
   { id: 53, title: "Steel Structure Buildings", category: "steel", tag: "Steel Buildings", img: steel, desc: "High-strength steel structure buildings designed for industrial, commercial, and infrastructure projects. Built for durability, rapid construction, and customizable layouts with long-lasting performance." },
   { id: 54, title: "Solar Energy Solutions", category: "solar", tag: "Solar Energy", img: energe, desc: "Comprehensive solar energy solutions designed for efficient, sustainable, and cost-effective power generation. Built with high-quality components for reliable performance, long-term savings, and maximum energy efficiency." },
+  { id: 55, title: "L&R PowerRoof™", category: "power-roof", tag: "L&R PowerRoof™", img: powerroof, desc: "L&R PowerRoof™ is a smart solar roofing solution that combines durable roofing with efficient solar technology to turn rooftops into clean, productive energy sources for sustainable business energy needs." },
 
 
 

@@ -5,7 +5,8 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import buildingImg from '../../assets/Home/buildImg.png'
 import product from '../../assets/Home/product.png'
 import previewImg from '../../assets/conatiners/HomeConatiner/bannercard.png'
-import user from '../../assets/conatiners/HomeConatiner/user.png'
+// import user from '../../assets/conatiners/HomeConatiner/user.png'
+import user1 from '../../assets/conatiners/HomeConatiner/user1.png'
 import container from '../../assets/banner3.png'
 import { useNavigate } from "react-router-dom";
 import hvacProduct from '../../assets/banner/hvacProduct.png'
@@ -95,7 +96,7 @@ function HeroBanner() {
           </div>
 
           <div className={styles.heroImage}>
-            <img src={user} alt="Building" />
+            <img src={user1} alt="Building" />
           </div>
         </div>
 

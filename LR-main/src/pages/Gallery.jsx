@@ -104,6 +104,13 @@ import solarepic1 from '../assets/solar/solarepic/solarepic2.png'
 import solarmodular from '../assets/solar/solarModule/solarmodule4.png'
 import hardware1 from '../assets/solar/hardware/hardware1.png'
 import hvac1 from '../assets/hvm/hvm6.png'
+import powerroof1 from '../assets/Gallary/Solar/Powerroof/powerroof.jpg'
+import powerroof2 from '../assets/Gallary/Solar/Powerroof/powerroof2.jpg'
+import powerroof3 from '../assets/Gallary/Solar/Powerroof/powerroof3.jpg'
+import powerroof4 from '../assets/Gallary/Solar/Powerroof/powerroof4.jpg'
+import powerroof5 from '../assets/Gallary/Solar/Powerroof/powerroof5.jpg'
+import powerroof6 from '../assets/Gallary/Solar/Powerroof/powerroof6.jpg'
+import powerroof7 from '../assets/Gallary/Solar/Powerroof/powerroof7.mp4'
 const CATEGORIES = [
   { label: "All", key: "all" },
   { label: "MS Container", key: "ms-container" },
@@ -146,13 +153,13 @@ const CATEGORIES = [
   { label: "Showrooms", key: "showrooms" },
   { label: "Waiting Areas", key: "waiting-areas" },
   { label: "Farmhouses", key: "farmhouses" },
+  { label: "L&R PowerRoof™", key: "power-roof" },
   { label: "Solar EPC", key: "solar-epc" },
   { label: "Solar Mounting", key: "solar-mounting" },
   { label: "Hardware", key: "hardware" },
   { label: "HVAC", key: "hvac" },
 
 ];
-
 const ALL_MEDIA = [
   { id: 1, type: "image", category: "lgsf", src: preEng1 },
   { id: 2, type: "image", category: "lgsf", src: preEng2 },
@@ -254,6 +261,13 @@ const ALL_MEDIA = [
   { id: 96, type: "image", category: "solar-mounting", src: solarmodular },
   { id: 97, type: "image", category: "hardware", src: hardware1 },
   { id: 98, type: "image", category: "hvac", src:  hvac1},
+  { id: 99, type: "image", category: "power-roof", src:  powerroof1},
+  { id: 100, type: "image", category: "power-roof", src:  powerroof2},
+  { id: 101, type: "image", category: "power-roof", src:  powerroof3},
+  { id: 102, type: "image", category: "power-roof", src:  powerroof4},
+  { id: 103, type: "image", category: "power-roof", src:  powerroof5},
+  { id: 104, type: "image", category: "power-roof", src:  powerroof6},
+  { id: 105, type: "video", category: "power-roof", src:  powerroof7},
 
 
 

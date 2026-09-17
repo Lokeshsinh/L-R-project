@@ -4440,7 +4440,7 @@
 .heroImage {
   position: absolute;
   right: -20px;
-  bottom: 0;
+  bottom: -25px;
   width: 920px;
   z-index: 3;
 }
@@ -4512,9 +4512,9 @@
   }
 
   .heroImage {
-    width: 680px;
+    width: 720px;
     right: -10px;
-    bottom: 0;
+    bottom: -20px;
   }
 
   .heroStats {
@@ -4561,7 +4561,8 @@
   }
 
   .heroImage {
-    width: 610px;
+    right: -30px;
+    width: 650px;
   }
 
   .heroStats {
@@ -4576,6 +4577,131 @@
     width: 46%;
   }
 
+}
+
+@media (max-width: 1130px) {
+
+  .heroContainer {
+    width: 94%;
+    padding-top: 65px;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+  }
+
+  .heroSubTitle {
+    font-size: 25px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+  }
+
+  .heroDescription {
+    width: 480px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .heroButton {
+    width: 195px;
+    height: 50px;
+    margin-top: 32px;
+    font-size: 15px;
+  }
+
+  .heroShape {
+    width: 47%;
+  }
+
+  .heroImage {
+    width: 620px;
+    right: -40px;
+    bottom: -20px;
+  }
+
+  .heroStats {
+    width: 410px;
+    left: 0;
+    bottom: -95px;
+    gap: 12px;
+    padding: 10px 12px;
+  }
+
+  .heroThumb {
+    width: 74px;
+    height: 56px;
+  }
+
+  .heroStatItem h3 {
+    font-size: 18px;
+  }
+
+  .heroStat p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  .heroContainer {
+    width: 94%;
+    padding-top: 60px;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+  }
+
+  .heroSubTitle {
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+
+  .heroDescription {
+    width: 440px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .heroButton {
+    width: 185px;
+    height: 48px;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  .heroShape {
+    width: 48%;
+  }
+
+  .heroImage {
+    width: 570px;
+    right: -35px;
+    bottom: -18px;
+  }
+
+  .heroStats {
+    width: 390px;
+    /* height: 70px; */
+    left: 0;
+    bottom: -90px;
+    gap: 10px;
+    padding: 9px 11px;
+  }
+
+  .heroThumb {
+    width: 70px;
+    height: 54px;
+  }
+
+  .heroStatItem h3 {
+    font-size: 17px;
+  }
+
+  .heroStat p {
+    font-size: 10px;
+  }
 }
 
 @media (max-width:992px) {
@@ -4624,8 +4750,9 @@
 
   .heroImage {
     position: relative;
-    width: 650px;
+    width: 680px;
     right: auto;
+    bottom: -40px;
     margin-top: 40px;
   }
 
@@ -4635,7 +4762,7 @@
     left: auto;
     margin-top: 30px;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
   }
 
 }
@@ -4709,7 +4836,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 26%;
+    bottom: 24.5%;
     width: 650px;
     right: auto;
     z-index: 2;
@@ -4755,7 +4882,7 @@
 
 }
 
-@media (max-width:576px) {
+@media (max-width:586px) {
   .hero {
     min-height: 95vh;
   }
@@ -4823,6 +4950,7 @@
 
     width: 95%;
     max-width: 420px;
+    /* height: 160px; */
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -4856,7 +4984,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 24%;
+    bottom: 23%;
     width: 500px;
     right: auto;
     z-index: 2;
@@ -4894,7 +5022,6 @@
     width: 94%;
     min-height: 280px;
     padding-top: 30px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -4939,6 +5066,7 @@
   .heroStats {
     width: 95%;
     max-width: 360px;
+     /* height: 150px; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -4972,7 +5100,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -5px;
+    bottom: -10px;
     right: auto;
 
     width: 450px;
@@ -5158,10 +5286,11 @@
     position: relative;
     width: 100%;
     max-width: 290px;
-
+    /* height: 165px; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    padding: 12px;
 
     margin: 20px auto 155px;
     z-index: 5;
@@ -5192,10 +5321,10 @@
   .heroImage {
     position: absolute;
     left: 50%;
-    bottom: -3px;
+    bottom: -10px;
     transform: translateX(-50%);
 
-    width: 400px;
+    width: 370px;
     z-index: 2;
   }
 
@@ -6030,7 +6159,7 @@
   user-select: none;
 }
 
-.containerWatermark>span{
+.containerWatermark>span {
   color: #293f67;
   font-family:
     Arial,
@@ -7194,6 +7323,7 @@
     letter-spacing: -2.2px;
     line-height: 0.82;
   }
+
   .toggleSwitch {
     position: relative;
     top: 5px;
