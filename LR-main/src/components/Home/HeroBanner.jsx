@@ -10,7 +10,8 @@ import user1 from '../../assets/conatiners/HomeConatiner/user1.png'
 import container from '../../assets/banner3.png'
 import { useNavigate } from "react-router-dom";
 import hvacProduct from '../../assets/banner/hvacProduct.png'
-import roofImage from '../../assets/banner/roofImage.png'
+// import roofImage from '../../assets/banner/roofImage.png'
+import roofImage1 from '../../assets/banner/roofImage1.png'
 import rooftopHouse from '../../assets/banner/rooftopHouse.png'
 function HeroBanner() {
   const navigate = useNavigate()
@@ -689,7 +690,7 @@ function HeroBanner() {
 
           <div className={styles.powerRoofVisual}>
             <img
-              src={roofImage}
+              src={roofImage1}
               alt="PowerRoof solar-ready home"
               className={styles.powerRoofImage}
             />
